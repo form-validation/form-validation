@@ -1,0 +1,76 @@
+<svelte:head>
+	<title>FormValidation • uuid validator</title>
+</svelte:head>
+
+<Guide>
+    <h1 class="f3 f2-m f1-l tc">uuid validator</h1>
+    <h2 class="f4 fw4 tc">Validate an <a href="https://en.wikipedia.org/wiki/Universally_unique_identifier" class="blue dim link">UUID</a></h2>
+
+    <section class="mb4">
+        <h2><span class="bb b--gray">Options</span></h2>
+
+        <h3>Using with form field</h3>
+        <p class="lh-copy i">The HTML attributes are used to set the validator options via the <a href="/guide/plugins/declarative/" class="blue dim link">Declarative</a> plugin</p>
+        <table class="collapse ba br2 b--black-10 pv2 ph3 w-100">
+            <tr class="striped--light-gray">
+                <th class="pv2 ph3 tl f6 fw6 ttu">Name</th>
+                <th class="pv2 ph3 tl f6 fw6 ttu">HTML attribute</th>
+                <th class="pv2 ph3 tl f6 fw6 ttu">Type</th>
+                <th class="pv2 ph3 tl f6 fw6 ttu">Description</th>
+            </tr>
+            <tr class="striped--light-gray">
+                <td class="pv2 ph3"><code>message</code></td>
+                <td class="pv2 ph3"><code>data-fv-uuid___message</code></td>
+                <td class="pv2 ph3">String</td>
+                <td class="pv2 ph3">The error message</td>
+            </tr>
+            <tr class="striped--light-gray">
+                <td class="pv2 ph3"><code>version</code></td>
+                <td class="pv2 ph3"><code>data-fv-uuid___version</code></td>
+                <td class="pv2 ph3">String</td>
+                <td class="pv2 ph3">The UUID version. Can be <code>3</code>, <code>4</code>, <code>5</code> or <code>all</code> (the default version)</td>
+            </tr>
+        </table>
+
+        <h3>Using with JavaScript module</h3>
+<SampleCode lang="javascript" code={`
+// You might need to change the importing path
+import uuid from 'formvalidation/validators/uuid';
+
+const result = uuid().validate({
+    value: ...,
+    options: {
+        message: ...,
+    },
+});
+/*
+result is an object of
+{
+    valid: true or false,
+    message: The error message
+}
+*/
+`} />
+    </section>
+
+    <RelatedValidators validators={['regexp']} />
+
+    <section class="cf mb4">
+        <div class="fl w-50 tl">
+            <a href="/guide/validators/uri/" class="b blue dim link pa2">&larr; uri validator</a>
+        </div>
+        <div class="fl w-50 tr">
+            <a href="/guide/validators/vat/" class="b blue dim link pa2">vat validator &rarr;</a>
+        </div>
+    </section>
+</Guide>
+
+<script>
+export default {
+    components: {
+        Guide: '../../../../components/Guide.html',
+        RelatedValidators: '../../../../components/RelatedValidators.html',
+        SampleCode: '../../../../components/SampleCode.html',
+    },
+};
+</script>

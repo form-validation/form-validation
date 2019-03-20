@@ -1,0 +1,85 @@
+<DemoLayout framework="turret">
+    <DemoWrapper ref:demo from="/guide/getting-started/usage/frameworks/Turret">
+        <form id="demoForm" method="post" class="fv-stacked-form">
+            <div class="field">
+                <label>Username</label>
+                <input type="text" name="username" />
+            </div>
+    
+            <div class="field">
+                <label>Password</label>
+                <input type="password" name="password" />
+            </div>
+    
+            <div class="field">
+                <button type="submit" class="button button-primary">Submit</button>
+            </div>
+        </form>
+    </DemoWrapper>
+</DemoLayout>
+
+<script>
+import formValidation from 'formvalidation/core/Core';
+import Icon from 'formvalidation/plugins/Icon';
+import SubmitButton from 'formvalidation/plugins/SubmitButton';
+import Trigger from 'formvalidation/plugins/Trigger';
+import Turret from 'formvalidation/plugins/Turret';
+
+import sampleCode from './Turret.programmatic';
+
+export default {
+    components: {
+        DemoLayout: '../../../../../components/DemoLayout.html',
+        DemoWrapper: '../../../../../components/DemoWrapper.html',
+    },
+
+    oncreate() {
+        const fv = formValidation(document.getElementById('demoForm'), {
+            fields: {
+                username: {
+                    validators: {
+                        notEmpty: {
+                            message: 'The username is required'
+                        },
+                        stringLength: {
+                            min: 6,
+                            max: 30,
+                            message: 'The username must be more than 6 and less than 30 characters long',
+                        },
+                        regexp: {
+                            regexp: /^[a-zA-Z0-9_]+$/,
+                            message: 'The username can only consist of alphabetical, number and underscore',
+                        },
+                    }
+                },
+                password: {
+                    validators: {
+                        notEmpty: {
+                            message: 'The password is required'
+                        },
+                        stringLength: {
+                            min: 8,
+                            message: 'The password must have at least 8 characters',
+                        },
+                    }
+                },
+            },
+            plugins: {
+                trigger: new Trigger(),
+                turret: new Turret(),
+                submitButton: new SubmitButton(),
+                icon: new Icon({
+                    valid: 'fa fa-check',
+                    invalid: 'fa fa-times',
+                    validating: 'fa fa-refresh',
+                }),
+            },
+        });
+
+        this.refs.demo.set({
+            fv,
+            sampleCode,
+        });
+    },
+};
+</script>

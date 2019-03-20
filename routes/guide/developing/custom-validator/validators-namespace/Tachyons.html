@@ -1,0 +1,117 @@
+<DemoLayout framework="tachyons">
+    <DemoWrapper ref:demo from="/guide/developing/custom-validator/validators-namespace/Tachyons">
+        <form id="demoForm" method="POST">
+            <div class="cf mb2">
+                <div class="fl w-100">
+                    <div class="fl w-25 pa2">New password</div>
+                    <div class="fl w-40 mr2">
+                        <input type="password" class="input-reset ba b--black-20 pa2 mb2 db w-100" name="pwd" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="cf mb2">
+                <div class="fl w-100">
+                    <div class="fl w-25 pa2"></div>
+                    <div class="fl w-50">
+                        <button type="submit" class="ba b--black-20 bg-blue white ph3 pv2 br2">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </DemoWrapper>
+</DemoLayout>
+
+<script>
+import formValidation from 'formvalidation/core/Core';
+import Icon from 'formvalidation/plugins/Icon';
+import Trigger from 'formvalidation/plugins/Trigger';
+import Tachyons from 'formvalidation/plugins/Tachyons';
+import SubmitButton from 'formvalidation/plugins/SubmitButton';
+
+import sampleCode from './Tachyons.programmatic';
+
+export default {
+    components: {
+        DemoLayout: '../../../../../components/DemoLayout.html',
+        DemoWrapper: '../../../../../components/DemoWrapper.html',
+    },
+
+    oncreate() {
+        const strongPassword = () => {
+            return {
+                validate: input => {
+                    const value = input.value;
+                    if (value === '') {
+                        return {
+                            valid: true,
+                        };
+                    }
+
+                    // Check the password strength
+                    if (value.length < 8) {
+                        return {
+                            valid: false,
+                        };
+                    }
+
+                    // The password does not contain any uppercase character
+                    if (value === value.toLowerCase()) {
+                        return {
+                            valid: false,
+                        };
+                    }
+
+                    // The password does not contain any uppercase character
+                    if (value === value.toUpperCase()) {
+                        return {
+                            valid: false,
+                        };
+                    }
+
+                    // The password does not contain any digit
+                    if (value.search(/[0-9]/) < 0) {
+                        return {
+                            valid: false,
+                        };
+                    }
+
+                    return {
+                        valid: true,
+                    };
+                },
+            };
+        };
+
+        const fv = formValidation(document.getElementById('demoForm'), {
+            fields: {
+                pwd: {
+                    validators: {
+                        notEmpty: {
+                            message: 'The password is required and cannot be empty'
+                        },
+                        checkPassword: {
+                            message: 'The password is too weak'
+                        },
+                    }
+                }
+            },
+            plugins: {
+                trigger: new Trigger(),
+                tachyons: new Tachyons(),
+                submitButton: new SubmitButton(),
+                icon: new Icon({
+                    valid: 'fa fa-check',
+                    invalid: 'fa fa-times',
+                    validating: 'fa fa-refresh',
+                }),
+            },
+        }).registerValidator('checkPassword', strongPassword);
+
+        this.refs.demo.set({
+            fv,
+            sampleCode,
+        });
+    },
+};
+</script>

@@ -1,0 +1,96 @@
+<DemoLayout framework="milligram">
+    <DemoWrapper ref:demo from="/guide/getting-started/usage/frameworks/Milligram">
+        <form id="demoForm" method="post">
+            <div class="row">
+                <div class="column column-25">
+                    <label>Username</label>
+                </div>
+                <div class="column column-40">
+                    <input type="text" name="username" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="column column-25">
+                    <label>Password</label>
+                </div>
+                <div class="column column-40">
+                    <input type="password" name="password" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="column column-25"></div>
+                <div class="column column-75">
+                    <button type="submit" class="button-primary">Submit</button>
+                </div>
+            </div>
+        </form>
+    </DemoWrapper>
+</DemoLayout>
+
+<script>
+import formValidation from 'formvalidation/core/Core';
+import Icon from 'formvalidation/plugins/Icon';
+import SubmitButton from 'formvalidation/plugins/SubmitButton';
+import Trigger from 'formvalidation/plugins/Trigger';
+import Milligram from 'formvalidation/plugins/Milligram';
+
+import sampleCode from './Milligram.programmatic';
+
+export default {
+    components: {
+        DemoLayout: '../../../../../components/DemoLayout.html',
+        DemoWrapper: '../../../../../components/DemoWrapper.html',
+    },
+
+    oncreate() {
+        const fv = formValidation(document.getElementById('demoForm'), {
+            fields: {
+                username: {
+                    validators: {
+                        notEmpty: {
+                            message: 'The username is required'
+                        },
+                        stringLength: {
+                            min: 6,
+                            max: 30,
+                            message: 'The username must be more than 6 and less than 30 characters long'
+                        },
+                        regexp: {
+                            regexp: /^[a-zA-Z0-9_]+$/,
+                            message: 'The username can only consist of alphabetical, number and underscore'
+                        }
+                    }
+                },
+                password: {
+                    validators: {
+                        notEmpty: {
+                            message: 'The password is required'
+                        },
+                        stringLength: {
+                            min: 8,
+                            message: 'The password must have at least 8 characters'
+                        },
+                    }
+                },
+            },
+            plugins: {
+                trigger: new Trigger(),
+                milligram: new Milligram(),
+                submitButton: new SubmitButton(),
+                icon: new Icon({
+                    valid: 'fa fa-check',
+                    invalid: 'fa fa-times',
+                    validating: 'fa fa-refresh',
+                }),
+            }
+        });
+
+        this.refs.demo.set({
+            fv,
+            sampleCode,
+        });
+    },
+};
+</script>

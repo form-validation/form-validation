@@ -1,0 +1,11 @@
+<svelte:component this={Page} {...props} />
+
+<script>
+import { Store } from 'svelte/store.js';
+
+const store = new Store();
+
+export default {
+    store: () => store,
+};
+</script>

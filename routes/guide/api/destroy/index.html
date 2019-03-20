@@ -1,0 +1,33 @@
+<svelte:head>
+	<title>FormValidation • destroy() method</title>
+</svelte:head>
+
+<Guide>
+    <h1 class="f3 f2-m f1-l tc">destroy()</h1>
+    <h2 class="f4 fw4 tc">Destroy everything created by the library.</h2>
+
+    <section class="mb4">
+        <p class="lh-copy">It will remove all error messages, feedback icons as well as turning off the events. All the registered plugins and filters are removed too.</p>
+        <div class="mb3">
+            <SampleCode lang="javascript" code={`destroy(): Core`} />
+        </div>
+    </section>
+
+    <section class="cf mb4">
+        <div class="fl w-50 tl">
+            <a href="/guide/api/deregister-plugin/" class="b blue dim link pa2">&larr; deregisterPlugin() method</a>
+        </div>
+        <div class="fl w-50 tr">
+            <a href="/guide/api/disable-validator/" class="b blue dim link pa2">disableValidator() method &rarr;</a>
+        </div>
+    </section>
+</Guide>
+
+<script>
+export default {
+    components: {
+        Guide: '../../../../components/Guide.html',
+        SampleCode: '../../../../components/SampleCode.html',
+    },
+};
+</script>

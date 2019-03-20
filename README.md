@@ -8,4 +8,3 @@ Source code of formvalidation.io
 $ npm run predeploy
 $ npm run deploy
 ```
-

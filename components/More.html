@@ -1,0 +1,46 @@
+<style>
+.container {
+    transition: max-height 1s linear;
+}    
+.collapsed {
+    overflow: hidden;
+}
+.expanded {
+    overflow: scroll;
+}
+</style>
+
+<div ref:container class="container {toggled ? 'collapsed': 'expanded'}">
+    <slot></slot>
+</div>
+<div>
+    <button class="tc w-100 pa3 ba b--black-10 bg-light-gray pointer" on:click="toggle()">{#if toggled}More{:else}Less{/if}</button>
+</div>
+
+<script>
+const DEFAULT_MAX_HEIGHT = 400;
+
+export default {
+    data() {
+        return {
+            toggled: true
+        }
+    },
+
+    oncreate() {
+        this.refs.container.setAttribute('style', `max-height: ${DEFAULT_MAX_HEIGHT}px`);
+    },
+
+    methods: {
+        toggle() {
+            const toggled = this.get('toggled');
+            this.set({
+                toggled: !this.get('toggled')
+            });
+            const container = this.refs.container;
+            const maxHeight = toggled ? container.scrollHeight: DEFAULT_MAX_HEIGHT;
+            container.setAttribute('style', `max-height: ${maxHeight}px`);
+        }
+    }
+}
+</script>

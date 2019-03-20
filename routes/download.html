@@ -1,0 +1,102 @@
+<svelte:head>
+	<title>FormValidation • Download</title>
+</svelte:head>
+
+<DefaultLayout>
+    <h1 class="f3 f2-m f1-l tc">Download</h1>
+
+    <div class="mb4">
+        <h2 class="tc"><span class="bb b--gray">Give it a try</span></h2>
+        <p class="lh-copy">Below is basic working examples of FormValidation using with popular CSS frameworks and a native form.</p>
+        <Demo prefix="/demo/register" supportNativeForm=true frameworks={['Bootstrap', 'Bootstrap3', 'Bulma', 'Foundation', 'Materialize', 'Milligram', 'Mini', 'Mui', 'Pure', 'Semantic', 'Shoelace', 'Spectre', 'Tachyons', 'Turret', 'Uikit']} />
+    </div>
+
+    <div class="mb4">
+        <h2 class="tc"><span class="bb b--gray">Purchase</span></h2>
+        <p class="tc lh-copy i">The latest version, <a href="/updates/" class="blue dim link">v{siteData.version}</a>, was released on {siteData.releasedDate}.</p>
+        <p class="tc">Choose the right package to purchase</p>
+        <div class="w-100 dt tc ba b--light-blue br2">
+            <div class="w-50 dtc-ns br b--light-blue">
+                <h3>Developer</h3>
+                <p class="dib f2 fw6">50$</p>
+                <ul class="list ma0 pa0 lh-copy">
+                    <li class="b">1 user</li>
+                    <li>Free lifetime upgrade</li>
+                    <li>Use in multiple websites</li>
+                    <li>Full source code</li>
+                </ul>
+                <p class="lh-copy bt b--light-blue pv4">
+                    <a href="https://sellfy.com/p/uitF/" class="w-75 f6 f5-ns fw6 dib ba b--black-20 bg-blue white ph3 ph4-ns pv2 pv3-ns br2 grow no-underline" title="Purchase FormValidation developer commercial license">Purchase with Paypal</a>
+                </p>
+                <p class="lh-copy">
+                    <a href="https://gum.co/formvalidation-developer-license" class="w-75 f6 f5-ns fw6 dib ba b--black-20 bg-blue white ph3 ph4-ns pv2 pv3-ns br2 grow no-underline" title="Purchase FormValidation developer commercial license">Purchase with credit card<sup>*</sup></a>
+                </p>
+                <p class="lh-copy"><small>* If you live in a EU country, VAT is charged</small></p>
+            </div>
+
+            <div class="w-100 dtc-ns">
+                <h3>Organization</h3>
+                <p class="dib f2 fw6">200$</p>
+                <ul class="list ma0 pa0 lh-copy">
+                    <li class="b">Unlimited users</li>
+                    <li>Free lifetime upgrade</li>
+                    <li>Use in multiple websites</li>
+                    <li>Full source code</li>
+                </ul>
+                <p class="lh-copy bt b--light-blue pv4">
+                    <a href="https://sellfy.com/p/eQiZ/" class="w-75 f6 f5-ns fw6 dib ba b--black-20 bg-blue white ph3 ph4-ns pv2 pv3-ns br2 grow no-underline" title="Purchase FormValidation organization commercial license">Purchase with Paypal</a>
+                </p>
+                <p class="lh-copy">
+                    <a href="https://gum.co/formvalidation-organization-license" class="w-75 f6 f5-ns fw6 dib ba b--black-20 bg-blue white ph3 ph4-ns pv2 pv3-ns br2 grow no-underline" title="Purchase FormValidation organization commercial license">Purchase with credit card <sup>*</sup></a>
+                </p>
+                <p class="lh-copy"><small>* If you live in a EU country, VAT is charged</small></p>
+            </div>
+        </div>
+
+        <p class="tc">
+            All transactions are processed on <a class="blue dim link" href="https://sellfy.com/nghuuphuoc/">Sellfy</a>, <a class="blue dim link" href="https://gumroad.com/formvalidation/">GumRoad</a> through an <strong>encrypted HTTP Secure</strong> connection
+        </p>
+    </div>
+
+    <div class="mb4">
+        <h2 class="tc"><span class="bb b--gray">Questions</span></h2>
+
+        <div class="dt w-100">
+            <div class="dtc w-third pa2">
+                <div>
+                    <p class="b">• How do I download the library?</p>
+                    <div class="lh-copy">After doing the purchase, you will get an email from <span class="i">Sellfy</span> or <span class="i">Gumroad</span> containing the download link.</div>
+                </div>
+            </div>
+            <div class="dtc w-third pa2">
+                <div>
+                    <p class="b">• How do I upgrade the library?</p>
+                    <div class="lh-copy">You can use the current download link to get the latest version for free. If the link does not work, please send <a href="mailto: {siteData.email}" class="blue dim link">me</a> your email address which you used to purchase.</div>
+                </div>
+            </div>
+            <div class="dtc w-third pa2">
+                <div>
+                    <p class="b">• I do not receive the download link</p>
+                    <div class="lh-copy">Please check your spam or junk folder in your mailbox. If you still do not receive the download link, please drop <a href="mailto: {siteData.email}" class="blue dim link">me</a> a message.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</DefaultLayout>
+
+<script>
+import SiteData from '../components/constants/SiteData';
+
+export default {
+    components: {
+        DefaultLayout: '../components/DefaultLayout.html',
+        Demo: '../components/Demo.html',
+    },
+
+    data() {
+        return {
+            siteData: SiteData,
+        };
+    },
+};
+</script>

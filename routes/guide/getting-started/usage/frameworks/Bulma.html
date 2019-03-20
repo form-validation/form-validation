@@ -1,0 +1,128 @@
+<style>
+:global(.field.is-horizontal) {
+    display: flex;
+}
+:global(.field-label) {
+    flex-basis: 0;
+    flex-grow: 1;
+    flex-shrink: 0;
+    margin-right: 1.5rem;
+    text-align: right;
+}
+:global(.field-body) {
+    display: flex;
+    flex-basis: 0;
+    flex-grow: 5;
+    flex-shrink: 1;
+}
+</style>
+
+<DemoLayout framework="bulma">
+    <DemoWrapper ref:demo from="/guide/getting-started/usage/frameworks/Bulma">
+        <form id="demoForm" method="post">
+            <div class="field is-horizontal">
+                <div class="field-label">
+                    <label class="label">Username</label>
+                </div>
+                <div class="field-body">
+                    <div class="field">
+                        <div class="control">
+                            <input class="input" name="username" type="text" placeholder="Username" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="field is-horizontal">
+                <div class="field-label">
+                    <label class="label">Password</label>
+                </div>
+                <div class="field-body">
+                    <div class="field">
+                        <div class="control">
+                            <input class="input" name="password" type="password" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="field is-horizontal">
+                <div class="field-label"></div>
+                <div class="field-body">
+                    <div class="field">
+                        <div class="control">
+                            <button class="button is-primary">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </DemoWrapper>
+</DemoLayout>
+    
+<script>
+import formValidation from 'formvalidation/core/Core';
+import Icon from 'formvalidation/plugins/Icon';
+import SubmitButton from 'formvalidation/plugins/SubmitButton';
+import Trigger from 'formvalidation/plugins/Trigger';
+import Bulma from 'formvalidation/plugins/Bulma';
+
+import sampleCode from './Bulma.programmatic';
+
+export default {
+    components: {
+        DemoLayout: '../../../../../components/DemoLayout.html',
+        DemoWrapper: '../../../../../components/DemoWrapper.html',
+    },
+
+    oncreate() {
+        const fv = formValidation(document.getElementById('demoForm'), {
+            fields: {
+                username: {
+                    validators: {
+                        notEmpty: {
+                            message: 'The username is required'
+                        },
+                        stringLength: {
+                            min: 6,
+                            max: 30,
+                            message: 'The username must be more than 6 and less than 30 characters long',
+                        },
+                        regexp: {
+                            regexp: /^[a-zA-Z0-9_]+$/,
+                            message: 'The username can only consist of alphabetical, number and underscore',
+                        },
+                    }
+                },
+                password: {
+                    validators: {
+                        notEmpty: {
+                            message: 'The password is required'
+                        },
+                        stringLength: {
+                            min: 8,
+                            message: 'The password must have at least 8 characters',
+                        },
+                    }
+                },
+            },
+            plugins: {
+                trigger: new Trigger(),
+                bulma: new Bulma(),
+                submitButton: new SubmitButton(),
+                icon: new Icon({
+                    valid: 'fa fa-check',
+                    invalid: 'fa fa-times',
+                    validating: 'fa fa-refresh',
+                }),
+            }
+        });
+
+        this.refs.demo.set({
+            fv,
+            sampleCode,
+        });
+    },
+};
+</script>
+    

@@ -1,0 +1,68 @@
+<svelte:head>
+	<title>FormValidation • API</title>
+</svelte:head>
+
+<Guide>
+    <h1 class="f3 f2-m f1-l tc">Overview</h1>
+    <h2 class="f4 fw4 tc">A collection of public methods</h2>
+
+    <section class="mb4">
+        <p class="lh-copy">After initializing the form with <code>FormValidation.formValidation()</code>, you can access the public methods provided by <code>formValidation</code>.</p>
+
+        <h3>Using in the browser</h3>
+<SampleCode lang="html" code={`
+<script-tag src="/vendors/formvalidation/dist/js/FormValidation.min.js"></script-tag>
+
+<script-tag>
+document.addEventListener('DOMContentLoaded', function(e) {
+    const fv = FormValidation.formValidation(
+        document.getElementById('demoForm'),
+        {
+            ...
+        }
+    );
+
+    // Call the public methods
+    fv.METHOD_NAME(PARAMETERS);
+});
+</script-tag>
+`} />
+
+        <h3>Using with JavaScript module</h3>
+<SampleCode lang="javascript" code={`
+// You might need to change the importing path
+import formValidation from 'formvalidation/core/Core';
+
+// Initialize somewhere depending on the JavaScript framework you are using
+const fv = formValidation(
+    document.getElementById('demoForm'),
+    {
+        ...
+    }
+);
+
+// Call the public methods
+fv.METHOD_NAME(PARAMETERS);
+`} />
+        
+        <p class="lh-copy">The next sections list all of public methods provided by library.</p>
+    </section>
+
+    <section class="cf mb4">
+        <div class="fl w-50 tl">
+            <a href="/guide/plugins/" class="b blue dim link pa2">&larr; Plugins</a>
+        </div>
+        <div class="fl w-50 tr">
+            <a href="/guide/api/add-field/" class="b blue dim link pa2">addField() method &rarr;</a>
+        </div>
+    </section>
+</Guide>
+
+<script>
+export default {
+    components: {
+        Guide: '../../../components/Guide.html',
+        SampleCode: '../../../components/SampleCode.html',
+    },
+};
+</script>

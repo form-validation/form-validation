@@ -1,0 +1,112 @@
+<style>
+:global(.ui.form .fields) {
+    margin: 0 -.5em 1em;
+}
+:global(.ui.form:not(.unstackable) .fields:not(.unstackable)>.four.wide.field) {
+    width: 25%!important;
+}
+:global(.ui.form:not(.unstackable) .fields:not(.unstackable)>.eight.wide.field) {
+    width: 50%!important;
+}
+</style>
+
+<DemoLayout framework="semantic">
+    <DemoWrapper ref:demo from="/guide/getting-started/usage/frameworks/Semantic">
+        <div class="ui grid">
+            <div class="sixteen wide column">
+                <form id="demoForm" class="ui form" method="POST">
+                    <div class="fields">
+                        <label class="four wide field">Username</label>
+                        <div class="eight wide field">
+                            <div class="ui input icon">
+                                <input name="username" type="text" placeholder="Username" />
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="fields">
+                        <label class="four wide field">Password</label>
+                        <div class="eight wide field">
+                            <div class="ui input icon">
+                                <input name="password" type="password" placeholder="Password" />
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="fields">
+                        <label class="four wide field"></label>
+                        <div class="eight wide field">
+                            <button type="submit" class="ui primary button">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </DemoWrapper>
+</DemoLayout>
+
+<script>
+import formValidation from 'formvalidation/core/Core';
+import Icon from 'formvalidation/plugins/Icon';
+import SubmitButton from 'formvalidation/plugins/SubmitButton';
+import Trigger from 'formvalidation/plugins/Trigger';
+import Semantic from 'formvalidation/plugins/Semantic';
+
+import sampleCode from './Semantic.programmatic';
+
+export default {
+    components: {
+        DemoLayout: '../../../../../components/DemoLayout.html',
+        DemoWrapper: '../../../../../components/DemoWrapper.html',
+    },
+
+    oncreate() {
+        const fv = formValidation(document.getElementById('demoForm'), {
+            fields: {
+                username: {
+                    validators: {
+                        notEmpty: {
+                            message: 'The username is required'
+                        },
+                        stringLength: {
+                            min: 6,
+                            max: 30,
+                            message: 'The username must be more than 6 and less than 30 characters long',
+                        },
+                        regexp: {
+                            regexp: /^[a-zA-Z0-9_]+$/,
+                            message: 'The username can only consist of alphabetical, number and underscore',
+                        },
+                    }
+                },
+                password: {
+                    validators: {
+                        notEmpty: {
+                            message: 'The password is required'
+                        },
+                        stringLength: {
+                            min: 8,
+                            message: 'The password must have at least 8 characters',
+                        },
+                    }
+                },
+            },
+            plugins: {
+                trigger: new Trigger(),
+                semantic: new Semantic(),
+                submitButton: new SubmitButton(),
+                icon: new Icon({
+                    valid: 'checkmark icon',
+                    invalid: 'remove icon',
+                    validating: 'refresh icon',
+                }),
+            },
+        });
+
+        this.refs.demo.set({
+            fv,
+            sampleCode,
+        });
+    },
+};
+</script>

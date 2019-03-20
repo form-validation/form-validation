@@ -1,0 +1,71 @@
+<DemoLayout framework="tachyons">
+    <DemoWrapper ref:demo from="/guide/validators/not-empty/trim/Tachyons">
+        <form id="demoForm" method="post">
+            <div class="cf mb2">
+                <div class="fl w-100">
+                    <div class="fl w-25 pa2">Full name</div>
+                    <div class="fl w-50">
+                        <input type="text" name="fullName" class="input-reset ba b--black-20 pa2 mb2 db w-100" />
+                        <p class="lh-copy">Try to press the <span class="i">Space</span> bar to see</p>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </DemoWrapper>
+</DemoLayout>
+
+<script>
+import formValidation from 'formvalidation/core/Core';
+import Icon from 'formvalidation/plugins/Icon';
+import Trigger from 'formvalidation/plugins/Trigger';
+import Tachyons from 'formvalidation/plugins/Tachyons';
+import Transformer from 'formvalidation/plugins/Transformer';
+
+import sampleCode from './Tachyons.programmatic';
+
+export default {
+    components: {
+        DemoLayout: '../../../../../components/DemoLayout.html',
+        DemoWrapper: '../../../../../components/DemoWrapper.html',
+    },
+
+    oncreate() {
+        const fv = formValidation(document.getElementById('demoForm'), {
+            fields: {
+                fullName: {
+                    validators: {
+                        notEmpty: {
+                            message: 'The full name is required'
+                        }
+                    }
+                },
+            },
+            plugins: {
+                trigger: new Trigger(),
+                tachyons: new Tachyons(),
+                icon: new Icon({
+                    valid: 'fa fa-check',
+                    invalid: 'fa fa-times',
+                    validating: 'fa fa-refresh'
+                }),
+                transformer: new Transformer({
+                    fullName: {
+                        notEmpty: (field, element, validator) => {
+                            // Get the field value
+                            const value = element.value;
+        
+                            // Remove the spaces from beginning and ending
+                            return value.trim();
+                        },
+                    },
+                }),
+            },
+        });
+
+        this.refs.demo.set({
+            fv,
+            sampleCode,
+        });
+    },
+};
+</script>

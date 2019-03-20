@@ -1,0 +1,33 @@
+<svelte:head>
+	<title>FormValidation • Playing with Summernote</title>
+</svelte:head>
+
+<Guide>
+    <h1 class="f3 f2-m f1-l tc lh-copy">Playing with Summernote</h1>
+
+    <p class="lh-copy">This example shows how to use FormValidation with <a href="http://summernote.org" class="blue dim link">Summernote</a> plugin.</p>
+    <p class="lh-copy">You have to revalidate the editor field when it's changed by Summernote:</p>
+    <div class="mb4">
+<SampleCode lang="javascript" code={`
+$('[name="content"]')
+    .summernote({
+        height: 400
+    })
+    .on('summernote.change', function(customEvent, contents, $editable) {
+        // Revalidate the content when its value is changed by Summernote
+        fv.revalidateField('content');
+    });
+`} />        
+    </div>
+    <Demo prefix="/guide/examples/summernote/basic" frameworks={['Bootstrap']} />
+</Guide>
+
+<script>
+export default {
+    components: {
+        Demo: '../../../../components/Demo.html',
+        Guide: '../../../../components/Guide.html',
+        SampleCode: '../../../../components/SampleCode.html',
+    },
+};
+</script>

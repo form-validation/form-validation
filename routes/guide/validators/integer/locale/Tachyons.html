@@ -1,0 +1,138 @@
+<DemoLayout framework="tachyons">
+    <DemoWrapper ref:demo from="/guide/validators/integer/locale/Tachyons">
+        <ReceiveMessage type="SAMPLE_FIELD_VALUE" on:received="receive(event)">
+            <form id="demoForm" method="post">
+                <div class="cf mb2">
+                    <div class="fl w-100">
+                        <div class="fl w-25 pa2">Country</div>
+                        <div class="fl w-50">
+                            <select class="input-reset ba b--black-20 pa2 mb2 db w-100" name="country" on:change="changeCountry(event)">
+                                <option value="">Choose a country</option>
+                                <option value="en_US">United States</option>
+                                <option value="fr_FR">France</option>
+                                <option value="it_IT">Italy</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="cf mb2">
+                    <div class="fl w-100">
+                        <div class="fl w-25 pa2">Type a number</div>
+                        <div class="fl w-50">
+                            <input type="text" name="number" class="input-reset ba b--black-20 pa2 mb2 db w-100" />
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </ReceiveMessage>
+    </DemoWrapper>
+</DemoLayout>
+
+<script>
+import formValidation from 'formvalidation/core/Core';
+import Icon from 'formvalidation/plugins/Icon';
+import Trigger from 'formvalidation/plugins/Trigger';
+import Tachyons from 'formvalidation/plugins/Tachyons';
+
+import sampleCode from './Tachyons.programmatic';
+
+export default {
+    components: {
+        DemoLayout: '../../../../../components/DemoLayout.html',
+        DemoWrapper: '../../../../../components/DemoWrapper.html',
+        ReceiveMessage: '../../../../../components/ReceiveMessage.html',
+    },
+
+    oncreate() {
+        const fv = formValidation(document.getElementById('demoForm'), {
+            fields: {
+                number: {
+                    validators: {
+                        integer: {
+                            message: 'The value is not a valid integer number',
+                            // The default separators
+                            thousandsSeparator: '',
+                            decimalSeparator: '.'
+                        }
+                    }
+                },
+            },
+            plugins: {
+                trigger: new Trigger(),
+                tachyons: new Tachyons(),
+                icon: new Icon({
+                    valid: 'fa fa-check',
+                    invalid: 'fa fa-times',
+                    validating: 'fa fa-refresh'
+                }),
+            },
+        });
+
+        this.refs.demo.set({
+            fv,
+            sampleCode,
+        });
+    },
+
+    methods: {
+        changeCountry(event) {
+            let thousandsSeparator = '';
+            let decimalSeparator = '.';
+
+            switch (event.target.value) {
+                case 'en_US':
+                    thousandsSeparator = ',';
+                    decimalSeparator = '.';
+                    break;
+
+                case 'fr_FR':
+                    thousandsSeparator = ' ';
+                    decimalSeparator = ',';
+                    break;
+
+                case 'it_IT':
+                    thousandsSeparator = '.';
+                    decimalSeparator = ',';
+                    break;
+
+                case '':
+                default:
+                    thousandsSeparator = '';
+                    decimalSeparator   = '.';
+                    break;
+            }
+
+            // Revalidate the number whenever user changes the country
+            const { fv } = this.refs.demo.get();
+            fv
+            .updateValidatorOption('number', 'integer', 'thousandsSeparator', thousandsSeparator)
+            .updateValidatorOption('number', 'integer', 'decimalSeparator', decimalSeparator)
+            .revalidateField('number');
+        },
+
+        receive(event) {
+            const v = event.data;
+
+            const form = document.getElementById('demoForm');
+            form.querySelector('[name="country"]').value = v.country;
+            form.querySelector('[name="number"]').value = v.sample;
+
+            const { fv } = this.refs.demo.get();
+            if (fv) {
+                fv
+                .updateValidatorOption('number', 'integer', 'thousandsSeparator', v.thousandsSeparator)
+                .updateValidatorOption('number', 'integer', 'decimalSeparator', v.decimalSeparator)
+                .revalidateField('number').then((result) => {
+                    window.parent.postMessage({
+                        type: 'DEMO_VALIDATE_RESULT',
+                        data: {
+                            input: v,
+                            output: result
+                        },
+                    }, '*');
+                });
+            }
+        },
+    },
+};
+</script>

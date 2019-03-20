@@ -1,0 +1,141 @@
+<DemoLayout framework="tachyons">
+    <DemoWrapper ref:demo from="/guide/validators/vat/basic/Tachyons">
+        <ReceiveMessage type="SAMPLE_FIELD_VALUE" on:received="receive(event)">
+            <form id="demoForm" method="post">
+                <div class="cf mb2">
+                    <div class="fl w-100">
+                        <div class="fl w-25 pa2">Country</div>
+                        <div class="fl w-50">
+                            <select class="input-reset ba b--black-20 pa2 mb2 db w-100" name="country" on:change="changeCountry()">
+                                <option value="AT">Austria</option>
+                                <option value="BE">Belgium</option>
+                                <option value="BR">Brazil</option>
+                                <option value="BG">Bulgaria</option>
+                                <option value="HR">Croatia</option>
+                                <option value="CY">Cyprus</option>
+                                <option value="CZ">Czech Republic</option>
+                                <option value="DK">Denmark</option>
+                                <option value="EE">Estonia</option>
+                                <option value="FI">Finland</option>
+                                <option value="FR">France</option>
+                                <option value="DE">Germany</option>
+                                <option value="GR">Greece</option>
+                                <option value="HU">Hungary</option>
+                                <option value="IS">Iceland</option>
+                                <option value="IE">Ireland</option>
+                                <option value="IT">Italy</option>
+                                <option value="LV">Latvia</option>
+                                <option value="LT">Lithuania</option>
+                                <option value="LU">Luxembourg</option>
+                                <option value="MT">Malta</option>
+                                <option value="NL">Netherlands</option>
+                                <option value="NO">Norway</option>
+                                <option value="PL">Poland</option>
+                                <option value="PT">Portugal</option>
+                                <option value="RO">Romania</option>
+                                <option value="RU">Russia</option>
+                                <option value="RS">Serbia</option>
+                                <option value="SK">Slovakia</option>
+                                <option value="SI">Slovenia</option>
+                                <option value="ZA">South Africa</option>
+                                <option value="ES">Spain</option>
+                                <option value="SE">Sweden</option>
+                                <option value="CH">Switzerland</option>
+                                <option value="GB">United Kingdom</option>
+                                <option value="VE">Venezuela</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cf mb2">
+                    <div class="fl w-100">
+                        <div class="fl w-25 pa2">VAT number</div>
+                        <div class="fl w-50">
+                            <input type="text" name="vatNumber" class="input-reset ba b--black-20 pa2 mb2 db w-100" />
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </ReceiveMessage>
+    </DemoWrapper>
+</DemoLayout>
+
+<script>
+import formValidation from 'formvalidation/core/Core';
+import Icon from 'formvalidation/plugins/Icon';
+import Trigger from 'formvalidation/plugins/Trigger';
+import Tachyons from 'formvalidation/plugins/Tachyons';
+import vat from 'formvalidation/validators/vat';
+
+import sampleCode from './Tachyons.programmatic';
+
+export default {
+    components: {
+        DemoLayout: '../../../../../components/DemoLayout.html',
+        DemoWrapper: '../../../../../components/DemoWrapper.html',
+        ReceiveMessage: '../../../../../components/ReceiveMessage.html',
+    },
+
+    oncreate() {
+        const form = document.getElementById('demoForm');
+        const fv = formValidation(form, {
+            fields: {
+                vatNumber: {
+                    validators: {
+                        vat: {
+                            country: () => {
+                                return form.querySelector('[name="country"]').value;
+                            },
+                            message: 'The value is not a valid VAT number'
+                        }
+                    }
+                },
+            },
+            plugins: {
+                trigger: new Trigger(),
+                tachyons: new Tachyons(),
+                icon: new Icon({
+                    valid: 'fa fa-check',
+                    invalid: 'fa fa-times',
+                    validating: 'fa fa-refresh'
+                }),
+            },
+        }).registerValidator('vat', vat);
+
+        this.refs.demo.set({
+            fv,
+            sampleCode,
+        });
+    },
+
+    methods: {
+        changeCountry() {
+            // Revalidate the VAT field whenever user changes the country
+            const { fv } = this.refs.demo.get();
+            fv.revalidateField('vatNumber');
+        },
+
+        receive(event) {
+            const v = event.data;
+
+            const form = document.getElementById('demoForm');
+            form.querySelector('[name="country"]').value = v.country;
+            form.querySelector('[name="vatNumber"]').value = v.sample;
+
+            const { fv } = this.refs.demo.get();
+            if (fv) {
+                fv.revalidateField('vatNumber').then((result) => {
+                    window.parent.postMessage({
+                        type: 'DEMO_VALIDATE_RESULT',
+                        data: {
+                            input: v,
+                            output: result
+                        },
+                    }, '*');
+                });
+            }
+        },
+    },
+};
+</script>

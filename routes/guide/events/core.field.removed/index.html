@@ -1,0 +1,34 @@
+<svelte:head>
+	<title>FormValidation • core.field.removed event</title>
+</svelte:head>
+
+<Guide>
+    <h1 class="f3 f2-m f1-l tc">core.field.removed event</h1>
+    <h2 class="f4 fw4 tc">Triggered after removing a field via the <a href="/guide/api/remove-field/" class="blue dim link">removeField()</a> method</h2>
+
+    <section class="mb4">
+        <p class="lh-copy">The event object contains the following properties</p>
+        <ul class="ma0 pl3 lh-copy">
+            <li><code>elements</code>: HTMLElement[] — The field elements</li>
+            <li><code>field</code>: String — The field name</li>
+            <li><code>options</code>: Object — The field options</li>
+        </ul>
+    </section>
+
+    <section class="cf mb4">
+        <div class="fl w-50 tl">
+            <a href="/guide/events/core.field.invalid/" class="b blue dim link pa2">&larr; core.field.invalid event</a>
+        </div>
+        <div class="fl w-50 tr">
+            <a href="/guide/events/core.field.reset/" class="b blue dim link pa2">core.field.reset event &rarr;</a>
+        </div>
+    </section>
+</Guide>
+
+<script>
+export default {
+    components: {
+        Guide: '../../../../components/Guide.html',
+    },
+};
+</script>

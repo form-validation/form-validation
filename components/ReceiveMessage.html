@@ -1,0 +1,21 @@
+<slot></slot>
+
+<script>
+export default {
+    oncreate() {
+        const onMessage = (e) => {
+            const { type, from } = this.get();
+            if (e.data.type === type && e.data.from === from) {
+                this.fire('received', {
+                    data: e.data.data,
+                });
+            }
+        };
+
+        window.addEventListener('message', onMessage, false);
+        this.on('destroy', () => {
+            window.removeEventListener('message', onMessage);
+        });
+    },
+}
+</script>

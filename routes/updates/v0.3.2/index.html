@@ -1,0 +1,38 @@
+<svelte:head>
+	<title>FormValidation • v0.3.2</title>
+</svelte:head>
+
+<ChangelogLayout>
+    <h1 class="f3 f2-m f1-l tc">Version 0.3.2</h1>
+    <h2 class="f4 fw4 tc">Released 21 March 2014</h2>
+
+    <section class="mb4">
+        <h2><span class="bb b--gray">New features</span></h2>
+        <ul class="pa0 ma0 ml3 lh-copy">
+            <li>Add <a class="blue dim link" href="/guide/validators/ip/">ip validator</a>. Support both IPv4 and IPv6</li>
+            <li>Add <a class="blue dim link" href="/guide/validators/isbn/">isbn validator</a>, support both ISBN 10 and ISBN 13</li>
+            <li>Add <a class="blue dim link" href="/guide/validators/step/">step validator</a></li>
+            <li>Add <code>selector</code> option for each field. The field can be defined by CSS validator instead of the <code>name</code> attribute</li>
+            <li>Add <a class="blue dim link" href="/guide/validators/mac/">mac validator</a></li>
+            <li>Add <a class="blue dim link" href="/guide/validators/base64/">base64 validator</a></li>
+            <li>Add <a class="blue dim link" href="/guide/validators/cvv/">cvv validator</a></li>
+            <li>Add <a class="blue dim link" href="/guide/validators/phone/">phone validator</a>. Support US phone number only</li>
+            <li>Add <code>container</code> option for each field to indicate where the error messages are shown</li>
+        </ul>
+    </section>
+
+    <section class="mb4">
+        <h2><span class="bb b--gray">Improvements</span></h2>
+        <ul class="pa0 ma0 ml3 lh-copy">
+            <li><a class="blue dim link" href="/guide/validators/credit-card/">creditCard validator</a> now validates both IIN ranges and length</li>
+        </ul>
+    </section>
+</ChangelogLayout>
+
+<script>
+export default {
+    components: {
+        ChangelogLayout: '../../../components/ChangelogLayout.html',
+    },
+};
+</script>

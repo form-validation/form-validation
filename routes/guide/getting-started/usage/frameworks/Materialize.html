@@ -1,0 +1,101 @@
+<DemoLayout framework="materialize">
+    <DemoWrapper ref:demo from="/guide/getting-started/usage/frameworks/Materialize">
+        <ResourceLoader urls={[
+            'https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js',
+        ]}>
+            <form id="demoForm" method="post">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input type="text" name="username" />
+                        <label>Username</label>
+                    </div>
+                </div>
+    
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input type="password" name="password" />
+                        <label>Password</label>
+                    </div>
+                </div>
+    
+                <div class="row">
+                    <div class="col s12">
+                        <button type="submit" class="btn waves-effect waves-light">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </ResourceLoader>
+    </DemoWrapper>
+</DemoLayout>
+
+<script>
+import formValidation from 'formvalidation/core/Core';
+import Icon from 'formvalidation/plugins/Icon';
+import SubmitButton from 'formvalidation/plugins/SubmitButton';
+import Trigger from 'formvalidation/plugins/Trigger';
+import Materialize from 'formvalidation/plugins/Materialize';
+
+import sampleCode from './Materialize.programmatic';
+
+export default {
+    components: {
+        DemoLayout: '../../../../../components/DemoLayout.html',
+        DemoWrapper: '../../../../../components/DemoWrapper.html',
+        ResourceLoader: '../../../../../components/ResourceLoader.html',
+    },
+
+    oncreate() {
+        window.addEventListener('load', () => {
+            M.AutoInit();
+            
+            const fv = formValidation(document.getElementById('demoForm'), {
+                fields: {
+                    username: {
+                        validators: {
+                            notEmpty: {
+                                message: 'The username is required'
+                            },
+                            stringLength: {
+                                min: 6,
+                                max: 30,
+                                message: 'The username must be more than 6 and less than 30 characters long'
+                            },
+                            regexp: {
+                                regexp: /^[a-zA-Z0-9_]+$/,
+                                message: 'The username can only consist of alphabetical, number and underscore'
+                            }
+                        }
+                    },
+                    password: {
+                        validators: {
+                            notEmpty: {
+                                message: 'The password is required'
+                            },
+                            stringLength: {
+                                min: 8,
+                                message: 'The password must have at least 8 characters'
+                            },
+                        }
+                    },
+                },
+                plugins: {
+                    trigger: new Trigger(),
+                    materialize: new Materialize(),
+                    submitButton: new SubmitButton(),
+                    icon: new Icon({
+                        valid: 'fa fa-check',
+                        invalid: 'fa fa-times',
+                        validating: 'fa fa-refresh',
+                    }),
+                }
+            });
+
+            this.refs.demo.set({
+                fv,
+                sampleCode,
+            });
+        });
+    },
+};
+</script>
+    

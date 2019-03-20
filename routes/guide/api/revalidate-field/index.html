@@ -1,0 +1,115 @@
+<svelte:head>
+	<title>FormValidation • revalidateField() method</title>
+</svelte:head>
+
+<Guide>
+    <h1 class="f3 f2-m f1-l tc">revalidateField()</h1>
+    <h2 class="f4 fw4 tc">Revalidate a particular field</h2>
+
+    <section class="mb4">
+        <div class="mb3">
+            <SampleCode lang="javascript" code={`revalidateField(field: String): Promise`} />
+        </div>
+        <p class="lh-copy i"><sup>*</sup> presents a required parameter</p>
+        <ul class="ma0 pl3 lh-copy">
+            <li><code>field</code> <sup>*</sup> — The field name</li>
+        </ul>
+        <p class="lh-copy">This method is useful when the field value is effected by third parties (for example, attach another UI library to the field).</p>
+        <p class="lh-copy">Since there isn't an automatic way for FormValidation to know when the field value is modified in those cases, we need to revalidate the field manually.</p>
+<SampleCode lang="javascript" code={`
+fv
+    .revalidateField('userName')
+    .then(function(status) {
+        // status can be one of the following value
+        // 'NotValidated' or FormValidation.Status.NotValidated: The field is not yet validated
+        // 'Valid' or FormValidation.Status.Valid: The field is valid
+        // 'Invalid' or FormValidation.Status.Invalid: The field is invalid
+        ...
+    });
+`} />
+        <p class="lh-copy">Look at the <a href="/guide/developing/integration/" class="blue dim link">Integration</a> page to see more examples.</p>
+    </section>
+
+    <section class="mb4">
+        <h2><span class="bb b--gray">Example: Validating multiple inputs as one</span></h2>
+        <p class="lh-copy">In some cases, you need to validate a value which is combined by various fields. For instance, a Birthday field might be a combination of Date, Month and Year one.</p>
+        <p class="lh-copy">This example show a way to deal with these cases. The following form requires all of Date, Month and Year fields. Also, the combination of them must be a valid date.</p>
+        <p class="lh-copy">First, we need to create a hidden field that its value is generated from Date, Month and Year fields:</p>
+<SampleCode lang="html" code={`
+<form id="demoForm" method="POST">
+    <input type="text" name="date" placeholder="Date" />
+    <input type="text" name="month" placeholder="Month" />
+    <input type="text" name="year" placeholder="Year" />
+
+    <!-- Create a hidden field which is combined by 3 fields above -->
+    <input type="hidden" name="dob" />
+</form>
+`} />
+        <p class="lh-copy">We set the validator rules for that hidden field as usual:</p>        
+<SampleCode lang="javascript" code={`
+const form = document.getElementById('demoForm');
+
+const fv = FormValidation.formValidation(
+    form,
+    {
+        fields: {
+            dob: {
+                validators: {
+                    notEmpty: {
+                        message: 'Please fill out each field'
+                    },
+                    date: {
+                        format: 'YYYY/MM/DD',
+                        message: 'Please enter a valid date',
+                    },
+                }
+            }
+        },
+        plugins: {
+            ...
+        },
+    }
+);
+`} />       
+        <p class="lh-copy">Finally, when any of Date, Month and Year fields changes its value, we need to update the hidden field value and revalidate it using the <code>revalidateField()</code> method:</p>
+<SampleCode lang="javascript" code={`
+const keyupHandler = function() {
+    const y = form.querySelector('[name="year"]').value;
+    const m = form.querySelector('[name="month"]').value;
+    const d = form.querySelector('[name="date"]').value;
+
+    // Set the dob field value
+    const dob = y === '' || m === '' || d === '' ? '' : [y, m, d].join('/');
+    form.querySelector('[name="dob"]').value = dob;
+
+    // Revalidate it
+    fv.revalidateField('dob');
+};
+
+form.querySelector('[name="year"]').addEventListener('keyup', keyupHandler);
+form.querySelector('[name="month"]').addEventListener('keyup', keyupHandler);
+form.querySelector('[name="date"]').addEventListener('keyup', keyupHandler);
+`} />
+        <p class="lh-copy">Here is the working example:</p>
+        <Demo prefix="/guide/api/revalidate-field/multiple-inputs" frameworks={['Tachyons']} />
+    </section>
+
+    <section class="cf mb4">
+        <div class="fl w-50 tl">
+            <a href="/guide/api/reset-form/" class="b blue dim link pa2">&larr; resetForm() method</a>
+        </div>
+        <div class="fl w-50 tr">
+            <a href="/guide/api/set-locale/" class="b blue dim link pa2">setLocale() method &rarr;</a>
+        </div>
+    </section>
+</Guide>
+
+<script>
+export default {
+    components: {
+        Demo: '../../../../components/Demo.html',
+        Guide: '../../../../components/Guide.html',
+        SampleCode: '../../../../components/SampleCode.html',
+    },
+};
+</script>

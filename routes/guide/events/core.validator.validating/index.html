@@ -1,0 +1,106 @@
+<svelte:head>
+	<title>FormValidation • core.validator.validating event</title>
+</svelte:head>
+
+<Guide>
+    <h1 class="f3 f2-m f1-l tc">core.validator.validating event</h1>
+    <h2 class="f4 fw4 tc">Triggered when start excuting validation of particular validator on a field element</h2>
+
+    <section class="mb4">
+        <p class="lh-copy">The event object contains the following properties</p>
+        <ul class="ma0 pl3 lh-copy">
+            <li><code>element</code>: HTMLElement — The field element which is being validated</li>
+            <li><code>elements</code>: HTMLElement[] — The field elements</li>
+            <li><code>field</code>: String — The field name</li>
+            <li><code>validator</code>: String — The validator name</li>
+        </ul>
+    </section>
+
+    <section class="mb4">
+        <h2><span class="bb b--gray">Example: Getting notified while field is being validated</span></h2>
+
+        <p class="lh-copy">When using either <a href="/guide/validators/callback/" class="blue dim link">callback</a>, <a href="/guide/validators/promise/" class="blue dim link">promise</a> or <a href="/guide/validators/remote/" class="blue dim link">remote</a>
+            validator, your validation logic might take time. For instance, the <a href="/guide/validators/remote/" class="blue dim link">remote</a> validator connects to the server side
+            and executes a few of database queries to check whether or not the field is valid. These kind of process could force the user to wait for a busy processing.
+            User even don't have idea about what is happening.</p>
+        <p class="lh-copy">This example displays a progress bar when the validation is being processed. It enhances the user experience of the application.</p>
+        <p class="lh-copy">First, prepare the progress bar in the markup:</p>
+<SampleCode lang="html" code={`
+<div class="form-group row">
+    <label class="col-sm-3 col-form-label">Username</label>
+    <div class="col-sm-6">
+        <input type="text" class="form-control" name="username" autocomplete="off" />
+        
+        <!-- The progress bar is hidden initially -->
+        <div class="progress mt-2" id="progressBar" style="opacity: 0;">
+            <div class="progress-bar progress-bar-striped progress-bar-animate" style="width: 100%"></div>
+        </div>
+    </div>
+</div>
+`} />
+        <Tip>
+            The demo assume that you're using the <a href="http://getbootstrap.com" class="blue dim link">Bootstrap</a> framework.
+            Of course, you can use other progress bar component provided by the <a href="https://foundation.zurb.com/sites/docs/progress-bar.html" class="blue dim link">Foundation</a>,
+            <a href="http://semantic-ui.com/modules/progress.html" class="blue dim link">Semantic UI</a> or <a href="https://getuikit.com/docs/progress" class="blue dim link">UIKit</a> frameworks.
+        </Tip>
+        <p class="lh-copy">Next, display the progress bar when the field is being validated. Also, gide it when the validation is done.</p>
+<SampleCode lang="javascript" code={`
+FormValidation
+    .formValidation(
+        document.getElementById('demoForm'),
+        {
+            fields: {
+                username: {
+                    validators: {
+                        notEmpty: {
+                            message: 'The username is required'
+                        },
+                        remote: {
+                            message: 'The username is already taken',
+                            method: 'GET',
+                            url: '...',
+                        },
+                    }
+                },
+                ...
+            },
+            plugins: {
+                ...
+            },
+        }
+    )
+    .on('core.validator.validating', function(e) {
+        if (e.field === 'username' && e.validator === 'remote') {
+            document.getElementById('progressBar').style.opacity = '1';
+        }
+    })
+    .on('core.validator.validated', function(e) {
+        if (e.field === 'username' && e.validator === 'remote') {
+            document.getElementById('progressBar').style.opacity = '0';
+        }
+    });
+`} />
+        <p class="lh-copy">For testing purpose, the demo always answers that the username is already taken no matter what you input.</p>
+        <Demo prefix="/guide/events/core.validator.validating/loading" frameworks={['Bootstrap']} />
+    </section>
+
+    <section class="cf mb4">
+        <div class="fl w-50 tl">
+            <a href="/guide/events/core.validator.validated/" class="b blue dim link pa2">&larr; core.validator.validated event</a>
+        </div>
+        <div class="fl w-50 tr">
+            <a href="/guide/developing/" class="b blue dim link pa2">Developing &rarr;</a>
+        </div>
+    </section>
+</Guide>
+
+<script>
+export default {
+    components: {
+        Demo: '../../../../components/Demo.html',
+        Guide: '../../../../components/Guide.html',
+        SampleCode: '../../../../components/SampleCode.html',
+        Tip: '../../../../components/Tip.html',
+    },
+};
+</script>

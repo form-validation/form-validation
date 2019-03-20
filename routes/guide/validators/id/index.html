@@ -1,0 +1,179 @@
+<svelte:head>
+	<title>FormValidation • id validator</title>
+</svelte:head>
+
+<Guide>
+    <h1 class="f3 f2-m f1-l tc">id validator</h1>
+    <h2 class="f4 fw4 tc">Validate an <a href="https://en.wikipedia.org/wiki/National_identification_number" class="blue dim link">identification number</a></h2>
+
+    <section class="mb4">
+        <h2><span class="bb b--gray">Options</span></h2>
+
+        <h3>Using with form field</h3>
+        <p class="lh-copy i"><sup>*</sup> presents a required option. The HTML attributes are used to set the validator options via the <a href="/guide/plugins/declarative/" class="blue dim link">Declarative</a> plugin</p>
+        <table class="collapse ba br2 b--black-10 pv2 ph3 w-100">
+            <tr class="striped--light-gray">
+                <th class="pv2 ph3 tl f6 fw6 ttu">Name</th>
+                <th class="pv2 ph3 tl f6 fw6 ttu">HTML attribute</th>
+                <th class="pv2 ph3 tl f6 fw6 ttu">Type</th>
+                <th class="pv2 ph3 tl f6 fw6 ttu">Description</th>
+            </tr>
+            <tr class="striped--light-gray">
+                <td class="pv2 ph3"><code>country</code><sup>*</sup></td>
+                <td class="pv2 ph3"><code>data-fv-id___country</code></td>
+                <td class="pv2 ph3">String or Function</td>
+                <td class="pv2 ph3">An ISO-3166 country code</td>
+            </tr>
+            <tr class="striped--light-gray">
+                <td class="pv2 ph3"><code>message</code></td>
+                <td class="pv2 ph3"><code>data-fv-id___message</code></td>
+                <td class="pv2 ph3">String</td>
+                <td class="pv2 ph3">The error message</td>
+            </tr>
+        </table>
+        <p class="lh-copy">The validator supports the following countries (click the sample number to validate it):</p>
+
+        <table class="collapse ba br2 b--black-10 pv2 ph3 w-100">
+            <tr class="striped--light-gray">
+                <th class="pv2 ph3 tl f6 fw6 ttu">Country</th>
+                <th class="pv2 ph3 tl f6 fw6 ttu">Abbreviation ID system</th>
+                <th class="pv2 ph3 tl f6 fw6 ttu">Country code</th>
+                <th class="pv2 ph3 tl f6 fw6 ttu">Sample ID</th>
+                <th class="pv2 ph3 tl f6 fw6 ttu">Is it valid?</th>
+            </tr>
+            {#each samples as item}
+                {#if item.examples.length > 0}
+                {#each item.examples as example, i}
+                <tr class="striped--light-gray">
+                    <td class="pv2 ph3">{#if i === 0}{item.country}{/if}</td>
+                    <td class="pv2 ph3">{#if i === 0}{item.abbr}{/if}</td>
+                    <td class="pv2 ph3">{#if i === 0}{item.code}{/if}</td>
+                    <SampleData sample={{ country: item.code, sample: example }} renderSample={(s) => s.sample} />
+                </tr>
+                {/each}
+                {:else}
+                <tr class="striped--light-gray">
+                    <td class="pv2 ph3">{item.country}</td>
+                    <td class="pv2 ph3">{item.code}</td>
+                    <td class="pv2 ph3"></td>
+                    <td class="pv2 ph3"></td>
+                </tr>
+                {/if}
+            {/each}
+        </table>
+
+        <h3>Using with JavaScript module</h3>
+<SampleCode lang="javascript" code={`
+// You might need to change the importing path
+import id from 'formvalidation/validators/id';
+
+const result = id().validate({
+    value: ...,
+    options: {
+        // Can be a string or a function returns a string
+        country: ...,
+        message: ...,
+    },
+});
+/*
+result is an object of
+{
+    valid: true or false,
+    message: The error message
+}
+*/
+`} />
+    </section>
+
+    <section class="mb4">
+        <h2><span class="bb b--gray">Basic Example</span></h2>
+        <p class="lh-copy">You can click on sample from the table above to see if it's a valid or invalid id.</p>
+        <Demo prefix="/guide/validators/id/basic" frameworks={['Bootstrap', 'Tachyons']} />
+    </section>
+
+    <section class="mb4">
+        <h2><span class="bb b--gray">Module Example</span></h2>
+
+        <p class="lh-copy">The following snippet shows how to use the id validator with JavaScript module:</p>
+<SampleCode lang="javascript" code={`
+// You might need to change the importing path
+import id from 'formvalidation/validators/id';
+
+const res1 = id().validate({
+    value: '54362315K',
+    options: {
+        country: 'ES',
+        message: 'The value is not a valid ID',
+    },
+});
+// res1.valid === true
+
+const res2 = id().validate({
+    value: '511062-5629',
+    options: {
+        country: 'DK',
+        message: 'The value is not a valid ID',
+    },
+});
+// res2.valid === false
+`} />
+    </section>
+
+    <RelatedValidators validators={['vat']} />
+
+    <section class="cf mb4">
+        <div class="fl w-50 tl">
+            <a href="/guide/validators/iban/" class="b blue dim link pa2">&larr; iban validator</a>
+        </div>
+        <div class="fl w-50 tr">
+            <a href="/guide/validators/identical/" class="b blue dim link pa2">identical validator &rarr;</a>
+        </div>
+    </section>
+</Guide>
+
+<script>
+export default {
+    components: {
+        Demo: '../../../../components/Demo.html',
+        Guide: '../../../../components/Guide.html',
+        RelatedValidators: '../../../../components/RelatedValidators.html',
+        SampleCode: '../../../../components/SampleCode.html',
+        SampleData: '../../../../components/SampleData.html',
+    },
+
+    data() {
+        return {
+            samples: [
+                { country: 'Bosnia and Herzegovina', abbr: 'JMBG', code: 'BA', examples: [] },
+                { country: 'Brazil', abbr: 'CPF', code: 'BR', examples: ['39053344705', '390.533.447-05', '111.444.777-35', '231.002.999-00', '000.000.000-00'] },
+                { country: 'Bulgari', abbr: 'EGN', code: 'BG', examples: ['7523169263', '8032056031', '803205 603 1', '8001010008', '7501020018', '7552010005', '7542011030', '8019010008'] },
+                { country: 'Chile', abbr: 'RUN/RUT', code: 'CL', examples: ['76086428-5', '22060449-7', '12531909-2'] },
+                { country: 'China', abbr: '', code: 'CN', examples: ['450202201409072332', '22011219930407001X', '110108601017023', '999999199304070016'] },
+                { country: 'Croatia', abbr: 'OIB', code: 'HR', examples: ['33392005961', '33392005962'] },
+                { country: 'Czech', abbr: 'RC', code: 'CZ', examples: ['7103192745', '991231123', '1103492745', '590312123'] },
+                { country: 'Denmark', abbr: 'CPR', code: 'DK', examples: ['2110625629', '211062-5629', '511062-5629'] },
+                { country: 'Estonia', abbr: 'isikukood', code: 'EE', examples: ['37605030299'] },
+                { country: 'Finland', abbr: 'HETU', code: 'FI', examples: ['311280-888Y', '131052-308T', '131052-308U', '310252-308Y'] },
+                { country: 'Iceland', abbr: 'Kennitala', code: 'IS', examples: ['120174-3399', '1201743399', '0902862349'] },
+                { country: 'Ireland', abbr: 'PPS', code: 'IE', examples: ['6433435F', '6433435FT', '6433435FW', '6433435OA', '6433435IH', '1234567TW', '1234567FA', '6433435E', '6433435VH'] },
+                { country: 'Latvia', abbr: 'Personas kods', code: 'LV', examples: ['161175-19997', '16117519997', '161375-19997'] },
+                { country: 'Lithuania', abbr: 'Asmens kodas', code: 'LT', examples: ['38703181745', '38703181746', '78703181745', '38703421745'] },
+                { country: 'Macedonia', abbr: 'ЕМБГ', code: 'MK', examples: [] },
+                { country: 'Montenegro', abbr: 'JMBG', code: 'ME', examples: [] },
+                { country: 'Netherlands', abbr: 'BSN', code: 'NL', examples: ['111222333', '941331490', '9413.31.490'] },
+                { country: 'Poland', abbr: 'PESEL', code: 'PL', examples: ['83010411457', '87123116221', '39100413824', '36032806768', '04271113861'] },
+                { country: 'Romania', abbr: 'CNP', code: 'RO', examples: ['1630615123457', '1800101221144', '8800101221144', '1632215123457', '1630615123458'] },
+                { country: 'San Marino', abbr: '', code: 'SM', examples: [] },
+                { country: 'Serbia', abbr: 'JMBG', code: 'RS', examples: [] },
+                { country: 'Slovakia', abbr: 'RC', code: 'SK', examples: ['7103192745', '991231123', '7103192746', '1103492745'] },
+                { country: 'Slovenia', abbr: 'EMŠO', code: 'SI', examples: ['0101006500006'] },
+                { country: 'South Africa', abbr: 'South African ID', code: 'ZA', examples: ['8001015009087', '8001015009287', '8001015009086'] },
+                { country: 'Spain', abbr: 'DNI/NIE/CIF', code: 'ES', examples: ['54362315K', '54362315-K', 'X2482300W', 'X-2482300W', 'X-2482300-W', '54362315Z', 'X-2482300A'] },
+                { country: 'Sweden', abbr: 'personnummer', code: 'SE', examples: ['8112289874', '811228-9874', '811228+9874', '811228-9873'] },
+                { country: 'Switzerland', abbr: 'AHV-Nr/No AVS', code: 'CH', examples: ['756.1234.5678.95', '7561234567895'] },
+                { country: 'Thailand', abbr: '', code: 'TH', examples: ['7145620509547', '3688699975685', '2368719339716', '1100800092310'] },
+            ]
+        };
+    },
+};
+</script>

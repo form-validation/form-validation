@@ -1,0 +1,125 @@
+<svelte:head>
+	<title>FormValidation • Validators</title>
+</svelte:head>
+
+<Guide>
+    <h1 class="f3 f2-m f1-l tc">Validators</h1>
+    <h2 class="f4 fw4 tc">The richest validators in the class</h2>
+
+    <section class="mb4">
+        <p class="lh-copy">FormValidation comes with various built-in validators listed in the alphabetical order, split into two groups as following:</p>
+
+        <h2><span class="bb b--gray">Popular validators</span></h2>
+        <p class="lh-copy">In most cases, this list covers validators you often need. All these validators are included in the <code>dist/js/FormValidation(.min).js</code> file.</p>
+        <table class="collapse ba br2 b--black-10 pv2 ph3 w-100">
+            <tr class="striped--light-gray">
+                <th class="pv2 ph3 tl f6 fw6 ttu">Name</th>
+                <th class="pv2 ph3 tl f6 fw6 ttu">Description</th>
+            </tr>
+            {#each PopularValidators as v}
+            <tr class="striped--light-gray">
+                <td class="pv2 ph3"><a href="/guide/validators/{camelCaseToDash(v.name)}/" class="blue dim link" title="{v.description}">{v.name}</a></td>
+                <td class="pv2 ph3">{v.description}</td>
+            </tr>
+            {/each}
+        </table>
+
+        <h2><span class="bb b--gray">Special validators</span></h2>
+        <p class="lh-copy">The following list includes special validators which you often don't need most of the times. In order to use them, you have to include the <code>dist/js/FormValidation.full(.min).js</code> file to your page.</p>
+        <table class="collapse ba br2 b--black-10 pv2 ph3 w-100">
+            <tr class="striped--light-gray">
+                <th class="pv2 ph3 tl f6 fw6 ttu">Name</th>
+                <th class="pv2 ph3 tl f6 fw6 ttu">Description</th>
+            </tr>
+            {#each SpecialValidators as v}
+            <tr class="striped--light-gray">
+                <td class="pv2 ph3"><a href="/guide/validators/{camelCaseToDash(v.name)}/" class="blue dim link" title="{v.description}">{v.name}</a></td>
+                <td class="pv2 ph3">{v.description}</td>
+            </tr>
+            {/each}
+        </table>
+
+        <Tip>Look at the <a href="/guide/developing/custom-validator/" class="blue dim link">custom validator</a> page to see how you can create and reuse your own validator</Tip>
+    </section>
+
+    <section class="mb4">
+        <h2><span class="bb b--gray">Using validator globally</span></h2>
+
+        <p class="lh-copy">You can use any validator globally under the namespace <code>FormValidation.validators</code> in browser if the page includes the <code>FormValidation.min.js</code> or <code>FormValidation.full.min.js</code> script.</p>
+        <p class="lh-copy">The following sample code demonstrates how to use the <a href="/guide/validators/credit-card/" class="blue dim link">creditCard</a> validator to validate a credit card number:</p>
+
+<SampleCode lang="html" code={`
+<script-tag src="/vendors/formvalidation/dist/js/FormValidation.min.js"></script-tag>
+
+<script-tag>
+document.addEventListener('DOMContentLoaded', function(e) {
+    // Now you can access the creditCard validator from 
+    const result = FormValidation.validators.creditCard().validate({
+        value: '340653705597107',
+        options: {
+            message: 'The credit card number is not valid',
+        },
+    });
+
+    // result.valid === true
+    // result.meta.type === 'AMERICAN_EXPRESS'
+});
+</script-tag>
+`} />
+    </section>
+
+    <section class="mb4">
+        <h2><span class="bb b--gray">Using validator in JavaScript module</span></h2>
+
+        <p class="lh-copy">All validators are able to be imported and used with JavaScript module. It's super useful if you want to use validator with front-end frameworks (such as <a href="https://reactjs.org/" class="blue dim link">React</a>, 
+            <a href="https://vuejs.org/" class="blue dim link">VueJS</a>, <a href="https://svelte.technology/" class="blue dim link">Svelte</a>, .etc), or in server environment with NodeJS frameworks (such as <a href="https://expressjs.com/" class="blue dim link">Express</a>).
+        </p>
+        <p class="lh-copy">The following snippet shows how to use the creditCard validator with JavaScript module:</p>
+<SampleCode lang="javascript" code={`
+// You might need to change the importing path
+import creditCard from 'formvalidation/validators/creditCard';
+
+const result = creditCard().validate({
+    value: '340653705597107',
+    options: {
+        message: 'The credit card number is not valid',
+    },
+});
+// result.valid === true
+// result.meta.type === 'AMERICAN_EXPRESS'
+`} />
+    </section>
+
+    <section class="cf mb4">
+        <div class="fl w-50 tl">
+            <a href="/guide/getting-started/" class="b blue dim link pa2">&larr; Getting started</a>
+        </div>
+        <div class="fl w-50 tr">
+            <a href="/guide/validators/base64/" class="b blue dim link pa2">base64 validator &rarr;</a>
+        </div>
+    </section>
+</Guide>
+
+<script>
+import Validators from '../../../components/constants/Validators';
+import camelCaseToDash from '../../../components/helpers/camelCaseToDash';
+
+export default {
+    components: {
+        Guide: '../../../components/Guide.html',
+        SampleCode: '../../../components/SampleCode.html',
+        Tip: '../../../components/Tip.html',
+    },
+
+    data() {
+        return {
+            PopularValidators: Validators.filter((v) => !v.requireFullVersion),
+            SpecialValidators: Validators.filter((v) => v.requireFullVersion),
+        };
+    },
+
+    helpers: {
+        camelCaseToDash,
+    },
+};
+</script>

@@ -1,0 +1,689 @@
+<svelte:head>
+	<title>FormValidation • Icon plugin</title>
+</svelte:head>
+
+<Guide>
+    <h1 class="f3 f2-m f1-l tc">Icon plugin</h1>
+    <h2 class="f4 fw4 tc">Display various icons based on the field validity</h2>
+
+    <section class="mb4">
+        <h2><span class="bb b--gray">Usage</span></h2>
+        <p class="lh-copy">With this plugin, you can see the icon whenever the field is being validated, and after the validation completes, it also displays other icon depending on the field is valid or not. 
+            The following piece of code is the starting point to use the Icon plugin:</p>
+<SampleCode lang="html" code={`
+<html>
+<head>
+    <link-tag rel="stylesheet" href="/vendors/formvalidation/dist/css/formValidation.min.css">
+</head>
+<body>
+    <form id="demoForm" method="POST">
+        ...
+    </form>
+
+<script-tag src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.35.3/es6-shim.min.js"></script-tag>    
+<script-tag src="/vendors/formvalidation/dist/js/FormValidation.min.js"></script-tag>
+
+<script-tag>
+document.addEventListener('DOMContentLoaded', function(e) {
+    FormValidation.formValidation(
+        document.getElementById('demoForm'),
+        {
+            fields: {
+                ...
+            },
+            plugins: {
+                icon: new FormValidation.plugins.Icon({
+                    // Following is the default values
+                    valid: 'fv-plugins-icon--valid',
+                    invalid: 'fv-plugins-icon--invalid',
+                    validating: 'fv-plugins-icon--validating',
+                }),
+                ...
+            },
+        }
+    );
+});
+</script-tag>
+</body>
+</html>
+`} />
+        <p class="lh-copy">The sample code above assumes that the FormValidation files are placed inside the <code>vendors</code> directory. You might need to change the path depending on where you place them on the server.</p>
+
+        <p class="lh-copy">The <code>validating</code>, <code>valid</code> and <code>invalid</code> options present the list of CSS classes separated by a space that will be added to the icon when the field is being validated, valid or invalid.</p>
+        <p class="lh-copy">The Icon plugin only supports the form made in the following CSS frameworks:</p>
+
+        <table class="collapse ba br2 b--black-10 pv2 ph3 w-100">
+            <tr class="striped--light-gray">
+                <th class="pv2 ph3 tl f6 fw6 ttu">Framework</th>
+                <th class="pv2 ph3 tl f6 fw6 ttu">Using with plugin</th>
+            </tr>
+            <tr class="striped--light-gray">
+                <td class="pv2 ph3">Bootstrap 3 framework</td>
+                <td class="pv2 ph3"><a href="/guide/plugins/bootstrap3/" class="blue dim link">Bootstrap 3</a></td>
+            </tr>
+            <tr class="striped--light-gray">
+                <td class="pv2 ph3">Bootstrap 4 framework</td>
+                <td class="pv2 ph3"><a href="/guide/plugins/bootstrap/" class="blue dim link">Bootstrap</a></td>
+            </tr>
+            <tr class="striped--light-gray">
+                <td class="pv2 ph3">Bulma framework</td>
+                <td class="pv2 ph3"><a href="/guide/plugins/bulma/" class="blue dim link">Bulma</a></td>
+            </tr>
+            <tr class="striped--light-gray">
+                <td class="pv2 ph3">Foundation framework</td>
+                <td class="pv2 ph3"><a href="/guide/plugins/foundation/" class="blue dim link">Foundation</a></td>
+            </tr>
+            <tr class="striped--light-gray">
+                <td class="pv2 ph3">Materialize framework</td>
+                <td class="pv2 ph3"><a href="/guide/plugins/materialize/" class="blue dim link">Materialize</a></td>
+            </tr>
+            <tr class="striped--light-gray">
+                <td class="pv2 ph3">Milligram framework</td>
+                <td class="pv2 ph3"><a href="/guide/plugins/milligram/" class="blue dim link">Milligram</a></td>
+            </tr>
+            <tr class="striped--light-gray">
+                <td class="pv2 ph3">mini.css framework</td>
+                <td class="pv2 ph3"><a href="/guide/plugins/mini/" class="blue dim link">Mini</a></td>
+            </tr>
+            <tr class="striped--light-gray">
+                <td class="pv2 ph3">MUI framework</td>
+                <td class="pv2 ph3"><a href="/guide/plugins/mui/" class="blue dim link">Mui</a></td>
+            </tr>
+            <tr class="striped--light-gray">
+                <td class="pv2 ph3">Pure library</td>
+                <td class="pv2 ph3"><a href="/guide/plugins/pure/" class="blue dim link">Pure</a></td>
+            </tr>
+            <tr class="striped--light-gray">
+                <td class="pv2 ph3">Semantic UI framework</td>
+                <td class="pv2 ph3"><a href="/guide/plugins/semantic/" class="blue dim link">Semantic</a></td>
+            </tr>
+            <tr class="striped--light-gray">
+                <td class="pv2 ph3">Shoelace library</td>
+                <td class="pv2 ph3"><a href="/guide/plugins/shoelace/" class="blue dim link">Shoelace</a></td>
+            </tr>
+            <tr class="striped--light-gray">
+                <td class="pv2 ph3">Spectre framework</td>
+                <td class="pv2 ph3"><a href="/guide/plugins/spectre/" class="blue dim link">Spectre</a></td>
+            </tr>
+            <tr class="striped--light-gray">
+                <td class="pv2 ph3">Tachyons library</td>
+                <td class="pv2 ph3"><a href="/guide/plugins/tachyons/" class="blue dim link">Tachyons</a></td>
+            </tr>
+            <tr class="striped--light-gray">
+                <td class="pv2 ph3">turretcss framework</td>
+                <td class="pv2 ph3"><a href="/guide/plugins/turret/" class="blue dim link">Turret</a></td>
+            </tr>
+            <tr class="striped--light-gray">
+                <td class="pv2 ph3">UIkit framework</td>
+                <td class="pv2 ph3"><a href="/guide/plugins/uikit/" class="blue dim link">Uikit</a></td>
+            </tr>
+        </table>
+
+        <Tip>The <a href="/guide/plugins/mandatory-icon/" class="blue dim link">MandatoryIcon</a> plugin is useful when you want to display the mandatory icon for required fields</Tip>
+    </section>
+    
+    <section class="mb4">
+        <h2><span class="bb b--gray">Using with Glyphicons</span></h2>
+        <p class="lh-copy">The Glyphicons icon set is included with Bootstrap v3, so you can use it as:</p>
+        <div class="mb4">
+<SampleCode lang="html" code={`
+<!-- Put them in the head tag -->
+<link-tag rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+<link-tag rel="stylesheet" href="/vendors/formvalidation/dist/css/formValidation.min.css">
+
+<form id="demoForm">
+    ...
+</form>
+
+<script-tag src="/vendors/formvalidation/dist/js/FormValidation.min.js"></script-tag>
+<script-tag src="/vendors/formvalidation/dist/js/plugins/Bootstrap3.min.js"></script-tag>
+
+<script-tag>
+document.addEventListener('DOMContentLoaded', function(e) {
+    FormValidation.formValidation(
+        document.getElementById('demoForm'),
+        {
+            fields: {
+                ...
+            },
+            plugins: {
+                bootstrap3: new FormValidation.plugins.Bootstrap3(),
+                icon: new FormValidation.plugins.Icon({
+                    valid: 'glyphicon glyphicon-ok',
+                    invalid: 'glyphicon glyphicon-remove',
+                    validating: 'glyphicon glyphicon-refresh',
+                }),
+            },
+        }
+    );
+});
+</script-tag>
+`} />
+        </div>
+        <Demo prefix="/guide/plugins/icon/glyphicons" frameworks={['Bootstrap3']} />
+    </section>
+
+    <section class="mb4">
+        <h2><span class="bb b--gray">Using with FontAwesome</span></h2>
+        <p class="lh-copy">Follow the sample code below to use the icons provided by <a href="https://fontawesome.com/" class="blue dim link">FontAwesome</a>:</p>
+        <div class="mb4">
+<SampleCode lang="html" code={`
+<!-- Put them in the head tag -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link-tag rel="stylesheet" href="/vendors/formvalidation/dist/css/formValidation.min.css">
+
+<form id="demoForm">
+    ...
+</form>
+
+<script-tag src="/vendors/formvalidation/dist/js/FormValidation.min.js"></script-tag>
+
+<script-tag>
+document.addEventListener('DOMContentLoaded', function(e) {
+    FormValidation.formValidation(
+        document.getElementById('demoForm'),
+        {
+            fields: {
+                ...
+            },
+            plugins: {
+                icon: new FormValidation.plugins.Icon({
+                    valid: 'fa fa-check',
+                    invalid: 'fa fa-times',
+                    validating: 'fa fa-refresh',
+                }),
+            },
+        }
+    );
+});
+</script-tag>
+`} />
+        </div>
+        <p class="lh-copy">If you want to use the FontAwesome SVG icon instead of its CSS classes, take a look at the <span class="i">Using SVG icons</span> section below.</p>
+        <Demo prefix="/guide/plugins/bootstrap/horizontal-form" frameworks={['Bootstrap']} />
+    </section>
+
+    <section class="mb4">
+        <h2><span class="bb b--gray">Using with Semantic UI framework</span></h2>
+        <p class="lh-copy">The Semantic UI framework provides an <a href="https://semantic-ui.com/elements/icon.html" class="blue dim link">icon set</a> which can be used with the Icon plugin.</p>
+        <p class="lh-copy">Followed by the <a href="https://semantic-ui.com/elements/input.html#icon" class="blue dim link">suggestion</a> from Semantic UI, the input must place inside <code>ui input icon</code> element:</p>
+<SampleCode lang="html" code={`
+<div class="ui input icon">
+    <input type="text" name="name" />
+</div>    
+`} />
+        <p class="lh-copy">Below is a starting point to use the Icon plugin along with the <a href="/guide/plugins/semantic/" class="blue dim link">Semantic</a> plugin:</p>
+        <div class="mb4">
+<SampleCode lang="html" code={`
+<!-- Put them in the head tag -->
+<link-tag rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.css">
+<link-tag rel="stylesheet" href="/vendors/formvalidation/dist/css/formValidation.min.css">
+
+<form id="demoForm">
+    ...
+</form>
+
+<script-tag src="/vendors/formvalidation/dist/js/FormValidation.min.js"></script-tag>
+<script-tag src="/vendors/formvalidation/dist/js/plugins/Semantic.min.js"></script-tag>
+
+<script-tag>
+document.addEventListener('DOMContentLoaded', function(e) {
+    FormValidation.formValidation(
+        document.getElementById('demoForm'),
+        {
+            fields: {
+                ...
+            },
+            plugins: {
+                semantic: new FormValidation.plugins.Semantic(),
+                icon: new FormValidation.plugins.Icon({
+                    valid: 'checkmark icon',
+                    invalid: 'remove icon',
+                    validating: 'refresh icon',
+                }),
+            },
+        }
+    );
+});
+</script-tag>
+`} />
+        </div>
+        <Demo prefix="/guide/plugins/semantic/horizontal-form" frameworks={['Semantic']} />
+    </section>
+
+    <section class="cf mb4">
+        <h2><span class="bb b--gray">Using with Spectre framework</span></h2>
+        <p class="lh-copy">The <a href="https://picturepan2.github.io/spectre/" class="blue dim link">Spectre framework</a> provides a built-in <a href="https://picturepan2.github.io/spectre/elements.html#icons" class="blue dim link">icons set</a> which can be used with <a href="/guide/plugins/spectre/" class="blue dim link">Spectre</a> plugin.</p>
+        <p class="lh-copy">In order to use these icons, you have to wrap the field in a <code>has-icon-right</code> class:</p>
+<SampleCode lang="html" code={`
+<div class="has-icon-right">
+    <input type="text" class="form-input" name="name" />
+</div>
+`} />
+        <p class="lh-copy">Below is a starting point to use the Icon plugin along with the <a href="/guide/plugins/spectre/" class="blue dim link">Spectre</a> plugin:</p>
+        <div class="mb4">
+<SampleCode lang="html" code={`
+<!-- Put them in the head tag -->
+<link-tag rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/spectre.css/0.5.3/spectre.min.css">
+<link-tag rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/spectre.css/0.5.3/spectre-icons.min.css">
+<link-tag rel="stylesheet" href="/vendors/formvalidation/dist/css/formValidation.min.css">
+
+<form id="demoForm">
+    ...
+</form>
+
+<script-tag src="/vendors/formvalidation/dist/js/FormValidation.min.js"></script-tag>
+<script-tag src="/vendors/formvalidation/dist/js/plugins/Spectre.min.js"></script-tag>
+
+<script-tag>
+document.addEventListener('DOMContentLoaded', function(e) {
+    FormValidation.formValidation(
+        document.getElementById('demoForm'),
+        {
+            fields: {
+                ...
+            },
+            plugins: {
+                spectre: new FormValidation.plugins.Spectre(),
+                icon: new FormValidation.plugins.Icon({
+                    valid: 'form-icon icon icon-check',
+                    invalid: 'form-icon icon icon-cross',
+                    validating: 'form-icon loading',
+                }),
+            },
+        }
+    );
+});
+</script-tag>
+`} />
+        </div>
+        <Demo prefix="/guide/plugins/spectre/horizontal-form" frameworks={['Spectre']} />
+    </section>
+
+    <section class="cf mb4">
+        <h2><span class="bb b--gray">Using SVG icons</span></h2>
+        <p class="lh-copy">For more customization, you might want to use SVG icons in additonal to the CSS classes. Fortunately, the Icon plugin provides an event named <code>plugins.icon.set</code> that you can hook on when the field is being validated, valid or invalid:</p>
+<SampleCode lang="javascript" code={`
+FormValidation
+    .formValidation(document.getElementById('demoForm'), {
+        fields: {
+            ...
+        },
+        plugins: {
+            icon: new FormValidation.plugins.Icon({
+                ...
+            }),
+        },
+    })
+    .on('plugins.icon.set', function(e) {
+        // e.element presents the field element
+        // e.field is the field name
+        // e.status is the validation status which 
+        // can be 'NotValidated', 'Validating', 'Valid' or 'Invalid'
+        // e.iconElement presents the icon element that associates with the field element
+        if (e.iconElement) {
+            switch (e.status) {
+                case 'Validating':
+                    e.iconElement.innerHTML = '...';
+                    break;
+
+                case 'Invalid':
+                    e.iconElement.innerHTML = '...';
+                    break;
+
+                case 'Valid':
+                    e.iconElement.innerHTML = '...';
+                    break;
+
+                default:
+                    e.iconElement.innerHTML = '';
+                    break;
+            }
+        }
+    });
+`} />
+        <p class="lh-copy">We can use the SVG icon by setting <code>e.iconElement.innerHTML</code>.</p>
+        <p class="lh-copy">You might need to set the <code>width</code>, <code>height</code> attributes for the SVG element to make it fit in the field. Also, the icon color can be adjusted by setting the <code>stroke</code> attribute:</p>
+<SampleCode lang="html" code={`
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512.333 512" width="16" height="16">
+    <path d="" stroke="#ff4136" />
+</svg>
+`} />        
+
+        <h3>Using with FontAwesome SVG icons</h3>
+        <p class="lh-copy">The following example shows how to listen on this event and display SVG icons provided by <a href="https://fontawesome.com" class="blue dim link">FontAwesome</a>:</p>
+        <table class="collapse ba br2 b--black-10 pv2 ph3 w-100 mb4">
+            <tr class="striped--light-gray">
+                <th class="pv2 ph3 tl f6 fw6 ttu">FontAwesome Icon</th>
+                <th class="pv2 ph3 tl f6 fw6 ttu">SVG code</th>
+            </tr>
+            <tr class="striped--light-gray">
+                <td class="pv2 ph3"><a href="https://fontawesome.com/icons/sync?style=solid" class="blue dim link">sync</a></td>
+                <td class="pv2 ph3">
+<SampleCode lang="html" code={`
+<svg xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 512.333 512" width="16" height="16">
+    <path d="M440.935 12.574l3.966 82.766C399.416 
+    41.904 331.674 8 256 8 134.813 8 33.933 94.924 
+    12.296 209.824 10.908 217.193 16.604 224 24.103 
+    224h49.084c5.57 0 10.377-3.842 11.676-9.259C103.407 
+    137.408 172.931 80 256 80c60.893 0 114.512 30.856 
+    146.104 77.801l-101.53-4.865c-6.845-.328-12.574 
+    5.133-12.574 11.986v47.411c0 6.627 5.373 12 12 
+    12h200.333c6.627 0 12-5.373 
+    12-12V12c0-6.627-5.373-12-12-12h-47.411c-6.853 
+    0-12.315 5.729-11.987 12.574zM256 432c-60.895 
+    0-114.517-30.858-146.109-77.805l101.868 4.871c6.845.327 
+    12.573-5.134 
+    12.573-11.986v-47.412c0-6.627-5.373-12-12-12H12c-6.627 
+    0-12 5.373-12 12V500c0 6.627 5.373 12 12 
+    12h47.385c6.863 0 12.328-5.745 
+    11.985-12.599l-4.129-82.575C112.725 470.166 180.405 
+    504 256 504c121.187 0 222.067-86.924 243.704-201.824 
+    1.388-7.369-4.308-14.176-11.807-14.176h-49.084c-5.57 
+    0-10.377 3.842-11.676 9.259C408.593 374.592 339.069 
+    432 256 432z" />
+</svg>
+`} />
+                </td>
+            </tr>
+            <tr class="striped--light-gray">
+                <td class="pv2 ph3"><a href="https://fontawesome.com/icons/times?style=solid" class="blue dim link">times</a></td>
+                <td class="pv2 ph3">
+<SampleCode lang="html" code={`
+<svg xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 352 512" width="16" height="16">
+    <path d="M242.72 256l100.07-100.07c12.28-12.28 
+    12.28-32.19 
+    0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 
+    0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 
+    0L9.21 111.45c-12.28 12.28-12.28 32.19 0 
+    44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 
+    32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 
+    12.28 44.48 0L176 322.72l100.07 100.07c12.28 
+    12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 
+    12.28-32.19 0-44.48L242.72 256z" />
+</svg>
+`} />
+                </td>
+            </tr>
+            <tr class="striped--light-gray">
+                <td class="pv2 ph3"><a href="https://fontawesome.com/icons/check?style=solid" class="blue dim link">check</a></td>
+                <td class="pv2 ph3">
+<SampleCode lang="html" code={`
+<svg xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 512 512" width="16" height="16">
+    <path d="M173.898 
+    439.404l-166.4-166.4c-9.997-9.997-9.997-26.206
+    0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 
+    36.204 0L192 312.69 432.095 72.596c9.997-9.997 
+    26.207-9.997 36.204 0l36.203 36.204c9.997 
+    9.997 9.997 26.206 0 36.204l-294.4 
+    294.401c-9.998 9.997-26.207 9.997-36.204-.001z" />
+</svg>
+`} />
+                </td>
+            </tr>
+        </table>
+        <Demo prefix="/guide/plugins/icon/fontawesome-svg" frameworks={['Tachyons']} />
+
+        <h3>Using with UIKit framework</h3>
+        <p class="lh-copy">The following example shows how to use <a href="https://getuikit.com/docs/icon" class="blue dim link">SVG icons</a> provided by <a href="https://getuikit.com" class="blue dim link">UIKit framework</a>:</p>
+        <table class="collapse ba br2 b--black-10 pv2 ph3 w-100 mb4">
+            <tr class="striped--light-gray">
+                <th class="pv2 ph3 tl f6 fw6 ttu">UIKit Icon</th>
+                <th class="pv2 ph3 tl f6 fw6 ttu">SVG code</th>
+            </tr>
+            <tr class="striped--light-gray">
+                <td class="pv2 ph3"><code>refresh</code></td>
+                <td class="pv2 ph3">
+<SampleCode lang="html" code={`
+<svg xmlns="http://www.w3.org/2000/svg" 
+    width="20" height="20" viewBox="0 0 20 20">
+    <path fill="none" stroke="#000" stroke-width="1.1" 
+        d="M17.08,11.15 C17.09,11.31 17.1,11.47 
+        17.1,11.64 C17.1,15.53 13.94,18.69 
+        10.05,18.69 C6.16,18.68 3,15.53 3,11.63 
+        C3,7.74 6.16,4.58 10.05,4.58 C10.9,4.58 
+        11.71,4.73 12.46,5"></path>
+    <polyline fill="none" stroke="#000"
+        points="9.9 2 12.79 4.89 9.79 7.9"></polyline>
+</svg>
+`} />
+                </td>
+            </tr>
+            <tr class="striped--light-gray">
+                <td class="pv2 ph3"><code>close</code></td>
+                <td class="pv2 ph3">
+<SampleCode lang="html" code={`
+<svg xmlns="http://www.w3.org/2000/svg" 
+    width="20" height="20" viewBox="0 0 20 20">
+    <path fill="none" stroke="#000" stroke-width="1.06" d="M16,16 L4,4"></path>
+    <path fill="none" stroke="#000" stroke-width="1.06" d="M16,4 L4,16"></path>
+</svg>
+`} />
+                </td>
+            </tr>
+            <tr class="striped--light-gray">
+                <td class="pv2 ph3"><code>check</code></td>
+                <td class="pv2 ph3">
+<SampleCode lang="html" code={`
+<svg xmlns="http://www.w3.org/2000/svg" 
+    width="20" height="20" viewBox="0 0 20 20">
+    <polyline fill="none" stroke="#000" stroke-width="1.1" 
+        points="4,10 8,15 17,4"></polyline>
+</svg>
+`} />
+                </td>
+            </tr>
+        </table>
+        <Demo prefix="/guide/plugins/icon/svg" frameworks={['Uikit']} />
+    </section>
+
+    <section class="cf mb4">
+        <h2><span class="bb b--gray">Using material design icons</span></h2>
+        <p class="lh-copy">If you are a fan of using Google's <a href="https://material.io/" class="blue dim link">material design</a>, then you might prefer to use <a href="https://material.io/tools/icons/" class="blue dim link">its icons set</a>.</p>
+        <p class="lh-copy">It's up to you to choose suitable icons from Google material design icons for the feedback icons. The following table is just an example of three icons taken from the set:</p>
+        <table class="collapse ba br2 b--black-10 pv2 ph3 w-100">
+            <tr class="striped--light-gray">
+                <th class="pv2 ph3 tl f6 fw6 ttu">Field status</th>
+                <th class="pv2 ph3 tl f6 fw6 ttu">Icon</th>
+            </tr>
+            <tr class="striped--light-gray">
+                <td class="pv2 ph3">Valid</td>
+                <td class="pv2 ph3"><code>&lt;i class="material-icons"&gt;check&lt;/i&gt;</code></td>
+            </tr>
+            <tr class="striped--light-gray">
+                <td class="pv2 ph3">Invalid</td>
+                <td class="pv2 ph3"><code>&lt;i class="material-icons"&gt;clear&lt;/i&gt;</code></td>
+            </tr>
+            <tr class="striped--light-gray">
+                <td class="pv2 ph3">Being validated</td>
+                <td class="pv2 ph3"><code>&lt;i class="material-icons"&gt;graphic_eq&lt;/i&gt;</code></td>
+            </tr>
+        </table>
+        <p class="lh-copy">As you see, each Google material design icon uses pre-defined content instead of a different CSS class. Meanwhile, the Icon's plugin options only accept CSS classes that are added to the icon based on the field validity.</p>
+        <p class="lh-copy">The next section introduces two approaches to solve this problem.</p>
+
+        <h3>Defining icon content by CSS</h3>
+        <p class="lh-copy">By using the <code>:after</code> CSS selector, we can indicated content of icons as following:</p>
+<SampleCode lang="css" code={`
+.material-icons.valid-icon:after {
+    content: 'check';
+    font-size: 24px;
+}
+.material-icons.invalid-icon:after {
+    content: 'clear';
+    font-size: 24px;
+}
+.material-icons.validating-icon:after {
+    content: 'graphic_eq';
+    font-size: 24px;
+}
+`} />
+        <p class="lh-copy">Lastly, you just set the icons for each status of field:</p>
+        <div class="mb4">
+<SampleCode lang="javascript" code={`
+icon: new FormValidation.plugins.Icon({
+    valid: 'material-icons valid-icon',
+    invalid: 'material-icons invalid-icon',
+    validating: 'material-icons validating-icon',
+}),
+`} />
+        </div>
+        <Demo prefix="/guide/plugins/icon/material-design" frameworks={['Tachyons']} />
+
+        <h3>Triggering the event</h3>
+        <p class="lh-copy">In order to update the content of icon based on the field validity status, we can trigger the event <code>plugins.icon.set</code> as mentioned in the <span class="i">Using SVG icons</span> section above.</p>
+        <div class="mb4">
+<SampleCode lang="javascript" code={`
+FormValidation
+    .formValidation(document.getElementById('demoForm'), {
+        plugins: {
+            icon: new FormValidation.plugins.Icon({
+                valid: 'material-icons icon-valid',
+                invalid: 'material-icons icon-invalid',
+                validating: 'material-icons icon-validating',
+            }),
+        },
+    })
+    .on('plugins.icon.set', function(e) {
+        if (e.iconElement) {
+            switch (e.status) {
+                case 'Validating':
+                    e.iconElement.innerHTML = 'graphic_eq';
+                    break;
+
+                case 'Invalid':
+                    e.iconElement.innerHTML = 'clear';
+                    break;
+
+                case 'Valid':
+                    e.iconElement.innerHTML = 'check';
+                    break;
+
+                default:
+                    e.iconElement.innerHTML = '';
+                    break;
+            }
+        }     
+    });
+`} />    
+        </div>
+        <Demo prefix="/guide/plugins/icon/material-design-event" frameworks={['Tachyons']} />
+    </section>
+
+    <section class="cf mb4">
+        <h2><span class="bb b--gray">Adjusting icon position</span></h2>
+        <p class="lh-copy">The Icon plugin generates the following markup for icon:</p>
+<SampleCode lang="html" code={`
+// FIELD_NAME is the name of field
+// CSS_CLASSES is the list of CSS classes defined in the valid, invalid, validating options    
+<i data-field="FIELD_NAME" class="fv-plugins-icon CSS_CLASSES"></i>
+`} />
+        <p class="lh-copy">In some cases, the icons aren't shown properly. Understanding the markup of icon and customizing the value of <code>top</code> and <code>right</code> properties for icon's class, you can adjust the feedback icon to deserved position.</p>
+        <p class="lh-copy">The following example demonstrates this technique when using the Bootstrap's <a href="http://getbootstrap.com/docs/4.1/components/input-group/" class="blue dim link">Input Group</a> with the <a href="/docs/plugin/bootstrap/" class="blue dim link">Bootstrap</a> plugin:</p>
+
+        <div class="mb4">
+<SampleCode lang="html" code={`
+<style>
+// fv-plugins-bootstrap is CSS class that will be added to the form automatically
+// when the Bootstrap plugin is used.
+// You might need to change that if your form is made in other CSS frameworks
+
+.fv-plugins-bootstrap .form-group.inputGroupContainer .fv-plugins-icon,
+.fv-plugins-bootstrap .form-group.selectContainer .fv-plugins-icon {
+    // Customize the icon's position
+    right: -20px;
+}
+</style>
+
+<div class="form-group row inputGroupContainer">
+    <!-- Input group element -->
+    ...
+</div>
+
+<div class="form-group row selectContainer">
+    <!-- Select element -->
+    ...
+</div>
+`} />
+        </div>
+        <Demo prefix="/guide/plugins/icon/adjust-position" frameworks={['Bootstrap']} />
+
+        <h3>Hiding icon for particular field</h3>
+        <p class="lh-copy">Since each icon element for given field has <code>data-field="FIELD_NAME"</code> attribute, we can easily hide the icon by adding one more CSS property as:</p>
+<SampleCode lang="html" code={`
+<style>
+// Hide the icon for phoneNumber field
+.fv-plugins-icon[data-field="phoneNumber"] {
+    display: none;
+}    
+</style>
+
+<input name="phoneNumber" />
+`} />
+    </section>
+
+    <section class="cf mb4">
+        <h2><span class="bb b--gray">Showing icons in custom area</span></h2>
+        <p class="lh-copy">In this example, I will help you how to show the feedback icons in custom area which are right after the labels. We're going to archive it by setting the <code>onPlaced</code> option which is called when the icon element is inserted to the document.</p>
+<SampleCode lang="javascript" code={`
+icon: new FormValidation.plugins.Icon({
+    ...,
+    onPlaced: function(e) {
+        // e.classes is an object containing values for valid, invalid and validating CSS classes
+        // e.element is the field element
+        // e.field is the field name
+        // e.iconElement is the icon element
+    }
+}),
+`} />
+        <p class="lh-copy">Despite that the feedback icons are placed at the particular area, you might need customized CSS styles to adjust their position:</p>
+        <div class="mb4">
+<SampleCode lang="html" code={`
+<style>
+.fv-plugins-icon[data-field="username"],
+.fv-plugins-icon[data-field="email"] {
+    display: inline-block;
+    position: static;
+    height: auto;
+    line-height: normal;
+}
+</style>
+
+<input name="username" />
+...
+<input name="email" />
+`} />            
+        </div>
+        <Demo prefix="/guide/plugins/icon/change-location" frameworks={['Tachyons']} />
+    </section>
+
+    <section class="mb4">
+        <h2><span class="bb b--gray">Changelog</span></h2>
+        <ul class="pa0 ma0 ml3 lh-copy">
+            <li>v1.0.0: First release</li>
+        </ul>
+    </section>
+
+    <section class="cf mb4">
+        <div class="fl w-50 tl">
+            <a href="/guide/plugins/foundation/" class="b blue dim link pa2">&larr; Foundation plugin</a>
+        </div>
+        <div class="fl w-50 tr">
+            <a href="/guide/plugins/j/" class="b blue dim link pa2">J plugin &rarr;</a>
+        </div>
+    </section>
+</Guide>
+
+<script>
+export default {
+    components: {
+        Demo: '../../../../components/Demo.html',
+        Guide: '../../../../components/Guide.html',
+        SampleCode: '../../../../components/SampleCode.html',
+        Tip: '../../../../components/Tip.html',
+    },
+};
+</script>

@@ -1,0 +1,201 @@
+<svelte:head>
+	<title>FormValidation • updateFieldStatus() method</title>
+</svelte:head>
+
+<Guide>
+    <h1 class="f3 f2-m f1-l tc">updateFieldStatus()</h1>
+    <h2 class="f4 fw4 tc">Update the field status</h2>
+
+    <section class="mb4">
+        <div class="mb3">
+            <SampleCode lang="javascript" code={`updateFieldStatus(field: String, status: String, validator: String): Core`} />
+        </div>
+        <p class="lh-copy i"><sup>*</sup> presents a required parameter</p>
+        <ul class="ma0 pl3 lh-copy">
+            <li><code>field</code> <sup>*</sup> — The field name</li>
+            <li><code>status</code> <sup>*</sup> — The new status. It can be one of the following value
+                <ul class="ma0 pl3 lh-copy">
+                    <li><code>'NotValidated'</code> or <code>FormValidation.Status.NotValidated</code>: The field is not yet validated</li>
+                    <li><code>'Valid'</code> or <code>FormValidation.Status.Valid</code>: The field is valid</li>
+                    <li><code>'Invalid'</code> or <code>FormValidation.Status.Invalid</code>: The field is invalid</li>
+                </ul>
+            </li>
+            <li><code>validator</code> — The validator name. If it isn't specified, all validators will be updated</li>
+        </ul>
+    </section>
+
+    <section class="mb4">
+        <h2><span class="bb b--gray">Example: Validating credit card expiration date</span></h2>
+        <p class="lh-copy">The following form requires to provide a valid expiration month and year of credit card. Because the <a href="/guide/validators/date/" class="blue dim link">date</a> validator asks for all the year, month and day, it isn't helpful in that case.</p>
+        <p class="lh-copy">Instead, we will use the <a href="/guide/validators/callback/" class="blue dim link">callback</a> validator to check the validity of month and year fields. Because these fields depend on each other, the
+            <code>updateFieldStatus()</code> method is used to set month/year field as valid one.</p>
+        <Tip heading="Note">For demonstrating purpose, the expiration date is treated as valid if it is in the range of current month and next 10 year</Tip>
+        <Demo prefix="/guide/api/update-field-status/cc-expiration-date" frameworks={['Tachyons']} />
+    </section>
+
+    <section class="mb4">
+        <h2><span class="bb b--gray">Example: Asking fields to be unique</span></h2>
+        <p class="lh-copy">Sometime the user need to fill multiple fields in form, also each of them must be unique. Any of them has to be different to the remaining.
+            You might think of using the <a href="/guide/validators/different/" class="blue dim link">different</a> validator which requires two fields to be different to each other,
+            such as an username and password shouldn't be the same. In our case, the different validator isn't useful because the number of fields
+            for doing comparison are unknown.</p>
+        <p class="lh-copy">The form in this example asks user to provide some email addresses. User is also required to fill at least one email address.
+            Each of them, if present, must be unique. This kind of form can be seen in a lot of forms nowadays.</p>
+        <p class="lh-copy">The approach illustrated in this example is that:</p>
+        <ul class="ma0 pl3 lh-copy">
+            <li>Use the <a href="/guide/validators/email-address/" class="blue dim link">emailAddress</a> validator to ensure each field need to be a valid email address</li>
+            <li>Use the <a href="/guide/validators/callback/" class="blue dim link">callback</a> validator to check if the list of email addresses consist duplicated item</li>
+            <li>If all fields pass these validators, we then use the <code>updateFieldStatus()</code> method to set them as valid fields</li>
+        </ul>
+        <p class="lh-copy">That are straight forward steps. The next sections show the implementation in details.</p>
+
+        <h3>Checking duplicate items in array</h3>
+        <p class="lh-copy">In order to check whether an array contains duplicated items or not, we can use a simple implementation:</p>
+<SampleCode lang="javascript" code={`
+const hasDuplicatedItems = function(inputArray) {
+    const obj = {};
+    const numItems = inputArray.length;
+    const duplicateRemoved = [];
+
+    for (const i in inputArray) {
+        obj[inputArray[i]] = 0;
+    }
+
+    for (const i in obj) {
+        duplicateRemoved.push(obj[i]);
+    }
+
+    return duplicateRemoved.length === numItems;
+}
+`} />
+        <p class="lh-copy">Since the array of email addresses might consist of empty item, we need to adjust the code above a little bit to ensure that
+            the array has at least one not-empty item and doesn't contain any duplicated items:</p>
+<SampleCode lang="javascript" code={`
+// Assume that emailElements is the list of email elements
+let notEmptyCount      = 0;
+const obj              = {};
+const duplicateRemoved = [];
+
+for (const i in emailElements) {
+    const v = emailElements[i].value;
+    if (v !== '') {
+        obj[v] = 0;
+        notEmptyCount++;
+    }
+}
+
+for (const i in obj) {
+    duplicateRemoved.push(obj[i]);
+}
+
+if (duplicateRemoved.length === 0) {
+    // All the items are empty
+} else if (duplicateRemoved.length !== notEmptyCount) {
+    // The list of emails have duplicated items
+}
+`} />
+
+        <h3>Using the same names</h3>
+        <p class="lh-copy">The example code below demonstrates the implementation when all email fields use the same names, <code>email[]</code>, for example.</p>
+        <div class="mb4">
+<SampleCode lang="javascript" code={`
+const form = document.getElementById('demoForm');
+const fv = FormValidation.formValidation(
+    document.getElementById('demoForm'),
+    {
+        fields: {
+            'email[]': {
+                validators: {
+                    emailAddress: {
+                        message: 'The value is not a valid email address'
+                    },
+                    callback: {
+                        callback: function(input) {
+                            ...
+
+                            if (duplicateRemoved.length === 0) {
+                                return {
+                                    valid: false,
+                                    message: 'You must fill at least one email address',
+                                };
+                            } else if (duplicateRemoved.length !== notEmptyCount) {
+                                return {
+                                    valid: false,
+                                    message: 'The email address must be unique',
+                                };
+                            }
+
+                            // Set all fields as valid
+                            fv.updateFieldStatus('email[]', 'Valid', 'callback');
+                            return {
+                                valid: true,
+                            };
+                        }
+                    },
+                }
+            }
+        },
+        plugins: {
+            ...
+        },
+    }
+);
+`} />
+        </div>
+        <Demo prefix="/guide/api/update-field-status/asking-fields-be-unique/basic" frameworks={['Tachyons']} />
+
+        <h3>Using different names</h3>
+        <p class="lh-copy">What if the email fields have different names? How we can set the validator rules for them?</p>
+        <p class="lh-copy">In this case, we can use a same CSS class for all email fields:</p>
+<SampleCode lang="html" code={`
+<input type="text" class="js-user-email" name="user.email[0]" />
+<input type="text" class="js-user-email" name="user.email[1]" />
+<input type="text" class="js-user-email" name="user.email[2]" />
+<input type="text" class="js-user-email" name="user.email[3]" />
+`} />
+        <p class="lh-copy">and then use the <a href="/guide/getting-started/field-selector/" class="blue dim link">selector</a> option to apply the same set of validation rules for them:</p>
+        <div class="mb4">
+<SampleCode lang="javascript" code={`
+const form = document.getElementById('demoForm');
+const fv = FormValidation.formValidation(
+    document.getElementById('demoForm'),
+    {
+        fields: {
+            'email[]': {
+                // All email fields have .js-user-email class
+                selector: '.js-user-email',
+                validators: {
+                    ...
+                }
+            }
+        },
+        plugins: {
+            ...
+        },
+    }
+);
+`} />
+        </div>
+        <Demo prefix="/guide/api/update-field-status/asking-fields-be-unique/selector" frameworks={['Tachyons']} />
+    </section>
+
+    <section class="cf mb4">
+        <div class="fl w-50 tl">
+            <a href="/guide/api/update-element-status/" class="b blue dim link pa2">&larr; updateElementStatus() method</a>
+        </div>
+        <div class="fl w-50 tr">
+            <a href="/guide/api/update-validator-option/" class="b blue dim link pa2">updateValidatorOption() method &rarr;</a>
+        </div>
+    </section>
+</Guide>
+
+<script>
+export default {
+    components: {
+        Demo: '../../../../components/Demo.html',
+        Guide: '../../../../components/Guide.html',
+        SampleCode: '../../../../components/SampleCode.html',
+        Tip: '../../../../components/Tip.html',
+    },
+};
+</script>

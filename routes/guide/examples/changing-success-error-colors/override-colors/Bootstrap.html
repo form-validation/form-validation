@@ -1,0 +1,99 @@
+<style>
+:global(.my-form.fv-plugins-bootstrap .fv-help-block) {
+    color: #f39c12;
+}
+:global(.my-form.fv-plugins-bootstrap .has-danger .fv-plugins-icon) {
+    color: #f39c12;
+}
+:global(.my-form.fv-plugins-bootstrap .has-success .fv-plugins-icon) {
+    color: #18bc9c;
+}
+</style>
+
+<DemoLayout framework="bootstrap">
+    <DemoWrapper ref:demo from="/guide/examples/changing-success-error-colors/override-colors/Bootstrap">
+        <form id="demoForm" class="my-form" method="POST">
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Username</label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" name="username" />
+                </div>
+            </div>
+        
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Password</label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" name="password" />
+                </div>
+            </div>
+        
+            <div class="form-group row">
+                <div class="col-sm-9 offset-sm-3">
+                    <button type="submit" class="btn btn-primary">Sign in</button>
+                </div>
+            </div>
+        </form>
+    </DemoWrapper>
+</DemoLayout>
+
+<script>
+import formValidation from 'formvalidation/core/Core';
+import Icon from 'formvalidation/plugins/Icon';
+import Trigger from 'formvalidation/plugins/Trigger';
+import Bootstrap from 'formvalidation/plugins/Bootstrap';
+import SubmitButton from 'formvalidation/plugins/SubmitButton';
+
+import sampleCode from './Bootstrap.programmatic';
+
+export default {
+    components: {
+        DemoLayout: '../../../../../components/DemoLayout.html',
+        DemoWrapper: '../../../../../components/DemoWrapper.html',
+    },
+
+    oncreate() {
+        const fv = formValidation(document.getElementById('demoForm'), {
+            fields: {
+                username: {
+                    validators: {
+                        notEmpty: {
+                            message: 'The username is required'
+                        },
+                        stringLength: {
+                            min: 6,
+                            max: 30,
+                            message: 'The username must be more than 6 and less than 30 characters long'
+                        },
+                        regexp: {
+                            regexp: /^[a-zA-Z0-9_\.]+$/,
+                            message: 'The username can only consist of alphabetical, number, dot and underscore'
+                        }
+                    }
+                },
+                password: {
+                    validators: {
+                        notEmpty: {
+                            message: 'The password is required'
+                        }
+                    }
+                },
+            },
+            plugins: {
+                trigger: new Trigger(),
+                bootstrap: new Bootstrap(),
+                submitButton: new SubmitButton(),
+                icon: new Icon({
+                    valid: 'fa fa-check',
+                    invalid: 'fa fa-times',
+                    validating: 'fa fa-refresh',
+                }),
+            },
+        });
+
+        this.refs.demo.set({
+            fv,
+            sampleCode,
+        });
+    },
+};
+</script>

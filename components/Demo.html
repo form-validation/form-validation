@@ -1,0 +1,130 @@
+<div class="overflow-hidden">
+    <ul class="list pl0 mb0 list pa0 ma0 bb b--black-10 flex items-center">
+        {#each tabs as title}
+        <li class="dib">
+            <a class="no-underline pointer dark-gray ph3 pv2 dib {active === title ? 'b--blue b bb bw2' : ''}" href="javascript: void(0);" on:click="set({active: title})">{ title }</a>
+        </li>
+        {/each}
+        <li class="ml-auto">
+            <div class="flex">
+                <span class="mr2">Choose framework:</span>
+                <Popover xOffset={10} position="bottom-right">
+                    <a slot="target" class="ph3 pv2 bn bg-gray white no-underline" href="javascript: void(0);">
+                    {#if (selectedFramework === 'Native')}
+                        Native form
+                    {:else}
+                        {SupportedFramework[selectedFramework.toLowerCase()].name}
+                    {/if}
+                    </a>
+                    <ul slot="content" class="list pa0 ma0">
+                        {#each demos as framework}
+                        {#if (framework === 'Native')}
+                            <li class="bb b--gray"></li>
+                        {/if}
+                        <li class="flex items-center ph3 pv2 bg-animate hover-bg-lightest-blue {framework == selectedFramework ? 'bg-lightest-blue' : ''}">
+                            <span class="dib w1">{#if (framework === selectedFramework)}<i class="green fa fa-check" />{/if}</span>
+                            <a href="javascript: void(0);" class="link mr2" on:click="set({selected: framework, loaded: false, code: ''})">
+                                {#if (framework === 'Native')}
+                                    Native form
+                                {:else}
+                                    {SupportedFramework[framework.toLowerCase()].name}
+                                {/if}
+                            </a>
+                            {#if (framework !== 'Native')}
+                            <span class="ml-auto f6">v{SupportedFramework[framework.toLowerCase()].version}</span>
+                            {/if}
+                        </li>
+                        {/each}
+                    </ul>
+                </Popover>
+            </div>
+        </li>
+    </ul>
+    <div>
+        <div class="mt3 {active === 'Demo' ? '' : 'dn'}">
+            <Loader isDone={loaded}>
+                <ReceiveMessage type="DEMO_UPDATE_STATUS" from="{prefix}/{selectedFramework}" on:received="updateHeight()">
+                    <iframe class="bn w-100" src="{prefix}/{selectedFramework}" title="Demo" ref:demoFrame on:load="onDemoLoaded()" />
+                </ReceiveMessage>
+            </Loader>
+        </div>
+        <div class="mt3 {active === 'Code' ? '' : 'dn'}">
+            <ReceiveMessage type="SAMPLE_CODE" from="{prefix}/{selectedFramework}" on:received="set({ code: event.data })">
+                {#if code}<SampleCode lang="html" code={code} />{/if}
+            </ReceiveMessage>
+        </div>
+    </div>
+</div>
+
+<script>
+import SupportedFramework from './constants/SupportedFramework';
+
+export default {
+    components: {
+        Loader: './Loader.html',
+        Popover: './Popover.html',
+        SampleCode: './SampleCode.html',
+        ReceiveMessage: './ReceiveMessage.html',
+    },
+
+    data() {
+        return {
+            prefix: '',
+            frameworks: ['Tachyons'],
+            selected: '',
+            // Set it to true if the demo supports native form without using any CSS framework
+            supportNativeForm: false,
+            // Private
+            loaded: false,
+            active: 'Demo',
+            tabs: ['Demo', 'Code'],
+            SupportedFramework,
+        };
+    },
+
+    oncreate() {
+        const demoWindow = this.refs.demoFrame.contentWindow;
+        this.store.on('state', ({ current }) => {
+            if (current.sampleFieldValue) {
+                // Send sample to demo frame
+                demoWindow.postMessage({
+                    type: 'SAMPLE_FIELD_VALUE',
+                    data: current.sampleFieldValue
+                }, '*');
+                this.set({
+                    active: 'Demo',
+                });
+            }
+        });
+    },
+
+    computed: {
+        selectedFramework: ({ frameworks, selected }) => {
+            return selected || (frameworks.indexOf('Tachyons') === -1 ? frameworks[0] : 'Tachyons');
+        },
+
+        demos: ({frameworks, supportNativeForm}) => {
+            return supportNativeForm ? frameworks.sort().concat(['Native']) : frameworks.sort();
+        }
+    },
+
+    methods: {
+        updateHeight() {
+            const frame = this.refs.demoFrame;
+            const frameBody = frame.contentDocument.body;
+            frame.setAttribute('height', `${frameBody.scrollHeight}px`);
+        },
+
+        onDemoLoaded() {
+            const { active } = this.get();
+            if (active == 'Demo') {
+                this.updateHeight();
+            }
+
+            this.set({
+                loaded: true,
+            });
+        },
+    }
+};
+</script>

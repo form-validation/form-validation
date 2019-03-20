@@ -1,0 +1,60 @@
+<svelte:head>
+	<title>FormValidation • Hiding messages</title>
+</svelte:head>
+
+<Guide>
+    <h1 class="f3 f2-m f1-l tc lh-copy">Hiding messages</h1>
+
+    <p class="lh-copy">In this example, you will learn how to hide the error messages.</p>
+
+    <section class="mb4">
+        <h2><span class="bb b--gray">Overriding CSS</span></h2>
+        <p class="lh-copy">By default, all error messages are placed inside a container that has <code>.fv-plugins-message-container</code> class. We can hide the error messages by adding one CSS property for this class:</p>
+        <div class="mb4">
+<SampleCode lang="css" code={`
+.fv-plugins-message-container {
+    display: none;
+}
+`} />
+        </div>
+        <Demo prefix="/guide/examples/hiding-message/overriding-css" frameworks={['Bootstrap']} />
+    </section>
+
+    <section class="mb4">
+        <h2><span class="bb b--gray">Handling the event</span></h2>
+        <p class="lh-copy">After executing a given validator, the <a class="blue dim link" href="/guide/plugins/message/">Message</a> plugin will emit the <code>plugins.message.displayed</code> event. This event is triggered after the error message is displayed.</p>
+        <p class="lh-copy">We can listen on this event to hide the error message:</p>
+        <div class="mb4">
+<SampleCode lang="javascript" code={`
+FormValidation
+    .formValidation(
+        form,
+        {
+            fields: {
+                ...
+            },
+            plugins: {
+                ...
+            },
+        }
+    )
+    .on('plugins.message.displayed', function(e) {
+        // e.messageElement presents the error message element
+        // We can hide the message easily
+        e.messageElement.style.display = 'none';
+    });
+`} />
+        </div>
+        <Demo prefix="/guide/examples/hiding-message/event" frameworks={['Tachyons']} />
+    </section>
+</Guide>
+
+<script>
+export default {
+    components: {
+        Demo: '../../../../components/Demo.html',
+        Guide: '../../../../components/Guide.html',
+        SampleCode: '../../../../components/SampleCode.html',
+    },
+};
+</script>

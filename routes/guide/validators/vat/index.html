@@ -1,0 +1,187 @@
+<svelte:head>
+	<title>FormValidation • vat validator</title>
+</svelte:head>
+
+<Guide>
+    <h1 class="f3 f2-m f1-l tc">vat validator</h1>
+    <h2 class="f4 fw4 tc">Validate a <a href="https://en.wikipedia.org/wiki/VAT_identification_number" class="blue dim link">VAT number</a></h2>
+
+    <section class="mb4">
+        <h2><span class="bb b--gray">Options</span></h2>
+
+        <h3>Using with form field</h3>
+        <p class="lh-copy i">The HTML attributes are used to set the validator options via the <a href="/guide/plugins/declarative/" class="blue dim link">Declarative</a> plugin</p>
+        <table class="collapse ba br2 b--black-10 pv2 ph3 w-100">
+            <tr class="striped--light-gray">
+                <th class="pv2 ph3 tl f6 fw6 ttu">Name</th>
+                <th class="pv2 ph3 tl f6 fw6 ttu">HTML attribute</th>
+                <th class="pv2 ph3 tl f6 fw6 ttu">Type</th>
+                <th class="pv2 ph3 tl f6 fw6 ttu">Description</th>
+            </tr>
+            <tr class="striped--light-gray">
+                <td class="pv2 ph3"><code>country</code><sup>*</sup></td>
+                <td class="pv2 ph3"><code>data-fv-vat___country</code></td>
+                <td class="pv2 ph3">String or Function</td>
+                <td class="pv2 ph3">An ISO-3166 country code</td>
+            </tr>
+            <tr class="striped--light-gray">
+                <td class="pv2 ph3"><code>message</code></td>
+                <td class="pv2 ph3"><code>data-fv-vat___message</code></td>
+                <td class="pv2 ph3">String</td>
+                <td class="pv2 ph3">The error message</td>
+            </tr>
+        </table>
+        <p class="lh-copy">The validator supports the following countries (click the sample number to validate it):</p>
+
+        <table class="collapse ba br2 b--black-10 pv2 ph3 w-100">
+            <tr class="striped--light-gray">
+                <th class="pv2 ph3 tl f6 fw6 ttu">Country</th>
+                <th class="pv2 ph3 tl f6 fw6 ttu">Abbreviation VAT system</th>
+                <th class="pv2 ph3 tl f6 fw6 ttu">Country code</th>
+                <th class="pv2 ph3 tl f6 fw6 ttu">Sample VAT</th>
+                <th class="pv2 ph3 tl f6 fw6 ttu">Is it valid?</th>
+            </tr>
+            {#each samples as item}
+                {#if item.examples.length > 0}
+                {#each item.examples as example, i}
+                <tr class="striped--light-gray">
+                    <td class="pv2 ph3 lh-copy">{#if i === 0}{item.country}{/if}</td>
+                    <td class="pv2 ph3">{#if i === 0}{item.abbr}{/if}</td>
+                    <td class="pv2 ph3">{#if i === 0}{item.code}{/if}</td>
+                    <SampleData sample={{ country: item.code, sample: example }} renderSample={(s) => s.sample} />
+                </tr>
+                {/each}
+                {:else}
+                <tr class="striped--light-gray">
+                    <td class="pv2 ph3">{item.country}</td>
+                    <td class="pv2 ph3">{item.code}</td>
+                    <td class="pv2 ph3"></td>
+                    <td class="pv2 ph3"></td>
+                </tr>
+                {/if}
+            {/each}
+        </table>
+
+        <h3>Using with JavaScript module</h3>
+<SampleCode lang="javascript" code={`
+// You might need to change the importing path
+import vat from 'formvalidation/validators/vat';
+
+const result = vat().validate({
+    value: ...,
+    options: {
+        // Can be a string or a function returns a string
+        country: ...,
+        message: ...,
+    },
+});
+/*
+result is an object of
+{
+    valid: true or false,
+    message: The error message
+}
+*/
+`} />
+    </section>
+
+    <section class="mb4">
+        <h2><span class="bb b--gray">Basic Example</span></h2>
+        <p class="lh-copy">You can click on sample from the table above to see if it's a valid or invalid VAT.</p>
+        <Demo prefix="/guide/validators/vat/basic" frameworks={['Bootstrap', 'Tachyons']} />
+    </section>
+
+    <section class="mb4">
+        <h2><span class="bb b--gray">Module Example</span></h2>
+
+        <p class="lh-copy">The following snippet shows how to use the vat validator with JavaScript module:</p>
+<SampleCode lang="javascript" code={`
+// You might need to change the importing path
+import vat from 'formvalidation/validators/vat';
+
+const res1 = vat().validate({
+    value: 'ATU13585627',
+    options: {
+        country: 'AT',
+        message: 'The value is not a valid VAT number',
+    },
+});
+// res1.valid === true
+
+const res2 = vat().validate({
+    value: 'DK13585627',
+    options: {
+        country: 'DK',
+        message: 'The value is not a valid VAT number',
+    },
+});
+// res2.valid === false
+`} />
+    </section>
+
+    <RelatedValidators validators={['id']} />
+
+    <section class="cf mb4">
+        <div class="fl w-50 tl">
+            <a href="/guide/validators/uuid/" class="b blue dim link pa2">&larr; uuid validator</a>
+        </div>
+        <div class="fl w-50 tr">
+            <a href="/guide/validators/vin/" class="b blue dim link pa2">vin validator &rarr;</a>
+        </div>
+    </section>
+</Guide>
+
+<script>
+export default {
+    components: {
+        Demo: '../../../../components/Demo.html',
+        Guide: '../../../../components/Guide.html',
+        RelatedValidators: '../../../../components/RelatedValidators.html',
+        SampleCode: '../../../../components/SampleCode.html',
+        SampleData: '../../../../components/SampleData.html',
+    },
+
+    data() {
+        return {
+            samples: [
+                { country: 'Austria', abbr: 'UID', code: 'AT', examples: ['ATU13585627', 'ATU13585626'] },
+                { country: 'Belgium', abbr: 'n° TVA / BTW-nr / Mwst-nr', code: 'BE', examples: ['BE0428759497', 'BE431150351'] },
+                { country: 'Brazil', abbr: 'CNPJ', code: 'BR', examples: [] },
+                { country: 'Bulgaria', abbr: 'ДДС номер', code: 'BG', examples: ['BG175074752', 'BG7523169263', 'BG8032056031', 'BG7542011030', 'BG7111042925', 'BG175074753', 'BG7552A10004', 'BG7111042922'] },
+                { country: 'Croatia', abbr: 'PDV-ID; OIB', code: 'HR', examples: ['HR33392005961', 'HR33392005962'] },
+                { country: 'Cyprus', abbr: 'ΦΠΑ', code: 'CY', examples: ['CY10259033P', 'CY10259033Z'] },
+                { country: 'Czech Republic', abbr: 'DIČ', code: 'CZ', examples: ['CZ25123891', 'CZ7103192745', 'CZ991231123', 'CZ640903926', 'CZ25123890', 'CZ1103492745', 'CZ590312123'] },
+                { country: 'Denmark', abbr: 'CVR', code: 'DK', examples: ['DK13585628', 'DK13585627'] },
+                { country: 'Estonia', abbr: 'KMKR', code: 'EE', examples: ['EE100931558', 'EE100594102', 'EE100594103'] },
+                { country: 'Finland', abbr: 'ALV nro', code: 'FI', examples: ['FI20774740', 'FI20774741'] },
+                { country: 'France', abbr: 'n° TVA', code: 'FR', examples: ['FR40303265045', 'FR23334175221', 'FRK7399859412', 'FR4Z123456782', 'FR84323140391'] },
+                { country: 'Germany', abbr: 'USt-IdNr.', code: 'DE', examples: ['DE136695976', 'DE136695978'] },
+                { country: 'Greece', abbr: 'ΑΦΜ', code: 'GR', examples: ['GR023456780', 'EL094259216', 'EL123456781'] },
+                { country: 'Hungary', abbr: 'ANUM', code: 'HU', examples: ['HU12892312', 'HU12892313'] },
+                { country: 'Iceland', abbr: 'VSK', code: 'IS', examples: ['IS12345', 'IS123456', 'IS1234567'] },
+                { country: 'Ireland', abbr: 'VAT no', code: 'IE', examples: ['IE6433435F', 'IE6433435OA', 'IE8D79739I', 'IE8D79738J'] },
+                { country: 'Italy', abbr: 'P.IVA', code: 'IT', examples: ['IT00743110157', 'IT00743110158'] },
+                { country: 'Latvia', abbr: 'PVN', code: 'LV', examples: ['LV40003521600', 'LV16117519997', 'LV40003521601', 'LV16137519997'] },
+                { country: 'Lithuania', abbr: 'PVM kodas', code: 'LT', examples: ['LT119511515', 'LT100001919017', 'LT100004801610', 'LT100001919018'] },
+                { country: 'Luxembourg', abbr: 'No. TVA', code: 'LU', examples: ['LU15027442', 'LU15027443'] },
+                { country: 'Malta', abbr: 'Vat No.', code: 'MT', examples: ['MT11679112', 'MT11679113'] },
+                { country: 'Netherlands', abbr: 'Btw-nr.', code: 'NL', examples: ['NL004495445B01', 'NL123456789B90'] },
+                { country: 'Norway', abbr: 'Orgnr', code: 'NO', examples: [] },
+                { country: 'Poland', abbr: 'NIP', code: 'PL', examples: ['PL8567346215', 'PL8567346216'] },
+                { country: 'Portugal', abbr: 'NIF / NIPC', code: 'PT', examples: ['PT501964843', 'PT501964842'] },
+                { country: 'Romania', abbr: 'CIF', code: 'RO', examples: ['RO18547290', 'RO18547291'] },
+                { country: 'Russia', abbr: 'ИНН', code: 'RU', examples: [] },
+                { country: 'Serbia', abbr: 'PIB', code: 'RS', examples: [] },
+                { country: 'Slovakia', abbr: 'IČ DPH', code: 'SK', examples: ['SK2022749619', 'SK2022749618'] },
+                { country: 'Slovenia', abbr: 'ID za DDV', code: 'SI', examples: ['SI50223054', 'SI50223055'] },
+                { country: 'South Africa', abbr: '', code: 'ZA', examples: ['ZA4012345678', 'ZA40123456789', 'ZA3012345678'] },
+                { country: 'Spain', abbr: 'NIF / CIF', code: 'ES', examples: ['ES54362315K', 'ESX2482300W', 'ESX5253868R', 'ESM1234567L', 'ESJ99216582', 'ESB58378431', 'ESB64717838', 'ES54362315Z', 'ESX2482300A', 'ESJ99216583'] },
+                { country: 'Sweden', abbr: 'Momsnr.', code: 'SE', examples: ['SE123456789701', 'SE123456789101'] },
+                { country: 'Switzerland', abbr: 'MWST / TVA / IVA', code: 'CH', examples: [] },
+                { country: 'United Kingdom', abbr: 'VAT Reg No', code: 'GB', examples: ['GB980780684', 'GB802311781'] },
+                { country: 'Venezuela', abbr: 'RIF', code: 'VE', examples: ['VEJ309272292', 'VEV242818101', 'VEJ000126518', 'VEJ309272293', 'J000458323'] },
+            ]
+        };
+    },
+};
+</script>

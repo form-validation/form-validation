@@ -1,0 +1,168 @@
+<svelte:head>
+	<title>FormValidation • Features</title>
+</svelte:head>
+
+<DefaultLayout>
+    <h1 class="f3 f2-m f1-l tc">Features</h1>
+
+    <div class="cf w-100 mb4">
+        <h2 class="tc"><span class="bb b--gray">Scalable code base</span></h2>
+        <div class="fl w-50 pa2">
+            <ul class="list pa0 lh-copy">
+                <li>• Completely rewrite in ES6.</li>
+                <li>• Type safety. Entire code are made in <a href="https://www.typescriptlang.org/" class="blue dim link">TypeScript</a>.</li>
+                <li>• High code quality via popular analysis tools such as <a href="https://palantir.github.io/tslint/" class="blue dim link">TSLint</a>.</li>
+            </ul>
+        </div>
+        <div class="fl w-50 pa2">
+            <ul class="list pa0 lh-copy">
+                <li>• Zero dependencies. No <a href="https://jquery.com/" class="blue dim link">jQuery</a>. But if you are a fan of jQuery, we provide a built in plugin named <a href="/guide/plugins/j/" class="blue dim link">J</a> to use with it nicely.</li>
+                <li>• <a href="/guide/developing/integration/" class="blue dim link">Play nicely</a> with other libraries. It has useful APIs to integrate with another libraries.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="cf w-100 mb4">
+        <h2 class="tc"><span class="bb b--gray">Flexible</span></h2>
+        <div class="fl w-50 pa2">
+            <p class="lh-copy">• Plugin architecture. Lightweight core. Everything else is <a href="/guide/plugins/" class="blue dim link">plugins</a>. You can <a href="/guide/api/register-plugin/" class="blue dim link">register plugin</a> on the fly as well.</p>
+    <SampleCode lang="javascript" code={`
+FormValidation.formValidation(formElement, {
+    fields: {
+        ...
+    },
+    plugins: {
+        trigger: new FormValidation.plugins.Trigger(),
+        submit: new FormValidation.plugins.SubmitButton(),
+        bootstrap: new FormValidation.plugins.Bootstrap(),
+        icon: new FormValidation.plugins.Icon({
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh',
+        }),
+    },
+});
+`} />
+        </div>
+        <div class="fl w-50 pa2">
+            <ul class="list pa0 lh-copy">
+                <li>• Provide a lot of <a href="/guide/events/" class="blue dim link">events</a> that you can hook on. They are triggered when a field (form) is valid, invalid or being validated.</li>
+                <li>• Support dynamic fields.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="cf w-100 mb4">
+        <h2 class="tc"><span class="bb b--gray">Well tested</span></h2>
+        <div class="fl w-50 pa2">
+            <p class="lh-copy">• All validators, algorithms, and APIs are tested carefully with +400 <a href="https://mochajs.org/" class="blue dim link">Mocha</a> unit tests.</p>
+            <div>
+                <img src="/images/unit-test.png" alt="+400 unit tests" />
+            </div>
+            <SampleCode lang="javascript" code={`
+import { expect } from 'chai';
+import isbn from '../../src/js/validators/isbn';
+
+describe('Test isbn validator', () => {
+    it('isbn10 hyphen', () => {
+        const samples = [
+            '99921-58-10-7', '9971-5-0210-0',
+            '960-425-059-0', '80-902734-1-6',
+        ];
+        samples.forEach(sample => {
+            const result = isbn().validate({ value: sample });
+            expect(result.valid).to.be.true;
+        });
+    });
+});
+`} />
+        </div>
+        <div class="fl w-50 pa2">
+            <p class="lh-copy">• Cover hundreds of end-to-end test cases against Selenium server with <a href="http://nightwatchjs.org/" class="blue dim link">Nightwatch.js</a> framework.</p>
+            <div>
+                <img src="/images/e2e-test.png" alt="hundreds of end-to-end test cases" />
+            </div>
+            <SampleCode lang="javascript" code={`
+module.exports = {
+    'Test Alias plugin': (browser) => {
+        browser
+            .url(
+                browser.launchUrl + '/demo/plugins/alias.html'
+            )
+            .setValue(
+                'input[name="email"]',
+                ['invalid.email', '\u0008']
+            )
+            .waitForElementVisible(
+                '[data-validator][data-field="email"]', 100
+            )
+            .assert.containsText(
+                '[data-validator][data-field="email"]',
+                'The email address is not valid'
+            )
+            .end();
+    }
+};
+`} />
+        </div>
+    </div>
+
+    <div class="cf w-100 mb4">
+        <h2 class="tc"><span class="bb b--gray">Support any form, CSS framework</span></h2>
+        <p class="lh-copy">FormValidation is designed to support validating any form that uses or doesn't use with CSS framework. 
+            In addition to that, the library provides many built-in plugins which you can plug to use with popular CSS frameworks listed below:</p>
+        <div class="cf mb2 center tc measure">
+            <SupportedFramework />
+        </div>
+        <p class="lh-copy">and more landing soon.</p>
+    </div>
+
+    <div class="cf w-100 mb4">
+        <h2 class="tc"><span class="bb b--gray">Rich set of validators</span></h2>
+        <div class="fl w-50 pa2">
+            <ul class="list pa0 lh-copy">
+                <li>• More than 50 built-in <a href="/guide/validators/" class="blue dim link">validators</a> to cover most various types of form field.</li>
+                <li>• Easily to develop and reuse <a href="/guide/developing/custom-validator/" class="blue dim link">your own validator</a>.</li>
+            </ul>
+        </div>
+        <div class="fl w-50 pa2">
+            <p class="lh-copy">• All validator can be used independly without defining form or field.</p>
+            <SampleCode lang="javascript" code={`
+// In browser
+const result = FormValidation.validators
+    .creditCard()
+    .validate({
+        value: '340653705597107'
+    });
+
+// ES6 module
+import creditCard from 'es6/validators/creditCard';
+const result = creditCard().validate({
+    value: '340653705597107'
+});
+`} />
+        </div>
+    </div>
+
+    <div class="cf w-100">
+        <h2 class="tc"><span class="bb b--gray">Support multiple languages</span></h2>
+        <ul class="list pa0 lh-copy">
+            <li>• The default error messages of built-in validators are available in 39 <a href="/guide/getting-started/localization/" class="blue dim link">language packages</a>.</li>
+            <li>• Provide a <a href="/guide/plugins/l10n/" class="blue dim link">plugin</a> to switch between different locales easily.</li>
+        </ul>
+    </div>
+
+    <div class="tc mv4">
+        <a href="/download/" class="f6 f5-ns fw6 dib ba b--black-20 bg-blue white ph3 ph4-ns pv2 pv3-ns br2 grow no-underline" title="Download">Download</a>
+    </div>
+</DefaultLayout>
+
+<script>
+export default {
+    components: {
+        DefaultLayout: '../components/DefaultLayout.html',
+        SampleCode: '../components/SampleCode.html',
+        SupportedFramework: '../components/SupportedFramework.html',
+    },
+};
+</script>

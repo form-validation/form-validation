@@ -1,0 +1,168 @@
+<svelte:head>
+	<title>FormValidation • StartEndDate plugin</title>
+</svelte:head>
+
+<Guide>
+    <h1 class="f3 f2-m f1-l tc">StartEndDate plugin</h1>
+    <h2 class="f4 fw4 tc">Validate start and end dates</h2>
+
+    <section class="mb4">
+        <h2><span class="bb b--gray">Usage</span></h2>
+        <p class="lh-copy">The following piece of code is the starting point to use the StartEndDate plugin:</p>
+<SampleCode lang="html" code={`
+<html>
+<head>
+    <link-tag rel="stylesheet" href="/vendors/formvalidation/dist/css/formValidation.min.css">
+</head>
+<body>
+    <form id="demoForm" method="POST">
+        <!-- The start date field -->
+        <input type="text" name="startDate" placeholder="Start date" />
+
+        <!-- The end date field -->
+        <input type="text" name="endDate" placeholder="End date" />
+
+        ...
+    </form>
+
+<script-tag src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.35.3/es6-shim.min.js"></script-tag>    
+<script-tag src="/vendors/formvalidation/dist/js/FormValidation.min.js"></script-tag>
+<script-tag src="/vendors/formvalidation/dist/js/plugins/StartEndDate.min.js"></script-tag>
+
+<script-tag>
+document.addEventListener('DOMContentLoaded', function(e) {
+    FormValidation.formValidation(
+        document.getElementById('demoForm'),
+        {
+            fields: {
+                ...
+            },
+            plugins: {
+                startEndDate: new FormValidation.plugins.StartEndDate({
+                    format: '...',
+                    startDate: {
+                        field: 'startDate',
+                        message: 'The start date must be ealier than the end date',
+                    },
+                    endDate: {
+                        field: 'endDate',
+                        message: 'The end date must be later than the start date',
+                    },
+                }),
+                ...
+            },
+        }
+    );
+});
+</script-tag>
+</body>
+</html>
+`} />
+        <p class="lh-copy">The sample code above assumes that the FormValidation files are placed inside the <code>vendors</code> directory. You might need to change the path depending on where you place them on the server.</p>
+    </section>
+
+    <section class="mb4">
+        <h2><span class="bb b--gray">Options</span></h2>
+        <p class="lh-copy i"><sup>*</sup> presents a required option</p>
+        <table class="collapse ba br2 b--black-10 pv2 ph3 w-100">
+            <tr class="striped--light-gray">
+                <th class="pv2 ph3 tl f6 fw6 ttu">Option</th>
+                <th class="pv2 ph3 tl f6 fw6 ttu">Type</th>
+                <th class="pv2 ph3 tl f6 fw6 ttu">Description</th>
+            </tr>
+            <tr class="striped--light-gray">
+                <td class="pv2 ph3"><code>format</code> <sup>*</sup></td>
+                <td class="pv2 ph3">String</td>
+                <td class="pv2 ph3 lh-copy">The date format that both start and end dates have to follow. It's the same as the <code>format</code> option provided by the <a href="/guide/validators/date/" class="blue dim link">date</a> validator</td>
+            </tr>
+            <tr class="striped--light-gray">
+                <td class="pv2 ph3"><code>startDate</code> <sup>*</sup></td>
+                <td class="pv2 ph3">Object</td>
+                <td class="pv2 ph3 lh-copy">
+                    Contains two require properties:
+                    <ul class="ma0 pl3 lh-copy">
+                        <li><code>field</code> (String): The name of start date field</li>
+                        <li><code>message</code> (String): The message when the start date is not a valid date or not ealier than the end date</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr class="striped--light-gray">
+                <td class="pv2 ph3"><code>endDate</code> <sup>*</sup></td>
+                <td class="pv2 ph3">Object</td>
+                <td class="pv2 ph3 lh-copy">
+                    Contains two require properties:
+                    <ul class="ma0 pl3 lh-copy">
+                        <li><code>field</code> (String): The name of end date field</li>
+                        <li><code>message</code> (String): The message when the end date is not a valid date or not later than the start date</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+        <p class="lh-copy">You don't have to define the <a href="/guide/validators/date/" class="blue dim link">date</a> validator rules for start and end date fiels, because it's handled by the StartEndDate plugin automatically.</p>
+    </section>
+
+    <section class="mb4">
+        <h2><span class="bb b--gray">Basic example</span></h2>
+        <Demo prefix="/guide/plugins/start-end-date/basic" frameworks={['Tachyons']} />
+    </section>
+
+    <section class="mb4">
+        <h2><span class="bb b--gray">Using with date picker</span></h2>
+        <p class="lh-copy">It's possible to use a date picker that allows user to choose a date easily. You have to <a href="/guide/api/revalidate-field/" class="blue dim link">revalidate the field</a> when the date is changed.</p>
+        <p class="lh-copy">The example below uses the <a href="https://flatpickr.js.org/" class="blue dim link">flatpickr</a>, a lightweight and powerful datetime picker.</p>
+        <div class="mb4">
+<SampleCode lang="javascript" code={`
+const fv = FormValidation.formValidation(form, {
+    fields: {
+        ...
+    },
+    plugins: {
+        ...
+    },
+});
+
+flatpickr(form.querySelector('[name="startDate"]'), {
+    ...
+    // After selecting a date, we need to revalidate the field
+    onChange: function() {
+        fv.revalidateField('startDate');
+    },
+});
+
+flatpickr(form.querySelector('[name="endDate"]'), {
+    ...
+    onChange: function() {
+        fv.revalidateField('endDate');
+    },
+});
+`} />        
+        </div>
+        <Demo prefix="/guide/plugins/start-end-date/picker" frameworks={['Tachyons']} />
+    </section>
+
+    <section class="mb4">
+        <h2><span class="bb b--gray">Changelog</span></h2>
+        <ul class="pa0 ma0 ml3 lh-copy">
+            <li>v1.1.0: First release. It means that the StartEndDate plugin requires FormValidation v1.1.0 or newer.</li>
+        </ul>
+    </section>
+
+    <section class="cf mb4">
+        <div class="fl w-50 tl">
+            <a href="/guide/plugins/spectre/" class="b blue dim link pa2">&larr; Spectre plugin</a>
+        </div>
+        <div class="fl w-50 tr">
+            <a href="/guide/plugins/submit-button/" class="b blue dim link pa2">SubmitButton plugin &rarr;</a>
+        </div>
+    </section>
+</Guide>
+
+<script>
+export default {
+    components: {
+        Demo: '../../../../components/Demo.html',
+        Guide: '../../../../components/Guide.html',
+        SampleCode: '../../../../components/SampleCode.html',
+    },
+};
+</script>

@@ -1,0 +1,45 @@
+<svelte:head>
+	<title>FormValidation • off() method</title>
+</svelte:head>
+
+<Guide>
+    <h1 class="f3 f2-m f1-l tc">off()</h1>
+    <h2 class="f4 fw4 tc">Remove the given handler on particular event.</h2>
+
+    <section class="mb4">
+        <div class="mb3">
+            <SampleCode lang="javascript" code={`off(event: String, func: Function): Core`} />
+        </div>
+        <p class="lh-copy i"><sup>*</sup> presents a required parameter</p>
+        <ul class="ma0 mb3 pl3 lh-copy">
+            <li><code>event</code> <sup>*</sup> — The event name</li>
+            <li><code>func</code> <sup>*</sup> — The event handler.</li>
+        </ul>
+<SampleCode lang="javascript" code={`
+const invalidFieldHandler = function(field) {
+    // field is name of invalid field
+    ...
+};
+
+fv.off('core.field.invalid', invalidFieldHandler);
+`} />
+    </section>
+
+    <section class="cf mb4">
+        <div class="fl w-50 tl">
+            <a href="/guide/api/get-plugin/" class="b blue dim link pa2">&larr; getPlugin() method</a>
+        </div>
+        <div class="fl w-50 tr">
+            <a href="/guide/api/on/" class="b blue dim link pa2">on() method &rarr;</a>
+        </div>
+    </section>
+</Guide>
+
+<script>
+export default {
+    components: {
+        Guide: '../../../../components/Guide.html',
+        SampleCode: '../../../../components/SampleCode.html',
+    },
+};
+</script>

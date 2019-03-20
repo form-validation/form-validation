@@ -1,0 +1,84 @@
+<div ref:target on:click="toggle()" class="z-1">
+    <slot name="target"></slot>
+</div>
+<div ref:content class="absolute bg-white ba b--gray {isOpened ? 'z-999' : 'o-0 z-0'}" on:click="set({isOpened: false})">
+    <slot name="content"></slot>
+</div>
+
+<script>
+export default {
+    data() {
+        return {
+            xOffset: 0,
+            position: 'bottom-left',
+            // Private
+            isOpened: false,
+        };
+    },
+
+    oncreate() {
+        this.setPosition();
+
+        const resizeHandler = () => {
+            this.setPosition();
+        };
+        window.addEventListener('resize', resizeHandler);
+
+        const clickHandler = (e) => {
+            if (e.target.contains(this.refs.content)) {
+                // User click outside of popover's content
+                this.set({
+                    isOpened: false,
+                });
+            }
+        };
+        document.addEventListener('click', clickHandler);
+
+        this.on('destroy', () => {
+            document.removeEventListener('click', clickHandler);
+            window.removeEventListener('resize', resizeHandler);
+        });
+    },
+
+    methods: {
+        setPosition() {
+            const content = this.refs.content;
+            const target = this.refs.target;
+
+            const { xOffset, position } = this.get();
+
+            let top = 0;
+            let left = 0;
+            switch (position) {
+                case 'bottom-right':
+                    top = target.offsetTop + target.clientHeight;
+                    left = target.offsetLeft + target.clientWidth - content.clientWidth;
+                    break;
+
+                case 'bottom':
+                    top = target.offsetTop + target.clientHeight;
+                    left = target.offsetLeft + 0.5 * target.clientWidth - 0.5 * content.clientWidth;
+                    break;
+
+                case 'bottom-left':
+                default:
+                    top = target.offsetTop + target.clientHeight;
+                    left = target.offsetLeft;
+                    break;
+            }
+
+            content.setAttribute('style', `top: ${top + xOffset}px; left: ${left}px`);
+        },
+
+        toggle() {
+            const { isOpened } = this.get();
+            if (!isOpened) {
+                this.setPosition();
+            }
+            this.set({
+                isOpened: !isOpened,
+            });
+        },
+    },
+}
+</script>

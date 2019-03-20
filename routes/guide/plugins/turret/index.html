@@ -1,0 +1,89 @@
+<svelte:head>
+	<title>FormValidation • Turret plugin</title>
+</svelte:head>
+
+<Guide>
+    <h1 class="f3 f2-m f1-l tc">Turret plugin</h1>
+    <h2 class="f4 fw4 tc lh-copy">Integrate with <a href="https://turretcss.com/" class="blue dim link">turretcss</a> framework. Support turretcss v4.1.4</h2>
+
+    <section class="mb4">
+        <h2><span class="bb b--gray">Usage</span></h2>
+        <p class="lh-copy">The following piece of code is the starting point to validate the form made in turretcss:</p>
+<SampleCode lang="html" code={`
+<html>
+<head>
+    <link-tag rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bigfishtv-turret/4.1.4/turretcss.min.css">
+    <link-tag rel="stylesheet" href="/vendors/formvalidation/dist/css/formValidation.min.css">
+</head>
+<body>
+    <form id="demoForm" method="POST">
+        ...
+    </form>
+
+<script-tag src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.35.3/es6-shim.min.js"></script-tag>    
+<script-tag src="/vendors/formvalidation/dist/js/FormValidation.min.js"></script-tag>
+<script-tag src="/vendors/formvalidation/dist/js/plugins/Turret.min.js"></script-tag>
+
+<script-tag>
+document.addEventListener('DOMContentLoaded', function(e) {
+    FormValidation.formValidation(
+        document.getElementById('demoForm'),
+        {
+            fields: {
+                ...
+            },
+            plugins: {
+                turret: new FormValidation.plugins.Turret(),
+                ...
+            },
+        }
+    );
+});
+</script-tag>
+</body>
+</html>
+`} />
+        <p class="lh-copy">The sample code above assumes that the FormValidation files are placed inside the <code>vendors</code> directory. You might need to change the path depending on where you place them on the server.</p>
+        <p class="lh-copy">The next sections list out some examples of various forms made with turretcss.</p>
+    </section>
+
+    <section class="mb4">
+        <h2><span class="bb b--gray">Stacked form</span></h2>
+        <p class="lh-copy">You need to add the <code>fv-stacked-form</code> class to the <code>form</code> element such as:</p>
+        <div class="mb4">
+            <SampleCode lang="html" code={`
+<form class="fv-stacked-form">
+    <!-- The fields go here -->
+    ...
+</form>
+`} />
+        </div> 
+        <Demo prefix="/guide/plugins/turret/stacked-form" frameworks={['Turret']} />
+    </section>
+    
+    <section class="mb4">
+        <h2><span class="bb b--gray">Changelog</span></h2>
+        <ul class="pa0 ma0 ml3 lh-copy">
+            <li>v1.2.0: First release. It means that the Turret plugin requires FormValidation v1.2.0 or newer.</li>
+        </ul>
+    </section>
+
+    <section class="cf mb4">
+        <div class="fl w-50 tl">
+            <a href="/guide/plugins/trigger/" class="b blue dim link pa2">&larr; Trigger plugin</a>
+        </div>
+        <div class="fl w-50 tr">
+            <a href="/guide/plugins/uikit/" class="b blue dim link pa2">Uikit plugin &rarr;</a>
+        </div>
+    </section>
+</Guide>
+
+<script>
+export default {
+    components: {
+        Demo: '../../../../components/Demo.html',
+        Guide: '../../../../components/Guide.html',
+        SampleCode: '../../../../components/SampleCode.html',
+    },
+};
+</script>

@@ -1,0 +1,87 @@
+<svelte:head>
+	<title>FormValidation • Plugins</title>
+</svelte:head>
+
+<Guide>
+    <h1 class="f3 f2-m f1-l tc">Plugins</h1>
+    <h2 class="f4 fw4 tc">A collection of useful plugins that do additional jobs</h2>
+
+    <p class="lh-copy">FormValidation comes with various built-in plugins listed in the alphabetical order, split into two groups as following:</p>
+
+    <section class="mb4"> 
+        <h2><span class="bb b--gray">Core plugins</span></h2>
+        <p class="lh-copy">These plugins are often used and included in the <code>dist/js/FormValidation(.min).js</code> file. You don't need to include any external plugin file to use them.</p>
+        <table class="collapse ba br2 b--black-10 pv2 ph3 w-100 mb4">
+            <tr class="striped--light-gray">
+                <th class="pv2 ph3 tl f6 fw6 ttu">Name</th>
+                <th class="pv2 ph3 tl f6 fw6 ttu">Description</th>
+            </tr>
+            {#each CorePlugins as p}
+            <tr class="striped--light-gray">
+                <td class="pv2 ph3"><a href="/guide/plugins/{camelCaseToDash(p.name)}/" class="blue dim link" title="{p.desc.replace(/<\/?[^>]+(>|$)/g, "")}">{p.name}</a></td>
+                <td class="pv2 ph3 lh-copy">{@html p.desc}</td>
+            </tr>
+            {/each}
+        </table>
+    </section>
+
+    <section class="mb4">
+        <h2><span class="bb b--gray">External plugins</span></h2>
+        <p class="lh-copy">You don't need all external plugins most of the times. So, you have to include them right after the <code>dist/js/FormValidation(.min).js</code> file in your page.</p>
+        <div class="mb3">
+<SampleCode lang="html" code={`
+<script-tag src="/vendors/formvalidation/dist/js/FormValidation.min.js"></script-tag>
+
+<!-- 
+You need to insert external plugin (Bootstrap in this case) 
+after FormValidation.min.js
+-->
+<script-tag src="/vendors/formvalidation/dist/js/plugins/Bootstrap.min.js"></script-tag>
+`} />
+        </div>        
+        <table class="collapse ba br2 b--black-10 pv2 ph3 w-100 mb4">
+            <tr class="striped--light-gray">
+                <th class="pv2 ph3 tl f6 fw6 ttu">Name</th>
+                <th class="pv2 ph3 tl f6 fw6 ttu">Description</th>
+            </tr>
+            {#each ExternalPlugins as p}
+            <tr class="striped--light-gray">
+                <td class="pv2 ph3"><a href="/guide/plugins/{camelCaseToDash(p.name)}/" class="blue dim link" title="{p.desc.replace(/<\/?[^>]+(>|$)/g, "")}">{p.name}</a></td>
+                <td class="pv2 ph3 lh-copy">{@html p.desc}</td>
+            </tr>
+            {/each}
+        </table>
+    </section>
+
+    <section class="cf mb4">
+        <div class="fl w-50 tl">
+            <a href="/guide/validators/" class="b blue dim link pa2">&larr; Validators</a>
+        </div>
+        <div class="fl w-50 tr">
+            <a href="/guide/plugins/alias/" class="b blue dim link pa2">Alias plugin &rarr;</a>
+        </div>
+    </section>
+</Guide>
+
+<script>
+import Plugins from '../../../components/constants/Plugins';
+import camelCaseToDash from '../../../components/helpers/camelCaseToDash';
+
+export default {
+    components: {
+        Guide: '../../../components/Guide.html',
+        SampleCode: '../../../components/SampleCode.html',
+    },
+
+    data() {
+        return {
+            CorePlugins: Plugins.filter((p) => p.isCorePlugin),
+            ExternalPlugins: Plugins.filter((p) => !p.isCorePlugin),
+        };
+    },
+
+    helpers: {
+        camelCaseToDash,
+    },
+};
+</script>

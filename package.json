@@ -1,5 +1,7 @@
 {
   "private": true,
+  "name": "formvalidation.io",
+  "description": "FormValidation official website",
   "version": "3.0.0",
   "scripts": {
     "dev": "node --max-old-space-size=4096 node_modules/.bin/sapper dev",
@@ -24,11 +26,5 @@
     "rollup-plugin-terser": "^5.0.0",
     "sapper": "^0.27.1",
     "svelte": "^3.4.2"
-  },
-  "now": {
-    "name": "fv-io",
-    "env": {
-      "NODE_ENV": "production"
-    }
   }
 }

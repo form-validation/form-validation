@@ -1,0 +1,39 @@
+<svelte:head>
+	<title>FormValidation • getElementValue() method</title>
+</svelte:head>
+
+<Guide>
+    <h1 class="f3 f2-m f1-l tc">getElementValue()</h1>
+    <h2 class="f4 fw4 tc">Return the element value</h2>
+
+    <section class="mb4">
+        <p class="lh-copy">The element value might be modified by the <code>field-value</code> filter, via the <a href="/guide/plugins/transformer/" class="blue dim link">Transformer</a> plugin, for example</p>
+        <div class="mb3">
+            <SampleCode lang="javascript" code={`getElementValue(field: String, ele: HTMLElement, validator: String): String`} />
+        </div>
+        <p class="lh-copy i"><sup>*</sup> presents a required parameter</p>
+        <ul class="ma0 pl3 lh-copy">
+            <li><code>field</code> <sup>*</sup> — The field name</li>
+            <li><code>ele</code> <sup>*</sup> — The field element</li>
+            <li><code>validator</code> — The validator name</li>
+        </ul>
+    </section>
+
+    <section class="cf mb4">
+        <div class="fl w-50 tl">
+            <a href="/guide/api/get-elements/" class="b blue dim link pa2">&larr; getElements() method</a>
+        </div>
+        <div class="fl w-50 tr">
+            <a href="/guide/api/get-fields/" class="b blue dim link pa2">getFields() method &rarr;</a>
+        </div>
+    </section>
+</Guide>
+
+<script>
+export default {
+    components: {
+        Guide: '../../../../components/Guide.html',
+        SampleCode: '../../../../components/SampleCode.html',
+    },
+};
+</script>

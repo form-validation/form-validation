@@ -1,0 +1,226 @@
+<svelte:head>
+	<title>FormValidation • numeric validator</title>
+</svelte:head>
+
+<Guide>
+    <h1 class="f3 f2-m f1-l tc">numeric validator</h1>
+    <h2 class="f4 fw4 tc">Check if the value an is empty string</h2>
+
+    <section class="mb4">
+        <h2><span class="bb b--gray">Options</span></h2>
+
+        <h3>Using with form field</h3>
+        <p class="lh-copy i">The HTML attributes are used to set the validator options via the <a href="/guide/plugins/declarative/" class="blue dim link">Declarative</a> plugin</p>
+        <table class="collapse ba br2 b--black-10 pv2 ph3 w-100 mb4">
+            <tr class="striped--light-gray">
+                <th class="pv2 ph3 tl f6 fw6 ttu">Name</th>
+                <th class="pv2 ph3 tl f6 fw6 ttu">HTML attribute</th>
+                <th class="pv2 ph3 tl f6 fw6 ttu">Type</th>
+                <th class="pv2 ph3 tl f6 fw6 ttu">Description</th>
+            </tr>
+            <tr class="striped--light-gray">
+                <td class="pv2 ph3"><code>message</code></td>
+                <td class="pv2 ph3"><code>data-fv-numeric___message</code></td>
+                <td class="pv2 ph3">String</td>
+                <td class="pv2 ph3">The error message</td>
+            </tr>
+            <tr class="striped--light-gray">
+                <td class="pv2 ph3"><code>thousandsSeparator</code></td>
+                <td class="pv2 ph3"><code>data-fv-numeric___thousands-separator</code></td>
+                <td class="pv2 ph3">String</td>
+                <td class="pv2 ph3 lh-copy">
+                    The thousands separator. The popular values are
+                    <ul class="ma0 pl3">
+                        <li>An empty string (the default value)</li>
+                        <li>A bank space</li>
+                        <li>A comma (<code>,</code>)</li>
+                        <li>A dot (<code>.</code>)</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr class="striped--light-gray">
+                <td class="pv2 ph3"><code>decimalSeparator</code></td>
+                <td class="pv2 ph3"><code>data-fv-numeric___decimal-separator</code></td>
+                <td class="pv2 ph3">String</td>
+                <td class="pv2 ph3 lh-copy">
+                    The decimal separator. The popular values are
+                    <ul class="ma0 pl3">
+                        <li>A dot (<code>.</code>) (the default value)</li>
+                        <li>A comma (<code>,</code>)</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+        <p class="lh-copy">The <code>thousandsSeparator</code> and <code>decimalSeparator</code> options are useful if your country use particular separators for thousands and decimal parts.
+            See the next <span class="i">Supporting locales</span> section for more details.</p>
+
+        <h3>Using with JavaScript module</h3>
+<SampleCode lang="javascript" code={`
+// You might need to change the importing path
+import numeric from 'formvalidation/validators/numeric';
+
+const result = numeric().validate({
+    value: ...,
+    options: {
+        decimalSeparator: ...,
+        message: ...,
+        thousandsSeparator: ...,
+    },
+});
+/*
+result is an object of
+{
+    valid: true or false,
+    message: The error message
+}
+*/
+`} />
+    </section>
+
+    <section class="mb4">
+        <h2><span class="bb b--gray">Supporting locales</span></h2>
+        <p class="lh-copy">The thousands and decimal separators might take different value in certain countries. The following table introduces some popular values that are defined by various countries.</p>
+        <p class="lh-copy">You can click the sample number to test:</p>
+
+        <table class="collapse ba br2 b--black-10 pv2 ph3 w-100 mb4">
+            <tr class="striped--light-gray">
+                <th class="pv2 ph3 tl f6 fw6 ttu">Country</th>
+                <th class="pv2 ph3 tl f6 fw6 ttu">Thousands separator</th>
+                <th class="pv2 ph3 tl f6 fw6 ttu">Decimal separator</th>
+                <th class="pv2 ph3 tl f6 fw6 ttu">Sample</th>
+                <th class="pv2 ph3 tl f6 fw6 ttu">Is valid?</th>
+            </tr>
+            {#each samples as sample}
+                {#each sample.examples as example, index}
+                <tr class="striped--light-gray">
+                <td class="pv2 ph3">{#if index == 0}{sample.country}{/if}</td>
+                <td class="pv2 ph3 lh-copy">{#if index == 0}{@html sample.thousandsSeparatorDesc}{/if}</td>
+                <td class="pv2 ph3 lh-copy">{#if index == 0}{@html sample.decimalSeparatorDesc}{/if}</td>
+                <SampleData sample={{sample: example, country: sample.code, thousandsSeparator: sample.thousandsSeparator, decimalSeparator: sample.decimalSeparator}} renderSample={(s) => s.sample} />
+                </tr>
+                {/each}
+            {/each}
+        </table>
+
+        <p>The example also uses the <a href="/guide/api/update-validator-option/" class="blue dim link">updateValidatorOption()</a> method to set values for <code>thousandsSeparator</code> and <code>decimalSeparator</code> options.</p>
+
+        <SampleCode lang="javascript" code={`
+formValidationInstance
+    // Update the options
+    .updateValidatorOption('number', 'numeric', 'thousandsSeparator', thousandsSeparator)
+    .updateValidatorOption('number', 'numeric', 'decimalSeparator', decimalSeparator);
+`} />
+        <Tip>
+            Since the thousands and decimal separators are various, the field should use <code>type="text"</code> attribute.
+            Using <code>type="number"</code> for field will restrict the input to use default separators for a number (an empty string for thousands, and a dot for decimal parts).
+        </Tip>
+        <Demo prefix="/guide/validators/numeric/basic" frameworks={['Bootstrap', 'Tachyons']} />
+    </section>
+
+    <section class="mb4">
+        <h2><span class="bb b--gray">Module example</span></h2>
+
+        <p class="lh-copy">The following snippet shows how to use the numeric validator with JavaScript module:</p>
+<SampleCode lang="javascript" code={`
+// You might need to change the importing path
+import numeric from 'formvalidation/validators/numeric';
+
+const res1 = numeric().validate({
+    value: '967295.00',
+    options: {
+        thousandsSeparator: '',
+        decimalSeparator: '.',
+        message: 'The value is not a valid numeric number',
+    },
+});
+// res1.valid === true
+
+const res2 = numeric().validate({
+    value: '4967,295',
+    options: {
+        thousandsSeparator: ',',
+        decimalSeparator: '.',
+        message: 'The value is not a valid numeric number',
+    },
+});
+// res2.valid === false
+
+const res3 = numeric().validate({
+    value: '4 294 967 295',
+    options: {
+        thousandsSeparator: ' ',
+        decimalSeparator: ',',
+        message: 'The value is not a valid numeric number',
+    },
+});
+// res3.valid === true
+`} />
+    </section>
+
+    <RelatedValidators validators={['digits', 'integer']} />
+
+    <section class="cf mb4">
+        <div class="fl w-50 tl">
+            <a href="/guide/validators/not-empty/" class="b blue dim link pa2">&larr; notEmpty validator</a>
+        </div>
+        <div class="fl w-50 tr">
+            <a href="/guide/validators/phone/" class="b blue dim link pa2">phone validator &rarr;</a>
+        </div>
+    </section>
+</Guide>
+
+<script>
+export default {
+    components: {
+        Demo: '../../../../components/Demo.html',
+        Guide: '../../../../components/Guide.html',
+        RelatedValidators: '../../../../components/RelatedValidators.html',
+        SampleCode: '../../../../components/SampleCode.html',
+        SampleData: '../../../../components/SampleData.html',
+        Tip: '../../../../components/Tip.html',
+    },
+
+    data() {
+        return {
+            samples: [
+                {
+                    country: '', code: '', thousandsSeparator: '', thousandsSeparatorDesc: 'An empty string', decimalSeparator: '.', decimalSeparatorDesc: 'A dot (<code>.</code>)',
+                    examples: [
+                        // Valid
+                        '95', '095', '0095', '295', '7295', '67295', '967295.00', '4294967295.001',
+                        // Invalid
+                        '7,295', '67,295', '967,295', '4967,295', '4,294,967,295,00',
+                    ]
+                },
+                {
+                    country: 'United States', code: 'en_US', thousandsSeparator: ',', thousandsSeparatorDesc: 'A comma (<code>,</code>)', decimalSeparator: '.', decimalSeparatorDesc: 'A dot (<code>.</code>)',
+                    examples: [
+                        // Valid
+                        '95', '295', '7,295', '67,295.001', '967,295', '967,295.00', '4,294,967,295', '4,294,967,295.00', '4,294,967,295.001',
+                        // Invalid
+                        '7295', '67295.01', '4967,295', '4294,967,295.00', '4,294,967,295,00', '42,94,967,295.00', '42,94,967295.00', '4294,967,295.00',
+                    ]
+                },
+                {
+                    country: 'France', code: 'fr_FR', thousandsSeparator: ' ', thousandsSeparatorDesc: 'A blank space', decimalSeparator: ',', decimalSeparatorDesc: 'A comma (<code>,</code>)',
+                    examples: [
+                        // Valid
+                        '95', '295', '67 295', '967 295', '967 295,00', '4 294 967 295', '4 294 967 295,00', '4 294 967 295,001',
+                        // Invalid
+                        '7295', '67295,01', '4967 295', '4294 967 295,00', '4 294 967 295.00', '42 94 967 295,00', '42 94 967295,00',
+                    ]
+                },
+                {
+                    country: 'Italy', code: 'it_IT', thousandsSeparator: '.', thousandsSeparatorDesc: 'A dot (<code>.</code>)', decimalSeparator: ',', decimalSeparatorDesc: 'A comma (<code>,</code>)',
+                    examples: [
+                        // Valid
+                        '95', '295', '7.295', '67.295', '967.295', '967.295,00', '4.294.967.295', '4.294.967.295,00', '4.294.967.295,0001',
+                        // Invalid
+                        '7295', '67295,01', '4967.295', '967.295.00', '4294.967.295,00', '4.294.967.295.00', '42.94.967.295,00', '42.94.967295,00',
+                    ]
+                },
+            ]
+        };
+    },
+};
+</script>

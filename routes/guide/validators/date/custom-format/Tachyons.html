@@ -1,0 +1,68 @@
+<DemoLayout framework="tachyons">
+    <DemoWrapper ref:demo from="/guide/validators/date/custom-format/Tachyons">
+        <ResourceLoader urls={['https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.1/moment.min.js']}>
+            <form id="demoForm" method="post">
+                <div class="cf mb2">
+                    <div class="fl w-100">
+                        <div class="fl w-50 pa2">What's US independence day?</div>
+                        <div class="fl w-50">
+                            <input type="text" name="independenceDay" placeholder="MMM D" class="input-reset ba b--black-20 pa2 mb2 db w-100" />
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </ResourceLoader>
+    </DemoWrapper>
+</DemoLayout>
+
+<script>
+import formValidation from 'formvalidation/core/Core';
+import Icon from 'formvalidation/plugins/Icon';
+import Trigger from 'formvalidation/plugins/Trigger';
+import Tachyons from 'formvalidation/plugins/Tachyons';
+
+import sampleCode from './Tachyons.programmatic';
+
+export default {
+    components: {
+        DemoLayout: '../../../../../components/DemoLayout.html',
+        DemoWrapper: '../../../../../components/DemoWrapper.html',
+        ResourceLoader: '../../../../../components/ResourceLoader.html',
+    },
+
+    oncreate() {
+        window.addEventListener('load', () => {
+            const fv = formValidation(document.getElementById('demoForm'), {
+                fields: {
+                    independenceDay: {
+                        validators: {
+                            callback: {
+                                message: 'Wrong answer',
+                                callback: (input) => {
+                                    const value = input.value;
+                                    const m = new moment(value, 'MMMM D', true);
+                                    return m.isValid() && m.month() === 6 && m.date() === 4;
+                                }
+                            }
+                        }
+                    },
+                },
+                plugins: {
+                    trigger: new Trigger(),
+                    tachyons: new Tachyons(),
+                    icon: new Icon({
+                        valid: 'fa fa-check',
+                        invalid: 'fa fa-times',
+                        validating: 'fa fa-refresh'
+                    }),
+                },
+            });
+
+            this.refs.demo.set({
+                fv,
+                sampleCode,
+            });
+        });
+    },
+};
+</script>

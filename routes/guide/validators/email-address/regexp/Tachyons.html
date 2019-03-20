@@ -1,0 +1,75 @@
+<DemoLayout framework="tachyons">
+    <DemoWrapper ref:demo from="/guide/validators/email-address/regexp/Tachyons">
+        <form id="demoForm" method="post">
+            <div class="cf mb2">
+                <div class="fl w-100">
+                    <div class="fl w-25 pa2">Email address</div>
+                    <div class="fl w-50">
+                        <input type="text" name="email" class="input-reset ba b--black-20 pa2 mb2 db w-100" />
+                    </div>
+                </div>
+            </div>
+        </form>
+    </DemoWrapper>
+</DemoLayout>
+
+<script>
+import formValidation from 'formvalidation/core/Core';
+import Icon from 'formvalidation/plugins/Icon';
+import Trigger from 'formvalidation/plugins/Trigger';
+import Tachyons from 'formvalidation/plugins/Tachyons';
+import emailAddress from 'formvalidation/validators/emailAddress';
+import regexp from 'formvalidation/validators/regexp';
+
+import sampleCode from './Tachyons.programmatic';
+
+export default {
+    components: {
+        DemoLayout: '../../../../../components/DemoLayout.html',
+        DemoWrapper: '../../../../../components/DemoWrapper.html',
+    },
+
+    oncreate() {
+        const fv = formValidation(document.getElementById('demoForm'), {
+            fields: {
+                email: {
+                    validators: {
+                        callback: {
+                            message: 'The value is not a valid email address',
+                            callback: (input) => {
+                                const value = input.value;
+                                if (value === '') {
+                                    return true;
+                                }
+
+                                // I want the value has to pass both emailAddress and regexp validators
+                                return emailAddress().validate({ value }).valid &&
+                                    regexp().validate({
+                                        value,
+                                        options: {
+                                            regexp: '^[^@\\s]+@([^@\\s]+\\.)+[^@\\s]+$',
+                                        },
+                                    }).valid;
+                            },
+                        }
+                    }
+                },
+            },
+            plugins: {
+                trigger: new Trigger(),
+                tachyons: new Tachyons(),
+                icon: new Icon({
+                    valid: 'fa fa-check',
+                    invalid: 'fa fa-times',
+                    validating: 'fa fa-refresh'
+                }),
+            },
+        });
+
+        this.refs.demo.set({
+            fv,
+            sampleCode,
+        });
+    },
+};
+</script>

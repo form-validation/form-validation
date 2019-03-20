@@ -1,0 +1,89 @@
+<DemoLayout framework="tachyons">
+    <DemoWrapper ref:demo from="/guide/plugins/transformer/phone/Tachyons">
+        <form id="demoForm" method="POST">
+            <div class="cf mb2">
+                <div class="fl w-100">
+                    <div class="fl w-25 pa2">US phone number</div>
+                    <div class="fl w-50">
+                        <input type="text" class="input-reset ba b--black-20 pa2 mb2 db w-100" name="phoneNumber" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="cf mb2">
+                <div class="fl w-100">
+                    <div class="fl w-25 pa2"></div>
+                    <div class="fl w-50">
+                        <button type="submit" class="ba b--black-20 bg-blue white ph3 pv2 br2">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </DemoWrapper>
+</DemoLayout>
+
+<script>
+import formValidation from 'formvalidation/core/Core';
+import Icon from 'formvalidation/plugins/Icon';
+import Transformer from 'formvalidation/plugins/Transformer';
+import Trigger from 'formvalidation/plugins/Trigger';
+import Tachyons from 'formvalidation/plugins/Tachyons';
+import SubmitButton from 'formvalidation/plugins/SubmitButton';
+import phone from 'formvalidation/validators/phone';
+
+import sampleCode from './Tachyons.programmatic';
+
+export default {
+    components: {
+        DemoLayout: '../../../../../components/DemoLayout.html',
+        DemoWrapper: '../../../../../components/DemoWrapper.html',
+    },
+
+    oncreate() {
+        const fv = formValidation(document.getElementById('demoForm'), {
+            fields: {
+                phoneNumber: {
+                    validators: {
+                        phone: {
+                            message: 'The phone number is not valid',
+                            country: 'US',
+                        },
+                    },
+                },
+            },
+            plugins: {
+                trigger: new Trigger(),
+                tachyons: new Tachyons(),
+                submitButton: new SubmitButton(),
+                icon: new Icon({
+                    valid: 'fa fa-check',
+                    invalid: 'fa fa-times',
+                    validating: 'fa fa-refresh',
+                }),
+                transformer: new Transformer({
+                    phoneNumber: {
+                        phone: (field, element, validator) => {
+                            // Get the field value
+                            const value = element.value;
+
+                            // Check if the value has format of XXX   XXX   XXXX
+                            if (/^(\d){3}(\s+)(\d){3}(\s+)(\d){4}$/.test(value)) {
+                                // Remove all spaces
+                                return value.replace(/\s/g, '');
+                            } else {
+                                // Otherwise, return the original value
+                                return value;
+                            }
+                        },
+                    },
+                }),
+            },
+        }).registerValidator('phone', phone);
+
+        this.refs.demo.set({
+            fv,
+            sampleCode,
+        });
+    },
+};
+</script>

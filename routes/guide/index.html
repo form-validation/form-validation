@@ -1,0 +1,41 @@
+<svelte:head>
+	<title>FormValidation • Guide</title>
+</svelte:head>
+
+<Guide>
+    <h1 class="f3 f2-m f1-l tc">Guide</h1>
+    <h2 class="f4 fw4 tc">Welcome to the user manual for FormValidation</h2>
+
+    <section class="mb4">
+        <h2><span class="bb b--gray">Latest Updates</span></h2>
+        <p class="lh-copy">From v1.0.0, the library is rewritten in Typescript and ES6 completely. The giant and old jQuery plugin doesn't exist anymore. With the new plugin based architectue, the library has really small core.
+            Everything else is built around as a plugin.</p>
+        <p class="lh-copy">There are some new plugins in this version:</p>
+        <ul class="ma0 pl3 lh-copy">
+            <li><a href="/guide/plugins/alias/" class="blue dim link">Alias</a>: Allow to use multiple instances of the same validator</li>
+            <li><a href="/guide/plugins/aria/" class="blue dim link">Aria</a>: Add ARIA attributes based on the field validity</li>
+            <li><a href="/guide/plugins/sequence/" class="blue dim link">Sequence</a>: Stop performing remaining validators if there is a validator that the field does not pass</li>
+        </ul>
+
+        <p class="lh-copy">We also bring more supports for popular CSS frameworks. If your form is made with the following frameworks, then use the associated plugin which is built up everything such as showing <a href="/guide/plugins/icon/" class="blue dim link">Icon</a>
+            and <a href="/guide/plugins/message/" class="blue dim link">Message</a> at desired areas.</p>
+        <div class="cf mb2 center tc measure">
+            <SupportedFramework />
+        </div>
+    </section>
+
+    <section class="cf mb4">
+        <div class="fr w-50 tr">
+            <a href="/guide/getting-started/" class="dim blue link pa2 b">Getting Started &rarr;</a>
+        </div>
+    </section>
+</Guide>
+
+<script>
+export default {
+    components: {
+        Guide: '../../components/Guide.html',
+        SupportedFramework: '../../components/SupportedFramework.html',
+    },
+};
+</script>
