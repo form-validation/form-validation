@@ -36,7 +36,7 @@ export default function ismn() {
             for (let i = 0; i < length - 1; i++) {
                 sum += parseInt(v.charAt(i), 10) * weight[i % 2];
             }
-            sum = 10 - sum % 10;
+            sum = (10 - sum % 10) % 10;
             return {
                 meta: {
                     type: tpe,

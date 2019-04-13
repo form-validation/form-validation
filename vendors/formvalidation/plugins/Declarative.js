@@ -4,10 +4,12 @@ export default class Declarative extends Plugin {
         super(opts);
         this.opts = Object.assign({}, {
             html5Input: false,
+            pluginPrefix: 'data-fvp-',
             prefix: 'data-fv-',
         }, opts);
     }
     install() {
+        this.parsePlugins();
         const opts = this.parseOptions();
         Object.keys(opts).forEach((field) => this.core.addField(field, opts[field]));
     }
@@ -33,6 +35,45 @@ export default class Declarative extends Plugin {
             });
         });
         return Object.assign({}, fields, opts);
+    }
+    createPluginInstance(clazz, opts) {
+        const arr = clazz.split('.');
+        let fn = (window || this);
+        for (let i = 0, len = arr.length; i < len; i++) {
+            fn = fn[arr[i]];
+        }
+        if (typeof fn !== 'function') {
+            throw new Error(`the plugin ${clazz} doesn't exist`);
+        }
+        return new fn(opts);
+    }
+    parsePlugins() {
+        const form = this.core.getFormElement();
+        const reg = new RegExp(`^${this.opts.pluginPrefix}([a-z0-9\-]+)(___)*([a-z0-9\-]+)*$`);
+        const numAttributes = form.attributes.length;
+        const plugins = {};
+        for (let i = 0; i < numAttributes; i++) {
+            const name = form.attributes[i].name;
+            const value = form.attributes[i].value;
+            const items = reg.exec(name);
+            if (items && items.length === 4) {
+                const pluginName = this.toCamelCase(items[1]);
+                plugins[pluginName] = Object.assign({}, items[3]
+                    ? { [this.toCamelCase(items[3])]: value }
+                    : { enabled: ('' === value || 'true' === value) }, plugins[pluginName]);
+            }
+        }
+        Object.keys(plugins).forEach((pluginName) => {
+            const opts = plugins[pluginName];
+            const enabled = opts['enabled'];
+            const clazz = opts['class'];
+            if (enabled && clazz) {
+                delete opts['enabled'];
+                delete opts['clazz'];
+                const p = this.createPluginInstance(clazz, opts);
+                this.core.registerPlugin(pluginName, p);
+            }
+        });
     }
     isEmptyOption(opts) {
         const validators = opts.validators;

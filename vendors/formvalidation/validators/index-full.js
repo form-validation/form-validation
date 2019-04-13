@@ -30,7 +30,7 @@ import ein from './ein';
 import grid from './grid';
 import hex from './hex';
 import iban from './iban';
-import id from './id';
+import id from './id/index';
 import imei from './imei';
 import imo from './imo';
 import isbn from './isbn';
@@ -46,7 +46,7 @@ import siren from './siren';
 import siret from './siret';
 import step from './step';
 import uuid from './uuid';
-import vat from './vat';
+import vat from './vat/index';
 import vin from './vin';
 import zipCode from './zipCode';
 export default {

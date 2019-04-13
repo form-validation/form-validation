@@ -9,10 +9,12 @@ export default class Recaptcha extends Plugin {
         this.opts = Object.assign({}, Recaptcha.DEFAULT_OPTIONS, opts);
         this.fieldResetHandler = this.onResetField.bind(this);
         this.preValidateFilter = this.preValidate.bind(this);
+        this.iconPlacedHandler = this.onIconPlaced.bind(this);
     }
     install() {
         this.core
             .on('core.field.reset', this.fieldResetHandler)
+            .on('plugins.icon.placed', this.iconPlacedHandler)
             .registerFilter('validate-pre', this.preValidateFilter);
         const loadPrevCaptcha = (typeof window[Recaptcha.LOADED_CALLBACK] === 'undefined')
             ? () => { }
@@ -25,6 +27,9 @@ export default class Recaptcha extends Plugin {
                     if (this.opts.backendVerificationUrl === '') {
                         this.captchaStatus = Status.Valid;
                         this.core.updateFieldStatus(Recaptcha.CAPTCHA_FIELD, Status.Valid);
+                    }
+                    else {
+                        this.core.revalidateField(Recaptcha.CAPTCHA_FIELD);
                     }
                 },
                 'error-callback': () => {
@@ -45,7 +50,10 @@ export default class Recaptcha extends Plugin {
                     promise: {
                         message: this.opts.message,
                         promise: (input) => {
-                            if (input.value === '') {
+                            const value = this.widgetIds.has(this.opts.element)
+                                ? window['grecaptcha'].getResponse(this.widgetIds.get(this.opts.element))
+                                : input.value;
+                            if (value === '') {
                                 this.captchaStatus = Status.Invalid;
                                 return Promise.resolve({
                                     valid: false,
@@ -66,7 +74,7 @@ export default class Recaptcha extends Plugin {
                                 return fetch(this.opts.backendVerificationUrl, {
                                     method: 'POST',
                                     params: {
-                                        [Recaptcha.CAPTCHA_FIELD]: input.value,
+                                        [Recaptcha.CAPTCHA_FIELD]: value,
                                     },
                                 }).then((response) => {
                                     const isValid = `${response['success']}` === 'true';
@@ -103,6 +111,7 @@ export default class Recaptcha extends Plugin {
         }
         this.core
             .off('core.field.reset', this.fieldResetHandler)
+            .off('plugins.icon.placed', this.iconPlacedHandler)
             .deregisterFilter('validate-pre', this.preValidateFilter);
         this.widgetIds.clear();
         const src = this.getScript();
@@ -136,6 +145,14 @@ export default class Recaptcha extends Plugin {
         if (e.field === Recaptcha.CAPTCHA_FIELD && this.widgetIds.has(this.opts.element)) {
             const widgetId = this.widgetIds.get(this.opts.element);
             window['grecaptcha'].reset(widgetId);
+        }
+    }
+    onIconPlaced(e) {
+        if (e.field === Recaptcha.CAPTCHA_FIELD) {
+            const captchaContainer = document.getElementById(this.opts.element);
+            if (captchaContainer) {
+                captchaContainer.parentNode.insertBefore(e.iconElement, captchaContainer.nextSibling);
+            }
         }
     }
 }
