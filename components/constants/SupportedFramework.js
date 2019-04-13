@@ -52,7 +52,7 @@ export default {
     mini: {
         name: 'mini.css',
         version: '3.0.0',
-        urls: ['https://cdnjs.cloudflare.com/ajax/libs/mini.css/3.0.0/mini-default.min.css'],
+        urls: ['https://cdnjs.cloudflare.com/ajax/libs/mini.css/3.0.1/mini-default.min.css'],
     },
     mui: {
         name: 'MUI',
