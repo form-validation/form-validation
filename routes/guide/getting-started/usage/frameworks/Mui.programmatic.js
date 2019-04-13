@@ -2,7 +2,7 @@ export default `<!doctype html>
 <html>
 <head>
     <link-tag rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link-tag rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/muicss/0.9.39/css/mui.min.css">
+    <link-tag rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/muicss/0.9.41/css/mui.min.css">
     <link-tag rel="stylesheet" href="/vendors/formvalidation/dist/css/formValidation.min.css">
 </head>
 <body>
@@ -31,7 +31,7 @@ export default `<!doctype html>
     </div>
 
 <script-tag src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.35.3/es6-shim.min.js"></script-tag>
-<script-tag src="https://cdnjs.cloudflare.com/ajax/libs/muicss/0.9.39/js/mui.min.js"></script-tag>
+<script-tag src="https://cdnjs.cloudflare.com/ajax/libs/muicss/0.9.41/js/mui.min.js"></script-tag>
 <script-tag src="/vendors/formvalidation/dist/js/FormValidation.min.js"></script-tag>
 <script-tag src="/vendors/formvalidation/dist/js/plugins/Mui.min.js"></script-tag>
 

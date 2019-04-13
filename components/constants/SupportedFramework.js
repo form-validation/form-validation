@@ -51,13 +51,13 @@ export default {
     },
     mini: {
         name: 'mini.css',
-        version: '3.0.0',
+        version: '3.0.1',
         urls: ['https://cdnjs.cloudflare.com/ajax/libs/mini.css/3.0.1/mini-default.min.css'],
     },
     mui: {
         name: 'MUI',
-        version: '0.9.39',
-        urls: ['https://cdnjs.cloudflare.com/ajax/libs/muicss/0.9.39/css/mui.min.css'],
+        version: '0.9.41',
+        urls: ['https://cdnjs.cloudflare.com/ajax/libs/muicss/0.9.41/css/mui.min.css'],
     },
     shoelace: {
         name: 'Shoelace',
