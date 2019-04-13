@@ -26,8 +26,8 @@ export default {
     },
     semantic: {
         name: 'Semantic UI',
-        version: '2.3.3',
-        urls: ['https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.css'],
+        version: '2.4.1',
+        urls: ['https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css'],
     },
     pure: {
         name: 'PureCSS',
