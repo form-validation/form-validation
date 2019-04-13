@@ -1,7 +1,7 @@
 export default `<!doctype html>
 <html>
 <head>
-    <link-tag rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link-tag rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css">
     <link-tag rel="stylesheet" href="/vendors/formvalidation/dist/css/formValidation.min.css">
 </head>
 <body>

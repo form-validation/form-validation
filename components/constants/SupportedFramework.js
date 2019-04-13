@@ -6,8 +6,8 @@ export default {
     },
     bootstrap3: {
         name: 'Bootstrap 3',
-        version: '3.3.7',
-        urls: ['https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'],
+        version: '3.4.1',
+        urls: ['https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css'],
     },
     bootstrap: {
         name: 'Bootstrap 4',
