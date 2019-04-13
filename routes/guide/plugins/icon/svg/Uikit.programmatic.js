@@ -1,7 +1,7 @@
 export default `<!doctype html>
 <html>
 <head>
-    <link-tag rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.8/css/uikit.min.css">
+    <link-tag rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/css/uikit.min.css">
     <link-tag rel="stylesheet" href="/vendors/formvalidation/dist/css/formValidation.min.css">
 </head>
 <body>

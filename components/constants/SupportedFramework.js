@@ -21,12 +21,12 @@ export default {
     },
     uikit: {
         name: 'UI Kit',
-        version: '3.0.0-rc.8',
-        urls: ['https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.8/css/uikit.min.css'],
+        version: '3.0.3',
+        urls: ['https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/css/uikit.min.css'],
     },
     semantic: {
         name: 'Semantic UI',
-        version: '2.3.3',
+        version: '2.4.1',
         urls: ['https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css'],
     },
     pure: {
