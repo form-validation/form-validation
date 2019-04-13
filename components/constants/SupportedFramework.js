@@ -41,8 +41,8 @@ export default {
     },
     materialize: {
         name: 'Materialize',
-        version: '1.0.0-rc.2',
-        urls: ['https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css'],
+        version: '1.0.0',
+        urls: ['https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css'],
     },
     milligram: {
         name: 'Milligram',
