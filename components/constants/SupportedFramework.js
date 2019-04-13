@@ -26,7 +26,7 @@ export default {
     },
     semantic: {
         name: 'Semantic UI',
-        version: '2.4.1',
+        version: '2.3.3',
         urls: ['https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css'],
     },
     pure: {
@@ -66,11 +66,11 @@ export default {
     },
     spectre: {
         name: 'Spectre',
-        version: '0.5.3',
+        version: '0.5.8',
         urls: [
-            'https://cdnjs.cloudflare.com/ajax/libs/spectre.css/0.5.3/spectre.min.css',
+            'https://cdnjs.cloudflare.com/ajax/libs/spectre.css/0.5.8/spectre.min.css',
             // To use with Icon plugin
-            'https://cdnjs.cloudflare.com/ajax/libs/spectre.css/0.5.3/spectre-icons.min.css',
+            'https://cdnjs.cloudflare.com/ajax/libs/spectre.css/0.5.8/spectre-icons.min.css',
         ],
     },
     turret: {
