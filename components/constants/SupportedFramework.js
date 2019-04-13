@@ -16,8 +16,8 @@ export default {
     },
     foundation: {
         name: 'Foundation',
-        version: '6.4.3',
-        urls: ['https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css'],
+        version: '6.5.3',
+        urls: ['https://cdnjs.cloudflare.com/ajax/libs/foundation/6.5.3/css/foundation.min.css'],
     },
     uikit: {
         name: 'UI Kit',
