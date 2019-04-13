@@ -75,7 +75,7 @@ export default {
     },
     turret: {
         name: 'turretcss',
-        version: '4.1.4',
-        urls: ['https://cdnjs.cloudflare.com/ajax/libs/bigfishtv-turret/4.1.4/turretcss.min.css'],
+        version: '5.1.3',
+        urls: ['https://cdnjs.cloudflare.com/ajax/libs/bigfishtv-turret/5.1.3/turretcss.min.css'],
     },
 }
