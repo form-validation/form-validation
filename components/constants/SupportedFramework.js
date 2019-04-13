@@ -11,8 +11,8 @@ export default {
     },
     bootstrap: {
         name: 'Bootstrap 4',
-        version: '4.1.2',
-        urls: ['https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css'],
+        version: '4.3.1',
+        urls: ['https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css'],
     },
     foundation: {
         name: 'Foundation',
