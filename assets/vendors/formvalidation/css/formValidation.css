@@ -370,24 +370,16 @@
 .fv-plugins-shoelace .input-invalid .fv-plugins-icon {
   color: #ff4136; }
 
-.fv-plugins-spectre .form-checkbox .form-icon,
-.fv-plugins-spectre .form-radio .form-icon {
-  margin: 0; }
-
 .fv-plugins-spectre .input-group .fv-plugins-icon {
   z-index: 2; }
 
-.fv-plugins-spectre:not(.form-horizontal) .form-group.has-error .fv-plugins-icon {
-  margin-top: 4px; }
+.fv-plugins-spectre .form-group .fv-plugins-icon-check {
+  right: 6px;
+  top: 10px; }
 
-.fv-plugins-spectre:not(.form-horizontal) .form-group.has-error .fv-plugins-icon-check {
-  margin-top: 0; }
-
-.fv-plugins-spectre:not(.form-horizontal) .form-group.has-success .fv-plugins-icon {
-  margin-top: 15px; }
-
-.fv-plugins-spectre:not(.form-horizontal) .form-group.has-success .fv-plugins-icon-check {
-  margin-top: 0; }
+.fv-plugins-spectre:not(.form-horizontal) .form-group .fv-plugins-icon-check {
+  right: 6px;
+  top: 45px; }
 
 .fv-plugins-tachyons .fv-plugins-icon {
   height: 36px;
@@ -404,16 +396,16 @@
   top: 24px; }
 
 .fv-plugins-turret .fv-plugins-icon {
-  height: 48px;
+  height: 40px;
   /* Same as height of input */
-  line-height: 48px;
-  width: 48px; }
+  line-height: 40px;
+  width: 40px; }
 
 .fv-plugins-turret.fv-stacked-form .fv-plugins-icon {
-  top: 37px; }
+  top: 29px; }
 
 .fv-plugins-turret.fv-stacked-form .fv-plugins-icon-check {
-  top: 24px; }
+  top: 17px; }
 
 .fv-plugins-turret .fv-invalid-row .form-message,
 .fv-plugins-turret .fv-invalid-row .fv-plugins-icon {
