@@ -41,24 +41,18 @@
                 <th class="pv2 ph3 tl f6 fw6 ttu">Sample ID</th>
                 <th class="pv2 ph3 tl f6 fw6 ttu">Is it valid?</th>
             </tr>
-            {#each samples as item}
-                {#if item.examples.length > 0}
-                {#each item.examples as example, i}
+            {#each data as item}
                 <tr class="striped--light-gray">
-                    <td class="pv2 ph3">{#if i === 0}{item.country}{/if}</td>
-                    <td class="pv2 ph3">{#if i === 0}{item.abbr}{/if}</td>
-                    <td class="pv2 ph3">{#if i === 0}{item.code}{/if}</td>
-                    <SampleData sample={{ country: item.code, sample: example }} renderSample={(s) => s.sample} />
-                </tr>
-                {/each}
-                {:else}
-                <tr class="striped--light-gray">
-                    <td class="pv2 ph3">{item.country}</td>
+                    <td class="pv2 ph3"><a href="/guide/validators/id/{slug(item.adjective)}-identification-number/" title="{item.adjective} identification number validator" class="blue dim link pa2">{item.country}</a></td>
+                    <td class="pv2 ph3">{item.abbr}</td>
                     <td class="pv2 ph3">{item.code}</td>
-                    <td class="pv2 ph3"></td>
-                    <td class="pv2 ph3"></td>
-                </tr>
+                {#if sample = random(item.validExamples.concat(item.invalidExamples))}
+                    <SampleData sample={{ country: item.code, sample: sample }} renderSample={(s) => s.sample} />
+                {:else}
+                    <td class="pv2 ph3">n/a</td>
+                    <td class="pv2 ph3">-</td>
                 {/if}
+                </tr>
             {/each}
         </table>
 
@@ -126,12 +120,16 @@ const res2 = id().validate({
             <a href="/guide/validators/iban/" class="b blue dim link pa2">&larr; iban validator</a>
         </div>
         <div class="fl w-50 tr">
-            <a href="/guide/validators/identical/" class="b blue dim link pa2">identical validator &rarr;</a>
+            <a href="/guide/validators/id/{slug(data[0].adjective)}-identification-number/" class="b blue dim link pa2">{data[0].adjective} id validator &rarr;</a>
         </div>
     </section>
 </Guide>
 
 <script>
+import data from './data';
+import random from '../../../../components/helpers/random';
+import slug from '../../../../components/helpers/slug';
+
 export default {
     components: {
         Demo: '../../../../components/Demo.html',
@@ -141,38 +139,14 @@ export default {
         SampleData: '../../../../components/SampleData.html',
     },
 
+    helpers: {
+        random,
+        slug,
+    },
+
     data() {
         return {
-            samples: [
-                { country: 'Bosnia and Herzegovina', abbr: 'JMBG', code: 'BA', examples: [] },
-                { country: 'Brazil', abbr: 'CPF', code: 'BR', examples: ['39053344705', '390.533.447-05', '111.444.777-35', '231.002.999-00', '000.000.000-00'] },
-                { country: 'Bulgari', abbr: 'EGN', code: 'BG', examples: ['7523169263', '8032056031', '803205 603 1', '8001010008', '7501020018', '7552010005', '7542011030', '8019010008'] },
-                { country: 'Chile', abbr: 'RUN/RUT', code: 'CL', examples: ['76086428-5', '22060449-7', '12531909-2'] },
-                { country: 'China', abbr: '', code: 'CN', examples: ['450202201409072332', '22011219930407001X', '110108601017023', '999999199304070016'] },
-                { country: 'Croatia', abbr: 'OIB', code: 'HR', examples: ['33392005961', '33392005962'] },
-                { country: 'Czech', abbr: 'RC', code: 'CZ', examples: ['7103192745', '991231123', '1103492745', '590312123'] },
-                { country: 'Denmark', abbr: 'CPR', code: 'DK', examples: ['2110625629', '211062-5629', '511062-5629'] },
-                { country: 'Estonia', abbr: 'isikukood', code: 'EE', examples: ['37605030299'] },
-                { country: 'Finland', abbr: 'HETU', code: 'FI', examples: ['311280-888Y', '131052-308T', '131052-308U', '310252-308Y'] },
-                { country: 'Iceland', abbr: 'Kennitala', code: 'IS', examples: ['120174-3399', '1201743399', '0902862349'] },
-                { country: 'Ireland', abbr: 'PPS', code: 'IE', examples: ['6433435F', '6433435FT', '6433435FW', '6433435OA', '6433435IH', '1234567TW', '1234567FA', '6433435E', '6433435VH'] },
-                { country: 'Latvia', abbr: 'Personas kods', code: 'LV', examples: ['161175-19997', '16117519997', '161375-19997'] },
-                { country: 'Lithuania', abbr: 'Asmens kodas', code: 'LT', examples: ['38703181745', '38703181746', '78703181745', '38703421745'] },
-                { country: 'Macedonia', abbr: 'ЕМБГ', code: 'MK', examples: [] },
-                { country: 'Montenegro', abbr: 'JMBG', code: 'ME', examples: [] },
-                { country: 'Netherlands', abbr: 'BSN', code: 'NL', examples: ['111222333', '941331490', '9413.31.490'] },
-                { country: 'Poland', abbr: 'PESEL', code: 'PL', examples: ['83010411457', '87123116221', '39100413824', '36032806768', '04271113861'] },
-                { country: 'Romania', abbr: 'CNP', code: 'RO', examples: ['1630615123457', '1800101221144', '8800101221144', '1632215123457', '1630615123458'] },
-                { country: 'San Marino', abbr: '', code: 'SM', examples: [] },
-                { country: 'Serbia', abbr: 'JMBG', code: 'RS', examples: [] },
-                { country: 'Slovakia', abbr: 'RC', code: 'SK', examples: ['7103192745', '991231123', '7103192746', '1103492745'] },
-                { country: 'Slovenia', abbr: 'EMŠO', code: 'SI', examples: ['0101006500006'] },
-                { country: 'South Africa', abbr: 'South African ID', code: 'ZA', examples: ['8001015009087', '8001015009287', '8001015009086'] },
-                { country: 'Spain', abbr: 'DNI/NIE/CIF', code: 'ES', examples: ['54362315K', '54362315-K', 'X2482300W', 'X-2482300W', 'X-2482300-W', '54362315Z', 'X-2482300A'] },
-                { country: 'Sweden', abbr: 'personnummer', code: 'SE', examples: ['8112289874', '811228-9874', '811228+9874', '811228-9873'] },
-                { country: 'Switzerland', abbr: 'AHV-Nr/No AVS', code: 'CH', examples: ['756.1234.5678.95', '7561234567895'] },
-                { country: 'Thailand', abbr: '', code: 'TH', examples: ['7145620509547', '3688699975685', '2368719339716', '1100800092310'] },
-            ]
+            data,
         };
     },
 };

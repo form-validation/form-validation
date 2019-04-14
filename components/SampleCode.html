@@ -37,21 +37,33 @@ export default {
     },
 
     oncreate() {
-        const { code, lang } = this.get();
-        const highlighted = highlight(
-            // Replace the fake tags with the real one
-            // If I use <link> or <script> tag inside sample code, Sapper tries to load them
-            code.replace(/link-tag/g, 'link')
-                .replace(/script-tag/g, 'script'),
-            lang
-        );
+        const { code } = this.get();
+        this.highlight(code);
+    },
 
-        this.set({
-            highlighted,
-        });
+    onupdate({ changed, current, previous }) {
+        // Re highlight when the code is changed
+        if (previous && current.code !== previous.code) {
+            this.highlight(current.code);
+        }
     },
 
     methods: {
+        highlight(code) {
+            const { lang } = this.get();
+            const highlighted = highlight(
+                // Replace the fake tags with the real one
+                // If I use <link> or <script> tag inside sample code, Sapper tries to load them
+                code.replace(/link-tag/g, 'link')
+                    .replace(/script-tag/g, 'script'),
+                lang
+            );
+
+            this.set({
+                highlighted,
+            });
+        },
+
         copy() {
             const selection = window.getSelection();
             const range = document.createRange();

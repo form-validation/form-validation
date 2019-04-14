@@ -23,6 +23,14 @@ export default {
         };
     },
 
+    onupdate({ changed, current, previous }) {
+        if (previous && current.sample !== previous.sample) {
+            this.set({
+                result: 'NotValidated',
+            });
+        }
+    },
+
     methods: {
         click(sample) {
             this.store.set({ sampleFieldValue: sample });

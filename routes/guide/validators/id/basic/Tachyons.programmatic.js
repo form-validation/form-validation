@@ -12,23 +12,33 @@ export default `<!doctype html>
                 <div class="fl w-25 pa2">Country</div>
                 <div class="fl w-50">
                     <select class="input-reset ba b--black-20 pa2 mb2 db w-100" name="country">
+                        <option value="AR">Argentinia</option>
                         <option value="BA">Bosnia and Herzegovina</option>
                         <option value="BR">Brazil</option>
                         <option value="BG">Bulgari</option>
                         <option value="CL">Chile</option>
                         <option value="CN">China</option>
+                        <option value="CO">Colombia</option>
                         <option value="HR">Croatia</option>
                         <option value="CZ">Czech</option>
                         <option value="DK">Denmark</option>
                         <option value="EE">Estonia</option>
                         <option value="FI">Finland</option>
+                        <option value="FR">France</option>
+                        <option value="HK">Hong Kong</option>
                         <option value="IS">Iceland</option>
+                        <option value="ID">India</option>
                         <option value="IE">Ireland</option>
+                        <option value="KR">Korea</option>
                         <option value="LV">Latvia</option>
                         <option value="LT">Lithuania</option>
                         <option value="MK">Macedonia</option>
+                        <option value="MY">Malaysia</option>
+                        <option value="MX">Mexico</option>
                         <option value="ME">Montenegro</option>
                         <option value="NL">Netherlands</option>
+                        <option value="NO">Norway</option>
+                        <option value="PE">Peru</option>
                         <option value="PL">Poland</option>
                         <option value="RO">Romania</option>
                         <option value="SM">San Marino</option>
@@ -39,7 +49,9 @@ export default `<!doctype html>
                         <option value="ES">Spain</option>
                         <option value="SE">Sweden</option>
                         <option value="CH">Switzerland</option>
+                        <option value="TW">Taiwan</option>
                         <option value="TH">Thailand</option>
+                        <option value="UY">Uruguay</option>
                     </select>
                 </div>
             </div>

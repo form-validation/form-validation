@@ -1,0 +1,107 @@
+<svelte:head>
+	<title>FormValidation • id validator • Validate {item.adjective} identification number</title>
+</svelte:head>
+
+<Guide>
+    <h1 class="f3 f2-m f1-l tc">id validator</h1>
+    <h2 class="f4 fw4 tc">Validate a {item.adjective} identification number</h2>
+
+    <section class="mb4">
+
+    </section>
+
+    <section class="mb4">
+        <h2><span class="bb b--gray">Basic Example</span></h2>
+        <p class="lh-copy">You can click on sample from the following table to see if it's a valid or invalid {item.adjective} id.</p>
+        <table class="collapse ba br2 b--black-10 pv2 ph3 w-100 mb4">
+            <tr class="striped--light-gray">
+                <th class="pv2 ph3 tl f6 fw6 ttu">Sample ID</th>
+                <th class="pv2 ph3 tl f6 fw6 ttu">Is it valid?</th>
+            </tr>
+            {#each examples as sample}
+            <tr class="striped--light-gray">
+                <SampleData sample={{ sample: sample }} renderSample={(s) => s.sample} />
+            </tr>
+            {/each}
+        </table>
+
+        <Demo prefix="/guide/validators/id/basic-{countryCode}" frameworks={['Tachyons']} />
+    </section>
+
+    <section class="mb4">
+        <h2><span class="bb b--gray">Module Example</span></h2>
+    
+        <p class="lh-copy">The following snippet shows how to use the id validator with JavaScript module:</p>
+<SampleCode lang="javascript" code={`
+// You might need to change the importing path
+import ${item.code.toLowerCase()}Id from 'formvalidation/validators/id/${item.code.toLowerCase()}Id';
+
+const res1 = ${item.code.toLowerCase()}Id().validate('${validSample}');
+// res1.valid === true
+
+const res2 = ${item.code.toLowerCase()}Id().validate('${invalidSample}');
+// res2.valid === false
+`} />
+    </section>
+
+    <RelatedValidators validators={['vat']} />
+
+    <section class="cf mb4">
+        <div class="fl w-50 tl">
+            {#if index === 0}
+            <a href="/guide/validators/id/" class="b blue dim link pa2">&larr; id validator</a>
+            {:else}
+            <a href="/guide/validators/id/{slug(data[index - 1].adjective)}-identification-number/" class="b blue dim link pa2">&larr; {data[index - 1].adjective} id validator</a>
+            {/if}
+        </div>
+        <div class="fl w-50 tr">
+            {#if index === numIdValidators - 1}
+            <a href="/guide/validators/identical/" class="b blue dim link pa2">identical validator &rarr;</a>
+            {:else}
+            <a href="/guide/validators/id/{slug(data[index + 1].adjective)}-identification-number/" class="b blue dim link pa2">{data[index + 1].adjective} id validator &rarr;</a>
+            {/if}
+        </div>
+    </section>
+</Guide>
+
+<script>
+import data from './data';
+import random from '../../../../components/helpers/random';
+import slug from '../../../../components/helpers/slug';
+
+export default {
+    components: {
+        Demo: '../../../../components/Demo.html',
+        Guide: '../../../../components/Guide.html',
+        RelatedValidators: '../../../../components/RelatedValidators.html',
+        SampleCode: '../../../../components/SampleCode.html',
+        SampleData: '../../../../components/SampleData.html',
+    },
+
+    helpers: {
+        slug,
+    },
+
+    preload({ params, query }) {
+        const { country } = params;
+        const item = data.find((item) =>  {
+            return item.adjective.toLowerCase().replace(/\s/g, '-') === country;
+        });
+        if (!item) {
+            return this.error(404, 'Not found');
+        }
+
+        const index = data.indexOf(item);
+        return {
+            item,
+            index,
+            data,
+            numIdValidators: data.length,
+            countryCode: item.code.toLowerCase(),
+            examples: item.validExamples.concat(item.invalidExamples),
+            invalidSample: random(item.invalidExamples),
+            validSample: random(item.validExamples),
+        };
+    },
+};
+</script>
