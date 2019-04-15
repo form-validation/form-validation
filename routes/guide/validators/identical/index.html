@@ -64,7 +64,7 @@ result is an object of
 
     <section class="cf mb4">
         <div class="fl w-50 tl">
-            <a href="/guide/validators/id/" class="b blue dim link pa2">&larr; id validator</a>
+            <a href="/guide/validators/id/{slug(idData[idData.length - 1].adjective)}-identification-number/" class="b blue dim link pa2" title="{idData[idData.length - 1].adjective} identification number validator">&larr;  {idData[idData.length - 1].adjective} id validator</a>
         </div>
         <div class="fl w-50 tr">
             <a href="/guide/validators/imei/" class="b blue dim link pa2">imei validator &rarr;</a>
@@ -73,12 +73,27 @@ result is an object of
 </Guide>
 
 <script>
+import idData from '../id/data';
+import random from '../../../../components/helpers/random';
+import slug from '../../../../components/helpers/slug';
+
 export default {
     components: {
         Demo: '../../../../components/Demo.html',
         Guide: '../../../../components/Guide.html',
         RelatedValidators: '../../../../components/RelatedValidators.html',
         SampleCode: '../../../../components/SampleCode.html',
+    },
+
+    helpers: {
+        random,
+        slug,
+    },
+
+    data() {
+        return {
+            idData,
+        };
     },
 };
 </script>
