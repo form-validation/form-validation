@@ -46,7 +46,7 @@
                 <tr class="striped--light-gray">
                     <td class="pv2 ph3">{index + 1}</td>
                     <td class="pv2 ph3"><a href="/guide/validators/id/{slug(item.adjective)}-identification-number/" title="{item.adjective} identification number validator" class="blue dim link pa2">{item.country}</a></td>
-                    <td class="pv2 ph3">{item.abbr}</td>
+                    <td class="pv2 ph3">{item.abbr || '-'}</td>
                     <td class="pv2 ph3">{item.code}</td>
                 {#if sample = random(item.validExamples.concat(item.invalidExamples))}
                     <SampleData sample={{ country: item.code, sample: sample }} renderSample={(s) => s.sample} />
