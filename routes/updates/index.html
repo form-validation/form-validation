@@ -3,48 +3,199 @@
 </svelte:head>
 
 <ChangelogLayout>
-    <h1 class="f3 f2-m f1-l tc">The latest version v1.3.0</h1>
-    <h2 class="f4 fw4 tc">Released 10 August 2018</h2>
+    <h1 class="f3 f2-m f1-l tc">The latest version v1.4.0</h1>
+    <h2 class="f4 fw4 tc">Released 20 April 2019</h2>
 
     <section class="mb4">
         <h2><span class="bb b--gray">New features</span></h2>
 
-        <h3>New Excluded plugin</h3>
-        <p class="lh-copy">The <a class="blue dim link" href="/guide/plugins/excluded/">Excluded</a> plugin allows you to indicate fields which won't be validated. It severs the same functionality as the <code>excluded</code> option in v0.8.1 and earlier versions.</p>
-        <Demo prefix="/guide/plugins/excluded/advanced" frameworks={['Bootstrap']} />
+        <ul class="pa0 ma0 ml3 lh-copy">
+            <li>Add verhoeff() helper method that implements the Verhoeff algorithms.</li>
+            <li>The <a class="blue dim link" href="/guide/validators/vat/">vat</a> validator supports <a class="blue dim link" href="/guide/validators/vat/argentinian-vat-number/">Argentinian VAT number</a>.</li>
+        </ul>
 
-        <h3>New Wizard plugin</h3>
-        <p class="lh-copy">The <a class="blue dim link" href="/guide/plugins/wizard/">Wizard</a> plugin supports validating multiple steps form:</p>
-        <Demo prefix="/guide/plugins/wizard/basic" frameworks={['Tachyons']} />
+        <p class="lh-copy">The <a class="blue dim link" href="/guide/validators/id/">id</a> validator supports validating more national identification numbers, including:</p>
+        <table class="collapse ba br2 b--black-10 pv2 ph3 w-100 mb4">
+            <tr class="striped--light-gray">
+                <th class="pv2 ph3 tl f6 fw6 ttu">Validator</th>
+                <th class="pv2 ph3 tl f6 fw6 ttu">Local name</th>
+            </tr>
+            <tr class="striped--light-gray">
+                <td class="pv2 ph3"><a class="blue dim link" href="/guide/validators/id/argentinian-identification-number/">Argentinian identification number</a></td>
+                <td class="pv2 ph3">DNI</td>
+            </tr>
+            <tr class="striped--light-gray">
+                <td class="pv2 ph3"><a class="blue dim link" href="/guide/validators/id/colombian-identification-number/">Colombian identification number</a></td>
+                <td class="pv2 ph3">NIT</td>
+            </tr>
+            <tr class="striped--light-gray">
+                <td class="pv2 ph3"><a class="blue dim link" href="/guide/validators/id/french-identification-number/">French identification number</a></td>
+                <td class="pv2 ph3">NIR</td>
+            </tr>
+            <tr class="striped--light-gray">
+                <td class="pv2 ph3"><a class="blue dim link" href="/guide/validators/id/hong-kong-identification-number/">Hong Kong identification number</a></td>
+                <td class="pv2 ph3">HKID</td>
+            </tr>
+            <tr class="striped--light-gray">
+                <td class="pv2 ph3"><a class="blue dim link" href="/guide/validators/id/indian-identification-number/">Indian identification number</a></td>
+                <td class="pv2 ph3">Aadhaar</td>
+            </tr>
+            <tr class="striped--light-gray">
+                <td class="pv2 ph3"><a class="blue dim link" href="/guide/validators/id/korean-identification-number/">Korean identification number</a></td>
+                <td class="pv2 ph3">RRN</td>
+            </tr>
+            <tr class="striped--light-gray">
+                <td class="pv2 ph3"><a class="blue dim link" href="/guide/validators/id/malaysian-identification-number/">Malaysian identification number</a></td>
+                <td class="pv2 ph3">NRIC</td>
+            </tr>
+            <tr class="striped--light-gray">
+                <td class="pv2 ph3"><a class="blue dim link" href="/guide/validators/id/mexican-identification-number/">Mexican identification number</a></td>
+                <td class="pv2 ph3">CURP</td>
+            </tr>
+            <tr class="striped--light-gray">
+                <td class="pv2 ph3"><a class="blue dim link" href="/guide/validators/id/norwegian-identification-number/">Norwegian identification number</a></td>
+                <td class="pv2 ph3">Fødselsnummer</td>
+            </tr>
+            <tr class="striped--light-gray">
+                <td class="pv2 ph3"><a class="blue dim link" href="/guide/validators/id/peruvian-identification-number/">Peruvian identification number</a></td>
+                <td class="pv2 ph3">CUI</td>
+            </tr>
+            <tr class="striped--light-gray">
+                <td class="pv2 ph3"><a class="blue dim link" href="/guide/validators/id/taiwanese-identification-number/">Taiwanese identification number</a></td>
+                <td class="pv2 ph3">-</td>
+            </tr>
+            <tr class="striped--light-gray">
+                <td class="pv2 ph3"><a class="blue dim link" href="/guide/validators/id/uruguayan-identification-number/">Uruguayan identification number</a></td>
+                <td class="pv2 ph3">-</td>
+            </tr>
+        </table>
 
-        <p class="lh-copy">This version provides new <code>onPrefocus</code> option in the <a class="blue dim link" href="/guide/plugins/auto-focus/">AutoFocus</a>. This option is useful when you want to activate the tab containing the first invalid field.</p>
+        <h3>The <a class="blue dim link" href="/guide/plugins/declarative/">Declarative</a> plugin now supports plugin declarations</h3>
+<SampleCode lang="html" code={`
+<form id="demoForm" method="POST"
+    data-fvp-trigger="true"
+    data-fvp-trigger___class="FormValidation.plugins.Trigger"
+    
+    data-fvp-tachyons="true"
+    data-fvp-tachyons___class="FormValidation.plugins.Tachyons"
+
+    data-fvp-submit-button="true"
+    data-fvp-submit-button___class="FormValidation.plugins.SubmitButton"
+
+    data-fvp-icon="true"
+    data-fvp-icon___class="FormValidation.plugins.Icon"
+    data-fvp-icon___valid="fa fa-check"
+    data-fvp-icon___invalid="fa fa-times"
+    data-fvp-icon___validating="fa fa-refresh">
+...
+</form>
+
+<script-tag>
+document.addEventListener('DOMContentLoaded', function(e) {
+    const form = document.getElementById('demoForm');
+    FormValidation.formValidation(form, {
+        plugins: {
+            // You have to register the Declarative plugin only
+            declarative: new FormValidation.plugins.Declarative()
+        }
+    });
+});
+</script-tag>
+`} />
+
+        <p class="lh-copy">It serves the same functionalities such as declaring plugins as</p>
+
+<SampleCode lang="html" code={`
+<form id="demoForm">
+...
+</form>
+    
+<script-tag>
+document.addEventListener('DOMContentLoaded', function(e) {
+    const form = document.getElementById('demoForm');
+    FormValidation.formValidation(form, {
+        plugins: {
+            declarative: new FormValidation.plugins.Declarative(),
+            // Other plugins
+            trigger: new FormValidation.plugins.Trigger(),
+            tachyons: new FormValidation.plugins.Tachyons(),
+            submitButton: new FormValidation.plugins.SubmitButton(),
+            icon: new FormValidation.plugins.Icon({
+                valid: 'fa fa-check',
+                invalid: 'fa fa-times',
+                validating: 'fa fa-refresh',
+            }),
+        }
+    });  
+});
+</script-tag>
+`} />        
+    </section>
+
+    <section class="mb4">
+        <h2><span class="bb b--gray">Improvements</span></h2>
+        <ul class="pa0 ma0 ml3 lh-copy">
+            <li>Separate id validators to <code>id</code> package to save imports when using with ES6 module.</li>
+        </ul>
+        <p class="lh-copy">In the previous versions, you need to import the whole <code>id</code> package if you only want to validate the identification number of particular country:</p>
+<SampleCode lang="javascript" code={`
+// You might need to change the importing path
+import id from 'formvalidation/validators/id';
+
+const result = id().validate({
+    value: ...,
+    options: {
+        country: 'BR',
+        message: 'The input is not a valid Brazilian identification number',
+    },
+});
+`} /> 
+        <p class="lh-copy">This version provides the specfic module for each country. As the result, it saves a lot of size when your application is bundled with popular bundlers as Webpack, Rollup, etc.</p>
+<SampleCode lang="javascript" code={`
+// You might need to change the importing path
+import brId from 'formvalidation/validators/id/brId';
+
+const result = brId().validate('An ID here');
+`} />
+
+        <ul class="pa0 ma0 ml3 lh-copy mt4">       
+            <li>Separate vat validators to <code>vat</code> package to save imports when using with ES6 module.</li>
+            <li>In the last version, the <a class="blue dim link" href="/guide/plugins/recaptcha/">Recaptcha plugin</a> doesn't hide the error message and error icon when user click the captcha checkbox.
+            The error icon disappears when the captcha is expired. This version fixes that.</li>
+            <li>Support the latest version of <a class="blue dim link" href="/guide/plugins/turret/">TurretCSS</a> (v5.1.3).</li>
+            <li>The <a class="blue dim link" href="/guide/validators/vat/">vat validator</a> supports <a class="blue dim link" href="/guide/validators/vat/swiss-vat-number/">Swiss VAT numbers</a> that end with TVA, IVA, TPV.</li>
+        </ul>
     </section>
 
     <section class="mb4">
         <h2><span class="bb b--gray">Bug fixes</span></h2>
         <ul class="pa0 ma0 ml3 lh-copy">
-            <li>Fix an issue that the <a class="blue dim link" href="/guide/api/reset-form/">resetForm</a>, <a class="blue dim link" href="/guide/api/reset-field/">resetField</a> methods don't reset value for textarea element</li>
+            <li>Upgrade source code to be compatible with the latest Tyescript version (3.3.3333).</li>
+            <li>Fix an issue that the <a class="blue dim link" href="/guide/validators/ismn/">ismn validator</a> passes an invalid ISMN which ends with 0.</li>
+            <li>Fix an issue that the <a class="blue dim link" href="/guide/validators/meid/">meid validator</a> passes an invalid MEID which ends with 0.</li>
+            <li>The <a class="blue dim link" href="/guide/validators/iban/">iban validator</a> supports the new format of Costa Rica IBAN number (22 digits currently).</li>
+            <li>Fix an issue that <a class="blue dim link" href="/guide/plugins/icon/">icon</a> is displayed at wrong position for <a class="blue dim link" href="/guide/plugins/spectre/">Spectre</a> form.</li>
         </ul>
     </section>
 
     <section class="mb4">
-        <h2><span class="bb b--gray">Upgrading to v1.3.0</span></h2>
+        <h2><span class="bb b--gray">Upgrading to v1.4.0</span></h2>
         <ul class="pa0 ma0 ml3 lh-copy">
-            <li>From v0.8.1 and older versions: Follow the <a class="blue dim link" href="/updates/v1.0.0/#upgrading-to-v1-0-0">Upgrading to v1.0.0</a> guide</li>
-            <li>From v1.0.0: Just download the new version and replace the old files in v1.0.0 with new files in v1.3.0.</li>
+            <li>From v0.8.1 and older versions: Follow the <a class="blue dim link" href="/updates/v1.0.0/#upgrading-to-v1-0-0">Upgrading to v1.0.0</a> guide.</li>
+            <li>From v1.0.0: Just download the new version and replace the old files in v1.0.0 with new files in v1.4.0.</li>
         </ul>
     </section>
 
     <section class="tc mv4">
-        <a href="/download/" class="f6 f5-ns fw6 dib ba b--black-20 bg-blue white ph3 ph4-ns pv2 pv3-ns br2 grow no-underline" title="Download">Download v1.3.0</a>
+        <a href="/download/" class="f6 f5-ns fw6 dib ba b--black-20 bg-blue white ph3 ph4-ns pv2 pv3-ns br2 grow no-underline" title="Download">Download v1.4.0</a>
     </section>
 </ChangelogLayout>
 
 <script>
 export default {
     components: {
-        Demo: '../../components/Demo.html',
         ChangelogLayout: '../../components/ChangelogLayout.html',
+        SampleCode: '../../components/SampleCode.html',
     },
 };
 </script>

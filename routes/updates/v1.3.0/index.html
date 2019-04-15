@@ -1,0 +1,50 @@
+<svelte:head>
+	<title>FormValidation • v1.3.0</title>
+</svelte:head>
+
+<ChangelogLayout>
+    <h1 class="f3 f2-m f1-l tc">Version v1.3.0</h1>
+    <h2 class="f4 fw4 tc">Released 10 August 2018</h2>
+
+    <section class="mb4">
+        <h2><span class="bb b--gray">New features</span></h2>
+
+        <h3>New Excluded plugin</h3>
+        <p class="lh-copy">The <a class="blue dim link" href="/guide/plugins/excluded/">Excluded</a> plugin allows you to indicate fields which won't be validated. It severs the same functionality as the <code>excluded</code> option in v0.8.1 and earlier versions.</p>
+        <Demo prefix="/guide/plugins/excluded/advanced" frameworks={['Bootstrap']} />
+
+        <h3>New Wizard plugin</h3>
+        <p class="lh-copy">The <a class="blue dim link" href="/guide/plugins/wizard/">Wizard</a> plugin supports validating multiple steps form:</p>
+        <Demo prefix="/guide/plugins/wizard/basic" frameworks={['Tachyons']} />
+
+        <p class="lh-copy">This version provides new <code>onPrefocus</code> option in the <a class="blue dim link" href="/guide/plugins/auto-focus/">AutoFocus</a>. This option is useful when you want to activate the tab containing the first invalid field.</p>
+    </section>
+
+    <section class="mb4">
+        <h2><span class="bb b--gray">Bug fixes</span></h2>
+        <ul class="pa0 ma0 ml3 lh-copy">
+            <li>Fix an issue that the <a class="blue dim link" href="/guide/api/reset-form/">resetForm</a>, <a class="blue dim link" href="/guide/api/reset-field/">resetField</a> methods don't reset value for textarea element</li>
+        </ul>
+    </section>
+
+    <section class="mb4">
+        <h2><span class="bb b--gray">Upgrading to v1.3.0</span></h2>
+        <ul class="pa0 ma0 ml3 lh-copy">
+            <li>From v0.8.1 and older versions: Follow the <a class="blue dim link" href="/updates/v1.0.0/#upgrading-to-v1-0-0">Upgrading to v1.0.0</a> guide</li>
+            <li>From v1.0.0: Just download the new version and replace the old files in v1.0.0 with new files in v1.3.0.</li>
+        </ul>
+    </section>
+
+    <section class="tc mv4">
+        <a href="/download/" class="f6 f5-ns fw6 dib ba b--black-20 bg-blue white ph3 ph4-ns pv2 pv3-ns br2 grow no-underline" title="Download">Download v1.3.0</a>
+    </section>
+</ChangelogLayout>
+
+<script>
+export default {
+    components: {
+        Demo: '../../../components/Demo.html',
+        ChangelogLayout: '../../../components/ChangelogLayout.html',
+    },
+};
+</script>
