@@ -35,14 +35,16 @@
 
         <table class="collapse ba br2 b--black-10 pv2 ph3 w-100">
             <tr class="striped--light-gray">
+                <th class="pv2 ph3 tl f6 fw6 ttu">#</th>
                 <th class="pv2 ph3 tl f6 fw6 ttu">Country</th>
                 <th class="pv2 ph3 tl f6 fw6 ttu">Abbreviation ID system</th>
                 <th class="pv2 ph3 tl f6 fw6 ttu">Country code</th>
                 <th class="pv2 ph3 tl f6 fw6 ttu">Sample ID</th>
                 <th class="pv2 ph3 tl f6 fw6 ttu">Is it valid?</th>
             </tr>
-            {#each data as item}
+            {#each data as item, index}
                 <tr class="striped--light-gray">
+                    <td class="pv2 ph3">{index + 1}</td>
                     <td class="pv2 ph3"><a href="/guide/validators/id/{slug(item.adjective)}-identification-number/" title="{item.adjective} identification number validator" class="blue dim link pa2">{item.country}</a></td>
                     <td class="pv2 ph3">{item.abbr}</td>
                     <td class="pv2 ph3">{item.code}</td>
