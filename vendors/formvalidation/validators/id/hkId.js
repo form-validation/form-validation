@@ -1,7 +1,10 @@
 export default function hkId(value) {
     const v = value.toUpperCase();
     if (!/^[A-MP-Z]{1,2}[0-9]{6}[0-9A]$/.test(v)) {
-        return false;
+        return {
+            meta: {},
+            valid: false,
+        };
     }
     const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
     const firstChar = v.charAt(0);
@@ -24,5 +27,8 @@ export default function hkId(value) {
     }
     const remaining = sum % 11;
     const checkDigit = remaining === 0 ? '0' : (11 - remaining === 10 ? 'A' : `${11 - remaining}`);
-    return checkDigit === digitParts.charAt(length - 1);
+    return {
+        meta: {},
+        valid: checkDigit === digitParts.charAt(length - 1),
+    };
 }

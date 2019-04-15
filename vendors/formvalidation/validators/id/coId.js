@@ -1,7 +1,10 @@
 export default function coId(value) {
     const v = value.replace(/\./g, '').replace('-', '');
     if (!/^\d{8,16}$/.test(v)) {
-        return false;
+        return {
+            meta: {},
+            valid: false,
+        };
     }
     const length = v.length;
     const weight = [3, 7, 13, 17, 19, 23, 29, 37, 41, 43, 47, 53, 59, 67, 71];
@@ -13,5 +16,8 @@ export default function coId(value) {
     if (sum >= 2) {
         sum = 11 - sum;
     }
-    return `${sum}` === v.substr(length - 1);
+    return {
+        meta: {},
+        valid: `${sum}` === v.substr(length - 1),
+    };
 }

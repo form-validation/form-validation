@@ -4,7 +4,10 @@ export default function ltVat(value) {
         v = v.substr(2);
     }
     if (!/^([0-9]{7}1[0-9]|[0-9]{10}1[0-9])$/.test(v)) {
-        return false;
+        return {
+            meta: {},
+            valid: false,
+        };
     }
     const length = v.length;
     let sum = 0;
@@ -20,5 +23,8 @@ export default function ltVat(value) {
         }
     }
     check = check % 11 % 10;
-    return `${check}` === v.charAt(length - 1);
+    return {
+        meta: {},
+        valid: `${check}` === v.charAt(length - 1),
+    };
 }

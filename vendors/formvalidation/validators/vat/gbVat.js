@@ -12,20 +12,32 @@ export default function gbVat(value) {
         && !/^GD[0-9]{3}$/.test(v)
         && !/^HA[0-9]{3}$/.test(v)
         && !/^(GD|HA)8888[0-9]{5}$/.test(v)) {
-        return false;
+        return {
+            meta: {},
+            valid: false,
+        };
     }
     const length = v.length;
     if (length === 5) {
         const firstTwo = v.substr(0, 2);
         const lastThree = parseInt(v.substr(2), 10);
-        return ('GD' === firstTwo && lastThree < 500) || ('HA' === firstTwo && lastThree >= 500);
+        return {
+            meta: {},
+            valid: ('GD' === firstTwo && lastThree < 500) || ('HA' === firstTwo && lastThree >= 500),
+        };
     }
     else if (length === 11 && ('GD8888' === v.substr(0, 6) || 'HA8888' === v.substr(0, 6))) {
         if (('GD' === v.substr(0, 2) && parseInt(v.substr(6, 3), 10) >= 500)
             || ('HA' === v.substr(0, 2) && parseInt(v.substr(6, 3), 10) < 500)) {
-            return false;
+            return {
+                meta: {},
+                valid: false,
+            };
         }
-        return parseInt(v.substr(6, 3), 10) % 97 === parseInt(v.substr(9, 2), 10);
+        return {
+            meta: {},
+            valid: parseInt(v.substr(6, 3), 10) % 97 === parseInt(v.substr(9, 2), 10),
+        };
     }
     else if (length === 9 || length === 12) {
         const weight = [8, 7, 6, 5, 4, 3, 2, 10, 1];
@@ -34,12 +46,14 @@ export default function gbVat(value) {
             sum += parseInt(v.charAt(i), 10) * weight[i];
         }
         sum = sum % 97;
-        if (parseInt(v.substr(0, 3), 10) >= 100) {
-            return sum === 0 || sum === 42 || sum === 55;
-        }
-        else {
-            return sum === 0;
-        }
+        const isValid = (parseInt(v.substr(0, 3), 10) >= 100) ? (sum === 0 || sum === 42 || sum === 55) : sum === 0;
+        return {
+            meta: {},
+            valid: isValid,
+        };
     }
-    return true;
+    return {
+        meta: {},
+        valid: true,
+    };
 }

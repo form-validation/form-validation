@@ -2,7 +2,10 @@ import isValidDate from '../../utils/isValidDate';
 export default function cnId(value) {
     const v = value.trim();
     if (!/^\d{15}$/.test(v) && !/^\d{17}[\dXx]{1}$/.test(v)) {
-        return false;
+        return {
+            meta: {},
+            valid: false,
+        };
     }
     const adminDivisionCodes = {
         11: {
@@ -460,7 +463,10 @@ export default function cnId(value) {
     const prefectural = parseInt(v.substr(2, 2), 10);
     const county = parseInt(v.substr(4, 2), 10);
     if (!adminDivisionCodes[provincial] || !adminDivisionCodes[provincial][prefectural]) {
-        return false;
+        return {
+            meta: {},
+            valid: false,
+        };
     }
     let inRange = false;
     const rangeDef = adminDivisionCodes[provincial][prefectural];
@@ -473,7 +479,10 @@ export default function cnId(value) {
         }
     }
     if (!inRange) {
-        return false;
+        return {
+            meta: {},
+            valid: false,
+        };
     }
     let dob;
     if (v.length === 18) {
@@ -486,7 +495,10 @@ export default function cnId(value) {
     const month = parseInt(dob.substr(4, 2), 10);
     const day = parseInt(dob.substr(6, 2), 10);
     if (!isValidDate(year, month, day)) {
-        return false;
+        return {
+            meta: {},
+            valid: false,
+        };
     }
     if (v.length === 18) {
         const weight = [7, 9, 10, 5, 8, 4, 2, 1, 6, 3, 7, 9, 10, 5, 8, 4, 2];
@@ -496,7 +508,13 @@ export default function cnId(value) {
         }
         sum = (12 - (sum % 11)) % 11;
         const checksum = (v.charAt(17).toUpperCase() !== 'X') ? parseInt(v.charAt(17), 10) : 10;
-        return checksum === sum;
+        return {
+            meta: {},
+            valid: checksum === sum,
+        };
     }
-    return true;
+    return {
+        meta: {},
+        valid: true,
+    };
 }

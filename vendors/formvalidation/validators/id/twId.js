@@ -1,7 +1,10 @@
 export default function twId(value) {
     const v = value.toUpperCase();
     if (!/^[A-Z][12][0-9]{8}$/.test(v)) {
-        return false;
+        return {
+            meta: {},
+            valid: false,
+        };
     }
     const length = v.length;
     const alphabet = 'ABCDEFGHJKLMNPQRSTUVXYWZIO';
@@ -11,5 +14,8 @@ export default function twId(value) {
     for (let i = 1; i < length - 1; i++) {
         sum += parseInt(v.charAt(i), 10) * (length - 1 - i);
     }
-    return (letterValue + sum + parseInt(v.charAt(length - 1), 10)) % 10 === 0;
+    return {
+        meta: {},
+        valid: (letterValue + sum + parseInt(v.charAt(length - 1), 10)) % 10 === 0,
+    };
 }

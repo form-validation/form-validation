@@ -5,7 +5,13 @@ export default function deVat(value) {
         v = v.substr(2);
     }
     if (!/^[0-9]{9}$/.test(v)) {
-        return false;
+        return {
+            meta: {},
+            valid: false,
+        };
     }
-    return mod11And10(v);
+    return {
+        meta: {},
+        valid: mod11And10(v),
+    };
 }

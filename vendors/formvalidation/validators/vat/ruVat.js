@@ -4,7 +4,10 @@ export default function ruVat(value) {
         v = v.substr(2);
     }
     if (!/^([0-9]{10}|[0-9]{12})$/.test(v)) {
-        return false;
+        return {
+            meta: {},
+            valid: false,
+        };
     }
     let i = 0;
     if (v.length === 10) {
@@ -17,7 +20,10 @@ export default function ruVat(value) {
         if (sum > 9) {
             sum = sum % 10;
         }
-        return `${sum}` === v.substr(9, 1);
+        return {
+            meta: {},
+            valid: `${sum}` === v.substr(9, 1),
+        };
     }
     else if (v.length === 12) {
         const weight1 = [7, 2, 4, 10, 3, 5, 9, 4, 6, 8, 0];
@@ -36,7 +42,13 @@ export default function ruVat(value) {
         if (sum2 > 9) {
             sum2 = sum2 % 10;
         }
-        return `${sum1}` === v.substr(10, 1) && `${sum2}` === v.substr(11, 1);
+        return {
+            meta: {},
+            valid: `${sum1}` === v.substr(10, 1) && `${sum2}` === v.substr(11, 1),
+        };
     }
-    return false;
+    return {
+        meta: {},
+        valid: true,
+    };
 }

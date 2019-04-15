@@ -4,7 +4,10 @@ export default function veVat(value) {
         v = v.substr(2);
     }
     if (!/^[VEJPG][0-9]{9}$/.test(v)) {
-        return false;
+        return {
+            meta: {},
+            valid: false,
+        };
     }
     const types = {
         E: 8,
@@ -22,5 +25,8 @@ export default function veVat(value) {
     if (sum === 11 || sum === 10) {
         sum = 0;
     }
-    return `${sum}` === v.substr(9, 1);
+    return {
+        meta: {},
+        valid: `${sum}` === v.substr(9, 1),
+    };
 }

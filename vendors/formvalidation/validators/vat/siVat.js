@@ -1,7 +1,10 @@
 export default function siVat(value) {
     const res = value.match(/^(SI)?([1-9][0-9]{7})$/);
     if (!res) {
-        return false;
+        return {
+            meta: {},
+            valid: false,
+        };
     }
     const v = res[1] ? value.substr(2) : value;
     const weight = [8, 7, 6, 5, 4, 3, 2];
@@ -13,5 +16,8 @@ export default function siVat(value) {
     if (sum === 10) {
         sum = 0;
     }
-    return `${sum}` === v.substr(7, 1);
+    return {
+        meta: {},
+        valid: `${sum}` === v.substr(7, 1),
+    };
 }

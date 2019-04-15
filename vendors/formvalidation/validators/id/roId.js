@@ -1,11 +1,17 @@
 import isValidDate from '../../utils/isValidDate';
 export default function roId(value) {
     if (!/^[0-9]{13}$/.test(value)) {
-        return false;
+        return {
+            meta: {},
+            valid: false,
+        };
     }
     const gender = parseInt(value.charAt(0), 10);
     if (gender === 0 || gender === 7 || gender === 8) {
-        return false;
+        return {
+            meta: {},
+            valid: false,
+        };
     }
     let year = parseInt(value.substr(1, 2), 10);
     const month = parseInt(value.substr(3, 2), 10);
@@ -19,12 +25,18 @@ export default function roId(value) {
         6: 2000,
     };
     if (day > 31 && month > 12) {
-        return false;
+        return {
+            meta: {},
+            valid: false,
+        };
     }
     if (gender !== 9) {
         year = centuries[gender + ''] + year;
         if (!isValidDate(year, month, day)) {
-            return false;
+            return {
+                meta: {},
+                valid: false,
+            };
         }
     }
     let sum = 0;
@@ -37,5 +49,8 @@ export default function roId(value) {
     if (sum === 10) {
         sum = 1;
     }
-    return `${sum}` === value.charAt(length - 1);
+    return {
+        meta: {},
+        valid: `${sum}` === value.charAt(length - 1),
+    };
 }

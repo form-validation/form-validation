@@ -4,7 +4,13 @@ export default function luVat(value) {
         v = v.substr(2);
     }
     if (!/^[0-9]{8}$/.test(v)) {
-        return false;
+        return {
+            meta: {},
+            valid: false,
+        };
     }
-    return `${parseInt(v.substr(0, 6), 10) % 89}` === v.substr(6, 2);
+    return {
+        meta: {},
+        valid: `${parseInt(v.substr(0, 6), 10) % 89}` === v.substr(6, 2),
+    };
 }

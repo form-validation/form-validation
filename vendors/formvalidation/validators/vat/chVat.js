@@ -4,7 +4,10 @@ export default function chVat(value) {
         v = v.substr(2);
     }
     if (!/^E[0-9]{9}(MWST|TVA|IVA|TPV)?$/.test(v)) {
-        return false;
+        return {
+            meta: {},
+            valid: false,
+        };
     }
     v = v.substr(1);
     const weight = [5, 4, 3, 2, 7, 6, 5, 4];
@@ -14,10 +17,16 @@ export default function chVat(value) {
     }
     sum = 11 - sum % 11;
     if (sum === 10) {
-        return false;
+        return {
+            meta: {},
+            valid: false,
+        };
     }
     if (sum === 11) {
         sum = 0;
     }
-    return `${sum}` === v.substr(8, 1);
+    return {
+        meta: {},
+        valid: `${sum}` === v.substr(8, 1),
+    };
 }

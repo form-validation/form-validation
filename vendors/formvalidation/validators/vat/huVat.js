@@ -4,12 +4,18 @@ export default function huVat(value) {
         v = v.substr(2);
     }
     if (!/^[0-9]{8}$/.test(v)) {
-        return false;
+        return {
+            meta: {},
+            valid: false,
+        };
     }
     const weight = [9, 7, 3, 1, 9, 7, 3, 1];
     let sum = 0;
     for (let i = 0; i < 8; i++) {
         sum += parseInt(v.charAt(i), 10) * weight[i];
     }
-    return sum % 10 === 0;
+    return {
+        meta: {},
+        valid: sum % 10 === 0,
+    };
 }

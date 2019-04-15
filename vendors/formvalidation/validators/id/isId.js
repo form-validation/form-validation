@@ -1,7 +1,10 @@
 import isValidDate from '../../utils/isValidDate';
 export default function isId(value) {
     if (!/^[0-9]{6}[-]{0,1}[0-9]{4}$/.test(value)) {
-        return false;
+        return {
+            meta: {},
+            valid: false,
+        };
     }
     const v = value.replace(/-/g, '');
     const day = parseInt(v.substr(0, 2), 10);
@@ -10,7 +13,10 @@ export default function isId(value) {
     const century = parseInt(v.charAt(9), 10);
     year = (century === 9) ? (1900 + year) : ((20 + century) * 100 + year);
     if (!isValidDate(year, month, day, true)) {
-        return false;
+        return {
+            meta: {},
+            valid: false,
+        };
     }
     const weight = [3, 2, 7, 6, 5, 4, 3, 2];
     let sum = 0;
@@ -18,5 +24,8 @@ export default function isId(value) {
         sum += parseInt(v.charAt(i), 10) * weight[i];
     }
     sum = 11 - sum % 11;
-    return `${sum}` === v.charAt(8);
+    return {
+        meta: {},
+        valid: `${sum}` === v.charAt(8),
+    };
 }

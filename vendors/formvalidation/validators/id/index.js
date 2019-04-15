@@ -66,127 +66,127 @@ export default function id() {
             };
             switch (country.toLowerCase()) {
                 case 'ar':
-                    result.valid = arId(input.value);
+                    result = arId(input.value);
                     break;
                 case 'ba':
-                    result.valid = baId(input.value);
+                    result = baId(input.value);
                     break;
                 case 'bg':
-                    result.valid = bgId(input.value);
+                    result = bgId(input.value);
                     break;
                 case 'br':
-                    result.valid = brId(input.value);
+                    result = brId(input.value);
                     break;
                 case 'ch':
-                    result.valid = chId(input.value);
+                    result = chId(input.value);
                     break;
                 case 'cl':
-                    result.valid = clId(input.value);
+                    result = clId(input.value);
                     break;
                 case 'cn':
-                    result.valid = cnId(input.value);
+                    result = cnId(input.value);
                     break;
                 case 'co':
-                    result.valid = coId(input.value);
+                    result = coId(input.value);
                     break;
                 case 'cz':
-                    result.valid = czId(input.value);
+                    result = czId(input.value);
                     break;
                 case 'dk':
-                    result.valid = dkId(input.value);
+                    result = dkId(input.value);
                     break;
                 case 'ee':
-                    result.valid = ltId(input.value);
+                    result = ltId(input.value);
                     break;
                 case 'es':
                     result = esId(input.value);
                     break;
                 case 'fi':
-                    result.valid = fiId(input.value);
+                    result = fiId(input.value);
                     break;
                 case 'fr':
-                    result.valid = frId(input.value);
+                    result = frId(input.value);
                     break;
                 case 'hk':
-                    result.valid = hkId(input.value);
+                    result = hkId(input.value);
                     break;
                 case 'hr':
-                    result.valid = hrId(input.value);
+                    result = hrId(input.value);
                     break;
                 case 'id':
-                    result.valid = idId(input.value);
+                    result = idId(input.value);
                     break;
                 case 'ie':
-                    result.valid = ieId(input.value);
+                    result = ieId(input.value);
                     break;
                 case 'is':
-                    result.valid = isId(input.value);
+                    result = isId(input.value);
                     break;
                 case 'kr':
-                    result.valid = krId(input.value);
+                    result = krId(input.value);
                     break;
                 case 'lt':
-                    result.valid = ltId(input.value);
+                    result = ltId(input.value);
                     break;
                 case 'lv':
-                    result.valid = lvId(input.value);
+                    result = lvId(input.value);
                     break;
                 case 'me':
-                    result.valid = meId(input.value);
+                    result = meId(input.value);
                     break;
                 case 'mk':
-                    result.valid = mkId(input.value);
+                    result = mkId(input.value);
                     break;
                 case 'mx':
-                    result.valid = mxId(input.value);
+                    result = mxId(input.value);
                     break;
                 case 'my':
-                    result.valid = myId(input.value);
+                    result = myId(input.value);
                     break;
                 case 'nl':
-                    result.valid = nlId(input.value);
+                    result = nlId(input.value);
                     break;
                 case 'no':
-                    result.valid = noId(input.value);
+                    result = noId(input.value);
                     break;
                 case 'pe':
-                    result.valid = peId(input.value);
+                    result = peId(input.value);
                     break;
                 case 'pl':
-                    result.valid = plId(input.value);
+                    result = plId(input.value);
                     break;
                 case 'ro':
-                    result.valid = roId(input.value);
+                    result = roId(input.value);
                     break;
                 case 'rs':
-                    result.valid = rsId(input.value);
+                    result = rsId(input.value);
                     break;
                 case 'se':
-                    result.valid = seId(input.value);
+                    result = seId(input.value);
                     break;
                 case 'si':
-                    result.valid = siId(input.value);
+                    result = siId(input.value);
                     break;
                 case 'sk':
-                    result.valid = czId(input.value);
+                    result = czId(input.value);
                     break;
                 case 'sm':
-                    result.valid = smId(input.value);
+                    result = smId(input.value);
                     break;
                 case 'th':
-                    result.valid = thId(input.value);
+                    result = thId(input.value);
                     break;
                 case 'tr':
-                    result.valid = trId(input.value);
+                    result = trId(input.value);
                     break;
                 case 'tw':
-                    result.valid = twId(input.value);
+                    result = twId(input.value);
                     break;
                 case 'uy':
-                    result.valid = uyId(input.value);
+                    result = uyId(input.value);
                     break;
                 case 'za':
-                    result.valid = zaId(input.value);
+                    result = zaId(input.value);
                     break;
                 default: break;
             }

@@ -4,7 +4,10 @@ export default function rsVat(value) {
         v = v.substr(2);
     }
     if (!/^[0-9]{9}$/.test(v)) {
-        return false;
+        return {
+            meta: {},
+            valid: false,
+        };
     }
     let sum = 10;
     let temp = 0;
@@ -15,5 +18,8 @@ export default function rsVat(value) {
         }
         sum = (2 * temp) % 11;
     }
-    return (sum + parseInt(v.substr(8, 1), 10)) % 10 === 1;
+    return {
+        meta: {},
+        valid: (sum + parseInt(v.substr(8, 1), 10)) % 10 === 1,
+    };
 }

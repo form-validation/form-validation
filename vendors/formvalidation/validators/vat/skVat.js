@@ -4,7 +4,13 @@ export default function skVat(value) {
         v = v.substr(2);
     }
     if (!/^[1-9][0-9][(2-4)|(6-9)][0-9]{7}$/.test(v)) {
-        return false;
+        return {
+            meta: {},
+            valid: false,
+        };
     }
-    return parseInt(v, 10) % 11 === 0;
+    return {
+        meta: {},
+        valid: parseInt(v, 10) % 11 === 0,
+    };
 }

@@ -4,7 +4,7 @@ export default function esId(value) {
     const isCIF = /^[A-HNPQS][-]{0,1}[0-9]{7}[-]{0,1}[0-9A-J]$/.test(value);
     if (!isDNI && !isNIE && !isCIF) {
         return {
-            meta: null,
+            meta: {},
             valid: false,
         };
     }

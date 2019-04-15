@@ -4,7 +4,10 @@ export default function roVat(value) {
         v = v.substr(2);
     }
     if (!/^[1-9][0-9]{1,9}$/.test(v)) {
-        return false;
+        return {
+            meta: {},
+            valid: false,
+        };
     }
     const length = v.length;
     const weight = [7, 5, 3, 2, 1, 7, 5, 3, 2].slice(10 - length);
@@ -13,5 +16,8 @@ export default function roVat(value) {
         sum += parseInt(v.charAt(i), 10) * weight[i];
     }
     sum = (10 * sum) % 11 % 10;
-    return `${sum}` === v.substr(length - 1, 1);
+    return {
+        meta: {},
+        valid: `${sum}` === v.substr(length - 1, 1),
+    };
 }

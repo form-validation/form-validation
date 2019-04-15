@@ -1,4 +1,7 @@
 import jmbg from './jmbg';
 export default function baId(value) {
-    return jmbg(value, 'BA');
+    return {
+        meta: {},
+        valid: jmbg(value, 'BA'),
+    };
 }

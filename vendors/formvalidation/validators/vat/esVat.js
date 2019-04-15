@@ -5,7 +5,7 @@ export default function esVat(value) {
     }
     if (!/^[0-9A-Z][0-9]{7}[0-9A-Z]$/.test(v)) {
         return {
-            meta: null,
+            meta: {},
             valid: false,
         };
     }

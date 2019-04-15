@@ -4,10 +4,16 @@ export default function cyVat(value) {
         v = v.substr(2);
     }
     if (!/^[0-5|9][0-9]{7}[A-Z]$/.test(v)) {
-        return false;
+        return {
+            meta: {},
+            valid: false,
+        };
     }
     if (v.substr(0, 2) === '12') {
-        return false;
+        return {
+            meta: {},
+            valid: false,
+        };
     }
     let sum = 0;
     const translation = {
@@ -21,5 +27,8 @@ export default function cyVat(value) {
         }
         sum += temp;
     }
-    return `${'ABCDEFGHIJKLMNOPQRSTUVWXYZ'[sum % 26]}` === v.substr(8, 1);
+    return {
+        meta: {},
+        valid: `${'ABCDEFGHIJKLMNOPQRSTUVWXYZ'[sum % 26]}` === v.substr(8, 1),
+    };
 }

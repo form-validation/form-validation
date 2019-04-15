@@ -4,7 +4,10 @@ export default function atVat(value) {
         v = v.substr(2);
     }
     if (!/^U[0-9]{8}$/.test(v)) {
-        return false;
+        return {
+            meta: {},
+            valid: false,
+        };
     }
     v = v.substr(1);
     const weight = [1, 2, 1, 2, 1, 2, 1];
@@ -21,5 +24,8 @@ export default function atVat(value) {
     if (sum === 10) {
         sum = 0;
     }
-    return `${sum}` === v.substr(7, 1);
+    return {
+        meta: {},
+        valid: `${sum}` === v.substr(7, 1),
+    };
 }

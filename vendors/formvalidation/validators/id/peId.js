@@ -1,9 +1,15 @@
 export default function peId(value) {
     if (!/^\d{8}[0-9A-Z]*$/.test(value)) {
-        return false;
+        return {
+            meta: {},
+            valid: false,
+        };
     }
     if (value.length === 8) {
-        return true;
+        return {
+            meta: {},
+            valid: true,
+        };
     }
     const weight = [3, 2, 7, 6, 5, 4, 3, 2];
     let sum = 0;
@@ -13,5 +19,8 @@ export default function peId(value) {
     const cd = sum % 11;
     const checkDigit = [6, 5, 4, 3, 2, 1, 1, 0, 9, 8, 7][cd];
     const checkChar = "KJIHGFEDCBA".charAt(cd);
-    return value.charAt(8) === `${checkDigit}` || value.charAt(8) === checkChar;
+    return {
+        meta: {},
+        valid: value.charAt(8) === `${checkDigit}` || value.charAt(8) === checkChar,
+    };
 }

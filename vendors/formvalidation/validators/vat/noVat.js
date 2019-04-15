@@ -4,7 +4,10 @@ export default function noVat(value) {
         v = v.substr(2);
     }
     if (!/^[0-9]{9}$/.test(v)) {
-        return false;
+        return {
+            meta: {},
+            valid: false,
+        };
     }
     const weight = [3, 2, 7, 6, 5, 4, 3, 2];
     let sum = 0;
@@ -15,5 +18,8 @@ export default function noVat(value) {
     if (sum === 11) {
         sum = 0;
     }
-    return `${sum}` === v.substr(8, 1);
+    return {
+        meta: {},
+        valid: `${sum}` === v.substr(8, 1),
+    };
 }

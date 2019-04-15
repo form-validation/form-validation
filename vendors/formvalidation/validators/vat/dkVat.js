@@ -4,12 +4,18 @@ export default function dkVat(value) {
         v = v.substr(2);
     }
     if (!/^[0-9]{8}$/.test(v)) {
-        return false;
+        return {
+            meta: {},
+            valid: false,
+        };
     }
     let sum = 0;
     const weight = [2, 7, 6, 5, 4, 3, 2, 1];
     for (let i = 0; i < 8; i++) {
         sum += parseInt(v.charAt(i), 10) * weight[i];
     }
-    return sum % 11 === 0;
+    return {
+        meta: {},
+        valid: sum % 11 === 0,
+    };
 }

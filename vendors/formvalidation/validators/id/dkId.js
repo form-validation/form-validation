@@ -1,7 +1,10 @@
 import isValidDate from '../../utils/isValidDate';
 export default function dkId(value) {
     if (!/^[0-9]{6}[-]{0,1}[0-9]{4}$/.test(value)) {
-        return false;
+        return {
+            meta: {},
+            valid: false,
+        };
     }
     const v = value.replace(/-/g, '');
     const day = parseInt(v.substr(0, 2), 10);
@@ -19,5 +22,8 @@ export default function dkId(value) {
             year += 2000;
             break;
     }
-    return isValidDate(year, month, day);
+    return {
+        meta: {},
+        valid: isValidDate(year, month, day),
+    };
 }

@@ -2,7 +2,10 @@ import isValidDate from '../../utils/isValidDate';
 export default function krId(value) {
     const v = value.replace('-', '');
     if (!/^\d{13}$/.test(v)) {
-        return false;
+        return {
+            meta: {},
+            valid: false,
+        };
     }
     const sDigit = v.charAt(6);
     let year = parseInt(v.substr(0, 2), 10);
@@ -26,7 +29,10 @@ export default function krId(value) {
             break;
     }
     if (!isValidDate(year, month, day)) {
-        return false;
+        return {
+            meta: {},
+            valid: false,
+        };
     }
     const weight = [2, 3, 4, 5, 6, 7, 8, 9, 2, 3, 4, 5];
     const length = v.length;
@@ -35,5 +41,8 @@ export default function krId(value) {
         sum += weight[i] * parseInt(v.charAt(i), 10);
     }
     const checkDigit = (11 - sum % 11) % 10;
-    return `${checkDigit}` === v.charAt(length - 1);
+    return {
+        meta: {},
+        valid: `${checkDigit}` === v.charAt(length - 1),
+    };
 }

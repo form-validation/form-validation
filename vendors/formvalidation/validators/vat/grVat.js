@@ -4,7 +4,10 @@ export default function grVat(value) {
         v = v.substr(2);
     }
     if (!/^[0-9]{9}$/.test(v)) {
-        return false;
+        return {
+            meta: {},
+            valid: false,
+        };
     }
     if (v.length === 8) {
         v = `0${v}`;
@@ -15,5 +18,8 @@ export default function grVat(value) {
         sum += parseInt(v.charAt(i), 10) * weight[i];
     }
     sum = (sum % 11) % 10;
-    return `${sum}` === v.substr(8, 1);
+    return {
+        meta: {},
+        valid: `${sum}` === v.substr(8, 1),
+    };
 }

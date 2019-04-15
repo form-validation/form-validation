@@ -2,7 +2,10 @@ import isValidDate from '../../utils/isValidDate';
 export default function mxId(value) {
     const v = value.toUpperCase();
     if (!/^[A-Z]{4}\d{6}[A-Z]{6}[0-9A-Z]\d$/.test(v)) {
-        return false;
+        return {
+            meta: {},
+            valid: false,
+        };
     }
     const blacklistNames = [
         'BACA', 'BAKA', 'BUEI', 'BUEY', 'CACA', 'CACO', 'CAGA', 'CAGO', 'CAKA', 'CAKO', 'COGE', 'COGI', 'COJA',
@@ -15,7 +18,10 @@ export default function mxId(value) {
     ];
     const name = v.substr(0, 4);
     if (blacklistNames.indexOf(name) >= 0) {
-        return false;
+        return {
+            meta: {},
+            valid: false,
+        };
     }
     let year = parseInt(v.substr(4, 2), 10);
     const month = parseInt(v.substr(6, 2), 10);
@@ -27,11 +33,17 @@ export default function mxId(value) {
         year += 2000;
     }
     if (!isValidDate(year, month, day)) {
-        return false;
+        return {
+            meta: {},
+            valid: false,
+        };
     }
     const gender = v.charAt(10);
     if (gender !== 'H' && gender !== 'M') {
-        return false;
+        return {
+            meta: {},
+            valid: false,
+        };
     }
     const state = v.substr(11, 2);
     const states = [
@@ -39,7 +51,10 @@ export default function mxId(value) {
         'NE', 'NL', 'NT', 'OC', 'PL', 'QR', 'QT', 'SL', 'SP', 'SR', 'TC', 'TL', 'TS', 'VZ', 'YN', 'ZS',
     ];
     if (states.indexOf(state) === -1) {
-        return false;
+        return {
+            meta: {},
+            valid: false,
+        };
     }
     const alphabet = '0123456789ABCDEFGHIJKLMN&OPQRSTUVWXYZ';
     let sum = 0;
@@ -48,5 +63,8 @@ export default function mxId(value) {
         sum += (18 - i) * alphabet.indexOf(v.charAt(i));
     }
     sum = (10 - sum % 10) % 10;
-    return `${sum}` === v.charAt(length - 1);
+    return {
+        meta: {},
+        valid: `${sum}` === v.charAt(length - 1),
+    };
 }

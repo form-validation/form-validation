@@ -1,7 +1,10 @@
 import isValidDate from '../../utils/isValidDate';
 export default function bgId(value) {
     if (!/^\d{10}$/.test(value) && !/^\d{6}\s\d{3}\s\d{1}$/.test(value)) {
-        return false;
+        return {
+            meta: {},
+            valid: false,
+        };
     }
     const v = value.replace(/\s/g, '');
     let year = parseInt(v.substr(0, 2), 10) + 1900;
@@ -16,7 +19,10 @@ export default function bgId(value) {
         month -= 20;
     }
     if (!isValidDate(year, month, day)) {
-        return false;
+        return {
+            meta: {},
+            valid: false,
+        };
     }
     let sum = 0;
     const weight = [2, 4, 8, 5, 10, 9, 7, 3, 6];
@@ -24,5 +30,8 @@ export default function bgId(value) {
         sum += parseInt(v.charAt(i), 10) * weight[i];
     }
     sum = (sum % 11) % 10;
-    return `${sum}` === v.substr(9, 1);
+    return {
+        meta: {},
+        valid: `${sum}` === v.substr(9, 1),
+    };
 }

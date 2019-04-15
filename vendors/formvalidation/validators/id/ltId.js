@@ -1,7 +1,10 @@
 import isValidDate from '../../utils/isValidDate';
 export default function ltId(value) {
     if (!/^[0-9]{11}$/.test(value)) {
-        return false;
+        return {
+            meta: {},
+            valid: false,
+        };
     }
     const gender = parseInt(value.charAt(0), 10);
     let year = parseInt(value.substr(1, 2), 10);
@@ -10,7 +13,10 @@ export default function ltId(value) {
     const century = (gender % 2 === 0) ? (17 + gender / 2) : (17 + (gender + 1) / 2);
     year = century * 100 + year;
     if (!isValidDate(year, month, day, true)) {
-        return false;
+        return {
+            meta: {},
+            valid: false,
+        };
     }
     let weight = [1, 2, 3, 4, 5, 6, 7, 8, 9, 1];
     let sum = 0;
@@ -20,7 +26,10 @@ export default function ltId(value) {
     }
     sum = sum % 11;
     if (sum !== 10) {
-        return `${sum}` === value.charAt(10);
+        return {
+            meta: {},
+            valid: `${sum}` === value.charAt(10),
+        };
     }
     sum = 0;
     weight = [3, 4, 5, 6, 7, 8, 9, 1, 2, 3];
@@ -31,5 +40,8 @@ export default function ltId(value) {
     if (sum === 10) {
         sum = 0;
     }
-    return `${sum}` === value.charAt(10);
+    return {
+        meta: {},
+        valid: `${sum}` === value.charAt(10),
+    };
 }

@@ -65,118 +65,118 @@ export default function vat() {
             };
             switch (country.toLowerCase()) {
                 case 'ar':
-                    result.valid = arVat(value);
+                    result = arVat(value);
                     break;
                 case 'at':
-                    result.valid = atVat(value);
+                    result = atVat(value);
                     break;
                 case 'be':
-                    result.valid = beVat(value);
+                    result = beVat(value);
                     break;
                 case 'bg':
-                    result.valid = bgVat(value);
+                    result = bgVat(value);
                     break;
                 case 'br':
-                    result.valid = brVat(value);
+                    result = brVat(value);
                     break;
                 case 'ch':
-                    result.valid = chVat(value);
+                    result = chVat(value);
                     break;
                 case 'cy':
-                    result.valid = cyVat(value);
+                    result = cyVat(value);
                     break;
                 case 'cz':
-                    result.valid = czVat(value);
+                    result = czVat(value);
                     break;
                 case 'de':
-                    result.valid = deVat(value);
+                    result = deVat(value);
                     break;
                 case 'dk':
-                    result.valid = dkVat(value);
+                    result = dkVat(value);
                     break;
                 case 'ee':
-                    result.valid = eeVat(value);
+                    result = eeVat(value);
                     break;
                 case 'el':
-                    result.valid = grVat(value);
+                    result = grVat(value);
                     break;
                 case 'es':
                     result = esVat(value);
                     break;
                 case 'fi':
-                    result.valid = fiVat(value);
+                    result = fiVat(value);
                     break;
                 case 'fr':
-                    result.valid = frVat(value);
+                    result = frVat(value);
                     break;
                 case 'gb':
-                    result.valid = gbVat(value);
+                    result = gbVat(value);
                     break;
                 case 'gr':
-                    result.valid = grVat(value);
+                    result = grVat(value);
                     break;
                 case 'hr':
-                    result.valid = hrVat(value);
+                    result = hrVat(value);
                     break;
                 case 'hu':
-                    result.valid = huVat(value);
+                    result = huVat(value);
                     break;
                 case 'ie':
-                    result.valid = ieVat(value);
+                    result = ieVat(value);
                     break;
                 case 'is':
-                    result.valid = isVat(value);
+                    result = isVat(value);
                     break;
                 case 'it':
-                    result.valid = itVat(value);
+                    result = itVat(value);
                     break;
                 case 'lt':
-                    result.valid = ltVat(value);
+                    result = ltVat(value);
                     break;
                 case 'lu':
-                    result.valid = luVat(value);
+                    result = luVat(value);
                     break;
                 case 'lv':
-                    result.valid = lvVat(value);
+                    result = lvVat(value);
                     break;
                 case 'mt':
-                    result.valid = mtVat(value);
+                    result = mtVat(value);
                     break;
                 case 'nl':
-                    result.valid = nlVat(value);
+                    result = nlVat(value);
                     break;
                 case 'no':
-                    result.valid = noVat(value);
+                    result = noVat(value);
                     break;
                 case 'pl':
-                    result.valid = plVat(value);
+                    result = plVat(value);
                     break;
                 case 'pt':
-                    result.valid = ptVat(value);
+                    result = ptVat(value);
                     break;
                 case 'ro':
-                    result.valid = roVat(value);
+                    result = roVat(value);
                     break;
                 case 'rs':
-                    result.valid = rsVat(value);
+                    result = rsVat(value);
                     break;
                 case 'ru':
-                    result.valid = ruVat(value);
+                    result = ruVat(value);
                     break;
                 case 'se':
-                    result.valid = seVat(value);
+                    result = seVat(value);
                     break;
                 case 'si':
-                    result.valid = siVat(value);
+                    result = siVat(value);
                     break;
                 case 'sk':
-                    result.valid = skVat(value);
+                    result = skVat(value);
                     break;
                 case 've':
-                    result.valid = veVat(value);
+                    result = veVat(value);
                     break;
                 case 'za':
-                    result.valid = zaVat(value);
+                    result = zaVat(value);
                     break;
                 default: break;
             }

@@ -1,7 +1,10 @@
 import isValidDate from '../../utils/isValidDate';
 export default function czId(value) {
     if (!/^\d{9,10}$/.test(value)) {
-        return false;
+        return {
+            meta: {},
+            valid: false,
+        };
     }
     let year = 1900 + parseInt(value.substr(0, 2), 10);
     const month = parseInt(value.substr(2, 2), 10) % 50 % 20;
@@ -11,21 +14,33 @@ export default function czId(value) {
             year -= 100;
         }
         if (year > 1953) {
-            return false;
+            return {
+                meta: {},
+                valid: false,
+            };
         }
     }
     else if (year < 1954) {
         year += 100;
     }
     if (!isValidDate(year, month, day)) {
-        return false;
+        return {
+            meta: {},
+            valid: false,
+        };
     }
     if (value.length === 10) {
         let check = parseInt(value.substr(0, 9), 10) % 11;
         if (year < 1985) {
             check = check % 10;
         }
-        return `${check}` === value.substr(9, 1);
+        return {
+            meta: {},
+            valid: `${check}` === value.substr(9, 1),
+        };
     }
-    return true;
+    return {
+        meta: {},
+        valid: true,
+    };
 }

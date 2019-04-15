@@ -1,6 +1,9 @@
 export default function chId(value) {
     if (!/^756[\.]{0,1}[0-9]{4}[\.]{0,1}[0-9]{4}[\.]{0,1}[0-9]{2}$/.test(value)) {
-        return false;
+        return {
+            meta: {},
+            valid: false,
+        };
     }
     const v = value.replace(/\D/g, '').substr(3);
     const length = v.length;
@@ -10,5 +13,8 @@ export default function chId(value) {
         sum += parseInt(v.charAt(i), 10) * weight[i % 2];
     }
     sum = 10 - sum % 10;
-    return `${sum}` === v.charAt(length - 1);
+    return {
+        meta: {},
+        valid: `${sum}` === v.charAt(length - 1),
+    };
 }

@@ -1,7 +1,10 @@
 export default function brId(value) {
     const v = value.replace(/\D/g, '');
     if (!/^\d{11}$/.test(v) || /^1{11}|2{11}|3{11}|4{11}|5{11}|6{11}|7{11}|8{11}|9{11}|0{11}$/.test(v)) {
-        return false;
+        return {
+            meta: {},
+            valid: false,
+        };
     }
     let d1 = 0;
     let i;
@@ -13,7 +16,10 @@ export default function brId(value) {
         d1 = 0;
     }
     if (`${d1}` !== v.charAt(9)) {
-        return false;
+        return {
+            meta: {},
+            valid: false,
+        };
     }
     let d2 = 0;
     for (i = 0; i < 10; i++) {
@@ -23,5 +29,8 @@ export default function brId(value) {
     if (d2 === 10 || d2 === 11) {
         d2 = 0;
     }
-    return `${d2}` === v.charAt(10);
+    return {
+        meta: {},
+        valid: `${d2}` === v.charAt(10),
+    };
 }

@@ -5,8 +5,14 @@ export default function seVat(value) {
         v = v.substr(2);
     }
     if (!/^[0-9]{10}01$/.test(v)) {
-        return false;
+        return {
+            meta: {},
+            valid: false,
+        };
     }
     v = v.substr(0, 10);
-    return luhn(v);
+    return {
+        meta: {},
+        valid: luhn(v),
+    };
 }

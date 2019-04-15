@@ -5,7 +5,10 @@ export default function bgVat(value) {
         v = v.substr(2);
     }
     if (!/^[0-9]{9,10}$/.test(v)) {
-        return false;
+        return {
+            meta: {},
+            valid: false,
+        };
     }
     let sum = 0;
     let i = 0;
@@ -21,9 +24,12 @@ export default function bgVat(value) {
             }
         }
         sum = sum % 10;
-        return `${sum}` === v.substr(8);
+        return {
+            meta: {},
+            valid: `${sum}` === v.substr(8),
+        };
     }
-    else if (v.length === 10) {
+    else {
         const isEgn = (input) => {
             let year = parseInt(input.substr(0, 2), 10) + 1900;
             let month = parseInt(input.substr(2, 2), 10);
@@ -71,7 +77,9 @@ export default function bgVat(value) {
             }
             return `${s}` === input.substr(9, 1);
         };
-        return isEgn(v) || isPnf(v) || isVat(v);
+        return {
+            meta: {},
+            valid: isEgn(v) || isPnf(v) || isVat(v),
+        };
     }
-    return false;
 }

@@ -1,3 +1,6 @@
 export default function smId(value) {
-    return /^\d{5}$/.test(value);
+    return {
+        meta: {},
+        valid: /^\d{5}$/.test(value),
+    };
 }

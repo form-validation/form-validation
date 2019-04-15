@@ -1,6 +1,9 @@
 export default function plId(value) {
     if (!/^[0-9]{11}$/.test(value)) {
-        return false;
+        return {
+            meta: {},
+            valid: false,
+        };
     }
     let sum = 0;
     const length = value.length;
@@ -13,5 +16,8 @@ export default function plId(value) {
         sum = 10;
     }
     sum = 10 - sum;
-    return `${sum}` === value.charAt(length - 1);
+    return {
+        meta: {},
+        valid: `${sum}` === value.charAt(length - 1),
+    };
 }

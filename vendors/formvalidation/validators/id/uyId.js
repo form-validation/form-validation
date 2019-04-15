@@ -1,6 +1,9 @@
 export default function uyId(value) {
     if (!/^\d{8}$/.test(value)) {
-        return false;
+        return {
+            meta: {},
+            valid: false,
+        };
     }
     const weight = [2, 9, 8, 7, 6, 3, 4];
     let sum = 0;
@@ -11,5 +14,8 @@ export default function uyId(value) {
     if (sum > 0) {
         sum = 10 - sum;
     }
-    return `${sum}` === value.charAt(7);
+    return {
+        meta: {},
+        valid: `${sum}` === value.charAt(7),
+    };
 }

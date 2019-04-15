@@ -5,14 +5,26 @@ export default function itVat(value) {
         v = v.substr(2);
     }
     if (!/^[0-9]{11}$/.test(v)) {
-        return false;
+        return {
+            meta: {},
+            valid: false,
+        };
     }
     if (parseInt(v.substr(0, 7), 10) === 0) {
-        return false;
+        return {
+            meta: {},
+            valid: false,
+        };
     }
     const lastThree = parseInt(v.substr(7, 3), 10);
     if ((lastThree < 1) || (lastThree > 201) && lastThree !== 999 && lastThree !== 888) {
-        return false;
+        return {
+            meta: {},
+            valid: false,
+        };
     }
-    return luhn(v);
+    return {
+        meta: {},
+        valid: luhn(v),
+    };
 }

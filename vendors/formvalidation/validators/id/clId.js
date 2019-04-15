@@ -1,6 +1,9 @@
 export default function clId(value) {
     if (!/^\d{7,8}[-]{0,1}[0-9K]$/i.test(value)) {
-        return false;
+        return {
+            meta: {},
+            valid: false,
+        };
     }
     let v = value.replace(/\-/g, '');
     while (v.length < 9) {
@@ -19,5 +22,8 @@ export default function clId(value) {
     else if (sum === 10) {
         cd = 'K';
     }
-    return cd === v.charAt(8).toUpperCase();
+    return {
+        meta: {},
+        valid: cd === v.charAt(8).toUpperCase(),
+    };
 }

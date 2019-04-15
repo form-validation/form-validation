@@ -1,6 +1,9 @@
 export default function ieId(value) {
     if (!/^\d{7}[A-W][AHWTX]?$/.test(value)) {
-        return false;
+        return {
+            meta: {},
+            valid: false,
+        };
     }
     const getCheckDigit = (v) => {
         let input = v;
@@ -15,10 +18,11 @@ export default function ieId(value) {
         sum += 9 * alphabet.indexOf(input.substr(7));
         return alphabet[sum % 23];
     };
-    if (value.length === 9 && ('A' === value.charAt(8) || 'H' === value.charAt(8))) {
-        return value.charAt(7) === getCheckDigit(value.substr(0, 7) + value.substr(8) + '');
-    }
-    else {
-        return value.charAt(7) === getCheckDigit(value.substr(0, 7));
-    }
+    const isValid = (value.length === 9 && ('A' === value.charAt(8) || 'H' === value.charAt(8)))
+        ? value.charAt(7) === getCheckDigit(value.substr(0, 7) + value.substr(8) + '')
+        : value.charAt(7) === getCheckDigit(value.substr(0, 7));
+    return {
+        meta: {},
+        valid: isValid,
+    };
 }
