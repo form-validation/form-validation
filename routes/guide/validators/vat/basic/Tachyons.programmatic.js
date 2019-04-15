@@ -12,6 +12,7 @@ export default `<!doctype html>
                 <div class="fl w-25 pa2">Country</div>
                 <div class="fl w-50">
                     <select class="input-reset ba b--black-20 pa2 mb2 db w-100" name="country">
+                        <option value="AR">Argentina</option>
                         <option value="AT">Austria</option>
                         <option value="BE">Belgium</option>
                         <option value="BR">Brazil</option>

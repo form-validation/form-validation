@@ -1,9 +1,9 @@
 export default function chVat(value) {
     let v = value;
-    if (/^CHE[0-9]{9}(MWST)?$/.test(v)) {
+    if (/^CHE[0-9]{9}(MWST|TVA|IVA|TPV)?$/.test(v)) {
         v = v.substr(2);
     }
-    if (!/^E[0-9]{9}(MWST)?$/.test(v)) {
+    if (!/^E[0-9]{9}(MWST|TVA|IVA|TPV)?$/.test(v)) {
         return false;
     }
     v = v.substr(1);

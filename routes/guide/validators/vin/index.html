@@ -94,7 +94,7 @@ const res2 = vin().validate({
 
     <section class="cf mb4">
         <div class="fl w-50 tl">
-            <a href="/guide/validators/vat/" class="b blue dim link pa2">&larr; vat validator</a>
+            <a href="/guide/validators/vat/{slug(vatData[vatData.length - 1].adjective)}-vat-number/" class="b blue dim link pa2" title="{vatData[vatData.length - 1].adjective} VAT number validator">&larr;  {vatData[vatData.length - 1].adjective} vat validator</a>
         </div>
         <div class="fl w-50 tr">
             <a href="/guide/validators/zip-code/" class="b blue dim link pa2">zipCode validator &rarr;</a>
@@ -103,6 +103,9 @@ const res2 = vin().validate({
 </Guide>
 
 <script>
+import vatData from '../vat/data';
+import slug from '../../../../components/helpers/slug';
+
 export default {
     components: {
         Demo: '../../../../components/Demo.html',
@@ -111,8 +114,13 @@ export default {
         SampleData: '../../../../components/SampleData.html',
     },
 
+    helpers: {
+        slug,
+    },
+
     data() {
         return {
+            vatData,
             samples: ['1FAHP26W49G252740', '2FTRX07W53C371582', 'WP0CA29863U153381', 'JTMKF4DV5B5309254']
         };
     },

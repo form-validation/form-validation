@@ -11,6 +11,7 @@ export default `<!doctype html>
             <label class="col-sm-3 col-form-label">Country</label>
             <div class="col-sm-5">
                 <select class="form-control" name="country">
+                    <option value="AR">Argentina</option>
                     <option value="AT">Austria</option>
                     <option value="BE">Belgium</option>
                     <option value="BR">Brazil</option>
