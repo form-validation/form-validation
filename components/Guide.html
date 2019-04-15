@@ -20,7 +20,7 @@
                     <ul class="list pa0 ma0 f5 lh-copy">
                         <li><SidebarLinkWithToc url="/guide/validators/" title="Overview" content={() => content}>Overview</SidebarLinkWithToc></li>
                         {#each Validators as v}
-                        <li><SidebarLinkWithToc url="/guide/validators/{camelCaseToDash(v.name)}/" title="{v.description}" content={() => content}>{v.name}</SidebarLinkWithToc></li>
+                        <li><SidebarLinkWithToc url="/guide/validators/{camelCaseToDash(v.name)}/" title="{v.description}" content={() => content} isActive={(p, url) => p.startsWith(url)}>{v.name}</SidebarLinkWithToc></li>
                         {/each}
                     </ul>
                     {/if}

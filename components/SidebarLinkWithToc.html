@@ -1,4 +1,4 @@
-<SidebarLink url={url} title={title}><slot></slot></SidebarLink>
+<SidebarLink url={url} title={title} isActive={isActive}><slot></slot></SidebarLink>
 {#if enabled}
 <TableOfContents content={content} selector={selector} />
 {/if}
@@ -11,6 +11,7 @@ export default {
             label: '',
             title: '',
             selector: 'section h2',
+            isActive: (p, url) => (p === url),
             // Private
             enabled: false,
         };
