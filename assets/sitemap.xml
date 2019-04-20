@@ -29,7 +29,49 @@
     <url><loc>https://formvalidation.io/guide/validators/grid/</loc></url>
     <url><loc>https://formvalidation.io/guide/validators/hex/</loc></url>
     <url><loc>https://formvalidation.io/guide/validators/iban/</loc></url>
+
     <url><loc>https://formvalidation.io/guide/validators/id/</loc></url>
+    <url><loc>https://formvalidation.io/guide/validators/id/argentinian-identification-number/</loc></url>
+    <url><loc>https://formvalidation.io/guide/validators/id/bosnian-and-herzegovinan-identification-number/</loc></url>
+    <url><loc>https://formvalidation.io/guide/validators/id/brazilian-identification-number/</loc></url>
+    <url><loc>https://formvalidation.io/guide/validators/id/bulgarian-identification-number/</loc></url>
+    <url><loc>https://formvalidation.io/guide/validators/id/chilean-identification-number/</loc></url>
+    <url><loc>https://formvalidation.io/guide/validators/id/chinese-identification-number/</loc></url>
+    <url><loc>https://formvalidation.io/guide/validators/id/colombian-identification-number/</loc></url>
+    <url><loc>https://formvalidation.io/guide/validators/id/croatian-identification-number/</loc></url>
+    <url><loc>https://formvalidation.io/guide/validators/id/czech-identification-number/</loc></url>
+    <url><loc>https://formvalidation.io/guide/validators/id/danish-identification-number/</loc></url>
+    <url><loc>https://formvalidation.io/guide/validators/id/estonian-identification-number/</loc></url>
+    <url><loc>https://formvalidation.io/guide/validators/id/finnish-identification-number/</loc></url>
+    <url><loc>https://formvalidation.io/guide/validators/id/french-identification-number/</loc></url>
+    <url><loc>https://formvalidation.io/guide/validators/id/hong-kong-identification-number/</loc></url>
+    <url><loc>https://formvalidation.io/guide/validators/id/icelandic-identification-number/</loc></url>
+    <url><loc>https://formvalidation.io/guide/validators/id/indian-identification-number/</loc></url>
+    <url><loc>https://formvalidation.io/guide/validators/id/irish-identification-number/</loc></url>
+    <url><loc>https://formvalidation.io/guide/validators/id/korean-identification-number/</loc></url>
+    <url><loc>https://formvalidation.io/guide/validators/id/latvian-identification-number/</loc></url>
+    <url><loc>https://formvalidation.io/guide/validators/id/lithuanian-identification-number/</loc></url>
+    <url><loc>https://formvalidation.io/guide/validators/id/macedonian-identification-number/</loc></url>
+    <url><loc>https://formvalidation.io/guide/validators/id/malaysian-identification-number/</loc></url>
+    <url><loc>https://formvalidation.io/guide/validators/id/mexican-identification-number/</loc></url>
+    <url><loc>https://formvalidation.io/guide/validators/id/montenegrin-identification-number/</loc></url>
+    <url><loc>https://formvalidation.io/guide/validators/id/dutch-identification-number/</loc></url>
+    <url><loc>https://formvalidation.io/guide/validators/id/norwegian-identification-number/</loc></url>
+    <url><loc>https://formvalidation.io/guide/validators/id/peruvian-identification-number/</loc></url>
+    <url><loc>https://formvalidation.io/guide/validators/id/polish-identification-number/</loc></url>
+    <url><loc>https://formvalidation.io/guide/validators/id/romanian-identification-number/</loc></url>
+    <url><loc>https://formvalidation.io/guide/validators/id/sanmarinese-identification-number/</loc></url>
+    <url><loc>https://formvalidation.io/guide/validators/id/serbian-identification-number/</loc></url>
+    <url><loc>https://formvalidation.io/guide/validators/id/slovak-identification-number/</loc></url>
+    <url><loc>https://formvalidation.io/guide/validators/id/slovenian-identification-number/</loc></url>
+    <url><loc>https://formvalidation.io/guide/validators/id/south-african-identification-number/</loc></url>
+    <url><loc>https://formvalidation.io/guide/validators/id/spanish-identification-number/</loc></url>
+    <url><loc>https://formvalidation.io/guide/validators/id/swedish-identification-number/</loc></url>
+    <url><loc>https://formvalidation.io/guide/validators/id/swiss-identification-number/</loc></url>
+    <url><loc>https://formvalidation.io/guide/validators/id/taiwanese-identification-number/</loc></url>
+    <url><loc>https://formvalidation.io/guide/validators/id/thai-identification-number/</loc></url>
+    <url><loc>https://formvalidation.io/guide/validators/id/uruguayan-identification-number/</loc></url>
+
     <url><loc>https://formvalidation.io/guide/validators/identical/</loc></url>
     <url><loc>https://formvalidation.io/guide/validators/imei/</loc></url>
     <url><loc>https://formvalidation.io/guide/validators/imo/</loc></url>
@@ -57,7 +99,46 @@
     <url><loc>https://formvalidation.io/guide/validators/string-length/</loc></url>
     <url><loc>https://formvalidation.io/guide/validators/uri/</loc></url>
     <url><loc>https://formvalidation.io/guide/validators/uuid/</loc></url>
+
     <url><loc>https://formvalidation.io/guide/validators/vat/</loc></url>
+    <url><loc>https://formvalidation.io/guide/validators/vat/argentinian-vat-number/</loc></url>
+    <url><loc>https://formvalidation.io/guide/validators/vat/austrian-vat-number/</loc></url>
+    <url><loc>https://formvalidation.io/guide/validators/vat/belgian-vat-number/</loc></url>
+    <url><loc>https://formvalidation.io/guide/validators/vat/brazilian-vat-number/</loc></url>
+    <url><loc>https://formvalidation.io/guide/validators/vat/bulgarian-vat-number/</loc></url>
+    <url><loc>https://formvalidation.io/guide/validators/vat/croatian-vat-number/</loc></url>
+    <url><loc>https://formvalidation.io/guide/validators/vat/cypriot-vat-number/</loc></url>
+    <url><loc>https://formvalidation.io/guide/validators/vat/czech-vat-number/</loc></url>
+    <url><loc>https://formvalidation.io/guide/validators/vat/danish-vat-number/</loc></url>
+    <url><loc>https://formvalidation.io/guide/validators/vat/estonian-vat-number/</loc></url>
+    <url><loc>https://formvalidation.io/guide/validators/vat/finnish-vat-number/</loc></url>
+    <url><loc>https://formvalidation.io/guide/validators/vat/french-vat-number/</loc></url>
+    <url><loc>https://formvalidation.io/guide/validators/vat/german-vat-number/</loc></url>
+    <url><loc>https://formvalidation.io/guide/validators/vat/greek-vat-number/</loc></url>
+    <url><loc>https://formvalidation.io/guide/validators/vat/hungarian-vat-number/</loc></url>
+    <url><loc>https://formvalidation.io/guide/validators/vat/icelandic-vat-number/</loc></url>
+    <url><loc>https://formvalidation.io/guide/validators/vat/irish-vat-number/</loc></url>
+    <url><loc>https://formvalidation.io/guide/validators/vat/italian-vat-number/</loc></url>
+    <url><loc>https://formvalidation.io/guide/validators/vat/latvian-vat-number/</loc></url>
+    <url><loc>https://formvalidation.io/guide/validators/vat/lithuanian-vat-number/</loc></url>
+    <url><loc>https://formvalidation.io/guide/validators/vat/luxembourg-vat-number/</loc></url>
+    <url><loc>https://formvalidation.io/guide/validators/vat/maltese-vat-number/</loc></url>
+    <url><loc>https://formvalidation.io/guide/validators/vat/dutch-vat-number/</loc></url>
+    <url><loc>https://formvalidation.io/guide/validators/vat/norwegian-vat-number/</loc></url>
+    <url><loc>https://formvalidation.io/guide/validators/vat/polish-vat-number/</loc></url>
+    <url><loc>https://formvalidation.io/guide/validators/vat/portuguese-vat-number/</loc></url>
+    <url><loc>https://formvalidation.io/guide/validators/vat/romanian-vat-number/</loc></url>
+    <url><loc>https://formvalidation.io/guide/validators/vat/russian-vat-number/</loc></url>
+    <url><loc>https://formvalidation.io/guide/validators/vat/serbian-vat-number/</loc></url>
+    <url><loc>https://formvalidation.io/guide/validators/vat/slovak-vat-number/</loc></url>
+    <url><loc>https://formvalidation.io/guide/validators/vat/slovenian-vat-number/</loc></url>
+    <url><loc>https://formvalidation.io/guide/validators/vat/south-african-vat-number/</loc></url>
+    <url><loc>https://formvalidation.io/guide/validators/vat/spanish-vat-number/</loc></url>
+    <url><loc>https://formvalidation.io/guide/validators/vat/swedish-vat-number/</loc></url>
+    <url><loc>https://formvalidation.io/guide/validators/vat/swiss-vat-number/</loc></url>
+    <url><loc>https://formvalidation.io/guide/validators/vat/british-vat-number/</loc></url>
+    <url><loc>https://formvalidation.io/guide/validators/vat/venezuelan-vat-number/</loc></url>
+    
     <url><loc>https://formvalidation.io/guide/validators/vin/</loc></url>
     <url><loc>https://formvalidation.io/guide/validators/zip-code/</loc></url>
 
@@ -192,4 +273,5 @@
     <url><loc>https://formvalidation.io/updates/v1.0.1/</loc><lastmod>2018-06-29T00:50:00+07:00</lastmod></url>
     <url><loc>https://formvalidation.io/updates/v1.1.0/</loc><lastmod>2018-07-08T00:50:00+07:00</lastmod></url>
     <url><loc>https://formvalidation.io/updates/v1.2.0/</loc><lastmod>2018-07-15T00:50:00+07:00</lastmod></url>
+    <url><loc>https://formvalidation.io/updates/v1.3.0/</loc><lastmod>2018-08-10T00:00:00+07:00</lastmod></url>
 </urlset>
