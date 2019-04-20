@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
     </section>
 
     <section class="mb4">
-        <h2><span class="bb b--gray">Options</span></h2>
+        <h2><span class="bb b--gray">Options for field declarations</span></h2>
         <table class="collapse ba br2 b--black-10 pv2 ph3 w-100">
             <tr class="striped--light-gray">
                 <th class="pv2 ph3 tl f6 fw6 ttu">Option</th>
@@ -102,11 +102,11 @@ document.addEventListener('DOMContentLoaded', function(e) {
             </tr>
         </table>
 
-        <p class="lh-copy">The HTML attribute is a combination of <code>prefix-validator___option</code>, where</p>
+        <p class="lh-copy">The HTML attribute is a combination of <code>prefixName-validatorName___optionName</code>, where</p>
         <ul class="ma0 pl3 lh-copy">
-            <li><code>prefix</code> is replaced with the <code>prefix</code> option above</li>
-            <li><code>validator</code> is replaced with the lowercase of validator's name. Any uppercase characters found in validator's name has to be turned into a dash (<code>-</code>) followed by its lowsercase</li>
-            <li><code>option</code> is replaced with the lowsercase of validator's option. Any uppercase characters found in validator's option has to be turned into a dash (<code>-</code>) followed by its lowsercase</li>
+            <li><code>prefixName</code> is replaced with the <code>prefix</code> option above</li>
+            <li><code>validatorName</code> is replaced with the lowercase of validator's name. Any uppercase characters found in validator's name has to be turned into a dash (<code>-</code>) followed by its lowsercase</li>
+            <li><code>optionName</code> is replaced with the lowsercase of validator's option. Any uppercase characters found in validator's option has to be turned into a dash (<code>-</code>) followed by its lowsercase</li>
         </ul>
         
         <p class="lh-copy">Below is a few examples of declaring validator options in both programmatic and declarative modes:</p>
@@ -196,6 +196,95 @@ data-fv-uri___allow-empty-protocol="..."
         <p class="lh-copy">There are some validators which not all options are configurable via HTML attribute. Refer to each validator documentation to see exactly the equivalent HTML attribute for each option.</p>
         <p class="lh-copy">In that case, you can use both programmatic and declarative modes to set the validator options.</p>
     </section>
+
+    <section class="mb4">
+        <h2><span class="bb b--gray">Options for plugin declarations</span></h2>
+
+        <Tip heading="Notice">The plugin declaration isn't supported when using with ES6 module.</Tip>
+
+        <table class="collapse ba br2 b--black-10 pv2 ph3 w-100">
+            <tr class="striped--light-gray">
+                <th class="pv2 ph3 tl f6 fw6 ttu">Option</th>
+                <th class="pv2 ph3 tl f6 fw6 ttu">Type</th>
+                <th class="pv2 ph3 tl f6 fw6 ttu">Description</th>
+            </tr>
+            <tr class="striped--light-gray">
+                <td class="pv2 ph3"><code>pluginPrefix</code></td>
+                <td class="pv2 ph3">String</td>
+                <td class="pv2 ph3 lh-copy">The prefix of plugin declaration attributes. By default, it is set to <code>data-fvp-</code></td>
+            </tr>
+        </table>
+
+        <p class="lh-copy">The HTML attribute is a combination of <code>prefixName-pluginName___optionName</code>, where</p>
+        <ul class="ma0 pl3 lh-copy">
+            <li><code>prefixName</code> is replaced with the <code>pluginPrefix</code> option above</li>
+            <li><code>pluginName</code> is replaced with the lowercase of plugin's name. Any uppercase characters found in plugin's name has to be turned into a dash (<code>-</code>) followed by its lowsercase</li>
+            <li><code>optionName</code> is replaced with the lowsercase of plugin's option. Any uppercase characters found in plugin's option has to be turned into a dash (<code>-</code>) followed by its lowsercase</li>
+        </ul>
+
+        <p class="lh-copy">Each plugin declaration requires an attribute named <code>prefixName-pluginName___class</code> which indicates the plugin class. All the plugin declarations need to be set for the form element.</p>
+        <p class="lh-copy">Following is a simple code that demonstrates how to declare the attributes for plugins:</p>
+
+<SampleCode lang="html" code={`
+<form id="demoForm" method="POST"
+    data-fvp-trigger="true"
+    data-fvp-trigger___class="FormValidation.plugins.Trigger"
+    
+    data-fvp-tachyons="true"
+    data-fvp-tachyons___class="FormValidation.plugins.Tachyons"
+
+    data-fvp-submit-button="true"
+    data-fvp-submit-button___class="FormValidation.plugins.SubmitButton"
+
+    data-fvp-icon="true"
+    data-fvp-icon___class="FormValidation.plugins.Icon"
+    data-fvp-icon___valid="fa fa-check"
+    data-fvp-icon___invalid="fa fa-times"
+    data-fvp-icon___validating="fa fa-refresh">
+...
+</form>
+
+<script-tag>
+document.addEventListener('DOMContentLoaded', function(e) {
+    const form = document.getElementById('demoForm');
+    FormValidation.formValidation(form, {
+        plugins: {
+            // You have to register the Declarative plugin only
+            declarative: new FormValidation.plugins.Declarative()
+        }
+    });
+});
+</script-tag>
+`} />
+
+        <p class="lh-copy">It serves the same functionalities such as declaring plugins as</p>
+
+<SampleCode lang="html" code={`
+<form id="demoForm">
+...
+</form>
+    
+<script-tag>
+document.addEventListener('DOMContentLoaded', function(e) {
+    const form = document.getElementById('demoForm');
+    FormValidation.formValidation(form, {
+        plugins: {
+            declarative: new FormValidation.plugins.Declarative(),
+            // Other plugins
+            trigger: new FormValidation.plugins.Trigger(),
+            tachyons: new FormValidation.plugins.Tachyons(),
+            submitButton: new FormValidation.plugins.SubmitButton(),
+            icon: new FormValidation.plugins.Icon({
+                valid: 'fa fa-check',
+                invalid: 'fa fa-times',
+                validating: 'fa fa-refresh',
+            }),
+        }
+    });  
+});
+</script-tag>
+`} />         
+    </section>
     
     <section class="mb4">
         <h2><span class="bb b--gray">Basic example</span></h2>
@@ -279,6 +368,7 @@ export default {
         Demo: '../../../../components/Demo.html',
         Guide: '../../../../components/Guide.html',
         SampleCode: '../../../../components/SampleCode.html',
+        Tip: '../../../../components/Tip.html',
     },
 };
 </script>
