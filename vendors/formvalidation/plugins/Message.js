@@ -171,7 +171,8 @@ export default class Message extends Plugin {
         const element = ('radio' === type || 'checkbox' === type) ? elements[0] : e.element;
         if (this.messages.has(element)) {
             const container = this.messages.get(element);
-            container.querySelectorAll(`[data-field="${e.field}"]`).forEach((messageEle) => {
+            const messageElements = [].slice.call(container.querySelectorAll(`[data-field="${e.field}"]`));
+            messageElements.forEach((messageEle) => {
                 container.removeChild(messageEle);
             });
         }
