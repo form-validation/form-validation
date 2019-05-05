@@ -6,7 +6,7 @@
                     <div class="fl w-25 pa2">Meeting time</div>
                     <div class="fl w-50">
                         <input name="time" class="input-reset ba b--black-20 pa2 mb2 db w-100"
-                            pattern="^(09|1[0-7]{1}):[0-5]{1}[0-9]{1}$"
+                            pattern="{pattern}"
                             data-fv-regexp___message="The meeting time must be between 09:00 and 17:59" />
                     </div>
                 </div>
@@ -28,6 +28,14 @@ export default {
     components: {
         DemoLayout: '../../../../../components/DemoLayout.html',
         DemoWrapper: '../../../../../components/DemoWrapper.html',
+    },
+
+    data() {
+		return {
+            // Don't put this on the form directly, because Sapper will turn {1} to `1`
+            // and then we will have a different pattern
+            pattern: "^(09|1[0-7]{1}):[0-5]{1}[0-9]{1}$",
+        };
     },
 
     oncreate() {
