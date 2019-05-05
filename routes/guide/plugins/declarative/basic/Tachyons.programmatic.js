@@ -21,7 +21,7 @@ export default `<!doctype html>
                         data-fv-string-length___message="The name must be more than 6 and less than 30 characters long"
 
                         data-fv-regexp="true"
-                        data-fv-regexp___regexp="/^[a-zA-Z0-9_]+$/"
+                        data-fv-regexp___regexp="^[a-zA-Z0-9_]+$"
                         data-fv-regexp___message="The name can only consist of alphabetical, number and underscore" />
                 </div>
             </div>
