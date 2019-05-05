@@ -9,7 +9,7 @@ export default `<!doctype html>
     <form id="demoForm" method="post">
         <div class="cf mb2">
             <div class="fl w-100">
-                <div class="fl w-25 pa2">Your website</div>
+                <div class="fl w-25 pa2">Meeting time</div>
                 <div class="fl w-50">
                     <input name="time" class="input-reset ba b--black-20 pa2 mb2 db w-100"
                         pattern="^(09|1[0-7]{1}):[0-5]{1}[0-9]{1}$"
