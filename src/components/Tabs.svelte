@@ -1,4 +1,4 @@
-<ul class="list pl0 mb0 list pa0 ma0 bb b--black-10 flex items-center">
+<ul class="list pl0 mb0 list pa0 ma0 bb b--black-20 flex items-center">
     {#each titles as title, i}
     <Tab title={title} isSelected={i === activeIndex} on:active={active(i)}/>
     {/each}

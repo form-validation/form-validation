@@ -39,25 +39,23 @@
     <div class="w-100 center mw7"><Typed /></div>
 </section>
 
-<section class="bt bw2 b--light-gray pv5">
+<section class="bt b--black-30 pv5">
     <div class="mw8 center">
         <DotDotDot />
         <h2 class="f1">Scalable, well tested code base</h2>
     </div>
 
     <div class="mw8 center flex">
-        <div class="w-60">
+        <div class="w-70">
             <ul class="list pa0 lh-copy">
-                <li>• Completely rewrite in ES6.</li>
-                <li>• Type safety. Entire code are made in TypeScript.</li>
-                <li>• High code quality via popular analysis tools such as TSLint.</li>
-                <li>• Zero dependencies. No jQuery.</li>
-                <li>• All validators, algorithms, and APIs are tested carefully with +400 Mocha unit tests.</li>
-                <li>• Cover hundreds of end-to-end test cases against Selenium server with Nightwatch.js framework.</li>
+                <li>👍 Completely rewrite in ES6.</li>
+                <li>👍 Type safety. Entire code are made in TypeScript.</li>
+                <li>👍 High code quality via popular analysis tools such as TSLint.</li>
+                <li>👍 Zero dependencies. No jQuery.</li>
             </ul>
         </div>
-        <div class="w-40">
-            <ul class="list pa0 flex flex-wrap">
+        <div class="w-30">
+            <ul class="list ma0 pa0 flex flex-wrap">
                 <li class="w-50 pa3 tc">
                     <img alt="ES6" class="w3 h3 mb1" src="/branches/es6.svg" />
                     <div>ES6</div>
@@ -66,6 +64,19 @@
                     <img alt="TypeScript" class="w3 h3 mb1" src="/branches/typescript.svg" />
                     <div>TypeScript</div>
                 </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="mw8 center flex">
+        <div class="w-70">
+            <ul class="list pa0 lh-copy">
+                <li>👌 All validators, algorithms, and APIs are tested carefully with +400 Mocha unit tests.</li>
+                <li>👌 Cover hundreds of end-to-end test cases against Selenium server with Nightwatch.js framework.</li>
+            </ul>
+        </div>
+        <div class="w-30">
+            <ul class="list ma0 pa0 flex flex-wrap">
                 <li class="w-50 pa3 tc">
                     <img alt="Mocha" class="w3 h3 mb1" src="/branches/mocha.svg" />
                     <div>Mocha</div>
@@ -132,9 +143,9 @@ module.exports = {
         <DotDotDot />
         <h2 class="f1">Rich set of validators</h2>
         <ul class="list pa0 lh-copy">
-            <li>• More than 50 built-in validators to cover most various types of form field.</li>
-            <li>• Easily to develop and reuse your own validator.</li>
-            <li>• All validators can be used independently. Inspried by functional programming paradigm, all built in validators are just functions. So you can use it in browser or with ES6 module, server side frameworks such as <a class="blue link" href="https://expressjs.com/">Express</a>:</li>
+            <li>👍 More than 50 built-in validators to cover most various types of form field.</li>
+            <li>👍 Easily to develop and reuse your own validator.</li>
+            <li>👍 All validators can be used independently. Inspried by functional programming paradigm, all built in validators are just functions. So you can use it in browser or with ES6 module, server side frameworks such as <a class="blue link" href="https://expressjs.com/">Express</a>:</li>
         </ul>
     </div>
 
@@ -173,13 +184,10 @@ const result = creditCard().validate({
 </section>
 
 <section class="pv5">
-    <div class="mw8 center flex">
-        <div class="w-70">
-            <DotDotDot />
-            <h2 class="f1">Plugin architecture</h2>
-            <p class="lh-copy">The giant and old jQuery plugin doesn't exist anymore. With the new plugin based architectue, the library has really small core. Everything else is built around as a plugin.</p>            
-        </div>
-        <div class="w-30"></div>
+    <div class="mw8 center">
+        <DotDotDot />
+        <h2 class="f1">Plugin architecture</h2>
+        <p class="lh-copy">The giant and old jQuery plugin doesn't exist anymore. With the new plugin based architectue, the library has really small core. Everything else is built around as a plugin.</p>            
     </div>
 
     <div class="mw7 center">   
@@ -230,6 +238,51 @@ formValidation(formElement, {
 `} />
             </div>
         </Tabs>
+    </div>
+</section>
+
+<section class="pv5">
+    <div class="mw8 center flex">
+        <div class="w-50 pr5">
+            <DotDotDot />
+            <h2 class="f1">Friendly UX</h2>
+            <ul class="list pa0 ma0 lh-copy">
+                <li>👍 Can it notify user while field is being validated?</li>
+                <li>👍 Can it stop performing remaining validators if there is a validator that the field does not pass?</li>
+                <li>👍 Can it perform the validation only when the field value exceed a given number of characters?</li>
+                <li>👍 Can it postpone the validation for a given number of seconds from the moment user stops fill in the field?</li>
+            </ul>
+            <p class="lh-copy">Yes! FormValidation provides a built in mechanism to support these requirements.</p>
+        </div>
+        <div class="w-50 pr5">
+            <DotDotDot />
+            <h2 class="f1">Easy to customize</h2>
+            <p class="lh-copy">You can adjust almost everything:</p>
+            <ul class="list pa0 ma0 lh-copy">
+                <li>👌 The error icon position</li>
+                <li>👌 The location of error message</li>
+                <li>👌 Their colors when the field is valid or invalid</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="pv5">
+    <div class="mw8 center flex">
+        <div class="w-50 pr5">
+            <DotDotDot />
+            <h2 class="f1">Flexible</h2>
+            <ul class="list pa0 ma0 lh-copy">
+                <li>👌 Support dynamic field</li>
+                <li>👌 The validator can be enabled or disabled on the fly</li>
+                <li>👌 Provide a lot of events that you can hook on</li>
+            </ul>
+        </div>
+        <div class="w-50 pr5">
+            <DotDotDot />
+            <h2 class="f1">Localization</h2>
+            <p class="lh-copy">The default error messages of built-in validators are available in 39 language packages. There is also a plugin to support switching between different locales easily.</p>
+        </div>
     </div>
 </section>
 
@@ -338,24 +391,26 @@ formValidation(formElement, {
 </section>
 
 <section class="pv5">
-    <div class="mw8 center flex">
-        <div class="w-70">
-            <DotDotDot />
-            <h2 class="f1">Integrate with UI libraries</h2>
-            <p class="lh-copy">Play nicely with other libraries. It has useful APIs to integrate with another libraries.</p>
-        </div>
-        <div class="w-30"></div>
+    <div class="mw8 center">
+        <DotDotDot />
+        <h2 class="f1">Integrate with UI libraries</h2>
+        <p class="lh-copy">FormValidation plays nicely with other libraries. It has useful APIs to integrate with another libraries.</p>
+        <p class="lh-copy">By using the same principle, you can easily integrate it with any UI library out there. To name a few:</p>
+        <ul class="list pa0 ma0 lh-copy">
+            <li>👉 Auto complete: autoComplete.js, Typeahead</li>
+            <li>👉 Color pickers: pickr</li>
+            <li>👉 Date pickers: Bootstrap Datepicker, flatpickr, pickadate, Pikaday</li>
+            <li>👉 Editors: CKEditor, Summernote, TinyMCE</li>
+            <li>👉 Tags input: Choices, Chosen, Select2, Selectize, tagify</li>
+        </ul>
     </div>
 </section>
 
 <section class="pv5">
-    <div class="mw8 center flex">
-        <div class="w-30"></div>
-        <div class="w-70">
-            <DotDotDot />
-            <h2 class="f1">Compatible with frameworks</h2>
-            <p class="lh-copy">FormValidation can be used with popular frameworks such as React, Preact, Vue, Svelte, etc.</p>
-        </div>
+    <div class="mw8 center">
+        <DotDotDot />
+        <h2 class="f1">Compatible with frameworks</h2>
+        <p class="lh-copy">FormValidation can be used with popular frameworks such as React, Preact, Vue, Svelte, etc.</p>
     </div>
 
     <div class="mw7 center">
@@ -464,6 +519,29 @@ formValidation(formElement, {
             </li>
         </ul>
     </div>
+
+    <div class="mw8 center flex">
+        <div class="w-70">
+            In order to use FormValidation with these JavaScript frameworks, you might need to bundle it.
+            <p class="lh-copy">No worry! FormValidation provides ES6 classes, so you can bundle it easily with popular bundlers such as Webpack, Rollup.</p>
+        </div>
+        <div class="w-30">
+            <ul class="list ma0 pa0 flex flex-wrap">
+                <li class="w-50 pa3 tc">
+                    <a href="javascript: void(0);" class="link">
+                        <img alt="Webpack" class="w3 h3 mb1" src="/branches/webpack.svg" />
+                        <div>Webpack</div>
+                    </a>
+                </li>
+                <li class="w-50 pa3 tc">
+                    <a href="javascript: void(0);" class="link">
+                        <img alt="Rollup" class="w3 h3 mb1" src="/branches/rollup.svg" />
+                        <div>Rollup</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
 </section>
 
 <section class="pv5">
@@ -504,7 +582,7 @@ formValidation(formElement, {
     </div>
 </section>
 
-<section class="bt bw2 b--light-gray pv5">
+<section class="bt b--black-30 pv5">
     <div class="mw8 center">
         <DotDotDot />
         <h2 class="f1 lh-copy">Used by thousand developers and designers like you</h2>
