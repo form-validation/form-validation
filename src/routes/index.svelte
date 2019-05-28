@@ -40,10 +40,13 @@
 </section>
 
 <section class="bt b--light-gray pv5">
+    <div class="mw8 center">
+        <DotDotDot />
+        <h2 class="f1">Scalable, well tested code base</h2>
+    </div>
+
     <div class="mw8 center flex">
         <div class="w-60">
-            <DotDotDot />
-            <h2 class="f1">Scalable, well tested code base</h2>
             <ul class="list pa0 lh-copy">
                 <li>• Completely rewrite in ES6.</li>
                 <li>• Type safety. Entire code are made in TypeScript.</li>
@@ -74,6 +77,54 @@
             </ul>
         </div>
     </div>
+
+    <div class="mw7 center">   
+        <Tabs titles={["Unit tests", "End-to-end tests"]}>
+            <div>
+<SampleCode lang="javascript" code={`
+import { expect } from 'chai';
+import isbn from '../../src/js/validators/isbn';
+
+describe('Test isbn validator', () => {
+    it('isbn10 hyphen', () => {
+        const samples = [
+            '99921-58-10-7', '9971-5-0210-0',
+            '960-425-059-0', '80-902734-1-6',
+        ];
+        samples.forEach(sample => {
+            const result = isbn().validate({ value: sample });
+            expect(result.valid).to.be.true;
+        });
+    });
+});
+`} />            
+            </div>
+            <div>
+<SampleCode lang="javascript" code={`
+module.exports = {
+    'Test Alias plugin': (browser) => {
+        browser
+            .url(
+                browser.launchUrl + '/demo/plugins/alias.html'
+            )
+            .setValue(
+                'input[name="email"]',
+                ['invalid.email', '\u0008']
+            )
+            .waitForElementVisible(
+                '[data-validator][data-field="email"]', 100
+            )
+            .assert.containsText(
+                '[data-validator][data-field="email"]',
+                'The email address is not valid'
+            )
+            .end();
+    }
+};
+`} />            
+            </div>
+        </Tabs>
+    </div>
 </section>
 
 <section class="bt b--light-gray pv5">
@@ -83,11 +134,13 @@
         <ul class="list pa0 lh-copy">
             <li>• More than 50 built-in validators to cover most various types of form field.</li>
             <li>• Easily to develop and reuse your own validator.</li>
-            <li>• All validators can be used independently. Inspried by functional programming paradigm, all built in validators are just functions. So you can use it in browser:</li>
+            <li>• All validators can be used independently. Inspried by functional programming paradigm, all built in validators are just functions. So you can use it in browser or with ES6 module, server side frameworks such as <a class="blue link" href="https://expressjs.com/">Express</a>:</li>
         </ul>
     </div>
 
-    <div class="mw7 center">    
+    <div class="mw7 center">   
+        <Tabs titles={["Browser", "ES6 module"]}>
+            <div>
 <SampleCode lang="javascript" code={`
 const result = FormValidation.validators.creditCard().validate({
     value: '340653705597107',
@@ -98,10 +151,9 @@ const result = FormValidation.validators.creditCard().validate({
 
 // result.valid === true
 // result.meta.type === 'AMERICAN_EXPRESS'
-`} />        
-    </div>
-
-        <p class="lh-copy">or with ES6 module, server side frameworks such as <a class="blue link" href="https://expressjs.com/">Express</a>:</p>
+`} />
+            </div>
+            <div>
 <SampleCode lang="javascript" code={`
 // You might need to change the importing path
 import creditCard from 'formvalidation/validators/creditCard';
@@ -115,7 +167,9 @@ const result = creditCard().validate({
 // result.valid === true
 // result.meta.type === 'AMERICAN_EXPRESS'
 `} />
-    
+            </div>
+        </Tabs>
+    </div>
 </section>
 
 <section class="bt b--light-gray pv5">
@@ -435,5 +489,7 @@ const result = creditCard().validate({
 import Typed from '../_demo/typed/Tachyons.svelte';
 import DotDotDot from '../components/DotDotDot.svelte';
 import SampleCode from '../components/SampleCode.svelte';
+import Tab from '../components/Tab.svelte';
+import Tabs from '../components/Tabs.svelte';
 import Testimonial from '../components/Testimonial.svelte';
 </script>
