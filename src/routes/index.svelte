@@ -1,9 +1,3 @@
-<script>
-import Typed from '../_demo/typed/Tachyons.svelte';
-import DotDotDot from '../components/DotDotDot.svelte';
-import Testimonial from '../components/Testimonial.svelte';
-</script>
-
 <style>
 .hero-bg {
     transform: skewY(-10deg);
@@ -83,18 +77,45 @@ import Testimonial from '../components/Testimonial.svelte';
 </section>
 
 <section class="bt b--light-gray pv5">
-    <div class="mw8 center flex">
-        <div class="w-30"></div>
-        <div class="w-70">
-            <DotDotDot />
-            <h2 class="f1">Rich set of validators</h2>
-            <ul class="list pa0 lh-copy">
-                <li>• More than 50 built-in validators to cover most various types of form field.</li>
-                <li>• Easily to develop and reuse your own validator.</li>
-                <li>• All validator can be used independly without defining form or field.</li>
-            </ul>
-        </div>
+    <div class="mw8 center">
+        <DotDotDot />
+        <h2 class="f1">Rich set of validators</h2>
+        <ul class="list pa0 lh-copy">
+            <li>• More than 50 built-in validators to cover most various types of form field.</li>
+            <li>• Easily to develop and reuse your own validator.</li>
+            <li>• All validators can be used independently. Inspried by functional programming paradigm, all built in validators are just functions. So you can use it in browser:</li>
+        </ul>
     </div>
+
+    <div class="mw7 center">    
+<SampleCode lang="javascript" code={`
+const result = FormValidation.validators.creditCard().validate({
+    value: '340653705597107',
+    options: {
+        message: 'The credit card number is not valid',
+    },
+});
+
+// result.valid === true
+// result.meta.type === 'AMERICAN_EXPRESS'
+`} />        
+    </div>
+
+        <p class="lh-copy">or with ES6 module, server side frameworks such as <a class="blue link" href="https://expressjs.com/">Express</a>:</p>
+<SampleCode lang="javascript" code={`
+// You might need to change the importing path
+import creditCard from 'formvalidation/validators/creditCard';
+
+const result = creditCard().validate({
+    value: '340653705597107',
+    options: {
+        message: 'The credit card number is not valid',
+    },
+});
+// result.valid === true
+// result.meta.type === 'AMERICAN_EXPRESS'
+`} />
+    
 </section>
 
 <section class="bt b--light-gray pv5">
@@ -409,3 +430,10 @@ import Testimonial from '../components/Testimonial.svelte';
         </div>
     </div>
 </section>
+
+<script>
+import Typed from '../_demo/typed/Tachyons.svelte';
+import DotDotDot from '../components/DotDotDot.svelte';
+import SampleCode from '../components/SampleCode.svelte';
+import Testimonial from '../components/Testimonial.svelte';
+</script>
