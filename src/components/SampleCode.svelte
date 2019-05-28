@@ -10,7 +10,7 @@ pre {
 {#if highlighted}
 <div class="relative">
     <!--<span class="absolute top-0 right-0 pa2 bg-gray white z-1 pointer" on:click={copy}>{#if copied}Copied{:else}Copy{/if}</span>-->
-    <pre class="pa0 ma0 lh-copy" bind:this={codeEle}>{@html highlighted}</pre>
+    <BrowserFrame><pre class="pa0 ma0 lh-copy" bind:this={codeEle}>{@html highlighted}</pre></BrowserFrame>
 </div>
 {:else}
 <div class="ba b--black-10 bg-washed-blue pa0 ma0">
@@ -22,6 +22,7 @@ pre {
 import { afterUpdate, onMount } from 'svelte';
 
 import highlight from './helpers/highlight';
+import BrowserFrame from './BrowserFrame.svelte';
 import Loader from './Loader.svelte';
 
 let highlighted = '';

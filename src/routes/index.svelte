@@ -39,7 +39,7 @@
     <div class="w-100 center mw7"><Typed /></div>
 </section>
 
-<section class="bt b--light-gray pv5">
+<section class="bt bw2 b--light-gray pv5">
     <div class="mw8 center">
         <DotDotDot />
         <h2 class="f1">Scalable, well tested code base</h2>
@@ -127,7 +127,7 @@ module.exports = {
     </div>
 </section>
 
-<section class="bt b--light-gray pv5">
+<section class="pv5">
     <div class="mw8 center">
         <DotDotDot />
         <h2 class="f1">Rich set of validators</h2>
@@ -156,7 +156,7 @@ const result = FormValidation.validators.creditCard().validate({
             <div>
 <SampleCode lang="javascript" code={`
 // You might need to change the importing path
-import creditCard from 'formvalidation/validators/creditCard';
+import creditCard from 'formvalidation/es6/validators/creditCard';
 
 const result = creditCard().validate({
     value: '340653705597107',
@@ -172,7 +172,7 @@ const result = creditCard().validate({
     </div>
 </section>
 
-<section class="bt b--light-gray pv5">
+<section class="pv5">
     <div class="mw8 center flex">
         <div class="w-70">
             <DotDotDot />
@@ -181,9 +181,59 @@ const result = creditCard().validate({
         </div>
         <div class="w-30"></div>
     </div>
+
+    <div class="mw7 center">   
+        <Tabs titles={["Browser", "ES6 module"]}>
+            <div>
+<SampleCode lang="javascript" code={`
+FormValidation.formValidation(formElement, {
+    fields: {
+        ...
+    },
+    plugins: {
+        trigger: new FormValidation.plugins.Trigger(),
+        submit: new FormValidation.plugins.SubmitButton(),
+        bootstrap: new FormValidation.plugins.Bootstrap(),
+        icon: new FormValidation.plugins.Icon({
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh',
+        }),
+    },
+});
+`} />
+            </div>
+            <div>
+<SampleCode lang="javascript" code={`
+import formValidation from 'formvalidation/es6/core/Core';
+
+import Bootstrap from 'formvalidation/es6/plugins/Bootstrap';
+import Icon from 'formvalidation/es6/plugins/Icon';
+import SubmitButton from 'formvalidation/es6/plugins/SubmitButton';
+import Trigger from 'formvalidation/es6/plugins/Trigger';
+
+formValidation(formElement, {
+    fields: {
+        ...
+    },
+    plugins: {
+        trigger: new Trigger(),
+        submit: new SubmitButton(),
+        bootstrap: new Bootstrap(),
+        icon: new Icon({
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh',
+        }),
+    },
+});
+`} />
+            </div>
+        </Tabs>
+    </div>
 </section>
 
-<section class="bt b--light-gray pv5">
+<section class="pv5">
     <div class="mw8 center">
         <DotDotDot />
         <h2 class="f1">Support any form, CSS framework</h2>
@@ -287,7 +337,7 @@ const result = creditCard().validate({
     </div>
 </section>
 
-<section class="bt b--light-gray pv5">
+<section class="pv5">
     <div class="mw8 center flex">
         <div class="w-70">
             <DotDotDot />
@@ -298,7 +348,7 @@ const result = creditCard().validate({
     </div>
 </section>
 
-<section class="bt b--light-gray pv5">
+<section class="pv5">
     <div class="mw8 center flex">
         <div class="w-30"></div>
         <div class="w-70">
@@ -416,7 +466,7 @@ const result = creditCard().validate({
     </div>
 </section>
 
-<section class="bt b--light-gray pv5">
+<section class="pv5">
     <div class="mw8 center flex">
         <div class="w-60">
             <DotDotDot />
@@ -454,7 +504,7 @@ const result = creditCard().validate({
     </div>
 </section>
 
-<section class="bt b--light-gray pv5">
+<section class="bt bw2 b--light-gray pv5">
     <div class="mw8 center">
         <DotDotDot />
         <h2 class="f1 lh-copy">Used by thousand developers and designers like you</h2>
