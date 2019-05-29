@@ -30,16 +30,23 @@
 <div class="absolute top-0 left-0 h-75 w-100 hero-bg bg-dark-blue"></div>
 
 <section class="w-100 vh-100 tc">
-    <div class="mw9 center pv6 relative near-white">
+    <Header />
+
+    <div class="mw9 center pt6 pb5 relative near-white">
         <h1 class="f1 fw9 lh-copy ma0 lh-title f-headline-l">all new FormValidation</h1>
         <h2 class="f2 mv5">best validation library for JavaScript. zero dependencies.</h2>
         <div class="f3 center mv5"><span class="bg-gold br-pill pa2 near-black">v1.4.0</span></div>
     </div>
 
     <div class="w-100 center mw7"><Typed /></div>
+
+    <div class="mt5 mw6 center">
+        <h3 class="f3">explore more features</h3>
+        <span class="w3 h3 f1">👇</span>
+    </div>
 </section>
 
-<section class="bt b--black-30 pv5">
+<section class="bt b--black-30 pv5" id="features">
     <div class="mw8 center">
         <DotDotDot />
         <h2 class="f1">Scalable, well tested code base</h2>
@@ -242,8 +249,8 @@ formValidation(formElement, {
 </section>
 
 <section class="pv5">
-    <div class="mw8 center flex">
-        <div class="w-50 pr5">
+    <div class="mw8 center flex flex-wrap">
+        <div class="w-50 pr4 pb4 br bb b--black-30">
             <DotDotDot />
             <h2 class="f1">Friendly UX</h2>
             <ul class="list pa0 ma0 lh-copy">
@@ -254,7 +261,7 @@ formValidation(formElement, {
             </ul>
             <p class="lh-copy">Yes! FormValidation provides a built in mechanism to support these requirements.</p>
         </div>
-        <div class="w-50 pr5">
+        <div class="w-50 ph4 pb4 bb b--black-30">
             <DotDotDot />
             <h2 class="f1">Easy to customize</h2>
             <p class="lh-copy">You can adjust almost everything:</p>
@@ -264,12 +271,7 @@ formValidation(formElement, {
                 <li>👌 Their colors when the field is valid or invalid</li>
             </ul>
         </div>
-    </div>
-</section>
-
-<section class="pv5">
-    <div class="mw8 center flex">
-        <div class="w-50 pr5">
+        <div class="w-50 pr4 pt4 br b--black-30">
             <DotDotDot />
             <h2 class="f1">Flexible</h2>
             <ul class="list pa0 ma0 lh-copy">
@@ -278,7 +280,7 @@ formValidation(formElement, {
                 <li>👌 Provide a lot of events that you can hook on</li>
             </ul>
         </div>
-        <div class="w-50 pr5">
+        <div class="w-50 ph4 pt4">
             <DotDotDot />
             <h2 class="f1">Localization</h2>
             <p class="lh-copy">The default error messages of built-in validators are available in 39 language packages. There is also a plugin to support switching between different locales easily.</p>
@@ -397,11 +399,11 @@ formValidation(formElement, {
         <p class="lh-copy">FormValidation plays nicely with other libraries. It has useful APIs to integrate with another libraries.</p>
         <p class="lh-copy">By using the same principle, you can easily integrate it with any UI library out there. To name a few:</p>
         <ul class="list pa0 ma0 lh-copy">
-            <li>👉 Auto complete: autoComplete.js, Typeahead</li>
-            <li>👉 Color pickers: pickr</li>
-            <li>👉 Date pickers: Bootstrap Datepicker, flatpickr, pickadate, Pikaday</li>
-            <li>👉 Editors: CKEditor, Summernote, TinyMCE</li>
-            <li>👉 Tags input: Choices, Chosen, Select2, Selectize, tagify</li>
+            <li>👉 <span class="b">Auto complete</span>: autoComplete.js, Typeahead</li>
+            <li>👉 <span class="b">Color pickers</span>: pickr</li>
+            <li>👉 <span class="b">Date pickers</span>: Bootstrap Datepicker, flatpickr, pickadate, Pikaday</li>
+            <li>👉 <span class="b">Editors</span>: CKEditor, Summernote, TinyMCE</li>
+            <li>👉 <span class="b">Tags input</span>: Choices, Chosen, Select2, Selectize, tagify</li>
         </ul>
     </div>
 </section>
@@ -616,6 +618,7 @@ formValidation(formElement, {
 <script>
 import Typed from '../_demo/typed/Tachyons.svelte';
 import DotDotDot from '../components/DotDotDot.svelte';
+import Header from '../components/Header.svelte';
 import SampleCode from '../components/SampleCode.svelte';
 import Tab from '../components/Tab.svelte';
 import Tabs from '../components/Tabs.svelte';
