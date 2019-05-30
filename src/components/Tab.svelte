@@ -4,8 +4,8 @@
 }
 </style>
 
-<li class="dib bb bw2 {isSelected ? 'b--blue ' : 'b--transparent'}">
-    <button class="tab-button pointer dark-gray ph3 pv2 dib bn" class:b={isSelected} on:click={select}>{title}</button>
+<li class="dib bt bw2 {isSelected ? 'b--blue ' : 'b--transparent'}">
+    <button class="tab-button pointer dark-gray ph3 pv2 dib bn bg-transparent" class:b={isSelected} on:click={select}>{@html title}</button>
 </li>
 
 <script>

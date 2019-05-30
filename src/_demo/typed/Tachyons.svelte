@@ -1,4 +1,4 @@
-<div class="bg-white near-black b--light-gray br2 demo relative tl">
+<div class="near-black b--light-gray br2 demo relative tl">
     <!-- Overlay -->
     <div class="absolute bg-black-40 top-0 left-0 w-100 h-100 flex flex-column items-center justify-center justify-tc tc z-999" id="demoOverlay">
         <span class="pointer" id="playBtn"><i class="fa fa-youtube-play fa-4x"></i></span>

@@ -51,7 +51,8 @@ onMount(() => {
         // Replace the fake tags with the real one
         // If I use <link> or <script> tag inside sample code, Sapper tries to load them
         code.replace(/link-tag/g, 'link')
-            .replace(/script-tag/g, 'script'),
+            .replace(/script-tag/g, 'script')
+            .replace(/fix-html-id/g, 'id'),
         lang
     );
 });

@@ -29,18 +29,27 @@
 
 <div class="absolute top-0 left-0 h-75 w-100 hero-bg bg-dark-blue"></div>
 
-<section class="w-100 vh-100 tc">
+<section class="w-100 vh-100">
     <Header />
 
-    <div class="mw9 center pt6 pb5 relative near-white">
+    <div class="mw9 center tc pt6 pb5 relative near-white">
         <h1 class="f1 fw9 lh-copy ma0 lh-title f-headline-l">all new FormValidation</h1>
         <h2 class="f2 mv5">best validation library for JavaScript. zero dependencies.</h2>
-        <div class="f3 center mv5"><span class="bg-gold br-pill pa2 near-black">v1.4.0</span></div>
+        <div class="f3 mv5"><span class="bg-gold br-pill pa2 near-black">v1.4.0</span></div>
     </div>
 
-    <div class="w-100 center mw7"><Typed /></div>
+    <div class="w-100 center mw7">
+        <div class="relative">
+            <Tabs titles={["<span class='white'>Demo</span>", "<span class='white'>Code</span>"]}>
+                <div class="relative bg-white"><Typed /></div>
+                <div class="dn" style="max-height: 300px; overflow-y: scroll;">
+<SampleCode lang="html" code={sampleDemoCode} />
+                </div>
+            </Tabs>
+        </div>
+    </div>
 
-    <div class="mt5 mw6 center">
+    <div class="mt5 mw6 center tc">
         <h3 class="f3">explore more features</h3>
         <span class="w3 h3 f1">👇</span>
     </div>
@@ -139,7 +148,7 @@ module.exports = {
             .end();
     }
 };
-`} />            
+`} />          
             </div>
         </Tabs>
     </div>
@@ -661,4 +670,6 @@ import SampleCode from '../components/SampleCode.svelte';
 import Tab from '../components/Tab.svelte';
 import Tabs from '../components/Tabs.svelte';
 import Testimonial from '../components/Testimonial.svelte';
+
+import sampleDemoCode from '../_demo/typed/Tachyons.programmatic';
 </script>
