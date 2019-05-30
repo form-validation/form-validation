@@ -15,8 +15,8 @@
 }
 </style>
 
-<div class="flex">
-    <div class="dot mr1 w4"></div>
-    <div class="dot mr1 w2"></div>
-    <div class="dot w1"></div>
+<div class="flex w-25">
+    <div class="dot mr1 w-60"></div>
+    <div class="dot mr1 w-30"></div>
+    <div class="dot w-10"></div>
 </div>

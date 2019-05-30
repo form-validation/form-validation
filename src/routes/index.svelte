@@ -249,21 +249,24 @@ formValidation(formElement, {
 </section>
 
 <section class="pv5">
+    <div class="mw8 center">
+        <DotDotDot />
+        <h2 class="f1">Friendly UX</h2>
+        <ul class="list pa0 ma0 lh-copy">
+            <li>👍 Can it notify user while field is being validated?</li>
+            <li>👍 Can it stop performing remaining validators if there is a validator that the field does not pass?</li>
+            <li>👍 Can it perform the validation only when the field value exceed a given number of characters?</li>
+            <li>👍 Can it postpone the validation for a given number of seconds from the moment user stops fill in the field?</li>
+        </ul>
+        <p class="lh-copy">Yes! FormValidation provides a built in mechanism to support these requirements.</p>
+    </div>
+</section>
+
+<section class="pv5">
     <div class="mw8 center flex flex-wrap">
-        <div class="w-50 pr4 pb4 br bb b--black-30">
+        <div class="w-33 pr4 br bw2 b--black-30">
             <DotDotDot />
-            <h2 class="f1">Friendly UX</h2>
-            <ul class="list pa0 ma0 lh-copy">
-                <li>👍 Can it notify user while field is being validated?</li>
-                <li>👍 Can it stop performing remaining validators if there is a validator that the field does not pass?</li>
-                <li>👍 Can it perform the validation only when the field value exceed a given number of characters?</li>
-                <li>👍 Can it postpone the validation for a given number of seconds from the moment user stops fill in the field?</li>
-            </ul>
-            <p class="lh-copy">Yes! FormValidation provides a built in mechanism to support these requirements.</p>
-        </div>
-        <div class="w-50 ph4 pb4 bb b--black-30">
-            <DotDotDot />
-            <h2 class="f1">Easy to customize</h2>
+            <h2 class="f1">Customizable</h2>
             <p class="lh-copy">You can adjust almost everything:</p>
             <ul class="list pa0 ma0 lh-copy">
                 <li>👌 The error icon position</li>
@@ -271,7 +274,7 @@ formValidation(formElement, {
                 <li>👌 Their colors when the field is valid or invalid</li>
             </ul>
         </div>
-        <div class="w-50 pr4 pt4 br b--black-30">
+        <div class="w-33 ph4 br bw2 b--black-30">
             <DotDotDot />
             <h2 class="f1">Flexible</h2>
             <ul class="list pa0 ma0 lh-copy">
@@ -280,9 +283,9 @@ formValidation(formElement, {
                 <li>👌 Provide a lot of events that you can hook on</li>
             </ul>
         </div>
-        <div class="w-50 ph4 pt4">
+        <div class="w-33 pl4">
             <DotDotDot />
-            <h2 class="f1">Localization</h2>
+            <h2 class="f1">Localizable</h2>
             <p class="lh-copy">The default error messages of built-in validators are available in 39 language packages. There is also a plugin to support switching between different locales easily.</p>
         </div>
     </div>
@@ -624,6 +627,7 @@ formValidation(formElement, {
                 <li><a href="/guide/validators/" class="link">Validators</a></li>
                 <li><a href="/guide/plugins/" class="link">Plugins</a></li>
                 <li><a href="/guide/api/" class="link">API</a></li>
+                <li><a href="/guide/events/" class="link">Events</a></li>
                 <li><a href="/guide/examples/" class="link">Examples</a></li>
             </ul>
         </div>
@@ -637,7 +641,6 @@ formValidation(formElement, {
             <div class="f4 fw6 mv3">About</div>
             <div class="pb2">&copy; 2013 &mdash; 2019 Nguyen Huu Phuoc</div>
             <div class="pb2">all rights reserved.</div>
-            <div class="pb2">handcrafted with <span class="dark-red"><i class="fa fa-heart"></i></span></div>
             <div class="flex items-center">
                 <a href="https://twitter.com/nghuuphuoc" class="dib dim link black-70 ba b-black-70 br-pill w2 h2 flex items-center justify-center mr2">
                     <svg class="w-60 h-60" viewBox="0 0 24 24" style="stroke: rgb(0, 0, 0); fill: none; stroke-width: 1; stroke-linecap: round; stroke-linejoin: round"><path d="M23,6.628l-2-0.5l1-2l-2.464,0.7c-1.809-1.688-4.644-1.589-6.332,0.22c-0.78,0.836-1.21,1.938-1.204,3.08v1 c-3.539,0.73-6.634-1.2-9.5-4.5c-0.5,2.667,0,4.667,1.5,6l-3-0.5c0.405,2.069,1.362,3.7,4,4l-2.5,1c1,2,2.566,2.31,5,2.5 c-1.893,1.353-4.174,2.054-6.5,2c12.755,5.669,20-2.664,20-10V8.3L23,6.628z"></path></svg>
