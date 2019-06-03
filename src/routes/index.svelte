@@ -42,8 +42,8 @@
         <div class="relative">
             <Tabs titles={["<span class='white'>Demo</span>", "<span class='white'>Code</span>"]}>
                 <div class="relative bg-white"><Typed /></div>
-                <div class="dn" style="max-height: 300px; overflow-y: scroll;">
-<SampleCode lang="html" code={sampleDemoCode} />
+                <div class="dn">
+<SampleCode lang="html" code={sampleDemoCode} maxHeight="300px" />
                 </div>
             </Tabs>
         </div>
