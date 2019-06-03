@@ -1,0 +1,25 @@
+<div class="db dt-ns w-100 center mw8">
+    <div class="db dtc-ns w-50 tl v-mid pv3">
+        <a href="/" class="f5 fw6 dim link black-70" title="Home">FormValidation</a>
+        <span class="nowrap f6 fw2 bg-blue white br2 pa1">v1.4.0</span>
+        <a href="/updates/" class="blue dim link">what's new?</a>
+    </div>
+    <nav class="db dtc-ns w-100 v-mid tl tr-ns">
+        <a href="/#features" class="f6 fw6 hover-blue link black-70 mr4-l pa3 {path.startsWith('/features')  ? 'b--blue b bb bw1' : ''}" title="Features">Features</a>
+        <a href="/download/" class="f6 fw6 hover-blue link black-70 mr4-l pa3 {path.startsWith('/download')  ? 'b--blue b bb bw1' : ''}" title="Download">Download</a>
+        <a href="/guide/" class="f6 fw6 hover-blue link black-70 mr4-l pa3 {path.startsWith('/guide')  ? 'b--blue b bb bw1' : ''}" title="Guide">Guide</a>
+        <a href="/updates/" class="f6 fw6 hover-blue link black-70 pa3 {path.startsWith('/updates')  ? 'b--blue b bb bw1' : ''}" title="Updates">Updates <HasUpdate /></a>
+    </nav>
+</div>
+
+<script>
+import { onMount } from 'svelte';
+
+import HasUpdate from './HasUpdate.svelte';
+
+let path = '';
+
+onMount(() => {
+    path = window.location.pathname;
+});
+</script>

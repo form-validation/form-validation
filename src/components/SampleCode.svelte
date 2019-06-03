@@ -18,7 +18,7 @@ pre {
 {/if}
 
 <script>
-import { afterUpdate, onMount } from 'svelte';
+import { onMount } from 'svelte';
 
 import highlight from './helpers/highlight';
 import BrowserFrame from './BrowserFrame.svelte';
