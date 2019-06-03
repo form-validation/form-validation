@@ -1,6 +1,6 @@
 <Layout>
     <div class="flex">
-        <div class="w-25 pv3 br b--light-gray">
+        <div class="w-25 pv3 br b--black-30">
             <ul class="list pa0 ma0 f3 lh-copy">
                 <li>
                     <a href="/guide/getting-started/" class="mv2 pl3 fw6 db link">Getting Started</a>
