@@ -17,7 +17,7 @@
 }
 </style>
 
-<div class="browser-frame br2">
+<div class="br2 browser-frame">
     <div class="flex pa2">
         <div class="br-100 mr1 btn close"></div>
         <div class="br-100 mr1 btn min"></div>

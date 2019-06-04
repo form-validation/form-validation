@@ -1,6 +1,6 @@
 <ul class="list pl0 mb0 list pa0 ma0 flex items-center justify-center">
     {#each titles as title, i}
-    <Tab title={title} isSelected={i === activeIndex} on:active={active(i)}/>
+    <Tab title={title} isSelected={i === activeIndex} on:active={active(i)} />
     {/each}
 </ul>
 <div bind:this={contentEle}>
@@ -8,9 +8,11 @@
 </div>
 
 <script>
-import { onMount } from 'svelte';
+import { createEventDispatcher, onMount } from 'svelte';
 
 import Tab from './Tab.svelte';
+
+const dispatch = createEventDispatcher();
 
 let contentEle;
 let tabs;
@@ -25,6 +27,10 @@ const active = index => e => {
     currentTab.classList.add('dn');
     currentTab = tabs[index];
     currentTab.classList.remove('dn');
+
+    dispatch('activateTab', {
+        index,
+    });
 };
 
 onMount(() => {
