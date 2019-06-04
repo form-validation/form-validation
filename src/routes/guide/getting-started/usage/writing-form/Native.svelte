@@ -58,7 +58,7 @@ onMount(() => {
         },
         plugins: {
             demoFrame: new DemoFrame({
-                from: '/guide/getting-started/usage/writing-form/Native',
+                sender: '/guide/getting-started/usage/writing-form/Native',
                 sampleCode: sampleCode,
             }),
         },

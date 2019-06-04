@@ -116,7 +116,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
         <Tip>The options can be updated on the fly with the <a href="/guide/api/update-validator-option/" class="blue dim link">updateValidatorOption()</a> method</Tip>
         <p class="lh-copy">You don't need to remember the options of any validator, because you can refer to them in each <a href="/guide/validators/" class="blue dim link">validator</a> page.</p>
         <p class="lh-copy">Here is what we have been following so far:</p>
-        <Demo prefix="/guide/getting-started/usage/writing-form" frameworks={['Native']} />
+        <Demo prefix="/guide/getting-started/usage/writing-form" selected="Native" frameworks={['Native']} />
         <p class="lh-copy"><span class="b">Hey, I try to play with the form</span>. Neither clicking the <span class="i">Submit</span> button nor typing on the username or password field does perform any validations.</p>
         <p class="lh-copy">That is the time to register plugins.</p>
     </section>
@@ -231,7 +231,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
 </html>
 `} />
         <p class="lh-copy">Finally, you can try it in the following form to see how the validation works. Either clicking the <span class="i">Submit</span> button or filling in the fields to see it in action.</p>
-        <Demo prefix="/guide/getting-started/usage/adding-plugins" frameworks={['Native']} />
+        <Demo prefix="/guide/getting-started/usage/adding-plugins" selected="Native" frameworks={['Native']} />
     </section>
 
     <section class="mv5">
@@ -294,7 +294,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
 `} /> 
         <Tip heading="Note"><code>Bootstrap.min.js</code> is the plugin provided by FormValidation. It is NOT the same as <code>Bootstrap(.min).js</code> file provided by Bootstrap framework.</Tip>
         <p class="lh-copy">You can see the sample code demonstrating for each plugin in the following example:</p>
-        <!--<Demo prefix="/guide/getting-started/usage/frameworks" supportNativeForm=true frameworks={['Bootstrap', 'Bootstrap3', 'Bulma', 'Foundation', 'Materialize', 'Milligram', 'Mini', 'Mui', 'Pure', 'Semantic', 'Shoelace', 'Spectre', 'Tachyons', 'Turret', 'Uikit']} />-->
+        <Demo prefix="/guide/getting-started/usage/frameworks" selected="Bootstrap" frameworks={['Bootstrap', 'Bootstrap3', 'Bulma', 'Foundation', 'Materialize', 'Milligram', 'Mini', 'Mui', 'Pure', 'Semantic', 'Shoelace', 'Spectre', 'Tachyons', 'Turret', 'Uikit', 'Native']} />
         
         <p class="lh-copy">Refer to each plugin from the table below if you want to get supports for particular CSS framework.</p>
         <table class="collapse ba br2 b--black-10 pv2 ph3 w-100 mb4">

@@ -13,8 +13,8 @@ export default class DemoFrame extends Plugin {
             .on('core.field.notvalidated', this.updateHeight);
 
         window.parent.postMessage({
-            type: 'SAMPLE_CODE',
-            from: this.opts.from,
+            channel: 'SAMPLE_CODE',
+            sender: this.opts.sender,
             data: this.opts.sampleCode,
         }, '*');
     }
@@ -27,8 +27,8 @@ export default class DemoFrame extends Plugin {
     }
     onFieldStatusChanged() {
         window.parent.postMessage({
-            type: 'DEMO_UPDATE_STATUS',
-            from: this.opts.from,
+            channel: 'DEMO_UPDATE_STATUS',
+            sender: this.opts.sender,
             data: true,
         }, '*');
     }

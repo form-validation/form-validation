@@ -1,5 +1,5 @@
 <DemoLayout framework="native">
-    <form id="loginForm" method="POST">
+    <form id="demoForm" method="post">
         <div class="mb2">
             <label>Username</label>
             <input type="text" name="username" class="input-reset ba b--black-20 pa2 mb2 db w-30" />
@@ -10,7 +10,7 @@
             <input type="password" name="password" class="input-reset ba b--black-20 pa2 mb2 db w-30" />
         </div>
 
-        <button class="ba b--black-20 bg-blue white ph3 pv2 br2" type="submit">Submit</button>
+        <button type="submit" class="ba b--black-20 bg-blue white ph3 pv2 br2">Submit</button>
     </form>
 </DemoLayout>
 
@@ -20,16 +20,14 @@ import { onMount } from 'svelte';
 import formValidation from 'formvalidation/es6/core/Core';
 import DemoFrame from 'formvalidation/es6/plugins/DemoFrame';
 import Message from 'formvalidation/es6/plugins/Message';
-import SubmitButton from 'formvalidation/es6/plugins/SubmitButton';
 import Trigger from 'formvalidation/es6/plugins/Trigger';
+import SubmitButton from 'formvalidation/es6/plugins/SubmitButton';
 
 import sampleCode from './Native.programmatic';
 import DemoLayout from '../../../../../components/DemoLayout.svelte';
 
 onMount(() => {
-    const form = document.getElementById('loginForm');
-
-    const fv = formValidation(form, {
+    const fv = formValidation(document.getElementById('demoForm'), {
         fields: {
             username: {
                 validators: {
@@ -39,12 +37,12 @@ onMount(() => {
                     stringLength: {
                         min: 6,
                         max: 30,
-                        message: 'The username must be more than 6 and less than 30 characters long',
+                        message: 'The username must be more than 6 and less than 30 characters long'
                     },
                     regexp: {
                         regexp: /^[a-zA-Z0-9_]+$/,
-                        message: 'The username can only consist of alphabetical, number and underscore',
-                    },
+                        message: 'The username can only consist of alphabetical, number and underscore'
+                    }
                 }
             },
             password: {
@@ -54,20 +52,20 @@ onMount(() => {
                     },
                     stringLength: {
                         min: 8,
-                        message: 'The password must have at least 8 characters',
+                        message: 'The password must have at least 8 characters'
                     },
                 }
             },
         },
         plugins: {
-            demoFrame: new DemoFrame({
-                sender: '/guide/getting-started/usage/adding-plugins/Native',
-                sampleCode: sampleCode,
-            }),
             trigger: new Trigger(),
             submitButton: new SubmitButton(),
             message: new Message({
                 clazz: 'dark-red lh-copy'
+            }),
+            demoFrame: new DemoFrame({
+                sender: '/guide/getting-started/usage/frameworks/Native',
+                sampleCode: sampleCode,
             }),
         },
     });

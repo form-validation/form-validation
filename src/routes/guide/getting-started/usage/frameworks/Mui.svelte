@@ -1,0 +1,102 @@
+<DemoLayout framework="mui">
+    <div class="mui-container-fluid">
+        <form id="demoForm" method="post">
+            <div class="mui-row">
+                <div class="mui-col-md-12 mui-textfield">
+                    <input type="text" name="username" />
+                    <label>Username</label>
+                </div>
+            </div>
+
+            <div class="mui-row">
+                <div class="mui-col-md-12 mui-textfield">
+                    <input type="password" name="password" />
+                    <label>Password</label>
+                </div>
+            </div>
+
+            <div class="mui-row">
+                <div class="mui-col-md-12">
+                    <button type="submit" class="mui-btn mui-btn--primary">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</DemoLayout>
+
+<script>
+import { onMount } from 'svelte';
+
+import formValidation from 'formvalidation/es6/core/Core';
+import DemoFrame from 'formvalidation/es6/plugins/DemoFrame';
+import Icon from 'formvalidation/es6/plugins/Icon';
+import Trigger from 'formvalidation/es6/plugins/Trigger';
+import Mui from 'formvalidation/es6/plugins/Mui';
+import SubmitButton from 'formvalidation/es6/plugins/SubmitButton';
+
+import sampleCode from './Mui.programmatic';
+import DemoLayout from '../../../../../components/DemoLayout.svelte';
+
+onMount(() => {
+    const fv = formValidation(document.getElementById('demoForm'), {
+        fields: {
+            username: {
+                validators: {
+                    notEmpty: {
+                        message: 'The username is required'
+                    },
+                    stringLength: {
+                        min: 6,
+                        max: 30,
+                        message: 'The username must be more than 6 and less than 30 characters long'
+                    },
+                    regexp: {
+                        regexp: /^[a-zA-Z0-9_]+$/,
+                        message: 'The username can only consist of alphabetical, number and underscore'
+                    }
+                }
+            },
+            password: {
+                validators: {
+                    notEmpty: {
+                        message: 'The password is required'
+                    },
+                    stringLength: {
+                        min: 8,
+                        message: 'The password must have at least 8 characters'
+                    },
+                }
+            },
+        },
+        plugins: {
+            trigger: new Trigger(),
+            mui: new Mui({
+                rowSelector: (field, ele) => {
+                    switch (field) {
+                        case 'firstName': 
+                        case 'lastName':
+                            return '.mui-col-md-6';
+                        default:
+                            return '.mui-row';
+                    }
+                }
+            }),
+            submitButton: new SubmitButton(),
+            icon: new Icon({
+                valid: 'fa fa-check',
+                invalid: 'fa fa-times',
+                validating: 'fa fa-refresh',
+            }),
+            demoFrame: new DemoFrame({
+                sender: '/guide/getting-started/usage/frameworks/Mui',
+                sampleCode: sampleCode,
+            }),
+        },
+    });
+
+    return () => {
+        fv.destroy();
+    };
+});
+</script>
+    

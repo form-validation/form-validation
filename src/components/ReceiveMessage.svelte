@@ -8,11 +8,11 @@ import { createEventDispatcher } from 'svelte';
 const dispatch = createEventDispatcher();
 
 // Props
-let type;
-let from;
+let channel;
+let sender;
 
 const onMessage = (e) => {
-    if (e.data.type === type && e.data.from === from) {
+    if (e.data.channel === channel && e.data.sender === sender) {
         dispatch('received', {
             data: e.data.data,
         });
@@ -20,7 +20,7 @@ const onMessage = (e) => {
 };
 
 export {
-    type,
-    from,
+    channel,
+    sender,
 };
 </script>
