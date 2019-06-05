@@ -60,4 +60,8 @@ onMount(() => {
 
     loadScript();
 });
+
+export {
+    urls,
+};
 </script>
