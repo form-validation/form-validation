@@ -8,6 +8,12 @@ export {
 };
 </script>
 
+<style>
+:global(form) {
+    padding: 0;
+}
+</style>
+
 <ResourceLoader
     urls={[
         'https://cdnjs.cloudflare.com/ajax/libs/spectre.css/0.5.8/spectre.min.css',
