@@ -172,7 +172,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
             <li class="w-50 ph3 mv3">
                 <div class="pa3 br2 shadow-4 h-100 bg-blue">
                     <a href="/guide/plugins/message/" class="link pointer white db h-100">
-                        <div class="f4 fw6 tc">Message</div>
+                        <div class="f4 fw6">Message</div>
                         <p class="lh-copy">Display error message that is defined in each validator options</p>
                     </a>
                 </div>
@@ -180,7 +180,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
             <li class="w-50 ph3 mv3">
                 <div class="pa3 br2 shadow-4 h-100 bg-red">
                     <a href="/guide/plugins/trigger/" class="link pointer white db h-100">
-                        <div class="f4 fw6 tc">Trigger</div>
+                        <div class="f4 fw6">Trigger</div>
                         <p class="lh-copy">Indicate the events which the validation will be executed.</p>
                         <p class="lh-copy">For example, perform validations whenever user focus on field and press any key</p>
                     </a>
@@ -189,7 +189,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
             <li class="w-50 ph3 mv3">
                 <div class="pa3 br2 shadow-4 h-100 bg-gold">
                     <a href="/guide/plugins/submit-button/" class="link pointer white db h-100">
-                        <div class="f4 fw6 tc">SubmitButton</div>
+                        <div class="f4 fw6">SubmitButton</div>
                         <p class="lh-copy">Automatically validate the form when pressing its Submit button</p>
                     </a>
                 </div>
@@ -197,7 +197,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
             <li class="w-50 ph3 mv3">
                 <div class="pa3 br2 shadow-4 h-100 bg-green">
                     <a href="/guide/plugins/default-submit/" class="link pointer white db h-100">
-                        <div class="f4 fw6 tc">DefaultSubmit</div>
+                        <div class="f4 fw6">DefaultSubmit</div>
                         <p class="lh-copy">Submit the form if all fields are valid after validating</p>
                     </a>
                 </div>
@@ -314,7 +314,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
 
         <div class="list pa0 flex flex-wrap">
         {#each ['Bootstrap', 'Bootstrap3', 'Bulma', 'Foundation', 'Materialize', 'Milligram', 'Mini', 'Mui', 'Pure', 'Semantic', 'Shoelace', 'Spectre', 'Tachyons', 'Turret', 'Uikit'] as framework, i}
-            <div class="w-33 ph3 mv3 tc">
+            <div class="w-33 ph3 mv3">
                 <div class="pa3 br2 shadow-4 h-100" class:bg-blue={i % 4 === 0} class:bg-red={i % 4 === 1} class:bg-gold={i % 4 === 2} class:bg-green={i % 4 === 3}>
                     <a href="/guide/plugins/{framework.toLowerCase()}/" class="link pointer white db h-100">
                         <div class="f4 fw6">{framework}</div>
