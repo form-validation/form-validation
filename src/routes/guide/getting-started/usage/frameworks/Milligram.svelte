@@ -1,4 +1,4 @@
-<DemoLayout framework="milligram">
+<MilligramLayout onLoaded={onLoaded}>
     <form id="demoForm" method="post">
         <div class="row">
             <div class="column column-25">
@@ -25,7 +25,7 @@
             </div>
         </div>
     </form>
-</DemoLayout>
+</MilligramLayout>
 
 <script>
 import { onMount } from 'svelte';
@@ -38,10 +38,12 @@ import Milligram from 'formvalidation/es6/plugins/Milligram';
 import SubmitButton from 'formvalidation/es6/plugins/SubmitButton';
 
 import sampleCode from './Milligram.programmatic';
-import DemoLayout from '../../../../../components/DemoLayout.svelte';
+import MilligramLayout from '../../../../../components/demo/MilligramLayout.svelte';
 
-onMount(() => {
-    const fv = formValidation(document.getElementById('demoForm'), {
+let fv;
+
+const onLoaded = () => {
+    fv = formValidation(document.getElementById('demoForm'), {
         fields: {
             username: {
                 validators: {
@@ -86,9 +88,5 @@ onMount(() => {
             }),
         },
     });
-
-    return () => {
-        fv.destroy();
-    };
-});
+};
 </script>

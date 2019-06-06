@@ -1,4 +1,4 @@
-<DemoLayout framework="shoelace">
+<ShoelaceLayout onLoaded={onLoaded}>
     <form id="demoForm" class="form-horizontal" method="POST">
         <div class="row input-field">
             <label class="col-3 control-label">Username</label>
@@ -20,7 +20,7 @@
             </div>
         </div>
     </form>
-</DemoLayout>
+</ShoelaceLayout>
 
 <script>
 import { onMount } from 'svelte';
@@ -33,10 +33,12 @@ import Shoelace from 'formvalidation/es6/plugins/Shoelace';
 import SubmitButton from 'formvalidation/es6/plugins/SubmitButton';
 
 import sampleCode from './Shoelace.programmatic';
-import DemoLayout from '../../../../../components/DemoLayout.svelte';
+import ShoelaceLayout from '../../../../../components/demo/ShoelaceLayout.svelte';
 
-onMount(() => {
-    const fv = formValidation(document.getElementById('demoForm'), {
+let fv;
+
+const onLoaded = () => {
+    fv = formValidation(document.getElementById('demoForm'), {
         fields: {
             username: {
                 validators: {
@@ -81,9 +83,5 @@ onMount(() => {
             }),
         },
     });
-
-    return () => {
-        fv.destroy();
-    };
-});
+};
 </script>

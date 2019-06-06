@@ -1,4 +1,4 @@
-<DemoLayout framework="foundation">
+<FoundationLayout onLoaded={onLoaded}>
     <form id="demoForm">
         <div class="grid-container">
             <div class="grid-x grid-padding-x">
@@ -26,7 +26,7 @@
             </div>
         </div>
     </form>
-</DemoLayout>
+</FoundationLayout>
 
 <script>
 import { onMount } from 'svelte';
@@ -39,10 +39,12 @@ import Foundation from 'formvalidation/es6/plugins/Foundation';
 import SubmitButton from 'formvalidation/es6/plugins/SubmitButton';
 
 import sampleCode from './Foundation.programmatic';
-import DemoLayout from '../../../../../components/DemoLayout.svelte';
+import FoundationLayout from '../../../../../components/demo/FoundationLayout.svelte';
 
-onMount(() => {
-    const fv = formValidation(document.getElementById('demoForm'), {
+let fv;
+
+const onLoaded = () => {
+    fv = formValidation(document.getElementById('demoForm'), {
         fields: {
             username: {
                 validators: {
@@ -87,9 +89,5 @@ onMount(() => {
             }),
         },
     });
-
-    return () => {
-        fv.destroy();
-    };
-});
+};
 </script>

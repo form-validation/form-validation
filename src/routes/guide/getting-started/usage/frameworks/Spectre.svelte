@@ -1,4 +1,4 @@
-<DemoLayout framework="spectre">
+<SpectreLayout onLoaded={onLoaded}>
     <form id="demoForm" class="form-horizontal" method="POST">
         <div class="form-group">
             <div class="col-3">
@@ -29,7 +29,7 @@
             </div>
         </div>
     </form>
-</DemoLayout>
+</SpectreLayout>
 
 <script>
 import { onMount } from 'svelte';
@@ -42,10 +42,12 @@ import Spectre from 'formvalidation/es6/plugins/Spectre';
 import SubmitButton from 'formvalidation/es6/plugins/SubmitButton';
 
 import sampleCode from './Spectre.programmatic';
-import DemoLayout from '../../../../../components/DemoLayout.svelte';
+import SpectreLayout from '../../../../../components/demo/SpectreLayout.svelte';
 
-onMount(() => {
-    const fv = formValidation(document.getElementById('demoForm'), {
+let fv;
+
+const onLoaded = () => {
+    fv = formValidation(document.getElementById('demoForm'), {
         fields: {
             username: {
                 validators: {
@@ -90,9 +92,5 @@ onMount(() => {
             }),
         },
     });
-
-    return () => {
-        fv.destroy();
-    };
-});
+};
 </script>

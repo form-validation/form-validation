@@ -17,6 +17,8 @@ export default class DemoFrame extends Plugin {
             sender: this.opts.sender,
             data: this.opts.sampleCode,
         }, '*');
+
+        this.onFieldStatusChanged();
     }
     uninstall() {
         this.core

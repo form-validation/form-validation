@@ -1,4 +1,4 @@
-<DemoLayout framework="bootstrap">
+<BootstrapLayout onLoaded={onLoaded}>
     <form id="demoForm" method="POST">
         <div class="form-group row">
             <label class="col-sm-3 col-form-label">Username</label>
@@ -20,7 +20,7 @@
             </div>
         </div>
     </form>
-</DemoLayout>
+</BootstrapLayout>
 
 <script>
 import { onMount } from 'svelte';
@@ -33,9 +33,9 @@ import Bootstrap from 'formvalidation/es6/plugins/Bootstrap';
 import SubmitButton from 'formvalidation/es6/plugins/SubmitButton';
 
 import sampleCode from './Bootstrap.programmatic';
-import DemoLayout from '../../../../../components/DemoLayout.svelte';
+import BootstrapLayout from '../../../../../components/demo/BootstrapLayout.svelte';
 
-onMount(() => {
+const onLoaded = () => {
     const fv = formValidation(document.getElementById('demoForm'), {
         fields: {
             username: {
@@ -81,9 +81,5 @@ onMount(() => {
             }),
         },
     });
-
-    return () => {
-        fv.destroy();
-    };
-});
+};
 </script>

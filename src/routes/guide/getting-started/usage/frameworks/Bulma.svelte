@@ -17,7 +17,7 @@
 }
 </style>
 
-<DemoLayout framework="bulma">
+<BulmaLayout onLoaded={onLoaded}>
     <form id="demoForm" method="post">
         <div class="field is-horizontal">
             <div class="field-label">
@@ -56,7 +56,7 @@
             </div>
         </div>
     </form>
-</DemoLayout>
+</BulmaLayout>
     
 <script>
 import { onMount } from 'svelte';
@@ -69,10 +69,12 @@ import Bulma from 'formvalidation/es6/plugins/Bulma';
 import SubmitButton from 'formvalidation/es6/plugins/SubmitButton';
 
 import sampleCode from './Bulma.programmatic';
-import DemoLayout from '../../../../../components/DemoLayout.svelte';
+import BulmaLayout from '../../../../../components/demo/BulmaLayout.svelte';
 
-onMount(() => {
-    const fv = formValidation(document.getElementById('demoForm'), {
+let fv;
+
+const onLoaded = () => {
+    fv = formValidation(document.getElementById('demoForm'), {
         fields: {
             username: {
                 validators: {
@@ -117,10 +119,6 @@ onMount(() => {
             }),
         },
     });
-
-    return () => {
-        fv.destroy();
-    };
-});
+};
 </script>
     

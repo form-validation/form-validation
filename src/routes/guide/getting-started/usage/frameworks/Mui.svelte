@@ -1,4 +1,4 @@
-<DemoLayout framework="mui">
+<MuiLayout onLoaded={onLoaded}>
     <div class="mui-container-fluid">
         <form id="demoForm" method="post">
             <div class="mui-row">
@@ -22,7 +22,7 @@
             </div>
         </form>
     </div>
-</DemoLayout>
+</MuiLayout>
 
 <script>
 import { onMount } from 'svelte';
@@ -35,10 +35,12 @@ import Mui from 'formvalidation/es6/plugins/Mui';
 import SubmitButton from 'formvalidation/es6/plugins/SubmitButton';
 
 import sampleCode from './Mui.programmatic';
-import DemoLayout from '../../../../../components/DemoLayout.svelte';
+import MuiLayout from '../../../../../components/demo/MuiLayout.svelte';
 
-onMount(() => {
-    const fv = formValidation(document.getElementById('demoForm'), {
+let fv;
+
+const onLoaded = () => {
+    fv = formValidation(document.getElementById('demoForm'), {
         fields: {
             username: {
                 validators: {
@@ -93,10 +95,6 @@ onMount(() => {
             }),
         },
     });
-
-    return () => {
-        fv.destroy();
-    };
-});
+};
 </script>
     

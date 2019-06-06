@@ -1,30 +1,26 @@
-<DemoLayout framework="materialize">
-    <ResourceLoader urls={[
-        'https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js',
-    ]}>
-        <form id="demoForm" method="post">
-            <div class="row">
-                <div class="input-field col s12">
-                    <input type="text" name="username" />
-                    <label>Username</label>
-                </div>
+<MaterializeLayout onLoaded={onLoaded}>
+    <form id="demoForm" method="post">
+        <div class="row">
+            <div class="input-field col s12">
+                <input type="text" name="username" />
+                <label>Username</label>
             </div>
+        </div>
 
-            <div class="row">
-                <div class="input-field col s12">
-                    <input type="password" name="password" />
-                    <label>Password</label>
-                </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <input type="password" name="password" />
+                <label>Password</label>
             </div>
+        </div>
 
-            <div class="row">
-                <div class="col s12">
-                    <button type="submit" class="btn waves-effect waves-light">Submit</button>
-                </div>
+        <div class="row">
+            <div class="col s12">
+                <button type="submit" class="btn waves-effect waves-light">Submit</button>
             </div>
-        </form>
-    </ResourceLoader>
-</DemoLayout>
+        </div>
+    </form>
+</MaterializeLayout>
 
 <script>
 import { onMount } from 'svelte';
@@ -37,15 +33,12 @@ import Materialize from 'formvalidation/es6/plugins/Materialize';
 import SubmitButton from 'formvalidation/es6/plugins/SubmitButton';
 
 import sampleCode from './Materialize.programmatic';
-import DemoLayout from '../../../../../components/DemoLayout.svelte';
-import ResourceLoader from '../../../../../components/ResourceLoader.svelte';
+import MaterializeLayout from '../../../../../components/demo/MaterializeLayout.svelte';
 
-onMount(() => {
-    window.addEventListener('load', () => {
-        M.AutoInit();
-    });
+let fv;
 
-    const fv = formValidation(document.getElementById('demoForm'), {
+const onLoaded = () => {
+    fv = formValidation(document.getElementById('demoForm'), {
         fields: {
             username: {
                 validators: {
@@ -90,10 +83,6 @@ onMount(() => {
             }),
         },
     });
-
-    return () => {
-        fv.destroy();
-    };        
-});
+};
 </script>
     

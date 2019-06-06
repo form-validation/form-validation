@@ -1,4 +1,4 @@
-<DemoLayout framework="pure">
+<PureLayout onLoaded={onLoaded}>
     <div class="pure-g">
         <div class="pure-u-1">
             <form id="demoForm" class="pure-form pure-form-aligned" method="POST">
@@ -19,7 +19,7 @@
             </form>
         </div>
     </div>
-</DemoLayout>
+</PureLayout>
 
 <script>
 import { onMount } from 'svelte';
@@ -32,10 +32,12 @@ import Pure from 'formvalidation/es6/plugins/Pure';
 import SubmitButton from 'formvalidation/es6/plugins/SubmitButton';
 
 import sampleCode from './Pure.programmatic';
-import DemoLayout from '../../../../../components/DemoLayout.svelte';
+import PureLayout from '../../../../../components/demo/PureLayout.svelte';
 
-onMount(() => {
-    const fv = formValidation(document.getElementById('demoForm'), {
+let fv;
+
+const onLoaded = () => {
+    fv = formValidation(document.getElementById('demoForm'), {
         fields: {
             username: {
                 validators: {
@@ -80,9 +82,5 @@ onMount(() => {
             }),
         },
     });
-
-    return () => {
-        fv.destroy();
-    };
-});
+};
 </script>

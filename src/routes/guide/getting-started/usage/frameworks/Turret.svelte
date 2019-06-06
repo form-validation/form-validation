@@ -1,4 +1,4 @@
-<DemoLayout framework="turret">
+<TurretLayout onLoaded={onLoaded}>
     <form id="demoForm" method="post" class="fv-stacked-form">
         <div class="field">
             <label>Username</label>
@@ -14,7 +14,7 @@
             <button type="submit" class="button button-primary">Submit</button>
         </div>
     </form>
-</DemoLayout>
+</TurretLayout>
 
 <script>
 import { onMount } from 'svelte';
@@ -27,10 +27,12 @@ import Turret from 'formvalidation/es6/plugins/Turret';
 import SubmitButton from 'formvalidation/es6/plugins/SubmitButton';
 
 import sampleCode from './Turret.programmatic';
-import DemoLayout from '../../../../../components/DemoLayout.svelte';
+import TurretLayout from '../../../../../components/demo/TurretLayout.svelte';
 
-onMount(() => {
-    const fv = formValidation(document.getElementById('demoForm'), {
+let fv;
+
+const onLoaded = () => {
+    fv = formValidation(document.getElementById('demoForm'), {
         fields: {
             username: {
                 validators: {
@@ -75,9 +77,5 @@ onMount(() => {
             }),
         },
     });
-
-    return () => {
-        fv.destroy();
-    };
-});
+};
 </script>

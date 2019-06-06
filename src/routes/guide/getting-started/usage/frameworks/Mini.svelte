@@ -1,4 +1,4 @@
-<DemoLayout framework="mini">
+<MiniLayout onLoaded={onLoaded}>
     <form id="demoForm" method="post" style="background: #FFF; border: none; margin: 0;">
         <div class="row">
             <div class="col-sm-3">
@@ -24,7 +24,7 @@
             </div>
         </div>
     </form>
-</DemoLayout>
+</MiniLayout>
 
 <script>
 import { onMount } from 'svelte';
@@ -37,10 +37,12 @@ import Mini from 'formvalidation/es6/plugins/Mini';
 import SubmitButton from 'formvalidation/es6/plugins/SubmitButton';
 
 import sampleCode from './Mini.programmatic';
-import DemoLayout from '../../../../../components/DemoLayout.svelte';
+import MiniLayout from '../../../../../components/demo/MiniLayout.svelte';
 
-onMount(() => {
-    const fv = formValidation(document.getElementById('demoForm'), {
+let fv;
+
+const onLoaded = () => {
+    fv = formValidation(document.getElementById('demoForm'), {
         fields: {
             username: {
                 validators: {
@@ -85,9 +87,5 @@ onMount(() => {
             }),
         },
     });
-
-    return () => {
-        fv.destroy();
-    };
-});
+};
 </script>

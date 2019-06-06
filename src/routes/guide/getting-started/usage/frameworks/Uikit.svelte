@@ -1,16 +1,4 @@
-<style>
-:global(.uk-form-horizontal .uk-form-label) {
-    width: 200px;
-    margin-top: 7px;
-    float: left;
-}
-
-:global(.uk-form-horizontal .uk-form-controls) {
-    margin-left: 215px;
-}
-</style>
-
-<DemoLayout framework="uikit">
+<UikitLayout onLoaded={onLoaded}>
     <form id="demoForm" class="uk-form-horizontal" method="post">
         <div class="uk-margin">
             <label class="uk-form-label">Username</label>
@@ -33,7 +21,7 @@
             </div>
         </div>
     </form>
-</DemoLayout>
+</UikitLayout>
 
 <script>
 import { onMount } from 'svelte';
@@ -46,10 +34,12 @@ import Uikit from 'formvalidation/es6/plugins/Uikit';
 import SubmitButton from 'formvalidation/es6/plugins/SubmitButton';
 
 import sampleCode from './Uikit.programmatic';
-import DemoLayout from '../../../../../components/DemoLayout.svelte';
+import UikitLayout from '../../../../../components/demo/UikitLayout.svelte';
 
-onMount(() => {
-    const fv = formValidation(document.getElementById('demoForm'), {
+let fv;
+
+const onLoaded = () => {
+    fv = formValidation(document.getElementById('demoForm'), {
         fields: {
             username: {
                 validators: {
@@ -94,9 +84,5 @@ onMount(() => {
             }),
         },
     });
-
-    return () => {
-        fv.destroy();
-    };
-});
+};
 </script>

@@ -1,16 +1,4 @@
-<style>
-:global(.ui.form .fields) {
-    margin: 0 -.5em 1em;
-}
-:global(.ui.form:not(.unstackable) .fields:not(.unstackable)>.four.wide.field) {
-    width: 25%!important;
-}
-:global(.ui.form:not(.unstackable) .fields:not(.unstackable)>.eight.wide.field) {
-    width: 50%!important;
-}
-</style>
-
-<DemoLayout framework="semantic">
+<SemanticLayout onLoaded={onLoaded}>
     <div class="ui grid">
         <div class="sixteen wide column">
             <form id="demoForm" class="ui form" method="POST">
@@ -41,7 +29,7 @@
             </form>
         </div>
     </div>
-</DemoLayout>
+</SemanticLayout>
 
 <script>
 import { onMount } from 'svelte';
@@ -54,10 +42,12 @@ import Semantic from 'formvalidation/es6/plugins/Semantic';
 import SubmitButton from 'formvalidation/es6/plugins/SubmitButton';
 
 import sampleCode from './Semantic.programmatic';
-import DemoLayout from '../../../../../components/DemoLayout.svelte';
+import SemanticLayout from '../../../../../components/demo/SemanticLayout.svelte';
 
-onMount(() => {
-    const fv = formValidation(document.getElementById('demoForm'), {
+let fv;
+
+const onLoaded = () => {
+    fv = formValidation(document.getElementById('demoForm'), {
         fields: {
             username: {
                 validators: {
@@ -102,9 +92,5 @@ onMount(() => {
             }),
         },
     });
-
-    return () => {
-        fv.destroy();
-    };
-});
+};
 </script>

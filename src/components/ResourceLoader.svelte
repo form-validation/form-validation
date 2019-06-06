@@ -1,4 +1,4 @@
-<Loader isDone={_loaded}>{#if _loaded}<slot></slot>{/if}</Loader>
+<Loader isDone={_loaded}><slot></slot></Loader>
 
 <script>
 import { onMount } from 'svelte';
@@ -9,6 +9,7 @@ let _loaded = false;
 
 // Props
 let urls = [];
+let onLoaded = () => {};
 
 onMount(() => {
     const js = [];
@@ -25,9 +26,10 @@ onMount(() => {
 
     let numLoaded = 0;
     const total = css.length + js.length;
-    const onLoaded = () => {
+    const checkResourcesLoaded = () => {
         if (numLoaded === total) {
             _loaded = true;
+            onLoaded();
         }
     };
     
@@ -39,14 +41,14 @@ onMount(() => {
         link.setAttribute('href', url);
         link.addEventListener('load', () => {
             numLoaded++;
-            onLoaded();
+            checkResourcesLoaded();
         });
         head.appendChild(link);
     });
 
     const loadScript = () => {
         if (js.length == 0) {
-            onLoaded();
+            checkResourcesLoaded();
         } else {
             const script = document.createElement('script');
             script.onload = () => {
@@ -63,5 +65,6 @@ onMount(() => {
 
 export {
     urls,
+    onLoaded,
 };
 </script>

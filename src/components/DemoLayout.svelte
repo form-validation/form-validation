@@ -1,45 +1,38 @@
 <main style="width: 100%; margin-left: auto; margin-right: auto;">
-    <slot></slot>
+    <ResourceLoader urls={_urls} on:loaded={onLoaded}><slot></slot></ResourceLoader>
 </main>
 
 <script>
 import { onMount } from 'svelte';
 
 import SupporedFramework from './constants/SupportedFramework';
+import ResourceLoader from './ResourceLoader.svelte';
 
 // Props
 let framework = 'tachyons';
+let onLoaded = () => {};
+
+let _urls = [];
 
 onMount(() => {
-    if (!framework || framework === 'native' || !SupporedFramework[framework]) {
+    const fr = (framework === 'native') ? 'tachyons' : framework;
+    if (!SupporedFramework[fr]) {
         return;
     }
-
-    const urls = SupporedFramework[framework].urls;
 
     // By default, we use tachyons framework
     const defaultStyle = document.querySelector(`link[rel="stylesheet"][href="${SupporedFramework['tachyons'].urls[0]}"]`);
 
-    if (framework === 'tachyons') {
-        // Remove all styles except the default
-        document.querySelectorAll('link[rel="stylesheet"][data-framework]').forEach(node => node.parentNode.removeChild(node));
-        defaultStyle.removeAttribute('disabled');
-    } else if (urls) {
+    if (fr === 'tachyons') {
+        _urls = [];
+    } else {
         defaultStyle.setAttribute('disabled', 'true');
-        urls.reverse().forEach(url => {
-            const style = document.createElement('link');
-            style.setAttribute('rel', 'stylesheet');
-            style.setAttribute('data-framework', 'true');
-            style.setAttribute('href', url);
-
-            // Add new style right after the default one (which is now disabled)
-            // We don't append it to `head` because we need the `formValidation.css` is loaded lastly
-            defaultStyle.parentElement.insertBefore(style, defaultStyle.nextSibling);
-        });
+        _urls = SupporedFramework[fr].urls;
     }
 });
 
 export {
     framework,
+    onLoaded,
 };
 </script>
