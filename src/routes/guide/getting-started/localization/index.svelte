@@ -125,10 +125,10 @@ document.addEventListener('DOMContentLoaded', function(e) {
 
     <section class="cf mb4">
         <div class="fl w-50 tl">
-            <a href="/guide/getting-started/usage/" class="b blue dim link pa2">&larr; Usage</a>
+            <PrevButton href="/guide/getting-started/usage/">Usage</PrevButton>
         </div>
         <div class="fl w-50 tr">
-            <a href="/guide/getting-started/special-field-name/" class="b blue dim link pa2">Special field name &rarr;</a>
+            <NextButton href="/guide/getting-started/special-field-name/">Special field name</NextButton>
         </div>
     </section>
 </GuideLayout>
@@ -136,6 +136,8 @@ document.addEventListener('DOMContentLoaded', function(e) {
 <script>
 import Demo from '../../../../components/Demo.svelte';
 import GuideLayout from '../../../../components/GuideLayout.svelte';
+import NextButton from '../../../../components/NextButton.svelte';
+import PrevButton from '../../../../components/PrevButton.svelte';
 import SampleCode from '../../../../components/SampleCode.svelte';
 import Tip from '../../../../components/Tip.svelte';
 

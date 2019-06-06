@@ -327,10 +327,10 @@ document.addEventListener('DOMContentLoaded', function(e) {
 
     <section class="cf mb4">
         <div class="fl w-50 tl">
-            <a href="/guide/getting-started/" class="f3 pointer blue dim link pa2">&larr; Overview</a>
+            <PrevButton href="/guide/getting-started/">Overview</PrevButton>
         </div>
         <div class="fl w-50 tr">
-            <a href="/guide/getting-started/localization/" class="f3 pointer blue dim link pa2">Localization &rarr;</a>
+            <NextButton href="/guide/getting-started/localization/">Localization</NextButton>
         </div>
     </section>
 </GuideLayout>
@@ -339,6 +339,8 @@ document.addEventListener('DOMContentLoaded', function(e) {
 import Demo from '../../../../components/Demo.svelte';
 import Heading from '../../../../components/Heading.svelte';
 import GuideLayout from '../../../../components/GuideLayout.svelte';
+import NextButton from '../../../../components/NextButton.svelte';
+import PrevButton from '../../../../components/PrevButton.svelte';
 import SampleCode from '../../../../components/SampleCode.svelte';
 import Tip from '../../../../components/Tip.svelte';
 </script>

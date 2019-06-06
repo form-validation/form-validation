@@ -88,10 +88,10 @@ formvalidation/
 
     <section class="cf pv3">
         <div class="fl w-50 tl">
-            <a href="/guide/" class="f3 pointer blue dim link pa2">&larr; Guide</a>
+            <PrevButton href="/guide/">Guide</PrevButton>
         </div>
         <div class="fl w-50 tr">
-            <a href="/guide/getting-started/usage/" class="f3 pointer blue dim link pa2">Usage &rarr;</a>
+            <NextButton href="/guide/getting-started/usage/">Usage</NextButton>
         </div>
     </section>
 </GuideLayout>
@@ -99,5 +99,7 @@ formvalidation/
 <script>
 import DotDotDot from '../../../components/DotDotDot.svelte';
 import GuideLayout from '../../../components/GuideLayout.svelte';
+import NextButton from '../../../components/NextButton.svelte';
+import PrevButton from '../../../components/PrevButton.svelte';
 import SampleCode from '../../../components/SampleCode.svelte';
 </script>
