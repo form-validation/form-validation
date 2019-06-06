@@ -3,16 +3,6 @@
 .loader-container { 
     position: relative;
 }
-.loader-wrapper {
-    align-items: center;
-    display: flex;
-    height: 100%;
-    justify-content: center;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-}
 .loader {
     height: 40px;
     margin: 20px auto;
