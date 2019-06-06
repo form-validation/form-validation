@@ -168,28 +168,42 @@ document.addEventListener('DOMContentLoaded', function(e) {
 </html>
 `} />
         <p class="lh-copy">We are going to enable some plugins to make the validations happen:</p>
-        <table class="collapse ba br2 b--black-10 pv2 ph3 w-100 mb4">
-            <tr class="striped--light-gray">
-                <th class="pv2 ph3 tl f6 fw6 ttu">Plugin</th>
-                <th class="pv2 ph3 tl f6 fw6 ttu">Description</th>
-            </tr>
-            <tr class="striped--light-gray">
-                <td class="pv2 ph3"><a href="/guide/plugins/message/" class="blue dim link">Message</a></td>
-                <td class="pv2 ph3">Display error message that is defined in each validator options.</td>
-            </tr>
-            <tr class="striped--light-gray">
-                <td class="pv2 ph3"><a href="/guide/plugins/trigger/" class="blue dim link">Trigger</a></td>
-                <td class="pv2 ph3">Indicate the events which the validation will be executed. For example, perform validations whenever user focus on field and press any key.</td>
-            </tr>
-            <tr class="striped--light-gray">
-                <td class="pv2 ph3"><a href="/guide/plugins/submit-button/" class="blue dim link">SubmitButton</a></td>
-                <td class="pv2 ph3">Automatically validate the form when pressing its Submit button.</td>
-            </tr>
-            <tr class="striped--light-gray">
-                <td class="pv2 ph3"><a href="/guide/plugins/default-submit/" class="blue dim link">DefaultSubmit</a></td>
-                <td class="pv2 ph3">Submit the form if all fields are valid after validating.</td>
-            </tr>
-        </table>
+        <ul class="list pa0 flex flex-wrap">
+            <li class="w-50 ph3 mv3">
+                <div class="pa3 br2 shadow-4 h-100 bg-blue">
+                    <a href="/guide/plugins/message/" class="link pointer white db h-100">
+                        <div class="f4 fw6 tc">Message</div>
+                        <p class="lh-copy">Display error message that is defined in each validator options</p>
+                    </a>
+                </div>
+            </li>
+            <li class="w-50 ph3 mv3">
+                <div class="pa3 br2 shadow-4 h-100 bg-red">
+                    <a href="/guide/plugins/trigger/" class="link pointer white db h-100">
+                        <div class="f4 fw6 tc">Trigger</div>
+                        <p class="lh-copy">Indicate the events which the validation will be executed.</p>
+                        <p class="lh-copy">For example, perform validations whenever user focus on field and press any key</p>
+                    </a>
+                </div>
+            </li>
+            <li class="w-50 ph3 mv3">
+                <div class="pa3 br2 shadow-4 h-100 bg-gold">
+                    <a href="/guide/plugins/submit-button/" class="link pointer white db h-100">
+                        <div class="f4 fw6 tc">SubmitButton</div>
+                        <p class="lh-copy">Automatically validate the form when pressing its Submit button</p>
+                    </a>
+                </div>
+            </li>
+            <li class="w-50 ph3 mv3">
+                <div class="pa3 br2 shadow-4 h-100 bg-green">
+                    <a href="/guide/plugins/default-submit/" class="link pointer white db h-100">
+                        <div class="f4 fw6 tc">DefaultSubmit</div>
+                        <p class="lh-copy">Submit the form if all fields are valid after validating</p>
+                    </a>
+                </div>
+            </li>
+        </ul>
+        
         <p class="lh-copy">Our demo page now looks like:</p>
 <SampleCode lang="html" code={`
 <html>
@@ -296,81 +310,27 @@ document.addEventListener('DOMContentLoaded', function(e) {
         <p class="lh-copy">You can see the sample code demonstrating for each plugin in the following example:</p>
         <Demo prefix="/guide/getting-started/usage/frameworks" selected="Bootstrap" frameworks={['Bootstrap', 'Bootstrap3', 'Bulma', 'Foundation', 'Materialize', 'Milligram', 'Mini', 'Mui', 'Pure', 'Semantic', 'Shoelace', 'Spectre', 'Tachyons', 'Turret', 'Uikit', 'Native']} />
         
-        <p class="lh-copy">Refer to each plugin from the table below if you want to get supports for particular CSS framework.</p>
-        <table class="collapse ba br2 b--black-10 pv2 ph3 w-100 mb4">
-            <tr class="striped--light-gray">
-                <th class="pv2 ph3 tl f6 fw6 ttu">Plugin</th>
-                <th class="pv2 ph3 tl f6 fw6 ttu">Supported framework version</th>
-            </tr>
-            <tr class="striped--light-gray">
-                <td class="pv2 ph3"><a href="/guide/plugins/bootstrap/" class="blue dim link">Bootstrap</a></td>
-                <td class="pv2 ph3">Bootstrap v4.3.1</td>
-            </tr>
-            <tr class="striped--light-gray">
-                <td class="pv2 ph3"><a href="/guide/plugins/bootstrap3/" class="blue dim link">Bootstrap3</a></td>
-                <td class="pv2 ph3">Boostrap v3.4.1</td>
-            </tr>
-            <tr class="striped--light-gray">
-                <td class="pv2 ph3"><a href="/guide/plugins/bulma/" class="blue dim link">Bulma</a></td>
-                <td class="pv2 ph3">Bulma v0.7.4</td>
-            </tr>
-            <tr class="striped--light-gray">
-                <td class="pv2 ph3"><a href="/guide/plugins/foundation/" class="blue dim link">Foundation</a></td>
-                <td class="pv2 ph3">Zurb Foundation v6.5.3</td>
-            </tr>
-            <tr class="striped--light-gray">
-                <td class="pv2 ph3"><a href="/guide/plugins/materialize/" class="blue dim link">Materialize</a></td>
-                <td class="pv2 ph3">MaterializeCSS v1.0.0</td>
-            </tr>
-            <tr class="striped--light-gray">
-                <td class="pv2 ph3"><a href="/guide/plugins/milligram/" class="blue dim link">Milligram</a></td>
-                <td class="pv2 ph3">milligram v1.3.0</td>
-            </tr>
-            <tr class="striped--light-gray">
-                <td class="pv2 ph3"><a href="/guide/plugins/mini/" class="blue dim link">Mini</a></td>
-                <td class="pv2 ph3">mini.css v3.0.1</td>
-            </tr>
-            <tr class="striped--light-gray">
-                <td class="pv2 ph3"><a href="/guide/plugins/mui/" class="blue dim link">Mui</a></td>
-                <td class="pv2 ph3">MUI v0.9.41</td>
-            </tr>
-            <tr class="striped--light-gray">
-                <td class="pv2 ph3"><a href="/guide/plugins/pure/" class="blue dim link">Pure</a></td>
-                <td class="pv2 ph3">PureCSS v1.0.0</td>
-            </tr>
-            <tr class="striped--light-gray">
-                <td class="pv2 ph3"><a href="/guide/plugins/semantic/" class="blue dim link">Semantic</a></td>
-                <td class="pv2 ph3">Semantic UI v2.4.1</td>
-            </tr>
-            <tr class="striped--light-gray">
-                <td class="pv2 ph3"><a href="/guide/plugins/shoelace/" class="blue dim link">Shoelace</a></td>
-                <td class="pv2 ph3">Shoelace v1.0.0-beta24</td>
-            </tr>
-            <tr class="striped--light-gray">
-                <td class="pv2 ph3"><a href="/guide/plugins/spectre/" class="blue dim link">Spectre</a></td>
-                <td class="pv2 ph3">Spectre v0.5.8</td>
-            </tr>
-            <tr class="striped--light-gray">
-                <td class="pv2 ph3"><a href="/guide/plugins/tachyons/" class="blue dim link">Tachyons</a></td>
-                <td class="pv2 ph3">Tachyons v4.10.0</td>
-            </tr>
-            <tr class="striped--light-gray">
-                <td class="pv2 ph3"><a href="/guide/plugins/turret/" class="blue dim link">Turret</a></td>
-                <td class="pv2 ph3">turretcss v5.1.3</td>
-            </tr>
-            <tr class="striped--light-gray">
-                <td class="pv2 ph3"><a href="/guide/plugins/uikit/" class="blue dim link">Uikit</a></td>
-                <td class="pv2 ph3">UIKit v3.0.3</td>
-            </tr>
-        </table>
+        <p class="lh-copy">Refer to each plugin below if you want to get supports for particular CSS framework:</p>
+
+        <div class="list pa0 flex flex-wrap">
+        {#each ['Bootstrap', 'Bootstrap3', 'Bulma', 'Foundation', 'Materialize', 'Milligram', 'Mini', 'Mui', 'Pure', 'Semantic', 'Shoelace', 'Spectre', 'Tachyons', 'Turret', 'Uikit'] as framework, i}
+            <div class="w-33 ph3 mv3 tc">
+                <div class="pa3 br2 shadow-4 h-100" class:bg-blue={i % 4 === 0} class:bg-red={i % 4 === 1} class:bg-gold={i % 4 === 2} class:bg-green={i % 4 === 3}>
+                    <a href="/guide/plugins/{framework.toLowerCase()}/" class="link pointer white db h-100">
+                        <div class="f4 fw6">{framework}</div>
+                    </a>
+                </div>
+            </div>
+        {/each}
+        </div>
     </section>
 
     <section class="cf mb4">
         <div class="fl w-50 tl">
-            <a href="/guide/getting-started/" class="b blue dim link pa2">&larr; Overview</a>
+            <a href="/guide/getting-started/" class="f3 pointer blue dim link pa2">&larr; Overview</a>
         </div>
         <div class="fl w-50 tr">
-            <a href="/guide/getting-started/localization/" class="b blue dim link pa2">Localization &rarr;</a>
+            <a href="/guide/getting-started/localization/" class="f3 pointer blue dim link pa2">Localization &rarr;</a>
         </div>
     </section>
 </GuideLayout>

@@ -88,10 +88,10 @@ formvalidation/
 
     <section class="cf pv3">
         <div class="fl w-50 tl">
-            <a href="/guide/" class="b blue dim link pa2">&larr; Guide</a>
+            <a href="/guide/" class="f3 pointer blue dim link pa2">&larr; Guide</a>
         </div>
         <div class="fl w-50 tr">
-            <a href="/guide/getting-started/usage/" class="b blue dim link pa2">Usage &rarr;</a>
+            <a href="/guide/getting-started/usage/" class="f3 pointer blue dim link pa2">Usage &rarr;</a>
         </div>
     </section>
 </GuideLayout>
