@@ -2,17 +2,18 @@
     <Tabs titles={["Demo", "Code"]} on:activateTab={onActivateTab}>
         <div>
             <div class="br2 ba b--black-20">
-                <div class="flex pa2 bb b--black-20">
+                <div class="flex ph2 pv1 bb b--black-20 items-center">
                     <div class="br-100 mr1 w1 h1 bg-red"></div>
                     <div class="br-100 mr1 w1 h1 bg-gold"></div>
                     <div class="br-100 mr1 w1 h1 bg-red"></div>
-                    <div class="ml-auto">
-                        <select class="input-reset bn bg-transparent" bind:value={selected} on:change={onChangeFramework}>
+                    <div class="ml-auto mr1">
+                        <select class="input-reset pa1 ba b--black-20 bg-transparent" style="width: 120px;" bind:value={selected} on:change={onChangeFramework}>
                             {#each frameworks as framework}
                             <option value={framework}>{#if (framework === 'Native')}Native form{:else}{SupportedFramework[framework.toLowerCase()].name}{/if}</option>
                             {/each}
                         </select>
                     </div>
+                    <div>↓</div>
                 </div>
                 <div class="pa3">
                     <Loader isDone={_loaded}>
