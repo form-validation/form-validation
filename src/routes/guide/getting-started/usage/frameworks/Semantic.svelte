@@ -1,34 +1,30 @@
 <SemanticLayout onLoaded={onLoaded}>
-    <div class="ui grid">
-        <div class="sixteen wide column">
-            <form id="demoForm" class="ui form" method="POST">
-                <div class="fields">
-                    <label class="four wide field">Username</label>
-                    <div class="eight wide field">
-                        <div class="ui input icon">
-                            <input name="username" type="text" placeholder="Username" />
-                        </div>
-                    </div>
+    <form id="demoForm" class="ui form" method="POST">
+        <div class="fields">
+            <label class="four wide field">Username</label>
+            <div class="eight wide field">
+                <div class="ui input icon">
+                    <input name="username" type="text" placeholder="Username" />
                 </div>
-    
-                <div class="fields">
-                    <label class="four wide field">Password</label>
-                    <div class="eight wide field">
-                        <div class="ui input icon">
-                            <input name="password" type="password" placeholder="Password" />
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="fields">
-                    <label class="four wide field"></label>
-                    <div class="eight wide field">
-                        <button type="submit" class="ui primary button">Submit</button>
-                    </div>
-                </div>
-            </form>
+            </div>
         </div>
-    </div>
+
+        <div class="fields">
+            <label class="four wide field">Password</label>
+            <div class="eight wide field">
+                <div class="ui input icon">
+                    <input name="password" type="password" placeholder="Password" />
+                </div>
+            </div>
+        </div>
+
+        <div class="fields">
+            <label class="four wide field"></label>
+            <div class="eight wide field">
+                <button type="submit" class="ui primary button">Submit</button>
+            </div>
+        </div>
+    </form>
 </SemanticLayout>
 
 <script>

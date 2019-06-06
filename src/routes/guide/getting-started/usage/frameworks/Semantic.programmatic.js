@@ -5,36 +5,32 @@ export default `<!doctype html>
     <link-tag rel="stylesheet" href="/vendors/formvalidation/dist/css/formValidation.min.css">
 </head>
 <body>
-    <div class="ui grid">
-        <div class="sixteen wide column">
-            <form id="demoForm" class="ui form" method="POST">
-                <div class="fields">
-                    <label class="four wide field">Username</label>
-                    <div class="eight wide field">
-                        <div class="ui input icon">
-                            <input name="username" type="text" placeholder="Username" />
-                        </div>
-                    </div>
+    <form id="demoForm" class="ui form" method="POST">
+        <div class="fields">
+            <label class="four wide field">Username</label>
+            <div class="eight wide field">
+                <div class="ui input icon">
+                    <input name="username" type="text" placeholder="Username" />
                 </div>
-
-                <div class="fields">
-                    <label class="four wide field">Password</label>
-                    <div class="eight wide field">
-                        <div class="ui input icon">
-                            <input name="password" type="password" placeholder="Password" />
-                        </div>
-                    </div>
-                </div>
-
-                <div class="fields">
-                    <label class="four wide field"></label>
-                    <div class="eight wide field">
-                        <button type="submit" class="ui primary button">Submit</button>
-                    </div>
-                </div>
-            </form>
+            </div>
         </div>
-    </div>
+
+        <div class="fields">
+            <label class="four wide field">Password</label>
+            <div class="eight wide field">
+                <div class="ui input icon">
+                    <input name="password" type="password" placeholder="Password" />
+                </div>
+            </div>
+        </div>
+
+        <div class="fields">
+            <label class="four wide field"></label>
+            <div class="eight wide field">
+                <button type="submit" class="ui primary button">Submit</button>
+            </div>
+        </div>
+    </form>
 
 <script-tag src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.35.3/es6-shim.min.js"></script-tag>    
 <script-tag src="/vendors/formvalidation/dist/js/FormValidation.min.js"></script-tag>
