@@ -23,7 +23,7 @@
 </BootstrapLayout>
 
 <script>
-import { onMount } from 'svelte';
+import { onDestroy } from 'svelte';
 
 import formValidation from 'formvalidation/es6/core/Core';
 import DemoFrame from 'formvalidation/es6/plugins/DemoFrame';
@@ -35,8 +35,10 @@ import SubmitButton from 'formvalidation/es6/plugins/SubmitButton';
 import sampleCode from './Bootstrap.programmatic';
 import BootstrapLayout from '../../../../../components/demo/BootstrapLayout.svelte';
 
+let fv;
+
 const onLoaded = () => {
-    const fv = formValidation(document.getElementById('demoForm'), {
+    fv = formValidation(document.getElementById('demoForm'), {
         fields: {
             username: {
                 validators: {
@@ -82,4 +84,8 @@ const onLoaded = () => {
         },
     });
 };
+
+onDestroy(() => {
+    fv && fv.destroy();
+});
 </script>

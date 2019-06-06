@@ -28,7 +28,7 @@
 </SemanticLayout>
 
 <script>
-import { onMount } from 'svelte';
+import { onDestroy } from 'svelte';
 
 import formValidation from 'formvalidation/es6/core/Core';
 import DemoFrame from 'formvalidation/es6/plugins/DemoFrame';
@@ -89,4 +89,8 @@ const onLoaded = () => {
         },
     });
 };
+
+onDestroy(() => {
+    fv && fv.destroy();
+});
 </script>
