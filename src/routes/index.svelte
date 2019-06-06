@@ -263,7 +263,7 @@ const result = FormValidation.validators.creditCard().validate({
             <div>
 <SampleCode lang="javascript" code={`
 // You might need to change the importing path
-import creditCard from 'formvalidation/es6/validators/creditCard';
+import creditCard from 'formvalidation/dist/es6/validators/creditCard';
 
 const result = creditCard().validate({
     value: '340653705597107',
@@ -309,12 +309,12 @@ FormValidation.formValidation(formElement, {
             </div>
             <div>
 <SampleCode lang="javascript" code={`
-import formValidation from 'formvalidation/es6/core/Core';
+import formValidation from 'formvalidation/dist/es6/core/Core';
 
-import Bootstrap from 'formvalidation/es6/plugins/Bootstrap';
-import Icon from 'formvalidation/es6/plugins/Icon';
-import SubmitButton from 'formvalidation/es6/plugins/SubmitButton';
-import Trigger from 'formvalidation/es6/plugins/Trigger';
+import Bootstrap from 'formvalidation/dist/es6/plugins/Bootstrap';
+import Icon from 'formvalidation/dist/es6/plugins/Icon';
+import SubmitButton from 'formvalidation/dist/es6/plugins/SubmitButton';
+import Trigger from 'formvalidation/dist/es6/plugins/Trigger';
 
 formValidation(formElement, {
     fields: {
