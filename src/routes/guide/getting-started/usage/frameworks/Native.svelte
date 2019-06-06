@@ -1,16 +1,18 @@
-<form id="demoForm" method="post">
-    <div class="mb2">
-        <label>Username</label>
-        <input type="text" name="username" class="input-reset ba b--black-20 pa2 mb2 db w-30" />
-    </div>
+<TachyonsLayout>
+    <form id="demoForm" method="post">
+        <div class="mb2">
+            <label>Username</label>
+            <input type="text" name="username" class="input-reset ba b--black-20 pa2 mb2 db w-30" />
+        </div>
 
-    <div class="mb2">
-        <label>Password</label>
-        <input type="password" name="password" class="input-reset ba b--black-20 pa2 mb2 db w-30" />
-    </div>
+        <div class="mb2">
+            <label>Password</label>
+            <input type="password" name="password" class="input-reset ba b--black-20 pa2 mb2 db w-30" />
+        </div>
 
-    <button type="submit" class="ba b--black-20 bg-blue white ph3 pv2 br2">Submit</button>
-</form>
+        <button type="submit" class="ba b--black-20 bg-blue white ph3 pv2 br2">Submit</button>
+    </form>
+</TachyonsLayout>
 
 <script>
 import { onMount } from 'svelte';
@@ -22,6 +24,7 @@ import Trigger from 'formvalidation/es6/plugins/Trigger';
 import SubmitButton from 'formvalidation/es6/plugins/SubmitButton';
 
 import sampleCode from './Native.programmatic';
+import TachyonsLayout from '../../../../../components/demo/TachyonsLayout.svelte';
 
 onMount(() => {
     const fv = formValidation(document.getElementById('demoForm'), {

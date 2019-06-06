@@ -1,29 +1,31 @@
-<form id="demoForm" method="post">
-    <div class="cf mb2">
-        <div class="fl w-100">
-            <div class="fl w-25 pa2">Username</div>
-            <div class="fl w-50">
-                <input type="text" name="username" class="input-reset ba b--black-20 pa2 mb2 db w-100" />
+<TachyonsLayout>
+    <form id="demoForm" method="post">
+        <div class="cf mb2">
+            <div class="fl w-100">
+                <div class="fl w-25 pa2">Username</div>
+                <div class="fl w-50">
+                    <input type="text" name="username" class="input-reset ba b--black-20 pa2 mb2 db w-100" />
+                </div>
             </div>
         </div>
-    </div>
-    <div class="cf mb2">
-        <div class="fl w-100">
-            <div class="fl w-25 pa2">Password</div>
-            <div class="fl w-50">
-                <input type="password" name="password" class="input-reset ba b--black-20 pa2 mb2 db w-100" />
+        <div class="cf mb2">
+            <div class="fl w-100">
+                <div class="fl w-25 pa2">Password</div>
+                <div class="fl w-50">
+                    <input type="password" name="password" class="input-reset ba b--black-20 pa2 mb2 db w-100" />
+                </div>
             </div>
         </div>
-    </div>
-    <div class="cf mb2">
-        <div class="fl w-100">
-            <div class="fl w-25 pa2"></div>
-            <div class="fl w-50">
-                <button type="submit" class="ba b--black-20 bg-blue white ph3 pv2 br2">Submit</button>
+        <div class="cf mb2">
+            <div class="fl w-100">
+                <div class="fl w-25 pa2"></div>
+                <div class="fl w-50">
+                    <button type="submit" class="ba b--black-20 bg-blue white ph3 pv2 br2">Submit</button>
+                </div>
             </div>
         </div>
-    </div>
-</form>
+    </form>
+</TachyonsLayout>
 
 <script>
 import { onMount } from 'svelte';
@@ -36,6 +38,7 @@ import Tachyons from 'formvalidation/es6/plugins/Tachyons';
 import SubmitButton from 'formvalidation/es6/plugins/SubmitButton';
 
 import sampleCode from './Tachyons.programmatic';
+import TachyonsLayout from '../../../../../components/demo/TachyonsLayout.svelte';
 
 onMount(() => {
     const fv = formValidation(document.getElementById('demoForm'), {

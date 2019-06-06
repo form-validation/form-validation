@@ -1,16 +1,18 @@
-<form id="loginForm" method="POST">
-    <div class="mb2">
-        <label>Username</label>
-        <input type="text" name="username" class="input-reset ba b--black-20 pa2 mb2 db w-30" />
-    </div>
+<TachyonsLayout>
+    <form id="loginForm" method="POST">
+        <div class="mb2">
+            <label>Username</label>
+            <input type="text" name="username" class="input-reset ba b--black-20 pa2 mb2 db w-30" />
+        </div>
 
-    <div class="mb2">
-        <label>Password</label>
-        <input type="password" name="password" class="input-reset ba b--black-20 pa2 mb2 db w-30" />
-    </div>
+        <div class="mb2">
+            <label>Password</label>
+            <input type="password" name="password" class="input-reset ba b--black-20 pa2 mb2 db w-30" />
+        </div>
 
-    <button class="ba b--black-20 bg-blue white ph3 pv2 br2" type="submit">Submit</button>
-</form>
+        <button class="ba b--black-20 bg-blue white ph3 pv2 br2" type="submit">Submit</button>
+    </form>
+</TachyonsLayout>
 
 <script>
 import { onMount } from 'svelte';
@@ -19,6 +21,7 @@ import formValidation from 'formvalidation/es6/core/Core';
 import DemoFrame from 'formvalidation/es6/plugins/DemoFrame';
 
 import sampleCode from './Native.programmatic';
+import TachyonsLayout from '../../../../../components/demo/TachyonsLayout.svelte';
 
 onMount(() => {
     const form = document.getElementById('loginForm');
