@@ -7,11 +7,19 @@ import Loader from './Loader.svelte';
 
 let _loaded = false;
 
+const defaultCss = '';
+
 // Props
 let urls = [];
 let onLoaded = () => {};
 
 onMount(() => {
+    // Get the default style which is defined by `data-default-framework="true"` in `template.html`
+    const defaultStyle = document.querySelector('link[rel="stylesheet"][data-default-framework="true"]');
+
+    // Disable the default style
+    defaultStyle.setAttribute('disabled', 'true');
+
     const js = [];
     const css = [];
     urls.forEach(url => {
@@ -43,7 +51,10 @@ onMount(() => {
             numLoaded++;
             checkResourcesLoaded();
         });
-        head.appendChild(link);
+
+        // Add new style right after the default one (which is now disabled)
+        // We don't append it to `head` because we need the `formValidation.css` is loaded lastly
+        defaultStyle.parentElement.insertBefore(link, defaultStyle.nextSibling);
     });
 
     const loadScript = () => {
