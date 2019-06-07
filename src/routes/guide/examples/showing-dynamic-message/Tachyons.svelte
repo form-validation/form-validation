@@ -1,4 +1,4 @@
-<TachyonsLayout framework="tachyons">
+<TachyonsLayout>
     <form id="demoForm" method="post">
         <div class="cf mb2">
             <div class="fl w-100">
@@ -23,10 +23,8 @@ import Tachyons from 'formvalidation/es6/plugins/Tachyons';
 import sampleCode from './Tachyons.programmatic';
 import TachyonsLayout from '../../../../components/demo/TachyonsLayout.svelte';
 
-let fv;
-
 onMount(() => {
-    fv = formValidation(document.getElementById('demoForm'), {
+    const fv = formValidation(document.getElementById('demoForm'), {
         fields: {
             pwd: {
                 validators: {

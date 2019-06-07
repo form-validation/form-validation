@@ -190,6 +190,13 @@ const res4 = callback().validate({
                     </a>
                 </div>
             </div>
+            <div class="br2 bg-red">
+                <div class="pa3 shadow-4 h-100">
+                    <a href="/guide/examples/showing-all-messages/" title="Showing all messages" class="link pointer white db h-100">
+                        <div class="f4 fw6">Showing all messages</div>
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
 
