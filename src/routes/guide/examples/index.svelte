@@ -9,8 +9,8 @@
     <section class="mv5">
         <Heading>Message</Heading>
         
-        <div class="list pa0 flex flex-wrap">
-            <div class="w-33 ph3 mv3">
+        <div class="flex flex-wrap">
+            <div class="w-33 mr3">
                 <div class="pa3 br2 shadow-4 h-100 bg-blue">
                     <a href="/guide/examples/showing-dynamic-message/" title="Showing dynamic message" class="link pointer white db h-100">
                         <div class="f4 fw6">Showing dynamic message</div>

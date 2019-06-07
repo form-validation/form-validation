@@ -182,9 +182,9 @@ const res4 = callback().validate({
 
     <section class="mv5">
         <Heading>More examples</Heading>
-        <div class="list pa0 flex flex-wrap">
-            <div class="w-33 ph3 mv3">
-                <div class="pa3 br2 shadow-4 h-100 bg-blue">
+        <div style="display: grid; grid-column-gap: 2em; grid-row-gap: 2em; grid-template-columns: repeat(3, 1fr);">
+            <div class="br2 bg-blue">
+                <div class="pa3 shadow-4 h-100">
                     <a href="/guide/examples/showing-dynamic-message/" title="Showing dynamic message" class="link pointer white db h-100">
                         <div class="f4 fw6">Showing dynamic message</div>
                     </a>

@@ -168,41 +168,40 @@ document.addEventListener('DOMContentLoaded', function(e) {
 </html>
 `} />
         <p class="lh-copy">We are going to enable some plugins to make the validations happen:</p>
-        <ul class="list pa0 flex flex-wrap">
-            <li class="w-50 ph3 mv3">
-                <div class="pa3 br2 shadow-4 h-100 bg-blue">
+        <div style="display: grid; grid-column-gap: 2em; grid-row-gap: 2em; grid-template-columns: repeat(2, 1fr);">
+            <div class="bg-blue br2">
+                <div class="pa3 shadow-4 h-100">
                     <a href="/guide/plugins/message/" class="link pointer white db h-100">
                         <div class="f4 fw6">Message</div>
                         <p class="lh-copy">Display error message that is defined in each validator options</p>
                     </a>
                 </div>
-            </li>
-            <li class="w-50 ph3 mv3">
-                <div class="pa3 br2 shadow-4 h-100 bg-red">
+            </div>
+            <div class="bg-red br2">
+                <div class="pa3 shadow-4 h-100">
                     <a href="/guide/plugins/trigger/" class="link pointer white db h-100">
                         <div class="f4 fw6">Trigger</div>
                         <p class="lh-copy">Indicate the events which the validation will be executed.</p>
-                        <p class="lh-copy">For example, perform validations whenever user focus on field and press any key</p>
                     </a>
                 </div>
-            </li>
-            <li class="w-50 ph3 mv3">
-                <div class="pa3 br2 shadow-4 h-100 bg-gold">
+            </div>
+            <div class="bg-gold br2">
+                <div class="pa3 shadow-4 h-100">
                     <a href="/guide/plugins/submit-button/" class="link pointer white db h-100">
                         <div class="f4 fw6">SubmitButton</div>
                         <p class="lh-copy">Automatically validate the form when pressing its Submit button</p>
                     </a>
                 </div>
-            </li>
-            <li class="w-50 ph3 mv3">
-                <div class="pa3 br2 shadow-4 h-100 bg-green">
+            </div>
+            <div class="bg-green br2">
+                <div class="pa3 shadow-4 h-100">
                     <a href="/guide/plugins/default-submit/" class="link pointer white db h-100">
                         <div class="f4 fw6">DefaultSubmit</div>
                         <p class="lh-copy">Submit the form if all fields are valid after validating</p>
                     </a>
                 </div>
-            </li>
-        </ul>
+            </div>
+        </div>
         
         <p class="lh-copy">Our demo page now looks like:</p>
 <SampleCode lang="html" code={`
@@ -312,10 +311,10 @@ document.addEventListener('DOMContentLoaded', function(e) {
         
         <p class="lh-copy">Refer to each plugin below if you want to get supports for particular CSS framework:</p>
 
-        <div class="list pa0 flex flex-wrap">
+        <div style="display: grid; grid-column-gap: 2em; grid-row-gap: 2em; grid-template-columns: repeat(3, 1fr);">
         {#each ['Bootstrap', 'Bootstrap3', 'Bulma', 'Foundation', 'Materialize', 'Milligram', 'Mini', 'Mui', 'Pure', 'Semantic', 'Shoelace', 'Spectre', 'Tachyons', 'Turret', 'Uikit'] as framework, i}
-            <div class="w-33 ph3 mv3">
-                <div class="pa3 br2 shadow-4 h-100" class:bg-blue={i % 4 === 0} class:bg-red={i % 4 === 1} class:bg-gold={i % 4 === 2} class:bg-green={i % 4 === 3}>
+            <div class="br2" class:bg-blue={i % 4 === 0} class:bg-red={i % 4 === 1} class:bg-gold={i % 4 === 2} class:bg-green={i % 4 === 3}>
+                <div class="pa3 shadow-4 h-100">
                     <a href="/guide/plugins/{framework.toLowerCase()}/" class="link pointer white db h-100">
                         <div class="f4 fw6">{framework}</div>
                     </a>
