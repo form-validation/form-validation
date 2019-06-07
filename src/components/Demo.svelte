@@ -57,7 +57,10 @@ const onActivateTab = (e) => {
 
 const updateHeight = () => {
     const frameBody = _demoFrame.contentDocument.body;
-    _demoFrame.setAttribute('height', `${frameBody.scrollHeight}px`);
+    const height = frameBody.scrollHeight;
+    if (height > 0) {
+        _demoFrame.setAttribute('height', `${height}px`);
+    }
 };
 
 const onReceiveMessage = (e) => {

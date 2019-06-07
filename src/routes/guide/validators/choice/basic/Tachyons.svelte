@@ -2,8 +2,8 @@
     <form id="demoForm" method="post">
         <div class="cf mb2">
             <div class="fl w-100">
-                <div class="fl w-third pa2">Programming Languages</div>
-                <div class="fl w-two-thirds">
+                <div class="fl w-30 pa2">Programming Languages</div>
+                <div class="fl w-70">
                     <label class="db lh-copy">
                         <input class="mr2" type="checkbox" name="languages[]" value="net" /> .Net
                     </label>
@@ -31,8 +31,8 @@
 
         <div class="cf mb2">
             <div class="fl w-100">
-                <div class="fl w-third pa2">Editors</div>
-                <div class="fl w-two-thirds">
+                <div class="fl w-30 pa2">Editors</div>
+                <div class="fl w-70">
                     <select name="editors[]" multiple="multiple" class="input-reset ba b--black-20 pa2 mb2" style="height: 200px;">
                         <option value="" disabled="disabled">Choose 2 - 3 editors</option>
                         <option value="atom">Atom</option>
