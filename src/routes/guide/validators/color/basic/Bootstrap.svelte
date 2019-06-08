@@ -1,5 +1,5 @@
 <BootstrapLayout onLoaded={onLoaded}>
-    <ReceiveMessage channel="SAMPLE_FIELD_VALUE" sender='/guide/validators/bic/basic' on:received={receive}>
+    <ReceiveMessage channel="SAMPLE_FIELD_VALUE" sender='/guide/validators/color/basic' on:received={receive}>
         <form id="demoForm" method="POST">
             <div class="form-group row">
                 <label class="col-sm-3 col-form-label">Color</label>

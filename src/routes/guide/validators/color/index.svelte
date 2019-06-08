@@ -72,7 +72,7 @@ result is an object of
                 {#each samples as sample, i}
                 <tr class="striped--light-gray">
                     <td class="pv2 ph3">{#if i === 0}{type}{/if}</td>
-                    <SampleData sample={sample} />
+                    <SampleData sample={sample} sender="/guide/validators/color/basic" />
                 </tr>
                 {/each}
             {/each}
