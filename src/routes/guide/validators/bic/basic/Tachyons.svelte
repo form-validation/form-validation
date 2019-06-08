@@ -1,5 +1,5 @@
 <TachyonsLayout>
-    <ReceiveMessage channel="SAMPLE_FIELD_VALUE" sender='/guide/validators/bic/basic' on:received={receive}>
+    <ReceiveMessage channel="SAMPLE_FIELD_VALUE" sender="/guide/validators/bic/basic" on:received={receive}>
         <form id="demoForm" method="post">
             <div class="cf mb2">
                 <div class="fl w-100">
