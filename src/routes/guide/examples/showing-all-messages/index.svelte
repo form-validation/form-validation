@@ -22,10 +22,13 @@
     </section>
 
     <Examples examples={['Showing dynamic message']} />
+
+    <RelatedValidators validators={['callback']} />
 </GuideLayout>
 
 <script>
 import Demo from '../../../../components/Demo.svelte';
 import Examples from '../../../../components/Examples.svelte';
 import GuideLayout from '../../../../components/GuideLayout.svelte';
+import RelatedValidators from '../../../../components/RelatedValidators.svelte';
 </script>

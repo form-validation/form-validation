@@ -1,6 +1,6 @@
 <section class="mv5">
     <Heading>Related validators</Heading>
-    <p class="lh-copy">The following validators are similar to this one and might be useful to you.</p>
+    <p class="lh-copy">The following validators might be useful to you.</p>
 
     <div style="display: grid; grid-column-gap: 2em; grid-row-gap: 2em; grid-template-columns: repeat(3, 1fr);">
     {#each _relatedValidators as v, i}
