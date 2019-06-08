@@ -1,0 +1,102 @@
+<TachyonsLayout>
+    <ReceiveMessage channel="SAMPLE_FIELD_VALUE" sender="/guide/validators/id/basic-{item.code.toLowerCase()}" on:received={receive}>
+        <form id="demoForm" method="post">
+            <div class="cf mb2">
+                <div class="fl w-100">
+                    <div class="fl w-50 pa2">{item.adjective} ID number</div>
+                    <div class="fl w-40">
+                        <input type="text" name="idNumber" class="input-reset ba b--black-20 pa2 mb2 db w-100" />
+                    </div>
+                </div>
+            </div>
+        </form>
+    </ReceiveMessage>
+</TachyonsLayout>
+
+<script context="module">
+export async function preload(page, session) {
+    const { country } = page.params;
+
+    const item = data.find((item) =>  {
+        return item.code.toLowerCase() === country;
+    });
+
+    return {
+        item,
+    };
+};
+</script>
+
+<script>
+import { onMount } from 'svelte';
+
+import formValidation from 'formvalidation/dist/es6/core/Core';
+import DemoFrame from 'formvalidation/dist/es6/plugins/DemoFrame';
+import Icon from 'formvalidation/dist/es6/plugins/Icon';
+import Trigger from 'formvalidation/dist/es6/plugins/Trigger';
+import Tachyons from 'formvalidation/dist/es6/plugins/Tachyons';
+
+import id from 'formvalidation/dist/es6/validators/id/index';
+
+import sampleCode from './Tachyons.programmatic';
+import data from '../data';
+import ReceiveMessage from '../../../../../components/ReceiveMessage.svelte';
+import TachyonsLayout from '../../../../../components/demo/TachyonsLayout.svelte';
+
+let fv;
+let item;
+
+const receive = (e) => {
+    const v = e.detail.data;
+
+    const form = document.getElementById('demoForm');
+    form.querySelector('[name="country"]').value = v.country;
+    form.querySelector('[name="idNumber"]').value = v.sample;
+
+    if (fv) {
+        fv.revalidateField('idNumber').then((result) => {
+            window.parent.postMessage({
+                channel: 'DEMO_VALIDATE_RESULT',
+                sender: '/guide/validators/id/basic-{item.code.toLowerCase()}',
+                data: {
+                    input: v,
+                    output: result
+                },
+            }, '*');
+        });
+    }
+};
+
+onMount(() => {
+    const form = document.getElementById('demoForm');
+    fv = formValidation(form, {
+        fields: {
+            idNumber: {
+                validators: {
+                    id: {
+                        country: item.code,
+                        message: `The value is not a valid ${item.adjective} ID`
+                    }
+                }
+            },
+        },
+        plugins: {
+            trigger: new Trigger(),
+            tachyons: new Tachyons(),
+            icon: new Icon({
+                valid: 'fa fa-check',
+                invalid: 'fa fa-times',
+                validating: 'fa fa-refresh'
+            }),
+            demoFrame: new DemoFrame({
+                sender: '/guide/validators/id/basic-{item.code.toLowerCase()}/Tachyons',
+                sampleCode: sampleCode.replace(/{COUNTRY_CODE}/g, item.code).replace(/{COUNTRY_ADJECTIVE}/g, item.adjective),
+            }),
+        },
+    }).registerValidator('id', id);
+
+    return () => {
+        fv.destroy();
+    };
+});
+</script>
