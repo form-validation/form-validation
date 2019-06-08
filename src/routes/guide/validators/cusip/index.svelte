@@ -1,10 +1,10 @@
 <svelte:head>
-	<title>FormValidation • bic validator</title>
+	<title>FormValidation • cusip validator</title>
 </svelte:head>
 
 <GuideLayout>
-    <h1 class="f3 f2-m f1-l tc">bic validator</h1>
-    <h2 class="f4 fw4 tc">Validate a <a href="http://en.wikipedia.org/wiki/ISO_9362" class="blue dim link">BIC</a> (Business Identifier Codes)</h2>
+    <h1 class="f3 f2-m f1-l tc">cusip validator</h1>
+    <h2 class="f4 fw4 tc">Validate a CUSIP number</h2>
 
     <section class="mv5">
         <Heading>Options</Heading>
@@ -20,7 +20,7 @@
             </tr>
             <tr class="striped--light-gray">
                 <td class="pv2 ph3"><code>message</code></td>
-                <td class="pv2 ph3"><code>data-fv-bic___message</code></td>
+                <td class="pv2 ph3"><code>data-fv-cusip___message</code></td>
                 <td class="pv2 ph3">String</td>
                 <td class="pv2 ph3">The error message</td>
             </tr>
@@ -29,9 +29,9 @@
         <h3>Using with ES6 module</h3>
 <SampleCode lang="javascript" code={`
 // You might need to change the importing path
-import bic from 'formvalidation/dist/es6/validators/bic';
+import cusip from 'formvalidation/dist/es6/validators/cusip';
 
-const result = bic().validate({
+const result = cusip().validate({
     value: ...,
     options: {
         message: ...,
@@ -41,7 +41,7 @@ const result = bic().validate({
 result is an object of
 {
     valid: true or false,
-    message: The error message
+    message: The error message     
 }
 */
 `} />
@@ -50,7 +50,7 @@ result is an object of
     <section class="mv5">
         <Heading>Basic Example</Heading>
 
-        <p class="lh-copy">You can click on sample to see if it's a valid or invalid BIC.</p>
+        <p class="lh-copy">You can click on sample to see if it's a valid or invalid CUSIP number.</p>
         <table class="collapse ba br2 b--black-10 pv2 ph3 w-100 mb4">
             <tr class="striped--light-gray">
                 <th class="pv2 ph3 tl f6 fw6 ttu">Sample</th>
@@ -58,46 +58,46 @@ result is an object of
             </tr>
             {#each _samples as sample}
             <tr class="striped--light-gray">
-                <SampleData sample={sample} sender="/guide/validators/bic/basic" />
+                <SampleData sample={sample} sender="/guide/validators/cusip/basic" />
             </tr>
             {/each}
         </table>
 
-        <Demo prefix="/guide/validators/bic/basic" frameworks={['Bootstrap', 'Tachyons']} />
+        <Demo prefix="/guide/validators/cusip/basic" frameworks={['Bootstrap', 'Tachyons']} />
     </section>
 
     <section class="mv5">
         <Heading>ES6 Module Example</Heading>
 
-        <p class="lh-copy">The following snippet shows how to use the bic validator with ES6 module:</p>
+        <p class="lh-copy">The following snippet shows how to use the cusip validator with ES6 module:</p>
 <SampleCode lang="javascript" code={`
 // You might need to change the importing path
-import bic from 'formvalidation/dist/es6/validators/bic';
+import cusip from 'formvalidation/dist/es6/validators/cusip';
 
-const res1 = bic().validate({
-    value: 'DSBACNBXSHA',
+const res1 = cusip().validate({
+    value: '037833100',
     options: {
-        message: 'The value is not valid BIC',
+        message: 'The value is not valid CUSIP',
     },
 });
 // res1.valid === true
 
-const res2 = bic().validate({
-    value: 'RZ00AT2L303',
+const res2 = cusip().validate({
+    value: '31430F200',
     options: {
-        message: 'The value is not valid BIC',
+        message: 'The value is not valid CUSIP',
     },
 });
 // res2.valid === false
 `} />
     </section>
 
-    <RelatedValidators validators={['creditCard', 'iban', 'rtn']} />
+    <RelatedValidators validators={['isin', 'sedol']} />
 
     <section class="mv5">
         <div class="flex">
-            <PrevButton href="/guide/validators/between/">between validator</PrevButton>
-            <NextButton href="/guide/validators/callback/">callback validator</NextButton>
+            <PrevButton href="/guide/validators/credit-card/">creditCard validator</PrevButton>
+            <NextButton href="/guide/validators/date/">date validator</NextButton>
         </div>
     </section>
 </GuideLayout>
@@ -112,12 +112,5 @@ import RelatedValidators from '../../../../components/RelatedValidators.svelte';
 import SampleCode from '../../../../components/SampleCode.svelte';
 import SampleData from '../../../../components/SampleData.svelte';
 
-const _samples = [
-    // Valid
-    'ASPKAT2LXXX', 'ASPKAT2L', 'DSBACNBXSHA', 'UNCRIT2B912', 'DABADKKK', 'RZOOAT2L303',
-    // Invalid
-    'ASPKAT2LXX', 'ASPKAT2LX', 'ASPKAT2LXXX1', 'DABADKK', 'RZ00AT2L303',
-    // Invalid fist 6 characters
-    '1SBACNBXSHA', 'D2BACNBXSHA', 'DS3ACNBXSHA', 'DSB4CNBXSHA', 'DSBA5NBXSHA', 'DSBAC6BXSHA', '1S3AC6BXSHA',
-];
+const _samples = ['037833100', '931142103', '14149YAR8', '126650BG6', '31430F200', '022615AC2'];
 </script>
