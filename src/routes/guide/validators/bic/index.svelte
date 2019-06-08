@@ -94,11 +94,9 @@ const res2 = bic().validate({
 
     <RelatedValidators validators={['creditCard', 'iban', 'rtn']} />
 
-    <section class="cf mv5">
-        <div class="fl w-50 tl">
+    <section class="mv5">
+        <div class="flex">
             <PrevButton href="/guide/validators/between/">between validator</PrevButton>
-        </div>
-        <div class="fl w-50 tr">
             <NextButton href="/guide/validators/callback/">callback validator</NextButton>
         </div>
     </section>

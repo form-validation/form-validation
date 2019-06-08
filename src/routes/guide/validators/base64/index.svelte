@@ -47,11 +47,9 @@ result is an object of
 `} />
     </section>
 
-    <section class="cf mv5">
-        <div class="fl w-50 tl">
+    <section class="mv5">
+        <div class="flex">
             <PrevButton href="/guide/validators/">Validators</PrevButton>
-        </div>
-        <div class="fl w-50 tr">
             <NextButton href="/guide/validators/between/">between validator</NextButton>
         </div>
     </section>

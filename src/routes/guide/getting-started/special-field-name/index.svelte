@@ -6,7 +6,7 @@
     <h1 class="f3 f2-m f1-l tc">Special field name</h1>
     <h2 class="f4 fw4 tc">Validating field with special name</h2>
 
-    <section class="mb4">
+    <section class="mv5">
         <p class="lh-copy">When using FormValidation with some server-side frameworks such as <a href="http://cakephp.org/" class="blue dim link">CakePHP</a>,
             <a href="http://symfony.com/" class="blue dim link">Symfony</a>, <a href="http://rubyonrails.org/" class="blue dim link">Rails</a>,
             <a href="http://projects.spring.io/spring-framework/" class="blue dim link">Spring</a>, etc, there is a relationship between
@@ -52,11 +52,9 @@ FormValidation.formValidation(
         <Demo prefix="/guide/getting-started/special-field-name/basic" frameworks={['Tachyons']} />
     </section>
 
-    <section class="cf mb4">
-        <div class="fl w-50 tl">
+    <section class="mv5">
+        <div class="flex">
             <PrevButton href="/guide/getting-started/localization/">Localization</PrevButton>
-        </div>
-        <div class="fl w-50 tr">
             <NextButton href="/guide/getting-started/field-selector/">Field selector</NextButton>
         </div>
     </section>

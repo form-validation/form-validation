@@ -96,11 +96,9 @@ const result = creditCard().validate({
 `} />
     </section>
 
-    <section class="cf mv5">
-        <div class="fl w-50 tl">
+    <section class="mv5">
+        <div class="flex">
             <PrevButton href="/guide/getting-started/">Getting started</PrevButton>
-        </div>
-        <div class="fl w-50 tr">
             <NextButton href="/guide/validators/base64/">base64 validator</NextButton>
         </div>
     </section>

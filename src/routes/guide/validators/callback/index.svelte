@@ -202,11 +202,9 @@ const res4 = callback().validate({
 
     <RelatedValidators validators={['promise', 'remote']} />
 
-    <section class="cf mv5">
-        <div class="fl w-50 tl">
+    <section class="mv5">
+        <div class="flex">
             <PrevButton href="/guide/validators/bic/">bic validator</PrevButton>
-        </div>
-        <div class="fl w-50 tr">
             <NextButton href="/guide/validators/choice/">choice validator</NextButton>
         </div>
     </section>

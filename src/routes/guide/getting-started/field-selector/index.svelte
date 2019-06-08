@@ -6,7 +6,7 @@
     <h1 class="f3 f2-m f1-l tc">Field selector</h1>
     <h2 class="f4 fw4 tc">Validating field determined by a CSS selector</h2>
 
-    <section class="mb4">
+    <section class="mv5">
         <p class="lh-copy">In the <a href="/guide/getting-started/usage/" class="blue dim link">Usage</a> page, we know that it's possible to declare the validator rules for field via its <code>name</code> attribute:</p>
 <SampleCode lang="html" code={`
 <form id="loginForm" method="POST">
@@ -74,11 +74,9 @@ document.addEventListener('DOMContentLoaded', function(e) {
         <Demo prefix="/guide/getting-started/field-selector/stripe" frameworks={['Tachyons']} />
     </section>
 
-    <section class="cf mb4">
-        <div class="fl w-50 tl">
+    <section class="mv5">
+        <div class="flex">
             <PrevButton href="/guide/getting-started/special-field-name/">Special field name</PrevButton>
-        </div>
-        <div class="fl w-50 tr">
             <NextButton href="/guide/validators/">Validators</NextButton>
         </div>
     </section>

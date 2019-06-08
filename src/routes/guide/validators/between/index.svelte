@@ -112,11 +112,9 @@ const checkLongitude = between().validate({
 
     <RelatedValidators validators={['greaterThan', 'lessThan']} />
 
-    <section class="cf mv5">
-        <div class="fl w-50 tl">
+    <section class="mv5">
+        <div class="flex">
             <PrevButton href="/guide/validators/base64/">base64 validator</PrevButton>
-        </div>
-        <div class="fl w-50 tr">
             <NextButton href="/guide/validators/bic/">bic validator</NextButton>
         </div>
     </section>

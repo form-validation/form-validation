@@ -6,7 +6,7 @@
     <h1 class="f3 f2-m f1-l tc">Localization</h1>
     <h2 class="f4 fw4 tc">Using a language package</h2>
 
-    <section class="mb4">
+    <section class="mv5">
         <p class="lh-copy">In the previous section, the error message for each validator is configured by the <code>message</code> option:</p>
 <SampleCode lang="javascript" code={`
 FormValidation.formValidation(
@@ -123,11 +123,9 @@ document.addEventListener('DOMContentLoaded', function(e) {
         <Tip>Look at the <a href="/guide/plugins/l10n/" class="blue dim link">L10n</a> plugin if you want to use multiple language packages and be able to switch between them</Tip>
     </section>
 
-    <section class="cf mb4">
-        <div class="fl w-50 tl">
+    <section class="mv5">
+        <div class="flex">
             <PrevButton href="/guide/getting-started/usage/">Usage</PrevButton>
-        </div>
-        <div class="fl w-50 tr">
             <NextButton href="/guide/getting-started/special-field-name/">Special field name</NextButton>
         </div>
     </section>

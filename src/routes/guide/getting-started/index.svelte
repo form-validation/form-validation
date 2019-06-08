@@ -85,10 +85,8 @@ formvalidation/
     </section>
 
     <section class="mv5">
-        <div class="fl w-50 tl">
+        <div class="flex">
             <PrevButton href="/guide/">Guide</PrevButton>
-        </div>
-        <div class="fl w-50 tr">
             <NextButton href="/guide/getting-started/usage/">Usage</NextButton>
         </div>
     </section>

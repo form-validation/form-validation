@@ -86,11 +86,9 @@
         <Demo prefix="/guide/validators/choice/basic" frameworks={['Bootstrap', 'Tachyons']} />
     </section>
 
-    <section class="cf mb4">
-        <div class="fl w-50 tl">
+    <section class="mv5">
+        <div class="flex">
             <PrevButton href="/guide/validators/callback/">callback validator</PrevButton>
-        </div>
-        <div class="fl w-50 tr">
             <NextButton href="/guide/validators/color/">color validator</NextButton>
         </div>
     </section>

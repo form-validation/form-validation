@@ -250,10 +250,8 @@ const res3 = color().validate({
     <RelatedValidators validators={['regexp']} />
 
     <section class="mv5">
-        <div class="fl w-50 tl">
+        <div class="flex">
             <PrevButton href="/guide/validators/choice/">choice validator</PrevButton>
-        </div>
-        <div class="fl w-50 tr">
             <NextButton href="/guide/validators/credit-card/" class="b blue dim link pa2">creditCard validator</NextButton>
         </div>
     </section>
