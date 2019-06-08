@@ -58,7 +58,7 @@ result is an object of
         <Heading>Basic Example</Heading>
 
         <p class="lh-copy">The registration form below doesn't allow the username and password to be the same:</p>
-        <Tip>Take a look at the <a href="/guide/api/update-field-status/#example-asking-fields-to-be-unique" class="blue dim link">Asking fields to be unique</a> example if you want to compare more than two fields at the same time</Tip>
+        <Tip>Take a look at the <a href="/guide/examples/asking-fields-to-be-unique/" class="blue dim link">Asking fields to be unique</a> example if you want to compare more than two fields at the same time</Tip>
         <Demo prefix="/guide/validators/different/basic" frameworks={['Bootstrap', 'Tachyons']} />
     </section>
 

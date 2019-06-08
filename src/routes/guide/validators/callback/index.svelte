@@ -180,7 +180,11 @@ const res4 = callback().validate({
 `} />
     </section>
 
-    <Examples examples={['Showing all messages', 'Showing dynamic message']} />
+    <Examples examples={[
+        'Asking fields to be unique',
+        'Showing all messages',
+        'Showing dynamic message'
+    ]} />
 
     <RelatedValidators validators={['promise', 'remote']} />
 
