@@ -46,13 +46,13 @@
 <script>
 import { onMount } from 'svelte';
 
-import formValidation from 'formvalidation/es6/core/Core';
-import DemoFrame from 'formvalidation/es6/plugins/DemoFrame';
-import Icon from 'formvalidation/es6/plugins/Icon';
-import Trigger from 'formvalidation/es6/plugins/Trigger';
-import Tachyons from 'formvalidation/es6/plugins/Tachyons';
-import SubmitButton from 'formvalidation/es6/plugins/SubmitButton';
-import en_US from 'formvalidation/es6/locales/en_US';
+import formValidation from 'formvalidation/dist/es6/core/Core';
+import DemoFrame from 'formvalidation/dist/es6/plugins/DemoFrame';
+import Icon from 'formvalidation/dist/es6/plugins/Icon';
+import Trigger from 'formvalidation/dist/es6/plugins/Trigger';
+import Tachyons from 'formvalidation/dist/es6/plugins/Tachyons';
+import SubmitButton from 'formvalidation/dist/es6/plugins/SubmitButton';
+import en_US from 'formvalidation/dist/es6/locales/en_US';
 
 import sampleCode from './Tachyons.programmatic';
 import TachyonsLayout from '../../../../../components/demo/TachyonsLayout.svelte';

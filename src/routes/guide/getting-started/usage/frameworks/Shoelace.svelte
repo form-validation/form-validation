@@ -25,12 +25,12 @@
 <script>
 import { onDestroy } from 'svelte';
 
-import formValidation from 'formvalidation/es6/core/Core';
-import DemoFrame from 'formvalidation/es6/plugins/DemoFrame';
-import Icon from 'formvalidation/es6/plugins/Icon';
-import Trigger from 'formvalidation/es6/plugins/Trigger';
-import Shoelace from 'formvalidation/es6/plugins/Shoelace';
-import SubmitButton from 'formvalidation/es6/plugins/SubmitButton';
+import formValidation from 'formvalidation/dist/es6/core/Core';
+import DemoFrame from 'formvalidation/dist/es6/plugins/DemoFrame';
+import Icon from 'formvalidation/dist/es6/plugins/Icon';
+import Trigger from 'formvalidation/dist/es6/plugins/Trigger';
+import Shoelace from 'formvalidation/dist/es6/plugins/Shoelace';
+import SubmitButton from 'formvalidation/dist/es6/plugins/SubmitButton';
 
 import sampleCode from './Shoelace.programmatic';
 import ShoelaceLayout from '../../../../../components/demo/ShoelaceLayout.svelte';

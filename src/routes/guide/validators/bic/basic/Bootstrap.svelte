@@ -14,12 +14,12 @@
 <script>
 import { onDestroy } from 'svelte';
 
-import formValidation from 'formvalidation/es6/core/Core';
-import DemoFrame from 'formvalidation/es6/plugins/DemoFrame';
-import Icon from 'formvalidation/es6/plugins/Icon';
-import Trigger from 'formvalidation/es6/plugins/Trigger';
-import Bootstrap from 'formvalidation/es6/plugins/Bootstrap';
-import bic from 'formvalidation/es6/validators/bic';
+import formValidation from 'formvalidation/dist/es6/core/Core';
+import DemoFrame from 'formvalidation/dist/es6/plugins/DemoFrame';
+import Icon from 'formvalidation/dist/es6/plugins/Icon';
+import Trigger from 'formvalidation/dist/es6/plugins/Trigger';
+import Bootstrap from 'formvalidation/dist/es6/plugins/Bootstrap';
+import bic from 'formvalidation/dist/es6/validators/bic';
 
 import sampleCode from './Bootstrap.programmatic';
 import BootstrapLayout from '../../../../../components/demo/BootstrapLayout.svelte';

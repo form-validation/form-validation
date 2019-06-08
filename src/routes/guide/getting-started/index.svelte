@@ -6,7 +6,7 @@
     <h1 class="f3 f2-m f1-l tc">Overview</h1>
     <h2 class="f4 fw4 tc">Getting used with FormValidation</h2>
 
-    <section class="pv3">
+    <section class="mv5">
         <p class="lh-copy">The <a href="/download/" class="blue dim link">FormValidation package</a> consists of the following files:</p>
 <SampleCode lang="html" code={`
 formvalidation/
@@ -66,17 +66,15 @@ formvalidation/
         </ul>
     </section>
 
-    <section class="pv3">
-        <DotDotDot />
-        <h2>Production vs development mode</h2>
+    <section class="mv5">
+        <Heading>Production vs development mode</Heading>
         <p class="lh-copy">Each file in the <code>dist/css</code> and <code>dist/js</code> folders has two versions: the normal code in the <code>.css, .js</code> files, and the minified code in the <code>.min.css, .min.js</code> files.</p>
         <p class="lh-copy">In order to reduce the page loading time and enhance the user experience when visiting your site, you should use the <code>.min.css, .min.js</code> files in the production website.</p>
         <p class="lh-copy">Meanwhile, in the development mode, you should use the normal files without <code>.min</code> part to debug the code more easy.</p>
     </section>
 
-    <section class="pv3">
-        <DotDotDot />
-        <h2>Default vs full version</h2>
+    <section class="mv5">
+        <Heading>Default vs full version</Heading>
         <p class="lh-copy">The <code>dist/js</code> folder contains two verions of the core library:</p>
         <ul class="ma0 pl3 lh-copy">
             <li><code>FormValidation(.min).js</code>: Contains most popular validators</li>
@@ -86,7 +84,7 @@ formvalidation/
         <p class="lh-copy">Take a look at the <a href="/guide/validators/" class="blue dim link">Validators</a> page to see which validator belongs to the default and full versions.</p>
     </section>
 
-    <section class="cf pv3">
+    <section class="mv5">
         <div class="fl w-50 tl">
             <PrevButton href="/guide/">Guide</PrevButton>
         </div>
@@ -97,8 +95,8 @@ formvalidation/
 </GuideLayout>
 
 <script>
-import DotDotDot from '../../../components/DotDotDot.svelte';
 import GuideLayout from '../../../components/GuideLayout.svelte';
+import Heading from '../../../components/Heading.svelte';
 import NextButton from '../../../components/NextButton.svelte';
 import PrevButton from '../../../components/PrevButton.svelte';
 import SampleCode from '../../../components/SampleCode.svelte';

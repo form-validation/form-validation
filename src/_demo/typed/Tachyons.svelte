@@ -103,12 +103,12 @@
 <script>
 import { onMount } from 'svelte';
 
-import formValidation from 'formvalidation/es6/core/Core';
-import classSet from 'formvalidation/es6/utils/classSet';
-import Icon from 'formvalidation/es6/plugins/Icon';
-import Trigger from 'formvalidation/es6/plugins/Trigger';
-import Tachyons from 'formvalidation/es6/plugins/Tachyons';
-import TypingAnimation from 'formvalidation/es6/plugins/TypingAnimation';
+import formValidation from 'formvalidation/dist/es6/core/Core';
+import classSet from 'formvalidation/dist/es6/utils/classSet';
+import Icon from 'formvalidation/dist/es6/plugins/Icon';
+import Trigger from 'formvalidation/dist/es6/plugins/Trigger';
+import Tachyons from 'formvalidation/dist/es6/plugins/Tachyons';
+import TypingAnimation from 'formvalidation/dist/es6/plugins/TypingAnimation';
 
 onMount(() => {
     // Generate a simple captcha

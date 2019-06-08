@@ -30,12 +30,12 @@
 <script>
 import { onDestroy } from 'svelte';
 
-import formValidation from 'formvalidation/es6/core/Core';
-import DemoFrame from 'formvalidation/es6/plugins/DemoFrame';
-import Icon from 'formvalidation/es6/plugins/Icon';
-import Trigger from 'formvalidation/es6/plugins/Trigger';
-import Milligram from 'formvalidation/es6/plugins/Milligram';
-import SubmitButton from 'formvalidation/es6/plugins/SubmitButton';
+import formValidation from 'formvalidation/dist/es6/core/Core';
+import DemoFrame from 'formvalidation/dist/es6/plugins/DemoFrame';
+import Icon from 'formvalidation/dist/es6/plugins/Icon';
+import Trigger from 'formvalidation/dist/es6/plugins/Trigger';
+import Milligram from 'formvalidation/dist/es6/plugins/Milligram';
+import SubmitButton from 'formvalidation/dist/es6/plugins/SubmitButton';
 
 import sampleCode from './Milligram.programmatic';
 import MilligramLayout from '../../../../../components/demo/MilligramLayout.svelte';

@@ -42,7 +42,7 @@
         <h3>Using with ES6 module</h3>
 <SampleCode lang="javascript" code={`
 // You might need to change the importing path
-import color from 'formvalidation/validators/color';
+import color from 'formvalidation/dist/es6/validators/color';
 
 const result = color().validate({
     value: ...,
@@ -216,7 +216,7 @@ slategrey, snow, springgreen, steelblue</code></pre>
         <p class="lh-copy">The following snippet shows how to use the color validator with ES6 module:</p>
 <SampleCode lang="javascript" code={`
 // You might need to change the importing path
-import color from 'formvalidation/validators/color';
+import color from 'formvalidation/dist/es6/validators/color';
 
 const res1 = color().validate({
     value: '#0000FF',

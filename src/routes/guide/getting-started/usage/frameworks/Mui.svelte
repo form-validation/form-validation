@@ -27,12 +27,12 @@
 <script>
 import { onDestroy } from 'svelte';
 
-import formValidation from 'formvalidation/es6/core/Core';
-import DemoFrame from 'formvalidation/es6/plugins/DemoFrame';
-import Icon from 'formvalidation/es6/plugins/Icon';
-import Trigger from 'formvalidation/es6/plugins/Trigger';
-import Mui from 'formvalidation/es6/plugins/Mui';
-import SubmitButton from 'formvalidation/es6/plugins/SubmitButton';
+import formValidation from 'formvalidation/dist/es6/core/Core';
+import DemoFrame from 'formvalidation/dist/es6/plugins/DemoFrame';
+import Icon from 'formvalidation/dist/es6/plugins/Icon';
+import Trigger from 'formvalidation/dist/es6/plugins/Trigger';
+import Mui from 'formvalidation/dist/es6/plugins/Mui';
+import SubmitButton from 'formvalidation/dist/es6/plugins/SubmitButton';
 
 import sampleCode from './Mui.programmatic';
 import MuiLayout from '../../../../../components/demo/MuiLayout.svelte';

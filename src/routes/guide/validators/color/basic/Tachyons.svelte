@@ -16,12 +16,12 @@
 <script>
 import { onMount } from 'svelte';
 
-import formValidation from 'formvalidation/es6/core/Core';
-import DemoFrame from 'formvalidation/es6/plugins/DemoFrame';
-import Icon from 'formvalidation/es6/plugins/Icon';
-import Trigger from 'formvalidation/es6/plugins/Trigger';
-import Tachyons from 'formvalidation/es6/plugins/Tachyons';
-import color from 'formvalidation/es6/validators/color';
+import formValidation from 'formvalidation/dist/es6/core/Core';
+import DemoFrame from 'formvalidation/dist/es6/plugins/DemoFrame';
+import Icon from 'formvalidation/dist/es6/plugins/Icon';
+import Trigger from 'formvalidation/dist/es6/plugins/Trigger';
+import Tachyons from 'formvalidation/dist/es6/plugins/Tachyons';
+import color from 'formvalidation/dist/es6/validators/color';
 
 import sampleCode from './Tachyons.programmatic';
 import ReceiveMessage from '../../../../../components/ReceiveMessage.svelte';

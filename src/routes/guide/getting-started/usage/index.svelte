@@ -324,7 +324,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
         </div>
     </section>
 
-    <section class="cf mv5">
+    <section class="mv5">
         <div class="fl w-50 tl">
             <PrevButton href="/guide/getting-started/">Overview</PrevButton>
         </div>
