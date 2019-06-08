@@ -1,10 +1,10 @@
 <BootstrapLayout onLoaded={onLoaded}>
-    <ReceiveMessage channel="SAMPLE_FIELD_VALUE" sender="/guide/validators/bic/basic" on:received={receive}>
+    <ReceiveMessage channel="SAMPLE_FIELD_VALUE" sender="/guide/validators/ean/basic" on:received={receive}>
         <form id="demoForm" method="POST">
             <div class="form-group row">
-                <label class="col-sm-3 col-form-label">BIC</label>
+                <label class="col-sm-3 col-form-label">EAN</label>
                 <div class="col-sm-5">
-                    <input type="text" bind:this={inputEle} class="form-control" name="bic" />
+                    <input type="text" bind:this={inputEle} class="form-control" name="ean" />
                 </div>
             </div>
         </form>
@@ -19,7 +19,7 @@ import DemoFrame from 'formvalidation/dist/es6/plugins/DemoFrame';
 import Icon from 'formvalidation/dist/es6/plugins/Icon';
 import Trigger from 'formvalidation/dist/es6/plugins/Trigger';
 import Bootstrap from 'formvalidation/dist/es6/plugins/Bootstrap';
-import bic from 'formvalidation/dist/es6/validators/bic';
+import ean from 'formvalidation/dist/es6/validators/ean';
 
 import sampleCode from './Bootstrap.programmatic';
 import BootstrapLayout from '../../../../../components/demo/BootstrapLayout.svelte';
@@ -33,10 +33,10 @@ const receive = (e) => {
     inputEle.value = v;
 
     if (fv) {
-        fv.revalidateField('bic').then((result) => {
+        fv.revalidateField('ean').then((result) => {
             window.parent.postMessage({
                 channel: 'DEMO_VALIDATE_RESULT',
-                sender: '/guide/validators/bic/basic',
+                sender: '/guide/validators/ean/basic',
                 data: {
                     input: v,
                     output: result
@@ -49,10 +49,10 @@ const receive = (e) => {
 const onLoaded = () => {
     fv = formValidation(document.getElementById('demoForm'), {
         fields: {
-            bic: {
+            ean: {
                 validators: {
-                    bic: {
-                        message: 'The value is not valid BIC'
+                    ean: {
+                        message: 'The value is not valid EAN'
                     }
                 }
             },
@@ -66,11 +66,11 @@ const onLoaded = () => {
                 validating: 'fa fa-refresh'
             }),
             demoFrame: new DemoFrame({
-                sender: '/guide/validators/bic/basic/Bootstrap',
+                sender: '/guide/validators/ean/basic/Bootstrap',
                 sampleCode: sampleCode,
             }),
         },
-    }).registerValidator('bic', bic);
+    }).registerValidator('ean', ean);
 };
 
 onDestroy(() => {

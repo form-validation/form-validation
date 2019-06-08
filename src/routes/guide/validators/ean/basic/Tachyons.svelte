@@ -1,29 +1,31 @@
-<BootstrapLayout onLoaded={onLoaded}>
-    <ReceiveMessage channel="SAMPLE_FIELD_VALUE" sender="/guide/validators/bic/basic" on:received={receive}>
-        <form id="demoForm" method="POST">
-            <div class="form-group row">
-                <label class="col-sm-3 col-form-label">BIC</label>
-                <div class="col-sm-5">
-                    <input type="text" bind:this={inputEle} class="form-control" name="bic" />
+<TachyonsLayout>
+    <ReceiveMessage channel="SAMPLE_FIELD_VALUE" sender="/guide/validators/ean/basic" on:received={receive}>
+        <form id="demoForm" method="post">
+            <div class="cf mb2">
+                <div class="fl w-100">
+                    <div class="fl w-25 pa2">EAN</div>
+                    <div class="fl w-50">
+                        <input type="text" bind:this={inputEle} name="ean" class="input-reset ba b--black-20 pa2 mb2 db w-100" />
+                    </div>
                 </div>
             </div>
         </form>
     </ReceiveMessage>
-</BootstrapLayout>
+</TachyonsLayout>
 
 <script>
-import { onDestroy } from 'svelte';
+import { onMount } from 'svelte';
 
 import formValidation from 'formvalidation/dist/es6/core/Core';
 import DemoFrame from 'formvalidation/dist/es6/plugins/DemoFrame';
 import Icon from 'formvalidation/dist/es6/plugins/Icon';
 import Trigger from 'formvalidation/dist/es6/plugins/Trigger';
-import Bootstrap from 'formvalidation/dist/es6/plugins/Bootstrap';
-import bic from 'formvalidation/dist/es6/validators/bic';
+import Tachyons from 'formvalidation/dist/es6/plugins/Tachyons';
+import ean from 'formvalidation/dist/es6/validators/ean';
 
-import sampleCode from './Bootstrap.programmatic';
-import BootstrapLayout from '../../../../../components/demo/BootstrapLayout.svelte';
+import sampleCode from './Tachyons.programmatic';
 import ReceiveMessage from '../../../../../components/ReceiveMessage.svelte';
+import TachyonsLayout from '../../../../../components/demo/TachyonsLayout.svelte';
 
 let fv;
 let inputEle;
@@ -33,10 +35,10 @@ const receive = (e) => {
     inputEle.value = v;
 
     if (fv) {
-        fv.revalidateField('bic').then((result) => {
+        fv.revalidateField('ean').then((result) => {
             window.parent.postMessage({
                 channel: 'DEMO_VALIDATE_RESULT',
-                sender: '/guide/validators/bic/basic',
+                sender: '/guide/validators/ean/basic',
                 data: {
                     input: v,
                     output: result
@@ -46,34 +48,34 @@ const receive = (e) => {
     }
 };
 
-const onLoaded = () => {
+onMount(() => {
     fv = formValidation(document.getElementById('demoForm'), {
         fields: {
-            bic: {
+            ean: {
                 validators: {
-                    bic: {
-                        message: 'The value is not valid BIC'
+                    ean: {
+                        message: 'The value is not valid EAN'
                     }
                 }
             },
         },
         plugins: {
             trigger: new Trigger(),
-            bootstrap: new Bootstrap(),
+            tachyons: new Tachyons(),
             icon: new Icon({
                 valid: 'fa fa-check',
                 invalid: 'fa fa-times',
                 validating: 'fa fa-refresh'
             }),
             demoFrame: new DemoFrame({
-                sender: '/guide/validators/bic/basic/Bootstrap',
+                sender: '/guide/validators/ean/basic/Tachyons',
                 sampleCode: sampleCode,
             }),
         },
-    }).registerValidator('bic', bic);
-};
+    }).registerValidator('ean', ean);
 
-onDestroy(() => {
-    fv && fv.destroy();
+    return () => {
+        fv.destroy();
+    };
 });
 </script>
