@@ -9,10 +9,20 @@
     <Examples heading="Validators" examples={[
         'Accepting test credit card numbers',
         'Asking credit card number to match with selected type',
+        'Disabling date',
         'Showing credit card icon',
+        'Supporting custom date format',
+        'Validating date range',
     ]} />
 
-    <Examples heading="Customize icons and messages" examples={['Showing all messages', 'Showing dynamic message']} />
+    <Examples heading="Customize icons and messages" examples={[
+        'Showing all messages',
+        'Showing dynamic message'
+    ]} />
+
+    <Examples heading="Integrate with 3rd party libraries" examples={[
+        'Integrating with flatpickr',
+    ]} />
 </GuideLayout>
 
 <script>

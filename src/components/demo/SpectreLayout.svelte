@@ -15,6 +15,7 @@ export {
 </style>
 
 <ResourceLoader
+    useExternalFramework="true"
     urls={[
         'https://cdnjs.cloudflare.com/ajax/libs/spectre.css/0.5.8/spectre.min.css',
         // To use with Icon plugin

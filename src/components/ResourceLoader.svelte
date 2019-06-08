@@ -10,6 +10,7 @@ let _loaded = false;
 const defaultCss = '';
 
 // Props
+let useExternalFramework = false;
 let urls = [];
 let onLoaded = () => {};
 
@@ -18,7 +19,9 @@ onMount(() => {
     const defaultStyle = document.querySelector('link[rel="stylesheet"][data-default-framework="true"]');
 
     // Disable the default style
-    defaultStyle.setAttribute('disabled', 'true');
+    if (useExternalFramework) {
+        defaultStyle.setAttribute('disabled', 'true');
+    }
 
     const js = [];
     const css = [];
@@ -75,6 +78,7 @@ onMount(() => {
 });
 
 export {
+    useExternalFramework,
     urls,
     onLoaded,
 };

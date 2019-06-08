@@ -222,6 +222,13 @@ const res2 = date().validate({
 `} />
     </section>
 
+    <Examples examples={[
+        'Disabling date',
+        'Integrating with flatpickr',
+        'Supporting custom date format',
+        'Validating date range'
+    ]} />
+
     <section class="mv5">
         <div class="flex">
             <PrevButton href="/guide/validators/cusip/">cusip validator</PrevButton>
@@ -232,6 +239,7 @@ const res2 = date().validate({
 
 <script>
 import Demo from '../../../../components/Demo.svelte';
+import Examples from '../../../../components/Examples.svelte';
 import GuideLayout from '../../../../components/GuideLayout.svelte';
 import Heading from '../../../../components/Heading.svelte';
 import NextButton from '../../../../components/NextButton.svelte';
