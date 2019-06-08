@@ -12,6 +12,7 @@
     </section>
 
     <Examples examples={[
+        'Disabling date',
         'Integrating with flatpickr',
         'Supporting custom date format',
         'Validating date range'

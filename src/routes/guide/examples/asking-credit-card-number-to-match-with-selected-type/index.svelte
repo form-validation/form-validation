@@ -11,7 +11,11 @@
         <Demo prefix="/guide/examples/asking-credit-card-number-to-match-with-selected-type" frameworks={['Tachyons']} />
     </section>
 
-    <Examples examples={['Accepting test credit card numbers', 'Showing credit card icon']} />
+    <Examples examples={[
+        'Accepting test credit card numbers',
+        'Asking credit card number to match with selected type',
+        'Showing credit card icon',
+    ]} />
 
     <RelatedValidators validators={['creditCard']} />
 </GuideLayout>

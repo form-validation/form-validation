@@ -21,7 +21,7 @@
         <Demo prefix="/guide/examples/showing-all-messages" frameworks={['Tachyons']} />
     </section>
 
-    <Examples examples={['Showing dynamic message']} />
+    <Examples examples={['Showing all messages', 'Showing dynamic message']} />
 
     <RelatedValidators validators={['callback']} />
 </GuideLayout>
