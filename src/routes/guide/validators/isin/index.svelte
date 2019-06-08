@@ -97,7 +97,7 @@ const res2 = isin().validate({
     <section class="mv5">
         <div class="flex">
             <PrevButton href="/guide/validators/isbn/">isbn validator</PrevButton>
-            <NextButton href="/guide/validators/ismn/" class="b blue dim link pa2">ismn validator</NextButton>
+            <NextButton href="/guide/validators/ismn/">ismn validator</NextButton>
         </div>
     </section>
 </GuideLayout>

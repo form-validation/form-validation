@@ -252,7 +252,7 @@ const res3 = color().validate({
     <section class="mv5">
         <div class="flex">
             <PrevButton href="/guide/validators/choice/">choice validator</PrevButton>
-            <NextButton href="/guide/validators/credit-card/" class="b blue dim link pa2">creditCard validator</NextButton>
+            <NextButton href="/guide/validators/credit-card/">creditCard validator</NextButton>
         </div>
     </section>
 </GuideLayout>
