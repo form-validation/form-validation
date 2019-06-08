@@ -1,5 +1,5 @@
 <TachyonsLayout>
-    <ReceiveMessage channel="SAMPLE_FIELD_VALUE" sender="/guide/validators/id/basic-{item.code.toLowerCase()}" on:received={receive}>
+    <ReceiveMessage channel="SAMPLE_FIELD_VALUE" sender="/guide/validators/id/basic" on:received={receive}>
         <form id="demoForm" method="post">
             <div class="cf mb2">
                 <div class="fl w-100">
@@ -14,8 +14,8 @@
 </TachyonsLayout>
 
 <script context="module">
-export async function preload(page, session) {
-    const { country } = page.params;
+export async function preload({ params }) {
+    const { country } = params;
 
     const item = data.find((item) =>  {
         return item.code.toLowerCase() === country;
@@ -50,14 +50,13 @@ const receive = (e) => {
     const v = e.detail.data;
 
     const form = document.getElementById('demoForm');
-    form.querySelector('[name="country"]').value = v.country;
     form.querySelector('[name="idNumber"]').value = v.sample;
 
     if (fv) {
         fv.revalidateField('idNumber').then((result) => {
             window.parent.postMessage({
                 channel: 'DEMO_VALIDATE_RESULT',
-                sender: '/guide/validators/id/basic-{item.code.toLowerCase()}',
+                sender: '/guide/validators/id/basic',
                 data: {
                     input: v,
                     output: result
@@ -99,4 +98,8 @@ onMount(() => {
         fv.destroy();
     };
 });
+
+export {
+    item,
+};
 </script>

@@ -20,7 +20,7 @@
             </tr>
             {#each examples as sample}
             <tr class="striped--light-gray">
-                <SampleData sample={{ sample: sample }} renderSample={(s) => s.sample} sender="/guide/validators/id/basic-{countryCode}" />
+                <SampleData sample={{ sample: sample }} renderSample={(s) => s.sample} sender="/guide/validators/id/basic" />
             </tr>
             {/each}
         </table>
@@ -63,9 +63,8 @@ const res2 = ${item.code.toLowerCase()}Id().validate('${invalidSample}');
 </GuideLayout>
 
 <script context="module">
-export async function preload(page, session) {
-    const { country } = page.params;
-
+export async function preload({ params }) {
+    const country = params.country;
     const item = data.find((item) =>  {
         return item.adjective.toLowerCase().replace(/\s/g, '-') === country;
     });
@@ -107,4 +106,14 @@ let countryCode;
 let examples = [];
 let invalidSample;
 let validSample;
+
+export {
+    item,
+    index,
+    numIdValidators,
+    countryCode,
+    examples,
+    invalidSample,
+    validSample,
+};
 </script>
