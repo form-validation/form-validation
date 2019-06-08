@@ -1,5 +1,5 @@
 <svelte:head>
-	<title>FormValidation • Field selector</title>
+	<title>FormValidation • Accepting test credit card numbers</title>
 </svelte:head>
 
 <GuideLayout>

@@ -1,5 +1,5 @@
 <svelte:head>
-	<title>FormValidation • Field selector</title>
+	<title>FormValidation • Supporting custom date format</title>
 </svelte:head>
 
 <GuideLayout>

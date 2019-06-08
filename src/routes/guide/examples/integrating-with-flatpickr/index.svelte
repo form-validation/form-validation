@@ -1,5 +1,5 @@
 <svelte:head>
-	<title>FormValidation • Field selector</title>
+	<title>FormValidation • Integrating with flatpickr</title>
 </svelte:head>
 
 <GuideLayout>

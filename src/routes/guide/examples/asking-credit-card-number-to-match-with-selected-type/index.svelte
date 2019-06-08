@@ -1,5 +1,5 @@
 <svelte:head>
-	<title>FormValidation • Field selector</title>
+	<title>FormValidation • Asking credit card number to match with selected type</title>
 </svelte:head>
 
 <GuideLayout>

@@ -1,5 +1,5 @@
 <svelte:head>
-	<title>FormValidation • Field selector</title>
+	<title>FormValidation • Showing all messages</title>
 </svelte:head>
 
 <GuideLayout>
