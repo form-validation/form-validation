@@ -9,9 +9,9 @@ export default `<!doctype html>
     <form id="demoForm" method="post">
         <div class="cf mb2">
             <div class="fl w-100">
-                <div class="fl w-25 pa2">EAN</div>
+                <div class="fl w-25 pa2">IMEI</div>
                 <div class="fl w-50">
-                    <input type="text" name="ean" class="input-reset ba b--black-20 pa2 mb2 db w-100" />
+                    <input type="text" name="imei" class="input-reset ba b--black-20 pa2 mb2 db w-100" />
                 </div>
             </div>
         </div>
@@ -24,11 +24,11 @@ export default `<!doctype html>
             </div>
         </div>
     </form>
-
+    
 <script-tag src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.35.3/es6-shim.min.js"></script-tag>
 <!-- 
 You have to include the full version of FormValidation which contains all validators
-including the ean validator 
+including the imei validator 
 -->
 <script-tag src="/vendors/formvalidation/dist/js/FormValidation.full.min.js"></script-tag>
 <script-tag src="/vendors/formvalidation/dist/js/plugins/Tachyons.min.js"></script-tag>
@@ -39,10 +39,10 @@ document.addEventListener('DOMContentLoaded', function(e) {
         document.getElementById('demoForm'),
         {
             fields: {
-                ean: {
+                imei: {
                     validators: {
-                        ean: {
-                            message: 'The value is not valid EAN'
+                        imei: {
+                            message: 'The value is not valid IMEI'
                         }
                     }
                 },

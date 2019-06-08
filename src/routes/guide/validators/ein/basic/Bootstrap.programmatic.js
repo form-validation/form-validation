@@ -8,9 +8,9 @@ export default `<!doctype html>
 <body>
     <form id="demoForm" method="POST">
         <div class="form-group row">
-            <label class="col-sm-3 col-form-label">EAN</label>
+            <label class="col-sm-3 col-form-label">EIN</label>
             <div class="col-sm-5">
-                <input type="text" class="form-control" name="ean" />
+                <input type="text" class="form-control" name="ein" />
             </div>
         </div>
 
@@ -21,10 +21,10 @@ export default `<!doctype html>
         </div>
     </form>
 
-<script-tag src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.35.3/es6-shim.min.js"></script-tag>
+<script-tag src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.35.3/es6-shim.min.js"></script-tag>    
 <!-- 
 You have to include the full version of FormValidation which contains all validators
-including the ean validator 
+including the ein validator 
 -->
 <script-tag src="/vendors/formvalidation/dist/js/FormValidation.full.min.js"></script-tag>
 <script-tag src="/vendors/formvalidation/dist/js/plugins/Bootstrap.min.js"></script-tag>
@@ -35,10 +35,10 @@ document.addEventListener('DOMContentLoaded', function(e) {
         document.getElementById('demoForm'),
         {
             fields: {
-                ean: {
+                ein: {
                     validators: {
-                        ean: {
-                            message: 'The value is not valid EAN'
+                        ein: {
+                            message: 'The value is not valid EIN'
                         }
                     }
                 },
