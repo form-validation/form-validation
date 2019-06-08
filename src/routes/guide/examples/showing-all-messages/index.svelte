@@ -21,22 +21,11 @@
         <Demo prefix="/guide/examples/showing-all-messages" frameworks={['Tachyons']} />
     </section>
 
-    <section class="mv5">
-        <Heading>More examples</Heading>
-        <div style="display: grid; grid-column-gap: 2em; grid-row-gap: 2em; grid-template-columns: repeat(3, 1fr);">
-            <div class="br2 bg-blue">
-                <div class="pa3 shadow-4 h-100">
-                    <a href="/guide/examples/showing-dynamic-message/" title="Showing dynamic message" class="link pointer white db h-100">
-                        <div class="f4 fw6">Showing dynamic message</div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
+    <Examples examples={['Showing dynamic message']} />
 </GuideLayout>
 
 <script>
 import Demo from '../../../../components/Demo.svelte';
+import Examples from '../../../../components/Examples.svelte';
 import GuideLayout from '../../../../components/GuideLayout.svelte';
-import Heading from '../../../../components/Heading.svelte';
 </script>

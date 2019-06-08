@@ -6,22 +6,11 @@
     <h1 class="f3 f2-m f1-l tc">Examples</h1>
     <h2 class="f4 fw4 tc">A collection of useful examples you can play with</h2>
 
-    <section class="mv5">
-        <Heading>Message</Heading>
-        
-        <div class="flex flex-wrap">
-            <div class="w-33 mr3">
-                <div class="pa3 br2 shadow-4 h-100 bg-blue">
-                    <a href="/guide/examples/showing-dynamic-message/" title="Showing dynamic message" class="link pointer white db h-100">
-                        <div class="f4 fw6">Showing dynamic message</div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
+    <Examples heading="Customize icons and messages" examples={['Showing all messages', 'Showing dynamic message']} />
 </GuideLayout>
 
 <script>
+import Examples from '../../../components/Examples.svelte';
 import GuideLayout from '../../../components/GuideLayout.svelte';
 import Heading from '../../../components/Heading.svelte';
 </script>

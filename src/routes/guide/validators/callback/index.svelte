@@ -180,25 +180,7 @@ const res4 = callback().validate({
 `} />
     </section>
 
-    <section class="mv5">
-        <Heading>More examples</Heading>
-        <div style="display: grid; grid-column-gap: 2em; grid-row-gap: 2em; grid-template-columns: repeat(3, 1fr);">
-            <div class="br2 bg-blue">
-                <div class="pa3 shadow-4 h-100">
-                    <a href="/guide/examples/showing-dynamic-message/" title="Showing dynamic message" class="link pointer white db h-100">
-                        <div class="f4 fw6">Showing dynamic message</div>
-                    </a>
-                </div>
-            </div>
-            <div class="br2 bg-red">
-                <div class="pa3 shadow-4 h-100">
-                    <a href="/guide/examples/showing-all-messages/" title="Showing all messages" class="link pointer white db h-100">
-                        <div class="f4 fw6">Showing all messages</div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
+    <Examples examples={['Showing all messages', 'Showing dynamic message']} />
 
     <RelatedValidators validators={['promise', 'remote']} />
 
@@ -212,6 +194,7 @@ const res4 = callback().validate({
 
 <script>
 import Demo from '../../../../components/Demo.svelte';
+import Examples from '../../../../components/Examples.svelte';
 import Heading from '../../../../components/Heading.svelte';
 import GuideLayout from '../../../../components/GuideLayout.svelte';
 import NextButton from '../../../../components/NextButton.svelte';
