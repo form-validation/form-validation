@@ -114,6 +114,10 @@ const res2 = emailAddress().validate({
 `} />
     </section>
 
+    <Examples examples={[
+        'Is a@b valid email address',
+    ]} />
+
     <RelatedValidators validators={['regexp']} />
 
     <section class="mv5">
@@ -126,6 +130,7 @@ const res2 = emailAddress().validate({
 
 <script>
 import Demo from '../../../../components/Demo.svelte';
+import Examples from '../../../../components/Examples.svelte';
 import GuideLayout from '../../../../components/GuideLayout.svelte';
 import Heading from '../../../../components/Heading.svelte';
 import NextButton from '../../../../components/NextButton.svelte';

@@ -14,6 +14,7 @@
         'Accepting test credit card numbers',
         'Asking credit card number to match with selected type',
         'Disabling date',
+        'Is a@b valid email address',
         'Showing credit card icon',
         'Supporting custom date format',
         'Validating date range',
