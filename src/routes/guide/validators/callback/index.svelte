@@ -101,7 +101,7 @@ result is an object of
     </section>
 
     <section class="mv5">
-        <Heading>Module Example</Heading>
+        <Heading>ES6 Module Example</Heading>
 
         <p class="lh-copy">The following snippet shows how to use the callback validator with ES6 module to check if a password is strong or weak:</p>
 <SampleCode lang="javascript" code={`

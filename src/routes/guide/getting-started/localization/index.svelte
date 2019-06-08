@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
 });
 </script-tag>
 `} />        
-        <p class="lh-copy">FormValidation has been translated into the following languages which are available in the <code>dist/js/locales</code> folder (and the <code>dist/es6/locales</code> folder if you want to use with JavaScript module).</p>
+        <p class="lh-copy">FormValidation has been translated into the following languages which are available in the <code>dist/js/locales</code> folder (and the <code>dist/es6/locales</code> folder if you want to use with ES6 module).</p>
         <table class="collapse ba br2 b--black-10 pv2 ph3 w-100">
             <tr class="striped--light-gray">
                 <th class="pv2 ph3 tl f6 fw6 ttu">Language</th>

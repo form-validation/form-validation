@@ -16,7 +16,7 @@ formvalidation/
 │   ├── css         // Can be used in browser
 │   │   └── formValidation(.min).css
 |   |
-|   ├── es6         // Generated from src/js and can be used with JavaScript module
+|   ├── es6         // Generated from src/js and can be used with ES6 module
 │   │   ├── ...
 │   │   ├── core
 │   │   ├── locales
@@ -61,7 +61,7 @@ formvalidation/
         <p class="lh-copy">If you don't know which files should be used in your application, then here is the guideline:</p>
         <ul class="ma0 pl3 lh-copy">
             <li>If you want to use the library in browsers, then upload the <code>dist/css</code> and <code>dist/js</code> folders to the server.</li>
-            <li>If you want to use the library with JavaScript module, then pick the <code>dist/es6</code> folders.</li>
+            <li>If you want to use the library with ES6 module, then pick the <code>dist/es6</code> folders.</li>
             <li>Lastly, if you are curious about how the library is developed, then the source folder <code>src</code> is place you will look at.</li>
         </ul>
     </section>

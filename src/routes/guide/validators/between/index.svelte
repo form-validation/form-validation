@@ -79,7 +79,7 @@ result is an object of
     </section>
 
     <section class="mv5">
-        <Heading>Module Example</Heading>
+        <Heading>ES6 Module Example</Heading>
 
         <p class="lh-copy">The following snippet shows how to use the between validator with ES6 module:</p>
 <SampleCode lang="javascript" code={`

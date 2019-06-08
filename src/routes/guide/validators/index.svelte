@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
         <p class="lh-copy">All validators are able to be imported and used with ES6 module. It's super useful if you want to use validator with front-end frameworks (such as <a href="https://reactjs.org/" class="blue dim link">React</a>, 
             <a href="https://vuejs.org/" class="blue dim link">VueJS</a>, <a href="https://svelte.technology/" class="blue dim link">Svelte</a>, .etc), or in server environment with NodeJS frameworks (such as <a href="https://expressjs.com/" class="blue dim link">Express</a>).
         </p>
-        <p class="lh-copy">The following snippet shows how to use the creditCard validator with JavaScript module:</p>
+        <p class="lh-copy">The following snippet shows how to use the creditCard validator with ES6 module:</p>
 <SampleCode lang="javascript" code={`
 // You might need to change the importing path
 import creditCard from 'formvalidation/dist/es6/validators/creditCard';
