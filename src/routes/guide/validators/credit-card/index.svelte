@@ -105,6 +105,12 @@ const res2 = creditCard().validate({
 `} />
     </section>
 
+    <Examples examples={[
+        'Accepting test credit card numbers',
+        'Asking credit card number to match with selected type',
+        'Showing credit card icon',
+    ]} />
+
     <RelatedValidators validators={['bic', 'iban', 'rtn']} />
 
     <section class="mv5">
@@ -117,6 +123,7 @@ const res2 = creditCard().validate({
 
 <script>
 import Demo from '../../../../components/Demo.svelte';
+import Examples from '../../../../components/Examples.svelte';
 import GuideLayout from '../../../../components/GuideLayout.svelte';
 import Heading from '../../../../components/Heading.svelte';
 import NextButton from '../../../../components/NextButton.svelte';
