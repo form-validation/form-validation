@@ -106,7 +106,6 @@ import GuideLayout from '../../../../components/GuideLayout.svelte';
 import Heading from '../../../../components/Heading.svelte';
 import NextButton from '../../../../components/NextButton.svelte';
 import PrevButton from '../../../../components/PrevButton.svelte';
-import RelatedValidators from '../../../../components/RelatedValidators.svelte';
 import SampleCode from '../../../../components/SampleCode.svelte';
 import SampleData from '../../../../components/SampleData.svelte';
 
