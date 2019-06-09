@@ -18,7 +18,7 @@ pre {
 {/if}
 
 <script>
-import { onMount } from 'svelte';
+import { afterUpdate, onMount } from 'svelte';
 
 import highlight from './helpers/highlight';
 import BrowserFrame from './BrowserFrame.svelte';
@@ -33,6 +33,15 @@ let code = '';
 let lang = 'html';
 let maxHeight = '';
 
+$: highlighted = highlight(
+    // Replace the fake tags with the real one
+    // If I use <link> or <script> tag inside sample code, Sapper tries to load them
+    code.replace(/link-tag/g, 'link')
+        .replace(/script-tag/g, 'script')
+        .replace(/fix-html-id/g, 'id'),
+    lang
+);
+
 const copy = () => {
     const selection = window.getSelection();
     const range = document.createRange();
@@ -45,17 +54,6 @@ const copy = () => {
 
     selection.removeAllRanges();
 };
-
-onMount(() => {
-    highlighted = highlight(
-        // Replace the fake tags with the real one
-        // If I use <link> or <script> tag inside sample code, Sapper tries to load them
-        code.replace(/link-tag/g, 'link')
-            .replace(/script-tag/g, 'script')
-            .replace(/fix-html-id/g, 'id'),
-        lang
-    );
-});
 
 export {
     code,
