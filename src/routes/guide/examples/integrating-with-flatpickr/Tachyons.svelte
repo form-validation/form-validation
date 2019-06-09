@@ -71,8 +71,6 @@ const onLoaded = () => {
 };
 
 onDestroy(() => {
-    if (fv) {
-        fv.destroy();
-    }
+    fv && fv.destroy();
 });
 </script>
