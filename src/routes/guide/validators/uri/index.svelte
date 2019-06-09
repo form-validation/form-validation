@@ -129,6 +129,8 @@ const res3 = uri().validate({
 `} />
     </section>
 
+    <Examples examples={['Validating an avatar URL']} />
+
     <RelatedValidators validators={['ip', 'mac']} />
 
     <section class="mv5">

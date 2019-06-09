@@ -175,6 +175,7 @@ const res2 = regexp().validate({
     </section>
 
     <Examples examples={[
+        'Validating an avatar URL',
         'Validating social account URL',
     ]} />
 

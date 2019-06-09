@@ -18,6 +18,7 @@
         'Showing credit card icon',
         'Supporting custom date format',
         'Trimming a value',
+        'Validating an avatar URL',
         'Validating date range',
         'Validating social account URL',
     ]} />

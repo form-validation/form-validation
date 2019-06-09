@@ -1,14 +1,14 @@
 <svelte:head>
-	<title>FormValidation • Validating social account URL</title>
+	<title>FormValidation • Validating an avatar URL</title>
 </svelte:head>
 
 <GuideLayout>
     <h1 class="f3 f2-m f1-l tc">Examples</h1>
-    <h2 class="f4 fw4 tc">Validating social account URL</h2>
+    <h2 class="f4 fw4 tc">Validating an avatar URL</h2>
     
     <section class="mv5">
-        <p class="lh-copy">Instead of using the <a href="/guide/validators/uri/" class="blue dim link">uri validator</a>, this example uses the <a href="/guide/validators/regexp/" class="blue dim link">regexp validator</a> to validate Facebook account URL, such as <code>http(s)://facebook.com/account</code>:</p>
-        <Demo prefix="/guide/examples/validating-social-account-url" frameworks={['Tachyons']} />
+        <p class="lh-copy">The following example is a combination usage of the <a href="/guide/validators/uri/" class="blue dim link">uri validator</a> and <a href="/guide/validators/regexp/" class="blue dim link">regexp validator</a>. It asks user to enter a valid URL which ends with .jpg, .jpeg, or .png.</p>
+        <Demo prefix="/guide/examples/validating-an-avatar-url" frameworks={['Tachyons']} />
     </section>
 
     <Examples examples={[
