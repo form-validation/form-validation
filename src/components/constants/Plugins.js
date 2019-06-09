@@ -17,17 +17,17 @@ export default [
     {
         name: 'Bootstrap',
         isCorePlugin: false,
-        desc: 'Integrate with <a href="https://getbootstrap.com/" class="blue dim link">Bootstrap v4</a> framework',
+        desc: 'Integrate with Bootstrap v4 framework',
     },
     {
         name: 'Bootstrap 3',
         isCorePlugin: false,
-        desc: 'Integrate with <a href="https://getbootstrap.com/docs/3.3/" class="blue dim link">Bootstrap</a> framework',
+        desc: 'Integrate with Bootstrap framework',
     },
     {
         name: 'Bulma',
         isCorePlugin: false,
-        desc: 'Integrate with <a href="https://bulma.io/" class="blue dim link">Bulma</a> framework',
+        desc: 'Integrate with Bulma framework',
     },
     {
         name: 'Declarative',
@@ -47,7 +47,7 @@ export default [
     {
         name: 'Foundation',
         isCorePlugin: false,
-        desc: 'Integrate with <a href="https://foundation.zurb.com/" class="blue dim link">Foundation</a> framework',
+        desc: 'Integrate with Foundation framework',
     },
     {
         name: 'Icon',
@@ -77,7 +77,7 @@ export default [
     {
         name: 'Materialize',
         isCorePlugin: false,
-        desc: 'Integrate with <a href="https://materializecss.com/" class="blue dim link">Materialize</a> framework',
+        desc: 'Integrate with Materialize framework',
     },
     {
         name: 'Message',
@@ -87,22 +87,22 @@ export default [
     {
         name: 'Milligram',
         isCorePlugin: false,
-        desc: 'Integrate with <a href="https://milligram.io/" class="blue dim link">milligram</a> framework',
+        desc: 'Integrate with milligram framework',
     },
     {
         name: 'Mini',
         isCorePlugin: false,
-        desc: 'Integrate with <a href="https://minicss.org/" class="blue dim link">mini.css</a> framework',
+        desc: 'Integrate with Mini framework',
     },
     {
         name: 'Mui',
         isCorePlugin: false,
-        desc: 'Integrate with <a href="https://muicss.com/" class="blue dim link">MUI</a> framework',
+        desc: 'Integrate with MUI framework',
     },
     {
         name: 'Pure',
         isCorePlugin: false,
-        desc: 'Integrate with <a href="https://purecss.io/" class="blue dim link">Pure</a> library',
+        desc: 'Integrate with Pure library',
     },
     {
         name: 'Recaptcha',
@@ -112,7 +112,7 @@ export default [
     {
         name: 'Semantic',
         isCorePlugin: false,
-        desc: 'Integrate with <a href="https://semantic-ui.com/" class="blue dim link">Semantic UI</a> framework',
+        desc: 'Integrate with Semantic UI framework',
     },
     {
         name: 'Sequence',
@@ -122,12 +122,12 @@ export default [
     {
         name: 'Shoelace',
         isCorePlugin: false,
-        desc: 'Integrate with <a href="https://shoelace.style/" class="blue dim link">Shoelace</a> library',
+        desc: 'Integrate with Shoelace library',
     },
     {
         name: 'Spectre',
         isCorePlugin: false,
-        desc: 'Integrate with <a href="https://picturepan2.github.io/spectre/" class="blue dim link">Spectre</a> framework',
+        desc: 'Integrate with Spectre framework',
     },
     {
         name: 'StartEndDate',
@@ -142,7 +142,7 @@ export default [
     {
         name: 'Tachyons',
         isCorePlugin: false,
-        desc: 'Integrate with <a href="https://tachyons.io/" class="blue dim link">Tachyons</a> library',
+        desc: 'Integrate with Tachyons library',
     },
     {
         name: 'Tooltip',
@@ -162,12 +162,12 @@ export default [
     {
         name: 'Turret',
         isCorePlugin: false,
-        desc: 'Integrate with <a href="https://turretcss.com/" class="blue dim link">turretcss</a> framework',
+        desc: 'Integrate with turretcss framework',
     },
     {
         name: 'Uikit',
         isCorePlugin: false,
-        desc: 'Integrate with <a href="https://getuikit.com/" class="blue dim link">UIKit</a> framework',
+        desc: 'Integrate with UIKit framework',
     },
     {
         name: 'Wizard',
