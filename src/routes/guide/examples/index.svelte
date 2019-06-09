@@ -17,6 +17,7 @@
         'Is a@b valid email address',
         'Showing credit card icon',
         'Supporting custom date format',
+        'Trimming a value',
         'Validating date range',
     ]} />
 
@@ -27,6 +28,7 @@
 
     <Examples heading="Integrate with 3rd party libraries" examples={[
         'Integrating with flatpickr',
+        'Integrating with TinyMCE',
     ]} />
 </GuideLayout>
 
