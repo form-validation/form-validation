@@ -12,7 +12,6 @@
 </TachyonsLayout>
 
 <script>
-
 import { onMount } from 'svelte';
 
 import formValidation from 'formvalidation/dist/es6/core/Core';
