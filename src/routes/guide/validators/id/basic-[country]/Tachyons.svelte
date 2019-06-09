@@ -1,5 +1,5 @@
 <TachyonsLayout>
-    <ReceiveMessage channel="SAMPLE_FIELD_VALUE" sender="/guide/validators/id/basic" on:received={receive}>
+    <ReceiveMessage channel="SAMPLE_FIELD_VALUE" sender="/guide/validators/id/basic-{item.code.toLowerCase()}" on:received={receive}>
         <form id="demoForm" method="post">
             <div class="cf mb2">
                 <div class="fl w-100">
@@ -56,7 +56,7 @@ const receive = (e) => {
         fv.revalidateField('idNumber').then((result) => {
             window.parent.postMessage({
                 channel: 'DEMO_VALIDATE_RESULT',
-                sender: '/guide/validators/id/basic',
+                sender: `/guide/validators/id/basic-${item.code.toLowerCase()}`,
                 data: {
                     input: v,
                     output: result
@@ -88,7 +88,7 @@ onMount(() => {
                 validating: 'fa fa-refresh'
             }),
             demoFrame: new DemoFrame({
-                sender: '/guide/validators/id/basic-{item.code.toLowerCase()}/Tachyons',
+                sender: `/guide/validators/id/basic-${item.code.toLowerCase()}/Tachyons`,
                 sampleCode: sampleCode.replace(/{COUNTRY_CODE}/g, item.code).replace(/{COUNTRY_ADJECTIVE}/g, item.adjective),
             }),
         },

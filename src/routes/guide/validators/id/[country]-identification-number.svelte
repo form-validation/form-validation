@@ -7,10 +7,6 @@
     <h2 class="f4 fw4 tc">Validate a {item.adjective} identification number</h2>
 
     <section class="mv5">
-
-    </section>
-
-    <section class="mv5">
         <Heading>Basic Example</Heading>
         <p class="lh-copy">You can click on sample from the following table to see if it's a valid or invalid {item.adjective} id.</p>
         <table class="collapse ba br2 b--black-10 pv2 ph3 w-100 mb4">
@@ -20,7 +16,7 @@
             </tr>
             {#each examples as sample}
             <tr class="striped--light-gray">
-                <SampleData sample={{ sample: sample }} renderSample={(s) => s.sample} sender="/guide/validators/id/basic" />
+                <SampleData sample={{ sample: sample }} renderSample={(s) => s.sample} sender="/guide/validators/id/basic-{countryCode}" />
             </tr>
             {/each}
         </table>
@@ -72,10 +68,9 @@ export async function preload({ params }) {
         return this.error(404, 'Not found');
     }
 
-    const index = data.indexOf(item);
     return {
         item,
-        index,
+        index: data.indexOf(item),
         numIdValidators: data.length,
         countryCode: item.code.toLowerCase(),
         examples: item.validExamples.concat(item.invalidExamples),
@@ -103,7 +98,7 @@ let item;
 let index;
 let numIdValidators;
 let countryCode;
-let examples = [];
+let examples;
 let invalidSample;
 let validSample;
 
