@@ -14,7 +14,7 @@
                 <th class="pv2 ph3 tl f6 fw6 ttu">Sample ID</th>
                 <th class="pv2 ph3 tl f6 fw6 ttu">Is it valid?</th>
             </tr>
-            {#each examples as sample}
+            {#each examples as sample (sample)}
             <tr class="striped--light-gray">
                 <SampleData sample={{ sample: sample }} renderSample={(s) => s.sample} sender="/guide/validators/id/basic-{countryCode}" />
             </tr>
