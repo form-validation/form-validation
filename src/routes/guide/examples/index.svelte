@@ -19,6 +19,7 @@
         'Supporting custom date format',
         'Trimming a value',
         'Validating date range',
+        'Validating social account URL',
     ]} />
 
     <Examples heading="Customize icons and messages" examples={[
