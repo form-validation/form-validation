@@ -49,7 +49,7 @@ let _selectedTab = 0;
 // Props
 let prefix = '';
 let frameworks = ['Tachyons'];
-let selected = 'Tachyons';
+let selected = frameworks.length === 1 ? frameworks[0] : 'Tachyons';
 
 const onActivateTab = (e) => {
     _selectedTab = e.detail.index;
