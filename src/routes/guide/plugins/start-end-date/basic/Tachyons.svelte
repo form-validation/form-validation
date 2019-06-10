@@ -35,7 +35,6 @@ import { onMount } from 'svelte';
 import formValidation from 'formvalidation/dist/es6/core/Core';
 import DemoFrame from 'formvalidation/dist/es6/plugins/DemoFrame';
 import Icon from 'formvalidation/dist/es6/plugins/Icon';
-import MandatoryIcon from 'formvalidation/dist/es6/plugins/MandatoryIcon';
 import StartEndDate from 'formvalidation/dist/es6/plugins/StartEndDate';
 import SubmitButton from 'formvalidation/dist/es6/plugins/SubmitButton';
 import Tachyons from 'formvalidation/dist/es6/plugins/Tachyons';
