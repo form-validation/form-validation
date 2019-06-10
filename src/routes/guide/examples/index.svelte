@@ -25,7 +25,8 @@
 
     <Examples heading="Customize icons and messages" examples={[
         'Showing all messages',
-        'Showing dynamic message'
+        'Showing dynamic message',
+        'Showing messages in custom area',
     ]} />
 
     <Examples heading="Improve user experience" examples={[
