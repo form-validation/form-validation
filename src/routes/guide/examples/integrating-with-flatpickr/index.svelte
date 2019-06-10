@@ -34,6 +34,7 @@ flatpickr(form.querySelector('[name="meetingTime"]'), {
         'Disabling date',
         'Integrating with flatpickr',
         'Supporting custom date format',
+        'Using flatpickr for start and end dates',
         'Validating date range'
     ]} />
 
