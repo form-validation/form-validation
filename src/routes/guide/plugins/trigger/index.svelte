@@ -144,8 +144,8 @@ delay: {
     </section>
 
     <Examples examples={[
+        'Pending validation for a given number of seconds',
         'Performing validation if field value exceed given number of characters',
-        'Pending validation for a given number of seconds'
     ]} />
 
     <section class="mv5">
