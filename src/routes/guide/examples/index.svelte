@@ -35,6 +35,7 @@
     <Examples heading="Customize icons and messages" examples={[
         'Adjusting icon position',
         'Showing all messages',
+        'Showing custom message returned from server',
         'Showing dynamic message',
         'Showing icons in custom area',
         'Showing messages in custom area',
