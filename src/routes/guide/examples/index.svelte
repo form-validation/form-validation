@@ -14,6 +14,7 @@
         'Requiring at least one field',
         'Switching validators on the same field',
         'Using HTML 5 inputs and attributes',
+        'Validating multiple inputs as one',
     ]} />
 
     <Examples heading="Validators" examples={[
@@ -50,6 +51,7 @@
     ]} />
 
     <Examples heading="Integrate with 3rd party libraries" examples={[
+        'Integrating with 3rd party libraries',
         'Integrating with flatpickr',
         'Integrating with TinyMCE',
         'Using flatpickr for start and end dates',
