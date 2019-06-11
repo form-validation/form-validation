@@ -35,7 +35,8 @@ flatpickr(form.querySelector('[name="meetingTime"]'), {
         'Integrating with flatpickr',
         'Supporting custom date format',
         'Using flatpickr for start and end dates',
-        'Validating date range'
+        'Validating date range',
+        'Validating multiple inputs as one',
     ]} />
 
     <RelatedValidators validators={['date']} />

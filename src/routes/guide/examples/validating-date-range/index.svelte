@@ -19,7 +19,8 @@
         'Disabling date',
         'Integrating with flatpickr',
         'Supporting custom date format',
-        'Validating date range'
+        'Validating date range',
+        'Validating multiple inputs as one',
     ]} />
 
     <RelatedValidators validators={['callback', 'date']} />

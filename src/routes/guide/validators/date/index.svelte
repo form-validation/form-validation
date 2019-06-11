@@ -226,7 +226,8 @@ const res2 = date().validate({
         'Disabling date',
         'Integrating with flatpickr',
         'Supporting custom date format',
-        'Validating date range'
+        'Validating date range',
+        'Validating multiple inputs as one',
     ]} />
 
     <section class="mv5">
