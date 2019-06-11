@@ -10,6 +10,7 @@
         'Asking fields to be unique',
         'Enabling validators on the fly',
         'Excluding field by given condition',
+        'Requiring at least one field',
         'Switching validators on the same field',
         'Using HTML 5 inputs and attributes',
     ]} />
