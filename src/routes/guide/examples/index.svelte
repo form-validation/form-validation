@@ -6,8 +6,9 @@
     <h1 class="f3 f2-m f1-l tc">Examples</h1>
     <h2 class="f4 fw4 tc">A collection of useful examples you can play with</h2>
 
-    <Examples heading="Events and APIs" examples={[
-        'Asking fields to be unique'
+    <Examples heading="Advanced examples" examples={[
+        'Asking fields to be unique',
+        'Excluding field by given condition',
     ]} />
 
     <Examples heading="Validators" examples={[

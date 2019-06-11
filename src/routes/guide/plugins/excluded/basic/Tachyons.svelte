@@ -68,7 +68,6 @@ import Tachyons from 'formvalidation/dist/es6/plugins/Tachyons';
 import sampleCode from './Tachyons.programmatic';
 import TachyonsLayout from '../../../../../components/demo/TachyonsLayout.svelte';
 
-
 onMount(() => {
     const fv = formValidation(document.getElementById('demoForm'), {
         fields: {
