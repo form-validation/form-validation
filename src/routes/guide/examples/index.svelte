@@ -6,11 +6,16 @@
     <h1 class="f3 f2-m f1-l tc">Examples</h1>
     <h2 class="f4 fw4 tc">A collection of useful examples you can play with</h2>
 
+    <Examples heading="Basic examples" examples={[
+        'Using Ajax to submit the form',
+    ]} />
+
     <Examples heading="Advanced examples" examples={[
         'Asking fields to be unique',
         'Clearing field when clicking the icon',
         'Enabling validators on the fly',
         'Excluding field by given condition',
+        'Multiple steps wizard',
         'Regenerating captcha when the form is invalid',
         'Requiring at least one field',
         'Switching validators on the same field',
