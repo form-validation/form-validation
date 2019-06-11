@@ -76,6 +76,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
 
     <Examples examples={[
         'Adjusting icon position',
+        'Clearing field when clicking the icon',
         'Showing icons in custom area',
         'Using FontAwesome icons',
         'Using Glyphicons icons',

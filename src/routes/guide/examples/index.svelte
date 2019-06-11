@@ -8,6 +8,7 @@
 
     <Examples heading="Advanced examples" examples={[
         'Asking fields to be unique',
+        'Clearing field when clicking the icon',
         'Enabling validators on the fly',
         'Excluding field by given condition',
         'Requiring at least one field',
