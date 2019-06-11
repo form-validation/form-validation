@@ -58,16 +58,6 @@
                     </ul>
                     {/if}
                 </li>
-                <li>
-                    <a href="/guide/developing/" class="mv2 pl3 fw6 db link">Developing</a>
-                    {#if path.startsWith('/guide/developing/')}
-                    <ul class="list pa0 ma0 f5 lh-copy">
-                        <li><SidebarLinkWithToc url="/guide/developing/" title="Overview" content={() => content}>Overview</SidebarLinkWithToc></li>
-                        <li><SidebarLinkWithToc url="/guide/developing/custom-validator/" title="Create your own validator" content={() => content}>Custom Validator</SidebarLinkWithToc></li>
-                        <li><SidebarLinkWithToc url="/guide/developing/integration/" title="Integrate with other UI library" content={() => content}>Integration</SidebarLinkWithToc></li>
-                    </ul>
-                    {/if}
-                </li>
                 <li><SidebarLink url="/guide/examples/" title="Examples" customClasses="mv2 pl3 fw6" isActive={(p, url) => p.startsWith(url)}>Examples</SidebarLink></li>
             </ul>
         </div>
