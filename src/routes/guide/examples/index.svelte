@@ -11,6 +11,7 @@
         'Clearing field when clicking the icon',
         'Enabling validators on the fly',
         'Excluding field by given condition',
+        'Regenerating captcha when the form is invalid',
         'Requiring at least one field',
         'Switching validators on the same field',
         'Using HTML 5 inputs and attributes',

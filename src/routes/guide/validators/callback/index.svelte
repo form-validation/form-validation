@@ -184,6 +184,7 @@ const res4 = callback().validate({
         'Asking fields to be unique',
         'Integrating with TinyMCE',
         'Preventing user to have same value as the placeholder',
+        'Regenerating captcha when the form is invalid',
         'Showing all messages',
         'Showing dynamic message',
         'Validating credit card expiration date',
