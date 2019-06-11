@@ -107,6 +107,7 @@ const res3 = notEmpty().validate({
 
     <Examples examples={[
         'Integrating with TinyMCE',
+        'Requiring at least one field',
         'Trimming a value',
     ]} />
 
