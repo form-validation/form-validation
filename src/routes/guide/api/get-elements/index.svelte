@@ -22,8 +22,8 @@
 
     <section class="mv5">
         <div class="flex">
-            <PrevButton href="/guide/api/get-element-value/">getElementValue() method</PrevButton>
-            <NextButton href="/guide/api/get-fields/">getFields() method</NextButton>
+            <PrevButton href="/guide/api/enable-validator/">enableValidator() method</PrevButton>
+            <NextButton href="/guide/api/get-element-value/">getElementValue() method</NextButton>
         </div>
     </section>
 </GuideLayout>
