@@ -113,6 +113,10 @@ const res2 = id().validate({
 `} />
     </section>
 
+    <Examples examples={[
+        'Switching validators on the same field',
+    ]} />
+
     <RelatedValidators validators={['vat']} />
 
     <section class="mv5">
@@ -129,6 +133,7 @@ import random from '../../../../components/helpers/random';
 import slug from '../../../../components/helpers/slug';
 
 import Demo from '../../../../components/Demo.svelte';
+import Examples from '../../../../components/Examples.svelte';
 import GuideLayout from '../../../../components/GuideLayout.svelte';
 import Heading from '../../../../components/Heading.svelte';
 import NextButton from '../../../../components/NextButton.svelte';
