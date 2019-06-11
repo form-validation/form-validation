@@ -451,6 +451,12 @@ document.addEventListener('DOMContentLoaded', function(e) {
 `} />
     </section>
 
+    <Examples examples={[
+        'Getting notified while field is being validated',
+        'Pending validation for a given number of seconds',
+        'Performing validation if field value exceed given number of characters',
+    ]} />
+
     <RelatedValidators validators={['callback', 'promise']} />
 
     <section class="mv5">
@@ -463,6 +469,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
 
 <script>
 import Demo from '../../../../components/Demo.svelte';
+import Examples from '../../../../components/Examples.svelte';
 import GuideLayout from '../../../../components/GuideLayout.svelte';
 import Heading from '../../../../components/Heading.svelte';
 import NextButton from '../../../../components/NextButton.svelte';

@@ -14,6 +14,7 @@
     </section>
 
     <Examples examples={[
+        'Getting notified while field is being validated',
         'Pending validation for a given number of seconds',
         'Performing validation if field value exceed given number of characters',
     ]} />
