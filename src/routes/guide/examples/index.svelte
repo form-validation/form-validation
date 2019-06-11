@@ -9,6 +9,7 @@
     <Examples heading="Advanced examples" examples={[
         'Asking fields to be unique',
         'Excluding field by given condition',
+        'Using HTML 5 inputs and attributes',
     ]} />
 
     <Examples heading="Validators" examples={[
