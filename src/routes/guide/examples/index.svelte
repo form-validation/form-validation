@@ -26,9 +26,17 @@
     ]} />
 
     <Examples heading="Customize icons and messages" examples={[
+        'Adjusting icon position',
         'Showing all messages',
         'Showing dynamic message',
+        'Showing icons in custom area',
         'Showing messages in custom area',
+        'Using FontAwesome icons',
+        'Using Glyphicons icons',
+        'Using Material Design icons',
+        'Using Semantic UI framework icons',
+        'Using Spectre framework icons',
+        'Using SVG icons',
     ]} />
 
     <Examples heading="Improve user experience" examples={[

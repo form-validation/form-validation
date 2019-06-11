@@ -109,6 +109,10 @@ bootstrap3: new FormValidation.plugins.Bootstrap3({
         </ul>
     </section>
 
+    <Examples examples={[
+        'Using Glyphicons icons',
+    ]} />
+
     <section class="mv5">
         <div class="flex">
             <PrevButton href="/guide/plugins/bootstrap/">Bootstrap plugin</PrevButton>
@@ -119,6 +123,7 @@ bootstrap3: new FormValidation.plugins.Bootstrap3({
 
 <script>
 import Demo from '../../../../components/Demo.svelte';
+import Examples from '../../../../components/Examples.svelte';
 import Heading from '../../../../components/Heading.svelte';
 import GuideLayout from '../../../../components/GuideLayout.svelte';
 import NextButton from '../../../../components/NextButton.svelte';
