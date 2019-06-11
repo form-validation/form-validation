@@ -28,7 +28,7 @@ fv
     <section class="mv5">
         <div class="flex">
             <PrevButton href="/guide/api/update-validator-option/">updateValidatorOption() method</PrevButton>
-            <NextButton href="/guide/api/validate-element/" class="b blue dim link pa2">validateElement() method</NextButton>
+            <NextButton href="/guide/api/validate-element/">validateElement() method</NextButton>
         </div>
     </section>
 </GuideLayout>
