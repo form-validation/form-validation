@@ -23,7 +23,7 @@
     <section class="mv5">
         <div class="flex">
             <PrevButton href="/guide/events/core.validator.validated/">core.validator.validated event</PrevButton>
-            <NextButton href="/guide/developing/">Developing</NextButton>
+            <NextButton href="/guide/examples/">Examples</NextButton>
         </div>
     </section>
 </GuideLayout>

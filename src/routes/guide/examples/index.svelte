@@ -26,6 +26,7 @@
     <Examples heading="Validators" examples={[
         'Accepting test credit card numbers',
         'Asking credit card number to match with selected type',
+        'Creating a custom validator',
         'Disabling date',
         'Is a@b valid email address',
         'Preventing user to have same value as the placeholder',
