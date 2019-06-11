@@ -20,6 +20,7 @@
         'Asking credit card number to match with selected type',
         'Disabling date',
         'Is a@b valid email address',
+        'Preventing user to have same value as the placeholder',
         'Showing credit card icon',
         'Supporting custom date format',
         'Trimming a value',

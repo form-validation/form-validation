@@ -183,6 +183,7 @@ const res4 = callback().validate({
     <Examples examples={[
         'Asking fields to be unique',
         'Integrating with TinyMCE',
+        'Preventing user to have same value as the placeholder',
         'Showing all messages',
         'Showing dynamic message'
     ]} />

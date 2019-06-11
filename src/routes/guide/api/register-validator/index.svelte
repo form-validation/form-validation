@@ -18,6 +18,10 @@
         </ul>
     </section>
 
+    <Examples examples={[
+        'Preventing user to have same value as the placeholder',
+    ]} />
+
     <section class="mv5">
         <div class="flex">
             <PrevButton href="/guide/api/register-plugin/">registerPlugin() method</PrevButton>
