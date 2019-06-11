@@ -60,6 +60,10 @@ result is an object of
         <Demo prefix="/guide/validators/identical/basic" frameworks={['Bootstrap', 'Tachyons']} />
     </section>
 
+    <Examples examples={[
+        'Enabling validators on the fly',
+    ]} />
+
     <RelatedValidators validators={['different']} />
 
     <section class="mv5">
@@ -75,6 +79,7 @@ import idData from '../id/data';
 import slug from '../../../../components/helpers/slug';
 
 import Demo from '../../../../components/Demo.svelte';
+import Examples from '../../../../components/Examples.svelte';
 import GuideLayout from '../../../../components/GuideLayout.svelte';
 import Heading from '../../../../components/Heading.svelte';
 import NextButton from '../../../../components/NextButton.svelte';
