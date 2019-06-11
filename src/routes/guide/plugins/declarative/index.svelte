@@ -299,6 +299,10 @@ document.addEventListener('DOMContentLoaded', function(e) {
         </ul>
     </section>
 
+    <Examples examples={[
+        'Using HTML 5 inputs and attributes',
+    ]} />
+
     <section class="mv5">
         <div class="flex">
             <PrevButton href="/guide/plugins/bulma/">Bulma plugin</PrevButton>
