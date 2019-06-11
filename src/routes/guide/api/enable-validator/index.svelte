@@ -31,10 +31,10 @@
 </GuideLayout>
 
 <script>
-import Examples from '../../../components/Examples.svelte';
-import Heading from '../../../components/Heading.svelte';
-import GuideLayout from '../../../components/GuideLayout.svelte';
-import NextButton from '../../../components/NextButton.svelte';
-import PrevButton from '../../../components/PrevButton.svelte';
-import SampleCode from '../../../components/SampleCode.svelte';
+import Examples from '../../../../components/Examples.svelte';
+import Heading from '../../../../components/Heading.svelte';
+import GuideLayout from '../../../../components/GuideLayout.svelte';
+import NextButton from '../../../../components/NextButton.svelte';
+import PrevButton from '../../../../components/PrevButton.svelte';
+import SampleCode from '../../../../components/SampleCode.svelte';
 </script>
