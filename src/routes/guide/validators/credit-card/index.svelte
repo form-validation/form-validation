@@ -109,6 +109,7 @@ const res2 = creditCard().validate({
         'Accepting test credit card numbers',
         'Asking credit card number to match with selected type',
         'Showing credit card icon',
+        'Validating credit card expiration date',
     ]} />
 
     <RelatedValidators validators={['bic', 'iban', 'rtn']} />

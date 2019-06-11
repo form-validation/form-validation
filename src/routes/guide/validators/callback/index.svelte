@@ -185,7 +185,8 @@ const res4 = callback().validate({
         'Integrating with TinyMCE',
         'Preventing user to have same value as the placeholder',
         'Showing all messages',
-        'Showing dynamic message'
+        'Showing dynamic message',
+        'Validating credit card expiration date',
     ]} />
 
     <RelatedValidators validators={['promise', 'remote']} />

@@ -27,6 +27,7 @@
         'Supporting custom date format',
         'Trimming a value',
         'Validating an avatar URL',
+        'Validating credit card expiration date',
         'Validating date range',
         'Validating social account URL',
     ]} />
