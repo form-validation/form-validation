@@ -62,9 +62,15 @@ app.get([
 ], (req, res) => {
 	res.redirect('/guide/examples/');
 });
-// app.get('/developing', (req, res) => {
-// 	res.redirect('/guide/developing/');
-// });
+app.get('/guide/developing/', (req, res) => {
+	res.redirect('/guide/examples/');
+});
+app.get('/guide/developing/custom-validator/', (req, res) => {
+	res.redirect('/guide/examples/creating-a-custom-validator/');
+});
+app.get('/guide/developing/integration/', (req, res) => {
+	res.redirect('/guide/examples/integrating-with-3rd-party-libraries/');
+});
 app.get([
 	'/news',
 	'/news/:slug'
