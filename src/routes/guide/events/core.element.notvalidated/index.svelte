@@ -27,5 +27,4 @@
 import GuideLayout from '../../../../components/GuideLayout.svelte';
 import NextButton from '../../../../components/NextButton.svelte';
 import PrevButton from '../../../../components/PrevButton.svelte';
-import SampleCode from '../../../../components/SampleCode.svelte';
 </script>

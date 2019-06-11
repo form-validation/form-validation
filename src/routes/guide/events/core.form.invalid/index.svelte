@@ -23,6 +23,5 @@ import Examples from '../../../../components/Examples.svelte';
 import GuideLayout from '../../../../components/GuideLayout.svelte';
 import NextButton from '../../../../components/NextButton.svelte';
 import PrevButton from '../../../../components/PrevButton.svelte';
-import SampleCode from '../../../../components/SampleCode.svelte';
 import Tip from '../../../../components/Tip.svelte';
 </script>
