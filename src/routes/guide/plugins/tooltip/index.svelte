@@ -90,72 +90,17 @@ document.addEventListener('DOMContentLoaded', function(e) {
 
         <p class="lh-copy">Same as the <a href="/guide/plugins/icon/" class="blue dim link">Icon</a> plugin, the Tooltip plugin only supports the form made in the following CSS frameworks:</p>
 
-        <table class="collapse ba br2 b--black-10 pv2 ph3 w-100">
-            <tr class="striped--light-gray">
-                <th class="pv2 ph3 tl f6 fw6 ttu">Framework</th>
-                <th class="pv2 ph3 tl f6 fw6 ttu">Using with plugin</th>
-            </tr>
-            <tr class="striped--light-gray">
-                <td class="pv2 ph3">Bootstrap 3 framework</td>
-                <td class="pv2 ph3"><a href="/guide/plugins/bootstrap3/" class="blue dim link">Bootstrap 3</a></td>
-            </tr>
-            <tr class="striped--light-gray">
-                <td class="pv2 ph3">Bootstrap 4 framework</td>
-                <td class="pv2 ph3"><a href="/guide/plugins/bootstrap/" class="blue dim link">Bootstrap</a></td>
-            </tr>
-            <tr class="striped--light-gray">
-                <td class="pv2 ph3">Bulma framework</td>
-                <td class="pv2 ph3"><a href="/guide/plugins/bulma/" class="blue dim link">Bulma</a></td>
-            </tr>
-            <tr class="striped--light-gray">
-                <td class="pv2 ph3">Foundation framework</td>
-                <td class="pv2 ph3"><a href="/guide/plugins/foundation/" class="blue dim link">Foundation</a></td>
-            </tr>
-            <tr class="striped--light-gray">
-                <td class="pv2 ph3">Materialize framework</td>
-                <td class="pv2 ph3"><a href="/guide/plugins/materialize/" class="blue dim link">Materialize</a></td>
-            </tr>
-            <tr class="striped--light-gray">
-                <td class="pv2 ph3">Milligram framework</td>
-                <td class="pv2 ph3"><a href="/guide/plugins/milligram/" class="blue dim link">Milligram</a></td>
-            </tr>
-            <tr class="striped--light-gray">
-                <td class="pv2 ph3">mini.css framework</td>
-                <td class="pv2 ph3"><a href="/guide/plugins/mini/" class="blue dim link">Mini</a></td>
-            </tr>
-            <tr class="striped--light-gray">
-                <td class="pv2 ph3">MUI framework</td>
-                <td class="pv2 ph3"><a href="/guide/plugins/mui/" class="blue dim link">Mui</a></td>
-            </tr>
-            <tr class="striped--light-gray">
-                <td class="pv2 ph3">Pure library</td>
-                <td class="pv2 ph3"><a href="/guide/plugins/pure/" class="blue dim link">Pure</a></td>
-            </tr>
-            <tr class="striped--light-gray">
-                <td class="pv2 ph3">Semantic UI framework</td>
-                <td class="pv2 ph3"><a href="/guide/plugins/semantic/" class="blue dim link">Semantic</a></td>
-            </tr>
-            <tr class="striped--light-gray">
-                <td class="pv2 ph3">Shoelace library</td>
-                <td class="pv2 ph3"><a href="/guide/plugins/shoelace/" class="blue dim link">Shoelace</a></td>
-            </tr>
-            <tr class="striped--light-gray">
-                <td class="pv2 ph3">Spectre framework</td>
-                <td class="pv2 ph3"><a href="/guide/plugins/spectre/" class="blue dim link">Spectre</a></td>
-            </tr>
-            <tr class="striped--light-gray">
-                <td class="pv2 ph3">Tachyons library</td>
-                <td class="pv2 ph3"><a href="/guide/plugins/tachyons/" class="blue dim link">Tachyons</a></td>
-            </tr>
-            <tr class="striped--light-gray">
-                <td class="pv2 ph3">turretcss framework</td>
-                <td class="pv2 ph3"><a href="/guide/plugins/turret/" class="blue dim link">Turret</a></td>
-            </tr>
-            <tr class="striped--light-gray">
-                <td class="pv2 ph3">UIkit framework</td>
-                <td class="pv2 ph3"><a href="/guide/plugins/uikit/" class="blue dim link">Uikit</a></td>
-            </tr>
-        </table>
+        <div style="display: grid; grid-column-gap: 2em; grid-row-gap: 2em; grid-template-columns: repeat(3, 1fr);">
+            {#each _frameworks as p, i}
+            <div class="br2" class:bg-blue={i % 4 === 0} class:bg-red={i % 4 === 1} class:bg-gold={i % 4 === 2} class:bg-green={i % 4 === 3}>
+                <div class="pa3 shadow-4 h-100">
+                    <a href="/guide/plugins/{p.toLowerCase()}/" class="link pointer white db h-100">
+                        <div class="f4 fw6">{p}</div>
+                    </a>
+                </div>
+            </div>
+            {/each}
+        </div>
 
         <p class="lh-copy">If you don't want the plugin supporting given CSS framework above to show the error message, you can set <code>defaultMessageContainer: false</code> as following:</p>
 <SampleCode lang="javascript" code={`
@@ -211,4 +156,9 @@ import GuideLayout from '../../../../components/GuideLayout.svelte';
 import NextButton from '../../../../components/NextButton.svelte';
 import PrevButton from '../../../../components/PrevButton.svelte';
 import SampleCode from '../../../../components/SampleCode.svelte';
+
+const _frameworks = [
+    'Bootstrap', 'Bootstrap3', 'Bulma', 'Foundation', 'Materialize', 'Milligram', 'mini', 'MUI',
+    'Pure', 'Semantic', 'Shoelace', 'Spectre', 'Tachyons', 'Turret', 'UIkit',
+];
 </script>
