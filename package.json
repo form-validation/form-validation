@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "compression": "^1.7.4",
-    "polka": "^0.5.2",
+    "express": "^4.17.1",
     "sirv": "^0.4.2"
   },
   "devDependencies": {
