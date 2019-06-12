@@ -12,6 +12,11 @@
                             <option value={framework}>{#if (framework === 'Native')}Native form{:else}{SupportedFramework[framework.toLowerCase()].name}{/if}</option>
                             {/each}
                         </select>
+                        <div class="dn">
+                            {#each frameworks as framework}
+                            <a href="{prefix}/{SupportedFramework[framework.toLowerCase()].name}">{SupportedFramework[framework.toLowerCase()].name}</a>
+                            {/each}
+                        </div>
                     </div>
                     <div>↓</div>
                 </div>
