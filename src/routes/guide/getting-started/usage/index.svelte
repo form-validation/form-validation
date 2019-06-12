@@ -168,40 +168,13 @@ document.addEventListener('DOMContentLoaded', function(e) {
 </html>
 `} />
         <p class="lh-copy">We are going to enable some plugins to make the validations happen:</p>
-        <div style="display: grid; grid-column-gap: 2em; grid-row-gap: 2em; grid-template-columns: repeat(2, 1fr);">
-            <div class="bg-blue br2">
-                <div class="pa3 shadow-4 h-100">
-                    <a href="/guide/plugins/message/" class="link pointer white db h-100">
-                        <div class="f4 fw6">Message</div>
-                        <p class="lh-copy">Display error message that is defined in each validator options</p>
-                    </a>
-                </div>
-            </div>
-            <div class="bg-red br2">
-                <div class="pa3 shadow-4 h-100">
-                    <a href="/guide/plugins/trigger/" class="link pointer white db h-100">
-                        <div class="f4 fw6">Trigger</div>
-                        <p class="lh-copy">Indicate the events which the validation will be executed.</p>
-                    </a>
-                </div>
-            </div>
-            <div class="bg-gold br2">
-                <div class="pa3 shadow-4 h-100">
-                    <a href="/guide/plugins/submit-button/" class="link pointer white db h-100">
-                        <div class="f4 fw6">SubmitButton</div>
-                        <p class="lh-copy">Automatically validate the form when pressing its Submit button</p>
-                    </a>
-                </div>
-            </div>
-            <div class="bg-green br2">
-                <div class="pa3 shadow-4 h-100">
-                    <a href="/guide/plugins/default-submit/" class="link pointer white db h-100">
-                        <div class="f4 fw6">DefaultSubmit</div>
-                        <p class="lh-copy">Submit the form if all fields are valid after validating</p>
-                    </a>
-                </div>
-            </div>
-        </div>
+
+        <Cards cols="2">
+            <Card target="/guide/plugins/message/" title="Message">Display error message that is defined in each validator options</Card>
+            <Card target="/guide/plugins/trigger/" title="Trigger">Indicate the events which the validation will be executed.</Card>
+            <Card target="/guide/plugins/submit-button/" title="SubmitButton">Automatically validate the form when pressing its Submit button</Card>
+            <Card target="/guide/plugins/default-submit/" title="DefaultSubmit">Submit the form if all fields are valid after validating</Card>
+        </Cards>
         
         <p class="lh-copy">Our demo page now looks like:</p>
 <SampleCode lang="html" code={`
@@ -311,17 +284,11 @@ document.addEventListener('DOMContentLoaded', function(e) {
         
         <p class="lh-copy">Refer to each plugin below if you want to get supports for particular CSS framework:</p>
 
-        <div style="display: grid; grid-column-gap: 2em; grid-row-gap: 2em; grid-template-columns: repeat(3, 1fr);">
+        <Cards>
         {#each ['Bootstrap', 'Bootstrap3', 'Bulma', 'Foundation', 'Materialize', 'Milligram', 'Mini', 'Mui', 'Pure', 'Semantic', 'Shoelace', 'Spectre', 'Tachyons', 'Turret', 'Uikit'] as framework, i}
-            <div class="br2" class:bg-blue={i % 4 === 0} class:bg-red={i % 4 === 1} class:bg-gold={i % 4 === 2} class:bg-green={i % 4 === 3}>
-                <div class="pa3 shadow-4 h-100">
-                    <a href="/guide/plugins/{framework.toLowerCase()}/" class="link pointer white db h-100">
-                        <div class="f4 fw6">{framework}</div>
-                    </a>
-                </div>
-            </div>
+            <Card target="/guide/plugins/{framework.toLowerCase()}/" title="{framework}"></Card>
         {/each}
-        </div>
+        </Cards>
     </section>
 
     <section class="mv5">
@@ -333,6 +300,8 @@ document.addEventListener('DOMContentLoaded', function(e) {
 </GuideLayout>
 
 <script>
+import Card from '../../../../components/Card.svelte';
+import Cards from '../../../../components/Cards.svelte';
 import Demo from '../../../../components/Demo.svelte';
 import Heading from '../../../../components/Heading.svelte';
 import GuideLayout from '../../../../components/GuideLayout.svelte';
