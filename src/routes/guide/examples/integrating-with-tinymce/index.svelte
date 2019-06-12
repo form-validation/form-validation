@@ -12,11 +12,17 @@
         <Demo prefix="/guide/examples/integrating-with-tinymce" frameworks={['Tachyons']} />
     </section>
 
+    <Examples examples={[
+        'Integrating with Summernote',
+        'Integrating with TinyMCE',
+    ]} />
+
     <RelatedValidators validators={['callback', 'notEmpty', 'stringLength']} />
 </GuideLayout>
 
 <script>
 import Demo from '../../../../components/Demo.svelte';
+import Examples from '../../../../components/Examples.svelte';
 import GuideLayout from '../../../../components/GuideLayout.svelte';
 import RelatedValidators from '../../../../components/RelatedValidators.svelte';
 </script>

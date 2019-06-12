@@ -67,6 +67,7 @@
     <Examples heading="Integrate with 3rd party libraries" examples={[
         'Integrating with 3rd party libraries',
         'Integrating with flatpickr',
+        'Integrating with Summernote',
         'Integrating with TinyMCE',
         'Using flatpickr for start and end dates',
     ]} />
