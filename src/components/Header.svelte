@@ -4,7 +4,7 @@
         <a href="/guide/validators/" class="link white">Validators</a>
         <a href="/guide/plugins/" class="link white">Plugins</a>
         <a href="/guide/examples/" class="link white">Examples</a>
-        <a href="/guide/updates/" class="link white">Updates</a>
+        <a href="/updates/" class="link white">Updates</a>
         <a href="/download/" title="Download" class="fw6 bg-red white ph3 pv2 br2 grow no-underline">Download v1.4.0</a>
     </div>
 </header>
