@@ -7,6 +7,7 @@
     <h2 class="f4 fw4 tc">A collection of useful examples you can play with</h2>
 
     <Examples heading="Basic examples" examples={[
+        'Can not submit form after validation',
         'Using Ajax to submit the form',
     ]} />
 

@@ -226,6 +226,7 @@
     <url><loc>https://formvalidation.io/guide/events/core.validator.validated/</loc></url>
     <url><loc>https://formvalidation.io/guide/events/core.validator.validating/</loc></url>
 
+    <url><loc>https://formvalidation.io/guide/examples/can-not-submit-form-after-validation/</loc></url>
     <url><loc>https://formvalidation.io/guide/examples/using-ajax-to-submit-the-form/</loc></url>
     
     <url><loc>https://formvalidation.io/guide/examples/asking-fields-to-be-unique/</loc></url>

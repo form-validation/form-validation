@@ -11,7 +11,7 @@
         </ul>
     </div>
     <div class="w-30">
-        <div class="f4 fw6 mv3">Toys</div>
+        <div class="f4 fw6 mv3">Products</div>
         <ul class="list ma0 pa0 lh-copy">
             <li><a href="https://blur.page" class="link" target="_blank">BlurPage</a></li>
         </ul>
