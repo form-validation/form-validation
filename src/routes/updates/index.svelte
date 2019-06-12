@@ -16,101 +16,20 @@
 
         <p class="lh-copy">The <a class="blue dim link" href="/guide/validators/id/">id</a> validator supports validating more national identification numbers, including:</p>
 
-        <div style="display: grid; grid-column-gap: 2em; grid-row-gap: 2em; grid-template-columns: repeat(3, 1fr);">
-            <div class="br2 bg-blue">
-                <div class="pa3 shadow-4 h-100">
-                    <a href="/guide/validators/id/argentinian-identification-number/" class="link pointer white db h-100">
-                        <div class="f4 fw6">Argentinian identification number</div>
-                        <p class="lh-copy">(DNI)</p>
-                    </a>
-                </div>
-            </div>
-            <div class="br2 bg-red">
-                <div class="pa3 shadow-4 h-100">
-                    <a href="/guide/validators/id/colombian-identification-number/" class="link pointer white db h-100">
-                        <div class="f4 fw6">Colombian identification number</div>
-                        <p class="lh-copy">(NIT)</p>
-                    </a>
-                </div>
-            </div>
-            <div class="br2 bg-gold">
-                <div class="pa3 shadow-4 h-100">
-                    <a href="/guide/validators/id/french-identification-number/" class="link pointer white db h-100">
-                        <div class="f4 fw6">French identification number</div>
-                        <p class="lh-copy">(NIR)</p>
-                    </a>
-                </div>
-            </div>
-            <div class="br2 bg-green">
-                <div class="pa3 shadow-4 h-100">
-                    <a href="/guide/validators/id/hong-kong-identification-number/" class="link pointer white db h-100">
-                        <div class="f4 fw6">Hong Kong identification number</div>
-                        <p class="lh-copy">(HKID)</p>
-                    </a>
-                </div>
-            </div>
-            <div class="br2 bg-blue">
-                <div class="pa3 shadow-4 h-100">
-                    <a href="/guide/validators/id/indian-identification-number/" class="link pointer white db h-100">
-                        <div class="f4 fw6">Indian identification number</div>
-                        <p class="lh-copy">(Aadhaar)</p>
-                    </a>
-                </div>
-            </div>
-            <div class="br2 bg-red">
-                <div class="pa3 shadow-4 h-100">
-                    <a href="/guide/validators/id/korean-identification-number/" class="link pointer white db h-100">
-                        <div class="f4 fw6">Korean identification number</div>
-                        <p class="lh-copy">(RRN)</p>
-                    </a>
-                </div>
-            </div>
-            <div class="br2 bg-gold">
-                <div class="pa3 shadow-4 h-100">
-                    <a href="/guide/validators/id/malaysian-identification-number/" class="link pointer white db h-100">
-                        <div class="f4 fw6">Malaysian identification number</div>
-                        <p class="lh-copy">(NRIC)</p>
-                    </a>
-                </div>
-            </div>
-            <div class="br2 bg-green">
-                <div class="pa3 shadow-4 h-100">
-                    <a href="/guide/validators/id/mexican-identification-number/" class="link pointer white db h-100">
-                        <div class="f4 fw6">Mexican identification number</div>
-                        <p class="lh-copy">(CURP)</p>
-                    </a>
-                </div>
-            </div>
-            <div class="br2 bg-blue">
-                <div class="pa3 shadow-4 h-100">
-                    <a href="/guide/validators/id/norwegian-identification-number/" class="link pointer white db h-100">
-                        <div class="f4 fw6">Norwegian identification number</div>
-                        <p class="lh-copy">(Fødselsnummer)</p>
-                    </a>
-                </div>
-            </div>
-            <div class="br2 bg-red">
-                <div class="pa3 shadow-4 h-100">
-                    <a href="/guide/validators/id/peruvian-identification-number/" class="link pointer white db h-100">
-                        <div class="f4 fw6">Peruvian identification number</div>
-                    </a>
-                </div>
-            </div>
-            <div class="br2 bg-gold">
-                <div class="pa3 shadow-4 h-100">
-                    <a href="/guide/validators/id/taiwanese-identification-number/" class="link pointer white db h-100">
-                        <div class="f4 fw6">Taiwanese identification number</div>
-                    </a>
-                </div>
-            </div>
-            <div class="br2 bg-green">
-                <div class="pa3 shadow-4 h-100">
-                    <a href="/guide/validators/id/uruguayan-identification-number/" class="link pointer white db h-100">
-                        <div class="f4 fw6">Uruguayan identification number</div>
-                    </a>
-                </div>
-            </div>
-        </div>
+        <Cards>
+            <Card target="/guide/validators/id/argentinian-identification-number/" title="Argentinian identification number">(DNI)</Card>
+            <Card target="/guide/validators/id/colombian-identification-number/" title="Colombian identification number">(NIT)</Card>
+            <Card target="/guide/validators/id/french-identification-number/" title="French identification number">(NIR)</Card>
+            <Card target="/guide/validators/id/hong-kong-identification-number/" title="Hong Kong identification number">(HKID)</Card>
+            <Card target="/guide/validators/id/indian-identification-number/" title="Indian identification number">(Aadhaar)</Card>
+            <Card target="/guide/validators/id/korean-identification-number/" title="Korean identification number">(RRN)</Card>
+            <Card target="/guide/validators/id/malaysian-identification-number/" title="Malaysian identification number">(NRIC)</Card>
+            <Card target="/guide/validators/id/mexican-identification-number/" title="Mexican identification number">(CURP)</Card>
+            <Card target="/guide/validators/id/norwegian-identification-number/" title="Norwegian identification number">(Fødselsnummer)</Card>
+            <Card target="/guide/validators/id/peruvian-identification-number/" title="Peruvian identification number"></Card>
+            <Card target="/guide/validators/id/taiwanese-identification-number/" title="Taiwanese identification number"></Card>
+            <Card target="/guide/validators/id/uruguayan-identification-number/" title="Uruguayan identification number"></Card>
+        </Cards>
 
         <h3>The <a class="blue dim link" href="/guide/plugins/declarative/">Declarative</a> plugin now supports plugin declarations</h3>
 <SampleCode lang="html" code={`
@@ -235,6 +154,8 @@ const result = brId().validate('An ID here');
 </ChangelogLayout>
 
 <script>
+import Card from '../../components/Card.svelte';
+import Cards from '../../components/Cards.svelte';
 import ChangelogLayout from '../../components/ChangelogLayout.svelte';
 import Heading from '../../components/Heading.svelte';
 import SampleCode from '../../components/SampleCode.svelte';

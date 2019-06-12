@@ -12,18 +12,11 @@
         <Heading>Core plugins</Heading>
         <p class="lh-copy">These plugins are often used and included in the <code>dist/js/FormValidation(.min).js</code> file. You don't need to include any external plugin file to use them.</p>
 
-        <div style="display: grid; grid-column-gap: 2em; grid-row-gap: 2em; grid-template-columns: repeat(3, 1fr);">
-            {#each CorePlugins as p, i}
-            <div class="br2" class:bg-blue={i % 4 === 0} class:bg-red={i % 4 === 1} class:bg-gold={i % 4 === 2} class:bg-green={i % 4 === 3}>
-                <div class="pa3 shadow-4 h-100">
-                    <a href="/guide/plugins/{camelCaseToDash(p.name)}/" title="{p.desc.replace(/<\/?[^>]+(>|$)/g, "")}" class="link pointer white db h-100">
-                        <div class="f4 fw6">{p.name}</div>
-                        <p class="lh-copy">{p.desc}</p>
-                    </a>
-                </div>
-            </div>
+        <Cards>
+            {#each CorePlugins as p}
+            <Card target="/guide/plugins/{camelCaseToDash(p.name)}/" title="{p.name}">{p.desc}</Card>
             {/each}
-        </div>
+        </Cards>
     </section>
 
     <section class="mv5">
@@ -41,18 +34,11 @@ after FormValidation.min.js
 `} />
         </div>  
 
-        <div style="display: grid; grid-column-gap: 2em; grid-row-gap: 2em; grid-template-columns: repeat(3, 1fr);">
-            {#each ExternalPlugins as p, i}
-            <div class="br2" class:bg-blue={i % 4 === 0} class:bg-red={i % 4 === 1} class:bg-gold={i % 4 === 2} class:bg-green={i % 4 === 3}>
-                <div class="pa3 shadow-4 h-100">
-                    <a href="/guide/plugins/{camelCaseToDash(p.name)}/" title="{p.desc.replace(/<\/?[^>]+(>|$)/g, "")}" class="link pointer white db h-100">
-                        <div class="f4 fw6">{p.name}</div>
-                        <p class="lh-copy">{p.desc}</p>
-                    </a>
-                </div>
-            </div>
+        <Cards>
+            {#each ExternalPlugins as p}
+            <Card target="/guide/plugins/{camelCaseToDash(p.name)}/" title="{p.name}">{p.desc}</Card>
         {/each}
-        </div>
+        </Cards>
     </section>
 
     <section class="mv5">
@@ -67,6 +53,8 @@ after FormValidation.min.js
 import Plugins from '../../../components/constants/Plugins';
 import camelCaseToDash from '../../../components/helpers/camelCaseToDash';
 
+import Card from '../../../components/Card.svelte';
+import Cards from '../../../components/Cards.svelte';
 import Heading from '../../../components/Heading.svelte';
 import GuideLayout from '../../../components/GuideLayout.svelte';
 import NextButton from '../../../components/NextButton.svelte';
