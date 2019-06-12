@@ -3,8 +3,7 @@
 </svelte:head>
 
 <GuideLayout>
-    <h1 class="f3 f2-m f1-l tc">Examples</h1>
-    <h2 class="f4 fw4 tc">Showing icons in custom area</h2>
+    <h1 class="tc lh-copy">Showing icons in custom area</h1>
     
     <section class="mv5">
         <p class="lh-copy">In this example, I will help you how to show the feedback icons in custom area which are right after the labels. We're going to archive it by setting the <code>onPlaced</code> option which is called when the icon element is inserted to the document.</p>

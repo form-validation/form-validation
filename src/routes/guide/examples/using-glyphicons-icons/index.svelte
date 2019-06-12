@@ -3,8 +3,7 @@
 </svelte:head>
 
 <GuideLayout>
-    <h1 class="f3 f2-m f1-l tc">Examples</h1>
-    <h2 class="f4 fw4 tc">Using Glyphicons icons</h2>
+    <h1 class="tc lh-copy">Using Glyphicons icons</h1>
     
     <section class="mv5">
         <p class="lh-copy">The Glyphicons icon set is included with <a href="/guide/plugins/bootstrap3/" class="blue dim link">Bootstrap v3</a>, so you can use it as:</p>

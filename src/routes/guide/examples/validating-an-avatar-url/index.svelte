@@ -3,8 +3,7 @@
 </svelte:head>
 
 <GuideLayout>
-    <h1 class="f3 f2-m f1-l tc">Examples</h1>
-    <h2 class="f4 fw4 tc">Validating an avatar URL</h2>
+    <h1 class="tc lh-copy">Validating an avatar URL</h1>
     
     <section class="mv5">
         <p class="lh-copy">The following example is a combination usage of the <a href="/guide/validators/uri/" class="blue dim link">uri validator</a> and <a href="/guide/validators/regexp/" class="blue dim link">regexp validator</a>. It asks user to enter a valid URL which ends with .jpg, .jpeg, or .png.</p>

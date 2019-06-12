@@ -3,8 +3,7 @@
 </svelte:head>
 
 <GuideLayout>
-    <h1 class="f3 f2-m f1-l tc">Examples</h1>
-    <h2 class="f4 fw4 tc">Requiring at least one field</h2>
+    <h1 class="tc lh-copy">Requiring at least one field</h1>
     
     <section class="mv5">
         <p class="lh-copy">In fact, the form might have multiple fields with the same validator rules but at least one of them is required.

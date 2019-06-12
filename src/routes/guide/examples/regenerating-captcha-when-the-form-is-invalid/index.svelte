@@ -3,8 +3,7 @@
 </svelte:head>
 
 <GuideLayout>
-    <h1 class="f3 f2-m f1-l tc">Examples</h1>
-    <h2 class="f4 fw4 tc">Regenerating captcha when the form is invalid</h2>
+    <h1 class="tc lh-copy">Regenerating captcha when the form is invalid</h1>
     
     <section class="mv5">
         <p class="lh-copy">In the following form, click the <span class="i">Submit</span> button to see the new captcha is generated.</p>

@@ -3,8 +3,7 @@
 </svelte:head>
 
 <GuideLayout>
-    <h1 class="f3 f2-m f1-l tc">Examples</h1>
-    <h2 class="f4 fw4 tc">Integrating with 3rd party libraries</h2>
+    <h1 class="tc lh-copy">Integrating with 3rd party libraries</h1>
     
     <section class="mv5">
         <p class="lh-copy">Most UI libraries trigger an event after changing the field value. By using this kind of event handler, you need to ask FormValidation to revalidate the field using the <a href="/guide/api/revalidate-field/" class="blue dim link">revalidateField()</a> method.</p>

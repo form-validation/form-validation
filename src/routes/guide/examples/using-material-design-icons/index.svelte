@@ -3,8 +3,7 @@
 </svelte:head>
 
 <GuideLayout>
-    <h1 class="f3 f2-m f1-l tc">Examples</h1>
-    <h2 class="f4 fw4 tc">Using Material Design icons</h2>
+    <h1 class="tc lh-copy">Using Material Design icons</h1>
     
     <section class="mv5">
         <p class="lh-copy">If you are a fan of using Google's <a href="https://material.io/" class="blue dim link">material design</a>, then you might prefer to use <a href="https://material.io/tools/icons/" class="blue dim link">its icons set</a>.</p>

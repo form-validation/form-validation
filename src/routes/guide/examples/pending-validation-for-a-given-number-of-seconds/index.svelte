@@ -3,8 +3,7 @@
 </svelte:head>
 
 <GuideLayout>
-    <h1 class="f3 f2-m f1-l tc">Examples</h1>
-    <h2 class="f4 fw4 tc">Pending validation for a given number of seconds</h2>
+    <h1 class="tc lh-copy">Pending validation for a given number of seconds</h1>
     
     <section class="mv5">
         <p class="lh-copy">In the following form, the <span class="i">username</span> field validations will be postponed for 3 seconds after user stops filling in the field. Other field will be validated instantly right after each key stroke.</p>

@@ -3,8 +3,7 @@
 </svelte:head>
 
 <GuideLayout>
-    <h1 class="f3 f2-m f1-l tc">Examples</h1>
-    <h2 class="f4 fw4 tc">Multiple steps wizard</h2>
+    <h1 class="tc lh-copy">Multiple steps wizard</h1>
     
     <section class="mv5">
         <Tip>Use the <a href="/guide/plugins/wizard/" class="blue dim link">Wizard</a> plugin to support validating multiple steps form.</Tip>

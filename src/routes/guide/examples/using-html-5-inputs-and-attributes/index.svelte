@@ -3,8 +3,7 @@
 </svelte:head>
 
 <GuideLayout>
-    <h1 class="f3 f2-m f1-l tc">Examples</h1>
-    <h2 class="f4 fw4 tc">Using HTML 5 inputs and attributes</h2>
+    <h1 class="tc lh-copy">Using HTML 5 inputs and attributes</h1>
     
     <section class="mv5">
         <p class="lh-copy">When the <code>html5Input</code> option is set to <code>true</code>, the <a href="/guide/plugins/declarative/" class="blue dim link">Declarative plugin</a> will automatically enable the validators for the following input type and HTML 5 attributes:</p>

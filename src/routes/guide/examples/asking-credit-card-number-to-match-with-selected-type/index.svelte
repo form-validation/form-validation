@@ -3,8 +3,7 @@
 </svelte:head>
 
 <GuideLayout>
-    <h1 class="f3 f2-m f1-l tc">Examples</h1>
-    <h2 class="f4 fw4 tc">Asking credit card number to match with selected type</h2>
+    <h1 class="tc lh-copy">Asking credit card number to match with selected type</h1>
     
     <section class="mv5">
         <p class="lh-copy">The following form asks to fill in the valid credit card number which matches the selected type.</p>

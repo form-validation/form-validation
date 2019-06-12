@@ -3,8 +3,7 @@
 </svelte:head>
 
 <GuideLayout>
-    <h1 class="f3 f2-m f1-l tc">Examples</h1>
-    <h2 class="f4 fw4 tc">Validating credit card expiration date</h2>
+    <h1 class="tc lh-copy">Validating credit card expiration date</h1>
     
     <section class="mv5">
         <p class="lh-copy">The following form requires to provide a valid expiration month and year of credit card. Because the <a href="/guide/validators/date/" class="blue dim link">date</a> validator asks for all the year, month and day, it isn't helpful in that case.</p>

@@ -3,8 +3,7 @@
 </svelte:head>
 
 <GuideLayout>
-    <h1 class="f3 f2-m f1-l tc">Examples</h1>
-    <h2 class="f4 fw4 tc">Adjusting icon position</h2>
+    <h1 class="tc lh-copy">Adjusting icon position</h1>
     
     <section class="mv5">
         <p class="lh-copy">The Icon plugin generates the following markup for icon:</p>

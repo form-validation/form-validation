@@ -3,8 +3,7 @@
 </svelte:head>
 
 <GuideLayout>
-    <h1 class="f3 f2-m f1-l tc">Examples</h1>
-    <h2 class="f4 fw4 tc">Validating date range</h2>
+    <h1 class="tc lh-copy">Validating date range</h1>
     
     <section class="mv5">
         <p class="lh-copy">The following form asks you to enter a date in the range of 2000/01/01 and 2020/12/30. It can be implemented by using the <code>min</code> and <code>max</code> options.</p>

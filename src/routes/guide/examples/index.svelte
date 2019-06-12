@@ -3,8 +3,7 @@
 </svelte:head>
 
 <GuideLayout>
-    <h1 class="f3 f2-m f1-l tc">Examples</h1>
-    <h2 class="f4 fw4 tc">A collection of useful examples you can play with</h2>
+    <h1 class="tc lh-copy">A collection of useful examples you can play with</h1>
 
     <Examples heading="Basic examples" examples={[
         'Can not submit form after validation',

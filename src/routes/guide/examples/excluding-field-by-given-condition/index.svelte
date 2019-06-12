@@ -3,8 +3,7 @@
 </svelte:head>
 
 <GuideLayout>
-    <h1 class="f3 f2-m f1-l tc">Examples</h1>
-    <h2 class="f4 fw4 tc">Excluding field by given condition</h2>
+    <h1 class="tc lh-copy">Excluding field by given condition</h1>
     
     <section class="mv5">
         <p class="lh-copy">Consider the following example. It asks you about the Javascript framework you like most. You can choose one from the list of popular Javascript frameworks such as Angular, Ember, React, Vue.</p>

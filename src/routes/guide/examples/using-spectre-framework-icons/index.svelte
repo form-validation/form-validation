@@ -3,8 +3,7 @@
 </svelte:head>
 
 <GuideLayout>
-    <h1 class="f3 f2-m f1-l tc">Examples</h1>
-    <h2 class="f4 fw4 tc">Using Spectre framework icons</h2>
+    <h1 class="tc lh-copy">Using Spectre framework icons</h1>
     
     <section class="mv5">
         <p class="lh-copy">The <a href="https://picturepan2.github.io/spectre/" class="blue dim link">Spectre framework</a> provides a built-in <a href="https://picturepan2.github.io/spectre/elements.html#icons" class="blue dim link">icons set</a> which can be used with <a href="/guide/plugins/spectre/" class="blue dim link">Spectre</a> plugin.</p>

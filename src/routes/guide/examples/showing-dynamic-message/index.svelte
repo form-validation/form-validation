@@ -3,8 +3,7 @@
 </svelte:head>
 
 <GuideLayout>
-    <h1 class="f3 f2-m f1-l tc">Examples</h1>
-    <h2 class="f4 fw4 tc">Showing dynamic message</h2>
+    <h1 class="tc lh-copy">Showing dynamic message</h1>
     
     <section class="mv5">
         <p class="lh-copy">The form below ask to enter a secure password, which must satisfies all the following conditions:</p>

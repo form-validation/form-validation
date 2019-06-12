@@ -3,8 +3,7 @@
 </svelte:head>
 
 <GuideLayout>
-    <h1 class="f3 f2-m f1-l tc">Examples</h1>
-    <h2 class="f4 fw4 tc">Using Ajax to submit the form</h2>
+    <h1 class="tc lh-copy">Using Ajax to submit the form</h1>
     
     <section class="mv5">
         <p class="lh-copy">After clicking the Submit button, all fields will be validated automatically if the <a href="/guide/plugins/submit-button/" class="blue dim link">SubmitButton</a> plugin is enabled. Usually you have two choices in the case all fields pass their validations:</p>

@@ -3,8 +3,7 @@
 </svelte:head>
 
 <GuideLayout>
-    <h1 class="f3 f2-m f1-l tc">Examples</h1>
-    <h2 class="f4 fw4 tc">Using FontAwesome icons</h2>
+    <h1 class="tc lh-copy">Using FontAwesome icons</h1>
     
     <section class="mv5">
         <p class="lh-copy">Follow the sample code below to use the icons provided by <a href="https://fontawesome.com/" class="blue dim link">FontAwesome</a>:</p>

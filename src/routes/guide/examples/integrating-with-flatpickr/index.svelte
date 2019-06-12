@@ -3,8 +3,7 @@
 </svelte:head>
 
 <GuideLayout>
-    <h1 class="f3 f2-m f1-l tc">Examples</h1>
-    <h2 class="f4 fw4 tc">Integrating with flatpickr</h2>
+    <h1 class="tc lh-copy">Integrating with flatpickr</h1>
     
     <section class="mv5">
         <p class="lh-copy">The form below is an example of using the date validator with <a href="https://flatpickr.js.org/" class="blue dim link">flatpickr</a>, a lightweight and powerful datetime picker.</p>

@@ -3,8 +3,7 @@
 </svelte:head>
 
 <GuideLayout>
-    <h1 class="f3 f2-m f1-l tc">Examples</h1>
-    <h2 class="f4 fw4 tc">Preventing user to have same value as the placeholder</h2>
+    <h1 class="tc lh-copy">Preventing user to have same value as the placeholder</h1>
     
     <section class="mv5">
         <p class="lh-copy">For instance, we could show an error message when someone enters <span class="i">First name</span> or <span class="i">Last name</span> for the text fields named <code>firstName</code> and <code>lastName</code>, respectively.</p>

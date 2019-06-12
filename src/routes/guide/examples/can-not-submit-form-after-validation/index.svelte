@@ -3,7 +3,7 @@
 </svelte:head>
 
 <GuideLayout>
-    <h1 class="f3 f2-m f1-l tc lh-copy">Can not submit form after validation</h1>
+    <h1 class="tc lh-copy">Can not submit form after validation</h1>
 
     <p class="lh-copy">There are some mistakes causing the issue that the form can't be submitted although the validation is working fine.</p>
     <p class="lh-copy">This page collects some popular check list to avoid this problem.</p>

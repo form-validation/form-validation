@@ -3,8 +3,7 @@
 </svelte:head>
 
 <GuideLayout>
-    <h1 class="f3 f2-m f1-l tc">Examples</h1>
-    <h2 class="f4 fw4 tc">Using flatpickr for start and end dates</h2>
+    <h1 class="tc lh-copy">Using flatpickr for start and end dates</h1>
     
     <section class="mv5">
         <p class="lh-copy">It's possible to use a date picker that allows user to choose a date easily. You have to <a href="/guide/api/revalidate-field/" class="blue dim link">revalidate the field</a> when the date is changed.</p>

@@ -3,8 +3,7 @@
 </svelte:head>
 
 <GuideLayout>
-    <h1 class="f3 f2-m f1-l tc">Examples</h1>
-    <h2 class="f4 fw4 tc">Creating a custom validator</h2>
+    <h1 class="tc lh-copy">Creating a custom validator</h1>
     
     <section class="mv5">
         <Heading>Writing new validator</Heading>

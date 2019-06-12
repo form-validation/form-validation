@@ -3,8 +3,7 @@
 </svelte:head>
 
 <GuideLayout>
-    <h1 class="f3 f2-m f1-l tc">Examples</h1>
-    <h2 class="f4 fw4 tc">Showing credit card icon</h2>
+    <h1 class="tc lh-copy">Showing credit card icon</h1>
     
     <section class="mv5">
         <p class="lh-copy">The following example shows credit card icon provided by <a href="http://fontawesome.io/icons/#payment" class="blue dim link">Font Awesome</a> based on the card type.</p>

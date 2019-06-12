@@ -3,8 +3,7 @@
 </svelte:head>
 
 <GuideLayout>
-    <h1 class="f3 f2-m f1-l tc">Examples</h1>
-    <h2 class="f4 fw4 tc">Using Semantic UI framework icons</h2>
+    <h1 class="tc lh-copy">Using Semantic UI framework icons</h1>
     
     <section class="mv5">
         <p class="lh-copy">The Semantic UI framework provides an <a href="https://semantic-ui.com/elements/icon.html" class="blue dim link">icon set</a> which can be used with the Icon plugin.</p>

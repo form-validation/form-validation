@@ -3,8 +3,7 @@
 </svelte:head>
 
 <GuideLayout>
-    <h1 class="f3 f2-m f1-l tc">Examples</h1>
-    <h2 class="f4 fw4 tc">Using SVG icons</h2>
+    <h1 class="tc lh-copy">Using SVG icons</h1>
     
     <section class="mv5">
         <p class="lh-copy">For more customization, you might want to use SVG icons in additonal to the CSS classes. Fortunately, the Icon plugin provides an event named <code>plugins.icon.set</code> that you can hook on when the field is being validated, valid or invalid:</p>

@@ -3,8 +3,7 @@
 </svelte:head>
 
 <GuideLayout>
-    <h1 class="f3 f2-m f1-l tc">Examples</h1>
-    <h2 class="f4 fw4 tc">Showing custom message returned from server</h2>
+    <h1 class="tc lh-copy">Showing custom message returned from server</h1>
     
     <section class="mv5">
         <p class="lh-copy">As you know, each <a href="/validators/" class="blue dim link">validator</a> provides the <code>message</code> option to define the error message in case the field

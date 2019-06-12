@@ -3,8 +3,7 @@
 </svelte:head>
 
 <GuideLayout>
-    <h1 class="f3 f2-m f1-l tc">Examples</h1>
-    <h2 class="f4 fw4 tc">Integrating with TinyMCE</h2>
+    <h1 class="tc lh-copy">Integrating with TinyMCE</h1>
     
     <section class="mv5">
         <p class="lh-copy">Most of <a href="http://en.wikipedia.org/wiki/WYSIWYG" class="blue dim link">WYSIWYG</a> (What You See Is What You Get) editors generate some HTML tags for an empty string. So, basically, you can't use notEmpty validator to validate a text area which uses a WYSIWYG editor.</p>

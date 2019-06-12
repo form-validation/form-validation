@@ -3,8 +3,7 @@
 </svelte:head>
 
 <GuideLayout>
-    <h1 class="f3 f2-m f1-l tc">Examples</h1>
-    <h2 class="f4 fw4 tc">Performing validation if field value exceed given number of characters</h2>
+    <h1 class="tc lh-copy">Performing validation if field value exceed given number of characters</h1>
     
     <section class="mv5">
         <p class="lh-copy">In the following form, the <span class="i">Full name</span> and <span class="i">Phone number</span> fields will be validated when they have at least 10 and 5 characters, respectively.</p>

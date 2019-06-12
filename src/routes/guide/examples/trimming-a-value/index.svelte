@@ -3,8 +3,7 @@
 </svelte:head>
 
 <GuideLayout>
-    <h1 class="f3 f2-m f1-l tc">Examples</h1>
-    <h2 class="f4 fw4 tc">Trimming a value</h2>
+    <h1 class="tc lh-copy">Trimming a value</h1>
     
     <section class="mv5">
         <p class="lh-copy">The notEmpty validator does not remove the blank spaces at the beginning and ending of the value. It means that a string like <code>'   '</code> is treated as valid.</p>

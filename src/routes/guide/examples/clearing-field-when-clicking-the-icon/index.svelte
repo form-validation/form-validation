@@ -3,8 +3,7 @@
 </svelte:head>
 
 <GuideLayout>
-    <h1 class="f3 f2-m f1-l tc">Examples</h1>
-    <h2 class="f4 fw4 tc">Clearing field when clicking the icon</h2>
+    <h1 class="tc lh-copy">Clearing field when clicking the icon</h1>
     
     <section class="mv5">
         <p class="lh-copy">The following example shows how to clear the field when clicking the <a href="/guide/plugins/icon/" class="blue dim link">feedback icon</a>.</p>

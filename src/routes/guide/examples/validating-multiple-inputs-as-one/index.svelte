@@ -3,8 +3,7 @@
 </svelte:head>
 
 <GuideLayout>
-    <h1 class="f3 f2-m f1-l tc">Examples</h1>
-    <h2 class="f4 fw4 tc">Validating multiple inputs as one</h2>
+    <h1 class="tc lh-copy">Validating multiple inputs as one</h1>
     
     <section class="mv5">
         <p class="lh-copy">In some cases, you need to validate a value which is combined by various fields. For instance, a Birthday field might be a combination of Date, Month and Year one.</p>

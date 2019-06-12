@@ -3,8 +3,7 @@
 </svelte:head>
 
 <GuideLayout>
-    <h1 class="f3 f2-m f1-l tc">Examples</h1>
-    <h2 class="f4 fw4 tc">Showing messages in custom area</h2>
+    <h1 class="tc lh-copy">Showing messages in custom area</h1>
     
     <section class="mv5">
         <p class="lh-copy">There is a few of scenarios which you might want to show messages in custom area, such as</p>

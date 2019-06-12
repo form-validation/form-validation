@@ -3,8 +3,7 @@
 </svelte:head>
 
 <GuideLayout>
-    <h1 class="f3 f2-m f1-l tc">Examples</h1>
-    <h2 class="f4 fw4 tc">Switching validators on the same field</h2>
+    <h1 class="tc lh-copy">Switching validators on the same field</h1>
     
     <section class="mv5">
         <p class="lh-copy">In general, a field might have different validators. Based on various conditions, some of them can be turned on, and the remaining are turned off.</p>

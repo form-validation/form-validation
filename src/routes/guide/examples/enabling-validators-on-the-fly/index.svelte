@@ -3,8 +3,7 @@
 </svelte:head>
 
 <GuideLayout>
-    <h1 class="f3 f2-m f1-l tc">Examples</h1>
-    <h2 class="f4 fw4 tc">Enabling validators on the fly</h2>
+    <h1 class="tc lh-copy">Enabling validators on the fly</h1>
     
     <section class="mv5">
         <p class="lh-copy">In the following form, the new password is not required. Its validators are disabled. When user set the password, the validators will be enabled.</p>
