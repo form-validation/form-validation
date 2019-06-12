@@ -31,6 +31,7 @@ flatpickr(form.querySelector('[name="meetingTime"]'), {
 
     <Examples examples={[
         'Disabling date',
+        'Integrating with Bootstrap Datepicker',
         'Integrating with flatpickr',
         'Supporting custom date format',
         'Using flatpickr for start and end dates',

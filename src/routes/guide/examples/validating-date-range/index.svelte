@@ -16,6 +16,7 @@
 
     <Examples examples={[
         'Disabling date',
+        'Integrating with Bootstrap Datepicker',
         'Integrating with flatpickr',
         'Supporting custom date format',
         'Validating date range',

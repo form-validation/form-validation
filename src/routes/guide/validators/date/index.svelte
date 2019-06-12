@@ -224,6 +224,7 @@ const res2 = date().validate({
 
     <Examples examples={[
         'Disabling date',
+        'Integrating with Bootstrap Datepicker',
         'Integrating with flatpickr',
         'Supporting custom date format',
         'Validating credit card expiration date',

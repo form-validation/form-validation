@@ -70,6 +70,7 @@ form.querySelector('[name="date"]').addEventListener('keyup', keyupHandler);
 
     <Examples examples={[
         'Disabling date',
+        'Integrating with Bootstrap Datepicker',
         'Integrating with flatpickr',
         'Supporting custom date format',
         'Validating date range',

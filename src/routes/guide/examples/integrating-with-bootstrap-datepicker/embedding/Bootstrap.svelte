@@ -1,0 +1,103 @@
+<BootstrapLayout>
+    <ResourceLoader urls={[
+        'https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker3.min.css',
+        'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js',
+        'https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.min.js',
+    ]} onLoaded={onLoaded}>
+        <form id="demoForm" method="POST" style="height: 380px;">
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Event</label>
+                <div class="col-sm-5">
+                    <input type="text" class="form-control" name="name" />
+                </div>
+            </div>
+        
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Date</label>
+                <div class="col-sm-5">
+                    <div id="embeddingDatePicker"></div>
+                    <input type="hidden" name="selectedDate" />
+                </div>
+            </div>
+        
+            <div class="form-group row">
+                <div class="col-sm-9 offset-sm-3">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+        </form>
+    </ResourceLoader>
+</BootstrapLayout>
+
+<script>
+import { onDestroy } from 'svelte';
+
+import formValidation from 'formvalidation/dist/es6/core/Core';
+import DemoFrame from 'formvalidation/dist/es6/plugins/DemoFrame';
+import Icon from 'formvalidation/dist/es6/plugins/Icon';
+import Trigger from 'formvalidation/dist/es6/plugins/Trigger';
+import Bootstrap from 'formvalidation/dist/es6/plugins/Bootstrap';
+import SubmitButton from 'formvalidation/dist/es6/plugins/SubmitButton';
+
+import sampleCode from './Bootstrap.programmatic';
+import BootstrapLayout from '../../../../../components/demo/BootstrapLayout.svelte';
+import ResourceLoader from '../../../../../components/ResourceLoader.svelte';
+
+let fv;
+
+const onLoaded = () => {
+    const form = document.getElementById('demoForm');
+    fv = formValidation(form, {
+        fields: {
+            name: {
+                validators: {
+                    notEmpty: {
+                        message: 'The name is required'
+                    }
+                }
+            },
+            selectedDate: {
+                validators: {
+                    notEmpty: {
+                        message: 'The date is required'
+                    },
+                    date: {
+                        format: 'MM/DD/YYYY',
+                        message: 'The date is not valid'
+                    }
+                }
+            },
+        },
+        plugins: {
+            trigger: new Trigger(),
+            bootstrap: new Bootstrap(),
+            submitButton: new SubmitButton(),
+            icon: new Icon({
+                valid: 'fa fa-check',
+                invalid: 'fa fa-times',
+                validating: 'fa fa-refresh',
+            }),
+            demoFrame: new DemoFrame({
+                sender: '/guide/examples/integrating-with-bootstrap-datepicker/embedding/Bootstrap',
+                sampleCode: sampleCode,
+            }),
+        },
+    });
+
+    jQuery('#embeddingDatePicker')
+        .datepicker({
+            format: 'mm/dd/yyyy'
+        })
+        .on('changeDate', function(e) {
+            // Set the value for the date input
+            document.querySelector('[name="selectedDate"]').value = jQuery('#embeddingDatePicker').datepicker('getFormattedDate');
+
+            // Revalidate it
+            fv.revalidateField('selectedDate');
+        });
+};
+
+onDestroy(() => {
+    fv && fv.destroy();
+});
+</script>
