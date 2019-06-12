@@ -225,6 +225,7 @@ FormValidation.formValidation(
         'Showing custom message returned from server',
         'Showing dynamic message',
         'Showing messages in custom area',
+        'Validating checkbox list placed in multiple columns',
     ]} />
 
     <section class="mv5">
