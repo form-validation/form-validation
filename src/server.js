@@ -62,6 +62,9 @@ app.get([
 ], (req, res) => {
 	res.redirect('/guide/examples/');
 });
+app.get('/features/', (req, res) => {
+	res.redirect('/#features');
+});
 app.get('/guide/developing/', (req, res) => {
 	res.redirect('/guide/examples/');
 });
