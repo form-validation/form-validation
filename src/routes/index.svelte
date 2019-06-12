@@ -167,80 +167,17 @@ module.exports = {
 
     <div class="mw7 center">
         <p class="pv3 tc"><span class="bg-gold pa1 br2 b">50 built-in validators</span> and still counting. Here are some of them:</p>
-        <ul class="list pa0 flex flex-wrap">
-            <li class="w-33 ph3 mv3 tc">
-                <div class="pa3 br2 shadow-4 h-100 bg-blue">
-                    <a href="/guide/validators/callback/" class="link white">
-                        <div class="f4 fw6">callback</div>
-                        <p class="lh-copy">Check if the input value passes a callback method</p>
-                    </a>
-                </div>
-            </li>
-            <li class="w-33 ph3 mv3 tc">
-                <div class="pa3 br2 shadow-4 h-100 bg-red">
-                    <a href="/guide/validators/credit-card/" class="link white">
-                        <div class="f4 fw6">creditCard</div>
-                        <p class="lh-copy">Validate a credit card number</p>
-                    </a>
-                </div>
-            </li>
-            <li class="w-33 ph3 mv3 tc">
-                <div class="pa3 br2 shadow-4 h-100 bg-gold">
-                    <a href="/guide/validators/date/" class="link white">
-                        <div class="f4 fw6">date</div>
-                        <p class="lh-copy">Validate a date</p>
-                    </a>
-                </div>
-            </li>
-            <li class="w-33 ph3 mv3 tc">
-                <div class="pa3 br2 shadow-4 h-100 bg-green">
-                    <a href="/guide/validators/promise/" class="link white">
-                        <div class="f4 fw6">promise</div>
-                        <p class="lh-copy">Use a Promise to validate value</p>
-                    </a>
-                </div>
-            </li>
-            <li class="w-33 ph3 mv3 tc">
-                <div class="pa3 br2 shadow-4 h-100 bg-blue">
-                    <a href="/guide/validators/remote/" class="link white">
-                        <div class="f4 fw6">remote</div>
-                        <p class="lh-copy">Perform remote checking via Ajax request</p>
-                    </a>
-                </div>
-            </li>
-            <li class="w-33 ph3 mv3 tc">
-                <div class="pa3 br2 shadow-4 h-100 bg-red">
-                    <a href="/guide/validators/iban/" class="link white">
-                        <div class="f4 fw6">iban</div>
-                        <p class="lh-copy">Validate an International Bank Account Number</p>
-                    </a>
-                </div>
-            </li>
-            <li class="w-33 ph3 mv3 tc">
-                <div class="pa3 br2 shadow-4 h-100 bg-gold">
-                    <a href="/guide/validators/id/" class="link white">
-                        <div class="f4 fw6">id</div>
-                        <p class="lh-copy">Validate an identification number</p>
-                    </a>
-                </div>
-            </li>
-            <li class="w-33 ph3 mv3 tc">
-                <div class="pa3 br2 shadow-4 h-100" style="background-color: #6a2c70">
-                    <a href="/guide/validators/phone/" class="link white">
-                        <div class="f4 fw6">phone</div>
-                        <p class="lh-copy">Validate a phone number</p>
-                    </a>
-                </div>
-            </li>
-            <li class="w-33 ph3 mv3 tc">
-                <div class="pa3 br2 shadow-4 h-100 bg-green">
-                    <a href="/guide/validators/vat/" class="link white">
-                        <div class="f4 fw6">vat</div>
-                        <p class="lh-copy">Validate a VAT number</p>
-                    </a>
-                </div>
-            </li>
-        </ul>
+        <Cards>
+            <Card target="/guide/validators/callback/" title="callback">Check if the input value passes a callback method</Card>
+            <Card target="/guide/validators/credit-card/" title="creditCard">Validate a credit card number</Card>
+            <Card target="/guide/validators/date/" title="date">Validate a date</Card>
+            <Card target="/guide/validators/promise/" title="promise">Use a Promise to validate value</Card>
+            <Card target="/guide/validators/remote/" title="remote">Perform remote checking via Ajax request</Card>
+            <Card target="/guide/validators/iban/" title="iban">Validate an International Bank Account Number</Card>
+            <Card target="/guide/validators/id/" title="id">Validate an identification number</Card>
+            <Card target="/guide/validators/phone/" title="phone">Validate a phone number</Card>
+            <Card target="/guide/validators/vat/" title="vat">Validate a VAT number</Card>
+        </Cards>
     </div>
 
     <p class="mw8 center pv3 lh-copy">All validators can be used independently. Inspried by functional programming paradigm, all built in validators are just functions. So you can use it in browser or with ES6 module, server side frameworks such as <a class="blue link" href="https://expressjs.com/">Express</a>:</p>
@@ -338,56 +275,14 @@ formValidation(formElement, {
 
     <div class="mw7 center">
         <p class="pv3 tc"><span class="bg-gold pa1 br2 b">35 plugins</span> and still counting. Here are some of them:</p>
-        <ul class="list pa0 flex flex-wrap">
-            <li class="w-33 ph3 mv3 tc">
-                <div class="pa3 br2 shadow-4 h-100 bg-blue">
-                    <a href="/guide/plugins/declarative/" class="link white">
-                        <div class="f4 fw6">Declarative</div>
-                        <p class="lh-copy">Declaring validator options via HTML attributes</p>
-                    </a>
-                </div>
-            </li>
-            <li class="w-33 ph3 mv3 tc">
-                <div class="pa3 br2 shadow-4 h-100 bg-red">
-                    <a href="/guide/plugins/mandatory-icon/" class="link white">
-                        <div class="f4 fw6">MandatoryIcon</div>
-                        <p class="lh-copy">Show required icons for mandatory fields</p>
-                    </a>
-                </div>
-            </li>
-            <li class="w-33 ph3 mv3 tc">
-                <div class="pa3 br2 shadow-4 h-100 bg-gold">
-                    <a href="/guide/plugins/recaptcha/" class="link white">
-                        <div class="f4 fw6">Recaptcha</div>
-                        <p class="lh-copy">Show and validate a Google reCAPTCHA v2</p>
-                    </a>
-                </div>
-            </li>
-            <li class="w-33 ph3 mv3 tc">
-                <div class="pa3 br2 shadow-4 h-100 bg-green">
-                    <a href="/guide/plugins/start-end-date/" class="link white">
-                        <div class="f4 fw6">StartEndDate</div>
-                        <p class="lh-copy">Validate start and end dates</p>
-                    </a>
-                </div>
-            </li>
-            <li class="w-33 ph3 mv3 tc">
-                <div class="pa3 br2 shadow-4 h-100 bg-blue">
-                    <a href="/guide/plugins/transformer/" class="link white">
-                        <div class="f4 fw6">Transformer</div>
-                        <p class="lh-copy">Modify the field value before doing validation</p>
-                    </a>
-                </div>
-            </li>
-            <li class="w-33 ph3 mv3 tc">
-                <div class="pa3 br2 shadow-4 h-100 bg-red">
-                    <a href="/guide/plugins/wizard/" class="link white">
-                        <div class="f4 fw6">Wizard</div>
-                        <p class="lh-copy">Support validating multiple steps form</p>
-                    </a>
-                </div>
-            </li>
-        </ul>
+        <Cards>
+            <Card target="/guide/plugins/declarative/" title="Declarative">Declaring validator options via HTML attributes</Card>
+            <Card target="/guide/plugins/mandatory-icon/" title="MandatoryIcon">Show required icons for mandatory fields</Card>
+            <Card target="/guide/plugins/recaptcha/" title="Recaptcha">Show and validate a Google reCAPTCHA v2</Card>
+            <Card target="/guide/plugins/start-end-date/" title="StartEndDate">Validate start and end dates</Card>
+            <Card target="/guide/plugins/transformer/" title="Transformer">Modify the field value before doing validation</Card>
+            <Card target="/guide/plugins/wizard/" title="Wizard">Support validating multiple steps form</Card>
+        </Cards>
     </div>
 </section>
 
@@ -406,34 +301,28 @@ formValidation(formElement, {
 </section>
 
 <section class="pb5">
-    <div class="mw8 center flex flex-wrap white">
-        <div class="w-33 ph3">
-            <div class="pa3 br2 shadow-4 h-100 bg-blue">
-                <h3 class="f4 fw6 tc">Customizable</h3>
+    <div class="mw8 center">
+        <Cards>
+            <Card title="Customizable">
                 <div class="lh-copy">You can adjust almost everything:</div>
                 <ul class="list pa0 ma0 mt3 lh-copy">
                     <li>👌 The error icon position</li>
                     <li>👌 The location of error message</li>
                     <li>👌 Their colors when the field is valid or invalid</li>
                 </ul>
-            </div>
-        </div>
-        <div class="w-33 ph3">
-            <div class="pa3 br2 shadow-4 h-100 bg-red">
-                <h3 class="f4 fw6 tc">Flexible</h3>
+            </Card>
+            <Card title="Flexible">
                 <ul class="list pa0 ma0 lh-copy">
                     <li>👌 Support dynamic field</li>
                     <li>👌 The validator can be enabled or disabled on the fly</li>
                     <li>👌 Provide a lot of events that you can hook on</li>
                 </ul>
-            </div>
-        </div>
-        <div class="w-33 ph3">
-            <div class="pa3 br2 shadow-4 h-100 bg-gold">
-                <h3 class="f4 fw6 tc">Localizable</h3>
-                <div class="lh-copy">The default error messages of built-in validators are available in 39 language packages. There is also a plugin to support switching between different locales easily.</div>    
-            </div>
-        </div>
+            </Card>
+            <Card title="Localizable">
+                The default error messages of built-in validators are available in 39 language packages. 
+                There is also a plugin to support switching between different locales easily.
+            </Card>
+        </Cards>
     </div>
 </section>
 
@@ -549,48 +438,35 @@ formValidation(formElement, {
         <p class="lh-copy">By using the same principle, you can easily <span class="bg-gold pa1 br2 b">integrate it with any UI library</span> out there. To name a few:</p>
     </div>
 
-    <div class="mw7 center flex flex-wrap white">
-        <div class="w-33 ph3 mv3">
-            <div class="pa3 br2 shadow-4 h-100 bg-blue">
-                <h3 class="f4 fw6 tc">Auto complete</h3>
+    <div class="mw7 center">
+        <Cards>
+            <Card title="Auto complete">
                 <ul class="list pa0 ma0 mt3 lh-copy">
                     <li>👉 autoComplete.js</li>
                     <li>👉 Typeahead</li>
                 </ul>
-            </div>
-        </div>
-        <div class="w-33 ph3 mv3">
-            <div class="pa3 br2 shadow-4 h-100 bg-red">
-                <h3 class="f4 fw6 tc">Color pickers</h3>
+            </Card>
+            <Card title="Color pickers">
                 <ul class="list pa0 ma0 lh-copy">
                     <li>👉 pickr</li>
                 </ul>
-            </div>
-        </div>
-        <div class="w-33 ph3 mv3">
-            <div class="pa3 br2 shadow-4 h-100 bg-gold">
-                <h3 class="f4 fw6 tc">Date pickers</h3>
+            </Card>
+            <Card title="Date pickers">
                 <ul class="list pa0 ma0 lh-copy">
                     <li>👉 Bootstrap Datepicker</li>
                     <li>👉 flatpickr</li>
                     <li>👉 pickadate</li>
                     <li>👉 Pikaday</li>
                 </ul>
-            </div>
-        </div>
-        <div class="w-33 ph3 mv3">
-            <div class="pa3 br2 shadow-4 h-100 bg-green">
-                <h3 class="f4 fw6 tc">Editors</h3>
+            </Card>
+            <Card title="Editors">
                 <ul class="list pa0 ma0 lh-copy">
                     <li>👉 CKEditor</li>
                     <li>👉 Summernote</li>
                     <li>👉 TinyMCE</li>
                 </ul>
-            </div>
-        </div>
-        <div class="w-33 ph3 mv3">
-            <div class="pa3 br2 shadow-4 h-100 bg-blue">
-                <h3 class="f4 fw6 tc">Tags input</h3>
+            </Card>
+            <Card title="Tags input">
                 <ul class="list pa0 ma0 lh-copy">
                     <li>👉 Choices</li>
                     <li>👉 Chosen</li>
@@ -598,8 +474,8 @@ formValidation(formElement, {
                     <li>👉 Selectize</li>
                     <li>👉 tagify</li>
                 </ul>
-            </div>
-        </div>
+            </Card>
+        </Cards>
     </div>
 </section>
 
@@ -678,6 +554,8 @@ formValidation(formElement, {
 
 <script>
 import Typed from '../_demo/typed/Tachyons.svelte';
+import Card from '../components/Card.svelte';
+import Cards from '../components/Cards.svelte';
 import DotDotDot from '../components/DotDotDot.svelte';
 import Header from '../components/Header.svelte';
 import Footer from '../components/Footer.svelte';
