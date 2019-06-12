@@ -52,17 +52,11 @@ document.addEventListener('DOMContentLoaded', function(e) {
         <p class="lh-copy">The <code>validating</code>, <code>valid</code> and <code>invalid</code> options present the list of CSS classes separated by a space that will be added to the icon when the field is being validated, valid or invalid.</p>
         <p class="lh-copy">The Icon plugin only supports the form made in the following CSS frameworks:</p>
 
-        <div style="display: grid; grid-column-gap: 2em; grid-row-gap: 2em; grid-template-columns: repeat(3, 1fr);">
-            {#each _frameworks as p, i}
-            <div class="br2" class:bg-blue={i % 4 === 0} class:bg-red={i % 4 === 1} class:bg-gold={i % 4 === 2} class:bg-green={i % 4 === 3}>
-                <div class="pa3 shadow-4 h-100">
-                    <a href="/guide/plugins/{p.toLowerCase()}/" class="link pointer white db h-100">
-                        <div class="f4 fw6">{p}</div>
-                    </a>
-                </div>
-            </div>
+        <Cards>
+            {#each _frameworks as p}
+            <Card target="/guide/plugins/{p.toLowerCase()}/" title="{p}"></Card>
             {/each}
-        </div>
+        </Cards>
 
         <Tip>The <a href="/guide/plugins/mandatory-icon/" class="blue dim link">MandatoryIcon</a> plugin is useful when you want to display the mandatory icon for required fields</Tip>
     </section>
@@ -95,6 +89,8 @@ document.addEventListener('DOMContentLoaded', function(e) {
 </GuideLayout>
 
 <script>
+import Card from '../../../../components/Card.svelte';
+import Cards from '../../../../components/Cards.svelte';
 import Demo from '../../../../components/Demo.svelte';
 import Examples from '../../../../components/Examples.svelte';
 import Heading from '../../../../components/Heading.svelte';

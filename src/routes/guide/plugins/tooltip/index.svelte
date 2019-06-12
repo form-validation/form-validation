@@ -90,17 +90,11 @@ document.addEventListener('DOMContentLoaded', function(e) {
 
         <p class="lh-copy">Same as the <a href="/guide/plugins/icon/" class="blue dim link">Icon</a> plugin, the Tooltip plugin only supports the form made in the following CSS frameworks:</p>
 
-        <div style="display: grid; grid-column-gap: 2em; grid-row-gap: 2em; grid-template-columns: repeat(3, 1fr);">
-            {#each _frameworks as p, i}
-            <div class="br2" class:bg-blue={i % 4 === 0} class:bg-red={i % 4 === 1} class:bg-gold={i % 4 === 2} class:bg-green={i % 4 === 3}>
-                <div class="pa3 shadow-4 h-100">
-                    <a href="/guide/plugins/{p.toLowerCase()}/" class="link pointer white db h-100">
-                        <div class="f4 fw6">{p}</div>
-                    </a>
-                </div>
-            </div>
+        <Cards>
+            {#each _frameworks as p}
+            <Card target="/guide/plugins/{p.toLowerCase()}/" title="{p}"></Card>
             {/each}
-        </div>
+        </Cards>
 
         <p class="lh-copy">If you don't want the plugin supporting given CSS framework above to show the error message, you can set <code>defaultMessageContainer: false</code> as following:</p>
 <SampleCode lang="javascript" code={`
@@ -150,6 +144,8 @@ FormValidation.formValidation(
 </GuideLayout>
 
 <script>
+import Card from '../../../../components/Card.svelte';
+import Cards from '../../../../components/Cards.svelte';
 import Demo from '../../../../components/Demo.svelte';
 import Heading from '../../../../components/Heading.svelte';
 import GuideLayout from '../../../../components/GuideLayout.svelte';
