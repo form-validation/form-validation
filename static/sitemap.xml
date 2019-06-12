@@ -256,6 +256,7 @@
 
     <url><loc>https://formvalidation.io/guide/examples/adjusting-icon-position/</loc></url>
     <url><loc>https://formvalidation.io/guide/examples/changing-success-and-error-colors/</loc></url>
+    <url><loc>https://formvalidation.io/guide/examples/hiding-messages/</loc></url>
     <url><loc>https://formvalidation.io/guide/examples/showing-all-messages/</loc></url>
     <url><loc>https://formvalidation.io/guide/examples/showing-custom-message-returned-from-server/</loc></url>
     <url><loc>https://formvalidation.io/guide/examples/showing-dynamic-message/</loc></url>

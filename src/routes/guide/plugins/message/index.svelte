@@ -220,6 +220,10 @@ FormValidation.formValidation(
     </section>
 
     <Examples examples={[
+        'Hiding messages',
+        'Showing all messages',
+        'Showing custom message returned from server',
+        'Showing dynamic message',
         'Showing messages in custom area',
     ]} />
 

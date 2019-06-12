@@ -42,6 +42,7 @@
     <Examples heading="Customize icons and messages" examples={[
         'Adjusting icon position',
         'Changing success and error colors',
+        'Hiding messages',
         'Showing all messages',
         'Showing custom message returned from server',
         'Showing dynamic message',
