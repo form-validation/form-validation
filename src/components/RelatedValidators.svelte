@@ -2,24 +2,19 @@
     <Heading>Related validators</Heading>
     <p class="lh-copy">The following validators might be useful to you.</p>
 
-    <div style="display: grid; grid-column-gap: 2em; grid-row-gap: 2em; grid-template-columns: repeat(3, 1fr);">
-    {#each _relatedValidators as v, i}
-        <div class="br2" class:bg-blue={i % 4 === 0} class:bg-red={i % 4 === 1} class:bg-gold={i % 4 === 2} class:bg-green={i % 4 === 3}>
-            <div class="pa3 shadow-4 h-100">
-                <a href="/guide/validators/{camelCaseToDash(v.name)}/" title="{v.description}" class="link pointer white db h-100">
-                    <div class="f4 fw6">{v.name}</div>
-                    <p class="lh-copy">{v.description}</p>
-                </a>
-            </div>
-        </div>
+    <Cards>
+    {#each _relatedValidators as v}
+        <Card target="/guide/validators/{camelCaseToDash(v.name)}/" title="{v.name}">{v.description}</Card>
     {/each}
-    </div>
+    </Cards>
 </section>
 
 <script>
 import AllValidators from './constants/Validators';
 import camelCaseToDash from './helpers/camelCaseToDash';
 
+import Card from './Card.svelte';
+import Cards from './Cards.svelte';
 import Heading from './Heading.svelte';
 
 let validators;
