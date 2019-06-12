@@ -14,7 +14,7 @@
                         </select>
                         <div class="dn">
                             {#each frameworks as framework}
-                            <a href="{prefix}/{SupportedFramework[framework.toLowerCase()].name}">{SupportedFramework[framework.toLowerCase()].name}</a>
+                            <a href="{prefix}/{framework}">{framework}</a>
                             {/each}
                         </div>
                     </div>

@@ -71,5 +71,4 @@
 <script>
 import Examples from '../../../components/Examples.svelte';
 import GuideLayout from '../../../components/GuideLayout.svelte';
-import Heading from '../../../components/Heading.svelte';
 </script>
