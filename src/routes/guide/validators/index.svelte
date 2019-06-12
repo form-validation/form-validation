@@ -14,36 +14,22 @@
         <Heading>Popular validators</Heading>
         <p class="lh-copy">In most cases, this list covers validators you often need. All these validators are included in the <code>dist/js/FormValidation(.min).js</code> file.</p>
 
-        <div style="display: grid; grid-column-gap: 2em; grid-row-gap: 2em; grid-template-columns: repeat(3, 1fr);">
-        {#each PopularValidators as v, i}
-            <div class="br2" class:bg-blue={i % 4 === 0} class:bg-red={i % 4 === 1} class:bg-gold={i % 4 === 2} class:bg-green={i % 4 === 3}>
-                <div class="pa3 shadow-4 h-100">
-                    <a href="/guide/validators/{camelCaseToDash(v.name)}/" title="{v.description}" class="link pointer white db h-100">
-                        <div class="f4 fw6">{v.name}</div>
-                        <p class="lh-copy">{v.description}</p>
-                    </a>
-                </div>
-            </div>
+        <Cards>
+        {#each PopularValidators as v}
+            <Card target="/guide/validators/{camelCaseToDash(v.name)}/" title="{v.name}">{v.description}</Card>            
         {/each}
-        </div>
+        </Cards>
     </section>
 
     <section class="mv5">
         <Heading>Special validators</Heading>
         <p class="lh-copy">The following list includes special validators which you often don't need most of the times. In order to use them, you have to include the <code>dist/js/FormValidation.full(.min).js</code> file to your page.</p>
         
-        <div style="display: grid; grid-column-gap: 2em; grid-row-gap: 2em; grid-template-columns: repeat(3, 1fr);">
-        {#each SpecialValidators as v, i}
-            <div class="br2" class:bg-blue={i % 4 === 0} class:bg-red={i % 4 === 1} class:bg-gold={i % 4 === 2} class:bg-green={i % 4 === 3}>
-                <div class="pa3 shadow-4 h-100">
-                    <a href="/guide/validators/{camelCaseToDash(v.name)}/" title="{v.description}" class="link pointer white db h-100">
-                        <div class="f4 fw6">{v.name}</div>
-                        <p class="lh-copy">{v.description}</p>
-                    </a>
-                </div>
-            </div>
+        <Cards>
+        {#each SpecialValidators as v}
+            <Card target="/guide/validators/{camelCaseToDash(v.name)}/" title="{v.name}">{v.description}</Card>
         {/each}
-        </div>
+        </Cards>
 
         <Tip>Look at the <a href="/guide/developing/custom-validator/" class="blue dim link">custom validator</a> page to see how you can create and reuse your own validator</Tip>
     </section>
@@ -108,6 +94,8 @@ const result = creditCard().validate({
 import Validators from '../../../components/constants/Validators';
 import camelCaseToDash from '../../../components/helpers/camelCaseToDash';
 
+import Card from '../../../components/Card.svelte';
+import Cards from '../../../components/Cards.svelte';
 import Heading from '../../../components/Heading.svelte';
 import GuideLayout from '../../../components/GuideLayout.svelte';
 import NextButton from '../../../components/NextButton.svelte';
