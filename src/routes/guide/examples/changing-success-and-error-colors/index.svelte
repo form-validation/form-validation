@@ -168,10 +168,16 @@ FormValidation.formValidation(
         </div>
         <Demo prefix="/guide/examples/changing-success-and-error-colors/row-options" frameworks={['Tachyons']} />
     </section>
+
+    <Examples examples={[
+        'Changing success and error colors',
+        'Hiding success class',
+    ]} />
 </GuideLayout>
 
 <script>
 import Demo from '../../../../components/Demo.svelte';
+import Examples from '../../../../components/Examples.svelte';
 import GuideLayout from '../../../../components/GuideLayout.svelte';
 import Heading from '../../../../components/Heading.svelte';
 import SampleCode from '../../../../components/SampleCode.svelte';

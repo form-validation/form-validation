@@ -43,6 +43,7 @@
         'Adjusting icon position',
         'Changing success and error colors',
         'Hiding messages',
+        'Hiding success class',
         'Showing all messages',
         'Showing custom message returned from server',
         'Showing dynamic message',
