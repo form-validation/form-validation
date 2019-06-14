@@ -75,7 +75,7 @@ result is an object of
         <p class="lh-copy">The following example validates latitude and longitude values.</p>
         <p class="lh-copy">A valid latitude must be between -90.0 and 90.0, and valid longitude may range from -180.0 to 180.0.</p>
 
-        <Demo prefix="/guide/validators/between/basic" frameworks={['Bootstrap', 'Tachyons']} />
+        <Demo prefix="/guide/validators/between/basic" frameworks={['bootstrap', 'tachyons']} />
     </section>
 
     <section class="mv5">

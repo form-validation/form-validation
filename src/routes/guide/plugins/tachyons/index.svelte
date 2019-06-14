@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
 
     <section class="mv5">
         <Heading>Horizontal form</Heading>
-        <Demo prefix="/guide/plugins/tachyons/horizontal-form" frameworks={['Tachyons']} />
+        <Demo prefix="/guide/plugins/tachyons/horizontal-form" frameworks={['tachyons']} />
     </section>
 
     <section class="mv5">
@@ -80,12 +80,12 @@ semantic: new FormValidation.plugins.Semantic({
 }),
 `} />    
         </div>  
-        <Demo prefix="/guide/plugins/tachyons/stacked-form" frameworks={['Tachyons']} />
+        <Demo prefix="/guide/plugins/tachyons/stacked-form" frameworks={['tachyons']} />
     </section>
 
     <section class="mv5">
         <Heading>Multiple fields on the same row</Heading>
-        <Demo prefix="/guide/plugins/tachyons/multiple-fields" frameworks={['Tachyons']} />
+        <Demo prefix="/guide/plugins/tachyons/multiple-fields" frameworks={['tachyons']} />
     </section>
 
     <section class="mv5">

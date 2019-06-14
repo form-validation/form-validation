@@ -42,7 +42,7 @@ import Trigger from 'formvalidation/dist/es6/plugins/Trigger';
 import Bootstrap3 from 'formvalidation/dist/es6/plugins/Bootstrap3';
 import SubmitButton from 'formvalidation/dist/es6/plugins/SubmitButton';
 
-import sampleCode from './Bootstrap3.programmatic';
+import sampleCode from './bootstrap3.programmatic';
 import Bootstrap3Layout from '../../../../../components/demo/Bootstrap3Layout.svelte';
 
 let fv;
@@ -120,7 +120,7 @@ const onLoaded = () => {
                 validating: 'fa fa-refresh',
             }),
             demoFrame: new DemoFrame({
-                sender: '/guide/plugins/bootstrap3/multiple-fields/Bootstrap3',
+                sender: '/guide/plugins/bootstrap3/multiple-fields/bootstrap3',
                 sampleCode: sampleCode,
             }),
         },

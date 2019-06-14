@@ -28,7 +28,7 @@ flatpickr(form.querySelector('[name="meetingTime"]'), {
 });
 `} />
         </div>
-        <Demo prefix="/guide/examples/integrating-with-flatpickr" frameworks={['Tachyons']} />
+        <Demo prefix="/guide/examples/integrating-with-flatpickr" frameworks={['tachyons']} />
     </section>
 
     <Examples heading="Integrate with 3rd party libraries" examples={[

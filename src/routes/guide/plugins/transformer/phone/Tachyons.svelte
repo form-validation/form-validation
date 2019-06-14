@@ -32,7 +32,7 @@ import Transformer from 'formvalidation/dist/es6/plugins/Transformer';
 import Trigger from 'formvalidation/dist/es6/plugins/Trigger';
 import phone from 'formvalidation/dist/es6/validators/phone';
 
-import sampleCode from './Tachyons.programmatic';
+import sampleCode from './tachyons.programmatic';
 import TachyonsLayout from '../../../../../components/demo/TachyonsLayout.svelte';
 
 onMount(() => {
@@ -74,7 +74,7 @@ onMount(() => {
                 },
             }),
             demoFrame: new DemoFrame({
-                sender: '/guide/plugins/transformer/phone/Tachyons',
+                sender: '/guide/plugins/transformer/phone/tachyons',
                 sampleCode: sampleCode,
             }),
         },

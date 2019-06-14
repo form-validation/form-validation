@@ -44,7 +44,7 @@ FormValidation
     });
 `} />
         </div>
-        <Demo prefix="/guide/examples/hiding-success-class" frameworks={['Bootstrap']} />
+        <Demo prefix="/guide/examples/hiding-success-class" frameworks={['bootstrap']} />
     </section>
 
     <Examples examples={[

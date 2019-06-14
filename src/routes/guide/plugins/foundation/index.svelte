@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
 
     <section class="mv5">
         <Heading>Horizontal form</Heading>
-        <Demo prefix="/guide/plugins/foundation/horizontal-form" frameworks={['Foundation']} />
+        <Demo prefix="/guide/plugins/foundation/horizontal-form" frameworks={['foundation']} />
     </section>
 
     <section class="mv5">
@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
 </form>
 `} />
         </div>
-        <Demo prefix="/guide/plugins/foundation/stacked-form" frameworks={['Foundation']} />
+        <Demo prefix="/guide/plugins/foundation/stacked-form" frameworks={['foundation']} />
     </section>
 
     <section class="mv5">
@@ -100,7 +100,7 @@ foundation: new FormValidation.plugins.Foundation({
 }),
 `} />
         </div>
-        <Demo prefix="/guide/plugins/foundation/multiple-fields" frameworks={['Foundation']} />
+        <Demo prefix="/guide/plugins/foundation/multiple-fields" frameworks={['foundation']} />
     </section>
 
     <section class="mv5">

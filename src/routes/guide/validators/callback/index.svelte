@@ -97,7 +97,7 @@ result is an object of
 
         <p class="lh-copy">In the following form, user is asked to enter a correct answer of simple operation which is generated randomly.</p>
 
-        <Demo prefix="/guide/validators/callback/basic" frameworks={['Bootstrap', 'Tachyons']} />
+        <Demo prefix="/guide/validators/callback/basic" frameworks={['bootstrap', 'tachyons']} />
     </section>
 
     <section class="mv5">

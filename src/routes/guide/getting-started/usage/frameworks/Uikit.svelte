@@ -33,7 +33,7 @@ import Trigger from 'formvalidation/dist/es6/plugins/Trigger';
 import Uikit from 'formvalidation/dist/es6/plugins/Uikit';
 import SubmitButton from 'formvalidation/dist/es6/plugins/SubmitButton';
 
-import sampleCode from './Uikit.programmatic';
+import sampleCode from './uikit.programmatic';
 import UikitLayout from '../../../../../components/demo/UikitLayout.svelte';
 
 let fv;
@@ -79,7 +79,7 @@ const onLoaded = () => {
                 validating: 'fa fa-refresh',
             }),
             demoFrame: new DemoFrame({
-                sender: '/guide/getting-started/usage/frameworks/Uikit',
+                sender: '/guide/getting-started/usage/frameworks/uikit',
                 sampleCode: sampleCode,
             }),
         },

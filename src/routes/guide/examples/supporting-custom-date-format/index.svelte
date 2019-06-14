@@ -7,7 +7,7 @@
     
     <section class="mv5">
         <p class="lh-copy">This example illustrates the ability of validating date in custom format by using the <a href="/guide/validators/callback" class="blue dim link">callback</a> validator and <a href="http://momentjs.com" class="blue dim link">momentjs</a> to parse/validate.</p>
-        <Demo prefix="/guide/examples/supporting-custom-date-format" frameworks={['Tachyons']} />
+        <Demo prefix="/guide/examples/supporting-custom-date-format" frameworks={['tachyons']} />
     </section>
 
     <Examples examples={[

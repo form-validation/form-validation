@@ -57,7 +57,7 @@ import Trigger from 'formvalidation/dist/es6/plugins/Trigger';
 import Mini from 'formvalidation/dist/es6/plugins/Mini';
 import SubmitButton from 'formvalidation/dist/es6/plugins/SubmitButton';
 
-import sampleCode from './Mini.programmatic';
+import sampleCode from './mini.programmatic';
 import MiniLayout from '../../../../../components/demo/MiniLayout.svelte';
 
 let fv;
@@ -116,7 +116,7 @@ const onLoaded = () => {
                 validating: 'fa fa-refresh',
             }),
             demoFrame: new DemoFrame({
-                sender: '/guide/plugins/mini/stacked-form/Mini',
+                sender: '/guide/plugins/mini/stacked-form/mini',
                 sampleCode: sampleCode,
             }),
         },

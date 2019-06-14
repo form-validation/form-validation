@@ -62,7 +62,7 @@ form.querySelector('[name="yourId"]').addEventListener('keyup', function(e) {
 });
 `} />            
         </div>
-        <Demo prefix="/guide/examples/switching-validators-on-the-same-field" frameworks={['Tachyons']} />
+        <Demo prefix="/guide/examples/switching-validators-on-the-same-field" frameworks={['tachyons']} />
     </section>
 
     <Examples examples={[

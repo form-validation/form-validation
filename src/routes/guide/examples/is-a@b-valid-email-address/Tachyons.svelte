@@ -23,7 +23,7 @@ import Tachyons from 'formvalidation/dist/es6/plugins/Tachyons';
 import emailAddress from 'formvalidation/dist/es6/validators/emailAddress';
 import regexp from 'formvalidation/dist/es6/validators/regexp';
 
-import sampleCode from './Tachyons.programmatic';
+import sampleCode from './tachyons.programmatic';
 import TachyonsLayout from '../../../../components/demo/TachyonsLayout.svelte';
 
 onMount(() => {
@@ -61,7 +61,7 @@ onMount(() => {
                 validating: 'fa fa-refresh'
             }),
             demoFrame: new DemoFrame({
-                sender: '/guide/examples/is-a@b-valid-email-address/Tachyons',
+                sender: '/guide/examples/is-a@b-valid-email-address/tachyons',
                 sampleCode: sampleCode,
             }),
         },

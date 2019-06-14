@@ -11,11 +11,11 @@
 
         <h3>New Excluded plugin</h3>
         <p class="lh-copy">The <a href="/guide/plugins/excluded" class="blue dim link">Excluded</a> plugin allows you to indicate fields which won't be validated. It severs the same functionality as the <code>excluded</code> option in v0.8.1 and earlier versions.</p>
-        <Demo prefix="/guide/examples/excluding-field-by-given-condition" frameworks={['Bootstrap']} />
+        <Demo prefix="/guide/examples/excluding-field-by-given-condition" frameworks={['bootstrap']} />
 
         <h3>New Wizard plugin</h3>
         <p class="lh-copy">The <a href="/guide/plugins/wizard" class="blue dim link">Wizard</a> plugin supports validating multiple steps form:</p>
-        <Demo prefix="/guide/plugins/wizard/basic" frameworks={['Tachyons']} />
+        <Demo prefix="/guide/plugins/wizard/basic" frameworks={['tachyons']} />
 
         <p class="lh-copy">This version provides new <code>onPrefocus</code> option in the <a href="/guide/plugins/auto-focus" class="blue dim link">AutoFocus</a>. This option is useful when you want to activate the tab containing the first invalid field.</p>
     </section>

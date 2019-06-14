@@ -53,12 +53,12 @@ document.addEventListener('DOMContentLoaded', function(e) {
 
     <section class="mv5">
         <Heading>Horizontal form</Heading>
-        <Demo prefix="/guide/plugins/uikit/horizontal-form" frameworks={['Uikit']} />
+        <Demo prefix="/guide/plugins/uikit/horizontal-form" frameworks={['uikit']} />
     </section>
 
     <section class="mv5">
         <Heading>Stacked form</Heading>
-        <Demo prefix="/guide/plugins/uikit/stacked-form" frameworks={['Uikit']} />
+        <Demo prefix="/guide/plugins/uikit/stacked-form" frameworks={['uikit']} />
     </section>
 
     <section class="mv5">
@@ -91,7 +91,7 @@ uikit: new FormValidation.plugins.UiKit({
 }),
 `} />        
         </div>
-        <Demo prefix="/guide/plugins/uikit/multiple-fields" frameworks={['Uikit']} />
+        <Demo prefix="/guide/plugins/uikit/multiple-fields" frameworks={['uikit']} />
     </section>
 
     <section class="mv5">

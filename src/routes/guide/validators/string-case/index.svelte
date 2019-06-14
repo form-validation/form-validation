@@ -55,7 +55,7 @@ const result = stringCase().validate({
     <section class="mv5">
         <Heading>Basic Example</Heading>
         <p class="lh-copy">The following form asks user to enter a credit card holder in uppercase:</p>
-        <Demo prefix="/guide/validators/string-case/basic" frameworks={['Bootstrap', 'Tachyons']} />
+        <Demo prefix="/guide/validators/string-case/basic" frameworks={['bootstrap', 'tachyons']} />
     </section>
 
     <section class="mv5">

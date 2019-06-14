@@ -51,12 +51,12 @@ document.addEventListener('DOMContentLoaded', function(e) {
 
     <section class="mv5">
         <Heading>Horizontal form</Heading>
-        <Demo prefix="/guide/plugins/spectre/horizontal-form" frameworks={['Spectre']} />
+        <Demo prefix="/guide/plugins/spectre/horizontal-form" frameworks={['spectre']} />
     </section>
 
     <section class="mv5">
         <Heading>Stacked form</Heading>
-        <Demo prefix="/guide/plugins/spectre/stacked-form" frameworks={['Spectre']} />
+        <Demo prefix="/guide/plugins/spectre/stacked-form" frameworks={['spectre']} />
     </section>
 
     <section class="mv5">
@@ -89,7 +89,7 @@ spectre: new FormValidation.plugins.Spectre({
 }),
 `} />        
         </div>
-        <Demo prefix="/guide/plugins/spectre/multiple-fields" frameworks={['Spectre']} />
+        <Demo prefix="/guide/plugins/spectre/multiple-fields" frameworks={['spectre']} />
     </section>
 
     <section class="mv5">

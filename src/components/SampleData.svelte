@@ -27,7 +27,7 @@ const click = () => {
             channel: 'SAMPLE_FIELD_VALUE',
             sender: sender,
             data: sample
-        }, '*');
+        }, window.location.origin);
     }
 };
 

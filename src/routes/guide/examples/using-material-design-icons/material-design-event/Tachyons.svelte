@@ -76,7 +76,7 @@ import Trigger from 'formvalidation/dist/es6/plugins/Trigger';
 import SubmitButton from 'formvalidation/dist/es6/plugins/SubmitButton';
 import Tachyons from 'formvalidation/dist/es6/plugins/Tachyons';
 
-import sampleCode from './Tachyons.programmatic';
+import sampleCode from './tachyons.programmatic';
 import ResourceLoader from '../../../../../components/ResourceLoader.svelte';
 import TachyonsLayout from '../../../../../components/demo/TachyonsLayout.svelte';
 
@@ -136,7 +136,7 @@ const onLoaded = () => {
                 validating: 'material-icons icon-validating',
             }),
             demoFrame: new DemoFrame({
-                sender: '/guide/examples/using-material-design-icons/material-design-event/Tachyons',
+                sender: '/guide/examples/using-material-design-icons/material-design-event/tachyons',
                 sampleCode: sampleCode,
             }),
         },

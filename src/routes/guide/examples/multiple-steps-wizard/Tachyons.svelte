@@ -137,7 +137,7 @@ import phone from 'formvalidation/dist/es6/validators/phone';
 import zipCode from 'formvalidation/dist/es6/validators/zipCode';
 import classSet from 'formvalidation/dist/es6/utils/classSet';
 
-import sampleCode from './Tachyons.programmatic';
+import sampleCode from './tachyons.programmatic';
 import TachyonsLayout from '../../../../components/demo/TachyonsLayout.svelte';
 
 onMount(() => {
@@ -191,7 +191,7 @@ onMount(() => {
                 validating: 'fa fa-refresh',
             }),
             demoFrame: new DemoFrame({
-                sender: '/guide/examples/multiple-steps-wizard/Tachyons',
+                sender: '/guide/examples/multiple-steps-wizard/tachyons',
                 sampleCode: sampleCode,
             }),
         },
@@ -281,7 +281,7 @@ onMount(() => {
                 validating: 'fa fa-refresh',
             }),
             demoFrame: new DemoFrame({
-                sender: '/guide/examples/multiple-steps-wizard/Tachyons',
+                sender: '/guide/examples/multiple-steps-wizard/tachyons',
                 sampleCode: sampleCode,
             }),
         },

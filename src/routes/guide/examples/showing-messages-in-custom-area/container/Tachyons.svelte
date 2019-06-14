@@ -82,7 +82,7 @@ import SubmitButton from 'formvalidation/dist/es6/plugins/SubmitButton';
 import Trigger from 'formvalidation/dist/es6/plugins/Trigger';
 import Tachyons from 'formvalidation/dist/es6/plugins/Tachyons';
 
-import sampleCode from './Tachyons.programmatic';
+import sampleCode from './tachyons.programmatic';
 import TachyonsLayout from '../../../../../components/demo/TachyonsLayout.svelte';
 
 onMount(() => {
@@ -145,7 +145,7 @@ onMount(() => {
                 container: '#messages',
             }),
             demoFrame: new DemoFrame({
-                sender: '/guide/examples/showing-messages-in-custom-area/container/Tachyons',
+                sender: '/guide/examples/showing-messages-in-custom-area/container/tachyons',
                 sampleCode: sampleCode,
             }),
         },

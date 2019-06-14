@@ -35,7 +35,7 @@ import Trigger from 'formvalidation/dist/es6/plugins/Trigger';
 import Tachyons from 'formvalidation/dist/es6/plugins/Tachyons';
 import creditCard from 'formvalidation/dist/es6/validators/creditCard';
 
-import sampleCode from './Tachyons.programmatic';
+import sampleCode from './tachyons.programmatic';
 import TachyonsLayout from '../../../../components/demo/TachyonsLayout.svelte';
 
 let fv;
@@ -116,7 +116,7 @@ onMount(() => {
                 validating: 'fa fa-refresh'
             }),
             demoFrame: new DemoFrame({
-                sender: '/guide/examples/asking-credit-card-number-to-match-with-selected-type/Tachyons',
+                sender: '/guide/examples/asking-credit-card-number-to-match-with-selected-type/tachyons',
                 sampleCode: sampleCode,
             }),
         },

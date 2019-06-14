@@ -23,7 +23,7 @@ import Trigger from 'formvalidation/dist/es6/plugins/Trigger';
 import Tachyons from 'formvalidation/dist/es6/plugins/Tachyons';
 import Transformer from 'formvalidation/dist/es6/plugins/Transformer';
 
-import sampleCode from './Tachyons.programmatic';
+import sampleCode from './tachyons.programmatic';
 import ResourceLoader from '../../../../../components/ResourceLoader.svelte';
 import TachyonsLayout from '../../../../../components/demo/TachyonsLayout.svelte';
 
@@ -59,7 +59,7 @@ const onLoaded = () => {
                 },
             }),
             demoFrame: new DemoFrame({
-                sender: '/guide/plugins/transformer/tinymce/Tachyons',
+                sender: '/guide/plugins/transformer/tinymce/tachyons',
                 sampleCode: sampleCode,
             }),
         },

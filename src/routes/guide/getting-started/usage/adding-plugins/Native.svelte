@@ -23,7 +23,7 @@ import Message from 'formvalidation/dist/es6/plugins/Message';
 import SubmitButton from 'formvalidation/dist/es6/plugins/SubmitButton';
 import Trigger from 'formvalidation/dist/es6/plugins/Trigger';
 
-import sampleCode from './Native.programmatic';
+import sampleCode from './native.programmatic';
 import TachyonsLayout from '../../../../../components/demo/TachyonsLayout.svelte';
 
 onMount(() => {
@@ -61,7 +61,7 @@ onMount(() => {
         },
         plugins: {
             demoFrame: new DemoFrame({
-                sender: '/guide/getting-started/usage/adding-plugins/Native',
+                sender: '/guide/getting-started/usage/adding-plugins/native',
                 sampleCode: sampleCode,
             }),
             trigger: new Trigger(),

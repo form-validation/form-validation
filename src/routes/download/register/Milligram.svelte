@@ -99,7 +99,7 @@ import SubmitButton from 'formvalidation/dist/es6/plugins/SubmitButton';
 import Trigger from 'formvalidation/dist/es6/plugins/Trigger';
 import Milligram from 'formvalidation/dist/es6/plugins/Milligram';
 
-import sampleCode from './Milligram.programmatic';
+import sampleCode from './milligram.programmatic';
 import MilligramLayout from '../../../components/demo/MilligramLayout.svelte';
 
 let fv;
@@ -219,7 +219,7 @@ const onLoaded = () => {
                 validating: 'fa fa-refresh',
             }),
             demoFrame: new DemoFrame({
-                sender: '/download/register/Milligram',
+                sender: '/download/register/milligram',
                 sampleCode: sampleCode,
             }),
         }

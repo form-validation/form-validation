@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
 
     <section class="mv5">
         <Heading>Horizontal form</Heading>
-        <Demo prefix="/guide/plugins/milligram/horizontal-form" frameworks={['Milligram']} />
+        <Demo prefix="/guide/plugins/milligram/horizontal-form" frameworks={['milligram']} />
     </section>
 
     <section class="mv5">
@@ -80,7 +80,7 @@ milligram: new FormValidation.plugins.Milligram({
 }),
 `} />    
         </div>  
-        <Demo prefix="/guide/plugins/milligram/stacked-form" frameworks={['Milligram']} />
+        <Demo prefix="/guide/plugins/milligram/stacked-form" frameworks={['milligram']} />
     </section>
 
     <section class="mv5">
@@ -112,7 +112,7 @@ milligram: new FormValidation.plugins.Milligram({
 }),
 `} />        
         </div>
-        <Demo prefix="/guide/plugins/milligram/multiple-fields" frameworks={['Milligram']} />
+        <Demo prefix="/guide/plugins/milligram/multiple-fields" frameworks={['milligram']} />
     </section>
     
     <section class="mv5">

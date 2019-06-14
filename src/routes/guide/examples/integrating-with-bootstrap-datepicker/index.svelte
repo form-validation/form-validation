@@ -33,7 +33,7 @@ $('[name="date"]')
     });
 `} />
         </div>
-        <Demo prefix="/guide/examples/integrating-with-bootstrap-datepicker/basic" frameworks={['Bootstrap']} />
+        <Demo prefix="/guide/examples/integrating-with-bootstrap-datepicker/basic" frameworks={['bootstrap']} />
     </section>
 
     <section class="mv5">
@@ -78,7 +78,7 @@ $('#embeddingDatePicker')
     });
 `} />
         <p class="lh-copy">You can try it with the following live form:</p>
-        <Demo prefix="/guide/examples/integrating-with-bootstrap-datepicker/embedding" frameworks={['Bootstrap']} />
+        <Demo prefix="/guide/examples/integrating-with-bootstrap-datepicker/embedding" frameworks={['bootstrap']} />
     </section>
 
     <section class="mv5">
@@ -86,7 +86,7 @@ $('#embeddingDatePicker')
         <p class="lh-copy">Since Bootstrap Datepicker provides <a href="http://bootstrap-datepicker.readthedocs.org/en/stable/options.html#startdate" class="blue dim link">startDate</a> and <a href="http://bootstrap-datepicker.readthedocs.org/en/stable/options.html#enddate" class="blue dim link">endDate</a> options,
             and the <a href="/guide/validators/date" class="blue dim link">date</a> validator supports <code>min</code> and <code>max</code> options, we can set a date range easily.</p>
         <p class="lh-copy">The following example asks to enter a date between 01/01/2010 and 12/30/2020.</p>
-        <Demo prefix="/guide/examples/integrating-with-bootstrap-datepicker/range" frameworks={['Bootstrap']} />
+        <Demo prefix="/guide/examples/integrating-with-bootstrap-datepicker/range" frameworks={['bootstrap']} />
     </section>
 
     <section class="mv5">
@@ -105,7 +105,7 @@ $('[name="date"]')
     });
 `} />
         </div>
-        <Demo prefix="/guide/examples/integrating-with-bootstrap-datepicker/autoclose" frameworks={['Bootstrap']} />
+        <Demo prefix="/guide/examples/integrating-with-bootstrap-datepicker/autoclose" frameworks={['bootstrap']} />
     </section>
 
     <Examples examples={[

@@ -65,7 +65,7 @@ import Trigger from 'formvalidation/dist/es6/plugins/Trigger';
 import Bootstrap3 from 'formvalidation/dist/es6/plugins/Bootstrap3';
 import SubmitButton from 'formvalidation/dist/es6/plugins/SubmitButton';
 
-import sampleCode from './Bootstrap3.programmatic';
+import sampleCode from './bootstrap3.programmatic';
 import Bootstrap3Layout from '../../../../components/demo/Bootstrap3Layout.svelte';
 
 let fv;
@@ -124,7 +124,7 @@ const onLoaded = () => {
                 validating: 'glyphicon glyphicon-refresh',
             }),
             demoFrame: new DemoFrame({
-                sender: '/guide/examples/using-glyphicons-icons/Bootstrap3',
+                sender: '/guide/examples/using-glyphicons-icons/bootstrap3',
                 sampleCode: sampleCode,
             }),
         },

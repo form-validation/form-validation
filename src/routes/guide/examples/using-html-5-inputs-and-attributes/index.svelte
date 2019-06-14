@@ -55,7 +55,7 @@
             </tr>
         </table>
 
-        <Demo prefix="/guide/examples/using-html-5-inputs-and-attributes" frameworks={['Tachyons']} />
+        <Demo prefix="/guide/examples/using-html-5-inputs-and-attributes" frameworks={['tachyons']} />
     </section>
 
     <RelatedValidators validators={['between', 'color', 'emailAddress', 'greaterThan', 'lessThan', 'notEmpty', 'stringLength', 'regexp', 'uri']} />

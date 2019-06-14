@@ -23,7 +23,7 @@ import Trigger from 'formvalidation/dist/es6/plugins/Trigger';
 import Tachyons from 'formvalidation/dist/es6/plugins/Tachyons';
 import isin from 'formvalidation/dist/es6/validators/isin';
 
-import sampleCode from './Tachyons.programmatic';
+import sampleCode from './tachyons.programmatic';
 import ReceiveMessage from '../../../../../components/ReceiveMessage.svelte';
 import TachyonsLayout from '../../../../../components/demo/TachyonsLayout.svelte';
 
@@ -68,7 +68,7 @@ onMount(() => {
                 validating: 'fa fa-refresh'
             }),
             demoFrame: new DemoFrame({
-                sender: '/guide/validators/isin/basic/Tachyons',
+                sender: '/guide/validators/isin/basic/tachyons',
                 sampleCode: sampleCode,
             }),
         },

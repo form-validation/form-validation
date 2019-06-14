@@ -23,7 +23,7 @@ import Message from 'formvalidation/dist/es6/plugins/Message';
 import Trigger from 'formvalidation/dist/es6/plugins/Trigger';
 import SubmitButton from 'formvalidation/dist/es6/plugins/SubmitButton';
 
-import sampleCode from './Native.programmatic';
+import sampleCode from './native.programmatic';
 import TachyonsLayout from '../../../../../components/demo/TachyonsLayout.svelte';
 
 onMount(() => {
@@ -64,7 +64,7 @@ onMount(() => {
                 clazz: 'dark-red lh-copy'
             }),
             demoFrame: new DemoFrame({
-                sender: '/guide/getting-started/usage/frameworks/Native',
+                sender: '/guide/getting-started/usage/frameworks/native',
                 sampleCode: sampleCode,
             }),
         },

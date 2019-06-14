@@ -84,13 +84,13 @@ result is an object of
             {/each}
         </table>
 
-        <Demo prefix="/guide/validators/uri/basic" frameworks={['Bootstrap', 'Tachyons']} />
+        <Demo prefix="/guide/validators/uri/basic" frameworks={['bootstrap', 'tachyons']} />
     </section>
 
     <section class="mv5">
         <Heading>HTML5 Example</Heading>
         <p class="lh-copy">When the <a href="/guide/plugins/declarative" class="blue dim link">Declarative</a> plugin is used, the uri validator will be turned on automatically if the input uses HTML 5 <code>type="url"</code> attribute.</p>
-        <Demo prefix="/guide/validators/uri/html5" frameworks={['Tachyons']} />
+        <Demo prefix="/guide/validators/uri/html5" frameworks={['tachyons']} />
     </section>
 
     <section class="mv5">

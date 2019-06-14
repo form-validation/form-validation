@@ -84,7 +84,7 @@ FormValidation.formValidation(
 );
 `} />
         <Tip>When the field validation is ignored, its container will not have the success class, and the associated <a href="/guide/plugins/icon" class="blue dim link">icon</a> isn't shown.</Tip>
-        <Demo prefix="/guide/examples/excluding-field-by-given-condition" frameworks={['Bootstrap']} />
+        <Demo prefix="/guide/examples/excluding-field-by-given-condition" frameworks={['bootstrap']} />
     </section>
 </GuideLayout>
 

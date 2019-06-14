@@ -55,22 +55,22 @@ document.addEventListener('DOMContentLoaded', function(e) {
 
     <section class="mv5">
         <Heading>Horizontal form</Heading>
-        <Demo prefix="/guide/plugins/bootstrap/horizontal-form" frameworks={['Bootstrap']} />
+        <Demo prefix="/guide/plugins/bootstrap/horizontal-form" frameworks={['bootstrap']} />
     </section>
 
     <section class="mv5">
         <Heading>Stacked form</Heading>
-        <Demo prefix="/guide/plugins/bootstrap/stacked-form" frameworks={['Bootstrap']} />
+        <Demo prefix="/guide/plugins/bootstrap/stacked-form" frameworks={['bootstrap']} />
     </section>
 
     <section class="mv5">
         <Heading>Inline form</Heading>
-        <Demo prefix="/guide/plugins/bootstrap/inline-form" frameworks={['Bootstrap']} />
+        <Demo prefix="/guide/plugins/bootstrap/inline-form" frameworks={['bootstrap']} />
     </section>
 
     <section class="mv5">
         <Heading>Form without label</Heading>
-        <Demo prefix="/guide/plugins/bootstrap/without-label-form" frameworks={['Bootstrap']} />
+        <Demo prefix="/guide/plugins/bootstrap/without-label-form" frameworks={['bootstrap']} />
     </section>
 
     <section class="mv5">
@@ -103,7 +103,7 @@ bootstrap: new FormValidation.plugins.Bootstrap({
 }),
 `} />        
         </div>
-        <Demo prefix="/guide/plugins/bootstrap/multiple-fields" frameworks={['Bootstrap']} />
+        <Demo prefix="/guide/plugins/bootstrap/multiple-fields" frameworks={['bootstrap']} />
     </section>
 
     <section class="mv5">

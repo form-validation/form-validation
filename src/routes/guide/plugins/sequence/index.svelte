@@ -122,7 +122,7 @@ enabled: {
         <p class="lh-copy">In the following form, all validators are performed in sequential order. A validator will not be executed if the field doesn't pass the previous validator.</p>
         <p class="lh-copy">By putting the remote validator at the end, we only send a request to server to check if the username is taken if it passes all other validators.</p>
         <p class="lh-copy">For testing purpose, the demo always answers that the username is already taken no matter what you input.</p>
-        <Demo prefix="/guide/plugins/sequence/basic" frameworks={['Tachyons']} />
+        <Demo prefix="/guide/plugins/sequence/basic" frameworks={['tachyons']} />
     </section>
     
     <section class="mv5">

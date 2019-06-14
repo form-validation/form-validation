@@ -55,7 +55,7 @@ import Trigger from 'formvalidation/dist/es6/plugins/Trigger';
 import Bulma from 'formvalidation/dist/es6/plugins/Bulma';
 import SubmitButton from 'formvalidation/dist/es6/plugins/SubmitButton';
 
-import sampleCode from './Bulma.programmatic';
+import sampleCode from './bulma.programmatic';
 import BulmaLayout from '../../../../../components/demo/BulmaLayout.svelte';
 
 let fv;
@@ -114,7 +114,7 @@ const onLoaded = () => {
                 validating: 'fa fa-refresh',
             }),
             demoFrame: new DemoFrame({
-                sender: '/guide/plugins/bulma/stacked-form/Bulma',
+                sender: '/guide/plugins/bulma/stacked-form/bulma',
                 sampleCode: sampleCode,
             }),
         },

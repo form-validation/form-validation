@@ -118,7 +118,7 @@ const fv = FormValidation.formValidation(
 );
 `} />
         </div>
-        <Demo prefix="/guide/examples/asking-fields-to-be-unique/basic" frameworks={['Tachyons']} />
+        <Demo prefix="/guide/examples/asking-fields-to-be-unique/basic" frameworks={['tachyons']} />
     </section>
 
     <section class="mv5">
@@ -154,7 +154,7 @@ const fv = FormValidation.formValidation(
 );
 `} />
         </div>
-        <Demo prefix="/guide/examples/asking-fields-to-be-unique/selector" frameworks={['Tachyons']} />
+        <Demo prefix="/guide/examples/asking-fields-to-be-unique/selector" frameworks={['tachyons']} />
     </section>
 
     <Examples examples={[

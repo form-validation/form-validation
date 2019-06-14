@@ -66,7 +66,7 @@ import Trigger from 'formvalidation/dist/es6/plugins/Trigger';
 import Shoelace from 'formvalidation/dist/es6/plugins/Shoelace';
 import SubmitButton from 'formvalidation/dist/es6/plugins/SubmitButton';
 
-import sampleCode from './Shoelace.programmatic';
+import sampleCode from './shoelace.programmatic';
 import ShoelaceLayout from '../../../../../components/demo/ShoelaceLayout.svelte';
 
 let fv;
@@ -125,7 +125,7 @@ const onLoaded = () => {
                 validating: 'fa fa-refresh',
             }),
             demoFrame: new DemoFrame({
-                sender: '/guide/plugins/shoelace/horizontal-form/Shoelace',
+                sender: '/guide/plugins/shoelace/horizontal-form/shoelace',
                 sampleCode: sampleCode,
             }),
         },

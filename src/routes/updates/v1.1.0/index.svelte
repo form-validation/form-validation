@@ -24,21 +24,21 @@
         <p class="lh-copy">The <a href="/guide/plugins/sequence" class="blue dim link">Sequence</a> plugin allows us to pending the execution of a validator until all previous validators are pass.</p>
         <p class="lh-copy">In the following example, we use the <a href="/guide/validators/remote" class="blue dim link">remote</a> validator, which is an expensive validator because it will hit the server and takes time to perform and returns the result to our user. 
             By putting it at the end of field validators, we only send a request to server to check if the username is taken if it passes all other validators.</p>
-        <Demo prefix="/guide/plugins/sequence/basic" frameworks={['Tachyons']} />
+        <Demo prefix="/guide/plugins/sequence/basic" frameworks={['tachyons']} />
 
         <h3>New StartEndDate plugin</h3>
         <p class="lh-copy">The <a href="/guide/plugins/start-end-date" class="blue dim link">StartEndDate</a> plugin is very handly if you want to validate start and end dates. We can use it with or without a date picker library.</p>
         <p class="lh-copy">The example below uses the <a href="https://flatpickr.js.org" class="blue dim link">flatpickr</a>, a lightweight and powerful datetime picker.</p>
-        <Demo prefix="/guide/examples/using-flatpickr-for-start-and-end-dates" frameworks={['Tachyons']} />
+        <Demo prefix="/guide/examples/using-flatpickr-for-start-and-end-dates" frameworks={['tachyons']} />
 
         <h3>Support invisible reCAPTCHA</h3>
         <p class="lh-copy">The <a href="/guide/plugins/recaptcha" class="blue dim link">Recaptcha</a> plugin now supports <a href="https://developers.google.com/recaptcha/docs/invisible" class="blue dim link">invisible reCAPTCHA</a>:</p>
-        <Demo prefix="/guide/plugins/recaptcha/invisible" frameworks={['Tachyons']} />
+        <Demo prefix="/guide/plugins/recaptcha/invisible" frameworks={['tachyons']} />
 
         <h3>Improve Trigger plugin</h3>
         <p class="lh-copy">The <a href="/guide/plugins/trigger" class="blue dim link">Trigger</a> plugin adds a new <code>delay</code> option that supports pending validation for a given number of seconds after user stops filling in the field.</p>
         <p class="lh-copy">In the following form, the username field validations will be postponed for 3 seconds after user stops filling in the field. Other field will be validated instantly right after each key stroke.</p>
-        <Demo prefix="/guide/examples/pending-validation-for-a-given-number-of-seconds" frameworks={['Tachyons']} />
+        <Demo prefix="/guide/examples/pending-validation-for-a-given-number-of-seconds" frameworks={['tachyons']} />
     </section>
 
     <section class="mv5">

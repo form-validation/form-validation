@@ -46,7 +46,7 @@ import Trigger from 'formvalidation/dist/es6/plugins/Trigger';
 import Pure from 'formvalidation/dist/es6/plugins/Pure';
 import SubmitButton from 'formvalidation/dist/es6/plugins/SubmitButton';
 
-import sampleCode from './Pure.programmatic';
+import sampleCode from './pure.programmatic';
 import PureLayout from '../../../../../components/demo/PureLayout.svelte';
 
 let fv;
@@ -105,7 +105,7 @@ const onLoaded = () => {
                 validating: 'fa fa-refresh',
             }),
             demoFrame: new DemoFrame({
-                sender: '/guide/plugins/pure/horizontal-form/Pure',
+                sender: '/guide/plugins/pure/horizontal-form/pure',
                 sampleCode: sampleCode,
             }),
         },

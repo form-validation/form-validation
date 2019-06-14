@@ -136,13 +136,13 @@ result is an object of
     <section class="mv5">
         <Heading>Basic Example</Heading>
         <p class="lh-copy">In the following form, user is asked to enter the full name which alphabetical characters and spaces only.</p>
-        <Demo prefix="/guide/validators/regexp/basic" frameworks={['Bootstrap', 'Tachyons']} />
+        <Demo prefix="/guide/validators/regexp/basic" frameworks={['bootstrap', 'tachyons']} />
     </section>
 
     <section class="mv5">
         <Heading>HTML5 Example</Heading>
         <p class="lh-copy">When the <a href="/guide/plugins/declarative" class="blue dim link">Declarative</a> plugin is used, the regexp validator will be turned on automatically if the input uses HTML 5 <code>pattern</code> attribute.</p>
-        <Demo prefix="/guide/validators/regexp/html5" frameworks={['Tachyons']} />
+        <Demo prefix="/guide/validators/regexp/html5" frameworks={['tachyons']} />
     </section>
 
     <section class="mv5">

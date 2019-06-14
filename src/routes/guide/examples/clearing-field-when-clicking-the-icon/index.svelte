@@ -36,7 +36,7 @@ const fv = FormValidation.formValidation(
 );
 `} />
         </div>
-        <Demo prefix="/guide/examples/clearing-field-when-clicking-the-icon" frameworks={['Tachyons']} />
+        <Demo prefix="/guide/examples/clearing-field-when-clicking-the-icon" frameworks={['tachyons']} />
     </section>
 </GuideLayout>
 

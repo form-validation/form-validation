@@ -83,7 +83,7 @@ import Trigger from 'formvalidation/dist/es6/plugins/Trigger';
 import Semantic from 'formvalidation/dist/es6/plugins/Semantic';
 import SubmitButton from 'formvalidation/dist/es6/plugins/SubmitButton';
 
-import sampleCode from './Semantic.programmatic';
+import sampleCode from './semantic.programmatic';
 import SemanticLayout from '../../../../../components/demo/SemanticLayout.svelte';
 
 let fv;
@@ -144,7 +144,7 @@ const onLoaded = () => {
                 validating: 'refresh icon'
             }),
             demoFrame: new DemoFrame({
-                sender: '/guide/plugins/semantic/stacked-form/Semantic',
+                sender: '/guide/plugins/semantic/stacked-form/semantic',
                 sampleCode: sampleCode,
             }),
         },

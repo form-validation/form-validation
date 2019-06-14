@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
 
     <section class="mv5">
         <Heading>Stacked form</Heading>
-        <Demo prefix="/guide/plugins/mui/stacked-form" frameworks={['Mui']} />
+        <Demo prefix="/guide/plugins/mui/stacked-form" frameworks={['mui']} />
     </section>
 
     <section class="mv5">
@@ -87,7 +87,7 @@ mui: new FormValidation.plugins.Mui({
 }),
 `} />        
         </div>
-        <Demo prefix="/guide/plugins/mui/multiple-fields" frameworks={['Mui']} />
+        <Demo prefix="/guide/plugins/mui/multiple-fields" frameworks={['mui']} />
     </section>
     
     <section class="mv5">

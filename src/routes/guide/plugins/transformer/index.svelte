@@ -93,7 +93,7 @@ transformer: new FormValidation.plugins.Transformer({
 }),
 `} />
         </div>
-        <Demo prefix="/guide/plugins/transformer/uri" frameworks={['Tachyons']} />
+        <Demo prefix="/guide/plugins/transformer/uri" frameworks={['tachyons']} />
     </section>
 
     <section class="mv5">
@@ -114,7 +114,7 @@ transformer: new FormValidation.plugins.Transformer({
 }),
 `} />
         </div>        
-        <Demo prefix="/guide/plugins/transformer/numeric" frameworks={['Tachyons']} />
+        <Demo prefix="/guide/plugins/transformer/numeric" frameworks={['tachyons']} />
     </section>
 
     <section class="mv5">
@@ -143,7 +143,7 @@ transformer: new FormValidation.plugins.Transformer({
 }),
 `} />
         </div>        
-        <Demo prefix="/guide/plugins/transformer/phone" frameworks={['Tachyons']} />
+        <Demo prefix="/guide/plugins/transformer/phone" frameworks={['tachyons']} />
     </section>
 
     <section class="mv5">
@@ -164,7 +164,7 @@ transformer: new FormValidation.plugins.Transformer({
 }),
 `} />
         </div>        
-        <Demo prefix="/guide/plugins/transformer/tinymce" frameworks={['Tachyons']} />
+        <Demo prefix="/guide/plugins/transformer/tinymce" frameworks={['tachyons']} />
     </section>
 
     <section class="mv5">

@@ -178,7 +178,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
     <section class="mv5">
         <Heading>Basic example</Heading>
         <p class="lh-copy">The following example uses all of three ways above to define the messages in different languages. It's up to you to choose any way in a multilingual website.</p>
-        <Demo prefix="/guide/plugins/l10n/basic" frameworks={['Tachyons']} />
+        <Demo prefix="/guide/plugins/l10n/basic" frameworks={['tachyons']} />
     </section>
 
     <section class="mv5">

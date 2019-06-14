@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
         </table>
         <p class="lh-copy">From v1.0.0, <code>FormValidation(.min).js</code> will not contain any language package including the English one. You have to load them manually as seen in the sample code above.</p>
         <p class="lh-copy">The working example below shows an usage of English language package:</p>
-        <Demo prefix="/guide/getting-started/localization/basic" frameworks={['Tachyons']} />
+        <Demo prefix="/guide/getting-started/localization/basic" frameworks={['tachyons']} />
 
         <Tip>Look at the <a href="/guide/plugins/l10n" class="blue dim link">L10n</a> plugin if you want to use multiple language packages and be able to switch between them</Tip>
     </section>

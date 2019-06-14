@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
     <section class="mv5">
         <Heading>Basic example</Heading>
         <p class="lh-copy">Try to press the <span class="i">Add product</span> button and inspect the field and error message elements using your browser <span class="i">Developer Tools</span> to see how the ARIA attributes above are added to them.</p>
-        <Demo prefix="/guide/plugins/aria/basic" frameworks={['Tachyons']} />
+        <Demo prefix="/guide/plugins/aria/basic" frameworks={['tachyons']} />
     </section>
 
     <section class="mv5">

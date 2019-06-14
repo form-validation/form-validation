@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
 `} />
         </div>
         <p class="lh-copy">If you want to use the FontAwesome SVG icon instead of its CSS classes, take a look at the <a href="/guide/examples/using-svg-icons" class="blue dim link">Using SVG icons</a> example.</p>
-        <Demo prefix="/guide/plugins/bootstrap/horizontal-form" frameworks={['Bootstrap']} />
+        <Demo prefix="/guide/plugins/bootstrap/horizontal-form" frameworks={['bootstrap']} />
     </section>
 
     <Examples examples={[

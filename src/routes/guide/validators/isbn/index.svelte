@@ -67,7 +67,7 @@ result is an object of
             {/each}
         </table>
 
-        <Demo prefix="/guide/validators/isbn/basic" frameworks={['Bootstrap', 'Tachyons']} />
+        <Demo prefix="/guide/validators/isbn/basic" frameworks={['bootstrap', 'tachyons']} />
     </section>
 
     <section class="mv5">

@@ -111,7 +111,7 @@ import SubmitButton from 'formvalidation/dist/es6/plugins/SubmitButton';
 import Trigger from 'formvalidation/dist/es6/plugins/Trigger';
 import Semantic from 'formvalidation/dist/es6/plugins/Semantic';
 
-import sampleCode from './Semantic.programmatic';
+import sampleCode from './semantic.programmatic';
 import SemanticLayout from '../../../components/demo/SemanticLayout.svelte';
 
 let fv;
@@ -221,7 +221,7 @@ const onLoaded = () => {
                 validating: 'refresh icon'
             }),
             demoFrame: new DemoFrame({
-                sender: '/download/register/Semantic',
+                sender: '/download/register/semantic',
                 sampleCode: sampleCode,
             }),
         }

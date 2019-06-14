@@ -98,7 +98,7 @@ import Trigger from 'formvalidation/dist/es6/plugins/Trigger';
 import SubmitButton from 'formvalidation/dist/es6/plugins/SubmitButton';
 import Tachyons from 'formvalidation/dist/es6/plugins/Tachyons';
 
-import sampleCode from './Tachyons.programmatic';
+import sampleCode from './tachyons.programmatic';
 import TachyonsLayout from '../../../../../components/demo/TachyonsLayout.svelte';
 
 onMount(() => {
@@ -114,7 +114,7 @@ onMount(() => {
                 validating: 'fa fa-refresh',
             }),
             demoFrame: new DemoFrame({
-                sender: '/guide/plugins/declarative/basic/Tachyons',
+                sender: '/guide/plugins/declarative/basic/tachyons',
                 sampleCode: sampleCode,
             }),
         },

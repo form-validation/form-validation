@@ -49,7 +49,7 @@ FormValidation
         <Tip>
             The example uses a very simple captcha generation which is a sum operation of two random numbers. In reality, it's recommended to use the popular Google's <a href="/guide/plugins/recaptcha" class="blue dim link">reCaptcha</a> service
         </Tip>
-        <Demo prefix="/guide/examples/regenerating-captcha-when-the-form-is-invalid" frameworks={['Tachyons']} />
+        <Demo prefix="/guide/examples/regenerating-captcha-when-the-form-is-invalid" frameworks={['tachyons']} />
     </section>
 
     <RelatedValidators validators={['callback']} />

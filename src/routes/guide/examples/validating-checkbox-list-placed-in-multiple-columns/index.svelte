@@ -98,7 +98,7 @@ const fv = FormValidation.formValidation(form, {
 });
 `} />
     <p class="lh-copy">Look at the <a href="/guide/plugins/message/#example-showing-messages-in-custom-area" class="blue dim link">Showing messages in custom area</a> section for more details.</p>
-    <Demo prefix="/guide/examples/validating-checkbox-list-placed-in-multiple-columns" frameworks={['Bootstrap', 'Tachyons']} />
+    <Demo prefix="/guide/examples/validating-checkbox-list-placed-in-multiple-columns" frameworks={['bootstrap', 'tachyons']} />
 </GuideLayout>
 
 <script>

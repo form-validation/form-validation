@@ -10,7 +10,7 @@
         <p class="lh-copy">Instead, we will use the <a href="/guide/validators/callback" class="blue dim link">callback</a> validator to check the validity of month and year fields. Because these fields depend on each other, the
             <code>updateFieldStatus()</code> method is used to set month/year field as valid one.</p>
         <Tip heading="Note">For demonstrating purpose, the expiration date is treated as valid if it is in the range of current month and next 10 year</Tip>
-        <Demo prefix="/guide/examples/validating-credit-card-expiration-date" frameworks={['Tachyons']} />
+        <Demo prefix="/guide/examples/validating-credit-card-expiration-date" frameworks={['tachyons']} />
     </section>
 
     <Examples examples={[

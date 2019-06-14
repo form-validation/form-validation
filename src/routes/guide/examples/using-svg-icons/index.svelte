@@ -132,7 +132,7 @@ FormValidation
                 </td>
             </tr>
         </table>
-        <Demo prefix="/guide/examples/using-svg-icons/fontawesome-svg" frameworks={['Tachyons']} />
+        <Demo prefix="/guide/examples/using-svg-icons/fontawesome-svg" frameworks={['tachyons']} />
     </section>
 
     <section class="mv5">
@@ -187,7 +187,7 @@ FormValidation
                 </td>
             </tr>
         </table>
-        <Demo prefix="/guide/examples/using-svg-icons/svg" frameworks={['Uikit']} />
+        <Demo prefix="/guide/examples/using-svg-icons/svg" frameworks={['uikit']} />
     </section>
 
     <Examples examples={[

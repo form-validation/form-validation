@@ -35,7 +35,7 @@ flatpickr(form.querySelector('[name="endDate"]'), {
 });
 `} />        
         </div>
-        <Demo prefix="/guide/examples/using-flatpickr-for-start-and-end-dates" frameworks={['Tachyons']} />
+        <Demo prefix="/guide/examples/using-flatpickr-for-start-and-end-dates" frameworks={['tachyons']} />
     </section>
 
     <Examples examples={[

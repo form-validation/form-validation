@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
 
     <section class="mv5">
         <Heading>Horizontal form</Heading>
-        <Demo prefix="/guide/plugins/mini/horizontal-form" frameworks={['Mini']} />
+        <Demo prefix="/guide/plugins/mini/horizontal-form" frameworks={['mini']} />
     </section>
 
     <section class="mv5">
@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
 </form>
 `} />
         </div>
-        <Demo prefix="/guide/plugins/mini/stacked-form" frameworks={['Mini']} />
+        <Demo prefix="/guide/plugins/mini/stacked-form" frameworks={['mini']} />
     </section>
 
     <section class="mv5">
@@ -96,7 +96,7 @@ mini: new FormValidation.plugins.Mini({
 }),
 `} />        
         </div>
-        <Demo prefix="/guide/plugins/mini/multiple-fields" frameworks={['Mini']} />
+        <Demo prefix="/guide/plugins/mini/multiple-fields" frameworks={['mini']} />
     </section>
     
     <section class="mv5">

@@ -21,7 +21,7 @@ import Sequence from 'formvalidation/dist/es6/plugins/Sequence';
 import Trigger from 'formvalidation/dist/es6/plugins/Trigger';
 import Tachyons from 'formvalidation/dist/es6/plugins/Tachyons';
 
-import sampleCode from './Tachyons.programmatic';
+import sampleCode from './tachyons.programmatic';
 import TachyonsLayout from '../../../../../components/demo/TachyonsLayout.svelte';
 
 onMount(() => {
@@ -63,7 +63,7 @@ onMount(() => {
             }),
             sequence: new Sequence(),
             demoFrame: new DemoFrame({
-                sender: '/guide/plugins/sequence/basic/Tachyons',
+                sender: '/guide/plugins/sequence/basic/tachyons',
                 sampleCode: sampleCode,
             }),
         },

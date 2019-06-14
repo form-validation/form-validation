@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
 </script-tag>
 `} />
         </div>
-        <Demo prefix="/guide/plugins/semantic/horizontal-form" frameworks={['Semantic']} />
+        <Demo prefix="/guide/plugins/semantic/horizontal-form" frameworks={['semantic']} />
     </section>
 
     <Examples examples={[

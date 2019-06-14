@@ -32,7 +32,7 @@ import SubmitButton from 'formvalidation/dist/es6/plugins/SubmitButton';
 import id from 'formvalidation/dist/es6/validators/id/index';
 import vat from 'formvalidation/dist/es6/validators/vat/index';
 
-import sampleCode from './Tachyons.programmatic';
+import sampleCode from './tachyons.programmatic';
 import TachyonsLayout from '../../../../components/demo/TachyonsLayout.svelte';
 
 onMount(() => {
@@ -69,7 +69,7 @@ onMount(() => {
                 validating: 'fa fa-refresh',
             }),
             demoFrame: new DemoFrame({
-                sender: '/guide/examples/switching-validators-on-the-same-field/Tachyons',
+                sender: '/guide/examples/switching-validators-on-the-same-field/tachyons',
                 sampleCode: sampleCode,
             }),
         },

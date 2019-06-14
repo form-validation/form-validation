@@ -134,7 +134,7 @@ formValidationInstance.on('core.validator.validated', function(e) {
 `} />                
         </div>
 
-        <Demo prefix="/guide/validators/promise/basic" frameworks={['Bootstrap', 'Tachyons']} />
+        <Demo prefix="/guide/validators/promise/basic" frameworks={['bootstrap', 'tachyons']} />
     </section>
 
     <RelatedValidators validators={['callback', 'remote']} />

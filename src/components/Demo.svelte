@@ -9,7 +9,7 @@
                     <div class="ml-auto mr1">
                         <select class="input-reset pa1 ba b--black-20 bg-transparent" style="width: 120px;" bind:value={selected} on:change={onChangeFramework}>
                             {#each frameworks as framework}
-                            <option value={framework}>{#if (framework === 'Native')}Native form{:else}{SupportedFramework[framework.toLowerCase()].name}{/if}</option>
+                            <option value={framework}>{#if (framework === 'native')}Native form{:else}{SupportedFramework[framework.toLowerCase()].name}{/if}</option>
                             {/each}
                         </select>
                         <div class="dn">
@@ -53,8 +53,8 @@ let _selectedTab = 0;
 
 // Props
 let prefix = '';
-let frameworks = ['Tachyons'];
-let selected = frameworks.length === 1 ? frameworks[0] : 'Tachyons';
+let frameworks = ['tachyons'];
+let selected = frameworks.length === 1 ? frameworks[0] : 'tachyons';
 
 const onActivateTab = (e) => {
     _selectedTab = e.detail.index;

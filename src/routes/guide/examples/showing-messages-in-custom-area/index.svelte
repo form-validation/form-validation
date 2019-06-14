@@ -73,13 +73,13 @@ FormValidation
     });
 `} />
         </div>
-        <Demo prefix="/guide/examples/showing-messages-in-custom-area/container" frameworks={['Tachyons']} />
+        <Demo prefix="/guide/examples/showing-messages-in-custom-area/container" frameworks={['tachyons']} />
     </section>
 
     <section class="mv5">
         <Heading>Using a callback for the container</Heading>
         <p class="lh-copy">If you want to place messages which their positions depend on the field, you can use a callback. The following form places messages in the right:</p>
-        <Demo prefix="/guide/examples/showing-messages-in-custom-area/callback" frameworks={['Tachyons']} />
+        <Demo prefix="/guide/examples/showing-messages-in-custom-area/callback" frameworks={['tachyons']} />
     </section>
 
     <Examples examples={[

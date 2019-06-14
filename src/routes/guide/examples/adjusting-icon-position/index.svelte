@@ -40,7 +40,7 @@
 </div>
 `} />
         </div>
-        <Demo prefix="/guide/examples/adjusting-icon-position" frameworks={['Bootstrap']} />
+        <Demo prefix="/guide/examples/adjusting-icon-position" frameworks={['bootstrap']} />
     </section>
 
     <section class="mv5">

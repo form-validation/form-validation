@@ -83,7 +83,7 @@
 
         <p class="lh-copy">The following form asks a developer to choose 2-4 programming languages which he/she is good at:</p>
 
-        <Demo prefix="/guide/validators/choice/basic" frameworks={['Bootstrap', 'Tachyons']} />
+        <Demo prefix="/guide/validators/choice/basic" frameworks={['bootstrap', 'tachyons']} />
     </section>
 
     <section class="mv5">

@@ -74,7 +74,7 @@ result is an object of
     <section class="mv5">
         <Heading>Basic Example</Heading>
 
-        <Demo prefix="/guide/validators/credit-card/basic" frameworks={['Bootstrap', 'Tachyons']} />
+        <Demo prefix="/guide/validators/credit-card/basic" frameworks={['bootstrap', 'tachyons']} />
     </section>
 
     <section class="mv5">

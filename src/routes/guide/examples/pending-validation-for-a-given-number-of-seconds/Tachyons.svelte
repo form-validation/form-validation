@@ -49,7 +49,7 @@ import Tachyons from 'formvalidation/dist/es6/plugins/Tachyons';
 import Trigger from 'formvalidation/dist/es6/plugins/Trigger';
 import phone from 'formvalidation/dist/es6/validators/phone';
 
-import sampleCode from './Tachyons.programmatic';
+import sampleCode from './tachyons.programmatic';
 import TachyonsLayout from '../../../../components/demo/TachyonsLayout.svelte';
 
 onMount(() => {
@@ -112,7 +112,7 @@ onMount(() => {
                 },
             }),
             demoFrame: new DemoFrame({
-                sender: '/guide/examples/pending-validation-for-a-given-number-of-seconds/Tachyons',
+                sender: '/guide/examples/pending-validation-for-a-given-number-of-seconds/tachyons',
                 sampleCode: sampleCode,
             }),
         },

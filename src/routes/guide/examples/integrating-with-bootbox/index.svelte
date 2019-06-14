@@ -54,7 +54,7 @@ document.getElementById('loginButton').addEventListener('click', function() {
 });
 `} />
     <p class="lh-copy">You can take a look at the <span class="i">Code</span> tab to see the full code:</p>
-    <Demo prefix="/guide/examples/integrating-with-bootbox" frameworks={['Bootstrap3']} />
+    <Demo prefix="/guide/examples/integrating-with-bootbox" frameworks={['bootstrap3']} />
     <p class="lh-copy">If you want to use Ajax to <a href="/guide/examples/using-ajax-to-submit-the-form" class="blue dim link">submit</a> the form, we can trigger the <code>core.form.valid</code> event:</p>
 <SampleCode lang="javascript" code={`
 const fv = FormValidation

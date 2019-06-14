@@ -133,7 +133,7 @@ FormValidation.formValidation(
 `} />
         </div>
         <p class="lh-copy">The Alias plugin gives you the beauty of code because you can split complicate logic into different, smaller, more maintainable parts as seen above.</p>
-        <Demo prefix="/guide/plugins/alias/basic" frameworks={['Tachyons']} />
+        <Demo prefix="/guide/plugins/alias/basic" frameworks={['tachyons']} />
     </section>
 
     <section class="mv5">

@@ -41,7 +41,7 @@ import Trigger from 'formvalidation/dist/es6/plugins/Trigger';
 import Spectre from 'formvalidation/dist/es6/plugins/Spectre';
 import SubmitButton from 'formvalidation/dist/es6/plugins/SubmitButton';
 
-import sampleCode from './Spectre.programmatic';
+import sampleCode from './spectre.programmatic';
 import SpectreLayout from '../../../../../components/demo/SpectreLayout.svelte';
 
 let fv;
@@ -87,7 +87,7 @@ const onLoaded = () => {
                 validating: 'form-icon loading',
             }),
             demoFrame: new DemoFrame({
-                sender: '/guide/getting-started/usage/frameworks/Spectre',
+                sender: '/guide/getting-started/usage/frameworks/spectre',
                 sampleCode: sampleCode,
             }),
         },

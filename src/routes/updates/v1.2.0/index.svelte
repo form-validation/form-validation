@@ -42,23 +42,23 @@
 
         <h3>New Materialize plugin</h3>
         <p class="lh-copy">The <a href="/guide/plugins/materialize" class="blue dim link">Materialize</a> plugin allows to validate form made in the <a href="https://materializecss.com" class="blue dim link">Materialize</a> framework:</p>
-        <Demo prefix="/guide/plugins/materialize/stacked-form" frameworks={['Materialize']} />
+        <Demo prefix="/guide/plugins/materialize/stacked-form" frameworks={['materialize']} />
 
         <h3>New Milligram plugin</h3>
         <p class="lh-copy">The <a href="/guide/plugins/milligram" class="blue dim link">Milligram</a> plugin allows to validate form made in the <a href="https://milligram.io" class="blue dim link">milligram</a> framework:</p>
-        <Demo prefix="/guide/plugins/milligram/horizontal-form" frameworks={['Milligram']} />
+        <Demo prefix="/guide/plugins/milligram/horizontal-form" frameworks={['milligram']} />
 
         <h3>New Mini plugin</h3>
         <p class="lh-copy">The <a href="/guide/plugins/mini" class="blue dim link">Mini</a> plugin allows to validate form made in the <a href="https://minicss.org" class="blue dim link">mini.css</a> framework:</p>
-        <Demo prefix="/guide/plugins/mini/horizontal-form" frameworks={['Mini']} />
+        <Demo prefix="/guide/plugins/mini/horizontal-form" frameworks={['mini']} />
 
         <h3>New Mui plugin</h3>
         <p class="lh-copy">The <a href="/guide/plugins/mui" class="blue dim link">Mui</a> plugin allows to validate form made in the <a href="https://muicss.com" class="blue dim link">MUI CSS</a> framework:</p>
-        <Demo prefix="/guide/plugins/mui/stacked-form" frameworks={['Mui']} />
+        <Demo prefix="/guide/plugins/mui/stacked-form" frameworks={['mui']} />
 
         <h3>New Turret plugin</h3>
         <p class="lh-copy">The <a href="/guide/plugins/turret" class="blue dim link">Turret</a> plugin allows to validate form made in the <a href="https://turretcss.com" class="blue dim link">turretcss</a> framework:</p>
-        <Demo prefix="/guide/plugins/turret/stacked-form" frameworks={['Turret']} />
+        <Demo prefix="/guide/plugins/turret/stacked-form" frameworks={['turret']} />
     </section>
 
     <section class="mv5">

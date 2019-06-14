@@ -49,12 +49,12 @@ document.addEventListener('DOMContentLoaded', function(e) {
 
     <section class="mv5">
         <Heading>Horizontal form</Heading>
-        <Demo prefix="/guide/plugins/pure/horizontal-form" frameworks={['Pure']} />
+        <Demo prefix="/guide/plugins/pure/horizontal-form" frameworks={['pure']} />
     </section>
 
     <section class="mv5">
         <Heading>Stacked form</Heading>
-        <Demo prefix="/guide/plugins/pure/stacked-form" frameworks={['Pure']} />
+        <Demo prefix="/guide/plugins/pure/stacked-form" frameworks={['pure']} />
     </section>
 
     <section class="mv5">

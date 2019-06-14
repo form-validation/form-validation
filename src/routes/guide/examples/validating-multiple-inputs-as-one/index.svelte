@@ -65,7 +65,7 @@ form.querySelector('[name="month"]').addEventListener('keyup', keyupHandler);
 form.querySelector('[name="date"]').addEventListener('keyup', keyupHandler);
 `} />
         <p class="lh-copy">Here is the working example:</p>
-        <Demo prefix="/guide/examples/validating-multiple-inputs-as-one" frameworks={['Tachyons']} />
+        <Demo prefix="/guide/examples/validating-multiple-inputs-as-one" frameworks={['tachyons']} />
     </section>
 
     <Examples examples={[

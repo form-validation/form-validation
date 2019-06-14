@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
             Instead, they use the <code>data-stripe</code> attribute which are defined by Stripe. The Stripe API then will
             collects the credit card data from fields using this attribute.</p>
         
-        <Demo prefix="/guide/getting-started/field-selector/stripe" frameworks={['Tachyons']} />
+        <Demo prefix="/guide/getting-started/field-selector/stripe" frameworks={['tachyons']} />
     </section>
 
     <section class="mv5">

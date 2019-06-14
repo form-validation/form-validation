@@ -131,7 +131,7 @@ FormValidation.formValidation(
 `} />
         <p class="lh-copy">We register a new validator named <code>checkPassword</code> which is implemented by the <code>strongPassword</code> function.</p>
         <p class="lh-copy">Since the validators are distinct by the names, the new validator name (<code>checkPassword</code>, in the example above) has to be different with <a href="/guide/validators" class="blue dim link">built-in validators</a>.</p>
-        <Demo prefix="/guide/examples/creating-a-custom-validator/validators-namespace" frameworks={['Tachyons']} />
+        <Demo prefix="/guide/examples/creating-a-custom-validator/validators-namespace" frameworks={['tachyons']} />
 
         <h3>Using the <a href="/guide/api/register-validator" class="blue dim link">registerValidator()</a> method</h3>
         <p class="lh-copy">This approach should be used when the <code>FormValidation</code> namespace doesn't exist. For example, when the library is used with ES6 module.</p>
@@ -242,7 +242,7 @@ const strongPassword = function() {
 };
 `} />
         <p class="lh-copy">Now, the form shows exactly condition that we want the password to satisfy.</p>
-        <Demo prefix="/guide/examples/creating-a-custom-validator/dynamic-message" frameworks={['Tachyons']} />
+        <Demo prefix="/guide/examples/creating-a-custom-validator/dynamic-message" frameworks={['tachyons']} />
     </section>
 
     <section class="mv5">
@@ -375,7 +375,7 @@ FormValidation
 `} />
         <p class="lh-copy">Lastly, for a full working demonstration, you can play with the following form:</p>
         <Tip>Try to enter simple passwords such as 123456, abcdef, abc123 to see how they are treated</Tip>
-        <Demo prefix="/guide/examples/creating-a-custom-validator/meta-data" frameworks={['Bootstrap']} />
+        <Demo prefix="/guide/examples/creating-a-custom-validator/meta-data" frameworks={['bootstrap']} />
     </section>
 </GuideLayout>
 

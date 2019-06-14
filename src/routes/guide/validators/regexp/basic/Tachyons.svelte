@@ -20,7 +20,7 @@ import Icon from 'formvalidation/dist/es6/plugins/Icon';
 import Trigger from 'formvalidation/dist/es6/plugins/Trigger';
 import Tachyons from 'formvalidation/dist/es6/plugins/Tachyons';
 
-import sampleCode from './Tachyons.programmatic';
+import sampleCode from './tachyons.programmatic';
 import TachyonsLayout from '../../../../../components/demo/TachyonsLayout.svelte';
 
 onMount(() => {
@@ -44,7 +44,7 @@ onMount(() => {
                 validating: 'fa fa-refresh'
             }),
             demoFrame: new DemoFrame({
-                sender: '/guide/validators/regexp/basic/Tachyons',
+                sender: '/guide/validators/regexp/basic/tachyons',
                 sampleCode: sampleCode,
             }),
         },

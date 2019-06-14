@@ -119,7 +119,7 @@ import SubmitButton from 'formvalidation/dist/es6/plugins/SubmitButton';
 import Trigger from 'formvalidation/dist/es6/plugins/Trigger';
 import Bulma from 'formvalidation/dist/es6/plugins/Bulma';
 
-import sampleCode from './Bulma.programmatic';
+import sampleCode from './bulma.programmatic';
 import BulmaLayout from '../../../components/demo/BulmaLayout.svelte';
 
 let fv;
@@ -229,7 +229,7 @@ const onLoaded = () => {
                 validating: 'fa fa-refresh'
             }),
             demoFrame: new DemoFrame({
-                sender: '/download/register/Bulma',
+                sender: '/download/register/bulma',
                 sampleCode: sampleCode,
             }),
         }

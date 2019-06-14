@@ -32,7 +32,7 @@ import Trigger from 'formvalidation/dist/es6/plugins/Trigger';
 import Materialize from 'formvalidation/dist/es6/plugins/Materialize';
 import SubmitButton from 'formvalidation/dist/es6/plugins/SubmitButton';
 
-import sampleCode from './Materialize.programmatic';
+import sampleCode from './materialize.programmatic';
 import MaterializeLayout from '../../../../../components/demo/MaterializeLayout.svelte';
 
 let fv;
@@ -78,7 +78,7 @@ const onLoaded = () => {
                 validating: 'fa fa-refresh',
             }),
             demoFrame: new DemoFrame({
-                sender: '/guide/getting-started/usage/frameworks/Materialize',
+                sender: '/guide/getting-started/usage/frameworks/materialize',
                 sampleCode: sampleCode,
             }),
         },

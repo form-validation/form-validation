@@ -82,7 +82,7 @@ result is an object of
     <section class="mv5">
         <Heading>Basic Example</Heading>
         <p class="lh-copy">You can click on sample from the table above to see if it's a valid or invalid VAT.</p>
-        <Demo prefix="/guide/validators/vat/basic" frameworks={['Bootstrap', 'Tachyons']} />
+        <Demo prefix="/guide/validators/vat/basic" frameworks={['bootstrap', 'tachyons']} />
     </section>
 
     <section class="mv5">

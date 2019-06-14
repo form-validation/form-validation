@@ -59,7 +59,7 @@ import SubmitButton from 'formvalidation/dist/es6/plugins/SubmitButton';
 import Tachyons from 'formvalidation/dist/es6/plugins/Tachyons';
 import Trigger from 'formvalidation/dist/es6/plugins/Trigger';
 
-import sampleCode from './Tachyons.programmatic';
+import sampleCode from './tachyons.programmatic';
 import TachyonsLayout from '../../../../../components/demo/TachyonsLayout.svelte';
 
 onMount(() => {
@@ -121,7 +121,7 @@ onMount(() => {
                 size: 'invisible',
             }),
             demoFrame: new DemoFrame({
-                sender: '/guide/plugins/recaptcha/invisible/Tachyons',
+                sender: '/guide/plugins/recaptcha/invisible/tachyons',
                 sampleCode: sampleCode,
             }),
         },

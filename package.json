@@ -6,8 +6,8 @@
     "build": "node --max-old-space-size=4096 node_modules/.bin/sapper build --legacy",
     "export": "node --max-old-space-size=4096 node_modules/.bin/sapper export --legacy",
     "start": "node __sapper__/build",
-    "predeploy": "npm run build",
-    "deploy": "now"
+    "predeploy": "rm -rf __sapper__/export && npm run export",
+    "deploy": "netlify deploy --dir=__sapper__/export --prod"
   },
   "dependencies": {
     "compression": "^1.7.4",

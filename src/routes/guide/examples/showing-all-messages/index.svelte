@@ -17,7 +17,7 @@
         <p class="lh-copy">It's also possible to show all the messages initially. Then whenever the password passes a particular rule, the message associated with the rule will disappear.</p>
         <p class="lh-copy">We need to trigger field events to archive this. In this example, the <code>core.validator.validated</code> and <code>plugins.message.displayed</code> events are used.</p>
 
-        <Demo prefix="/guide/examples/showing-all-messages" frameworks={['Tachyons']} />
+        <Demo prefix="/guide/examples/showing-all-messages" frameworks={['tachyons']} />
     </section>
 
     <Examples examples={[

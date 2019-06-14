@@ -37,7 +37,7 @@ import Trigger from 'formvalidation/dist/es6/plugins/Trigger';
 import Tachyons from 'formvalidation/dist/es6/plugins/Tachyons';
 import vat from 'formvalidation/dist/es6/validators/vat/index';
 
-import sampleCode from './Tachyons.programmatic';
+import sampleCode from './tachyons.programmatic';
 import data from '../data';
 import ReceiveMessage from '../../../../../components/ReceiveMessage.svelte';
 import TachyonsLayout from '../../../../../components/demo/TachyonsLayout.svelte';

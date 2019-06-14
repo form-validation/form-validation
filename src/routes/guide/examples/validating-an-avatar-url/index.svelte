@@ -7,7 +7,7 @@
     
     <section class="mv5">
         <p class="lh-copy">The following example is a combination usage of the <a href="/guide/validators/uri" class="blue dim link">uri validator</a> and <a href="/guide/validators/regexp" class="blue dim link">regexp validator</a>. It asks user to enter a valid URL which ends with .jpg, .jpeg, or .png.</p>
-        <Demo prefix="/guide/examples/validating-an-avatar-url" frameworks={['Tachyons']} />
+        <Demo prefix="/guide/examples/validating-an-avatar-url" frameworks={['tachyons']} />
     </section>
 
     <Examples examples={[

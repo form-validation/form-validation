@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
         <Heading>Basic example</Heading>
         <p class="lh-copy">In the following form, there are two invisible fields called <span class="i">Job title</span> and <span class="i">Department</span>. Since they are not visible initially, they will not be validated when you click the <span class="i">Submit</span> button.</p>
         <p class="lh-copy">Clicking the <span class="i">More info</span> button will turn them into visible fields, and as result, they will be required due to their validation rules.</p>
-        <Demo prefix="/guide/plugins/excluded/basic" frameworks={['Tachyons']} />
+        <Demo prefix="/guide/plugins/excluded/basic" frameworks={['tachyons']} />
     </section>
 
     <section class="mv5">

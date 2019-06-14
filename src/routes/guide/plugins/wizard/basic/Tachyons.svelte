@@ -130,7 +130,7 @@ import Wizard from 'formvalidation/dist/es6/plugins/Wizard';
 import phone from 'formvalidation/dist/es6/validators/phone';
 import zipCode from 'formvalidation/dist/es6/validators/zipCode';
 
-import sampleCode from './Tachyons.programmatic';
+import sampleCode from './tachyons.programmatic';
 import TachyonsLayout from '../../../../../components/demo/TachyonsLayout.svelte';
 
 onMount(() => {
@@ -238,7 +238,7 @@ onMount(() => {
                 validating: 'fa fa-refresh',
             }),
             demoFrame: new DemoFrame({
-                sender: '/guide/plugins/wizard/basic/Tachyons',
+                sender: '/guide/plugins/wizard/basic/tachyons',
                 sampleCode: sampleCode,
             }),
         },

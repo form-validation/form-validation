@@ -30,7 +30,7 @@ import Trigger from 'formvalidation/dist/es6/plugins/Trigger';
 import Tachyons from 'formvalidation/dist/es6/plugins/Tachyons';
 import SubmitButton from 'formvalidation/dist/es6/plugins/SubmitButton';
 
-import sampleCode from './Tachyons.programmatic';
+import sampleCode from './tachyons.programmatic';
 import TachyonsLayout from '../../../../components/demo/TachyonsLayout.svelte';
 
 onMount(() => {
@@ -71,7 +71,7 @@ onMount(() => {
                 validating: 'fa fa-refresh',
             }),
             demoFrame: new DemoFrame({
-                sender: '/guide/examples/regenerating-captcha-when-the-form-is-invalid/Tachyons',
+                sender: '/guide/examples/regenerating-captcha-when-the-form-is-invalid/tachyons',
                 sampleCode: sampleCode,
             }),
         },

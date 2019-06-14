@@ -69,7 +69,7 @@ callback: {
 }
 `} />
         </div>
-        <Demo prefix="/guide/examples/preventing-user-to-have-same-value-as-the-placeholder" frameworks={['Tachyons']} />
+        <Demo prefix="/guide/examples/preventing-user-to-have-same-value-as-the-placeholder" frameworks={['tachyons']} />
     </section>
 
     <RelatedValidators validators={['callback']} />

@@ -21,7 +21,7 @@
             {/each}
         </table>
 
-        <Demo prefix="/guide/validators/id/basic-{countryCode}" frameworks={['Tachyons']} />
+        <Demo prefix="/guide/validators/id/basic-{countryCode}" frameworks={['tachyons']} />
     </section>
 
     <section class="mv5">

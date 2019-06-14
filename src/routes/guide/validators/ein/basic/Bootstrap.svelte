@@ -21,7 +21,7 @@ import Trigger from 'formvalidation/dist/es6/plugins/Trigger';
 import Bootstrap from 'formvalidation/dist/es6/plugins/Bootstrap';
 import ein from 'formvalidation/dist/es6/validators/ein';
 
-import sampleCode from './Bootstrap.programmatic';
+import sampleCode from './bootstrap.programmatic';
 import BootstrapLayout from '../../../../../components/demo/BootstrapLayout.svelte';
 import ReceiveMessage from '../../../../../components/ReceiveMessage.svelte';
 
@@ -66,7 +66,7 @@ const onLoaded = () => {
                 validating: 'fa fa-refresh'
             }),
             demoFrame: new DemoFrame({
-                sender: '/guide/validators/ein/basic/Bootstrap',
+                sender: '/guide/validators/ein/basic/bootstrap',
                 sampleCode: sampleCode,
             }),
         },

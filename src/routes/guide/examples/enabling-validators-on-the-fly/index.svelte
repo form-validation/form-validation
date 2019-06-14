@@ -56,7 +56,7 @@ form.querySelector('[name="password"]').addEventListener('input', function(e) {
 });
 `} />
         </div>
-        <Demo prefix="/guide/examples/enabling-validators-on-the-fly" frameworks={['Tachyons']} />
+        <Demo prefix="/guide/examples/enabling-validators-on-the-fly" frameworks={['tachyons']} />
     </section>
 
     <Examples examples={[

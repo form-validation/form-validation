@@ -21,7 +21,7 @@ import Trigger from 'formvalidation/dist/es6/plugins/Trigger';
 import Bootstrap from 'formvalidation/dist/es6/plugins/Bootstrap';
 import sedol from 'formvalidation/dist/es6/validators/sedol';
 
-import sampleCode from './Bootstrap.programmatic';
+import sampleCode from './bootstrap.programmatic';
 import BootstrapLayout from '../../../../../components/demo/BootstrapLayout.svelte';
 import ReceiveMessage from '../../../../../components/ReceiveMessage.svelte';
 
@@ -66,7 +66,7 @@ const onLoaded = () => {
                 validating: 'fa fa-refresh'
             }),
             demoFrame: new DemoFrame({
-                sender: '/guide/validators/sedol/basic/Bootstrap',
+                sender: '/guide/validators/sedol/basic/bootstrap',
                 sampleCode: sampleCode,
             }),
         },

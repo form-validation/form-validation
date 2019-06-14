@@ -67,7 +67,7 @@ icon: new FormValidation.plugins.Icon({
     
     <section class="mv5">
         <Heading>Basic example</Heading>
-        <Demo prefix="/guide/plugins/mandatory-icon/basic" frameworks={['Tachyons']} />
+        <Demo prefix="/guide/plugins/mandatory-icon/basic" frameworks={['tachyons']} />
     </section>
 
     <section class="mv5">

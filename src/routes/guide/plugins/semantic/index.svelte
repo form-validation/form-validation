@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
 
     <section class="mv5">
         <Heading>Horizontal form</Heading>
-        <Demo prefix="/guide/plugins/semantic/horizontal-form" frameworks={['Semantic']} />
+        <Demo prefix="/guide/plugins/semantic/horizontal-form" frameworks={['semantic']} />
     </section>
 
     <section class="mv5">
@@ -75,7 +75,7 @@ semantic: new FormValidation.plugins.Semantic({
 }),
 `} />    
         </div>      
-        <Demo prefix="/guide/plugins/semantic/stacked-form" frameworks={['Semantic']} />
+        <Demo prefix="/guide/plugins/semantic/stacked-form" frameworks={['semantic']} />
     </section>
 
     <section class="mv5">
@@ -105,7 +105,7 @@ semantic: new FormValidation.plugins.Semantic({
 }),
 `} />        
         </div>
-        <Demo prefix="/guide/plugins/semantic/multiple-fields" frameworks={['Semantic']} />
+        <Demo prefix="/guide/plugins/semantic/multiple-fields" frameworks={['semantic']} />
     </section>
 
     <section class="mv5">

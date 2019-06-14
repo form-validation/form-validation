@@ -69,7 +69,7 @@ import SubmitButton from 'formvalidation/dist/es6/plugins/SubmitButton';
 import classSet from 'formvalidation/dist/es6/utils/classSet';
 import closest from 'formvalidation/dist/es6/utils/closest';
 
-import sampleCode from './Bootstrap.programmatic';
+import sampleCode from './bootstrap.programmatic';
 import BootstrapLayout from '../../../../components/demo/BootstrapLayout.svelte';
 
 let fv;
@@ -125,7 +125,7 @@ const onLoaded = () => {
                 validating: 'fa fa-refresh',
             }),
             demoFrame: new DemoFrame({
-                sender: '/guide/examples/hiding-success-class/Bootstrap',
+                sender: '/guide/examples/hiding-success-class/bootstrap',
                 sampleCode: sampleCode,
             }),
         },

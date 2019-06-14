@@ -126,7 +126,7 @@ FormValidation.formValidation(
 
         <p class="lh-copy">The following form allows to upload JPEG, PNG image which is smaller than 2 MB in size.</p>
         <Tip>Use the <a href="/guide/validators/promise" class="blue dim link">promise</a> validator if you want to validate the width and height of an image</Tip>
-        <Demo prefix="/guide/validators/file/basic" frameworks={['Bootstrap', 'Tachyons']} />
+        <Demo prefix="/guide/validators/file/basic" frameworks={['bootstrap', 'tachyons']} />
     </section>
 
     <section class="mv5">

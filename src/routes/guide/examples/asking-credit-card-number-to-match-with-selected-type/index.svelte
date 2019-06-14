@@ -7,7 +7,7 @@
     
     <section class="mv5">
         <p class="lh-copy">The following form asks to fill in the valid credit card number which matches the selected type.</p>
-        <Demo prefix="/guide/examples/asking-credit-card-number-to-match-with-selected-type" frameworks={['Tachyons']} />
+        <Demo prefix="/guide/examples/asking-credit-card-number-to-match-with-selected-type" frameworks={['tachyons']} />
     </section>
 
     <Examples examples={[

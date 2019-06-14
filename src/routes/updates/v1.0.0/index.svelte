@@ -100,7 +100,7 @@ const result = creditCard().validate({
                 <td class="pv2 ph3">UIKit v3.0.0-beta.42</td>
             </tr>
         </table>
-        <Demo prefix="/guide/getting-started/usage/frameworks" frameworks={['Bootstrap', 'Bootstrap3', 'Bulma', 'Foundation', 'Pure', 'Semantic', 'Shoelace', 'Spectre', 'Tachyons', 'Uikit', 'Native']} />
+        <Demo prefix="/guide/getting-started/usage/frameworks" frameworks={['bootstrap', 'bootstrap3', 'bulma', 'foundation', 'pure', 'semantic', 'shoelace', 'spectre', 'tachyons', 'uikit', 'native']} />
 
         <h3>New website</h3>
         <p class="lh-copy">The old version of the official website is powered by <a href="https://jekyllrb.com" class="blue dim link">Jekyll</a>. Since it comes from the Ruby world, it isn't easy for me when I want to customize something.

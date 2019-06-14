@@ -23,7 +23,7 @@
             <li>30030008444444</li>
         </ul>
 
-        <Demo prefix="/guide/examples/accepting-test-credit-card-numbers" frameworks={['Tachyons']} />
+        <Demo prefix="/guide/examples/accepting-test-credit-card-numbers" frameworks={['tachyons']} />
     </section>
 
     <Examples examples={[

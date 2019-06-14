@@ -17,7 +17,7 @@
 }
 `} />
         </div>
-        <Demo prefix="/guide/examples/hiding-messages/overriding-css" frameworks={['Bootstrap']} />
+        <Demo prefix="/guide/examples/hiding-messages/overriding-css" frameworks={['bootstrap']} />
     </section>
 
     <section class="mv5">
@@ -45,7 +45,7 @@ FormValidation
     });
 `} />
         </div>
-        <Demo prefix="/guide/examples/hiding-messages/event" frameworks={['Tachyons']} />
+        <Demo prefix="/guide/examples/hiding-messages/event" frameworks={['tachyons']} />
     </section>
 
     <Examples examples={[

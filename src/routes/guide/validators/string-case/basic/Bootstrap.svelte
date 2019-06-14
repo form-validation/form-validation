@@ -18,7 +18,7 @@ import Icon from 'formvalidation/dist/es6/plugins/Icon';
 import Trigger from 'formvalidation/dist/es6/plugins/Trigger';
 import Bootstrap from 'formvalidation/dist/es6/plugins/Bootstrap';
 
-import sampleCode from './Bootstrap.programmatic';
+import sampleCode from './bootstrap.programmatic';
 import BootstrapLayout from '../../../../../components/demo/BootstrapLayout.svelte';
 
 let fv;
@@ -44,7 +44,7 @@ const onLoaded = () => {
                 validating: 'fa fa-refresh'
             }),
             demoFrame: new DemoFrame({
-                sender: '/guide/validators/string-case/basic/Bootstrap',
+                sender: '/guide/validators/string-case/basic/bootstrap',
                 sampleCode: sampleCode,
             }),
         },

@@ -132,7 +132,7 @@ delay: {
     <section class="mv5">
         <Heading>Basic example</Heading>
         <p class="lh-copy">In the following form, the <span class="i">Title</span> field will be validated while user type any character (<code>trigger="keyup"</code>). The <span class="i">Summary</span> field will be validated when user lose the focus (<code>trigger="blur"</code>).</p>
-        <Demo prefix="/guide/plugins/trigger/basic" frameworks={['Tachyons']} />
+        <Demo prefix="/guide/plugins/trigger/basic" frameworks={['tachyons']} />
     </section>
 
     <section class="mv5">

@@ -57,7 +57,7 @@ result is an object of
     <section class="mv5">
         <Heading>Basic Example</Heading>
         <p class="lh-copy">The following form requires the password and confirmation one to be the same using <code>identical</code> validator.</p>
-        <Demo prefix="/guide/validators/identical/basic" frameworks={['Bootstrap', 'Tachyons']} />
+        <Demo prefix="/guide/validators/identical/basic" frameworks={['bootstrap', 'tachyons']} />
     </section>
 
     <Examples examples={[

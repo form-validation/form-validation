@@ -131,13 +131,13 @@ document.addEventListener('DOMContentLoaded', function(e) {
     <section class="mv5">
         <Heading>reCAPTCHA widget</Heading>
         <p class="lh-copy">The following form shows a <a href="https://developers.google.com/recaptcha/docs/display" class="blue dim link">reCAPTCHA widget</a>.</p>
-        <Demo prefix="/guide/plugins/recaptcha/widget" frameworks={['Tachyons']} />
+        <Demo prefix="/guide/plugins/recaptcha/widget" frameworks={['tachyons']} />
     </section>
     
     <section class="mv5">
         <Heading>Invisible reCAPTCHA</Heading>
         <p class="lh-copy">The following form shows an <a href="https://developers.google.com/recaptcha/docs/invisible" class="blue dim link">invisible reCAPTCHA</a>. In order to use it properly, remember to set the <code>size: 'invisible'</code> option.</p>
-        <Demo prefix="/guide/plugins/recaptcha/invisible" frameworks={['Tachyons']} />
+        <Demo prefix="/guide/plugins/recaptcha/invisible" frameworks={['tachyons']} />
     </section>
 
     <section class="mv5">

@@ -288,7 +288,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
     
     <section class="mv5">
         <Heading>Basic example</Heading>
-        <Demo prefix="/guide/plugins/declarative/basic" frameworks={['Tachyons']} />
+        <Demo prefix="/guide/plugins/declarative/basic" frameworks={['tachyons']} />
     </section>
 
     <section class="mv5">

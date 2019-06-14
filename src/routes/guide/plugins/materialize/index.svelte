@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
 
     <section class="mv5">
         <Heading>Stacked form</Heading>
-        <Demo prefix="/guide/plugins/materialize/stacked-form" frameworks={['Materialize']} />
+        <Demo prefix="/guide/plugins/materialize/stacked-form" frameworks={['materialize']} />
     </section>
 
     <section class="mv5">
@@ -87,7 +87,7 @@ materialize: new FormValidation.plugins.Materialize({
 }),
 `} />        
         </div>
-        <Demo prefix="/guide/plugins/materialize/multiple-fields" frameworks={['Materialize']} />
+        <Demo prefix="/guide/plugins/materialize/multiple-fields" frameworks={['materialize']} />
     </section>
     
     <section class="mv5">

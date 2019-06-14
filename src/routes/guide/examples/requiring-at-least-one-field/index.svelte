@@ -85,7 +85,7 @@ const fv = FormValidation.formValidation(
 `} />
         <p class="lh-copy">In the sample code above, we use the <code>getElements()</code> method to get all the email elements.</p>
 
-        <Demo prefix="/guide/examples/requiring-at-least-one-field" frameworks={['Tachyons']} />        
+        <Demo prefix="/guide/examples/requiring-at-least-one-field" frameworks={['tachyons']} />        
     </section>
 
     <RelatedValidators validators={['callback', 'emailAddress', 'notEmpty']} />

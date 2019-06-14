@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
 </script-tag>
 `} />
         </div>
-        <Demo prefix="/guide/examples/using-glyphicons-icons" frameworks={['Bootstrap3']} />
+        <Demo prefix="/guide/examples/using-glyphicons-icons" frameworks={['bootstrap3']} />
     </section>
 
     <Examples examples={[

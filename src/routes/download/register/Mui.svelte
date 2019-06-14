@@ -95,7 +95,7 @@ import SubmitButton from 'formvalidation/dist/es6/plugins/SubmitButton';
 import Trigger from 'formvalidation/dist/es6/plugins/Trigger';
 import Mui from 'formvalidation/dist/es6/plugins/Mui';
 
-import sampleCode from './Mui.programmatic';
+import sampleCode from './mui.programmatic';
 import MuiLayout from '../../../components/demo/MuiLayout.svelte';
 
 let fv;
@@ -215,7 +215,7 @@ const onLoaded = () => {
                 validating: 'fa fa-refresh',
             }),
             demoFrame: new DemoFrame({
-                sender: '/download/register/Mui',
+                sender: '/download/register/mui',
                 sampleCode: sampleCode,
             }),
         }

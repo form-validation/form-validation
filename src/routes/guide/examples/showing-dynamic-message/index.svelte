@@ -14,7 +14,7 @@
             <li>Must contain at least one digit</li>
         </ul>
 
-        <Demo prefix="/guide/examples/showing-dynamic-message" frameworks={['Bootstrap', 'Tachyons']} />
+        <Demo prefix="/guide/examples/showing-dynamic-message" frameworks={['bootstrap', 'tachyons']} />
     </section>
 
     <Examples examples={[

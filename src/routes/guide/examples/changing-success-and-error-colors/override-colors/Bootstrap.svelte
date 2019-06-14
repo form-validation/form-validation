@@ -44,7 +44,7 @@ import Trigger from 'formvalidation/dist/es6/plugins/Trigger';
 import Bootstrap from 'formvalidation/dist/es6/plugins/Bootstrap';
 import SubmitButton from 'formvalidation/dist/es6/plugins/SubmitButton';
 
-import sampleCode from './Bootstrap.programmatic';
+import sampleCode from './bootstrap.programmatic';
 import BootstrapLayout from '../../../../../components/demo/BootstrapLayout.svelte';
 
 let fv;
@@ -86,7 +86,7 @@ const onLoaded = () => {
                 validating: 'fa fa-refresh',
             }),
             demoFrame: new DemoFrame({
-                sender: '/guide/examples/changing-success-and-error-colors/override-colors/Bootstrap',
+                sender: '/guide/examples/changing-success-and-error-colors/override-colors/bootstrap',
                 sampleCode: sampleCode,
             }),
         },

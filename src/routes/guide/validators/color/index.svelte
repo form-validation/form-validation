@@ -199,7 +199,7 @@ slategrey, snow, springgreen, steelblue</code></pre>
     <section class="mv5">
         <Heading>Basic Example</Heading>
 
-        <Demo prefix="/guide/validators/color/basic" frameworks={['Bootstrap', 'Tachyons']} />
+        <Demo prefix="/guide/validators/color/basic" frameworks={['bootstrap', 'tachyons']} />
     </section>
 
     <section class="mv5">
@@ -207,7 +207,7 @@ slategrey, snow, springgreen, steelblue</code></pre>
 
         <p class="lh-copy">When the <a href="/guide/plugins/declarative" class="blue dim link">Declarative</a> plugin is used, the color validator will be turned on automatically if the input uses HTML 5 <code>type="color"</code> attribute</p>
         <p class="lh-copy">According to the <a href="http://www.w3.org/TR/html-markup/input.color.html#input.color.attrs.value" class="blue dim link">W3C specification</a>, the color input only accepts 6 hex character values. 3 hex character values as #FFF is not valid.</p>
-        <Demo prefix="/guide/validators/color/html5" frameworks={['Tachyons']} />
+        <Demo prefix="/guide/validators/color/html5" frameworks={['tachyons']} />
     </section>
 
     <section class="mv5">

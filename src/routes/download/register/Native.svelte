@@ -52,7 +52,7 @@ import Message from 'formvalidation/dist/es6/plugins/Message';
 import SubmitButton from 'formvalidation/dist/es6/plugins/SubmitButton';
 import Trigger from 'formvalidation/dist/es6/plugins/Trigger';
 
-import sampleCode from './Native.programmatic';
+import sampleCode from './native.programmatic';
 import TachyonsLayout from '../../../components/demo/TachyonsLayout.svelte';
 
 onMount(() => {
@@ -157,7 +157,7 @@ onMount(() => {
                 clazz: 'dark-red lh-copy'
             }),
             demoFrame: new DemoFrame({
-                sender: '/download/register/Native',
+                sender: '/download/register/native',
                 sampleCode: sampleCode,
             }),
         },

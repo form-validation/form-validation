@@ -58,7 +58,7 @@ icon: new FormValidation.plugins.Icon({
 }),
 `} />
         </div>
-        <Demo prefix="/guide/examples/using-material-design-icons/material-design" frameworks={['Tachyons']} />
+        <Demo prefix="/guide/examples/using-material-design-icons/material-design" frameworks={['tachyons']} />
     </section>
 
     <section class="mv5">
@@ -100,7 +100,7 @@ FormValidation
     });
 `} />    
         </div>
-        <Demo prefix="/guide/examples/using-material-design-icons/material-design-event" frameworks={['Tachyons']} />
+        <Demo prefix="/guide/examples/using-material-design-icons/material-design-event" frameworks={['tachyons']} />
     </section>
 
     <Examples examples={[

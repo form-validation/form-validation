@@ -146,7 +146,7 @@ prevButton.addEventListener('click', function() {
 });    
 `} />
         <p class="lh-copy">This example only has two steps, but we can use the same approach if your wizard has more steps. You can play with it in the demo below:</p>
-        <Demo prefix="/guide/examples/multiple-steps-wizard" frameworks={['Tachyons']} />
+        <Demo prefix="/guide/examples/multiple-steps-wizard" frameworks={['tachyons']} />
     </section>
 
     <Examples examples={[

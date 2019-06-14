@@ -151,7 +151,7 @@ const fv = FormValidation
         <p class="lh-copy">Following is a working example that illustrates all steps above:</p>
         <Tip heading="Note">For demonstrating purpose, the form randomly displays a custom message for the username field no matter what you put in it</Tip>
         
-        <Demo prefix="/guide/examples/showing-custom-message-returned-from-server" frameworks={['Tachyons']} />
+        <Demo prefix="/guide/examples/showing-custom-message-returned-from-server" frameworks={['tachyons']} />
     </section>
 
     <Examples examples={[

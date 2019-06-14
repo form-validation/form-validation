@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
         <Heading>Basic example</Heading>
         <p class="lh-copy">Try to press the <span class="i">Add product</span> button to see the first invalid field will be focused. Then fill in the <span class="i">Product name</span>, press the <span class="i">Add product</span> button again. 
             The plugin will bring focus to the <span class="i">Description</span> field which now becomes the first invalid field.</p>
-        <Demo prefix="/guide/plugins/auto-focus/basic" frameworks={['Tachyons']} />
+        <Demo prefix="/guide/plugins/auto-focus/basic" frameworks={['tachyons']} />
     </section>
 
     <section class="mv5">

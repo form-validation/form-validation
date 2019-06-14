@@ -76,7 +76,7 @@ import Trigger from 'formvalidation/dist/es6/plugins/Trigger';
 import Spectre from 'formvalidation/dist/es6/plugins/Spectre';
 import SubmitButton from 'formvalidation/dist/es6/plugins/SubmitButton';
 
-import sampleCode from './Spectre.programmatic';
+import sampleCode from './spectre.programmatic';
 import SpectreLayout from '../../../../../components/demo/SpectreLayout.svelte';
 
 let fv;
@@ -135,7 +135,7 @@ const onLoaded = () => {
                 validating: 'form-icon loading',
             }),
             demoFrame: new DemoFrame({
-                sender: '/guide/plugins/spectre/stacked-form/Spectre',
+                sender: '/guide/plugins/spectre/stacked-form/spectre',
                 sampleCode: sampleCode,
             }),
         },

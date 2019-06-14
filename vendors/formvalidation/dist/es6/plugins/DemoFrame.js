@@ -16,7 +16,7 @@ export default class DemoFrame extends Plugin {
             channel: 'SAMPLE_CODE',
             sender: this.opts.sender,
             data: this.opts.sampleCode,
-        }, '*');
+        }, window.location.origin);
 
         this.onFieldStatusChanged();
     }
@@ -32,6 +32,6 @@ export default class DemoFrame extends Plugin {
             channel: 'DEMO_UPDATE_STATUS',
             sender: this.opts.sender,
             data: true,
-        }, '*');
+        }, window.location.origin);
     }
 }

@@ -26,7 +26,7 @@ import Trigger from 'formvalidation/dist/es6/plugins/Trigger';
 import Bootstrap from 'formvalidation/dist/es6/plugins/Bootstrap';
 import SubmitButton from 'formvalidation/dist/es6/plugins/SubmitButton';
 
-import sampleCode from './Bootstrap.programmatic';
+import sampleCode from './bootstrap.programmatic';
 import BootstrapLayout from '../../../../../components/demo/BootstrapLayout.svelte';
 import ResourceLoader from '../../../../../components/ResourceLoader.svelte';
 
@@ -95,7 +95,7 @@ const onLoaded = () => {
                 validating: 'fa fa-refresh',
             }),
             demoFrame: new DemoFrame({
-                sender: '/guide/examples/creating-a-custom-validator/meta-data/Bootstrap',
+                sender: '/guide/examples/creating-a-custom-validator/meta-data/bootstrap',
                 sampleCode: sampleCode,
             }),
         },

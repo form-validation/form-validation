@@ -38,7 +38,7 @@ icon: new FormValidation.plugins.Icon({
 <input name="email" />
 `} />            
         </div>
-        <Demo prefix="/guide/examples/showing-icons-in-custom-area" frameworks={['Tachyons']} />
+        <Demo prefix="/guide/examples/showing-icons-in-custom-area" frameworks={['tachyons']} />
     </section>
 
     <Examples examples={[

@@ -53,7 +53,7 @@ import Trigger from 'formvalidation/dist/es6/plugins/Trigger';
 import Tachyons from 'formvalidation/dist/es6/plugins/Tachyons';
 import phone from 'formvalidation/dist/es6/validators/phone';
 
-import sampleCode from './Tachyons.programmatic';
+import sampleCode from './tachyons.programmatic';
 import ReceiveMessage from '../../../../../components/ReceiveMessage.svelte';
 import TachyonsLayout from '../../../../../components/demo/TachyonsLayout.svelte';
 
@@ -111,7 +111,7 @@ onMount(() => {
                 validating: 'fa fa-refresh'
             }),
             demoFrame: new DemoFrame({
-                sender: '/guide/validators/phone/basic/Tachyons',
+                sender: '/guide/validators/phone/basic/tachyons',
                 sampleCode: sampleCode,
             }),
         },

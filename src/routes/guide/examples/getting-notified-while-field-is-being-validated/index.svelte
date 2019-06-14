@@ -68,7 +68,7 @@ FormValidation
     });
 `} />
         <p class="lh-copy">For testing purpose, the demo always answers that the username is already taken no matter what you input.</p>
-        <Demo prefix="/guide/examples/getting-notified-while-field-is-being-validated" frameworks={['Bootstrap']} />
+        <Demo prefix="/guide/examples/getting-notified-while-field-is-being-validated" frameworks={['bootstrap']} />
     </section>
 
     <Examples examples={[

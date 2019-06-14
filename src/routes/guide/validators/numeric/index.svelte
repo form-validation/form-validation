@@ -117,7 +117,7 @@ formValidationInstance
             Since the thousands and decimal separators are various, the field should use <code>type="text"</code> attribute.
             Using <code>type="number"</code> for field will restrict the input to use default separators for a number (an empty string for thousands, and a dot for decimal parts).
         </Tip>
-        <Demo prefix="/guide/validators/numeric/basic" frameworks={['Bootstrap', 'Tachyons']} />
+        <Demo prefix="/guide/validators/numeric/basic" frameworks={['bootstrap', 'tachyons']} />
     </section>
 
     <section class="mv5">

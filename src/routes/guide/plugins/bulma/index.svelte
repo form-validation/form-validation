@@ -49,17 +49,17 @@ document.addEventListener('DOMContentLoaded', function(e) {
 
     <section class="mv5">
         <Heading>Horizontal form</Heading>
-        <Demo prefix="/guide/plugins/bulma/horizontal-form" frameworks={['Bulma']} />
+        <Demo prefix="/guide/plugins/bulma/horizontal-form" frameworks={['bulma']} />
     </section>
 
     <section class="mv5">
         <Heading>Stacked form</Heading>
-        <Demo prefix="/guide/plugins/bulma/stacked-form" frameworks={['Bulma']} />
+        <Demo prefix="/guide/plugins/bulma/stacked-form" frameworks={['bulma']} />
     </section>
 
     <section class="mv5">
         <Heading>Multiple fields on the same row</Heading>
-        <Demo prefix="/guide/plugins/bulma/multiple-fields" frameworks={['Bulma']} />
+        <Demo prefix="/guide/plugins/bulma/multiple-fields" frameworks={['bulma']} />
     </section>
 
     <section class="mv5">

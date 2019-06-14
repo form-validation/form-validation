@@ -125,7 +125,7 @@ FormValidation.formValidation(
     <section class="mv5">
         <Heading>Basic example</Heading>
         <p class="lh-copy">In the following form, try to press the <span class="i">Add product</span> button, and then click on the any icon that is attached to any invalid field.</p>
-        <Demo prefix="/guide/plugins/tooltip/basic" frameworks={['Bootstrap', 'Tachyons']} />
+        <Demo prefix="/guide/plugins/tooltip/basic" frameworks={['bootstrap', 'tachyons']} />
     </section>
 
     <section class="mv5">

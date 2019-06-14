@@ -20,7 +20,7 @@ $('[name="content"]')
     });
 `} />        
         </div>
-        <Demo prefix="/guide/examples/integrating-with-summernote" frameworks={['Bootstrap']} />
+        <Demo prefix="/guide/examples/integrating-with-summernote" frameworks={['bootstrap']} />
     </section>
 
     <Examples examples={[

@@ -111,7 +111,7 @@ result is an object of
     <section class="mv5">
         <Heading>Basic example</Heading>
         <p class="lh-copy">You can click on sample from the table above to see if it's a valid or invalid zipcode.</p>
-        <Demo prefix="/guide/validators/zip-code/basic" frameworks={['Bootstrap', 'Tachyons']} />
+        <Demo prefix="/guide/validators/zip-code/basic" frameworks={['bootstrap', 'tachyons']} />
     </section>
 
     <section class="mv5">

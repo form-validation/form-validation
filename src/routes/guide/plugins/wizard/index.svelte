@@ -185,7 +185,7 @@ FormValidation.formValidation(form, {
 
     <section class="mv5">
         <Heading>Basic example</Heading>
-        <Demo prefix="/guide/plugins/wizard/basic" frameworks={['Tachyons']} />
+        <Demo prefix="/guide/plugins/wizard/basic" frameworks={['tachyons']} />
     </section>
 
     <section class="mv5">

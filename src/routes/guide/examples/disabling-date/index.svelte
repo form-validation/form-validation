@@ -7,7 +7,7 @@
     
     <section class="mv5">
         <p class="lh-copy">The example below shows how to treat all Sundays as not valid date. You can try to choose a Sunday from the picker to see how it works in action.</p>
-        <Demo prefix="/guide/examples/disabling-date" frameworks={['Tachyons']} />
+        <Demo prefix="/guide/examples/disabling-date" frameworks={['tachyons']} />
     </section>
 
     <Examples examples={[

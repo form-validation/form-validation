@@ -46,7 +46,7 @@
 }
 `} />
         </div>        
-        <Demo prefix="/guide/examples/changing-success-and-error-colors/override-colors" frameworks={['Bootstrap']} />
+        <Demo prefix="/guide/examples/changing-success-and-error-colors/override-colors" frameworks={['bootstrap']} />
     </section>
 
     <section class="mv5">
@@ -166,7 +166,7 @@ FormValidation.formValidation(
 );
 `} />
         </div>
-        <Demo prefix="/guide/examples/changing-success-and-error-colors/row-options" frameworks={['Tachyons']} />
+        <Demo prefix="/guide/examples/changing-success-and-error-colors/row-options" frameworks={['tachyons']} />
     </section>
 
     <Examples examples={[

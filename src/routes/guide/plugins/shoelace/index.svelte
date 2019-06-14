@@ -53,12 +53,12 @@ document.addEventListener('DOMContentLoaded', function(e) {
 
     <section class="mv5">
         <Heading>Horizontal form</Heading>
-        <Demo prefix="/guide/plugins/shoelace/horizontal-form" frameworks={['Shoelace']} />
+        <Demo prefix="/guide/plugins/shoelace/horizontal-form" frameworks={['shoelace']} />
     </section>
 
     <section class="mv5">
         <Heading>Stacked form</Heading>
-        <Demo prefix="/guide/plugins/shoelace/stacked-form" frameworks={['Shoelace']} />
+        <Demo prefix="/guide/plugins/shoelace/stacked-form" frameworks={['shoelace']} />
     </section>
 
     <section class="mv5">
@@ -91,7 +91,7 @@ shoelace: new FormValidation.plugins.Shoelace({
 }),
 `} />        
         </div>
-        <Demo prefix="/guide/plugins/shoelace/multiple-fields" frameworks={['Shoelace']} />
+        <Demo prefix="/guide/plugins/shoelace/multiple-fields" frameworks={['shoelace']} />
     </section>
 
     <section class="mv5">

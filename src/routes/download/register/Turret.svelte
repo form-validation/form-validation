@@ -75,7 +75,7 @@ import SubmitButton from 'formvalidation/dist/es6/plugins/SubmitButton';
 import Trigger from 'formvalidation/dist/es6/plugins/Trigger';
 import Turret from 'formvalidation/dist/es6/plugins/Turret';
 
-import sampleCode from './Turret.programmatic';
+import sampleCode from './turret.programmatic';
 import TurretLayout from '../../../components/demo/TurretLayout.svelte';
 
 let fv;
@@ -185,7 +185,7 @@ const onLoaded = () => {
                 validating: 'fa fa-refresh'
             }),
             demoFrame: new DemoFrame({
-                sender: '/download/register/Turret',
+                sender: '/download/register/turret',
                 sampleCode: sampleCode,
             }),
         }

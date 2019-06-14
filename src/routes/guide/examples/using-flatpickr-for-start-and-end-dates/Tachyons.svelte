@@ -44,7 +44,7 @@ import StartEndDate from 'formvalidation/dist/es6/plugins/StartEndDate';
 import Tachyons from 'formvalidation/dist/es6/plugins/Tachyons';
 import Trigger from 'formvalidation/dist/es6/plugins/Trigger';
 
-import sampleCode from './Tachyons.programmatic';
+import sampleCode from './tachyons.programmatic';
 import ResourceLoader from '../../../../components/ResourceLoader.svelte';
 import TachyonsLayout from '../../../../components/demo/TachyonsLayout.svelte';
 
@@ -96,7 +96,7 @@ const onLoaded = () => {
                 },
             }),
             demoFrame: new DemoFrame({
-                sender: '/guide/examples/using-flatpickr-for-start-and-end-dates/Tachyons',
+                sender: '/guide/examples/using-flatpickr-for-start-and-end-dates/tachyons',
                 sampleCode: sampleCode,
             }),
         },

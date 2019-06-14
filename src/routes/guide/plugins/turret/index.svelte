@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
 </form>
 `} />
         </div> 
-        <Demo prefix="/guide/plugins/turret/stacked-form" frameworks={['Turret']} />
+        <Demo prefix="/guide/plugins/turret/stacked-form" frameworks={['turret']} />
     </section>
     
     <section class="mv5">

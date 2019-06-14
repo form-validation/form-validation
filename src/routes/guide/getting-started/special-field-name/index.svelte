@@ -49,7 +49,7 @@ FormValidation.formValidation(
 );
 `} />
         <p class="lh-copy">Below is a sample example:</p>
-        <Demo prefix="/guide/getting-started/special-field-name/basic" frameworks={['Tachyons']} />
+        <Demo prefix="/guide/getting-started/special-field-name/basic" frameworks={['tachyons']} />
     </section>
 
     <section class="mv5">

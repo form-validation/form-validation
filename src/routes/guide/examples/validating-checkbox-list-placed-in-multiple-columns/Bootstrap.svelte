@@ -70,7 +70,7 @@ import Bootstrap from 'formvalidation/dist/es6/plugins/Bootstrap';
 import Message from 'formvalidation/dist/es6/plugins/Message';
 import SubmitButton from 'formvalidation/dist/es6/plugins/SubmitButton';
 
-import sampleCode from './Bootstrap.programmatic';
+import sampleCode from './bootstrap.programmatic';
 import BootstrapLayout from '../../../../components/demo/BootstrapLayout.svelte';
 
 let fv;
@@ -120,7 +120,7 @@ const onLoaded = () => {
                 },
             }),
             demoFrame: new DemoFrame({
-                sender: '/guide/examples/validating-checkbox-list-placed-in-multiple-columns/Bootstrap',
+                sender: '/guide/examples/validating-checkbox-list-placed-in-multiple-columns/bootstrap',
                 sampleCode: sampleCode,
             }),
         },

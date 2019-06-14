@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
 </script-tag>
 `} />
         </div>
-        <Demo prefix="/guide/plugins/spectre/horizontal-form" frameworks={['Spectre']} />
+        <Demo prefix="/guide/plugins/spectre/horizontal-form" frameworks={['spectre']} />
     </section>
 
     <Examples examples={[

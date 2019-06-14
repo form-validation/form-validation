@@ -71,7 +71,7 @@ import SubmitButton from 'formvalidation/dist/es6/plugins/SubmitButton';
 import en_US from 'formvalidation/dist/es6/locales/en_US';
 import vi_VN from 'formvalidation/dist/es6/locales/vi_VN';
 
-import sampleCode from './Tachyons.programmatic';
+import sampleCode from './tachyons.programmatic';
 import TachyonsLayout from '../../../../../components/demo/TachyonsLayout.svelte';
 
 let fv;
@@ -190,7 +190,7 @@ onMount(() => {
                     },
                 }),
                 demoFrame: new DemoFrame({
-                    sender: '/guide/plugins/l10n/basic/Tachyons',
+                    sender: '/guide/plugins/l10n/basic/tachyons',
                     sampleCode: sampleCode,
                 }),
             },

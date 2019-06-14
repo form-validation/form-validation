@@ -188,7 +188,7 @@ result is an object of
     <section class="mv5">
         <Heading>Basic example</Heading>
         <p class="lh-copy">The following form might be used in a profile setting page:</p>
-        <Demo prefix="/guide/validators/date/basic" frameworks={['Bootstrap', 'Tachyons']} />
+        <Demo prefix="/guide/validators/date/basic" frameworks={['bootstrap', 'tachyons']} />
     </section>
 
     <section class="mv5">

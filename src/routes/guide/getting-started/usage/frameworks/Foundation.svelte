@@ -38,7 +38,7 @@ import Trigger from 'formvalidation/dist/es6/plugins/Trigger';
 import Foundation from 'formvalidation/dist/es6/plugins/Foundation';
 import SubmitButton from 'formvalidation/dist/es6/plugins/SubmitButton';
 
-import sampleCode from './Foundation.programmatic';
+import sampleCode from './foundation.programmatic';
 import FoundationLayout from '../../../../../components/demo/FoundationLayout.svelte';
 
 let fv;
@@ -84,7 +84,7 @@ const onLoaded = () => {
                 validating: 'fa fa-refresh',
             }),
             demoFrame: new DemoFrame({
-                sender: '/guide/getting-started/usage/frameworks/Foundation',
+                sender: '/guide/getting-started/usage/frameworks/foundation',
                 sampleCode: sampleCode,
             }),
         },
