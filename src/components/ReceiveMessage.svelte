@@ -1,9 +1,7 @@
 <slot></slot>
 
-<svelte:window on:message={onMessage} />
-
 <script>
-import { createEventDispatcher } from 'svelte';
+import { createEventDispatcher, onMount } from 'svelte';
 
 const dispatch = createEventDispatcher();
 
@@ -11,13 +9,21 @@ const dispatch = createEventDispatcher();
 let channel;
 let sender;
 
-const onMessage = (e) => {
-    if (e.data.channel === channel && e.data.sender === sender) {
-        dispatch('received', {
-            data: e.data.data,
-        });
-    }
-};
+onMount(() => {
+    const onMessage = (e) => {
+        if (e.data.channel === channel && e.data.sender === sender) {
+            dispatch('received', {
+                data: e.data.data,
+            });
+        }
+    };
+
+    window.addEventListener('message', onMessage, false);
+
+    return () => {
+        window.removeEventListener('message', onMessage);
+    };
+});
 
 export {
     channel,
