@@ -1,11 +1,10 @@
 import Plugin from '../core/Plugin';
-import Status from '../core/Status';
 import fetch from '../utils/fetch';
 export default class Recaptcha extends Plugin {
     constructor(opts) {
         super(opts);
         this.widgetIds = new Map();
-        this.captchaStatus = Status.NotValidated;
+        this.captchaStatus = 'NotValidated';
         this.opts = Object.assign({}, Recaptcha.DEFAULT_OPTIONS, opts);
         this.fieldResetHandler = this.onResetField.bind(this);
         this.preValidateFilter = this.preValidate.bind(this);
@@ -25,20 +24,20 @@ export default class Recaptcha extends Plugin {
                 'badge': this.opts.badge,
                 'callback': () => {
                     if (this.opts.backendVerificationUrl === '') {
-                        this.captchaStatus = Status.Valid;
-                        this.core.updateFieldStatus(Recaptcha.CAPTCHA_FIELD, Status.Valid);
+                        this.captchaStatus = 'Valid';
+                        this.core.updateFieldStatus(Recaptcha.CAPTCHA_FIELD, 'Valid');
                     }
                     else {
                         this.core.revalidateField(Recaptcha.CAPTCHA_FIELD);
                     }
                 },
                 'error-callback': () => {
-                    this.captchaStatus = Status.Invalid;
-                    this.core.updateFieldStatus(Recaptcha.CAPTCHA_FIELD, Status.Invalid);
+                    this.captchaStatus = 'Invalid';
+                    this.core.updateFieldStatus(Recaptcha.CAPTCHA_FIELD, 'Invalid');
                 },
                 'expired-callback': () => {
-                    this.captchaStatus = Status.NotValidated;
-                    this.core.updateFieldStatus(Recaptcha.CAPTCHA_FIELD, Status.NotValidated);
+                    this.captchaStatus = 'NotValidated';
+                    this.core.updateFieldStatus(Recaptcha.CAPTCHA_FIELD, 'NotValidated');
                 },
                 'sitekey': this.opts.siteKey,
                 'size': this.opts.size,
@@ -54,18 +53,18 @@ export default class Recaptcha extends Plugin {
                                 ? window['grecaptcha'].getResponse(this.widgetIds.get(this.opts.element))
                                 : input.value;
                             if (value === '') {
-                                this.captchaStatus = Status.Invalid;
+                                this.captchaStatus = 'Invalid';
                                 return Promise.resolve({
                                     valid: false,
                                 });
                             }
                             else if (this.opts.backendVerificationUrl === '') {
-                                this.captchaStatus = Status.Valid;
+                                this.captchaStatus = 'Valid';
                                 return Promise.resolve({
                                     valid: true,
                                 });
                             }
-                            else if (this.captchaStatus === Status.Valid) {
+                            else if (this.captchaStatus === 'Valid') {
                                 return Promise.resolve({
                                     valid: true,
                                 });
@@ -78,13 +77,13 @@ export default class Recaptcha extends Plugin {
                                     },
                                 }).then((response) => {
                                     const isValid = `${response['success']}` === 'true';
-                                    this.captchaStatus = isValid ? Status.Valid : Status.Invalid;
+                                    this.captchaStatus = isValid ? 'Valid' : 'Invalid';
                                     return Promise.resolve({
                                         meta: response,
                                         valid: isValid,
                                     });
                                 }).catch((reason) => {
-                                    this.captchaStatus = Status.NotValidated;
+                                    this.captchaStatus = 'NotValidated';
                                     return Promise.reject({
                                         valid: false,
                                     });
@@ -126,7 +125,7 @@ export default class Recaptcha extends Plugin {
     preValidate() {
         if (this.opts.size === 'invisible' && this.widgetIds.has(this.opts.element)) {
             const widgetId = this.widgetIds.get(this.opts.element);
-            return this.captchaStatus === Status.Valid
+            return this.captchaStatus === 'Valid'
                 ? Promise.resolve()
                 : new Promise((resolve, reject) => {
                     window['grecaptcha'].execute(widgetId).then(() => {

@@ -1,5 +1,4 @@
 import Plugin from '../core/Plugin';
-import Status from '../core/Status';
 import classSet from '../utils/classSet';
 import Excluded from './Excluded';
 export default class Wizard extends Plugin {
@@ -57,7 +56,7 @@ export default class Wizard extends Plugin {
         this.core
             .validate()
             .then((status) => {
-            if (status === Status.Valid) {
+            if (status === 'Valid') {
                 const nextStep = this.currentStep + 1;
                 if (nextStep >= this.numSteps) {
                     this.currentStep = this.numSteps - 1;
@@ -77,7 +76,7 @@ export default class Wizard extends Plugin {
                     this.onValid();
                 }
             }
-            else if (status === Status.Invalid) {
+            else if (status === 'Invalid') {
                 this.onStepInvalid();
             }
         });

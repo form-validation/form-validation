@@ -1,5 +1,4 @@
 import Plugin from '../core/Plugin';
-import Status from '../core/Status';
 import classSet from '../utils/classSet';
 export default class Icon extends Plugin {
     constructor(opts) {
@@ -91,7 +90,7 @@ export default class Icon extends Plugin {
             element: e.element,
             field: e.field,
             iconElement: icon,
-            status: Status.Validating,
+            status: 'Validating',
         };
         this.core.emit('plugins.icon.set', evt);
         this.opts.onSet(evt);
@@ -106,7 +105,7 @@ export default class Icon extends Plugin {
             element: e.element,
             field: e.field,
             iconElement: icon,
-            status: e.valid ? Status.Valid : Status.Invalid,
+            status: e.valid ? 'Valid' : 'Invalid',
         };
         this.core.emit('plugins.icon.set', evt);
         this.opts.onSet(evt);
@@ -121,7 +120,7 @@ export default class Icon extends Plugin {
             element: e.element,
             field: e.field,
             iconElement: icon,
-            status: Status.NotValidated,
+            status: 'NotValidated',
         };
         this.core.emit('plugins.icon.set', evt);
         this.opts.onSet(evt);
@@ -136,7 +135,7 @@ export default class Icon extends Plugin {
             element: e.element,
             field: e.field,
             iconElement: icon,
-            status: Status.Ignored,
+            status: 'Ignored',
         };
         this.core.emit('plugins.icon.set', evt);
         this.opts.onSet(evt);

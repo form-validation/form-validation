@@ -286,7 +286,7 @@ export default {
         between: 'Prosím zadejte hodnotu mezi %s a %s znaky',
         default: 'Toto pole nesmí být prázdné',
         less: 'Prosím zadejte hodnotu menší než %s znaků',
-        more: 'Prosím zadejte hodnotu %s znaků a delší',
+        more: 'Prosím zadajte hodnotu dlhšiu ako %s znakov'
     },
     uri: {
         default: 'Prosím zadejte správnou URI',

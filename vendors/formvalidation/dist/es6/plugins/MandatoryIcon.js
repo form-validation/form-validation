@@ -1,14 +1,13 @@
 import Plugin from '../core/Plugin';
-import Status from '../core/Status';
 import classSet from '../utils/classSet';
 export default class MandatoryIcon extends Plugin {
     constructor(opts) {
         super(opts);
         this.removedIcons = {
-            [Status.Valid]: '',
-            [Status.Invalid]: '',
-            [Status.Validating]: '',
-            [Status.NotValidated]: '',
+            'Valid': '',
+            'Invalid': '',
+            'Validating': '',
+            'NotValidated': '',
         };
         this.icons = new Map();
         this.elementValidatingHandler = this.onElementValidating.bind(this);
@@ -52,9 +51,9 @@ export default class MandatoryIcon extends Plugin {
         this.iconClasses = e.classes;
         const icons = this.opts.icon.split(' ');
         const feedbackIcons = {
-            [Status.Valid]: this.iconClasses.valid ? this.iconClasses.valid.split(' ') : [],
-            [Status.Invalid]: this.iconClasses.invalid ? this.iconClasses.invalid.split(' ') : [],
-            [Status.Validating]: this.iconClasses.validating ? this.iconClasses.validating.split(' ') : [],
+            'Valid': this.iconClasses.valid ? this.iconClasses.valid.split(' ') : [],
+            'Invalid': this.iconClasses.invalid ? this.iconClasses.invalid.split(' ') : [],
+            'Validating': this.iconClasses.validating ? this.iconClasses.validating.split(' ') : [],
         };
         Object.keys(feedbackIcons).forEach((status) => {
             const classes = [];
@@ -67,13 +66,13 @@ export default class MandatoryIcon extends Plugin {
         });
     }
     onElementValidating(e) {
-        this.updateIconClasses(e.element, Status.Validating);
+        this.updateIconClasses(e.element, 'Validating');
     }
     onElementValidated(e) {
-        this.updateIconClasses(e.element, e.valid ? Status.Valid : Status.Invalid);
+        this.updateIconClasses(e.element, e.valid ? 'Valid' : 'Invalid');
     }
     onElementNotValidated(e) {
-        this.updateIconClasses(e.element, Status.NotValidated);
+        this.updateIconClasses(e.element, 'NotValidated');
     }
     updateIconClasses(ele, status) {
         const icon = this.icons.get(ele);
@@ -87,7 +86,7 @@ export default class MandatoryIcon extends Plugin {
     }
     onIconSet(e) {
         const icon = this.icons.get(e.element);
-        if (icon && e.status === Status.NotValidated && this.core.getElementValue(e.field, e.element) === '') {
+        if (icon && e.status === 'NotValidated' && this.core.getElementValue(e.field, e.element) === '') {
             classSet(icon, {
                 [this.opts.icon]: true,
             });
