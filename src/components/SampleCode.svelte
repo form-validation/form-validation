@@ -9,7 +9,7 @@ pre {
 
 {#if highlighted}
 <div class="relative">
-    <BrowserFrame><pre class="pa0 ma0 lh-copy" style="max-height: {maxHeight}; overflow-y: scroll;" bind:this={codeEle}>{@html highlighted}</pre></BrowserFrame>
+    <BrowserFrame><pre class="pa0 ma0 lh-copy" style="max-height: {maxHeight}; overflow-y: scroll;" bind:this={codeEle}></pre></BrowserFrame>
 </div>
 {:else}
 <div class="ba b--black-10 bg-washed-blue pa0 ma0">
@@ -33,14 +33,19 @@ let code = '';
 let lang = 'html';
 let maxHeight = '';
 
-$: highlighted = highlight(
-    // Replace the fake tags with the real one
-    // If I use <link> or <script> tag inside sample code, Sapper tries to load them
-    code.replace(/link-tag/g, 'link')
-        .replace(/script-tag/g, 'script')
-        .replace(/fix-html-id/g, 'id'),
-    lang
-);
+$: {
+    highlighted = highlight(
+        // Replace the fake tags with the real one
+        // If I use <link> or <script> tag inside sample code, Sapper tries to load them
+        code.replace(/link-tag/g, 'link')
+            .replace(/script-tag/g, 'script')
+            .replace(/fix-html-id/g, 'id'),
+        lang
+    );
+    if (codeEle) {
+        codeEle.innerHTML = highlighted;
+    }
+}
 
 const copy = () => {
     const selection = window.getSelection();
