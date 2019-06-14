@@ -87,7 +87,7 @@ onMount(() => {
                 validating: 'fa fa-refresh'
             }),
             demoFrame: new DemoFrame({
-                sender: `/guide/validators/id/basic-${item.code.toLowerCase()}/Tachyons`,
+                sender: `/guide/validators/id/basic-${item.code.toLowerCase()}/tachyons`,
                 sampleCode: sampleCode.replace(/{COUNTRY_CODE}/g, item.code).replace(/{COUNTRY_ADJECTIVE}/g, item.adjective),
             }),
         },
