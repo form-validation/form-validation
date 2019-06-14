@@ -31,7 +31,7 @@
         {/each}
         </Cards>
 
-        <Tip>Look at the <a href="/guide/developing/custom-validator/" class="blue dim link">custom validator</a> page to see how you can create and reuse your own validator</Tip>
+        <Tip>Look at the <a href="/guide/examples/creating-a-custom-validator/" class="blue dim link">custom validator</a> page to see how you can create and reuse your own validator</Tip>
     </section>
 
     <section class="mv5">
