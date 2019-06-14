@@ -12,8 +12,8 @@
 
     <section class="mv5">
         <div class="flex">
-            <PrevButton href="/guide/events/core.field.reset/">core.field.reset event</PrevButton>
-            <NextButton href="/guide/events/core.field.validating/">core.field.validating event</NextButton>
+            <PrevButton target="/guide/events/core.field.reset">core.field.reset event</PrevButton>
+            <NextButton target="/guide/events/core.field.validating">core.field.validating event</NextButton>
         </div>
     </section>
 </GuideLayout>

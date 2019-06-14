@@ -10,7 +10,7 @@
         <Heading>Options</Heading>
 
         <h3>Using with form field</h3>
-        <p class="lh-copy i">The HTML attributes are used to set the validator options via the <a href="/guide/plugins/declarative/" class="blue dim link">Declarative</a> plugin</p>
+        <p class="lh-copy i">The HTML attributes are used to set the validator options via the <a href="/guide/plugins/declarative" class="blue dim link">Declarative</a> plugin</p>
         <table class="collapse ba br2 b--black-10 pv2 ph3 w-100">
             <tr class="striped--light-gray">
                 <th class="pv2 ph3 tl f6 fw6 ttu">Name</th>
@@ -44,7 +44,7 @@
                 <td class="pv2 ph3">The JavaScript regular expression</td>
             </tr>
         </table>
-        <Tip>Look at the <a href="/guide/plugins/alias/" class="blue dim link">Alias</a> plugin if you want to have multiple regular expressions on the same field</Tip>
+        <Tip>Look at the <a href="/guide/plugins/alias" class="blue dim link">Alias</a> plugin if you want to have multiple regular expressions on the same field</Tip>
 
         <h3>Using with ES6 module</h3>
 <SampleCode lang="javascript" code={`
@@ -80,8 +80,8 @@ result is an object of
                 <p class="lh-copy">You can use the following services to test the regular expression:</p>
                 <ul class="ma0 pl3">
                     <li><a href="http://regexr.com" class="blue dim link">regexr.com</a></li>
-                    <li><a href="http://regex101.com/" class="blue dim link">regex101.com</a></li>
-                    <li><a href="http://regexpal.com/" class="blue dim link">regexpal.com</a></li>
+                    <li><a href="http://regex101.com" class="blue dim link">regex101.com</a></li>
+                    <li><a href="http://regexpal.com" class="blue dim link">regexpal.com</a></li>
                 </ul>
             </li>
         </ol>
@@ -141,7 +141,7 @@ result is an object of
 
     <section class="mv5">
         <Heading>HTML5 Example</Heading>
-        <p class="lh-copy">When the <a href="/guide/plugins/declarative/" class="blue dim link">Declarative</a> plugin is used, the regexp validator will be turned on automatically if the input uses HTML 5 <code>pattern</code> attribute.</p>
+        <p class="lh-copy">When the <a href="/guide/plugins/declarative" class="blue dim link">Declarative</a> plugin is used, the regexp validator will be turned on automatically if the input uses HTML 5 <code>pattern</code> attribute.</p>
         <Demo prefix="/guide/validators/regexp/html5" frameworks={['Tachyons']} />
     </section>
 
@@ -181,8 +181,8 @@ const res2 = regexp().validate({
 
     <section class="mv5">
         <div class="flex">
-            <PrevButton href="/guide/validators/promise/">promise validator</PrevButton>
-            <NextButton href="/guide/validators/remote/">remote validator</NextButton>
+            <PrevButton target="/guide/validators/promise">promise validator</PrevButton>
+            <NextButton target="/guide/validators/remote">remote validator</NextButton>
         </div>
     </section>
 </GuideLayout>

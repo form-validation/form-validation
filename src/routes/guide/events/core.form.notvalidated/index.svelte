@@ -8,8 +8,8 @@
 
     <section class="mv5">
         <div class="flex">
-            <PrevButton href="/guide/events/core.form.invalid/">core.form.invalid event</PrevButton>
-            <NextButton href="/guide/events/core.form.reset/">core.form.reset event</NextButton>
+            <PrevButton target="/guide/events/core.form.invalid">core.form.invalid event</PrevButton>
+            <NextButton target="/guide/events/core.form.reset">core.form.reset event</NextButton>
         </div>
     </section>
 </GuideLayout>

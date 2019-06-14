@@ -168,15 +168,15 @@ module.exports = {
     <div class="mw7 center">
         <p class="pv3 tc"><span class="bg-gold pa1 br2 b">50 built-in validators</span> and still counting. Here are some of them:</p>
         <Cards>
-            <Card target="/guide/validators/callback/" title="callback">Check if the input value passes a callback method</Card>
-            <Card target="/guide/validators/credit-card/" title="creditCard">Validate a credit card number</Card>
-            <Card target="/guide/validators/date/" title="date">Validate a date</Card>
-            <Card target="/guide/validators/promise/" title="promise">Use a Promise to validate value</Card>
-            <Card target="/guide/validators/remote/" title="remote">Perform remote checking via Ajax request</Card>
-            <Card target="/guide/validators/iban/" title="iban">Validate an International Bank Account Number</Card>
-            <Card target="/guide/validators/id/" title="id">Validate an identification number</Card>
-            <Card target="/guide/validators/phone/" title="phone">Validate a phone number</Card>
-            <Card target="/guide/validators/vat/" title="vat">Validate a VAT number</Card>
+            <Card target="/guide/validators/callback" title="callback">Check if the input value passes a callback method</Card>
+            <Card target="/guide/validators/credit-card" title="creditCard">Validate a credit card number</Card>
+            <Card target="/guide/validators/date" title="date">Validate a date</Card>
+            <Card target="/guide/validators/promise" title="promise">Use a Promise to validate value</Card>
+            <Card target="/guide/validators/remote" title="remote">Perform remote checking via Ajax request</Card>
+            <Card target="/guide/validators/iban" title="iban">Validate an International Bank Account Number</Card>
+            <Card target="/guide/validators/id" title="id">Validate an identification number</Card>
+            <Card target="/guide/validators/phone" title="phone">Validate a phone number</Card>
+            <Card target="/guide/validators/vat" title="vat">Validate a VAT number</Card>
         </Cards>
     </div>
 
@@ -276,12 +276,12 @@ formValidation(formElement, {
     <div class="mw7 center">
         <p class="pv3 tc"><span class="bg-gold pa1 br2 b">35 plugins</span> and still counting. Here are some of them:</p>
         <Cards>
-            <Card target="/guide/plugins/declarative/" title="Declarative">Declaring validator options via HTML attributes</Card>
-            <Card target="/guide/plugins/mandatory-icon/" title="MandatoryIcon">Show required icons for mandatory fields</Card>
-            <Card target="/guide/plugins/recaptcha/" title="Recaptcha">Show and validate a Google reCAPTCHA v2</Card>
-            <Card target="/guide/plugins/start-end-date/" title="StartEndDate">Validate start and end dates</Card>
-            <Card target="/guide/plugins/transformer/" title="Transformer">Modify the field value before doing validation</Card>
-            <Card target="/guide/plugins/wizard/" title="Wizard">Support validating multiple steps form</Card>
+            <Card target="/guide/plugins/declarative" title="Declarative">Declaring validator options via HTML attributes</Card>
+            <Card target="/guide/plugins/mandatory-icon" title="MandatoryIcon">Show required icons for mandatory fields</Card>
+            <Card target="/guide/plugins/recaptcha" title="Recaptcha">Show and validate a Google reCAPTCHA v2</Card>
+            <Card target="/guide/plugins/start-end-date" title="StartEndDate">Validate start and end dates</Card>
+            <Card target="/guide/plugins/transformer" title="Transformer">Modify the field value before doing validation</Card>
+            <Card target="/guide/plugins/wizard" title="Wizard">Support validating multiple steps form</Card>
         </Cards>
     </div>
 </section>
@@ -336,91 +336,91 @@ formValidation(formElement, {
     <div class="mw7 center">
         <ul class="list pa0 flex flex-wrap">
             <li class="w-20 pa3 tc">
-                <a href="/guide/plugins/bootstrap3/" class="link">
+                <a href="/guide/plugins/bootstrap3" class="link">
                     <img alt="Bootstrap 3" class="w3 h3 mb1" src="/branches/bootstrap.svg" />
                     <div>Bootstrap 3</div>
                 </a>
             </li>
             <li class="w-20 pa3 tc">
-                <a href="/guide/plugins/bootstrap/" class="link">
+                <a href="/guide/plugins/bootstrap" class="link">
                     <img alt="Bootstrap 4" class="w3 h3 mb1" src="/branches/bootstrap.svg" />
                     <div>Bootstrap 4</div>
                 </a>
             </li>
             <li class="w-20 pa3 tc">
-                <a href="/guide/plugins/bulma/" class="link">
+                <a href="/guide/plugins/bulma" class="link">
                     <img alt="Bulma" class="w3 h3 mb1" src="/branches/bulma.svg" />
                     <div>Bulma</div>
                 </a>
             </li>
             <li class="w-20 pa3 tc">
-                <a href="/guide/plugins/foundation/" class="link">
+                <a href="/guide/plugins/foundation" class="link">
                     <img alt="Foundation" class="w3 h3 mb1" src="/branches/foundation.svg" />
                     <div>Foundation</div>
                 </a>
             </li>
             <li class="w-20 pa3 tc">
-                <a href="/guide/plugins/materialize/" class="link">
+                <a href="/guide/plugins/materialize" class="link">
                     <img alt="Materialize CSS" class="w3 h3 mb1" src="/branches/materialize.svg" />
                     <div>Materialize CSS</div>
                 </a>
             </li>
             <li class="w-20 pa3 tc">
-                <a href="/guide/plugins/milligram/" class="link">
+                <a href="/guide/plugins/milligram" class="link">
                     <img alt="milligram" class="w3 h3 mb1" src="/branches/milligram.svg" />
                     <div>milligram</div>
                 </a>
             </li>
             <li class="w-20 pa3 tc">
-                <a href="/guide/plugins/mini/" class="link flex flex-column items-center">
+                <a href="/guide/plugins/mini" class="link flex flex-column items-center">
                     <div class="w3 h3 flex items-center justify-center mb1 f1 white br2 logo-mini">m</div>
                     <div>mini.css</div>
                 </a>
             </li>
             <li class="w-20 pa3 tc">
-                <a href="/guide/plugins/mui/" class="link flex flex-column items-center">
+                <a href="/guide/plugins/mui" class="link flex flex-column items-center">
                     <div class="w3 h3 flex items-center justify-center br-pill mb1 f3 white logo-mui">MUI</div>
                     <div>Mui CSS</div>
                 </a>
             </li>
             <li class="w-20 pa3 tc">
-                <a href="/guide/plugins/pure/" class="link flex flex-column items-center">
+                <a href="/guide/plugins/pure" class="link flex flex-column items-center">
                     <div class="w3 h3 flex items-center justify-center mb1 f1 white br2 logo-pure">P</div>
                     <div>Pure CSS</div>
                 </a>
             </li>
             <li class="w-20 pa3 tc">
-                <a href="/guide/plugins/semantic/" class="link">
+                <a href="/guide/plugins/semantic" class="link">
                     <img alt="Semantic" class="w3 h3 mb1" src="/branches/semantic.svg" />
                     <div>Semantic UI</div>
                 </a>
             </li>
             <li class="w-20 pa3 tc">
-                <a href="/guide/plugins/shoelace/" class="link">
+                <a href="/guide/plugins/shoelace" class="link">
                     <img alt="Shoelace" class="w3 h3 mb1" src="/branches/shoelace.svg" />
                     <div>Shoelace</div>
                 </a>
             </li>
             <li class="w-20 pa3 tc">
-                <a href="/guide/plugins/spectre/" class="link">
+                <a href="/guide/plugins/spectre" class="link">
                     <img alt="Spectre" class="w3 h3 mb1" src="/branches/spectre.svg" />
                     <div>Spectre</div>
                 </a>
             </li>
             <li class="w-20 pa3 tc">
-                <a href="/guide/plugins/tachyons/" class="link flex flex-column items-center">
+                <a href="/guide/plugins/tachyons" class="link flex flex-column items-center">
                     <div class="w3 h3 flex items-center justify-center mb1 f1 white br2 bg-blue">T</div>
                     <div>Tachyons</div>
                 </a>
             </li>
             <li class="w-20 pa3 tc">
-                <a href="/guide/plugins/turret/" class="link">
+                <a href="/guide/plugins/turret" class="link">
                     <img alt="Turret CSS" class="w3 h3 mb1" src="/branches/turret.svg" />
                     <div>Turret CSS</div>
                 </a>
             </li>
             <li class="w-20 pa3 tc">
-                <a href="/guide/plugins/uikit/" class="link">
+                <a href="/guide/plugins/uikit" class="link">
                     <img alt="UIKit" class="w3 h3 mb1" src="/branches/uikit.svg" />
                     <div>UIKit</div>
                 </a>

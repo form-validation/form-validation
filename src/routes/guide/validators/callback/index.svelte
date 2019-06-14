@@ -10,7 +10,7 @@
         <Heading>Options</Heading>
 
         <h3>Using with form field</h3>
-        <p class="lh-copy i"><sup>*</sup> presents a required option. The HTML attributes are used to set the validator options via the <a href="/guide/plugins/declarative/" class="blue dim link">Declarative</a> plugin</p>
+        <p class="lh-copy i"><sup>*</sup> presents a required option. The HTML attributes are used to set the validator options via the <a href="/guide/plugins/declarative" class="blue dim link">Declarative</a> plugin</p>
         <table class="collapse ba br2 b--black-10 pv2 ph3 w-100">
             <tr class="striped--light-gray">
                 <th class="pv2 ph3 tl f6 fw6 ttu">Name</th>
@@ -68,7 +68,7 @@ function(input) {
     };
 }
 `} />
-        <Tip>Look at the <a href="/guide/plugins/alias/" class="blue dim link">Alias</a> plugin if you want to have multiple callbacks on the same field</Tip>
+        <Tip>Look at the <a href="/guide/plugins/alias" class="blue dim link">Alias</a> plugin if you want to have multiple callbacks on the same field</Tip>
 
         <h3>Using with ES6 module</h3>
 <SampleCode lang="javascript" code={`
@@ -194,8 +194,8 @@ const res4 = callback().validate({
 
     <section class="mv5">
         <div class="flex">
-            <PrevButton href="/guide/validators/bic/">bic validator</PrevButton>
-            <NextButton href="/guide/validators/choice/">choice validator</NextButton>
+            <PrevButton target="/guide/validators/bic">bic validator</PrevButton>
+            <NextButton target="/guide/validators/choice">choice validator</NextButton>
         </div>
     </section>
 </GuideLayout>

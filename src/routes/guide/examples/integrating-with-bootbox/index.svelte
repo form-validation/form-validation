@@ -5,7 +5,7 @@
 <GuideLayout>
     <h1 class="tc lh-copy">Integrating with Bootbox</h1>
 
-    <p class="lh-copy">In this example, we will use <a href="http://bootboxjs.com/" class="blue dim link">bootbox.js</a> to display and validate a login form inside a modal.</p>
+    <p class="lh-copy">In this example, we will use <a href="http://bootboxjs.com" class="blue dim link">bootbox.js</a> to display and validate a login form inside a modal.</p>
     <p class="lh-copy">Initially, the login form isn't displayed:</p>
 <SampleCode lang="html" code={`
 <button type="submit" class="btn btn-default" id="loginButton">Login</button>
@@ -14,7 +14,7 @@
     ...
 </form>
 `} />
-    <p class="lh-copy">When click the login button, we will show up the modal. We might need to reset the previous form values using the <a href="/guide/api/reset-form/" class="blue dim link">resetForm</a> method.</p>
+    <p class="lh-copy">When click the login button, we will show up the modal. We might need to reset the previous form values using the <a href="/guide/api/reset-form" class="blue dim link">resetForm</a> method.</p>
 <SampleCode lang="javascript" code={`
 const loginForm = document.getElementById('loginForm');
 

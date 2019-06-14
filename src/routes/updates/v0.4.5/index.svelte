@@ -9,23 +9,23 @@
     <section class="mv5">
         <Heading>New features</Heading>
         <ul class="pa0 ma0 ml3 lh-copy">
-            <li>Add <code>$.fn.bootstrapValidator.helpers.date</code> for validating a date, re-used in <a class="blue dim link" href="/guide/validators/date/">date</a>, <a class="blue dim link" href="/guide/validators/id/">id</a>, <a class="blue dim link" href="/guide/validators/vat/">vat</a> validators</li>
-            <li><i class="fa fa-star"></i> Add <a class="blue dim link" href="/guide/validators/id/">id validator</a>, support 25 countries</li>
+            <li>Add <code>$.fn.bootstrapValidator.helpers.date</code> for validating a date, re-used in <a href="/guide/validators/date" class="blue dim link">date</a>, <a href="/guide/validators/id" class="blue dim link">id</a>, <a href="/guide/validators/vat" class="blue dim link">vat</a> validators</li>
+            <li><i class="fa fa-star"></i> Add <a href="/guide/validators/id" class="blue dim link">id validator</a>, support 25 countries</li>
             <li><i class="fa fa-star"></i> Add <code>threshold</code> option</li>
-            <li>Add <code>separator</code> option to the <a class="blue dim link" href="/guide/validators/numeric/">numeric validator</a></li>
-            <li>Add <a class="blue dim link" href="/guide/validators/isin/">isin (International Securities Identification Number) validator</a></li>
-            <li>Add <a class="blue dim link" href="/guide/validators/rtn/">rtn (Routing transit number) validator</a></li>
-            <li>Add <a class="blue dim link" href="/guide/validators/cusip/">cusip (North American Securities) validator</a></li>
-            <li>Add <a class="blue dim link" href="/guide/validators/sedol/">sedol (Stock Exchange Daily Official List) validator</a></li>
+            <li>Add <code>separator</code> option to the <a href="/guide/validators/numeric" class="blue dim link">numeric validator</a></li>
+            <li>Add <a href="/guide/validators/isin" class="blue dim link">isin (International Securities Identification Number) validator</a></li>
+            <li>Add <a href="/guide/validators/rtn" class="blue dim link">rtn (Routing transit number) validator</a></li>
+            <li>Add <a href="/guide/validators/cusip" class="blue dim link">cusip (North American Securities) validator</a></li>
+            <li>Add <a href="/guide/validators/sedol" class="blue dim link">sedol (Stock Exchange Daily Official List) validator</a></li>
         </ul>
     </section>
 
     <section class="mv5">
         <Heading>Improvements</Heading>
         <ul class="pa0 ma0 ml3 lh-copy">
-            <li>The <a class="blue dim link" href="/guide/validators/zip-code/">zipCode validator</a> adds support for Italian, Dutch postcodes</li>
+            <li>The <a href="/guide/validators/zip-code" class="blue dim link">zipCode validator</a> adds support for Italian, Dutch postcodes</li>
             <li>Change default <code>submitButtons</code> to <code>[type="submit"]</code> to support <code>input type="submit"</code></li>
-            <li>The <a class="blue dim link" href="/guide/validators/cvv/">cvv validator</a> should support spaces in credit card</li>
+            <li>The cvv validator should support spaces in credit card</li>
         </ul>
     </section>
 
@@ -36,7 +36,7 @@
             <li>When parsing options from HTML attributes, don't add the field which hasn't validators</li>
             <li>Fix the conflict issue with MooTools</li>
             <li>The submit buttons are not sent</li>
-            <li>The <a class="blue dim link" href="/guide/validators/iban/">iban validator</a> does not work on IE8</li>
+            <li>The <a href="/guide/validators/iban" class="blue dim link">iban validator</a> does not work on IE8</li>
             <li>Plugin method invocation don't work</li>
         </ul>
     </section>

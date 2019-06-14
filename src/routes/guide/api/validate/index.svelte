@@ -11,7 +11,7 @@
         <div class="mb3">
             <SampleCode lang="javascript" code={`validate(): Promise`} />
         </div>
-        <Tip>If you want the form to be validated automatically when pressing its Submit button, use the <a href="/guide/plugins/submit-button/" class="blue dim link">SubmitButton</a> plugin</Tip>
+        <Tip>If you want the form to be validated automatically when pressing its Submit button, use the <a href="/guide/plugins/submit-button" class="blue dim link">SubmitButton</a> plugin</Tip>
 <SampleCode lang="javascript" code={`
 fv
     .validate()
@@ -27,8 +27,8 @@ fv
 
     <section class="mv5">
         <div class="flex">
-            <PrevButton href="/guide/api/update-validator-option/">updateValidatorOption() method</PrevButton>
-            <NextButton href="/guide/api/validate-element/">validateElement() method</NextButton>
+            <PrevButton target="/guide/api/update-validator-option">updateValidatorOption() method</PrevButton>
+            <NextButton target="/guide/api/validate-element">validateElement() method</NextButton>
         </div>
     </section>
 </GuideLayout>

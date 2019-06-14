@@ -4,7 +4,7 @@
             <p class="mv2 pl3 f3 fw6">Versions</p>
             <ul class="list pa0 ma0 f5 lh-copy">
                 {#each Object.entries(Versions) as [ver, date]}
-                <li><SidebarLinkWithToc url="{ver === siteData.version ? '/updates/' : `/updates/v${ver}/`}" title="v{ver}" content={() => content}>v{ver} - <small>{date}</small>{#if ver === '1.0.0'}<span class="pl3 b">Hooray!</span>{/if}</SidebarLinkWithToc></li>
+                <li><SidebarLinkWithToc url="{ver === siteData.version ? '/updates' : `/updates/v${ver}`}" title="v{ver}" content={() => content}>v{ver} - <small>{date}</small>{#if ver === '1.0.0'}<span class="pl3 b">Hooray!</span>{/if}</SidebarLinkWithToc></li>
                 {/each}
             </ul>
         </div>

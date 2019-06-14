@@ -7,7 +7,7 @@
     <h2 class="f4 fw4 tc">Validating field determined by a CSS selector</h2>
 
     <section class="mv5">
-        <p class="lh-copy">In the <a href="/guide/getting-started/usage/" class="blue dim link">Usage</a> page, we know that it's possible to declare the validator rules for field via its <code>name</code> attribute:</p>
+        <p class="lh-copy">In the <a href="/guide/getting-started/usage" class="blue dim link">Usage</a> page, we know that it's possible to declare the validator rules for field via its <code>name</code> attribute:</p>
 <SampleCode lang="html" code={`
 <form id="loginForm" method="POST">
     <input type="text" name="username" />
@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
 });
 </script-tag>
 `} />
-        <p class="lh-copy">The following example shows how to use this option to validate a a standard <a href="https://stripe.com/" class="blue dim link">Stripe</a> payment form.</p>
+        <p class="lh-copy">The following example shows how to use this option to validate a a standard <a href="https://stripe.com" class="blue dim link">Stripe</a> payment form.</p>
         <p class="lh-copy">All fields for filling the credit card information don't have the <code>name</code> attribute.
             Instead, they use the <code>data-stripe</code> attribute which are defined by Stripe. The Stripe API then will
             collects the credit card data from fields using this attribute.</p>
@@ -76,8 +76,8 @@ document.addEventListener('DOMContentLoaded', function(e) {
 
     <section class="mv5">
         <div class="flex">
-            <PrevButton href="/guide/getting-started/special-field-name/">Special field name</PrevButton>
-            <NextButton href="/guide/validators/">Validators</NextButton>
+            <PrevButton target="/guide/getting-started/special-field-name">Special field name</PrevButton>
+            <NextButton target="/guide/validators">Validators</NextButton>
         </div>
     </section>
 </GuideLayout>

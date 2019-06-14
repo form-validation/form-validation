@@ -18,8 +18,8 @@
 
     <section class="mv5">
         <div class="flex">
-            <PrevButton href="/guide/api/reset-field/">resetField() method</PrevButton>
-            <NextButton href="/guide/api/revalidate-field/">revalidateField() method</NextButton>
+            <PrevButton target="/guide/api/reset-field">resetField() method</PrevButton>
+            <NextButton target="/guide/api/revalidate-field">revalidateField() method</NextButton>
         </div>
     </section>
 </GuideLayout>

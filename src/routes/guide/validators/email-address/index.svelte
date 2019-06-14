@@ -10,7 +10,7 @@
         <Heading>Options</Heading>
 
         <h3>Using with form field</h3>
-        <p class="lh-copy i">The HTML attributes are used to set the validator options via the <a href="/guide/plugins/declarative/" class="blue dim link">Declarative</a> plugin</p>
+        <p class="lh-copy i">The HTML attributes are used to set the validator options via the <a href="/guide/plugins/declarative" class="blue dim link">Declarative</a> plugin</p>
         <table class="collapse ba br2 b--black-10 pv2 ph3 w-100">
             <tr class="striped--light-gray">
                 <th class="pv2 ph3 tl f6 fw6 ttu">Name</th>
@@ -37,8 +37,8 @@
                 <td class="pv2 ph3 lh-copy">Regex for character or characters expected as separator between addresses. By default, it is /[,;]/, i.e. comma or semicolon</td>
             </tr>
         </table>
-        <Tip>This validator passes an empty field since the field might be optional. If the field is required, then use the <a href="/guide/validators/not-empty/" class="blue dim link">notEmpty</a> validator</Tip>
-        <p class="lh-copy">You also can use the <a href="/guide/validators/remote/" class="blue dim link">remote</a> validator to connect and validate the email address on the server. The <a href="/guide/plugins/mailgun/" class="blue dim link">Mailgun</a> plugin demonstrates how to do this.</p>
+        <Tip>This validator passes an empty field since the field might be optional. If the field is required, then use the <a href="/guide/validators/not-empty" class="blue dim link">notEmpty</a> validator</Tip>
+        <p class="lh-copy">You also can use the <a href="/guide/validators/remote" class="blue dim link">remote</a> validator to connect and validate the email address on the server. The <a href="/guide/plugins/mailgun" class="blue dim link">Mailgun</a> plugin demonstrates how to do this.</p>
 
         <h3>Using with ES6 module</h3>
 <SampleCode lang="javascript" code={`
@@ -84,7 +84,7 @@ result is an object of
 
     <section class="mv5">
         <Heading>HTML5 Example</Heading>
-        <p class="lh-copy">When the <a href="/guide/plugins/declarative/" class="blue dim link">Declarative</a> plugin is used, the emailAddress validator will be enabled automatically when using HTML5 <code>type="email"</code> attribute.</p>
+        <p class="lh-copy">When the <a href="/guide/plugins/declarative" class="blue dim link">Declarative</a> plugin is used, the emailAddress validator will be enabled automatically when using HTML5 <code>type="email"</code> attribute.</p>
         <Demo prefix="/guide/validators/email-address/html5" frameworks={['Tachyons']} />
     </section>
 
@@ -122,8 +122,8 @@ const res2 = emailAddress().validate({
 
     <section class="mv5">
         <div class="flex">
-            <PrevButton href="/guide/validators/ein/">ein validator</PrevButton>
-            <NextButton href="/guide/validators/file/">file validator</NextButton>
+            <PrevButton target="/guide/validators/ein">ein validator</PrevButton>
+            <NextButton target="/guide/validators/file">file validator</NextButton>
         </div>
     </section>
 </GuideLayout>

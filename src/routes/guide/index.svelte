@@ -14,26 +14,26 @@
 		<p class="lh-copy">Following is the most recently updated plugins:</p>
 
 		<Cards>
-			<Card target="/guide/plugins/declarative/" title="Declarative">Provide the ability of declaring validator options via HTML attributes</Card>
-			<Card target="/guide/plugins/excluded/" title="Excluded">Ignore validations on particular field</Card>
-			<Card target="/guide/plugins/sequence/" title="Sequence">Stop performing remaining validators if there is a validator that the field does not pass</Card>
-			<Card target="/guide/plugins/start-end-date/" title="StartEndDate">Validate start and end dates</Card>
-			<Card target="/guide/plugins/wizard/" title="Wizard">Support validating multiple steps form</Card>
+			<Card target="/guide/plugins/declarative" title="Declarative">Provide the ability of declaring validator options via HTML attributes</Card>
+			<Card target="/guide/plugins/excluded" title="Excluded">Ignore validations on particular field</Card>
+			<Card target="/guide/plugins/sequence" title="Sequence">Stop performing remaining validators if there is a validator that the field does not pass</Card>
+			<Card target="/guide/plugins/start-end-date" title="StartEndDate">Validate start and end dates</Card>
+			<Card target="/guide/plugins/wizard" title="Wizard">Support validating multiple steps form</Card>
 		</Cards>
 
-		<p class="lh-copy">We also bring more supports for popular CSS frameworks. If your form is made with the following frameworks, then use the associated plugin which is built up everything such as showing <a href="/guide/plugins/icon/" class="blue dim link">Icon</a>
-            and <a href="/guide/plugins/message/" class="blue dim link">Message</a> at desired areas.</p>
+		<p class="lh-copy">We also bring more supports for popular CSS frameworks. If your form is made with the following frameworks, then use the associated plugin which is built up everything such as showing <a href="/guide/plugins/icon" class="blue dim link">Icon</a>
+            and <a href="/guide/plugins/message" class="blue dim link">Message</a> at desired areas.</p>
 
 		<Cards>
         {#each ['Bootstrap', 'Bootstrap3', 'Bulma', 'Foundation', 'Materialize', 'Milligram', 'Mini', 'Mui', 'Pure', 'Semantic', 'Shoelace', 'Spectre', 'Tachyons', 'Turret', 'Uikit'] as framework, i}
-			<Card target="/guide/plugins/{framework.toLowerCase()}/" title="{framework}"></Card>
+			<Card target="/guide/plugins/{framework.toLowerCase()}" title="{framework}"></Card>
         {/each}
         </Cards>
 	</section>
 
 	<section class="mv5">
         <div class="flex">
-            <NextButton href="/guide/getting-started/">Getting Started</NextButton>
+            <NextButton target="/guide/getting-started">Getting Started</NextButton>
         </div>
     </section>
 </GuideLayout>

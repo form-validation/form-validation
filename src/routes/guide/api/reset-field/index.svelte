@@ -24,8 +24,8 @@
 
     <section class="mv5">
         <div class="flex">
-            <PrevButton href="/guide/api/remove-field/">removeField() method</PrevButton>
-            <NextButton href="/guide/api/reset-form/">resetForm() method</NextButton>
+            <PrevButton target="/guide/api/remove-field">removeField() method</PrevButton>
+            <NextButton target="/guide/api/reset-form">resetForm() method</NextButton>
         </div>
     </section>
 </GuideLayout>

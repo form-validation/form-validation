@@ -12,8 +12,8 @@
 
     <section class="mv5">
         <div class="flex">
-            <PrevButton href="/guide/events/core.field.added/">core.field.added event</PrevButton>
-            <NextButton href="/guide/events/core.field.removed/">core.field.removed event</NextButton>
+            <PrevButton target="/guide/events/core.field.added">core.field.added event</PrevButton>
+            <NextButton target="/guide/events/core.field.removed">core.field.removed event</NextButton>
         </div>
     </section>
 </GuideLayout>

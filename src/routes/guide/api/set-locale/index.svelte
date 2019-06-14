@@ -15,7 +15,7 @@
             <li class="lh-copy"><code>locale</code> <sup>*</sup> — The locale in the format of countrycode_LANGUAGECODE. en_US, de_DE, fr_FR, vi_VN, for example</li>
             <li class="lh-copy"><code>localization</code> <sup>*</sup> — An object containing the translation of all validators</li>
         </ul>
-        <p class="lh-copy">This method is useful when you want to switch to another locale. See the <a href="/guide/plugins/l10n/" class="blue dim link">L10n</a> plugin for an example.</p>
+        <p class="lh-copy">This method is useful when you want to switch to another locale. See the <a href="/guide/plugins/l10n" class="blue dim link">L10n</a> plugin for an example.</p>
         <p class="lh-copy">You can access the translation directly from the packages located in the <code>dist/js/locates</code> folder:</p>
 <SampleCode lang="html" code={`
 <script-tag src="/vendors/formvalidation/dist/js/FormValidation.min.js"></script-tag>
@@ -49,8 +49,8 @@ document.addEventListener('DOMContentLoaded', function(e) {
 
     <section class="mv5">
         <div class="flex">
-            <PrevButton href="/guide/api/revalidate-field/">revalidateField() method</PrevButton>
-            <NextButton href="/guide/api/update-element-status/">updateElementStatus() method</NextButton>
+            <PrevButton target="/guide/api/revalidate-field">revalidateField() method</PrevButton>
+            <NextButton target="/guide/api/update-element-status">updateElementStatus() method</NextButton>
         </div>
     </section>
 </GuideLayout>

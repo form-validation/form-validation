@@ -2,12 +2,12 @@
     <div class="w-40">
         <div class="f4 fw6 mv3">FormValidation</div>
         <ul class="list ma0 pa0 lh-copy">
-            <li><a href="/guide/getting-started/" class="link">Getting Started</a></li>
-            <li><a href="/guide/validators/" class="link">Validators</a></li>
-            <li><a href="/guide/plugins/" class="link">Plugins</a></li>
-            <li><a href="/guide/api/" class="link">API</a></li>
-            <li><a href="/guide/events/" class="link">Events</a></li>
-            <li><a href="/guide/examples/" class="link">Examples</a></li>
+            <li><a href="/guide/getting-started" class="link">Getting Started</a></li>
+            <li><a href="/guide/validators" class="link">Validators</a></li>
+            <li><a href="/guide/plugins" class="link">Plugins</a></li>
+            <li><a href="/guide/api" class="link">API</a></li>
+            <li><a href="/guide/events" class="link">Events</a></li>
+            <li><a href="/guide/examples" class="link">Examples</a></li>
         </ul>
     </div>
     <div class="w-30">

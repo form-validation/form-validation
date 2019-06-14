@@ -15,8 +15,8 @@
 
     <section class="mv5">
         <div class="flex">
-            <PrevButton href="/guide/api/deregister-plugin/">deregisterPlugin() method</PrevButton>
-            <NextButton href="/guide/api/disable-validator/">disableValidator() method</NextButton>
+            <PrevButton target="/guide/api/deregister-plugin">deregisterPlugin() method</PrevButton>
+            <NextButton target="/guide/api/disable-validator">disableValidator() method</NextButton>
         </div>
     </section>
 </GuideLayout>

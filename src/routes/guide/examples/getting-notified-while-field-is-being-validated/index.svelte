@@ -6,8 +6,8 @@
     <h1 class="tc lh-copy">Getting notified while field is being validated</h1>
     
     <section class="mv5">
-        <p class="lh-copy">When using either <a href="/guide/validators/callback/" class="blue dim link">callback</a>, <a href="/guide/validators/promise/" class="blue dim link">promise</a> or <a href="/guide/validators/remote/" class="blue dim link">remote</a>
-            validator, your validation logic might take time. For instance, the <a href="/guide/validators/remote/" class="blue dim link">remote</a> validator connects to the server side
+        <p class="lh-copy">When using either <a href="/guide/validators/callback" class="blue dim link">callback</a>, <a href="/guide/validators/promise" class="blue dim link">promise</a> or <a href="/guide/validators/remote" class="blue dim link">remote</a>
+            validator, your validation logic might take time. For instance, the <a href="/guide/validators/remote" class="blue dim link">remote</a> validator connects to the server side
             and executes a few of database queries to check whether or not the field is valid. These kind of process could force the user to wait for a busy processing.
             User even don't have idea about what is happening.</p>
         <p class="lh-copy">This example displays a progress bar when the validation is being processed. It enhances the user experience of the application.</p>

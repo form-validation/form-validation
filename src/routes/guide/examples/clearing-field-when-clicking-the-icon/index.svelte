@@ -6,7 +6,7 @@
     <h1 class="tc lh-copy">Clearing field when clicking the icon</h1>
     
     <section class="mv5">
-        <p class="lh-copy">The following example shows how to clear the field when clicking the <a href="/guide/plugins/icon/" class="blue dim link">feedback icon</a>.</p>
+        <p class="lh-copy">The following example shows how to clear the field when clicking the <a href="/guide/plugins/icon" class="blue dim link">feedback icon</a>.</p>
         <div class="mb4">
 <SampleCode lang="javascript" code={`
 const fv = FormValidation.formValidation(

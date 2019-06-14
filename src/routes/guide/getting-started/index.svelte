@@ -7,7 +7,7 @@
     <h2 class="f4 fw4 tc">Getting used with FormValidation</h2>
 
     <section class="mv5">
-        <p class="lh-copy">The <a href="/download/" class="blue dim link">FormValidation package</a> consists of the following files:</p>
+        <p class="lh-copy">The <a href="/download" class="blue dim link">FormValidation package</a> consists of the following files:</p>
 <SampleCode lang="html" code={`
 formvalidation/
 |
@@ -81,13 +81,13 @@ formvalidation/
             <li><code>FormValidation.full(.min).js</code>: Contains all validators</li>
         </ul>
         <p class="lh-copy">In most of the times, you only need to include the <code>FormValidation(.min).js</code> file to your page. Since it is smaller than the full version in term of the file size, it will reduce the page loading time.</p>
-        <p class="lh-copy">Take a look at the <a href="/guide/validators/" class="blue dim link">Validators</a> page to see which validator belongs to the default and full versions.</p>
+        <p class="lh-copy">Take a look at the <a href="/guide/validators" class="blue dim link">Validators</a> page to see which validator belongs to the default and full versions.</p>
     </section>
 
     <section class="mv5">
         <div class="flex">
-            <PrevButton href="/guide/">Guide</PrevButton>
-            <NextButton href="/guide/getting-started/usage/">Usage</NextButton>
+            <PrevButton target="/guide">Guide</PrevButton>
+            <NextButton target="/guide/getting-started/usage">Usage</NextButton>
         </div>
     </section>
 </GuideLayout>

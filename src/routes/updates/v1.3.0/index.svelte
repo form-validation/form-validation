@@ -10,27 +10,27 @@
         <Heading>New features</Heading>
 
         <h3>New Excluded plugin</h3>
-        <p class="lh-copy">The <a class="blue dim link" href="/guide/plugins/excluded/">Excluded</a> plugin allows you to indicate fields which won't be validated. It severs the same functionality as the <code>excluded</code> option in v0.8.1 and earlier versions.</p>
+        <p class="lh-copy">The <a href="/guide/plugins/excluded" class="blue dim link">Excluded</a> plugin allows you to indicate fields which won't be validated. It severs the same functionality as the <code>excluded</code> option in v0.8.1 and earlier versions.</p>
         <Demo prefix="/guide/examples/excluding-field-by-given-condition" frameworks={['Bootstrap']} />
 
         <h3>New Wizard plugin</h3>
-        <p class="lh-copy">The <a class="blue dim link" href="/guide/plugins/wizard/">Wizard</a> plugin supports validating multiple steps form:</p>
+        <p class="lh-copy">The <a href="/guide/plugins/wizard" class="blue dim link">Wizard</a> plugin supports validating multiple steps form:</p>
         <Demo prefix="/guide/plugins/wizard/basic" frameworks={['Tachyons']} />
 
-        <p class="lh-copy">This version provides new <code>onPrefocus</code> option in the <a class="blue dim link" href="/guide/plugins/auto-focus/">AutoFocus</a>. This option is useful when you want to activate the tab containing the first invalid field.</p>
+        <p class="lh-copy">This version provides new <code>onPrefocus</code> option in the <a href="/guide/plugins/auto-focus" class="blue dim link">AutoFocus</a>. This option is useful when you want to activate the tab containing the first invalid field.</p>
     </section>
 
     <section class="mv5">
         <Heading>Bug fixes</Heading>
         <ul class="pa0 ma0 ml3 lh-copy">
-            <li>Fix an issue that the <a class="blue dim link" href="/guide/api/reset-form/">resetForm</a>, <a class="blue dim link" href="/guide/api/reset-field/">resetField</a> methods don't reset value for textarea element</li>
+            <li>Fix an issue that the <a href="/guide/api/reset-form/">resetForm</a>, <a href="/guide/api/reset-field" class="blue dim link">resetField</a> methods don't reset value for textarea element</li>
         </ul>
     </section>
 
     <section class="mv5">
         <Heading>Upgrading to v1.3.0</Heading>
         <ul class="pa0 ma0 ml3 lh-copy">
-            <li>From v0.8.1 and older versions: Follow the <a class="blue dim link" href="/updates/v1.0.0/#upgrading-to-v1-0-0">Upgrading to v1.0.0</a> guide</li>
+            <li>From v0.8.1 and older versions: Follow the <a href="/updates/v1.0.0/#upgrading-to-v1-0-0" class="blue dim link">Upgrading to v1.0.0</a> guide</li>
             <li>From v1.0.0: Just download the new version and replace the old files in v1.0.0 with new files in v1.3.0.</li>
         </ul>
     </section>

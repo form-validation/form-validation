@@ -50,8 +50,8 @@ fv.METHOD_NAME(PARAMETERS);
 
     <section class="mv5">
         <div class="flex">
-            <PrevButton href="/guide/plugins/">Plugins</PrevButton>
-            <NextButton href="/guide/api/add-field/">addField() method</NextButton>
+            <PrevButton target="/guide/plugins">Plugins</PrevButton>
+            <NextButton target="/guide/api/add-field">addField() method</NextButton>
         </div>
     </section>
 </GuideLayout>

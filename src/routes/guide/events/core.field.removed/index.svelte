@@ -4,7 +4,7 @@
 
 <GuideLayout>
     <h1 class="f3 f2-m f1-l tc">core.field.removed event</h1>
-    <h2 class="f4 fw4 tc">Triggered after removing a field via the <a href="/guide/api/remove-field/" class="blue dim link">removeField()</a> method</h2>
+    <h2 class="f4 fw4 tc">Triggered after removing a field via the <a href="/guide/api/remove-field" class="blue dim link">removeField()</a> method</h2>
 
     <section class="mv5">
         <p class="lh-copy">The event object contains the following properties</p>
@@ -17,8 +17,8 @@
 
     <section class="mv5">
         <div class="flex">
-            <PrevButton href="/guide/events/core.field.invalid/">core.field.invalid event</PrevButton>
-            <NextButton href="/guide/events/core.field.reset/">core.field.reset event</NextButton>
+            <PrevButton target="/guide/events/core.field.invalid">core.field.invalid event</PrevButton>
+            <NextButton target="/guide/events/core.field.reset">core.field.reset event</NextButton>
         </div>
     </section>
 </GuideLayout>

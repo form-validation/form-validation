@@ -117,7 +117,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
                 <th class="pv2 ph3 tl f6 fw6 ttu">Declarative mode</th>
             </tr>
             <tr class="striped--light-gray">
-                <td class="pv2 ph3"><a href="/guide/validators/not-empty/" class="blue dim link">notEmpty</a></td>
+                <td class="pv2 ph3"><a href="/guide/validators/not-empty" class="blue dim link">notEmpty</a></td>
                 <td class="pv2 ph3">
 <SampleCode lang="javascript" code={`
 notEmpty: {
@@ -133,7 +133,7 @@ data-fv-not-empty___message="..."
                 </td>
             </tr>
             <tr class="striped--light-gray">
-                <td class="pv2 ph3"><a href="/guide/validators/string-length/" class="blue dim link">stringLength</a></td>
+                <td class="pv2 ph3"><a href="/guide/validators/string-length" class="blue dim link">stringLength</a></td>
                 <td class="pv2 ph3">
 <SampleCode lang="javascript" code={`
 stringLength: {
@@ -153,7 +153,7 @@ data-fv-string-length___utf8-bytes="..."
                 </td>
             </tr>
             <tr class="striped--light-gray">
-                <td class="pv2 ph3"><a href="/guide/validators/uri/" class="blue dim link">uri</a></td>
+                <td class="pv2 ph3"><a href="/guide/validators/uri" class="blue dim link">uri</a></td>
                 <td class="pv2 ph3">
 <SampleCode lang="javascript" code={`
 uri: {
@@ -305,8 +305,8 @@ document.addEventListener('DOMContentLoaded', function(e) {
 
     <section class="mv5">
         <div class="flex">
-            <PrevButton href="/guide/plugins/bulma/">Bulma plugin</PrevButton>
-            <NextButton href="/guide/plugins/default-submit/">DefaultSubmit plugin</NextButton>
+            <PrevButton target="/guide/plugins/bulma">Bulma plugin</PrevButton>
+            <NextButton target="/guide/plugins/default-submit">DefaultSubmit plugin</NextButton>
         </div>
     </section>
 </GuideLayout>

@@ -24,8 +24,8 @@
 
     <section class="mv5">
         <div class="flex">
-            <PrevButton href="/guide/api/register-plugin/">registerPlugin() method</PrevButton>
-            <NextButton href="/guide/api/remove-field/">removeField() method</NextButton>
+            <PrevButton target="/guide/api/register-plugin">registerPlugin() method</PrevButton>
+            <NextButton target="/guide/api/remove-field">removeField() method</NextButton>
         </div>
     </section>
 </GuideLayout>

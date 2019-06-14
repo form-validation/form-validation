@@ -111,7 +111,7 @@ threshold: {
                 <td class="pv2 ph3">Number or Object</td>
                 <td class="pv2 ph3">
                     <p class="lh-copy">Pending validation for a given number of seconds after user stops filling in the field. By default, it's set to 0.
-                        It's really useful if the field needs to perform validation in server side, such as the <a href="/guide/validators/remote/" class="blue dim link">remote</a> validator.</p>
+                        It's really useful if the field needs to perform validation in server side, such as the <a href="/guide/validators/remote" class="blue dim link">remote</a> validator.</p>
 <SampleCode lang="javascript" code={`
 // Validate fields after 5 seconds from the moment
 // user stops filling in the field
@@ -150,8 +150,8 @@ delay: {
 
     <section class="mv5">
         <div class="flex">
-            <PrevButton href="/guide/plugins/transformer/">Transformer plugin</PrevButton>
-            <NextButton href="/guide/plugins/turret/">Turret plugin</NextButton>
+            <PrevButton target="/guide/plugins/transformer">Transformer plugin</PrevButton>
+            <NextButton target="/guide/plugins/turret">Turret plugin</NextButton>
         </div>
     </section>
 </GuideLayout>

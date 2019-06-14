@@ -4,7 +4,7 @@
 
 <GuideLayout>
     <h1 class="f3 f2-m f1-l tc">Tachyons plugin</h1>
-    <h2 class="f4 fw4 tc lh-copy">Integrate with <a href="https://tachyons.io/" class="blue dim link">Tachyons</a> library. Support Tachyons v4.10.0</h2>
+    <h2 class="f4 fw4 tc lh-copy">Integrate with <a href="https://tachyons.io" class="blue dim link">Tachyons</a> library. Support Tachyons v4.10.0</h2>
 
     <section class="mv5">
         <Heading>Usage</Heading>
@@ -97,8 +97,8 @@ semantic: new FormValidation.plugins.Semantic({
 
     <section class="mv5">
         <div class="flex">
-            <PrevButton href="/guide/plugins/submit-button/">SubmitButton plugin</PrevButton>
-            <NextButton href="/guide/plugins/tooltip/">Tooltip plugin</NextButton>
+            <PrevButton target="/guide/plugins/submit-button">SubmitButton plugin</PrevButton>
+            <NextButton target="/guide/plugins/tooltip">Tooltip plugin</NextButton>
         </div>
     </section>
 </GuideLayout>

@@ -8,10 +8,10 @@
 
     <section class="mv5">
         <Heading>New features</Heading>
-        <p class="lh-copy">This version of <a class="blue dim link" href="/download/">FormValidation</a> works with the latest versions of supported frameworks, including:</p>
+        <p class="lh-copy">This version of <a href="/download" class="blue dim link">FormValidation</a> works with the latest versions of supported frameworks, including:</p>
         <ul class="pa0 ma0 ml3 lh-copy">
             <li>Foundation v6</li>
-            <li><a class="blue dim link" href="http://v4-alpha.getbootstrap.com/">Bootstrap v4 (alpha 2)</a> by setting <code>framework: 'bootstrap4'</code></li>
+            <li><a href="http://v4-alpha.getbootstrap.com" class="blue dim link">Bootstrap v4 (alpha 2)</a> by setting <code>framework: 'bootstrap4'</code></li>
             <li>PureCSS v0.6.0</li>
             <li>Semantic UI v2.1.8</li>
             <li>UIKit v2.26.3</li>
@@ -20,15 +20,15 @@
 
     <section class="mv5">
         <Heading>Changes</Heading>
-        <p class="lh-copy">If you want to try <a class="blue dim link" href="http://v4-alpha.getbootstrap.com/">Bootstrap 4 alpha 2</a> or still want to use <a class="blue dim link" href="http://foundation.zurb.com/sites/docs/v/5.5.3/">Foundation 5</a>, you need to follow the Upgrading to v0.8.0 section below.</p>
+        <p class="lh-copy">If you want to try <a href="http://v4-alpha.getbootstrap.com/">Bootstrap 4 alpha 2</a> or still want to use <a href="http://foundation.zurb.com/sites/docs/v/5.5.3" class="blue dim link">Foundation 5</a>, you need to follow the Upgrading to v0.8.0 section below.</p>
     </section>
 
     <section class="mv5">
         <Heading>Improvements</Heading>
         <ul class="pa0 ma0 ml3 lh-copy">
-            <li>The <a class="blue dim link" href="/guide/validators/credit-card/">creditCard</a> validator now supports more card types (Dankort, Elo, Forbrugsforeningen, Maestro International, Visa Electron)</li>
-            <li>The <a class="blue dim link" href="/guide/validators/ip/">ip</a> validator now supports <a class="blue dim link" href="https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing">CIDR notation</a></li>
-            <li>Return more information of the <a class="blue dim link" href="/guide/validators/file/">file</a> validator result, so user can display associated message if the selected file doesn't match given extension, type or size</li>
+            <li>The <a href="/guide/validators/credit-card" class="blue dim link">creditCard</a> validator now supports more card types (Dankort, Elo, Forbrugsforeningen, Maestro International, Visa Electron)</li>
+            <li>The <a href="/guide/validators/ip" class="blue dim link">ip</a> validator now supports <a href="https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing" class="blue dim link">CIDR notation</a></li>
+            <li>Return more information of the <a href="/guide/validators/file" class="blue dim link">file</a> validator result, so user can display associated message if the selected file doesn't match given extension, type or size</li>
             <li>Pass <code>validator</code> along to the <code>status.field.fv</code> event</li>
         </ul>
     </section>
@@ -39,8 +39,8 @@
             <li>Using <code>formnovalidate</code> attribute causes IE to send two postbacks to server</li>
             <li>Form cannot submit with <code>live</code> mode disabled (<code>live: 'disabled'</code>) and form has some radios/checkboxes</li>
             <li>Fix an exception when calling <code>destroy()</code> if a field is replaced manually</li>
-            <li>The <a class="blue dim link" href="/guide/validators/cvv/">cvv</a> validator doesn't work properly if we transform the credit card value</li>
-            <li>The <a class="blue dim link" href="/guide/validators/phone/">phone</a> validator should accept valid US phones such as 999 999 9999</li>
+            <li>The cvv validator doesn't work properly if we transform the credit card value</li>
+            <li>The <a href="/guide/validators/phone" class="blue dim link">phone</a> validator should accept valid US phones such as 999 999 9999</li>
         </ul>
     </section>
 

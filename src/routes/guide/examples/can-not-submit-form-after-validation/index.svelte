@@ -13,11 +13,11 @@
 
         <p class="lh-copy">Before v1.0.0, the form will be submitted automatically if all fields are valid. There are some cases user wants to do something else such as</p>
         <ul class="ma0 pl3 lh-copy">
-            <li>sending form to back-end via an <a href="/guide/events/core.form.valid/#example-using-ajax-to-submit-the-form" class="blue dim link">Ajax request</a></li>
-            <li>jumping to the next step in a <a href="/guide/events/core.form.valid/#example-multiple-steps-wizard" class="blue dim link">wizard</a></li>
+            <li>sending form to back-end via an <a href="/guide/examples/using-ajax-to-submit-the-form" class="blue dim link">Ajax request</a></li>
+            <li>jumping to the next step in a <a href="/guide/examples/multiple-steps-wizard" class="blue dim link">wizard</a></li>
         </ul>
         <p class="lh-copy">So, the default behaviour is removed from v1.0.0. It's up to users to decide what they want to do. If you want to submit the form when all fields are valid, then enable the 
-            <a href="/guide/plugins/default-submit/" class="blue dim link">DefaultSubmit</a> plugin:</p>
+            <a href="/guide/plugins/default-submit" class="blue dim link">DefaultSubmit</a> plugin:</p>
 <SampleCode lang="javascript" code={`
 FormValidation.formValidation(
     document.getElementById('demoForm'),
@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
 <!-- Do -->
 <button type="submit" name="submitButton">Submit</button>
 `} />
-        <p class="lh-copy"><a href="http://kangax.github.com/domlint/" class="blue dim link">DOMLint</a> has a complete list of rules to check the markup for these kind of problems.</p>
+        <p class="lh-copy"><a href="http://kangax.github.com/domlint" class="blue dim link">DOMLint</a> has a complete list of rules to check the markup for these kind of problems.</p>
     </section>
 </GuideLayout>
 

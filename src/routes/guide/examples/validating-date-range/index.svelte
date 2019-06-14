@@ -8,10 +8,10 @@
     <section class="mv5">
         <p class="lh-copy">The following form asks you to enter a date in the range of 2000/01/01 and 2020/12/30. It can be implemented by using the <code>min</code> and <code>max</code> options.</p>
         <Demo prefix="/guide/examples/validating-date-range/range" frameworks={['Tachyons']} />
-        <p class="lh-copy">You also can use the <a href="/guide/validators/callback/" class="blue dim link">callback</a> validator and <a href="http://momentjs.com/docs/#/query/is-before/" class="blue dim link"><code>isBefore()</code></a>, <a href="http://momentjs.com/docs/#/query/is-after/" class="blue dim link"><code>isAfter()</code></a> methods provided <a href="http://momentjs.com/" class="blue dim link">momentjs</a>
+        <p class="lh-copy">You also can use the <a href="/guide/validators/callback" class="blue dim link">callback</a> validator and <a href="http://momentjs.com/docs/#/query/is-before" class="blue dim link"><code>isBefore()</code></a>, <a href="http://momentjs.com/docs/#/query/is-after" class="blue dim link"><code>isAfter()</code></a> methods provided <a href="http://momentjs.com" class="blue dim link">momentjs</a>
             to check if the date is in the range.</p>
         <Demo prefix="/guide/examples/validating-date-range/range-moment" frameworks={['Tachyons']} />
-        <Tip>Use the <a href="/guide/plugins/start-end-date/" class="blue dim link">StartEndDate</a> plugin if you want to validate start and end dates</Tip>
+        <Tip>Use the <a href="/guide/plugins/start-end-date" class="blue dim link">StartEndDate</a> plugin if you want to validate start and end dates</Tip>
     </section>
 
     <Examples examples={[

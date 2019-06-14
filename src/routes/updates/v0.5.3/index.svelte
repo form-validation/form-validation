@@ -9,28 +9,28 @@
     <section class="mv5">
         <Heading>New features</Heading>
         <ul class="pa0 ma0 ml3 lh-copy">
-            <li>Add <code>min</code>, <code>max</code> options for the <a class="blue dim link" href="/guide/validators/date/">date</a> validator</li>
-            <li>Add <a class="blue dim link" href="/guide/validators/color/">color</a> validator</li>
-            <li>The <a class="blue dim link" href="/guide/validators/string-length/">stringLength</a> validator adds option to evaluate length in UTF-8 bytes</li>
-            <li>Add <code>trim</code> option for the <a class="blue dim link" href="/guide/validators/string-length/">stringLength</a> validator</li>
-            <li>Add <code>minFiles</code>, <code>maxFiles</code>, <code>minTotalSize</code>, <code>maxTotalSize</code> options for the <a class="blue dim link" href="/guide/validators/file/">file</a> validator</li>
-            <li>Add France <a class="blue dim link" href="/guide/validators/zip-code/">postal code</a> validator</li>
-            <li>Add Ireland <a class="blue dim link" href="/guide/validators/zip-code/">postal code</a> validator</li>
-            <li>Add German <a class="blue dim link" href="/guide/validators/phone/">phone number</a> and <a class="blue dim link" href="/guide/validators/zip-code/">postal code</a> validators</li>
-            <li>Add Portugal <a class="blue dim link" href="/guide/validators/zip-code/">postal code</a> validator</li>
+            <li>Add <code>min</code>, <code>max</code> options for the <a href="/guide/validators/date" class="blue dim link">date</a> validator</li>
+            <li>Add <a href="/guide/validators/color" class="blue dim link">color</a> validator</li>
+            <li>The <a href="/guide/validators/string-length" class="blue dim link">stringLength</a> validator adds option to evaluate length in UTF-8 bytes</li>
+            <li>Add <code>trim</code> option for the <a href="/guide/validators/string-length" class="blue dim link">stringLength</a> validator</li>
+            <li>Add <code>minFiles</code>, <code>maxFiles</code>, <code>minTotalSize</code>, <code>maxTotalSize</code> options for the <a href="/guide/validators/file" class="blue dim link">file</a> validator</li>
+            <li>Add France <a href="/guide/validators/zip-code" class="blue dim link">postal code</a> validator</li>
+            <li>Add Ireland <a href="/guide/validators/zip-code" class="blue dim link">postal code</a> validator</li>
+            <li>Add German <a href="/guide/validators/phone" class="blue dim link">phone number</a> and <a href="/guide/validators/zip-code" class="blue dim link">postal code</a> validators</li>
+            <li>Add Portugal <a href="/guide/validators/zip-code" class="blue dim link">postal code</a> validator</li>
             <li>Add <code>autoFocus</code> option</li>
-            <li>Add Austria and Switzerland <a class="blue dim link" href="/guide/validators/zip-code/">postal code</a> validators</li>
+            <li>Add Austria and Switzerland <a href="/guide/validators/zip-code" class="blue dim link">postal code</a> validators</li>
         </ul>
     </section>
 
     <section class="mv5">
         <Heading>Improvements</Heading>
         <ul class="pa0 ma0 ml3 lh-copy">
-            <li>The <a class="blue dim link" href="/guide/validators/color/">color</a> validator only accepts 6 hex character values when using HTML 5 <code>type='color'</code> attribute</li>
-            <li>Comma separator handling in <a class="blue dim link" href="/guide/validators/greater-than/">greaterThan</a>, <a class="blue dim link" href="/guide/validators/less-than/">lessThan</a> validators</li>
+            <li>The <a href="/guide/validators/color" class="blue dim link">color</a> validator only accepts 6 hex character values when using HTML 5 <code>type='color'</code> attribute</li>
+            <li>Comma separator handling in <a href="/guide/validators/greater-than/">greaterThan</a>, <a href="/guide/validators/less-than" class="blue dim link">lessThan</a> validators</li>
             <li>Replace ',' with '.' to validate decimal numbers correct</li>
             <li>Put tooltip/popover on bottom if there is not enough space on top</li>
-            <li>The <a class="blue dim link" href="/guide/validators/remote/">remote</a> validator allows to set <code>data</code> options via HTML attributes</li>
+            <li>The <a href="/guide/validators/remote" class="blue dim link">remote</a> validator allows to set <code>data</code> options via HTML attributes</li>
             <li>Enable validator when setting <code>data-bv-validatorname="data-bv-validatorname"</code></li>
             <li>Requires jQuery 1.9.1 or higher</li>
         </ul>

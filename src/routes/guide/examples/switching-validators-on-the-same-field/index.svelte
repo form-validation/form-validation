@@ -7,7 +7,7 @@
     
     <section class="mv5">
         <p class="lh-copy">In general, a field might have different validators. Based on various conditions, some of them can be turned on, and the remaining are turned off.</p>
-        <p class="lh-copy">For instance, the following form asks user to fill in a number which must be a valid Brazilian <a href="/guide/validators/id/" class="blue dim link">ID</a> (known as CPF) or <a href="/guide/validators/vat/" class="blue dim link">VAT</a> (known as CNPJ) number.
+        <p class="lh-copy">For instance, the following form asks user to fill in a number which must be a valid Brazilian <a href="/guide/validators/id" class="blue dim link">ID</a> (known as CPF) or <a href="/guide/validators/vat" class="blue dim link">VAT</a> (known as CNPJ) number.
             CPF and CNPJ numbers have 11 and 14 characters respectively.
             Based on the length of input, we can guess which type of number user is trying to put in.</p>
         <p class="lh-copy">Firstly, use the <code>enabled</code> option to enable (disable) validators initially</p>

@@ -14,7 +14,7 @@
 
         <Cards>
             {#each CorePlugins as p}
-            <Card target="/guide/plugins/{camelCaseToDash(p.name)}/" title="{p.name}">{p.desc}</Card>
+            <Card target="/guide/plugins/{camelCaseToDash(p.name)}" title="{p.name}">{p.desc}</Card>
             {/each}
         </Cards>
     </section>
@@ -36,15 +36,15 @@ after FormValidation.min.js
 
         <Cards>
             {#each ExternalPlugins as p}
-            <Card target="/guide/plugins/{camelCaseToDash(p.name)}/" title="{p.name}">{p.desc}</Card>
+            <Card target="/guide/plugins/{camelCaseToDash(p.name)}" title="{p.name}">{p.desc}</Card>
         {/each}
         </Cards>
     </section>
 
     <section class="mv5">
         <div class="flex">
-            <PrevButton href="/guide/validators/">Validators</PrevButton>
-            <NextButton href="/guide/plugins/alias/">Alias plugin</NextButton>
+            <PrevButton target="/guide/validators">Validators</PrevButton>
+            <NextButton target="/guide/plugins/alias">Alias plugin</NextButton>
         </div>
     </section>
 </GuideLayout>

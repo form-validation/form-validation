@@ -9,7 +9,7 @@
     <section class="mv5">
         <Heading>Improvement</Heading>
         <ul class="pa0 ma0 ml3 lh-copy">
-            <li>Support <a class="blue dim link" href="http://blog.getbootstrap.com/2016/07/27/bootstrap-4-alpha-3/">Bootstrap v4 alpha3</a></li>
+            <li>Support <a href="http://blog.getbootstrap.com/2016/07/27/bootstrap-4-alpha-3" class="blue dim link">Bootstrap v4 alpha3</a></li>
         </ul>
     </section>
 </ChangelogLayout>

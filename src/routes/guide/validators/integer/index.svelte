@@ -10,7 +10,7 @@
         <Heading>Options</Heading>
 
         <h3>Using with form field</h3>
-        <p class="lh-copy i">The HTML attributes are used to set the validator options via the <a href="/guide/plugins/declarative/" class="blue dim link">Declarative</a> plugin</p>
+        <p class="lh-copy i">The HTML attributes are used to set the validator options via the <a href="/guide/plugins/declarative" class="blue dim link">Declarative</a> plugin</p>
         <table class="collapse ba br2 b--black-10 pv2 ph3 w-100">
             <tr class="striped--light-gray">
                 <th class="pv2 ph3 tl f6 fw6 ttu">Name</th>
@@ -105,7 +105,7 @@ result is an object of
             {/each}
         </table>
 
-        <p>The example also uses the <a href="/guide/api/update-validator-option/" class="blue dim link">updateValidatorOption()</a> method to set values for <code>thousandsSeparator</code> and <code>decimalSeparator</code> options.</p>
+        <p>The example also uses the <a href="/guide/api/update-validator-option" class="blue dim link">updateValidatorOption()</a> method to set values for <code>thousandsSeparator</code> and <code>decimalSeparator</code> options.</p>
 
         <SampleCode lang="javascript" code={`
 formValidationInstance
@@ -128,7 +128,7 @@ formValidationInstance
 
     <section class="mv5">
         <Heading>HTML5 Example</Heading>
-        <p class="lh-copy">When the <a href="/guide/plugins/declarative/" class="blue dim link">Declarative</a> plugin is used, the integer validator will be enabled automatically when using HTML5 <code>type="number"</code> attribute.</p>
+        <p class="lh-copy">When the <a href="/guide/plugins/declarative" class="blue dim link">Declarative</a> plugin is used, the integer validator will be enabled automatically when using HTML5 <code>type="number"</code> attribute.</p>
         <Demo prefix="/guide/validators/integer/html5" frameworks={['Tachyons']} />
     </section>
 
@@ -176,8 +176,8 @@ const res3 = integer().validate({
 
     <section class="mv5">
         <div class="flex">
-            <PrevButton href="/guide/validators/imo/">imo validator</PrevButton>
-            <NextButton href="/guide/validators/ip/">ip validator</NextButton>
+            <PrevButton target="/guide/validators/imo">imo validator</PrevButton>
+            <NextButton target="/guide/validators/ip">ip validator</NextButton>
         </div>
     </section>
 </GuideLayout>

@@ -6,7 +6,7 @@
     <h1 class="tc lh-copy">Using Glyphicons icons</h1>
     
     <section class="mv5">
-        <p class="lh-copy">The Glyphicons icon set is included with <a href="/guide/plugins/bootstrap3/" class="blue dim link">Bootstrap v3</a>, so you can use it as:</p>
+        <p class="lh-copy">The Glyphicons icon set is included with <a href="/guide/plugins/bootstrap3" class="blue dim link">Bootstrap v3</a>, so you can use it as:</p>
         <div class="mb4">
 <SampleCode lang="html" code={`
 <!-- Put them in the head tag -->

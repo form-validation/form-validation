@@ -54,8 +54,8 @@ fv.on(EVENT_NAME, function(event) {
 
     <section class="mv5">
         <div class="flex">
-            <PrevButton href="/guide/api/">API</PrevButton>
-            <NextButton href="/guide/events/core.element.notvalidated/">core.element.notvalidated event</NextButton>
+            <PrevButton target="/guide/api">API</PrevButton>
+            <NextButton target="/guide/events/core.element.notvalidated">core.element.notvalidated event</NextButton>
         </div>
     </section>
 </GuideLayout>

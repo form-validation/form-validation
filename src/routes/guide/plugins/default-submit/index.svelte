@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
 `} />
         <p class="lh-copy">The sample code above assumes that the FormValidation files are placed inside the <code>vendors</code> directory. You might need to change the path depending on where you place them on the server.</p>
         <p class="lh-copy">Instead of submitting the form, you can use an <a href="/guide/events/core.form.valid/#example-using-ajax-to-submit-the-form" class="blue dim link">Ajax request</a> to send the form data to the server.</p>
-        <Tip>If you want the form to be validated automatically when pressing its Submit button, use the <a href="/guide/plugins/submit-button/" class="blue dim link">SubmitButton</a> plugin</Tip>
+        <Tip>If you want the form to be validated automatically when pressing its Submit button, use the <a href="/guide/plugins/submit-button" class="blue dim link">SubmitButton</a> plugin</Tip>
     </section>
 
     <section class="mv5">
@@ -57,8 +57,8 @@ document.addEventListener('DOMContentLoaded', function(e) {
 
     <section class="mv5">
         <div class="flex">
-            <PrevButton href="/guide/plugins/declarative/">Declarative plugin</PrevButton>
-            <NextButton href="/guide/plugins/excluded/">Excluded plugin</NextButton>
+            <PrevButton target="/guide/plugins/declarative">Declarative plugin</PrevButton>
+            <NextButton target="/guide/plugins/excluded">Excluded plugin</NextButton>
         </div>
     </section>
 </GuideLayout>

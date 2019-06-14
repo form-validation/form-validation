@@ -17,8 +17,8 @@
 
     <section class="mv5">
         <div class="flex">
-            <PrevButton href="/guide/events/">Overview</PrevButton>
-            <NextButton href="/guide/events/core.element.validated/">core.element.validated event</NextButton>
+            <PrevButton target="/guide/events">Overview</PrevButton>
+            <NextButton target="/guide/events/core.element.validated">core.element.validated event</NextButton>
         </div>
     </section>
 </GuideLayout>

@@ -4,9 +4,9 @@
 
 <GuideLayout>
     <h1 class="f3 f2-m f1-l tc">Bootstrap plugin</h1>
-    <h2 class="f4 fw4 tc">Integrate with <a href="https://getbootstrap.com/" class="blue dim link">Bootstrap</a> framework. Support Bootstrap v4.3.1</h2>
+    <h2 class="f4 fw4 tc">Integrate with <a href="https://getbootstrap.com" class="blue dim link">Bootstrap</a> framework. Support Bootstrap v4.3.1</h2>
 
-    <Tip>Use the <a href="/guide/plugins/bootstrap3/" class="blue dim link">Bootstrap3</a> plugin if you are still using Bootstrap 3</Tip>
+    <Tip>Use the <a href="/guide/plugins/bootstrap3" class="blue dim link">Bootstrap3</a> plugin if you are still using Bootstrap 3</Tip>
 
     <section class="mv5">
         <Heading>Usage</Heading>
@@ -115,8 +115,8 @@ bootstrap: new FormValidation.plugins.Bootstrap({
 
     <section class="mv5">
         <div class="flex">
-            <PrevButton href="/guide/plugins/auto-focus/">AutoFocus plugin</PrevButton>
-            <NextButton href="/guide/plugins/bootstrap3/">Bootstrap 3 plugin</NextButton>
+            <PrevButton target="/guide/plugins/auto-focus">AutoFocus plugin</PrevButton>
+            <NextButton target="/guide/plugins/bootstrap3">Bootstrap 3 plugin</NextButton>
         </div>
     </section>
 </GuideLayout>

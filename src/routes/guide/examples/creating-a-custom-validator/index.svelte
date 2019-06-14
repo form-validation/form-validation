@@ -130,10 +130,10 @@ FormValidation.formValidation(
 );
 `} />
         <p class="lh-copy">We register a new validator named <code>checkPassword</code> which is implemented by the <code>strongPassword</code> function.</p>
-        <p class="lh-copy">Since the validators are distinct by the names, the new validator name (<code>checkPassword</code>, in the example above) has to be different with <a href="/guide/validators/" class="blue dim link">built-in validators</a>.</p>
+        <p class="lh-copy">Since the validators are distinct by the names, the new validator name (<code>checkPassword</code>, in the example above) has to be different with <a href="/guide/validators" class="blue dim link">built-in validators</a>.</p>
         <Demo prefix="/guide/examples/creating-a-custom-validator/validators-namespace" frameworks={['Tachyons']} />
 
-        <h3>Using the <a href="/guide/api/register-validator/" class="blue dim link">registerValidator()</a> method</h3>
+        <h3>Using the <a href="/guide/api/register-validator" class="blue dim link">registerValidator()</a> method</h3>
         <p class="lh-copy">This approach should be used when the <code>FormValidation</code> namespace doesn't exist. For example, when the library is used with ES6 module.</p>
 <SampleCode lang="javascript" code={`
 const strongPassword = function() {
@@ -330,7 +330,7 @@ const strongPassword = function() {
 };
 `} />
         <p class="lh-copy">Next, we will use the score which is inclued the meta data of validation result to show up a password strength meter.</p>
-        <p class="lh-copy">Bootstrap's <a href="http://getbootstrap.com/docs/4.1/components/progress/" class="blue dim link">progress</a> is used to simply demo the functionality.</p>
+        <p class="lh-copy">Bootstrap's <a href="http://getbootstrap.com/docs/4.1/components/progress" class="blue dim link">progress</a> is used to simply demo the functionality.</p>
 <SampleCode lang="html" code={`
 <input type="password" class="form-control" name="pwd" autocomplete="off" />
                     
@@ -339,7 +339,7 @@ const strongPassword = function() {
     <div class="progress-bar progress-bar-striped progress-bar-animate" style="width: 100%"></div>
 </div>
 `} />
-        <p class="lh-copy">We handle the <a href="/guide/events/core.validator.validated/" class="blue dim link">core.validator.validated</a> event to update the progress bar:</p>
+        <p class="lh-copy">We handle the <a href="/guide/events/core.validator.validated" class="blue dim link">core.validator.validated</a> event to update the progress bar:</p>
 <SampleCode lang="javascript" code={`
 FormValidation
     .formValidation(

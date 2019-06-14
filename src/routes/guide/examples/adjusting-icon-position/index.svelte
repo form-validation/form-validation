@@ -13,7 +13,7 @@
 <i data-field="FIELD_NAME" class="fv-plugins-icon CSS_CLASSES"></i>
 `} />
         <p class="lh-copy">In some cases, the icons aren't shown properly. Understanding the markup of icon and customizing the value of <code>top</code> and <code>right</code> properties for icon's class, you can adjust the feedback icon to deserved position.</p>
-        <p class="lh-copy">The following example demonstrates this technique when using the Bootstrap's <a href="http://getbootstrap.com/docs/4.1/components/input-group/" class="blue dim link">Input Group</a> with the <a href="/docs/plugin/bootstrap/" class="blue dim link">Bootstrap</a> plugin:</p>
+        <p class="lh-copy">The following example demonstrates this technique when using the Bootstrap's <a href="http://getbootstrap.com/docs/4.1/components/input-group" class="blue dim link">Input Group</a> with the <a href="/guide/plugins/bootstrap" class="blue dim link">Bootstrap</a> plugin:</p>
 
         <div class="mb4">
 <SampleCode lang="html" code={`

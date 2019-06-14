@@ -6,14 +6,14 @@
     <h1 class="tc lh-copy">Using Spectre framework icons</h1>
     
     <section class="mv5">
-        <p class="lh-copy">The <a href="https://picturepan2.github.io/spectre/" class="blue dim link">Spectre framework</a> provides a built-in <a href="https://picturepan2.github.io/spectre/elements.html#icons" class="blue dim link">icons set</a> which can be used with <a href="/guide/plugins/spectre/" class="blue dim link">Spectre</a> plugin.</p>
+        <p class="lh-copy">The <a href="https://picturepan2.github.io/spectre" class="blue dim link">Spectre framework</a> provides a built-in <a href="https://picturepan2.github.io/spectre/elements.html#icons" class="blue dim link">icons set</a> which can be used with <a href="/guide/plugins/spectre" class="blue dim link">Spectre</a> plugin.</p>
         <p class="lh-copy">In order to use these icons, you have to wrap the field in a <code>has-icon-right</code> class:</p>
 <SampleCode lang="html" code={`
 <div class="has-icon-right">
     <input type="text" class="form-input" name="name" />
 </div>
 `} />
-        <p class="lh-copy">Below is a starting point to use the <a href="/guide/plugins/icon/" class="blue dim link">Icon plugin</a> along with the <a href="/guide/plugins/spectre/" class="blue dim link">Spectre plugin</a>:</p>
+        <p class="lh-copy">Below is a starting point to use the <a href="/guide/plugins/icon" class="blue dim link">Icon plugin</a> along with the <a href="/guide/plugins/spectre" class="blue dim link">Spectre plugin</a>:</p>
         <div class="mb4">
 <SampleCode lang="html" code={`
 <!-- Put them in the head tag -->

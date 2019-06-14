@@ -9,16 +9,16 @@
     <section class="mv5">
         <Heading>Bug fixes</Heading>
         <ul class="pa0 ma0 ml3 lh-copy">
-            <li>Fix an issue that the separator option in <a class="blue dim link" href="/guide/validators/date/">date</a> validator isn't determined properly</li>
+            <li>Fix an issue that the separator option in <a href="/guide/validators/date" class="blue dim link">date</a> validator isn't determined properly</li>
             <li>Fix an issue that the message container isn't added success/error CSS classes when choosing any but first checkbox</li>
-            <li>Fix an issue that the <a class="blue dim link" href="/guide/validators/remote/">remote</a> validator and <code>FormValidation.utils.fetch()</code> method don't send the correct data for POST request</li>
+            <li>Fix an issue that the <a href="/guide/validators/remote" class="blue dim link">remote</a> validator and <code>FormValidation.utils.fetch()</code> method don't send the correct data for POST request</li>
         </ul>
     </section>
 
     <section class="mv5">
         <Heading>Upgrading to v1.0.1</Heading>
         <ul class="pa0 ma0 ml3 lh-copy">
-            <li>From v0.8.1 and older versions: Follow the <a class="blue dim link" href="/updates/v1.0.0/#upgrading-to-v1-0-0">Upgrading to v1.0.0</a> guide</li>
+            <li>From v0.8.1 and older versions: Follow the <a href="/updates/v1.0.0/#upgrading-to-v1-0-0" class="blue dim link">Upgrading to v1.0.0</a> guide</li>
             <li>From v1.0.0: Just download the new version and replace the old files in v1.0.0 with new files in v1.0.1.</li>
         </ul>
     </section>

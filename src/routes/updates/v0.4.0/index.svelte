@@ -20,51 +20,51 @@
             </tr>
             <tr class="striped--light-gray">
                 <td class="pv2 ph3"><code>min="..."</code></td>
-                <td class="pv2 ph3"><a class="blue dim link" href="/guide/validators/greater-than/">greaterThan validator</a></td>
+                <td class="pv2 ph3"><a href="/guide/validators/greater-than" class="blue dim link">greaterThan validator</a></td>
             </tr>
             <tr class="striped--light-gray">
                 <td class="pv2 ph3"><code>max="..."</code></td>
-                <td class="pv2 ph3"><a class="blue dim link" href="/guide/validators/less-than/">lessThan validator</a></td>
+                <td class="pv2 ph3"><a href="/guide/validators/less-than" class="blue dim link">lessThan validator</a></td>
             </tr>
             <tr class="striped--light-gray">
                 <td class="pv2 ph3"><code>maxlength="..."</code></td>
-                <td class="pv2 ph3"><a class="blue dim link" href="/guide/validators/string-length/">stringLength validator</a></td>
+                <td class="pv2 ph3"><a href="/guide/validators/string-length" class="blue dim link">stringLength validator</a></td>
             </tr>
             <tr class="striped--light-gray">
                 <td class="pv2 ph3"><code>pattern="..."</code></td>
-                <td class="pv2 ph3"><a class="blue dim link" href="/guide/validators/regexp/">regexp validator</a></td>
+                <td class="pv2 ph3"><a href="/guide/validators/regexp" class="blue dim link">regexp validator</a></td>
             </tr>
             <tr class="striped--light-gray">
                 <td class="pv2 ph3"><code>required</code></td>
-                <td class="pv2 ph3"><a class="blue dim link" href="/guide/validators/not-empty/">notEmpty validator</a></td>
+                <td class="pv2 ph3"><a href="/guide/validators/not-empty" class="blue dim link">notEmpty validator</a></td>
             </tr>
             <tr class="striped--light-gray">
                 <td class="pv2 ph3"><code>type="color"</code></td>
-                <td class="pv2 ph3"><a class="blue dim link" href="/guide/validators/color/">color validator</a></td>
+                <td class="pv2 ph3"><a href="/guide/validators/color" class="blue dim link">color validator</a></td>
             </tr>
             <tr class="striped--light-gray">
                 <td class="pv2 ph3"><code>type="email"</code></td>
-                <td class="pv2 ph3"><a class="blue dim link" href="/guide/validators/email-address/">emailAddress validator</a></td>
+                <td class="pv2 ph3"><a href="/guide/validators/email-address" class="blue dim link">emailAddress validator</a></td>
             </tr>
             <tr class="striped--light-gray">
                 <td class="pv2 ph3"><code>type="range"</code></td>
-                <td class="pv2 ph3"><a class="blue dim link" href="/guide/validators/between/">between validator</a></td>
+                <td class="pv2 ph3"><a href="/guide/validators/between" class="blue dim link">between validator</a></td>
             </tr>
             <tr class="striped--light-gray">
                 <td class="pv2 ph3"><code>type="url"</code></td>
-                <td class="pv2 ph3"><a class="blue dim link" href="/guide/validators/uri/">uri validator</a></td>
+                <td class="pv2 ph3"><a href="/guide/validators/uri" class="blue dim link">uri validator</a></td>
             </tr>
         </table>
 
         <ul class="pa0 ma0 ml3 lh-copy">
             <li><i class="fa fa-star"></i> Set the custom trigger event. It's possible to use <code>data-bv-trigger</code> attribute or <code>trigger</code> option.</li>
             <li>Add <code>setLiveMode()</code> method to turn on/off the live validating mode</li>
-            <li>Add <a class="blue dim link" href="/guide/validators/iban/">iban validator</a> for validating IBAN (International Bank Account Number)</li>
-            <li>Add <a class="blue dim link" href="/guide/validators/uuid/">uuid validator</a>, support UUID v3, v4, v5</li>
-            <li>Add <a class="blue dim link" href="/guide/validators/numeric/">numeric validator</a></li>
-            <li>Add <a class="blue dim link" href="/guide/validators/integer/">integer validator</a></li>
-            <li>Add <a class="blue dim link" href="/guide/validators/hex/">hex validator</a></li>
-            <li>Add <a class="blue dim link" href="/guide/validators/string-case/">stringCase validator</a> to check a string is lower or upper case</li>
+            <li>Add <a href="/guide/validators/iban" class="blue dim link">iban validator</a> for validating IBAN (International Bank Account Number)</li>
+            <li>Add <a href="/guide/validators/uuid" class="blue dim link">uuid validator</a>, support UUID v3, v4, v5</li>
+            <li>Add <a href="/guide/validators/numeric" class="blue dim link">numeric validator</a></li>
+            <li>Add <a href="/guide/validators/integer" class="blue dim link">integer validator</a></li>
+            <li>Add <a href="/guide/validators/hex" class="blue dim link">hex validator</a></li>
+            <li>Add <a href="/guide/validators/string-case" class="blue dim link">stringCase validator</a> to check a string is lower or upper case</li>
         </ul>
     </section>
 
@@ -79,7 +79,7 @@
     <section class="mv5">
         <Heading>Improvements</Heading>
         <ul class="pa0 ma0 ml3 lh-copy">
-            <li>The <a class="blue dim link" href="/guide/validators/regexp/">regexp validator</a> allows to pass a string</li>
+            <li>The <a href="/guide/validators/regexp" class="blue dim link">regexp validator</a> allows to pass a string</li>
             <li><i class="fa fa-star"></i> Support multiple elements with the same name</li>
             <li>Do not validate hidden (<code>type="hidden"</code>) and invisible element</li>
         </ul>

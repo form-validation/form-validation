@@ -9,11 +9,11 @@
         <p class="lh-copy">Do you want some of fake, even invalid credit card numbers to be valid? For example, in the developing phase,
             you might want the creditCard validator to accept a few of particular card numbers.</p>
         <p class="lh-copy">Of course, you don't need to modify the source code of creditCard validator and add your own numbers there.
-            FormValidation allows you to do it in a nice way via the <a href="/guide/plugins/transformer/" class="blue dim link">Transformer</a> plugin.</p>
+            FormValidation allows you to do it in a nice way via the <a href="/guide/plugins/transformer" class="blue dim link">Transformer</a> plugin.</p>
         <p class="lh-copy">By using this option, we transform your test card numbers from an invalid to a valid one.</p>
 
         <Tip heading="Note">
-            The <a href="/guide/plugins/transformer/" class="blue dim link">Transformer</a> plugin changes the card numbers for validation process only.
+            The <a href="/guide/plugins/transformer" class="blue dim link">Transformer</a> plugin changes the card numbers for validation process only.
             When the form is submitted, you get the extract number that is initially provided by the user
         </Tip>
 

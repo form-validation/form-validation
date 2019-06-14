@@ -10,7 +10,7 @@
         <Heading>Options</Heading>
 
         <h3>Using with form field</h3>
-        <p class="lh-copy i">The HTML attributes are used to set the validator options via the <a href="/guide/plugins/declarative/" class="blue dim link">Declarative</a> plugin</p>
+        <p class="lh-copy i">The HTML attributes are used to set the validator options via the <a href="/guide/plugins/declarative" class="blue dim link">Declarative</a> plugin</p>
         <table class="collapse ba br2 b--black-10 pv2 ph3 w-100 mb4">
             <tr class="striped--light-gray">
                 <th class="pv2 ph3 tl f6 fw6 ttu">Name</th>
@@ -82,7 +82,7 @@
 
     <section class="mv5">
         <Heading>Popular MIME types</Heading>
-        <p class="lh-copy">The following table shows popular MIME types. For other MIME type, you can refer to the <a href="https://www.sitepoint.com/web-foundations/mime-types-complete-list/" class="blue dim link">complete list</a>.</p>
+        <p class="lh-copy">The following table shows popular MIME types. For other MIME type, you can refer to the <a href="https://www.sitepoint.com/web-foundations/mime-types-complete-list" class="blue dim link">complete list</a>.</p>
         <table class="collapse ba br2 b--black-10 pv2 ph3 w-100">
             <tr class="striped--light-gray">
                 <th class="pv2 ph3 tl f6 fw6 ttu">MIME type</th>
@@ -125,14 +125,14 @@ FormValidation.formValidation(
         <Heading>Basic Example</Heading>
 
         <p class="lh-copy">The following form allows to upload JPEG, PNG image which is smaller than 2 MB in size.</p>
-        <Tip>Use the <a href="/guide/validators/promise/" class="blue dim link">promise</a> validator if you want to validate the width and height of an image</Tip>
+        <Tip>Use the <a href="/guide/validators/promise" class="blue dim link">promise</a> validator if you want to validate the width and height of an image</Tip>
         <Demo prefix="/guide/validators/file/basic" frameworks={['Bootstrap', 'Tachyons']} />
     </section>
 
     <section class="mv5">
         <div class="flex">
-            <PrevButton href="/guide/validators/email-address/">emailAddress validator</PrevButton>
-            <NextButton href="/guide/validators/greater-than/">greaterThan validator</NextButton>
+            <PrevButton target="/guide/validators/email-address">emailAddress validator</PrevButton>
+            <NextButton target="/guide/validators/greater-than">greaterThan validator</NextButton>
         </div>
     </section>
 </GuideLayout>

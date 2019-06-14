@@ -7,9 +7,9 @@
     <h2 class="f4 fw4 tc">Validating field with special name</h2>
 
     <section class="mv5">
-        <p class="lh-copy">When using FormValidation with some server-side frameworks such as <a href="http://cakephp.org/" class="blue dim link">CakePHP</a>,
-            <a href="http://symfony.com/" class="blue dim link">Symfony</a>, <a href="http://rubyonrails.org/" class="blue dim link">Rails</a>,
-            <a href="http://projects.spring.io/spring-framework/" class="blue dim link">Spring</a>, etc, there is a relationship between
+        <p class="lh-copy">When using FormValidation with some server-side frameworks such as <a href="http://cakephp.org" class="blue dim link">CakePHP</a>,
+            <a href="http://symfony.com" class="blue dim link">Symfony</a>, <a href="http://rubyonrails.org" class="blue dim link">Rails</a>,
+            <a href="http://projects.spring.io/spring-framework" class="blue dim link">Spring</a>, etc, there is a relationship between
             the model name and the <code>name</code> attribute of input.</p>
         <p class="lh-copy">For example, assuming that an user is modeled by <code>User</code> class with <code>firstName</code>, <code>lastName</code>, <code>username</code>, <code>emails[]</code> properties.</p>
         <p class="lh-copy">Following the naming convention defined by these frameworks, the inputs in the form of adding new user might have the name attribute such as:</p>
@@ -54,8 +54,8 @@ FormValidation.formValidation(
 
     <section class="mv5">
         <div class="flex">
-            <PrevButton href="/guide/getting-started/localization/">Localization</PrevButton>
-            <NextButton href="/guide/getting-started/field-selector/">Field selector</NextButton>
+            <PrevButton target="/guide/getting-started/localization">Localization</PrevButton>
+            <NextButton target="/guide/getting-started/field-selector">Field selector</NextButton>
         </div>
     </section>
 </GuideLayout>

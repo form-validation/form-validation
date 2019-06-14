@@ -10,7 +10,7 @@
         <Heading>Options</Heading>
 
         <h3>Using with form field</h3>
-        <p class="lh-copy i">The HTML attributes are used to set the validator options via the <a href="/guide/plugins/declarative/" class="blue dim link">Declarative</a> plugin</p>
+        <p class="lh-copy i">The HTML attributes are used to set the validator options via the <a href="/guide/plugins/declarative" class="blue dim link">Declarative</a> plugin</p>
         <table class="collapse ba br2 b--black-10 pv2 ph3 w-100">
             <tr class="striped--light-gray">
                 <th class="pv2 ph3 tl f6 fw6 ttu">Name</th>
@@ -251,8 +251,8 @@ const res3 = color().validate({
 
     <section class="mv5">
         <div class="flex">
-            <PrevButton href="/guide/validators/choice/">choice validator</PrevButton>
-            <NextButton href="/guide/validators/credit-card/">creditCard validator</NextButton>
+            <PrevButton target="/guide/validators/choice">choice validator</PrevButton>
+            <NextButton target="/guide/validators/credit-card">creditCard validator</NextButton>
         </div>
     </section>
 </GuideLayout>

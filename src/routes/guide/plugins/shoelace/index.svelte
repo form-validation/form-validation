@@ -4,7 +4,7 @@
 
 <GuideLayout>
     <h1 class="f3 f2-m f1-l tc">Shoelace plugin</h1>
-    <h2 class="f4 fw4 tc lh-copy">Integrate with <a href="https://shoelace.style/" class="blue dim link">Shoelace</a> library. Support Shoelace v1.0.0-beta24</h2>
+    <h2 class="f4 fw4 tc lh-copy">Integrate with <a href="https://shoelace.style" class="blue dim link">Shoelace</a> library. Support Shoelace v1.0.0-beta24</h2>
 
     <section class="mv5">
         <Heading>Usage</Heading>
@@ -103,8 +103,8 @@ shoelace: new FormValidation.plugins.Shoelace({
 
     <section class="mv5">
         <div class="flex">
-            <PrevButton href="/guide/plugins/sequence/">Sequence plugin</PrevButton>
-            <NextButton href="/guide/plugins/spectre/">Spectre plugin</NextButton>
+            <PrevButton target="/guide/plugins/sequence">Sequence plugin</PrevButton>
+            <NextButton target="/guide/plugins/spectre">Spectre plugin</NextButton>
         </div>
     </section>
 </GuideLayout>

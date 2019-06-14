@@ -49,14 +49,14 @@ const res2 = ${item.code.toLowerCase()}Vat().validate('${invalidSample}');
     <section class="mv5">
         <div class="flex">
             {#if index === 0}
-            <PrevButton href="/guide/validators/vat/">vat validator</PrevButton>
+            <PrevButton target="/guide/validators/vat">vat validator</PrevButton>
             {:else}
-            <PrevButton href="/guide/validators/vat/{slug(data[index - 1].adjective)}-vat-number/">{data[index - 1].adjective} vat validator</PrevButton>
+            <PrevButton target="/guide/validators/vat/{slug(data[index - 1].adjective)}-vat-number">{data[index - 1].adjective} vat validator</PrevButton>
             {/if}
             {#if index === numVatValidators - 1}
-            <NextButton href="/guide/validators/vin/">vin validator</NextButton>
+            <NextButton target="/guide/validators/vin">vin validator</NextButton>
             {:else}
-            <NextButton href="/guide/validators/vat/{slug(data[index + 1].adjective)}-vat-number/">{data[index + 1].adjective} vat validator</NextButton>
+            <NextButton target="/guide/validators/vat/{slug(data[index + 1].adjective)}-vat-number">{data[index + 1].adjective} vat validator</NextButton>
             {/if}
         </div>
     </section>

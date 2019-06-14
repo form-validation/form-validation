@@ -7,15 +7,15 @@
     
     <section class="mv5">
         <p class="lh-copy">Sometime the user need to fill multiple fields in form, also each of them must be unique. Any of them has to be different to the remaining.
-            You might think of using the <a href="/guide/validators/different/" class="blue dim link">different</a> validator which requires two fields to be different to each other,
+            You might think of using the <a href="/guide/validators/different" class="blue dim link">different</a> validator which requires two fields to be different to each other,
             such as an username and password shouldn't be the same. In our case, the different validator isn't useful because the number of fields
             for doing comparison are unknown.</p>
         <p class="lh-copy">The form in this example asks user to provide some email addresses. User is also required to fill at least one email address.
             Each of them, if present, must be unique. This kind of form can be seen in a lot of forms nowadays.</p>
         <p class="lh-copy">The approach illustrated in this example is that:</p>
         <ul class="ma0 pl3 lh-copy">
-            <li>Use the <a href="/guide/validators/email-address/" class="blue dim link">emailAddress</a> validator to ensure each field need to be a valid email address</li>
-            <li>Use the <a href="/guide/validators/callback/" class="blue dim link">callback</a> validator to check if the list of email addresses consist duplicated item</li>
+            <li>Use the <a href="/guide/validators/email-address" class="blue dim link">emailAddress</a> validator to ensure each field need to be a valid email address</li>
+            <li>Use the <a href="/guide/validators/callback" class="blue dim link">callback</a> validator to check if the list of email addresses consist duplicated item</li>
             <li>If all fields pass these validators, we then use the <code>updateFieldStatus()</code> method to set them as valid fields</li>
         </ul>
         <p class="lh-copy">That are straight forward steps. The next sections show the implementation in details.</p>
@@ -131,7 +131,7 @@ const fv = FormValidation.formValidation(
 <input type="text" class="js-user-email" name="user.email[2]" />
 <input type="text" class="js-user-email" name="user.email[3]" />
 `} />
-        <p class="lh-copy">and then use the <a href="/guide/getting-started/field-selector/" class="blue dim link">selector</a> option to apply the same set of validation rules for them:</p>
+        <p class="lh-copy">and then use the <a href="/guide/getting-started/field-selector" class="blue dim link">selector</a> option to apply the same set of validation rules for them:</p>
         <div class="mb4">
 <SampleCode lang="javascript" code={`
 const form = document.getElementById('demoForm');

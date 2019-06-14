@@ -9,10 +9,10 @@
     <section class="mv5">
         <Heading>New features</Heading>
         <ul class="pa0 ma0 ml3 lh-copy">
-            <li>Add <a class="blue dim link" href="/guide/validators/credit-card/">creditCard validator</a></li>
-            <li>Add <a class="blue dim link" href="/guide/validators/different/">different validator</a></li>
+            <li>Add <a href="/guide/validators/credit-card" class="blue dim link">creditCard validator</a></li>
+            <li>Add <a href="/guide/validators/different" class="blue dim link">different validator</a></li>
             <li>Add custom submit handler using <code>submitHandler</code> option</li>
-            <li>Add <a class="blue dim link" href="/guide/validators/callback/">callback validator</a></li>
+            <li>Add <a href="/guide/validators/callback" class="blue dim link">callback validator</a></li>
             <li>Add <code>live</code> option</li>
         </ul>
     </section>
@@ -27,7 +27,7 @@
     <section class="mv5">
         <Heading>Bug fixes</Heading>
         <ul class="pa0 ma0 ml3 lh-copy">
-            <li>The <a class="blue dim link" href="/guide/validators/regexp/">regexp validator</a> does not work</li>
+            <li>The <a href="/guide/validators/regexp" class="blue dim link">regexp validator</a> does not work</li>
         </ul>
     </section>
 </ChangelogLayout>

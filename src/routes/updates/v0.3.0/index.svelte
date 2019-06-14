@@ -9,7 +9,7 @@
     <section class="mv5">
         <Heading>New features</Heading>
         <ul class="pa0 ma0 ml3 lh-copy">
-            <li>Add <a class="blue dim link" href="/guide/validators/choice/"><code>choice</code> validator</a></li>
+            <li>Add <a href="/guide/validators/choice" class="blue dim link"><code>choice</code> validator</a></li>
             <li>Add method to validate form manually</li>
             <li><i class="fa fa-star"></i> Rewrite entirely using Deferred</li>
             <li>Add optional feedback icons</li>
@@ -20,14 +20,14 @@
     <section class="mv5">
         <Heading>Improvements</Heading>
         <ul class="pa0 ma0 ml3 lh-copy">
-            <li>The <a class="blue dim link" href="/guide/validators/remote/">remote validator</a> supports dynamic data</li>
+            <li>The <a href="/guide/validators/remote" class="blue dim link">remote validator</a> supports dynamic data</li>
             <li>Disable submit button on successful form submit</li>
             <li>Add submit button to <code>submitHandler()</code> parameter</li>
             <li>Don't validate disabled element</li>
             <li>Add example for Rail field convention</li>
             <li>Update the installation guide</li>
-            <li>Support <a class="blue dim link" href="/guide/validators/zip-code/">Danish zip code</a></li>
-            <li>Support <a class="blue dim link" href="/guide/validators/zip-code/">Sweden zip code</a></li>
+            <li>Support <a href="/guide/validators/zip-code" class="blue dim link">Danish zip code</a></li>
+            <li>Support <a href="/guide/validators/zip-code" class="blue dim link">Sweden zip code</a></li>
             <li>Support custom grid columns</li>
             <li>Show all errors</li>
             <li>Describe which version should be included in the Usage section</li>
@@ -38,9 +38,9 @@
         <Heading>Bug fixes</Heading>
         <ul class="pa0 ma0 ml3 lh-copy">
             <li>Submit after submit doesn't work</li>
-            <li>Fix <a class="blue dim link" href="/guide/validators/not-empty/">notEmpty validator</a> for radios and checkboxes</li>
-            <li>The plugin doesn't validate other fields if the <a class="blue dim link" href="/guide/validators/remote/">remote validator</a> returns <code>true</code></li>
-            <li>The <a class="blue dim link" href="/guide/validators/callback/">callback validator</a> passes wrong parameter</li>
+            <li>Fix <a href="/guide/validators/not-empty" class="blue dim link">notEmpty validator</a> for radios and checkboxes</li>
+            <li>The plugin doesn't validate other fields if the <a href="/guide/validators/remote" class="blue dim link">remote validator</a> returns <code>true</code></li>
+            <li>The <a href="/guide/validators/callback" class="blue dim link">callback validator</a> passes wrong parameter</li>
         </ul>
     </section>
 </ChangelogLayout>

@@ -28,8 +28,8 @@
             <li>
                 <i class="fa fa-star"></i> <strong>Support dynamic option</strong>:
                 <ul class="pa0 ma0 ml3 lh-copy">
-                    <li><a class="blue dim link" href="/guide/validators/between/">between</a>, <a class="blue dim link" href="/guide/validators/greater-than/">greaterThan</a>, <a class="blue dim link" href="/guide/validators/less-than/">lessThan</a> add support for comparing to other field, return value of a callback function</li>
-                    <li><a class="blue dim link" href="/guide/validators/zip-code/">zipCode validator</a> allow to set the country code via another field or callback</li>
+                    <li><a href="/guide/validators/between" class="blue dim link">between</a>, <a href="/guide/validators/greater-than/">greaterThan</a>, <a href="/guide/validators/less-than" class="blue dim link">lessThan</a> add support for comparing to other field, return value of a callback function</li>
+                    <li><a href="/guide/validators/zip-code" class="blue dim link">zipCode validator</a> allow to set the country code via another field or callback</li>
                 </ul>
             </li>
             <li>
@@ -66,10 +66,10 @@
             <li>
                 <strong>Misc</strong>:
                 <ul class="pa0 ma0 ml3 lh-copy">
-                    <li>Add <code>separator</code> option for the <a class="blue dim link" href="/guide/validators/date/">date validator</a></li>
-                    <li>Add UK phone number support for the <a class="blue dim link" href="/guide/validators/phone/">phone validator</a></li>
-                    <li>Add <code>$field</code> instance to the <a class="blue dim link" href="/guide/validators/callback/">callback validator</a></li>
-                    <li>Add Singapore postal code for the <a class="blue dim link" href="/guide/validators/zip-code/">zipCode validator</a></li>
+                    <li>Add <code>separator</code> option for the <a href="/guide/validators/date" class="blue dim link">date validator</a></li>
+                    <li>Add UK phone number support for the <a href="/guide/validators/phone" class="blue dim link">phone validator</a></li>
+                    <li>Add <code>$field</code> instance to the <a href="/guide/validators/callback" class="blue dim link">callback validator</a></li>
+                    <li>Add Singapore postal code for the <a href="/guide/validators/zip-code" class="blue dim link">zipCode validator</a></li>
                 </ul>
             </li>
         </ul>
@@ -90,12 +90,12 @@
             <li>Improve the <code>updateStatus()</code> method. The plugin now doesn't show the errors, feedback icons of given field if there are uncompleted validators</li>
             <li>Fix feedback icons in <code>input-group</code></li>
             <li>Only send the submit button which is clicked</li>
-            <li>The <a class="blue dim link" href="/guide/validators/uri/">uri validator</a> now provides an option to support private/local network address</li>
+            <li>The <a href="/guide/validators/uri" class="blue dim link">uri validator</a> now provides an option to support private/local network address</li>
             <li>Clicking the feedback icon also effect to the checkbox, radio fields</li>
             <li>Don't change the enable setting when the new one is the same</li>
             <li><i class="fa fa-star"></i> Add JSHint to Grunt build</li>
             <li>Allow to override the default options. Useful for using multiple forms in the same page</li>
-            <li>The <a class="blue dim link" href="/guide/validators/remote/">remote validator</a> adds support for dynamic <code>url</code> and method type (GET/POST)</li>
+            <li>The <a href="/guide/validators/remote" class="blue dim link">remote validator</a> adds support for dynamic <code>url</code> and method type (GET/POST)</li>
             <li>Add test suite</li>
             <li>Add built time to the build file</li>
             <li>Define the callback via <code>data-bv-callback-callback</code> attribute</li>
@@ -107,22 +107,22 @@
     <section class="mv5">
         <Heading>Bug fixes</Heading>
         <ul class="pa0 ma0 ml3 lh-copy">
-            <li>Fix <a class="blue dim link" href="/guide/validators/date/">date validator</a> issue on IE8</li>
+            <li>Fix <a href="/guide/validators/date" class="blue dim link">date validator</a> issue on IE8</li>
             <li>Fix identical validator issue with not clearing <code>has-error</code> class</li>
-            <li>Fix <code>inclusive</code> option in the <a class="blue dim link" href="/guide/validators/between/">between</a>, <a class="blue dim link" href="/guide/validators/greater-than/">greaterThan</a> and <a class="blue dim link" href="/guide/validators/less-than/">lessThan</a> validators</li>
-            <li>The <a class="blue dim link" href="/guide/validators/date/">date validator</a> still return valid if the value doesn't contain digits</li>
+            <li>Fix <code>inclusive</code> option in the <a href="/guide/validators/between" class="blue dim link">between</a>, <a href="/guide/validators/greater-than/">greaterThan</a> and <a href="/guide/validators/less-than" class="blue dim link">lessThan</a> validators</li>
+            <li>The <a href="/guide/validators/date" class="blue dim link">date validator</a> still return valid if the value doesn't contain digits</li>
             <li>file validation extension is case sensitive</li>
-            <li>Fix the <a class="blue dim link" href="/guide/validators/file/">file validator</a> issue on IE 8</li>
-            <li>The <a class="blue dim link" href="/guide/validators/credit-card/">creditCard validator</a> doesn't work on IE 8</li>
-            <li>The <a class="blue dim link" href="/guide/validators/cvv/">cvv validator</a> doesn't work on IE 8</li>
+            <li>Fix the <a href="/guide/validators/file" class="blue dim link">file validator</a> issue on IE 8</li>
+            <li>The <a href="/guide/validators/credit-card" class="blue dim link">creditCard validator</a> doesn't work on IE 8</li>
+            <li>The cvv validator doesn't work on IE 8</li>
             <li>The <code>threshold</code> option doesn't work on IE 8</li>
-            <li>The <a class="blue dim link" href="/guide/validators/zip-code/">zipCode validator</a> doesn't work for Canadian zip code</li>
+            <li>The <a href="/guide/validators/zip-code" class="blue dim link">zipCode validator</a> doesn't work for Canadian zip code</li>
             <li>Added the letters 'H', 'W' and 'Z' in letter list for Canada postal code</li>
-            <li>Don't submit form when the <a class="blue dim link" href="/guide/validators/callback/">callback validator</a> completes and the submit button isn't clicked</li>
-            <li>The <a class="blue dim link" href="/guide/validators/id/">id</a>, <a class="blue dim link" href="/guide/validators/vat/">vat</a> validators should return <code>false</code> if the country code is not supported</li>
+            <li>Don't submit form when the <a href="/guide/validators/callback" class="blue dim link">callback validator</a> completes and the submit button isn't clicked</li>
+            <li>The <a href="/guide/validators/id" class="blue dim link">id</a>, <a href="/guide/validators/vat" class="blue dim link">vat</a> validators should return <code>false</code> if the country code is not supported</li>
             <li>When using multiple forms with HTML attributes on the same page, the plugin options will be the same as the last one</li>
-            <li><a class="blue dim link" href="/guide/validators/string-length/">stringLength validator</a> allows spaces after max length</li>
-            <li>Fix the <a class="blue dim link" href="/guide/validators/ean/">ean validator</a> when the check digit is zero</li>
+            <li><a href="/guide/validators/string-length" class="blue dim link">stringLength validator</a> allows spaces after max length</li>
+            <li>Fix the <a href="/guide/validators/ean" class="blue dim link">ean validator</a> when the check digit is zero</li>
             <li>IPv6 validator doesn't work</li>
             <li>Custom trigger event is ignored by field validators</li>
             <li>Skip the <code>_isExcluded()</code> when initializing the form</li>

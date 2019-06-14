@@ -12,8 +12,8 @@
 
     <section class="mv5">
         <div class="flex">
-            <PrevButton href="/guide/api/get-fields/">getFields() method</PrevButton>
-            <NextButton href="/guide/api/get-plugin/">getPlugin() method</NextButton>
+            <PrevButton target="/guide/api/get-fields">getFields() method</PrevButton>
+            <NextButton target="/guide/api/get-plugin">getPlugin() method</NextButton>
         </div>
     </section>
 </GuideLayout>

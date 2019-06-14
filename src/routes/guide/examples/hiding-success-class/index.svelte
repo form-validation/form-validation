@@ -6,10 +6,10 @@
     <h1 class="tc lh-copy">Hiding success class</h1>
 
     <section class="mv5">
-        <p class="lh-copy">Based on the field status, the field and its container are marked as success or error element. For <a class="blue dim link" href="/guide/plugins/bootstrap/">Bootstrap</a> form,
+        <p class="lh-copy">Based on the field status, the field and its container are marked as success or error element. For <a href="/guide/plugins/bootstrap" class="blue dim link">Bootstrap</a> form,
             the plugin will add <code>.has-success</code> or <code>.has-danger</code> class to the container element. It also adds <code>.is-valid</code> or <code>.is-invalid</code> class to the field element.</p>
         <p class="lh-copy">If you think that it's better to indicate error status only due to the similarity of these status colors, you can remove <code>.has-success</code> class from the container.</p>
-        <p class="lh-copy">It can be done by triggering the <a class="blue dim link" href="/guide/events/core.element.validated/">core.element.validated</a> event as below:</p>
+        <p class="lh-copy">It can be done by triggering the <a href="/guide/events/core.element.validated" class="blue dim link">core.element.validated</a> event as below:</p>
         <div class="mb4">
 <SampleCode lang="javascript" code={`
 FormValidation

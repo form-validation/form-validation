@@ -4,7 +4,7 @@
 
 <GuideLayout>
     <h1 class="f3 f2-m f1-l tc">core.field.added event</h1>
-    <h2 class="f4 fw4 tc">Triggered after adding a field via the <a href="/guide/api/add-field/" class="blue dim link">addField()</a> method</h2>
+    <h2 class="f4 fw4 tc">Triggered after adding a field via the <a href="/guide/api/add-field" class="blue dim link">addField()</a> method</h2>
 
     <section class="mv5">
         <p class="lh-copy">The event object contains the following properties</p>
@@ -17,8 +17,8 @@
 
     <section class="mv5">
         <div class="flex">
-            <PrevButton href="/guide/events/core.element.validating/">core.element.validating event</PrevButton>
-            <NextButton href="/guide/events/core.field.invalid/">core.field.invalid event</NextButton>
+            <PrevButton target="/guide/events/core.element.validating">core.element.validating event</PrevButton>
+            <NextButton target="/guide/events/core.field.invalid">core.field.invalid event</NextButton>
         </div>
     </section>
 </GuideLayout>

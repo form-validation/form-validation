@@ -8,7 +8,7 @@
 
     <section class="mv5">
         <Heading>Usage</Heading>
-        <p class="lh-copy">If you want to have multiple instances of particular validator, such as different <a href="/guide/validators/callback/" class="blue dim link">callback</a> validators, the following approach doesn't work:</p>
+        <p class="lh-copy">If you want to have multiple instances of particular validator, such as different <a href="/guide/validators/callback" class="blue dim link">callback</a> validators, the following approach doesn't work:</p>
 <SampleCode lang="javascript" code={`
 FormValidation.formValidation(
     document.getElementById('demoForm'),
@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
     
     <section class="mv5">
         <Heading>Basic example</Heading>
-        <p class="lh-copy">The following example registers various methods to validate a password by different requirements, but all of them are alias of the <a href="/guide/validators/callback/" class="blue dim link">callback</a> validator:</p>
+        <p class="lh-copy">The following example registers various methods to validate a password by different requirements, but all of them are alias of the <a href="/guide/validators/callback" class="blue dim link">callback</a> validator:</p>
         <div class="mb4">
 <SampleCode lang="javascript" code={`
 FormValidation.formValidation(
@@ -147,8 +147,8 @@ FormValidation.formValidation(
 
     <section class="mv5">
         <div class="flex">
-            <PrevButton href="/guide/plugins/">Plugins</PrevButton>
-            <NextButton href="/guide/plugins/aria/">Aria plugin</NextButton>
+            <PrevButton target="/guide/plugins">Plugins</PrevButton>
+            <NextButton target="/guide/plugins/aria">Aria plugin</NextButton>
         </div>
     </section>
 </GuideLayout>

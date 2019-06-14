@@ -10,7 +10,7 @@
         <Heading>Options</Heading>
 
         <h3>Using with form field</h3>
-        <p class="lh-copy i"><sup>*</sup> presents a required option. The HTML attributes are used to set the validator options via the <a href="/guide/plugins/declarative/" class="blue dim link">Declarative</a> plugin</p>
+        <p class="lh-copy i"><sup>*</sup> presents a required option. The HTML attributes are used to set the validator options via the <a href="/guide/plugins/declarative" class="blue dim link">Declarative</a> plugin</p>
         <table class="collapse ba br2 b--black-10 pv2 ph3 w-100">
             <tr class="striped--light-gray">
                 <th class="pv2 ph3 tl f6 fw6 ttu">Name</th>
@@ -68,8 +68,8 @@ result is an object of
 
     <section class="mv5">
         <div class="flex">
-            <PrevButton href="/guide/validators/id/{slug(idData[idData.length - 1].adjective)}-identification-number/">{idData[idData.length - 1].adjective} id validator</PrevButton>
-            <NextButton href="/guide/validators/imei/">imei validator</NextButton>
+            <PrevButton target="/guide/validators/id/{slug(idData[idData.length - 1].adjective)}-identification-number">{idData[idData.length - 1].adjective} id validator</PrevButton>
+            <NextButton target="/guide/validators/imei">imei validator</NextButton>
         </div>
     </section>
 </GuideLayout>

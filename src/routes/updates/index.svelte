@@ -11,27 +11,27 @@
 
         <ul class="pa0 ma0 ml3 lh-copy">
             <li>Add verhoeff() helper method that implements the Verhoeff algorithm.</li>
-            <li>The <a class="blue dim link" href="/guide/validators/vat/">vat</a> validator supports <a class="blue dim link" href="/guide/validators/vat/argentinian-vat-number/">Argentinian VAT number</a>.</li>
+            <li>The <a href="/guide/validators/vat" class="blue dim link">vat</a> validator supports <a href="/guide/validators/vat/argentinian-vat-number" class="blue dim link">Argentinian VAT number</a>.</li>
         </ul>
 
-        <p class="lh-copy">The <a class="blue dim link" href="/guide/validators/id/">id</a> validator supports validating more national identification numbers, including:</p>
+        <p class="lh-copy">The <a href="/guide/validators/id" class="blue dim link">id</a> validator supports validating more national identification numbers, including:</p>
 
         <Cards>
-            <Card target="/guide/validators/id/argentinian-identification-number/" title="Argentinian identification number">(DNI)</Card>
-            <Card target="/guide/validators/id/colombian-identification-number/" title="Colombian identification number">(NIT)</Card>
-            <Card target="/guide/validators/id/french-identification-number/" title="French identification number">(NIR)</Card>
-            <Card target="/guide/validators/id/hong-kong-identification-number/" title="Hong Kong identification number">(HKID)</Card>
-            <Card target="/guide/validators/id/indian-identification-number/" title="Indian identification number">(Aadhaar)</Card>
-            <Card target="/guide/validators/id/korean-identification-number/" title="Korean identification number">(RRN)</Card>
-            <Card target="/guide/validators/id/malaysian-identification-number/" title="Malaysian identification number">(NRIC)</Card>
-            <Card target="/guide/validators/id/mexican-identification-number/" title="Mexican identification number">(CURP)</Card>
-            <Card target="/guide/validators/id/norwegian-identification-number/" title="Norwegian identification number">(Fødselsnummer)</Card>
-            <Card target="/guide/validators/id/peruvian-identification-number/" title="Peruvian identification number"></Card>
-            <Card target="/guide/validators/id/taiwanese-identification-number/" title="Taiwanese identification number"></Card>
-            <Card target="/guide/validators/id/uruguayan-identification-number/" title="Uruguayan identification number"></Card>
+            <Card target="/guide/validators/id/argentinian-identification-number" title="Argentinian identification number">(DNI)</Card>
+            <Card target="/guide/validators/id/colombian-identification-number" title="Colombian identification number">(NIT)</Card>
+            <Card target="/guide/validators/id/french-identification-number" title="French identification number">(NIR)</Card>
+            <Card target="/guide/validators/id/hong-kong-identification-number" title="Hong Kong identification number">(HKID)</Card>
+            <Card target="/guide/validators/id/indian-identification-number" title="Indian identification number">(Aadhaar)</Card>
+            <Card target="/guide/validators/id/korean-identification-number" title="Korean identification number">(RRN)</Card>
+            <Card target="/guide/validators/id/malaysian-identification-number" title="Malaysian identification number">(NRIC)</Card>
+            <Card target="/guide/validators/id/mexican-identification-number" title="Mexican identification number">(CURP)</Card>
+            <Card target="/guide/validators/id/norwegian-identification-number" title="Norwegian identification number">(Fødselsnummer)</Card>
+            <Card target="/guide/validators/id/peruvian-identification-number" title="Peruvian identification number"></Card>
+            <Card target="/guide/validators/id/taiwanese-identification-number" title="Taiwanese identification number"></Card>
+            <Card target="/guide/validators/id/uruguayan-identification-number" title="Uruguayan identification number"></Card>
         </Cards>
 
-        <h3>The <a class="blue dim link" href="/guide/plugins/declarative/">Declarative</a> plugin now supports plugin declarations</h3>
+        <h3>The <a href="/guide/plugins/declarative" class="blue dim link">Declarative</a> plugin now supports plugin declarations</h3>
 <SampleCode lang="html" code={`
 <form id="demoForm" method="POST"
     data-fvp-trigger="true"
@@ -121,10 +121,10 @@ const result = brId().validate('An ID here');
 
         <ul class="pa0 ma0 ml3 lh-copy mt4">       
             <li>Separate vat validators to <code>vat</code> package to save imports when using with ES6 module.</li>
-            <li>In the last version, the <a class="blue dim link" href="/guide/plugins/recaptcha/">Recaptcha plugin</a> doesn't hide the error message and error icon when user click the captcha checkbox.
+            <li>In the last version, the <a href="/guide/plugins/recaptcha" class="blue dim link">Recaptcha plugin</a> doesn't hide the error message and error icon when user click the captcha checkbox.
             The error icon disappears when the captcha is expired. This version fixes that.</li>
-            <li>Support the latest version of <a class="blue dim link" href="/guide/plugins/turret/">TurretCSS</a> (v5.1.3).</li>
-            <li>The <a class="blue dim link" href="/guide/validators/vat/">vat validator</a> supports <a class="blue dim link" href="/guide/validators/vat/swiss-vat-number/">Swiss VAT numbers</a> that end with TVA, IVA, TPV.</li>
+            <li>Support the latest version of <a href="/guide/plugins/turret" class="blue dim link">TurretCSS</a> (v5.1.3).</li>
+            <li>The <a href="/guide/validators/vat" class="blue dim link">vat validator</a> supports <a href="/guide/validators/vat/swiss-vat-number" class="blue dim link">Swiss VAT numbers</a> that end with TVA, IVA, TPV.</li>
         </ul>
     </section>
 
@@ -132,18 +132,18 @@ const result = brId().validate('An ID here');
         <Heading>Bug fixes</Heading>
         <ul class="pa0 ma0 ml3 lh-copy">
             <li>Upgrade source code to be compatible with the latest Tyescript version (3.4.4).</li>
-            <li>Fix an issue that the <a class="blue dim link" href="/guide/validators/ismn/">ismn validator</a> passes an invalid ISMN which ends with 0.</li>
-            <li>Fix an issue that the <a class="blue dim link" href="/guide/validators/meid/">meid validator</a> passes an invalid MEID which ends with 0.</li>
-            <li>The <a class="blue dim link" href="/guide/validators/iban/">iban validator</a> supports the new format of Costa Rica IBAN number (22 digits currently).</li>
-            <li>Fix an issue that <a class="blue dim link" href="/guide/plugins/icon/">icon</a> is displayed at wrong position for <a class="blue dim link" href="/guide/plugins/spectre/">Spectre</a> form.</li>
-            <li>Fix an issue that the <a class="blue dim link" href="/guide/plugins/message/">Message</a> plugin doesn't ignore field on IE11</li>
+            <li>Fix an issue that the <a href="/guide/validators/ismn" class="blue dim link">ismn validator</a> passes an invalid ISMN which ends with 0.</li>
+            <li>Fix an issue that the <a href="/guide/validators/meid" class="blue dim link">meid validator</a> passes an invalid MEID which ends with 0.</li>
+            <li>The <a href="/guide/validators/iban" class="blue dim link">iban validator</a> supports the new format of Costa Rica IBAN number (22 digits currently).</li>
+            <li>Fix an issue that <a href="/guide/plugins/icon" class="blue dim link">icon</a> is displayed at wrong position for <a href="/guide/plugins/spectre" class="blue dim link">Spectre</a> form.</li>
+            <li>Fix an issue that the <a href="/guide/plugins/message" class="blue dim link">Message</a> plugin doesn't ignore field on IE11</li>
         </ul>
     </section>
 
     <section class="mv5">
         <Heading>Upgrading to v1.4.0</Heading>
         <ul class="pa0 ma0 ml3 lh-copy">
-            <li>From v0.8.1 and older versions: Follow the <a class="blue dim link" href="/updates/v1.0.0/#upgrading-to-v1-0-0">Upgrading to v1.0.0</a> guide.</li>
+            <li>From v0.8.1 and older versions: Follow the <a href="/updates/v1.0.0/#upgrading-to-v1-0-0" class="blue dim link">Upgrading to v1.0.0</a> guide.</li>
             <li>From v1.0.0: Just download the new version and replace the old files in v1.0.0 with new files in v1.4.0.</li>
         </ul>
     </section>

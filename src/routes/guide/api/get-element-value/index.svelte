@@ -7,7 +7,7 @@
     <h2 class="f4 fw4 tc">Return the element value</h2>
 
     <section class="mv5">
-        <p class="lh-copy">The element value might be modified by the <code>field-value</code> filter, via the <a href="/guide/plugins/transformer/" class="blue dim link">Transformer</a> plugin, for example</p>
+        <p class="lh-copy">The element value might be modified by the <code>field-value</code> filter, via the <a href="/guide/plugins/transformer" class="blue dim link">Transformer</a> plugin, for example</p>
         <div class="mb3">
             <SampleCode lang="javascript" code={`getElementValue(field: String, ele: HTMLElement, validator: String): String`} />
         </div>
@@ -21,8 +21,8 @@
 
     <section class="mv5">
         <div class="flex">
-            <PrevButton href="/guide/api/get-elements/">getElements() method</PrevButton>
-            <NextButton href="/guide/api/get-fields/">getFields() method</NextButton>
+            <PrevButton target="/guide/api/get-elements">getElements() method</PrevButton>
+            <NextButton target="/guide/api/get-fields">getFields() method</NextButton>
         </div>
     </section>
 </GuideLayout>

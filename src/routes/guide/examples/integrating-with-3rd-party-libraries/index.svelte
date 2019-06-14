@@ -6,9 +6,9 @@
     <h1 class="tc lh-copy">Integrating with 3rd party libraries</h1>
     
     <section class="mv5">
-        <p class="lh-copy">Most UI libraries trigger an event after changing the field value. By using this kind of event handler, you need to ask FormValidation to revalidate the field using the <a href="/guide/api/revalidate-field/" class="blue dim link">revalidateField()</a> method.</p>
+        <p class="lh-copy">Most UI libraries trigger an event after changing the field value. By using this kind of event handler, you need to ask FormValidation to revalidate the field using the <a href="/guide/api/revalidate-field" class="blue dim link">revalidateField()</a> method.</p>
 
-        <p class="lh-copy">The following snippet demonstrates how to validate a field by using both <a href="/guide/validators/date/" class="blue dim link">date</a> validator and <a href="https://flatpickr.js.org/" class="blue dim link">flatpickr</a>, a lightweight and powerful datetime picker.</p>
+        <p class="lh-copy">The following snippet demonstrates how to validate a field by using both <a href="/guide/validators/date" class="blue dim link">date</a> validator and <a href="https://flatpickr.js.org" class="blue dim link">flatpickr</a>, a lightweight and powerful datetime picker.</p>
         <div class="mb3">
 <SampleCode lang="javascript" code={`
 const fv = FormValidation.formValidation(form, {

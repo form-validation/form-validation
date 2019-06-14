@@ -4,7 +4,7 @@
 
 <GuideLayout>
     <h1 class="f3 f2-m f1-l tc">core.form.reset event</h1>
-    <h2 class="f4 fw4 tc">Triggered after reseting the form via the <a href="/guide/api/reset-form/" class="blue dim link">resetForm()</a> method</h2>
+    <h2 class="f4 fw4 tc">Triggered after reseting the form via the <a href="/guide/api/reset-form" class="blue dim link">resetForm()</a> method</h2>
 
     <section class="mv5">
         <p class="lh-copy">The event object contains the following properties</p>
@@ -15,8 +15,8 @@
 
     <section class="mv5">
         <div class="flex">
-            <PrevButton href="/guide/events/core.form.notvalidated/">core.form.notvalidated event</PrevButton>
-            <NextButton href="/guide/events/core.form.valid/">core.form.valid event</NextButton>
+            <PrevButton target="/guide/events/core.form.notvalidated">core.form.notvalidated event</PrevButton>
+            <NextButton target="/guide/events/core.form.valid">core.form.valid event</NextButton>
         </div>
     </section>
 </GuideLayout>

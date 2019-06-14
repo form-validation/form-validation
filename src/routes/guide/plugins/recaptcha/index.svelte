@@ -226,8 +226,8 @@ echo $result;
 
     <section class="mv5">
         <div class="flex">
-            <PrevButton href="/guide/plugins/pure/">Pure plugin</PrevButton>
-            <NextButton href="/guide/plugins/semantic/">Semantic plugin</NextButton>
+            <PrevButton target="/guide/plugins/pure">Pure plugin</PrevButton>
+            <NextButton target="/guide/plugins/semantic">Semantic plugin</NextButton>
         </div>
     </section>
 </GuideLayout>

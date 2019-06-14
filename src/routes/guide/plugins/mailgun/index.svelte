@@ -8,7 +8,7 @@
 
     <section class="mv5">
         <Heading>Usage</Heading>
-        <p class="lh-copy"><a href="http://www.mailgun.com/" class="blue dim link">Mailgun</a> is one of most popular email services. It also provides free API to <a href="/guide/validators/email-address/" class="blue dim link">validate an email address</a> based on:</p>
+        <p class="lh-copy"><a href="http://www.mailgun.com" class="blue dim link">Mailgun</a> is one of most popular email services. It also provides free API to <a href="/guide/validators/email-address" class="blue dim link">validate an email address</a> based on:</p>
         <ul class="ma0 pl3 lh-copy">
             <li>Mailbox detection</li>
             <li>Syntax checks (RFC defined grammar)</li>
@@ -123,7 +123,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
                 <td class="pv2 ph3 lh-copy">hello@gail.com</td>
             </tr>
         </table>
-        <p class="lh-copy">The following sample code demonstrates how to use Mailgun plugin to validate email address which its form is made with <a href="/guide/plugins/tachyons/" class="blue dim link">Tachyons</a>:</p>
+        <p class="lh-copy">The following sample code demonstrates how to use Mailgun plugin to validate email address which its form is made with <a href="/guide/plugins/tachyons" class="blue dim link">Tachyons</a>:</p>
 <SampleCode lang="html" code={`
 <html>
 <head>
@@ -211,8 +211,8 @@ document.addEventListener('DOMContentLoaded', function(e) {
 
     <section class="mv5">
         <div class="flex">
-            <PrevButton href="/guide/plugins/l10n/">L10n plugin</PrevButton>
-            <NextButton href="/guide/plugins/mandatory-icon/">MandatoryIcon plugin</NextButton>
+            <PrevButton target="/guide/plugins/l10n">L10n plugin</PrevButton>
+            <NextButton target="/guide/plugins/mandatory-icon">MandatoryIcon plugin</NextButton>
         </div>
     </section>
 </GuideLayout>

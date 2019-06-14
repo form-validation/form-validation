@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
             <tr class="striped--light-gray">
                 <td class="pv2 ph3"><code>format</code> <sup>*</sup></td>
                 <td class="pv2 ph3">String</td>
-                <td class="pv2 ph3 lh-copy">The date format that both start and end dates have to follow. It's the same as the <code>format</code> option provided by the <a href="/guide/validators/date/" class="blue dim link">date</a> validator</td>
+                <td class="pv2 ph3 lh-copy">The date format that both start and end dates have to follow. It's the same as the <code>format</code> option provided by the <a href="/guide/validators/date" class="blue dim link">date</a> validator</td>
             </tr>
             <tr class="striped--light-gray">
                 <td class="pv2 ph3"><code>startDate</code> <sup>*</sup></td>
@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
                 </td>
             </tr>
         </table>
-        <p class="lh-copy">You don't have to define the <a href="/guide/validators/date/" class="blue dim link">date</a> validator rules for start and end date fiels, because it's handled by the StartEndDate plugin automatically.</p>
+        <p class="lh-copy">You don't have to define the <a href="/guide/validators/date" class="blue dim link">date</a> validator rules for start and end date fiels, because it's handled by the StartEndDate plugin automatically.</p>
     </section>
 
     <section class="mv5">
@@ -121,8 +121,8 @@ document.addEventListener('DOMContentLoaded', function(e) {
 
     <section class="mv5">
         <div class="flex">
-            <PrevButton href="/guide/plugins/spectre/">Spectre plugin</PrevButton>
-            <NextButton href="/guide/plugins/submit-button/">SubmitButton plugin</NextButton>
+            <PrevButton target="/guide/plugins/spectre">Spectre plugin</PrevButton>
+            <NextButton target="/guide/plugins/submit-button">SubmitButton plugin</NextButton>
         </div>
     </section>
 </GuideLayout>

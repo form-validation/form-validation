@@ -9,22 +9,22 @@
     <section class="mv5">
         <Heading>New features</Heading>
         <ul class="pa0 ma0 ml3 lh-copy">
-            <li>Add <code>dataType</code>, <code>crossDomain</code>, <code>validKey</code> options for <a class="blue dim link" href="/guide/validators/remote/">remote</a> validator.</li>
+            <li>Add <code>dataType</code>, <code>crossDomain</code>, <code>validKey</code> options for <a href="/guide/validators/remote" class="blue dim link">remote</a> validator.</li>
             <li>It's possible to use remote validator to connect to external validator API, such as MailGun.</li>
             <li>In addition to Bootstrap, Foundation, Pure, Semantic, UIKit, v0.6.1 provides the ability of supporting custom framework</li>
             <li>Add <code>declarative</code> option to support big form</li>
-            <li>Add Netherlands <a class="blue dim link" href="/guide/validators/phone/">phone</a> validator</li>
-            <li>Add Bulgarian <a class="blue dim link" href="/guide/validators/zip-code/">zip code</a> validator</li>
-            <li>Add Bulgarian <a class="blue dim link" href="/guide/validators/phone/">phone number</a> validator</li>
-            <li>Add Polish <a class="blue dim link" href="/guide/validators/zip-code/">zip code</a> and <a class="blue dim link" href="/guide/validators/id/">id</a> validators</li>
+            <li>Add Netherlands <a href="/guide/validators/phone" class="blue dim link">phone</a> validator</li>
+            <li>Add Bulgarian <a href="/guide/validators/zip-code" class="blue dim link">zip code</a> validator</li>
+            <li>Add Bulgarian <a href="/guide/validators/phone" class="blue dim link">phone number</a> validator</li>
+            <li>Add Polish <a href="/guide/validators/zip-code/">zip code</a> and <a href="/guide/validators/id" class="blue dim link">id</a> validators</li>
         </ul>
     </section>
 
     <section class="mv5">
         <Heading>Improvements</Heading>
         <ul class="pa0 ma0 ml3 lh-copy">
-            <li>The <a class="blue dim link" href="/guide/validators/remote/">remote</a> validator fails if Ajax request fails</li>
-            <li>Update Netherlands <a class="blue dim link" href="/guide/validators/phone/">phone number</a> validator</li>
+            <li>The <a href="/guide/validators/remote" class="blue dim link">remote</a> validator fails if Ajax request fails</li>
+            <li>Update Netherlands <a href="/guide/validators/phone" class="blue dim link">phone number</a> validator</li>
             <li>Add plugin instance to the 3rd parameter of transformer callback</li>
             <li>Add Grunt task that runs the jasmine test suites</li>
         </ul>
@@ -44,10 +44,10 @@
             <li>Submit incorrectly enabled even though form has errors</li>
             <li>Show the <code>validating</code> icon when the field is being validated</li>
             <li>Reset checkbox when calling <code>resetForm()</code> method</li>
-            <li>Fix Slovakia <a class="blue dim link" href="/guide/validators/phone/">phone number</a> validator</li>
+            <li>Fix Slovakia <a href="/guide/validators/phone" class="blue dim link">phone number</a> validator</li>
             <li>Fix the issue where custom validator doesn't provide default message</li>
             <li>Don't continue if there is no validators attached to fields</li>
-            <li><code>transformer</code> option doesn't work with <a class="blue dim link" href="/guide/validators/not-empty/">notEmpty</a> validator</li>
+            <li><code>transformer</code> option doesn't work with <a href="/guide/validators/not-empty" class="blue dim link">notEmpty</a> validator</li>
             <li>Fix <code>isValidContainer()</code> and <code>validateContainer()</code> methods to support fields with the same name</li>
         </ul>
     </section>

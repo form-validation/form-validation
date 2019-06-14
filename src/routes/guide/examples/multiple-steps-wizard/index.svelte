@@ -6,7 +6,7 @@
     <h1 class="tc lh-copy">Multiple steps wizard</h1>
     
     <section class="mv5">
-        <Tip>Use the <a href="/guide/plugins/wizard/" class="blue dim link">Wizard</a> plugin to support validating multiple steps form.</Tip>
+        <Tip>Use the <a href="/guide/plugins/wizard" class="blue dim link">Wizard</a> plugin to support validating multiple steps form.</Tip>
         <p class="lh-copy">In this example, you will learn how to use FormValidation to validate a multiple steps wizard. The wizard is actually a normal form but is split into multiple steps. By default, all steps are hidden except the active one.</p>
         <p class="lh-copy">We can imagine that the form is structured as following:</p>
 <SampleCode lang="html" code={`
@@ -102,7 +102,7 @@ const fv2 = FormValidation
     });
 `} />
         <p class="lh-copy">The sample code uses the built in method, <code>FormValidation.utils.classSet</code>, to set the CSS classes for given element.</p>
-        <p class="lh-copy">Now, we need to validate the current step when clicking the <span class="i">Next</span> button. It can be done via the <a href="/guide/api/validate/" class="blue dim link">validate()</a> method:</p>
+        <p class="lh-copy">Now, we need to validate the current step when clicking the <span class="i">Next</span> button. It can be done via the <a href="/guide/api/validate" class="blue dim link">validate()</a> method:</p>
 <SampleCode lang="javascript" code={`
 nextButton.addEventListener('click', function() {
     // When click the Next button, we will validate the current step

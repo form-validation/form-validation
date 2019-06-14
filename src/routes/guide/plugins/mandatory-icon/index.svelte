@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
 </html>
 `} />
         <p class="lh-copy">The sample code above assumes that the FormValidation files are placed inside the <code>vendors</code> directory. You might need to change the path depending on where you place them on the server.</p>
-        <p class="lh-copy">For example, to use the plugin with <a href="https://fontawesome.com/" class="blue dim link">FontAwesome</a>, we can set the <code>icon</code> option as:</p>
+        <p class="lh-copy">For example, to use the plugin with <a href="https://fontawesome.com" class="blue dim link">FontAwesome</a>, we can set the <code>icon</code> option as:</p>
 <SampleCode lang="javascript" code={`
 mandatoryIcon: new FormValidation.plugins.MandatoryIcon({
     icon: 'fa fa-asterisk',
@@ -81,8 +81,8 @@ icon: new FormValidation.plugins.Icon({
 
     <section class="mv5">
         <div class="flex">
-            <PrevButton href="/guide/plugins/mailgun/">Mailgun plugin</PrevButton>
-            <NextButton href="/guide/plugins/materialize/">Materialize plugin</NextButton>
+            <PrevButton target="/guide/plugins/mailgun">Mailgun plugin</PrevButton>
+            <NextButton target="/guide/plugins/materialize">Materialize plugin</NextButton>
         </div>
     </section>
 </GuideLayout>

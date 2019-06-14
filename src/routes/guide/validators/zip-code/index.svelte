@@ -10,7 +10,7 @@
         <Heading>Options</Heading>
 
         <h3>Using with form field</h3>
-        <p class="lh-copy i"><sup>*</sup> presents a required option. The HTML attributes are used to set the validator options via the <a href="/guide/plugins/declarative/" class="blue dim link">Declarative</a> plugin</p>
+        <p class="lh-copy i"><sup>*</sup> presents a required option. The HTML attributes are used to set the validator options via the <a href="/guide/plugins/declarative" class="blue dim link">Declarative</a> plugin</p>
         <table class="collapse ba br2 b--black-10 pv2 ph3 w-100">
             <tr class="striped--light-gray">
                 <th class="pv2 ph3 tl f6 fw6 ttu">Name</th>
@@ -31,7 +31,7 @@
                 <td class="pv2 ph3">The error message</td>
             </tr>
         </table>
-        <p class="lh-copy">If you want to support custom formats of a zipCode number, you should use the <a href="/guide/plugins/transformer/" class="blue dim link">Transformer</a> plugin.</p>
+        <p class="lh-copy">If you want to support custom formats of a zipCode number, you should use the <a href="/guide/plugins/transformer" class="blue dim link">Transformer</a> plugin.</p>
         <p class="lh-copy">The validator supports the following countries (click the sample number to validate it):</p>
 
         <table class="collapse ba br2 b--black-10 pv2 ph3 w-100">
@@ -62,7 +62,7 @@
         </table>
 
         <h3>US zipcode</h3>
-        <p class="lh-copy">This validator supports 4 digits US zipcode. If you want a valid US zipcode to be 5 digits exactly, use the <a href="/guide/validators/regexp/" class="blue dim link">regexp</a> validator</p>
+        <p class="lh-copy">This validator supports 4 digits US zipcode. If you want a valid US zipcode to be 5 digits exactly, use the <a href="/guide/validators/regexp" class="blue dim link">regexp</a> validator</p>
 <SampleCode lang="html" code={`
 <script-tag>
 document.addEventListener('DOMContentLoaded', function(e) {
@@ -240,8 +240,8 @@ const res2 = zipCode().validate({
 
     <section class="mv5">
         <div class="flex">
-            <PrevButton href="/guide/validators/vin/">vin validator</PrevButton>
-            <NextButton href="/guide/plugins/">Plugins</NextButton>
+            <PrevButton target="/guide/validators/vin">vin validator</PrevButton>
+            <NextButton target="/guide/plugins">Plugins</NextButton>
         </div>
     </section>
 </GuideLayout>

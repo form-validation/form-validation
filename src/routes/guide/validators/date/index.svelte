@@ -10,7 +10,7 @@
         <Heading>Options</Heading>
 
         <h3>Using with form field</h3>
-        <p class="lh-copy i"><sup>*</sup> presents a required option. The HTML attributes are used to set the validator options via the <a href="/guide/plugins/declarative/" class="blue dim link">Declarative</a> plugin</p>
+        <p class="lh-copy i"><sup>*</sup> presents a required option. The HTML attributes are used to set the validator options via the <a href="/guide/plugins/declarative" class="blue dim link">Declarative</a> plugin</p>
         <table class="collapse ba br2 b--black-10 pv2 ph3 w-100 mb4">
             <tr class="striped--light-gray">
                 <th class="pv2 ph3 tl f6 fw6 ttu">Name</th>
@@ -63,7 +63,7 @@
             <li>a Date object</li>
             <li>or a function that returns one of the two types above.</li>
         </ul>
-        <Tip>Use the <a href="/guide/plugins/start-end-date/" class="blue dim link">StartEndDate</a> plugin if you want to validate start and end dates</Tip>
+        <Tip>Use the <a href="/guide/plugins/start-end-date" class="blue dim link">StartEndDate</a> plugin if you want to validate start and end dates</Tip>
         <p class="lh-copy">The <code>format</code> can combine date, time, and AM/PM indicator sections:</p>
 
         <table class="collapse ba br2 b--black-10 pv2 ph3 w-100 mb4">
@@ -89,7 +89,7 @@
             </tr>
         </table>
 
-        <p class="lh-copy">The following table describes the token meanings, defined by <a href="http://momentjs.com/docs/#/displaying/format/" class="blue dim link">momentjs</a>, one of most popular JavaScript datetime library:</p>
+        <p class="lh-copy">The following table describes the token meanings, defined by <a href="http://momentjs.com/docs/#/displaying/format" class="blue dim link">momentjs</a>, one of most popular JavaScript datetime library:</p>
         <table class="collapse ba br2 b--black-10 pv2 ph3 w-100 mb4">
             <tr class="striped--light-gray">
                 <th class="pv2 ph3 tl f6 fw6 ttu">Token</th>
@@ -133,7 +133,7 @@
             </tr>
         </table>
 
-        <p class="lh-copy">The date validator requires day, month and year. If you are looking for hour and time validator, HH:mm, for example, you should use the <a href="/guide/validators/regexp/" class="blue dim link">regexp</a> validator.</p>
+        <p class="lh-copy">The date validator requires day, month and year. If you are looking for hour and time validator, HH:mm, for example, you should use the <a href="/guide/validators/regexp" class="blue dim link">regexp</a> validator.</p>
         <p class="lh-copy">Below are some example of possible formats:</p>
         <ul class="ma0 pl3 lh-copy">
             <li>YYYY/DD/MM</li>
@@ -152,7 +152,7 @@
             <li>DD-MM-YYYY</li>
             <li>DD-MM-YYYY h:m A</li>
         </ul>
-        <p class="lh-copy">It's possible to support other date format by using <a href="/guide/validators/callback/" class="blue dim link">callback</a> validator as shown in the <span class="i">Custom format example</span> below.</p>
+        <p class="lh-copy">It's possible to support other date format by using <a href="/guide/validators/callback" class="blue dim link">callback</a> validator as shown in the <span class="i">Custom format example</span> below.</p>
         <Tip>The date validator also checks the number of days in February of leap year. For example, 2000/02/29 is a valid date, while 2001/02/29 is invalid one</Tip>
 
         <h3>Using with ES6 module</h3>
@@ -234,8 +234,8 @@ const res2 = date().validate({
 
     <section class="mv5">
         <div class="flex">
-            <PrevButton href="/guide/validators/cusip/">cusip validator</PrevButton>
-            <NextButton href="/guide/validators/different/">different validator</NextButton>
+            <PrevButton target="/guide/validators/cusip">cusip validator</PrevButton>
+            <NextButton target="/guide/validators/different">different validator</NextButton>
         </div>
     </section>
 </GuideLayout>

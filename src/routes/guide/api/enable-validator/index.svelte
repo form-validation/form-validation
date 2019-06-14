@@ -24,8 +24,8 @@
 
     <section class="mv5">
         <div class="flex">
-            <PrevButton href="/guide/api/disable-validator/">disableValidator() method</PrevButton>
-            <NextButton href="/guide/api/get-elements/">getElements() method</NextButton>
+            <PrevButton target="/guide/api/disable-validator">disableValidator() method</PrevButton>
+            <NextButton target="/guide/api/get-elements">getElements() method</NextButton>
         </div>
     </section>
 </GuideLayout>

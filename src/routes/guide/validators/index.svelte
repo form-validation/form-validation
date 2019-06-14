@@ -16,7 +16,7 @@
 
         <Cards>
         {#each PopularValidators as v}
-            <Card target="/guide/validators/{camelCaseToDash(v.name)}/" title="{v.name}">{v.description}</Card>            
+            <Card target="/guide/validators/{camelCaseToDash(v.name)}" title="{v.name}">{v.description}</Card>            
         {/each}
         </Cards>
     </section>
@@ -27,18 +27,18 @@
         
         <Cards>
         {#each SpecialValidators as v}
-            <Card target="/guide/validators/{camelCaseToDash(v.name)}/" title="{v.name}">{v.description}</Card>
+            <Card target="/guide/validators/{camelCaseToDash(v.name)}" title="{v.name}">{v.description}</Card>
         {/each}
         </Cards>
 
-        <Tip>Look at the <a href="/guide/examples/creating-a-custom-validator/" class="blue dim link">custom validator</a> page to see how you can create and reuse your own validator</Tip>
+        <Tip>Look at the <a href="/guide/examples/creating-a-custom-validator" class="blue dim link">custom validator</a> page to see how you can create and reuse your own validator</Tip>
     </section>
 
     <section class="mv5">
         <Heading>Using validator globally</Heading>
 
         <p class="lh-copy">You can use any validator globally under the namespace <code>FormValidation.validators</code> in browser if the page includes the <code>FormValidation.min.js</code> or <code>FormValidation.full.min.js</code> script.</p>
-        <p class="lh-copy">The following sample code demonstrates how to use the <a href="/guide/validators/credit-card/" class="blue dim link">creditCard</a> validator to validate a credit card number:</p>
+        <p class="lh-copy">The following sample code demonstrates how to use the <a href="/guide/validators/credit-card" class="blue dim link">creditCard</a> validator to validate a credit card number:</p>
 
 <SampleCode lang="html" code={`
 <script-tag src="/vendors/formvalidation/dist/js/FormValidation.min.js"></script-tag>
@@ -63,8 +63,8 @@ document.addEventListener('DOMContentLoaded', function(e) {
     <section class="mv5">
         <Heading>Using validator in ES6 module</Heading>
 
-        <p class="lh-copy">All validators are able to be imported and used with ES6 module. It's super useful if you want to use validator with front-end frameworks (such as <a href="https://reactjs.org/" class="blue dim link">React</a>, 
-            <a href="https://vuejs.org/" class="blue dim link">VueJS</a>, <a href="https://svelte.technology/" class="blue dim link">Svelte</a>, .etc), or in server environment with NodeJS frameworks (such as <a href="https://expressjs.com/" class="blue dim link">Express</a>).
+        <p class="lh-copy">All validators are able to be imported and used with ES6 module. It's super useful if you want to use validator with front-end frameworks (such as <a href="https://reactjs.org" class="blue dim link">React</a>, 
+            <a href="https://vuejs.org" class="blue dim link">VueJS</a>, <a href="https://svelte.technology" class="blue dim link">Svelte</a>, .etc), or in server environment with NodeJS frameworks (such as <a href="https://expressjs.com" class="blue dim link">Express</a>).
         </p>
         <p class="lh-copy">The following snippet shows how to use the creditCard validator with ES6 module:</p>
 <SampleCode lang="javascript" code={`
@@ -84,8 +84,8 @@ const result = creditCard().validate({
 
     <section class="mv5">
         <div class="flex">
-            <PrevButton href="/guide/getting-started/">Getting started</PrevButton>
-            <NextButton href="/guide/validators/base64/">base64 validator</NextButton>
+            <PrevButton target="/guide/getting-started">Getting started</PrevButton>
+            <NextButton target="/guide/validators/base64">base64 validator</NextButton>
         </div>
     </section>
 </GuideLayout>

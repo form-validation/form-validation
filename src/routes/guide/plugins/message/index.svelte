@@ -129,63 +129,63 @@ FormValidation
             </tr>
             <tr class="striped--light-gray">
                 <td class="pv2 ph3">Bootstrap 3 framework</td>
-                <td class="pv2 ph3"><a href="/guide/plugins/bootstrap3/" class="blue dim link">Bootstrap 3</a></td>
+                <td class="pv2 ph3"><a href="/guide/plugins/bootstrap3" class="blue dim link">Bootstrap 3</a></td>
             </tr>
             <tr class="striped--light-gray">
                 <td class="pv2 ph3">Bootstrap 4 framework</td>
-                <td class="pv2 ph3"><a href="/guide/plugins/bootstrap/" class="blue dim link">Bootstrap</a></td>
+                <td class="pv2 ph3"><a href="/guide/plugins/bootstrap" class="blue dim link">Bootstrap</a></td>
             </tr>
             <tr class="striped--light-gray">
                 <td class="pv2 ph3">Bulma framework</td>
-                <td class="pv2 ph3"><a href="/guide/plugins/bulma/" class="blue dim link">Bulma</a></td>
+                <td class="pv2 ph3"><a href="/guide/plugins/bulma" class="blue dim link">Bulma</a></td>
             </tr>
             <tr class="striped--light-gray">
                 <td class="pv2 ph3">Foundation framework</td>
-                <td class="pv2 ph3"><a href="/guide/plugins/foundation/" class="blue dim link">Foundation</a></td>
+                <td class="pv2 ph3"><a href="/guide/plugins/foundation" class="blue dim link">Foundation</a></td>
             </tr>
             <tr class="striped--light-gray">
                 <td class="pv2 ph3">Materialize framework</td>
-                <td class="pv2 ph3"><a href="/guide/plugins/materialize/" class="blue dim link">Materialize</a></td>
+                <td class="pv2 ph3"><a href="/guide/plugins/materialize" class="blue dim link">Materialize</a></td>
             </tr>
             <tr class="striped--light-gray">
                 <td class="pv2 ph3">Milligram framework</td>
-                <td class="pv2 ph3"><a href="/guide/plugins/milligram/" class="blue dim link">Milligram</a></td>
+                <td class="pv2 ph3"><a href="/guide/plugins/milligram" class="blue dim link">Milligram</a></td>
             </tr>
             <tr class="striped--light-gray">
                 <td class="pv2 ph3">mini.css framework</td>
-                <td class="pv2 ph3"><a href="/guide/plugins/mini/" class="blue dim link">Mini</a></td>
+                <td class="pv2 ph3"><a href="/guide/plugins/mini" class="blue dim link">Mini</a></td>
             </tr>
             <tr class="striped--light-gray">
                 <td class="pv2 ph3">MUI framework</td>
-                <td class="pv2 ph3"><a href="/guide/plugins/mui/" class="blue dim link">Mui</a></td>
+                <td class="pv2 ph3"><a href="/guide/plugins/mui" class="blue dim link">Mui</a></td>
             </tr>
             <tr class="striped--light-gray">
                 <td class="pv2 ph3">Pure library</td>
-                <td class="pv2 ph3"><a href="/guide/plugins/pure/" class="blue dim link">Pure</a></td>
+                <td class="pv2 ph3"><a href="/guide/plugins/pure" class="blue dim link">Pure</a></td>
             </tr>
             <tr class="striped--light-gray">
                 <td class="pv2 ph3">Semantic UI framework</td>
-                <td class="pv2 ph3"><a href="/guide/plugins/semantic/" class="blue dim link">Semantic</a></td>
+                <td class="pv2 ph3"><a href="/guide/plugins/semantic" class="blue dim link">Semantic</a></td>
             </tr>
             <tr class="striped--light-gray">
                 <td class="pv2 ph3">Shoelace library</td>
-                <td class="pv2 ph3"><a href="/guide/plugins/shoelace/" class="blue dim link">Shoelace</a></td>
+                <td class="pv2 ph3"><a href="/guide/plugins/shoelace" class="blue dim link">Shoelace</a></td>
             </tr>
             <tr class="striped--light-gray">
                 <td class="pv2 ph3">Spectre framework</td>
-                <td class="pv2 ph3"><a href="/guide/plugins/spectre/" class="blue dim link">Spectre</a></td>
+                <td class="pv2 ph3"><a href="/guide/plugins/spectre" class="blue dim link">Spectre</a></td>
             </tr>
             <tr class="striped--light-gray">
                 <td class="pv2 ph3">Tachyons library</td>
-                <td class="pv2 ph3"><a href="/guide/plugins/tachyons/" class="blue dim link">Tachyons</a></td>
+                <td class="pv2 ph3"><a href="/guide/plugins/tachyons" class="blue dim link">Tachyons</a></td>
             </tr>
             <tr class="striped--light-gray">
                 <td class="pv2 ph3">turretcss framework</td>
-                <td class="pv2 ph3"><a href="/guide/plugins/turret/" class="blue dim link">Turret</a></td>
+                <td class="pv2 ph3"><a href="/guide/plugins/turret" class="blue dim link">Turret</a></td>
             </tr>
             <tr class="striped--light-gray">
                 <td class="pv2 ph3">UIkit framework</td>
-                <td class="pv2 ph3"><a href="/guide/plugins/uikit/" class="blue dim link">Uikit</a></td>
+                <td class="pv2 ph3"><a href="/guide/plugins/uikit" class="blue dim link">Uikit</a></td>
             </tr>
         </table>
         <p class="lh-copy">These plugins set the <code>clazz</code> and <code>container</code> options and then display the error message at the desired position. If you want the error messages to be shown at another area, set the <code>defaultMessageContainer</code> option as following snippet:</p>
@@ -230,8 +230,8 @@ FormValidation.formValidation(
 
     <section class="mv5">
         <div class="flex">
-            <PrevButton href="/guide/plugins/materialize/">Materialize plugin</PrevButton>
-            <NextButton href="/guide/plugins/milligram/">Milligram plugin</NextButton>
+            <PrevButton target="/guide/plugins/materialize">Materialize plugin</PrevButton>
+            <NextButton target="/guide/plugins/milligram">Milligram plugin</NextButton>
         </div>
     </section>
 </GuideLayout>

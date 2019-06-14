@@ -30,8 +30,8 @@ fv
 
     <section class="mv5">
         <div class="flex">
-            <PrevButton href="/guide/api/validate/">validate() method</PrevButton>
-            <NextButton href="/guide/api/validate-field/">validateField() method</NextButton>
+            <PrevButton target="/guide/api/validate">validate() method</PrevButton>
+            <NextButton target="/guide/api/validate-field">validateField() method</NextButton>
         </div>
     </section>
 </GuideLayout>

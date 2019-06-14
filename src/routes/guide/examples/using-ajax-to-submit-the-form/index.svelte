@@ -6,9 +6,9 @@
     <h1 class="tc lh-copy">Using Ajax to submit the form</h1>
     
     <section class="mv5">
-        <p class="lh-copy">After clicking the Submit button, all fields will be validated automatically if the <a href="/guide/plugins/submit-button/" class="blue dim link">SubmitButton</a> plugin is enabled. Usually you have two choices in the case all fields pass their validations:</p>
+        <p class="lh-copy">After clicking the Submit button, all fields will be validated automatically if the <a href="/guide/plugins/submit-button" class="blue dim link">SubmitButton</a> plugin is enabled. Usually you have two choices in the case all fields pass their validations:</p>
         <ul class="ma0 pl3 lh-copy">
-            <li>Submit the form to the server. It can be done via the <a href="/guide/plugins/default-submit/" class="blue dim link">DefaultSubmit</a> plugin</li>
+            <li>Submit the form to the server. It can be done via the <a href="/guide/plugins/default-submit" class="blue dim link">DefaultSubmit</a> plugin</li>
             <li>Send the form data to server via an Ajax request.</li>
         </ul>
         <p class="lh-copy">For the second scenario, you can handle the <code>core.form.valid</code> event as following</p>

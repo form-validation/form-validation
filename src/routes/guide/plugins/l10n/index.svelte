@@ -131,7 +131,7 @@ plugins: {
 
     <section class="mv5">
         <Heading>Switching locales</Heading>
-        <p class="lh-copy">The previous section introduces various ways to define the message in different locales. To switch messages between them (via a switcher control, for example), you need to call the <a href="/guide/api/set-locale/" class="blue dim link">setLocale()</a> method:</p>
+        <p class="lh-copy">The previous section introduces various ways to define the message in different locales. To switch messages between them (via a switcher control, for example), you need to call the <a href="/guide/api/set-locale" class="blue dim link">setLocale()</a> method:</p>
 <SampleCode lang="html" code={`
 <!-- To switch between locales. The data-locale attribute will be used later -->
 <button type="button" class="setLocaleButton" data-locale="en_US">English</button>
@@ -190,8 +190,8 @@ document.addEventListener('DOMContentLoaded', function(e) {
 
     <section class="mv5">
         <div class="flex">
-            <PrevButton href="/guide/plugins/j/">J plugin</PrevButton>
-            <NextButton href="/guide/plugins/mailgun/">Mailgun plugin</NextButton>
+            <PrevButton target="/guide/plugins/j">J plugin</PrevButton>
+            <NextButton target="/guide/plugins/mailgun">Mailgun plugin</NextButton>
         </div>
     </section>
 </GuideLayout>

@@ -27,7 +27,7 @@ fv
         ...
     });
 `} />
-        <p class="lh-copy">Look at the <a href="/guide/examples/integrating-with-3rd-party-libraries/" class="blue dim link">Integration</a> page to see more examples.</p>
+        <p class="lh-copy">Look at the <a href="/guide/examples/integrating-with-3rd-party-libraries" class="blue dim link">Integration</a> page to see more examples.</p>
     </section>
 
     <Examples examples={[
@@ -36,8 +36,8 @@ fv
 
     <section class="mv5">
         <div class="flex">
-            <PrevButton href="/guide/api/reset-form/">resetForm() method</PrevButton>
-            <NextButton href="/guide/api/set-locale/">setLocale() method</NextButton>
+            <PrevButton target="/guide/api/reset-form">resetForm() method</PrevButton>
+            <NextButton target="/guide/api/set-locale">setLocale() method</NextButton>
         </div>
     </section>
 </GuideLayout>

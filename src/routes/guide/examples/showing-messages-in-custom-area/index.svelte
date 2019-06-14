@@ -12,7 +12,7 @@
             <li>Messages are shown in a help panel located at the right of form</li>
             <li>Messages are shown in the last step of a wizard</li>
         </ul>
-        <p class="lh-copy">There are two ways to solve this requirement which are listed in the next sections. Both use different options provided by the <a href="/guide/plugins/message/" class="blue dim link">Message plugin</a>.</p>
+        <p class="lh-copy">There are two ways to solve this requirement which are listed in the next sections. Both use different options provided by the <a href="/guide/plugins/message" class="blue dim link">Message plugin</a>.</p>
     </section>
 
     <section class="mv5">

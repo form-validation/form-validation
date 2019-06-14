@@ -19,7 +19,7 @@
                 </div>
             </div>
         </div>
-        <div class="tc">Demo with form made by <a class="blue dim link" href="/guide/plugins/tachyons/" title="Tachyons framework">Tachyons</a></div>
+        <div class="tc">Demo with form made by <a href="/guide/plugins/tachyons" title="Tachyons framework" class="blue dim link">Tachyons</a></div>
     </div>
 
     <!-- Form body -->

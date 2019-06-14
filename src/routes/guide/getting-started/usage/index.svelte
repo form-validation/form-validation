@@ -110,11 +110,11 @@ document.addEventListener('DOMContentLoaded', function(e) {
                     The field name is defined by the <code>name</code> attribute, while the validator rules are defined by mapping the validator name to its options.
             </li>
         </ul>
-        <Tip>If the field name contains special characters such as ., [, ], you must wrap it between single or double quote. See the <a href="/guide/getting-started/special-field-name/" class="blue dim link">Special field name</a> page</Tip>
-        <Tip>If the field doesn't have the <code>name</code> attribute, you can use a <a href="/guide/getting-started/field-selector/" class="blue dim link">CSS selector</a> to specify it</Tip>
+        <Tip>If the field name contains special characters such as ., [, ], you must wrap it between single or double quote. See the <a href="/guide/getting-started/special-field-name" class="blue dim link">Special field name</a> page</Tip>
+        <Tip>If the field doesn't have the <code>name</code> attribute, you can use a <a href="/guide/getting-started/field-selector" class="blue dim link">CSS selector</a> to specify it</Tip>
         <p class="lh-copy">All validators provides a common option named <code>message</code> that will be used to inform user if the associated field is invalid.</p>
-        <Tip>The options can be updated on the fly with the <a href="/guide/api/update-validator-option/" class="blue dim link">updateValidatorOption()</a> method</Tip>
-        <p class="lh-copy">You don't need to remember the options of any validator, because you can refer to them in each <a href="/guide/validators/" class="blue dim link">validator</a> page.</p>
+        <Tip>The options can be updated on the fly with the <a href="/guide/api/update-validator-option" class="blue dim link">updateValidatorOption()</a> method</Tip>
+        <p class="lh-copy">You don't need to remember the options of any validator, because you can refer to them in each <a href="/guide/validators" class="blue dim link">validator</a> page.</p>
         <p class="lh-copy">Here is what we have been following so far:</p>
         <Demo prefix="/guide/getting-started/usage/writing-form" selected="Native" frameworks={['Native']} />
         <p class="lh-copy"><span class="b">Hey, I try to play with the form</span>. Neither clicking the <span class="i">Submit</span> button nor typing on the username or password field does perform any validations.</p>
@@ -124,7 +124,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
     <section class="mv5">
         <Heading>4. Adding plugins</Heading>
 
-        <p class="lh-copy">FormValidation is developed on plugin based architecture. Its solid, lighweight core libary only implements needed <a href="/guide/api/" class="blue dim link">methods</a> and connects <a href="/guide/plugins/" class="blue dim link">all plugins</a> together. We need to enable some basic plugins to
+        <p class="lh-copy">FormValidation is developed on plugin based architecture. Its solid, lighweight core libary only implements needed <a href="/guide/api" class="blue dim link">methods</a> and connects <a href="/guide/plugins" class="blue dim link">all plugins</a> together. We need to enable some basic plugins to
             make the validation works.</p>
         <p class="lh-copy">In order to enable a particular plugin, you need to insert the plugin script (if required) and map a name with its instance in the <code>plugins</code> option:</p>
 <SampleCode lang="html" code={`
@@ -170,10 +170,10 @@ document.addEventListener('DOMContentLoaded', function(e) {
         <p class="lh-copy">We are going to enable some plugins to make the validations happen:</p>
 
         <Cards cols="2">
-            <Card target="/guide/plugins/message/" title="Message">Display error message that is defined in each validator options</Card>
-            <Card target="/guide/plugins/trigger/" title="Trigger">Indicate the events which the validation will be executed.</Card>
-            <Card target="/guide/plugins/submit-button/" title="SubmitButton">Automatically validate the form when pressing its Submit button</Card>
-            <Card target="/guide/plugins/default-submit/" title="DefaultSubmit">Submit the form if all fields are valid after validating</Card>
+            <Card target="/guide/plugins/message" title="Message">Display error message that is defined in each validator options</Card>
+            <Card target="/guide/plugins/trigger" title="Trigger">Indicate the events which the validation will be executed.</Card>
+            <Card target="/guide/plugins/submit-button" title="SubmitButton">Automatically validate the form when pressing its Submit button</Card>
+            <Card target="/guide/plugins/default-submit" title="DefaultSubmit">Submit the form if all fields are valid after validating</Card>
         </Cards>
         
         <p class="lh-copy">Our demo page now looks like:</p>
@@ -224,9 +224,9 @@ document.addEventListener('DOMContentLoaded', function(e) {
         <Heading>5. Using with popular CSS frameworks</Heading>
 
         <p class="lh-copy">In the previous section, you learn how to use FormValidation with a native form. Nowadays, it's very common that you rely on a CSS framework to speed up the development. FormValidation brings support for a lot of popular CSS frameworks.
-            Each of them is supported by specific plugin which helps you minimize the integration parts such as automatically enabling the <a href="/guide/plugins/message/" class="blue dim link">Message</a> plugin, displaying the error messages at desired area instead of putting them at the bottom of form, etc.
+            Each of them is supported by specific plugin which helps you minimize the integration parts such as automatically enabling the <a href="/guide/plugins/message" class="blue dim link">Message</a> plugin, displaying the error messages at desired area instead of putting them at the bottom of form, etc.
         </p>
-        <p class="lh-copy">The following sample code is a starter page for using the <a href="/guide/plugins/bootstrap/" class="blue dim link">Bootstrap</a> plugin to validate a form made in the <a href="https://getbootstrap.com/" class="blue dim link">Bootstrap 4</a> framework:</p>
+        <p class="lh-copy">The following sample code is a starter page for using the <a href="/guide/plugins/bootstrap" class="blue dim link">Bootstrap</a> plugin to validate a form made in the <a href="https://getbootstrap.com" class="blue dim link">Bootstrap 4</a> framework:</p>
 <SampleCode lang="html" code={`
 <html>
 <head>
@@ -286,15 +286,15 @@ document.addEventListener('DOMContentLoaded', function(e) {
 
         <Cards>
         {#each ['Bootstrap', 'Bootstrap3', 'Bulma', 'Foundation', 'Materialize', 'Milligram', 'Mini', 'Mui', 'Pure', 'Semantic', 'Shoelace', 'Spectre', 'Tachyons', 'Turret', 'Uikit'] as framework, i}
-            <Card target="/guide/plugins/{framework.toLowerCase()}/" title="{framework}"></Card>
+            <Card target="/guide/plugins/{framework.toLowerCase()}" title="{framework}"></Card>
         {/each}
         </Cards>
     </section>
 
     <section class="mv5">
         <div class="flex">
-            <PrevButton href="/guide/getting-started/">Overview</PrevButton>
-            <NextButton href="/guide/getting-started/localization/">Localization</NextButton>
+            <PrevButton target="/guide/getting-started">Overview</PrevButton>
+            <NextButton target="/guide/getting-started/localization">Localization</NextButton>
         </div>
     </section>
 </GuideLayout>

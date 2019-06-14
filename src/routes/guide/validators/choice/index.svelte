@@ -10,7 +10,7 @@
         <Heading>Options</Heading>
 
         <h3>Using with form field</h3>
-        <p class="lh-copy i"><sup>*</sup> presents a required option. The HTML attributes are used to set the validator options via the <a href="/guide/plugins/declarative/" class="blue dim link">Declarative</a> plugin</p>
+        <p class="lh-copy i"><sup>*</sup> presents a required option. The HTML attributes are used to set the validator options via the <a href="/guide/plugins/declarative" class="blue dim link">Declarative</a> plugin</p>
         <table class="collapse ba br2 b--black-10 pv2 ph3 w-100">
             <tr class="striped--light-gray">
                 <th class="pv2 ph3 tl f6 fw6 ttu">Name</th>
@@ -64,7 +64,7 @@
                 </td>
             </tr>
             <tr class="striped--light-gray">
-                <td class="pv2 ph3"><a href="http://projects.spring.io/spring-framework/" class="blue dim link">Spring framework</a></td>
+                <td class="pv2 ph3"><a href="http://projects.spring.io/spring-framework" class="blue dim link">Spring framework</a></td>
                 <td class="pv2 ph3"><code>name</code></td>
                 <td class="pv2 ph3">
 <SampleCode lang="html" code={`
@@ -88,8 +88,8 @@
 
     <section class="mv5">
         <div class="flex">
-            <PrevButton href="/guide/validators/callback/">callback validator</PrevButton>
-            <NextButton href="/guide/validators/color/">color validator</NextButton>
+            <PrevButton target="/guide/validators/callback">callback validator</PrevButton>
+            <NextButton target="/guide/validators/color">color validator</NextButton>
         </div>
     </section>
 </GuideLayout>

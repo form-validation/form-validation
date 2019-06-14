@@ -8,7 +8,7 @@
 
     <section class="mv5">
         <Heading>Usage</Heading>
-        <p class="lh-copy">You have to use this plugin with <a href="/guide/plugins/submit-button/" class="blue dim link">SubmitButton</a> plugin which automatically validate the form when pressing the Submit button. The following piece of code is the starting point to use the AutoFocus plugin:</p>
+        <p class="lh-copy">You have to use this plugin with <a href="/guide/plugins/submit-button" class="blue dim link">SubmitButton</a> plugin which automatically validate the form when pressing the Submit button. The following piece of code is the starting point to use the AutoFocus plugin:</p>
 <SampleCode lang="html" code={`
 <html>
 <head>
@@ -62,8 +62,8 @@ document.addEventListener('DOMContentLoaded', function(e) {
 
     <section class="mv5">
         <div class="flex">
-            <PrevButton href="/guide/plugins/aria/">Aria plugin</PrevButton>
-            <NextButton href="/guide/plugins/bootstrap/">Bootstrap plugin</NextButton>
+            <PrevButton target="/guide/plugins/aria">Aria plugin</PrevButton>
+            <NextButton target="/guide/plugins/bootstrap">Bootstrap plugin</NextButton>
         </div>
     </section>
 </GuideLayout>

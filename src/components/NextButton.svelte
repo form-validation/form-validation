@@ -1,9 +1,9 @@
-<a href="{href}" class="ml-auto f3 pointer blue dim link pa2"><slot></slot> &rarr;</a>
+<a href="{target}" class="ml-auto f3 pointer blue dim link pa2"><slot></slot> &rarr;</a>
 
 <script>
-let href = '';
+let target = '';
 
 export {
-    href,
+    target,
 };
 </script>

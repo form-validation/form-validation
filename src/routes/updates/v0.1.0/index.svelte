@@ -10,19 +10,19 @@
         <Heading>Built-in Validators</Heading>
         <p class="lh-copy">The first release of BootstrapValidator is out with some built-in validators.</p>
         <ul class="pa0 ma0 ml3 lh-copy">
-            <li><a class="blue dim link" href="/guide/validators/between/">between validator</a></li>
-            <li><a class="blue dim link" href="/guide/validators/digits/">digits validator</a></li>
-            <li><a class="blue dim link" href="/guide/validators/email-address/">emailAddress validator</a></li>
-            <li><a class="blue dim link" href="/guide/validators/greater-than/">greaterThan validator</a></li>
-            <li><a class="blue dim link" href="/guide/validators/color/">color validator</a></li>
-            <li><a class="blue dim link" href="/guide/validators/identical/">identical validator</a></li>
-            <li><a class="blue dim link" href="/guide/validators/less-than/">lessThan validator</a></li>
-            <li><a class="blue dim link" href="/guide/validators/not-empty/">notEmpty validator</a></li>
-            <li><a class="blue dim link" href="/guide/validators/regexp/">regexp validator</a></li>
-            <li><a class="blue dim link" href="/guide/validators/remote/">remote validator</a></li>
-            <li><a class="blue dim link" href="/guide/validators/string-length/">stringLength validator</a></li>
-            <li><a class="blue dim link" href="/guide/validators/uri/">uri validator</a></li>
-            <li><a class="blue dim link" href="/guide/validators/zip-code/">zipCode validator</a></li>
+            <li><a href="/guide/validators/between" class="blue dim link">between validator</a></li>
+            <li><a href="/guide/validators/digits" class="blue dim link">digits validator</a></li>
+            <li><a href="/guide/validators/email-address" class="blue dim link">emailAddress validator</a></li>
+            <li><a href="/guide/validators/greater-than" class="blue dim link">greaterThan validator</a></li>
+            <li><a href="/guide/validators/color" class="blue dim link">color validator</a></li>
+            <li><a href="/guide/validators/identical" class="blue dim link">identical validator</a></li>
+            <li><a href="/guide/validators/less-than" class="blue dim link">lessThan validator</a></li>
+            <li><a href="/guide/validators/not-empty" class="blue dim link">notEmpty validator</a></li>
+            <li><a href="/guide/validators/regexp" class="blue dim link">regexp validator</a></li>
+            <li><a href="/guide/validators/remote" class="blue dim link">remote validator</a></li>
+            <li><a href="/guide/validators/string-length" class="blue dim link">stringLength validator</a></li>
+            <li><a href="/guide/validators/uri" class="blue dim link">uri validator</a></li>
+            <li><a href="/guide/validators/zip-code" class="blue dim link">zipCode validator</a></li>
         </ul>
     </section>
 </ChangelogLayout>

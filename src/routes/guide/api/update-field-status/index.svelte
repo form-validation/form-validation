@@ -30,8 +30,8 @@
 
     <section class="mv5">
         <div class="flex">
-            <PrevButton href="/guide/api/update-element-status/">updateElementStatus() method</PrevButton>
-            <NextButton href="/guide/api/update-validator-option/">updateValidatorOption() method</NextButton>
+            <PrevButton target="/guide/api/update-element-status">updateElementStatus() method</PrevButton>
+            <NextButton target="/guide/api/update-validator-option">updateValidatorOption() method</NextButton>
         </div>
     </section>
 </GuideLayout>

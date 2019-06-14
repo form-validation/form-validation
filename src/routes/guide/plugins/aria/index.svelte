@@ -64,8 +64,8 @@ document.addEventListener('DOMContentLoaded', function(e) {
 
     <section class="mv5">
         <div class="flex">
-            <PrevButton href="/guide/plugins/alias/">Alias plugin</PrevButton>
-            <NextButton href="/guide/plugins/auto-focus/">AutoFocus plugin</NextButton>
+            <PrevButton target="/guide/plugins/alias">Alias plugin</PrevButton>
+            <NextButton target="/guide/plugins/auto-focus">AutoFocus plugin</NextButton>
         </div>
     </section>
 </GuideLayout>

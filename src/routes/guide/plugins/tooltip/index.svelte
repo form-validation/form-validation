@@ -8,7 +8,7 @@
 
     <section class="mv5">
         <Heading>Usage</Heading>
-        <p class="lh-copy">You have to use this plugin with <a href="/guide/plugins/icon/" class="blue dim link">Icon</a> plugin which displays different icons depending on the field validity. The error message then will be shown inside a tooltip when you click or hover on the icon.</p>
+        <p class="lh-copy">You have to use this plugin with <a href="/guide/plugins/icon" class="blue dim link">Icon</a> plugin which displays different icons depending on the field validity. The error message then will be shown inside a tooltip when you click or hover on the icon.</p>
         <p class="lh-copy">The following piece of code is the starting point to use the Tooltip plugin:</p>
 <SampleCode lang="html" code={`
 <html>
@@ -88,11 +88,11 @@ document.addEventListener('DOMContentLoaded', function(e) {
             </tr>
         </table>
 
-        <p class="lh-copy">Same as the <a href="/guide/plugins/icon/" class="blue dim link">Icon</a> plugin, the Tooltip plugin only supports the form made in the following CSS frameworks:</p>
+        <p class="lh-copy">Same as the <a href="/guide/plugins/icon" class="blue dim link">Icon</a> plugin, the Tooltip plugin only supports the form made in the following CSS frameworks:</p>
 
         <Cards>
             {#each _frameworks as p}
-            <Card target="/guide/plugins/{p.toLowerCase()}/" title="{p}"></Card>
+            <Card target="/guide/plugins/{p.toLowerCase()}" title="{p}"></Card>
             {/each}
         </Cards>
 
@@ -137,8 +137,8 @@ FormValidation.formValidation(
 
     <section class="mv5">
         <div class="flex">
-            <PrevButton href="/guide/plugins/tachyons/">Tachyons plugin</PrevButton>
-            <NextButton href="/guide/plugins/transformer/">Transformer plugin</NextButton>
+            <PrevButton target="/guide/plugins/tachyons">Tachyons plugin</PrevButton>
+            <NextButton target="/guide/plugins/transformer">Transformer plugin</NextButton>
         </div>
     </section>
 </GuideLayout>

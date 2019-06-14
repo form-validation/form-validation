@@ -46,7 +46,7 @@ FormValidation.formValidation(document.getElementById('signupForm'), {
     },
 });
 `} />
-        <p class="lh-copy">After each key stroke, all validators will perform their jobs. Some of them might be expensive tasks such as checking the validity in the server side via the <a href="/guide/validators/remote/" class="blue dim link">remote</a> validator.</p>
+        <p class="lh-copy">After each key stroke, all validators will perform their jobs. Some of them might be expensive tasks such as checking the validity in the server side via the <a href="/guide/validators/remote" class="blue dim link">remote</a> validator.</p>
         <p class="lh-copy">It is better if the expensive validator is performed at the end when the field passes all other remaining validators. It reduces the number of server side requests (for example, it will not hit the database server to check if an username is taken).
             Also, our users don't have to wait for these validators to run and return the results. It brings a better user experience.</p>
         <p class="lh-copy">The Sequence plugin is handy for this requirement. It will stop performing a given validator if the field does not pass the previous validator.</p>
@@ -134,8 +134,8 @@ enabled: {
 
     <section class="mv5">
         <div class="flex">
-            <PrevButton href="/guide/plugins/semantic/">Semantic plugin</PrevButton>
-            <NextButton href="/guide/plugins/shoelace/">Shoelace plugin</NextButton>
+            <PrevButton target="/guide/plugins/semantic">Semantic plugin</PrevButton>
+            <NextButton target="/guide/plugins/shoelace">Shoelace plugin</NextButton>
         </div>
     </section>
 </GuideLayout>

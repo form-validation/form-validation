@@ -14,7 +14,7 @@
             <li>The row state is now only marked as success if all fields on it are valid</li>
             <li>Add support for element outside of form using the <code>selector</code> option</li>
             <li>User doesn't need to submit the form twice when remote validator complete</li>
-            <li>The <a class="blue dim link" href="/guide/validators/phone/">phone validator</a> now also checks the length of US phone number</li>
+            <li>The <a href="/guide/validators/phone" class="blue dim link">phone validator</a> now also checks the length of US phone number</li>
         </ul>
     </section>
 

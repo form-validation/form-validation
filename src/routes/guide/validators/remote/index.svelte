@@ -10,7 +10,7 @@
         <Heading>Options</Heading>
 
         <h3>Using with form field</h3>
-        <p class="lh-copy i"><sup>*</sup> presents a required option. The HTML attributes are used to set the validator options via the <a href="/guide/plugins/declarative/" class="blue dim link">Declarative</a> plugin</p>
+        <p class="lh-copy i"><sup>*</sup> presents a required option. The HTML attributes are used to set the validator options via the <a href="/guide/plugins/declarative" class="blue dim link">Declarative</a> plugin</p>
         <table class="collapse ba br2 b--black-10 pv2 ph3 w-100 mb4">
             <tr class="striped--light-gray">
                 <th class="pv2 ph3 tl f6 fw6 ttu">Name</th>
@@ -399,7 +399,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
         <h3>Using different names for same field</h3>
         <p class="lh-copy">For example, the <span class="i">Sign up</span> and <span class="i">Profile</span> forms use the same back-end URL to validate the email address which is declared with different name.</p>
         <p class="lh-copy">In this case, use the same <code>data-fv-remote___name</code> attribute and the back-end will get the same data key.</p>
-        <Tip heading="Note">Remember to use the <a href="/guide/plugins/declarative/" class="blue dim link">Declarative</a> plugin to turn on the validator options with the equivalent HTML attributes</Tip>
+        <Tip heading="Note">Remember to use the <a href="/guide/plugins/declarative" class="blue dim link">Declarative</a> plugin to turn on the validator options with the equivalent HTML attributes</Tip>
 
 <SampleCode lang="html" code={`
 // In the signup form, the email address field is named as "login"
@@ -461,8 +461,8 @@ document.addEventListener('DOMContentLoaded', function(e) {
 
     <section class="mv5">
         <div class="flex">
-            <PrevButton href="/guide/validators/regexp/">regexp validator</PrevButton>
-            <NextButton href="/guide/validators/rtn/">rtn validator</NextButton>
+            <PrevButton target="/guide/validators/regexp">regexp validator</PrevButton>
+            <NextButton target="/guide/validators/rtn">rtn validator</NextButton>
         </div>
     </section>
 </GuideLayout>

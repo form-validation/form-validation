@@ -45,14 +45,14 @@ const res2 = ${item.code.toLowerCase()}Id().validate('${invalidSample}');
     <section class="mv5">
         <div class="flex">
             {#if index === 0}
-            <PrevButton href="/guide/validators/id/">id validator</PrevButton>
+            <PrevButton target="/guide/validators/id">id validator</PrevButton>
             {:else}
-            <PrevButton href="/guide/validators/id/{slug(data[index - 1].adjective)}-identification-number/">{data[index - 1].adjective} id validator</PrevButton>
+            <PrevButton target="/guide/validators/id/{slug(data[index - 1].adjective)}-identification-number">{data[index - 1].adjective} id validator</PrevButton>
             {/if}
             {#if index === numIdValidators - 1}
-            <NextButton href="/guide/validators/identical/">identical validator</NextButton>
+            <NextButton target="/guide/validators/identical">identical validator</NextButton>
             {:else}
-            <NextButton href="/guide/validators/id/{slug(data[index + 1].adjective)}-identification-number/">{data[index + 1].adjective} id validator</NextButton>
+            <NextButton target="/guide/validators/id/{slug(data[index + 1].adjective)}-identification-number">{data[index + 1].adjective} id validator</NextButton>
             {/if}
         </div>
     </section>

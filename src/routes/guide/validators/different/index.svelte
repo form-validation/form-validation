@@ -10,7 +10,7 @@
         <Heading>Options</Heading>
 
         <h3>Using with form field</h3>
-        <p class="lh-copy i"><sup>*</sup> presents a required option. The HTML attributes are used to set the validator options via the <a href="/guide/plugins/declarative/" class="blue dim link">Declarative</a> plugin</p>
+        <p class="lh-copy i"><sup>*</sup> presents a required option. The HTML attributes are used to set the validator options via the <a href="/guide/plugins/declarative" class="blue dim link">Declarative</a> plugin</p>
         <table class="collapse ba br2 b--black-10 pv2 ph3 w-100">
             <tr class="striped--light-gray">
                 <th class="pv2 ph3 tl f6 fw6 ttu">Name</th>
@@ -58,7 +58,7 @@ result is an object of
         <Heading>Basic Example</Heading>
 
         <p class="lh-copy">The registration form below doesn't allow the username and password to be the same:</p>
-        <Tip>Take a look at the <a href="/guide/examples/asking-fields-to-be-unique/" class="blue dim link">Asking fields to be unique</a> example if you want to compare more than two fields at the same time</Tip>
+        <Tip>Take a look at the <a href="/guide/examples/asking-fields-to-be-unique" class="blue dim link">Asking fields to be unique</a> example if you want to compare more than two fields at the same time</Tip>
         <Demo prefix="/guide/validators/different/basic" frameworks={['Bootstrap', 'Tachyons']} />
     </section>
 
@@ -66,8 +66,8 @@ result is an object of
 
     <section class="mv5">
         <div class="flex">
-            <PrevButton href="/guide/validators/date/">date validator</PrevButton>
-            <NextButton href="/guide/validators/digits/">digits validator</NextButton>
+            <PrevButton target="/guide/validators/date">date validator</PrevButton>
+            <NextButton target="/guide/validators/digits">digits validator</NextButton>
         </div>
     </section>
 </GuideLayout>

@@ -13,7 +13,7 @@
     <input type="text" name="name" />
 </div>    
 `} />
-        <p class="lh-copy">Below is a starting point to use the <a href="/guide/plugins/icon/" class="blue dim link">Icon plugin</a> along with the <a href="/guide/plugins/semantic/" class="blue dim link">Semantic plugin</a>:</p>
+        <p class="lh-copy">Below is a starting point to use the <a href="/guide/plugins/icon" class="blue dim link">Icon plugin</a> along with the <a href="/guide/plugins/semantic" class="blue dim link">Semantic plugin</a>:</p>
         <div class="mb4">
 <SampleCode lang="html" code={`
 <!-- Put them in the head tag -->

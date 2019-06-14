@@ -22,7 +22,7 @@
 
     <section class="mv5">
         <Heading>Handling the event</Heading>
-        <p class="lh-copy">After executing a given validator, the <a class="blue dim link" href="/guide/plugins/message/">Message</a> plugin will emit the <code>plugins.message.displayed</code> event. This event is triggered after the error message is displayed.</p>
+        <p class="lh-copy">After executing a given validator, the <a href="/guide/plugins/message" class="blue dim link">Message</a> plugin will emit the <code>plugins.message.displayed</code> event. This event is triggered after the error message is displayed.</p>
         <p class="lh-copy">We can listen on this event to hide the error message:</p>
         <div class="mb4">
 <SampleCode lang="javascript" code={`

@@ -4,7 +4,7 @@
 
 <GuideLayout>
     <h1 class="f3 f2-m f1-l tc">Turret plugin</h1>
-    <h2 class="f4 fw4 tc lh-copy">Integrate with <a href="https://turretcss.com/" class="blue dim link">turretcss</a> framework. Support turretcss v5.1.3</h2>
+    <h2 class="f4 fw4 tc lh-copy">Integrate with <a href="https://turretcss.com" class="blue dim link">turretcss</a> framework. Support turretcss v5.1.3</h2>
 
     <section class="mv5">
         <Heading>Usage</Heading>
@@ -71,8 +71,8 @@ document.addEventListener('DOMContentLoaded', function(e) {
 
     <section class="mv5">
         <div class="flex">
-            <PrevButton href="/guide/plugins/trigger/">Trigger plugin</PrevButton>
-            <NextButton href="/guide/plugins/uikit/">Uikit plugin</NextButton>
+            <PrevButton target="/guide/plugins/trigger">Trigger plugin</PrevButton>
+            <NextButton target="/guide/plugins/uikit">Uikit plugin</NextButton>
         </div>
     </section>
 </GuideLayout>

@@ -13,7 +13,7 @@
 
     <section class="mv5">
         <Heading>Purchase once, upgrade for free</Heading>
-        <p class="tc lh-copy i">The latest version, <a href="/updates/" class="blue dim link">v{siteData.version}</a>, was released on {siteData.releasedDate}.</p>
+        <p class="tc lh-copy i">The latest version, <a href="/updates" class="blue dim link">v{siteData.version}</a>, was released on {siteData.releasedDate}.</p>
         <p class="tc">Choose the right package to purchase</p>
         <div class="w-100 dt tc ba b--light-blue br2">
             <div class="w-50 dtc-ns br b--light-blue">
@@ -54,7 +54,7 @@
         </div>
 
         <p class="tc">
-            All transactions are processed on <a class="blue dim link" href="https://sellfy.com/nghuuphuoc/">Sellfy</a>, <a class="blue dim link" href="https://gumroad.com/formvalidation/">GumRoad</a> through an <strong>encrypted HTTP Secure</strong> connection
+            All transactions are processed on <a href="https://sellfy.com/nghuuphuoc/" class="blue dim link">Sellfy</a>, <a href="https://gumroad.com/formvalidation/" class="blue dim link">GumRoad</a> through an <strong>encrypted HTTP Secure</strong> connection
         </p>
     </section>
 

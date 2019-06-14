@@ -27,8 +27,8 @@ fv.on('core.field.invalid', invalidFieldHandler);
 
     <section class="mv5">
         <div class="flex">
-            <PrevButton href="/guide/api/off/">off() method</PrevButton>
-            <NextButton href="/guide/api/register-filter/">registerFilter() method</NextButton>
+            <PrevButton target="/guide/api/off">off() method</PrevButton>
+            <NextButton target="/guide/api/register-filter">registerFilter() method</NextButton>
         </div>
     </section>
 </GuideLayout>

@@ -8,7 +8,7 @@
     <section class="mv5">
         <p class="lh-copy">Consider the following example. It asks you about the Javascript framework you like most. You can choose one from the list of popular Javascript frameworks such as Angular, Ember, React, Vue.</p>
         <p class="lh-copy">If your favorite framework is not in the list, you must fill its name in a text box. You can use the
-        <a href="/guide/validators/callback/" class="blue dim link">callback</a> validator to validate this input:</p>
+        <a href="/guide/validators/callback" class="blue dim link">callback</a> validator to validate this input:</p>
 <SampleCode lang="Javascript" code={`
 FormValidation.formValidation(
     form,
@@ -49,7 +49,7 @@ FormValidation.formValidation(
         <p class="lh-copy">The logic inside the <code>callback</code> function is quite simple and easy to understand. The problem comes when you submit the form, the
         <code>otherFramework</code> field is marked as valid with a valid icon even if you choose a framework from the list.
         In that case, the <code>otherFramework</code> field should be completely ignored.</p>
-        <p class="lh-copy">In order to fix that, we can use the <code>excluded</code> option provided by the <a href="/guide/plugins/excluded/" class="blue dim link">Excluded plugin</a> as following:</p>
+        <p class="lh-copy">In order to fix that, we can use the <code>excluded</code> option provided by the <a href="/guide/plugins/excluded" class="blue dim link">Excluded plugin</a> as following:</p>
 <SampleCode lang="Javascript" code={`
 FormValidation.formValidation(
     form,
@@ -83,7 +83,7 @@ FormValidation.formValidation(
     }
 );
 `} />
-        <Tip>When the field validation is ignored, its container will not have the success class, and the associated <a href="/guide/plugins/icon/" class="blue dim link">icon</a> isn't shown.</Tip>
+        <Tip>When the field validation is ignored, its container will not have the success class, and the associated <a href="/guide/plugins/icon" class="blue dim link">icon</a> isn't shown.</Tip>
         <Demo prefix="/guide/examples/excluding-field-by-given-condition" frameworks={['Bootstrap']} />
     </section>
 </GuideLayout>

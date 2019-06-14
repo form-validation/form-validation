@@ -6,7 +6,7 @@
     <h1 class="tc lh-copy">Using FontAwesome icons</h1>
     
     <section class="mv5">
-        <p class="lh-copy">Follow the sample code below to use the icons provided by <a href="https://fontawesome.com/" class="blue dim link">FontAwesome</a>:</p>
+        <p class="lh-copy">Follow the sample code below to use the icons provided by <a href="https://fontawesome.com" class="blue dim link">FontAwesome</a>:</p>
         <div class="mb4">
 <SampleCode lang="html" code={`
 <!-- Put them in the head tag -->
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
 </script-tag>
 `} />
         </div>
-        <p class="lh-copy">If you want to use the FontAwesome SVG icon instead of its CSS classes, take a look at the <a href="/guide/examples/using-svg-icons/" class="blue dim link">Using SVG icons</a> example.</p>
+        <p class="lh-copy">If you want to use the FontAwesome SVG icon instead of its CSS classes, take a look at the <a href="/guide/examples/using-svg-icons" class="blue dim link">Using SVG icons</a> example.</p>
         <Demo prefix="/guide/plugins/bootstrap/horizontal-form" frameworks={['Bootstrap']} />
     </section>
 

@@ -10,7 +10,7 @@
         <Heading>Options</Heading>
 
         <h3>Using with form field</h3>
-        <p class="lh-copy i"><sup>*</sup> presents a required option. The HTML attributes are used to set the validator options via the <a href="/guide/plugins/declarative/" class="blue dim link">Declarative</a> plugin</p>
+        <p class="lh-copy i"><sup>*</sup> presents a required option. The HTML attributes are used to set the validator options via the <a href="/guide/plugins/declarative" class="blue dim link">Declarative</a> plugin</p>
         <table class="collapse ba br2 b--black-10 pv2 ph3 w-100 mb4">
             <tr class="striped--light-gray">
                 <th class="pv2 ph3 tl f6 fw6 ttu">Name</th>
@@ -68,7 +68,7 @@ promise: function(input) {
         <Heading>Basic Example</Heading>
 
         <p class="lh-copy">The following form asks user to upload an avatar which both width and height must be less than 300px.</p>
-        <Tip>Use the <a href="/guide/validators/file/" class="blue dim link">file</a> validator if you want to validate size of an image</Tip>
+        <Tip>Use the <a href="/guide/validators/file" class="blue dim link">file</a> validator if you want to validate size of an image</Tip>
         <p class="lh-copy">They can be determined using Promise as seen in the following snippet:</p>
 
         <div class="mb4">
@@ -141,8 +141,8 @@ formValidationInstance.on('core.validator.validated', function(e) {
 
     <section class="mv5">
         <div class="flex">
-            <PrevButton href="/guide/validators/phone/">phone validator</PrevButton>
-            <NextButton href="/guide/validators/regexp/">regexp validator</NextButton>
+            <PrevButton target="/guide/validators/phone">phone validator</PrevButton>
+            <NextButton target="/guide/validators/regexp">regexp validator</NextButton>
         </div>
     </section>
 </GuideLayout>

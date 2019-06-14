@@ -56,7 +56,7 @@ FormValidation
     )
     .registerValidator('placeholder', checkPlaceholder);
 `} />
-        <p class="lh-copy">For this specific requirement, we also can use the <a href="/guide/validators/callback/" class="blue dim link">callback</a> validator:</p>
+        <p class="lh-copy">For this specific requirement, we also can use the <a href="/guide/validators/callback" class="blue dim link">callback</a> validator:</p>
         <div class="mb4">
 <SampleCode lang="javascript" code={`
 callback: {

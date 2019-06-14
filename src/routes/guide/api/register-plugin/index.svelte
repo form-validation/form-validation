@@ -7,7 +7,7 @@
     <h2 class="f4 fw4 tc">Register a plugin</h2>
 
     <section class="mv5">
-        <p class="lh-copy">The plugin instance then can be accessed via the <a href="/guide/api/get-plugin/" class="blue dim link">getPlugin()</a> method, or removed completely by the <a href="/guide/api/deregister-plugin/" class="blue dim link">deregisterPlugin()</a> method</p>
+        <p class="lh-copy">The plugin instance then can be accessed via the <a href="/guide/api/get-plugin" class="blue dim link">getPlugin()</a> method, or removed completely by the <a href="/guide/api/deregister-plugin" class="blue dim link">deregisterPlugin()</a> method</p>
         <div class="mb3">
             <SampleCode lang="javascript" code={`registerPlugin(name: String, plugin: Object): Core`} />
         </div>
@@ -20,8 +20,8 @@
 
     <section class="mv5">
         <div class="flex">
-            <PrevButton href="/guide/api/register-filter/">registerFilter() method</PrevButton>
-            <NextButton href="/guide/api/register-validator/">registerValidator() method</NextButton>
+            <PrevButton target="/guide/api/register-filter">registerFilter() method</PrevButton>
+            <NextButton target="/guide/api/register-validator">registerValidator() method</NextButton>
         </div>
     </section>
 </GuideLayout>

@@ -79,8 +79,8 @@ document.addEventListener('DOMContentLoaded', function(e) {
 
     <section class="mv5">
         <div class="flex">
-            <PrevButton href="/guide/plugins/default-submit/">DefaultSubmit plugin</PrevButton>
-            <NextButton href="/guide/plugins/foundation/">Foundation plugin</NextButton>
+            <PrevButton target="/guide/plugins/default-submit">DefaultSubmit plugin</PrevButton>
+            <NextButton target="/guide/plugins/foundation">Foundation plugin</NextButton>
         </div>
     </section>
 </GuideLayout>

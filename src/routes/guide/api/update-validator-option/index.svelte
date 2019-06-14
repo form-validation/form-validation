@@ -32,8 +32,8 @@ updateValidatorOption(
 
     <section class="mv5">
         <div class="flex">
-            <PrevButton href="/guide/api/update-field-status/">updateFieldStatus() method</PrevButton>
-            <NextButton href="/guide/api/validate/">validate() method</NextButton>
+            <PrevButton target="/guide/api/update-field-status">updateFieldStatus() method</PrevButton>
+            <NextButton target="/guide/api/validate">validate() method</NextButton>
         </div>
     </section>
 </GuideLayout>

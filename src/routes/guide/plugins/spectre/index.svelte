@@ -4,7 +4,7 @@
 
 <GuideLayout>
     <h1 class="f3 f2-m f1-l tc">Spectre plugin</h1>
-    <h2 class="f4 fw4 tc lh-copy">Integrate with <a href="https://picturepan2.github.io/spectre/" class="blue dim link">Spectre</a> framework. Support Spectre v0.5.8</h2>
+    <h2 class="f4 fw4 tc lh-copy">Integrate with <a href="https://picturepan2.github.io/spectre" class="blue dim link">Spectre</a> framework. Support Spectre v0.5.8</h2>
 
     <section class="mv5">
         <Heading>Usage</Heading>
@@ -102,8 +102,8 @@ spectre: new FormValidation.plugins.Spectre({
 
     <section class="mv5">
         <div class="flex">
-            <PrevButton href="/guide/plugins/shoelace/">Shoelace plugin</PrevButton>
-            <NextButton href="/guide/plugins/start-end-date/">StartEndDate plugin</NextButton>
+            <PrevButton target="/guide/plugins/shoelace">Shoelace plugin</PrevButton>
+            <NextButton target="/guide/plugins/start-end-date">StartEndDate plugin</NextButton>
         </div>
     </section>
 </GuideLayout>

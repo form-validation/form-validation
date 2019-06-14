@@ -9,7 +9,7 @@
     <section class="mv5">
         <Heading>Usage</Heading>
         <p class="lh-copy">By default, the value of field will be taken by using the <code>value</code> property. In some case, you might want to adjust the value before performing validations.
-            For example, the <a href="/guide/validators/numeric/" class="blue dim link">numeric</a> validator doesn't allow to use a comma (,) for thousand separator.</p>
+            For example, the <a href="/guide/validators/numeric" class="blue dim link">numeric</a> validator doesn't allow to use a comma (,) for thousand separator.</p>
         <p class="lh-copy">The Transformer plugin allows to filter the value of field. The following piece of code is the starting point to use the Transformer plugin:</p>
 <SampleCode lang="html" code={`
 <html>
@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
     <section class="mv5">
         <Heading>Using with uri validator</Heading>
         <p class="lh-copy">The following form accepts a website address without <span class="i">http://</span> or <span class="i">https://</span> prefix.</p>
-        <p class="lh-copy">By default, these kind of URLs don't pass the <a href="/guide/validators/uri/" class="blue dim link">uri</a> validators. Using the Transformer plugin for the uri validator, we can make it pass.</p>
+        <p class="lh-copy">By default, these kind of URLs don't pass the <a href="/guide/validators/uri" class="blue dim link">uri</a> validators. Using the Transformer plugin for the uri validator, we can make it pass.</p>
         <div class="mb4">
 <SampleCode lang="javascript" code={`
 transformer: new FormValidation.plugins.Transformer({
@@ -98,7 +98,7 @@ transformer: new FormValidation.plugins.Transformer({
 
     <section class="mv5">
         <Heading>Using with numeric validator</Heading>
-        <p class="lh-copy">By default, the <a href="/guide/validators/numeric/" class="blue dim link">numeric</a> validator doesn't accept the comma. In the form below, the <span class="i">Price</span> field now accepts value using comma for thousand separator, such as <span class="i">12,570.634</span></p>
+        <p class="lh-copy">By default, the <a href="/guide/validators/numeric" class="blue dim link">numeric</a> validator doesn't accept the comma. In the form below, the <span class="i">Price</span> field now accepts value using comma for thousand separator, such as <span class="i">12,570.634</span></p>
         <div class="mb4">
 <SampleCode lang="javascript" code={`
 transformer: new FormValidation.plugins.Transformer({
@@ -119,7 +119,7 @@ transformer: new FormValidation.plugins.Transformer({
 
     <section class="mv5">
         <Heading>Using with phone validator</Heading>
-        <p class="lh-copy">The <a href="/guide/validators/phone/" class="blue dim link">phone</a> validator supports phone number in various countries. Despite the fact that it try to support many possible formats of a phone number, it can't cover all or special one which you want it to be a valid phone number.</p>
+        <p class="lh-copy">The <a href="/guide/validators/phone" class="blue dim link">phone</a> validator supports phone number in various countries. Despite the fact that it try to support many possible formats of a phone number, it can't cover all or special one which you want it to be a valid phone number.</p>
         <p class="lh-copy">For instance, a number containing the spaces such as XXX    XXX   XXXX (where X presents a digit from 0-9) is treated as invalid US phone number.</p>
         <p class="lh-cop">By using the Transformer plugin, we can turn this kind of number into a valid one by removing all spaces.</p>
         <div class="mb4">
@@ -149,9 +149,9 @@ transformer: new FormValidation.plugins.Transformer({
     <section class="mv5">
         <Heading>Using with WYSIWYG editors</Heading>
         <p class="lh-copy">WYSIWYG stands for What You See Is What You Get. A WYSIWYG editor provides a visual way to edit the content of input which mostly is a textarea element.</p>
-        <p class="lh-copy">Since these editors usually generate additional HTML tags, the raw content of input might be different with the value returned by the editor. The <a href="/guide/validators/not-empty/" class="blue dim link">notEmpty</a>,
-            <a href="/guide/validators/string-length/" class="blue dim link">stringLength</a> validators maybe don't work correctly with the field using a WYSIWYG editor.</p>
-        <p class="lh-cop">The following form uses the Transformer plugin to get raw text of a <a href="https://www.tinymce.com/" class="blue dim link">TinyMCE</a> editor before doing validations.</p>
+        <p class="lh-copy">Since these editors usually generate additional HTML tags, the raw content of input might be different with the value returned by the editor. The <a href="/guide/validators/not-empty" class="blue dim link">notEmpty</a>,
+            <a href="/guide/validators/string-length" class="blue dim link">stringLength</a> validators maybe don't work correctly with the field using a WYSIWYG editor.</p>
+        <p class="lh-cop">The following form uses the Transformer plugin to get raw text of a <a href="https://www.tinymce.com" class="blue dim link">TinyMCE</a> editor before doing validations.</p>
         <div class="mb4">
 <SampleCode lang="javascript" code={`
 transformer: new FormValidation.plugins.Transformer({
@@ -180,8 +180,8 @@ transformer: new FormValidation.plugins.Transformer({
 
     <section class="mv5">
         <div class="flex">
-            <PrevButton href="/guide/plugins/tooltip/">Tooltip plugin</PrevButton>
-            <NextButton href="/guide/plugins/trigger/">Trigger plugin</NextButton>
+            <PrevButton target="/guide/plugins/tooltip">Tooltip plugin</PrevButton>
+            <NextButton target="/guide/plugins/trigger">Trigger plugin</NextButton>
         </div>
     </section>
 </GuideLayout>

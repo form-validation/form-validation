@@ -16,11 +16,11 @@
     <section class="mv5">
         <Heading>Improvements</Heading>
         <ul class="pa0 ma0 ml3 lh-copy">
-            <li>Improve <a class="blue dim link" href="/guide/validators/id/">Dutch national identification number (BSN)</a> validator. It doesn't accept numbers which have less than 8 digits</li>
-            <li>Add the date to return value of the <a class="blue dim link" href="/guide/validators/date/">date</a> validator. We can reuse it for additional job</li>
-            <li>The <a class="blue dim link" href="/guide/validators/remote/">remote</a> validator supports using <code>$field</code> and <code>value</code> in data/url callbacks</li>
-            <li>The <a class="blue dim link" href="/guide/validators/isbn/">isbn</a> validator adds ISBN type to the return value</li>
-            <li>The <a class="blue dim link" href="/guide/validators/ismn/">ismn</a> validator adds ISMN type to the return value</li>
+            <li>Improve <a href="/guide/validators/id" class="blue dim link">Dutch national identification number (BSN)</a> validator. It doesn't accept numbers which have less than 8 digits</li>
+            <li>Add the date to return value of the <a href="/guide/validators/date" class="blue dim link">date</a> validator. We can reuse it for additional job</li>
+            <li>The <a href="/guide/validators/remote" class="blue dim link">remote</a> validator supports using <code>$field</code> and <code>value</code> in data/url callbacks</li>
+            <li>The <a href="/guide/validators/isbn" class="blue dim link">isbn</a> validator adds ISBN type to the return value</li>
+            <li>The <a href="/guide/validators/ismn" class="blue dim link">ismn</a> validator adds ISMN type to the return value</li>
         </ul>
     </section>
 

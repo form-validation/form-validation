@@ -4,7 +4,7 @@
 
 <GuideLayout>
     <h1 class="f3 f2-m f1-l tc">Mui plugin</h1>
-    <h2 class="f4 fw4 tc lh-copy">Integrate with <a href="https://muicss.com/" class="blue dim link">MUI</a> framework. Support MUI v0.9.41</h2>
+    <h2 class="f4 fw4 tc lh-copy">Integrate with <a href="https://muicss.com" class="blue dim link">MUI</a> framework. Support MUI v0.9.41</h2>
 
     <section class="mv5">
         <Heading>Usage</Heading>
@@ -99,8 +99,8 @@ mui: new FormValidation.plugins.Mui({
 
     <section class="mv5">
         <div class="flex">
-            <PrevButton href="/guide/plugins/mini/">Mini plugin</PrevButton>
-            <NextButton href="/guide/plugins/pure/">Pure plugin</NextButton>
+            <PrevButton target="/guide/plugins/mini">Mini plugin</PrevButton>
+            <NextButton target="/guide/plugins/pure">Pure plugin</NextButton>
         </div>
     </section>
 </GuideLayout>

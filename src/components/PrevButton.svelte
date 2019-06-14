@@ -1,9 +1,9 @@
-<a href="{href}" class="f3 pointer blue dim link pa2">&larr; <slot></slot></a>
+<a href="{target}" class="f3 pointer blue dim link pa2">&larr; <slot></slot></a>
 
 <script>
-let href = '';
+let target = '';
 
 export {
-    href,
+    target,
 };
 </script>

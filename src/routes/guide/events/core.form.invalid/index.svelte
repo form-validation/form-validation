@@ -12,8 +12,8 @@
 
     <section class="mv5">
         <div class="flex">
-            <PrevButton href="/guide/events/core.field.validating/">core.field.validating event</PrevButton>
-            <NextButton href="/guide/events/core.form.notvalidated/">core.form.notvalidated event</NextButton>
+            <PrevButton target="/guide/events/core.field.validating">core.field.validating event</PrevButton>
+            <NextButton target="/guide/events/core.form.notvalidated">core.form.notvalidated event</NextButton>
         </div>
     </section>
 </GuideLayout>

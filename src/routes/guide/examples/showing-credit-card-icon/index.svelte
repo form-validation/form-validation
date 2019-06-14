@@ -39,7 +39,7 @@
                 <td class="pv2 ph3"><code>fa fa-credit-card</code></td>
             </tr>
         </table>
-        <Tip><a href="http://paymentfont.io/" class="blue dim link">PaymentFont</a> and <a href="http://www.orlandotm.com/payment-webfont/" class="blue dim link">Payment Webfont</a> provide more payment icons</Tip>
+        <Tip><a href="http://paymentfont.io" class="blue dim link">PaymentFont</a> and <a href="http://www.orlandotm.com/payment-webfont" class="blue dim link">Payment Webfont</a> provide more payment icons</Tip>
         <Demo prefix="/guide/examples/showing-credit-card-icon" frameworks={['Tachyons']} />
     </section>
 

@@ -4,7 +4,7 @@
 
     <Cards>
     {#each _relatedValidators as v}
-        <Card target="/guide/validators/{camelCaseToDash(v.name)}/" title="{v.name}">{v.description}</Card>
+        <Card target="/guide/validators/{camelCaseToDash(v.name)}" title="{v.name}">{v.description}</Card>
     {/each}
     </Cards>
 </section>

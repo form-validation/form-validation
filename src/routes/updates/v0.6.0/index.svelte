@@ -10,11 +10,11 @@
         <Heading>New features</Heading>
         <p class="lh-copy">From v0.6.0, the plugin has new name: <strong>FormValidation</strong>. It supports validating form created by many frameworks including</p>
         <ul class="pa0 ma0 ml3 lh-copy">
-            <li><a class="blue dim link" href="http://getbootstrap.com">Bootstrap</a></li>
-            <li><a class="blue dim link" href="http://foundation.zurb.com/">Foundation</a></li>
-            <li><a class="blue dim link" href="http://purecss.io/">Pure</a></li>
-            <li><a class="blue dim link" href="http://semantic-ui.com/">Semantic UI</a></li>
-            <li><a class="blue dim link" href="http://getuikit.com/">UIKit</a></li>
+            <li><a href="http://getbootstrap.com" class="blue dim link">Bootstrap</a></li>
+            <li><a href="http://foundation.zurb.com" class="blue dim link">Foundation</a></li>
+            <li><a href="http://purecss.io" class="blue dim link">Pure</a></li>
+            <li><a href="http://semantic-ui.com" class="blue dim link">Semantic UI</a></li>
+            <li><a href="http://getuikit.com" class="blue dim link">UIKit</a></li>
         </ul>
 
         <ul class="pa0 ma0 ml3 lh-copy">
@@ -26,22 +26,22 @@
             <li>Support Pure framework</li>
             <li>Add <code>setLocale()</code> and <code>getLocale()</code> methods to support multiple languages</li>
             <li>Add <code>validateContainer()</code> method</li>
-            <li>Add UAE <a class="blue dim link" href="/guide/validators/phone/">phone number</a> validator</li>
-            <li>Add <a class="blue dim link" href="/guide/validators/ein/">EIN</a> validator</li>
-            <li>Add <a class="blue dim link" href="/guide/validators/bic/">BIC (ISO 9362)</a> validator</li>
+            <li>Add UAE <a href="/guide/validators/phone" class="blue dim link">phone number</a> validator</li>
+            <li>Add <a href="/guide/validators/ein" class="blue dim link">EIN</a> validator</li>
+            <li>Add <a href="/guide/validators/bic" class="blue dim link">BIC (ISO 9362)</a> validator</li>
             <li>Add <code>composer.json</code> file</li>
             <li>Add <code>err</code>, <code>icon</code>, <code>row</code> options</li>
-            <li>Add Spanish <a class="blue dim link" href="/guide/validators/zip-code/">postal code</a> validator</li>
-            <li>Support Spanish <a class="blue dim link" href="/guide/validators/id/">CIF</a> validator</li>
-            <li>Add India <a class="blue dim link" href="/guide/validators/phone/">phone number</a> validator</li>
-            <li>Add India <a class="blue dim link" href="/guide/validators/zip-code/">postal code</a> validator></li>
+            <li>Add Spanish <a href="/guide/validators/zip-code" class="blue dim link">postal code</a> validator</li>
+            <li>Support Spanish <a href="/guide/validators/id" class="blue dim link">CIF</a> validator</li>
+            <li>Add India <a href="/guide/validators/phone" class="blue dim link">phone number</a> validator</li>
+            <li>Add India <a href="/guide/validators/zip-code" class="blue dim link">postal code</a> validator></li>
         </ul>
     </section>
 
     <section class="mv5">
         <Heading>Changes</Heading>
         <ul class="pa0 ma0 ml3 lh-copy">
-            <li>Remove hexColor validator. Use <a class="blue dim link" href="/guide/validators/color/">color</a> validator instead</li>
+            <li>Remove hexColor validator. Use <a href="/guide/validators/color" class="blue dim link">color</a> validator instead</li>
             <li>Change event <code>error.x.x</code> to <code>err.x.x</code> to avoid <code>window.onerror</code> being invoked by jQuery</li>
             <li>Remove tab behavior from base class</li>
         </ul>
@@ -51,24 +51,24 @@
         <Heading>Improvements</Heading>
         <ul class="pa0 ma0 ml3 lh-copy">
             <li>Look for the field inside form first when using selector</li>
-            <li>Add <code>allowEmptyProtocol</code> option to set optional protocol in <a class="blue dim link" href="/guide/validators/uri/">uri</a> validator</li>
-            <li>Improve <a class="blue dim link" href="/guide/validators/identical/">identical</a> validator</li>
+            <li>Add <code>allowEmptyProtocol</code> option to set optional protocol in <a href="/guide/validators/uri" class="blue dim link">uri</a> validator</li>
+            <li>Improve <a href="/guide/validators/identical" class="blue dim link">identical</a> validator</li>
             <li>Show the credit card icon based on its type</li>
             <li>Showing tooltip/popover when moving over or clicking the feedback icon (Bootstrap 3.3.0)</li>
             <li>Use <code>jQuery</code> instead of <code>window.jQuery</code></li>
             <li>Allow to reuse data which is returned by the validator</li>
-            <li>Don't need to set the <a class="blue dim link" href="/guide/validators/different/">different</a> validator for both fields</li>
-            <li>Improve the <a class="blue dim link" href="/guide/validators/id/">CPF</a> validator</li>
-            <li>Add sample data for <a class="blue dim link" href="/guide/validators/id/">CPF</a> validator</li>
-            <li>Improve Spanish <a class="blue dim link" href="/guide/validators/phone/">phone</a> validator</li>
-            <li>Improve Slovenian <a class="blue dim link" href="/guide/validators/vat/">vat number</a> validator</li>
+            <li>Don't need to set the <a href="/guide/validators/different" class="blue dim link">different</a> validator for both fields</li>
+            <li>Improve the <a href="/guide/validators/id" class="blue dim link">CPF</a> validator</li>
+            <li>Add sample data for <a href="/guide/validators/id" class="blue dim link">CPF</a> validator</li>
+            <li>Improve Spanish <a href="/guide/validators/phone" class="blue dim link">phone</a> validator</li>
+            <li>Improve Slovenian <a href="/guide/validators/vat" class="blue dim link">vat number</a> validator</li>
             <li>Improve tooltip style when working with Semantic UI form</li>
             <li>Fix destroying Semantic UI popup</li>
             <li>Fix typo in UIKit class</li>
             <li>Validators return true for not supported countries</li>
-            <li>Support to use a <code>Date</code> object as value for <a class="blue dim link" href="/guide/validators/date/">min and max</a> options</li>
-            <li>Improve <a class="blue dim link" href="/guide/validators/cvv/">cvv</a> validator</li>
-            <li><a class="blue dim link" href="/guide/validators/uri/">uri</a> validator gets slower if more than 25 characters</li>
+            <li>Support to use a <code>Date</code> object as value for <a href="/guide/validators/date" class="blue dim link">min and max</a> options</li>
+            <li>Improve cvv validator</li>
+            <li><a href="/guide/validators/uri" class="blue dim link">uri</a> validator gets slower if more than 25 characters</li>
             <li>The <code>isValidContainer()</code> method should return <code>null</code> if the container consists of at least one field which is not validated yet or being validated</li>
         </ul>
     </section>
@@ -76,15 +76,15 @@
     <section class="mv5">
         <Heading>Bug fixes</Heading>
         <ul class="pa0 ma0 ml3 lh-copy">
-            <li>The <a class="blue dim link" href="/guide/validators/cusip/">cusip</a> validator doesn't work</li>
-            <li>ix the <a class="blue dim link" href="/guide/validators/date/">date</a> validator issue where accepts <code>2014-11-1 23:</code> as valid <code>YYYY-MM-DD h:m</code> date</li>
-            <li>The <a class="blue dim link" href="/guide/validators/color/">color</a> validator doesn't provide <code>html5Attributes</code> mapping</li>
-            <li>Update Brazil <a class="blue dim link" href="/guide/validators/id/">ID</a> validator to support working with Mask plugin</li>
+            <li>The <a href="/guide/validators/cusip" class="blue dim link">cusip</a> validator doesn't work</li>
+            <li>ix the <a href="/guide/validators/date" class="blue dim link">date</a> validator issue where accepts <code>2014-11-1 23:</code> as valid <code>YYYY-MM-DD h:m</code> date</li>
+            <li>The <a href="/guide/validators/color" class="blue dim link">color</a> validator doesn't provide <code>html5Attributes</code> mapping</li>
+            <li>Update Brazil <a href="/guide/validators/id" class="blue dim link">ID</a> validator to support working with Mask plugin</li>
             <li>Fix the icon without label class</li>
-            <li><a class="blue dim link" href="/guide/validators/identical/">identical</a> validator allows to compare with any input</li>
+            <li><a href="/guide/validators/identical" class="blue dim link">identical</a> validator allows to compare with any input</li>
             <li>Fix <code>validateContainer()</code> to use map value instead of key</li>
             <li>Show the <code>validating</code> icon when the field is being validated</li>
-            <li>Fix bug of US <a class="blue dim link" href="/guide/validators/phone/">phone number</a> validator</li>
+            <li>Fix bug of US <a href="/guide/validators/phone" class="blue dim link">phone number</a> validator</li>
         </ul>
     </section>
 
@@ -344,7 +344,7 @@ $(form).formValidation({
             </tr>
         </table>
 
-        <p class="lh-copy">The last thing, the hexColor validator, deprecated in v0.5.3, is replaced with <a class="blue dim link" href="/guide/validators/color/">color</a> validator.</p>
+        <p class="lh-copy">The last thing, the hexColor validator, deprecated in v0.5.3, is replaced with <a href="/guide/validators/color" class="blue dim link">color</a> validator.</p>
     </section>
 </ChangelogLayout>
 

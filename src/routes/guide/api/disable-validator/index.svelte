@@ -24,8 +24,8 @@
 
     <section class="mv5">
         <div class="flex">
-            <PrevButton href="/guide/api/destroy/">destroy() method</PrevButton>
-            <NextButton href="/guide/api/enable-validator/">enableValidator() method</NextButton>
+            <PrevButton target="/guide/api/destroy">destroy() method</PrevButton>
+            <NextButton target="/guide/api/enable-validator">enableValidator() method</NextButton>
         </div>
     </section>
 </GuideLayout>

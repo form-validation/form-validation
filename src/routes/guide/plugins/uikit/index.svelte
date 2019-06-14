@@ -4,7 +4,7 @@
 
 <GuideLayout>
     <h1 class="f3 f2-m f1-l tc">UIKit plugin</h1>
-    <h2 class="f4 fw4 tc lh-copy">Integrate with <a href="https://getuikit.com/" class="blue dim link">UIkit</a> framework. Support UIKit v3.0.3</h2>
+    <h2 class="f4 fw4 tc lh-copy">Integrate with <a href="https://getuikit.com" class="blue dim link">UIkit</a> framework. Support UIKit v3.0.3</h2>
 
     <section class="mv5">
         <Heading>Usage</Heading>
@@ -103,8 +103,8 @@ uikit: new FormValidation.plugins.UiKit({
 
     <section class="mv5">
         <div class="flex">
-            <PrevButton href="/guide/plugins/turret/">Turret plugin</PrevButton>
-            <NextButton href="/guide/plugins/wizard/">Wizard plugin</NextButton>
+            <PrevButton target="/guide/plugins/turret">Turret plugin</PrevButton>
+            <NextButton target="/guide/plugins/wizard">Wizard plugin</NextButton>
         </div>
     </section>
 </GuideLayout>

@@ -120,13 +120,13 @@ document.addEventListener('DOMContentLoaded', function(e) {
         <p class="lh-copy">The working example below shows an usage of English language package:</p>
         <Demo prefix="/guide/getting-started/localization/basic" frameworks={['Tachyons']} />
 
-        <Tip>Look at the <a href="/guide/plugins/l10n/" class="blue dim link">L10n</a> plugin if you want to use multiple language packages and be able to switch between them</Tip>
+        <Tip>Look at the <a href="/guide/plugins/l10n" class="blue dim link">L10n</a> plugin if you want to use multiple language packages and be able to switch between them</Tip>
     </section>
 
     <section class="mv5">
         <div class="flex">
-            <PrevButton href="/guide/getting-started/usage/">Usage</PrevButton>
-            <NextButton href="/guide/getting-started/special-field-name/">Special field name</NextButton>
+            <PrevButton target="/guide/getting-started/usage">Usage</PrevButton>
+            <NextButton target="/guide/getting-started/special-field-name">Special field name</NextButton>
         </div>
     </section>
 </GuideLayout>

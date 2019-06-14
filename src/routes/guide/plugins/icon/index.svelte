@@ -54,11 +54,11 @@ document.addEventListener('DOMContentLoaded', function(e) {
 
         <Cards>
             {#each _frameworks as p}
-            <Card target="/guide/plugins/{p.toLowerCase()}/" title="{p}"></Card>
+            <Card target="/guide/plugins/{p.toLowerCase()}" title="{p}"></Card>
             {/each}
         </Cards>
 
-        <Tip>The <a href="/guide/plugins/mandatory-icon/" class="blue dim link">MandatoryIcon</a> plugin is useful when you want to display the mandatory icon for required fields</Tip>
+        <Tip>The <a href="/guide/plugins/mandatory-icon" class="blue dim link">MandatoryIcon</a> plugin is useful when you want to display the mandatory icon for required fields</Tip>
     </section>
     
     <section class="mv5">
@@ -82,8 +82,8 @@ document.addEventListener('DOMContentLoaded', function(e) {
 
     <section class="mv5">
         <div class="flex">
-            <PrevButton href="/guide/plugins/foundation/">Foundation plugin</PrevButton>
-            <NextButton href="/guide/plugins/j/">J plugin</NextButton>
+            <PrevButton target="/guide/plugins/foundation">Foundation plugin</PrevButton>
+            <NextButton target="/guide/plugins/j">J plugin</NextButton>
         </div>
     </section>
 </GuideLayout>

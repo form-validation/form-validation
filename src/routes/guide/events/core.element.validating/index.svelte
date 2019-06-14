@@ -17,8 +17,8 @@
 
     <section class="mv5">
         <div class="flex">
-            <PrevButton href="/guide/events/core.element.validated/">core.element.validated event</PrevButton>
-            <NextButton href="/guide/events/core.field.added/">core.field.added event</NextButton>
+            <PrevButton target="/guide/events/core.element.validated">core.element.validated event</PrevButton>
+            <NextButton target="/guide/events/core.field.added">core.field.added event</NextButton>
         </div>
     </section>
 </GuideLayout>

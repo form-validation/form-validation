@@ -19,8 +19,8 @@
 
     <section class="mv5">
         <div class="flex">
-            <PrevButton href="/guide/api/">Overview</PrevButton>
-            <NextButton href="/guide/api/deregister-filter/">deregisterFilter() method</NextButton>
+            <PrevButton target="/guide/api">Overview</PrevButton>
+            <NextButton target="/guide/api/deregister-filter">deregisterFilter() method</NextButton>
         </div>
     </section>
 </GuideLayout>

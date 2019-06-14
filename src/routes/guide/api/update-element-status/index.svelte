@@ -27,8 +27,8 @@
 
     <section class="mv5">
         <div class="flex">
-            <PrevButton href="/guide/api/set-locale/">setLocale() method</PrevButton>
-            <NextButton href="/guide/api/update-field-status/">updateFieldStatus() method</NextButton>
+            <PrevButton target="/guide/api/set-locale">setLocale() method</PrevButton>
+            <NextButton target="/guide/api/update-field-status">updateFieldStatus() method</NextButton>
         </div>
     </section>
 </GuideLayout>

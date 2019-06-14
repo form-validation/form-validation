@@ -18,7 +18,7 @@
         <Heading>Bug fixes</Heading>
         <ul class="pa0 ma0 ml3 lh-copy">
             <li>Cannot call <code>form.submit()</code> inside <code>submitHandler</code></li>
-            <li>The <a class="blue dim link" href="/guide/validators/not-empty/">notEmpty validator</a> doesn't work on file input</li>
+            <li>The <a href="/guide/validators/not-empty" class="blue dim link">notEmpty validator</a> doesn't work on file input</li>
         </ul>
     </section>
 </ChangelogLayout>

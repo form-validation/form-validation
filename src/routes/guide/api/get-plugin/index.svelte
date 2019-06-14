@@ -18,8 +18,8 @@
 
     <section class="mv5">
         <div class="flex">
-            <PrevButton href="/guide/api/get-form-element/">getFormElement() method</PrevButton>
-            <NextButton href="/guide/api/off/">off() method</NextButton>
+            <PrevButton target="/guide/api/get-form-element">getFormElement() method</PrevButton>
+            <NextButton target="/guide/api/off">off() method</NextButton>
         </div>
     </section>
 </GuideLayout>

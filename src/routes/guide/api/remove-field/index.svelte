@@ -18,8 +18,8 @@
 
     <section class="mv5">
         <div class="flex">
-            <PrevButton href="/guide/api/register-validator/">registerValidator() method</PrevButton>
-            <NextButton href="/guide/api/reset-field/">resetField() method</NextButton>
+            <PrevButton target="/guide/api/register-validator">registerValidator() method</PrevButton>
+            <NextButton target="/guide/api/reset-field">resetField() method</NextButton>
         </div>
     </section>
 </GuideLayout>

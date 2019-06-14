@@ -4,7 +4,7 @@
 
 <GuideLayout>
     <h1 class="f3 f2-m f1-l tc">Pure plugin</h1>
-    <h2 class="f4 fw4 tc lh-copy">Integrate with <a href="https://purecss.io/" class="blue dim link">Pure</a> library. Support Pure v1.0.0</h2>
+    <h2 class="f4 fw4 tc lh-copy">Integrate with <a href="https://purecss.io" class="blue dim link">Pure</a> library. Support Pure v1.0.0</h2>
 
     <section class="mv5">
         <Heading>Usage</Heading>
@@ -66,8 +66,8 @@ document.addEventListener('DOMContentLoaded', function(e) {
 
     <section class="mv5">
         <div class="flex">
-            <PrevButton href="/guide/plugins/mui/">Mui plugin</PrevButton>
-            <NextButton href="/guide/plugins/recaptcha/">Recaptcha plugin</NextButton>
+            <PrevButton target="/guide/plugins/mui">Mui plugin</PrevButton>
+            <NextButton target="/guide/plugins/recaptcha">Recaptcha plugin</NextButton>
         </div>
     </section>
 </GuideLayout>

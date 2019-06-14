@@ -9,16 +9,16 @@
     <section class="mv5">
         <Heading>New features</Heading>
         <ul class="pa0 ma0 ml3 lh-copy">
-            <li>Add <a class="blue dim link" href="/guide/validators/file/">file validator</a></li>
-            <li><i class="fa fa-star"></i> Add <a class="blue dim link" href="/guide/validators/vat/">vat validator</a>, support 32 countries</li>
+            <li>Add <a href="/guide/validators/file" class="blue dim link">file validator</a></li>
+            <li><i class="fa fa-star"></i> Add <a href="/guide/validators/vat" class="blue dim link">vat validator</a>, support 32 countries</li>
         </ul>
     </section>
 
     <section class="mv5">
         <Heading>Improvements</Heading>
         <ul class="pa0 ma0 ml3 lh-copy">
-            <li>Add Canadian Postal Code support for the <a class="blue dim link" href="/guide/validators/zip-code/">zipCode validator</a></li>
-            <li>The <a class="blue dim link" href="/guide/validators/choice/">choice validator</a> supports <code>select</code> element</li>
+            <li>Add Canadian Postal Code support for the <a href="/guide/validators/zip-code" class="blue dim link">zipCode validator</a></li>
+            <li>The <a href="/guide/validators/choice" class="blue dim link">choice validator</a> supports <code>select</code> element</li>
             <li>Activate tab containing the first invalid field</li>
         </ul>
     </section>
@@ -29,7 +29,7 @@
             <li>Plugin method invocation</li>
             <li>Fix IE8 error</li>
             <li>The <code>excluded: ':disabled'</code> setting does not work on IE 8</li>
-            <li>The <a class="blue dim link" href="/guide/validators/isbn/">isbn validator</a> accepts letters and special characters</li>
+            <li>The <a href="/guide/validators/isbn" class="blue dim link">isbn validator</a> accepts letters and special characters</li>
         </ul>
     </section>
 </ChangelogLayout>

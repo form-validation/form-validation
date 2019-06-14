@@ -165,7 +165,7 @@ FormValidation
 
     <section class="mv5">
         <Heading>Submitting form</Heading>
-        <p class="lh-copy">You cannot use the <a href="/guide/plugins/default-submit/" class="blue dim link">DefaultSubmit</a> plugin to submit the form when all steps are valid. Instead, you can use the <code>onValid</code> option (or listen the <code>plugins.wizard.valid</code> event):</p>
+        <p class="lh-copy">You cannot use the <a href="/guide/plugins/default-submit" class="blue dim link">DefaultSubmit</a> plugin to submit the form when all steps are valid. Instead, you can use the <code>onValid</code> option (or listen the <code>plugins.wizard.valid</code> event):</p>
 <SampleCode lang="javascript" code={`
 FormValidation.formValidation(form, {
     fields: {
@@ -197,8 +197,8 @@ FormValidation.formValidation(form, {
 
     <section class="mv5">
         <div class="flex">
-            <PrevButton href="/guide/plugins/uikit/">Uikit plugin</PrevButton>
-            <NextButton href="/guide/api/">API</NextButton>
+            <PrevButton target="/guide/plugins/uikit">Uikit plugin</PrevButton>
+            <NextButton target="/guide/api">API</NextButton>
         </div>
     </section>
 </GuideLayout>

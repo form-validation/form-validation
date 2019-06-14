@@ -10,7 +10,7 @@
         <Heading>Options</Heading>
 
         <h3>Using with form field</h3>
-        <p class="lh-copy i">The HTML attributes are used to set the validator options via the <a href="/guide/plugins/declarative/" class="blue dim link">Declarative</a> plugin</p>
+        <p class="lh-copy i">The HTML attributes are used to set the validator options via the <a href="/guide/plugins/declarative" class="blue dim link">Declarative</a> plugin</p>
         <table class="collapse ba br2 b--black-10 pv2 ph3 w-100 mb4">
             <tr class="striped--light-gray">
                 <th class="pv2 ph3 tl f6 fw6 ttu">Name</th>
@@ -56,7 +56,7 @@ result is an object of
 }
 */
 `} />
-        <Tip>The <a href="/guide/plugins/mandatory-icon/" class="blue dim link">MandatoryIcon</a> plugin is useful when you want to display the mandatory icon for required fields</Tip>
+        <Tip>The <a href="/guide/plugins/mandatory-icon" class="blue dim link">MandatoryIcon</a> plugin is useful when you want to display the mandatory icon for required fields</Tip>
     </section>
 
     <section class="mv5">
@@ -67,7 +67,7 @@ result is an object of
 
     <section class="mv5">
         <Heading>HTML5 example</Heading>
-        <p class="lh-copy">When the <a href="/guide/plugins/declarative/" class="blue dim link">Declarative</a> plugin is used, the notEmpty validator will be turned on automatically if the input uses HTML 5 <code>required</code> attribute.</p>
+        <p class="lh-copy">When the <a href="/guide/plugins/declarative" class="blue dim link">Declarative</a> plugin is used, the notEmpty validator will be turned on automatically if the input uses HTML 5 <code>required</code> attribute.</p>
         <Demo prefix="/guide/validators/not-empty/html5" frameworks={['Tachyons']} />
     </section>
 
@@ -115,8 +115,8 @@ const res3 = notEmpty().validate({
 
     <section class="mv5">
         <div class="flex">
-            <PrevButton href="/guide/validators/meid/">meid validator</PrevButton>
-            <NextButton href="/guide/validators/numeric/">numeric validator</NextButton>
+            <PrevButton target="/guide/validators/meid">meid validator</PrevButton>
+            <NextButton target="/guide/validators/numeric">numeric validator</NextButton>
         </div>
     </section>
 </GuideLayout>

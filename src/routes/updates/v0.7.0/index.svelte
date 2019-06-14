@@ -26,7 +26,7 @@ $(form).formValidation({
 });
 `} />
 
-        <p class="lh-copy">or use multiple instance of same validators (for example, <a class="blue dim link" href="/guide/validators/callback/">callback</a>, as following piece of code):</p>
+        <p class="lh-copy">or use multiple instance of same validators (for example, <a href="/guide/validators/callback" class="blue dim link">callback</a>, as following piece of code):</p>
         <SampleCode lang="javascript" code={`
 $(form).formValidation({
     framework: '...',
@@ -95,13 +95,13 @@ $(form).formValidation({
     <section class="mv5">
         <Heading>Improvements</Heading>
         <ul class="pa0 ma0 ml3 lh-copy">
-            <li><a class="blue dim link" href="/guide/validators/integer/">integer</a> validator accepts leading zeros</li>
-            <li><a class="blue dim link" href="/guide/validators/between/">between</a>, <a class="blue dim link" href="/guide/validators/greater-than/">greaterThan</a>, <a class="blue dim link" href="/guide/validators/less-than/">lessThan</a> validators
+            <li><a href="/guide/validators/integer" class="blue dim link">integer</a> validator accepts leading zeros</li>
+            <li><a href="/guide/validators/between" class="blue dim link">between</a>, <a href="/guide/validators/greater-than/">greaterThan</a>, <a href="/guide/validators/less-than" class="blue dim link">lessThan</a> validators
                 now show the message where <code>%s</code> are replaced with the <code>min</code>, <code>max</code>, <code>value</code> options when the input isn't a number</li>
-            <li><a class="blue dim link" href="/guide/validators/integer/">integer</a> and <a class="blue dim link" href="/guide/validators/numeric/">numeric</a> validators support more locales by providing new thousands and decimal separator options</li>
+            <li><a href="/guide/validators/integer" class="blue dim link">integer</a> and <a href="/guide/validators/numeric" class="blue dim link">numeric</a> validators support more locales by providing new thousands and decimal separator options</li>
             <li>When using tooltip for multiple fields, it always shows on the last field</li>
-            <li>Adjust the default messages when using the <a class="blue dim link" href="/guide/validators/string-length/">stringLength</a> validator</li>
-            <li>The Spanish <a class="blue dim link" href="/guide/validators/id/">id</a>, <a class="blue dim link" href="/guide/validators/vat/">vat</a> validators add <code>type</code> to the return value. The type can be <code>DNI</code>, <code>NIE</code> or <code>CIF</code>.</li>
+            <li>Adjust the default messages when using the <a href="/guide/validators/string-length" class="blue dim link">stringLength</a> validator</li>
+            <li>The Spanish <a href="/guide/validators/id" class="blue dim link">id</a>, <a href="/guide/validators/vat" class="blue dim link">vat</a> validators add <code>type</code> to the return value. The type can be <code>DNI</code>, <code>NIE</code> or <code>CIF</code>.</li>
         </ul>
     </section>
 

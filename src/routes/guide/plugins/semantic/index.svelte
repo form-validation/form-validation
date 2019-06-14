@@ -4,7 +4,7 @@
 
 <GuideLayout>
     <h1 class="f3 f2-m f1-l tc">Semantic plugin</h1>
-    <h2 class="f4 fw4 tc lh-copy">Integrate with <a href="https://semantic-ui.com/" class="blue dim link">Semantic UI</a> framework. Support Semantic UI v2.4.1</h2>
+    <h2 class="f4 fw4 tc lh-copy">Integrate with <a href="https://semantic-ui.com" class="blue dim link">Semantic UI</a> framework. Support Semantic UI v2.4.1</h2>
 
     <section class="mv5">
         <Heading>Usage</Heading>
@@ -118,8 +118,8 @@ semantic: new FormValidation.plugins.Semantic({
 
     <section class="mv5">
         <div class="flex">
-            <PrevButton href="/guide/plugins/recaptcha/">Recaptcha plugin</PrevButton>
-            <NextButton href="/guide/plugins/sequence/">Sequence plugin</NextButton>
+            <PrevButton target="/guide/plugins/recaptcha">Recaptcha plugin</PrevButton>
+            <NextButton target="/guide/plugins/sequence">Sequence plugin</NextButton>
         </div>
     </section>
 </GuideLayout>

@@ -2,7 +2,7 @@
     <Heading>{heading}</Heading>
     <Cards>
         {#each examples as example}
-        <Card target="/guide/examples/{slug(example)}/" title="{example}"></Card>
+        <Card target="/guide/examples/{slug(example)}" title="{example}"></Card>
         {/each}
     </Cards>
 </section>
@@ -21,7 +21,7 @@ let heading = 'More examples';
 
 onMount(() => {
     const path = window.location.pathname;
-    examples = examples.filter((item) => `/guide/examples/${slug(item)}/` !== path);
+    examples = examples.filter((item) => `/guide/examples/${slug(item)}` !== path);
 });
 
 export {

@@ -6,7 +6,7 @@
     <h1 class="tc lh-copy">Using Material Design icons</h1>
     
     <section class="mv5">
-        <p class="lh-copy">If you are a fan of using Google's <a href="https://material.io/" class="blue dim link">material design</a>, then you might prefer to use <a href="https://material.io/tools/icons/" class="blue dim link">its icons set</a>.</p>
+        <p class="lh-copy">If you are a fan of using Google's <a href="https://material.io" class="blue dim link">material design</a>, then you might prefer to use <a href="https://material.io/tools/icons" class="blue dim link">its icons set</a>.</p>
         <p class="lh-copy">It's up to you to choose suitable icons from Google material design icons for the feedback icons. The following table is just an example of three icons taken from the set:</p>
         <table class="collapse ba br2 b--black-10 pv2 ph3 w-100">
             <tr class="striped--light-gray">

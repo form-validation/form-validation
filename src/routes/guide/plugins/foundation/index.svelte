@@ -4,7 +4,7 @@
 
 <GuideLayout>
     <h1 class="f3 f2-m f1-l tc">Foundation plugin</h1>
-    <h2 class="f4 fw4 tc lh-copy">Integrate with <a href="https://foundation.zurb.com/" class="blue dim link">Foundation</a> framework. Support Foundation v6.5.3</h2>
+    <h2 class="f4 fw4 tc lh-copy">Integrate with <a href="https://foundation.zurb.com" class="blue dim link">Foundation</a> framework. Support Foundation v6.5.3</h2>
 
     <section class="mv5">
         <Heading>Usage</Heading>
@@ -112,8 +112,8 @@ foundation: new FormValidation.plugins.Foundation({
 
     <section class="mv5">
         <div class="flex">
-            <PrevButton href="/guide/plugins/excluded/">Excluded plugin</PrevButton>
-            <NextButton href="/guide/plugins/icon/">Icon plugin</NextButton>
+            <PrevButton target="/guide/plugins/excluded">Excluded plugin</PrevButton>
+            <NextButton target="/guide/plugins/icon">Icon plugin</NextButton>
         </div>
     </section>
 </GuideLayout>

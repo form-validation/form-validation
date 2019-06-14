@@ -4,7 +4,7 @@
 
 <GuideLayout>
     <h1 class="f3 f2-m f1-l tc">Materialize plugin</h1>
-    <h2 class="f4 fw4 tc lh-copy">Integrate with <a href="https://materializecss.com/" class="blue dim link">Materialize</a> framework. Support Materialize v1.0.0</h2>
+    <h2 class="f4 fw4 tc lh-copy">Integrate with <a href="https://materializecss.com" class="blue dim link">Materialize</a> framework. Support Materialize v1.0.0</h2>
 
     <section class="mv5">
         <Heading>Usage</Heading>
@@ -99,8 +99,8 @@ materialize: new FormValidation.plugins.Materialize({
 
     <section class="mv5">
         <div class="flex">
-            <PrevButton href="/guide/plugins/mandatory-icon/">MandatoryIcon plugin</PrevButton>
-            <NextButton href="/guide/plugins/message/">Message plugin</NextButton>
+            <PrevButton target="/guide/plugins/mandatory-icon">MandatoryIcon plugin</PrevButton>
+            <NextButton target="/guide/plugins/message">Message plugin</NextButton>
         </div>
     </section>
 </GuideLayout>

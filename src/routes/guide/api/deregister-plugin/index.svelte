@@ -4,7 +4,7 @@
 
 <GuideLayout>
     <h1 class="f3 f2-m f1-l tc">deregisterPlugin()</h1>
-    <h2 class="f4 fw4 tc lh-copy">Deregister a plugin which is registered earlier by <a href="/guide/api/register-plugin/" class="blue dim link">registerPlugin()</a> method.</h2>
+    <h2 class="f4 fw4 tc lh-copy">Deregister a plugin which is registered earlier by <a href="/guide/api/register-plugin" class="blue dim link">registerPlugin()</a> method.</h2>
 
     <section class="mv5">
         <div class="mb3">
@@ -18,8 +18,8 @@
 
     <section class="mv5">
         <div class="flex">
-            <PrevButton href="/guide/api/deregister-filter/">deregisterFilter() method</PrevButton>
-            <NextButton href="/guide/api/destroy/">destroy() method</NextButton>
+            <PrevButton target="/guide/api/deregister-filter">deregisterFilter() method</PrevButton>
+            <NextButton target="/guide/api/destroy">destroy() method</NextButton>
         </div>
     </section>
 </GuideLayout>

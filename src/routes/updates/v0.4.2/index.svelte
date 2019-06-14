@@ -9,8 +9,8 @@
     <section class="mv5">
         <Heading>New features</Heading>
         <ul class="pa0 ma0 ml3 lh-copy">
-            <li>Add <a class="blue dim link" href="/guide/validators/siren/">siren</a> and <a class="blue dim link" href="/guide/validators/siret/">siret</a> validators</li>
-            <li>Add <a class="blue dim link" href="/guide/validators/vin/">vin validator</a></li>
+            <li>Add <a href="/guide/validators/siren"class="blue dim link">siren</a> and <a href="/guide/validators/siret" class="blue dim link">siret</a> validators</li>
+            <li>Add <a href="/guide/validators/vin" class="blue dim link">vin validator</a></li>
             <li><i class="fa fa-star"></i> Add <code>excluded</code> option</li>
         </ul>
     </section>
@@ -18,9 +18,9 @@
     <section class="mv5">
         <Heading>Improvements</Heading>
         <ul class="pa0 ma0 ml3 lh-copy">
-            <li>The <a class="blue dim link" href="/guide/validators/phone/">phone validator</a> now supports +1 country code and area code for US phone number</li>
-            <li>The <a class="blue dim link" href="/guide/validators/remote/">remote validator</a> allows to override <code>name</code> option</li>
-            <li>Improve <a class="blue dim link" href="/guide/validators/zip-code/">zipCode validator</a></li>
+            <li>The <a href="/guide/validators/phone" class="blue dim link">phone validator</a> now supports +1 country code and area code for US phone number</li>
+            <li>The <a href="/guide/validators/remote" class="blue dim link">remote validator</a> allows to override <code>name</code> option</li>
+            <li>Improve <a href="/guide/validators/zip-code" class="blue dim link">zipCode validator</a></li>
         </ul>
     </section>
 

@@ -7,7 +7,7 @@
     <h2 class="f4 fw4 tc lh-copy">Register a filter</h2>
 
     <section class="mv5">
-        <p class="lh-copy">You can remove the filter by using the <a href="/guide/api/deregister-filter/" class="blue dim link">deregisterFilter()</a> method.</p>
+        <p class="lh-copy">You can remove the filter by using the <a href="/guide/api/deregister-filter" class="blue dim link">deregisterFilter()</a> method.</p>
         <div class="mb3">
             <SampleCode lang="javascript" code={`registerFilter(name: String, func: Function): Core`} />
         </div>
@@ -20,8 +20,8 @@
 
     <section class="mv5">
         <div class="flex">
-            <PrevButton href="/guide/api/on/">on() method</PrevButton>
-            <NextButton href="/guide/api/register-plugin/">registerPlugin() method</NextButton>
+            <PrevButton target="/guide/api/on">on() method</PrevButton>
+            <NextButton target="/guide/api/register-plugin">registerPlugin() method</NextButton>
         </div>
     </section>
 </GuideLayout>

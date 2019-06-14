@@ -9,18 +9,18 @@
     <section class="mv5">
         <Heading>New features</Heading>
         <ul class="pa0 ma0 ml3 lh-copy">
-            <li>Add new <a class="blue dim link" href="/guide/validators/promise/">promise</a> validator</li>
+            <li>Add new <a href="/guide/validators/promise" class="blue dim link">promise</a> validator</li>
             <li>Add <code>STATUS_IGNORED</code> status. The field will be ignored for the current validation if the validator returns <code>null</code></li>
-            <li><a class="blue dim link" href="/guide/validators/iban/">iban</a> validator adds new sepa option that requires the IBAN number must be (or not) from the SEPA countries</li>
-            <li><a class="blue dim link" href="/guide/validators/iban/">iban</a> validator now supports East Timor, Kosovo countries</li>
+            <li><a href="/guide/validators/iban" class="blue dim link">iban</a> validator adds new sepa option that requires the IBAN number must be (or not) from the SEPA countries</li>
+            <li><a href="/guide/validators/iban" class="blue dim link">iban</a> validator now supports East Timor, Kosovo countries</li>
         </ul>
     </section>
 
     <section class="mv5">
         <Heading>Improvements</Heading>
         <ul class="pa0 ma0 ml3 lh-copy">
-            <li><a class="blue dim link" href="/guide/validators/date/">date</a> validator supports dot (.) separator for European countries</li>
-            <li><a class="blue dim link" href="/guide/validators/iban/">iban</a> validator will return <code>false</code> if the country is not supported</li>
+            <li><a href="/guide/validators/date" class="blue dim link">date</a> validator supports dot (.) separator for European countries</li>
+            <li><a href="/guide/validators/iban" class="blue dim link">iban</a> validator will return <code>false</code> if the country is not supported</li>
             <li>Allow to use callback for field's <code>excluded</code> option</li>
             <li>Skip validation on button using <code>formnovalidate</code> attribute</li>
             <li>Add more examples for iban test suite</li>
@@ -33,7 +33,7 @@
         <ul class="pa0 ma0 ml3 lh-copy">
             <li>Spanish VAT validator doesn't work with some examples</li>
             <li>Override the options when adding field</li>
-            <li>The Brazilian <a class="blue dim link" href="/guide/validators/id/">ID</a> (CPF) number must have 11 digits</li>
+            <li>The Brazilian <a href="/guide/validators/id" class="blue dim link">ID</a> (CPF) number must have 11 digits</li>
             <li>The <code>updateMessage()</code> method must return the plugin instance for chaining</li>
             <li>When calling <code>resetField(true)</code> and <code>resetForm(true)</code> methods, the field need be reset value before updating the status</li>
         </ul>

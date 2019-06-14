@@ -10,7 +10,7 @@
         <Heading>Improvements</Heading>
         <ul class="pa0 ma0 ml3 lh-copy">
             <li>Focus to the first invalid element</li>
-            <li><a class="blue dim link" href="/guide/validators/remote/">remote validator</a>: Allow to set additional data to remote URL</li>
+            <li><a href="/guide/validators/remote" class="blue dim link">remote validator</a>: Allow to set additional data to remote URL</li>
             <li>Only validate not empty field</li>
             <li>Validate existing fields only</li>
         </ul>
