@@ -11,6 +11,7 @@
     ]} />
 
     <Examples heading="Advanced examples" examples={[
+        'Adding dynamic field',
         'Asking fields to be unique',
         'Clearing field when clicking the icon',
         'Enabling validators on the fly',

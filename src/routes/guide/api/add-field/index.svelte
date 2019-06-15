@@ -17,6 +17,10 @@
         </ul>
     </section>
 
+    <Examples examples={[
+        'Adding dynamic field',
+    ]} />
+
     <section class="mv5">
         <div class="flex">
             <PrevButton target="/guide/api">Overview</PrevButton>
@@ -26,6 +30,7 @@
 </GuideLayout>
 
 <script>
+import Examples from '../../../../components/Examples.svelte';
 import Heading from '../../../../components/Heading.svelte';
 import GuideLayout from '../../../../components/GuideLayout.svelte';
 import NextButton from '../../../../components/NextButton.svelte';
