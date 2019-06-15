@@ -160,6 +160,7 @@ const fv = FormValidation
         'Showing custom message returned from server',
         'Showing dynamic message',
         'Showing messages in custom area',
+        'Showing only one message each time',
     ]} />
 
     <RelatedValidators validators={['callback']} />

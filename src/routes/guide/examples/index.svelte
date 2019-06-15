@@ -52,6 +52,7 @@
         'Showing dynamic message',
         'Showing icons in custom area',
         'Showing messages in custom area',
+        'Showing only one message each time',
         'Using FontAwesome icons',
         'Using Glyphicons icons',
         'Using Material Design icons',
