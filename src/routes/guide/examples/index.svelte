@@ -20,6 +20,7 @@
         'Regenerating captcha when the form is invalid',
         'Requiring at least one field',
         'Switching validators on the same field',
+        'Updating validator options',
         'Using HTML 5 inputs and attributes',
         'Validating checkbox list placed in multiple columns',
         'Validating multiple inputs as one',

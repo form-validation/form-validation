@@ -28,6 +28,7 @@ updateValidatorOption(
 
     <Examples examples={[
         'Showing custom message returned from server',
+        'Updating validator options',
     ]} />
 
     <section class="mv5">

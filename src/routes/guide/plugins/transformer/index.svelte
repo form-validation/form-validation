@@ -176,6 +176,7 @@ transformer: new FormValidation.plugins.Transformer({
 
     <Examples examples={[
         'Integrating with TinyMCE',
+        'Trimming a value',
     ]} />
 
     <section class="mv5">
