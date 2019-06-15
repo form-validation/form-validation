@@ -1,6 +1,7 @@
 export default `<!doctype html>
 <html>
 <head>
+    <link-tag rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
     <link-tag rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link-tag rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css">
     <link-tag rel="stylesheet" href="/vendors/formvalidation/dist/css/formValidation.min.css">
@@ -9,15 +10,12 @@ export default `<!doctype html>
     <form id="demoForm" method="post">
         <div class="cf mb2">
             <div class="fl w-100">
-                <div class="fl w-10 pa2">Book</div>
+                <div class="fl w-10 pa2">Task(s)</div>
+                <div class="fl w-40 mr2">
+                    <input type="text" class="input-reset ba b--black-20 pa2 mb2 db w-100" name="task[0].title" placeholder="Title" />
+                </div>
                 <div class="fl w-30 mr2">
-                    <input type="text" class="input-reset ba b--black-20 pa2 mb2 db w-100" name="book[0].title" placeholder="Title" />
-                </div>
-                <div class="fl w-25 mr2">
-                    <input type="text" class="input-reset ba b--black-20 pa2 mb2 db w-100" name="book[0].isbn" placeholder="ISBN" />
-                </div>
-                <div class="fl w-20 mr2">
-                    <input type="text" class="input-reset ba b--black-20 pa2 mb2 db w-100" name="book[0].price" placeholder="Price" />
+                    <input type="text" class="input-reset ba b--black-20 pa2 mb2 db w-100" name="task[0].dueDate" placeholder="Due date" />
                 </div>
                 <div class="fl w-10 ph2">
                     <button type="button" class="ba b--black-20 bg-green white ph3 pv2 br2" id="addButton">+</button>
@@ -28,15 +26,12 @@ export default `<!doctype html>
         <!-- Template -->
         <div class="cf mb2" id="template" style="display: none;">
             <div class="fl w-100">
-                <div class="fl w-10 pa2">Book</div>
+                <div class="fl w-10 pa2"></div>
+                <div class="fl w-40 mr2">
+                    <input type="text" class="input-reset ba b--black-20 pa2 mb2 db w-100" data-name="task.title" placeholder="Title" />
+                </div>
                 <div class="fl w-30 mr2">
-                    <input type="text" class="input-reset ba b--black-20 pa2 mb2 db w-100" data-name="book.title" placeholder="Title" />
-                </div>
-                <div class="fl w-25 mr2">
-                    <input type="text" class="input-reset ba b--black-20 pa2 mb2 db w-100" data-name="book.isbn" placeholder="ISBN" />
-                </div>
-                <div class="fl w-20 mr2">
-                    <input type="text" class="input-reset ba b--black-20 pa2 mb2 db w-100" data-name="book.price" placeholder="Price" />
+                    <input type="text" class="input-reset ba b--black-20 pa2 mb2 db w-100" data-name="task.dueDate" placeholder="Due date" />
                 </div>
                 <div class="fl w-10 ph2">
                     <button type="button" class="ba b--black-20 bg-green white ph3 pv2 br2 js-remove-button">-</button>
@@ -54,12 +49,9 @@ export default `<!doctype html>
         </div>
     </form>
 
+<script-tag src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script-tag>    
 <script-tag src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.35.3/es6-shim.min.js"></script-tag>
-<!-- 
-You have to include the full version of FormValidation which contains all validators
-including the isbn validator 
--->
-<script-tag src="/vendors/formvalidation/dist/js/FormValidation.full.min.js"></script-tag>
+<script-tag src="/vendors/formvalidation/dist/js/FormValidation.min.js"></script-tag>
 <script-tag src="/vendors/formvalidation/dist/js/plugins/Tachyons.min.js"></script-tag>
 
 <script-tag>
@@ -67,37 +59,49 @@ document.addEventListener('DOMContentLoaded', function(e) {
     const titleValidators = {
         validators: {
             notEmpty: {
-                message: 'The title is required'
+                message: 'The task is required'
             }
         }
     };
-    const isbnValidators = {
+    const dueDateValidators = {
         validators: {
             notEmpty: {
-                message: 'The ISBN is required'
+                message: 'The due date is required'
             },
-            isbn: {
-                message: 'The ISBN is not valid'
-            }
-        }
-    };
-    const priceValidators = {
-        validators: {
-            notEmpty: {
-                message: 'The price is required'
-            },
-            numeric: {
-                message: 'The price must be a numeric number'
+            date: {
+                format: 'YYYY/MM/DD',
+                min: new Date(),
+                message: 'The due date is not valid'
             }
         }
     };
 
+    let rowIndex = 0;
     const demoForm = document.getElementById('demoForm');
+    
+    const attachPickAdayPicker = function(fieldName) {
+        new Pikaday({
+            field: demoForm.querySelector('[name="'+ fieldName+ '"]'),
+            format: 'YYYY/MM/DD',
+            toString: function(date, format) {
+                const day = date.getDate();
+                const month = date.getMonth() + 1;
+                const year = date.getFullYear();
+                return year + '/' + month + '/' + day;
+            },
+            onSelect: function() {
+                // Revalidate the date field
+                if (fv) {
+                    fv.revalidateField(fieldName);
+                }
+            }
+        });
+    };
+    
     const fv = FormValidation.formValidation(demoForm, {
         fields: {
-            'book[0].title': titleValidators,
-            'book[0].isbn': isbnValidators,
-            'book[0].price': priceValidators,
+            'task[0].title': titleValidators,
+            'task[0].dueDate': dueDateValidators,
         },
         plugins: {
             submitButton: new FormValidation.plugins.SubmitButton(),
@@ -109,22 +113,28 @@ document.addEventListener('DOMContentLoaded', function(e) {
                 validating: 'fa fa-refresh'
             }),
         },
-    }).registerValidator('isbn', isbn);
+    }).on('core.field.added', function(e) {
+        if (e.field === 'task[' + rowIndex + '].dueDate') {
+            // The added field is due date
+            attachPickAdayPicker(e.field);
+        }
+    });
+
+    // Attach pickaday to the first existing due date
+    attachPickAdayPicker('task[0].dueDate');
 
     const removeRow = function(rowIndex) {
         const row = demoForm.querySelector('[data-row-index="' + rowIndex + '"]');
 
         // Remove field
-        fv.removeField('book[' + rowIndex + '].title')
-            .removeField('book[' + rowIndex + '].isbn')
-            .removeField('book[' + rowIndex + '].price');
+        fv.removeField('task[' + rowIndex + '].title')
+            .removeField('task[' + rowIndex + '].dueDate');
 
         // Remove row
         row.parentNode.removeChild(row);
     };
 
     const template = document.getElementById('template');
-    let rowIndex = 0;
     document.getElementById('addButton').addEventListener('click', function() {
         rowIndex++;
 
@@ -139,15 +149,13 @@ document.addEventListener('DOMContentLoaded', function(e) {
         // Insert before the template
         template.before(clone);
 
-        clone.querySelector('[data-name="book.title"]').setAttribute('name', 'book[' + rowIndex + '].title');
-        clone.querySelector('[data-name="book.isbn"]').setAttribute('name', 'book[' + rowIndex + '].isbn');
-        clone.querySelector('[data-name="book.price"]').setAttribute('name', 'book[' + rowIndex + '].price');
+        clone.querySelector('[data-name="task.title"]').setAttribute('name', 'task[' + rowIndex + '].title');
+        clone.querySelector('[data-name="task.dueDate"]').setAttribute('name', 'task[' + rowIndex + '].dueDate');
 
         // Add new fields
         // Note that we also pass the validator rules for new field as the third parameter
-        fv.addField('book[' + rowIndex + '].title', titleValidators)
-            .addField('book[' + rowIndex + '].isbn', isbnValidators)
-            .addField('book[' + rowIndex + '].price', priceValidators);
+        fv.addField('task[' + rowIndex + '].title', titleValidators)
+            .addField('task[' + rowIndex + '].dueDate', dueDateValidators);
 
         // Handle the click event of removeButton
         const removeBtn = clone.querySelector('.js-remove-button');

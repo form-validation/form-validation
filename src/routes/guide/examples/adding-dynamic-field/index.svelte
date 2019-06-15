@@ -44,6 +44,55 @@
 
         <Demo prefix="/guide/examples/adding-dynamic-field/different-name" frameworks={['tachyons']} />
     </section>
+
+    <section class="mv5">
+        <Heading>Using other library for added fields</Heading>
+
+        <p class="lh-copy">Sometime, the added fields aren't just simply a normal input such as text box, text area. They can be used with other plugins such as a date picker, an auto-completed control, etc.</p>
+        <p class="lh-copy">In this case, the field should be initially as a normal text input, and then integrated with other plugin after being added.</p>
+        <p class="lh-copy">The following sample code attaches a date picker to newly added input by triggering the <a href="/guide/events/core.field.added" class="blue dim link">core.field.added event</a>:</p>
+
+        <div class="mb4">
+<SampleCode lang="javascript" code={`
+// The index of row
+let rowIndex = 0;
+
+const demoForm = document.getElementById('demoForm');
+
+const fv = FormValidation.formValidation(demoForm, {
+    fields: {
+        'task[0].title': titleValidators,
+        'task[0].dueDate': dueDateValidators,
+    },
+    plugins: {
+        ...
+    },
+}).on('core.field.added', function(e) {
+    if (e.field === 'task[' + rowIndex + '].dueDate') {
+        // The added field is due date
+        attachPickAdayPicker(e.field);
+    }
+});
+
+const attachPickAdayPicker = function(fieldName) {
+    new Pikaday({
+        field: demoForm.querySelector('[name="' + fieldName + '"]'),
+        onSelect: function() {
+            // Revalidate the date field
+            if (fv) {
+                fv.revalidateField(fieldName);
+            }
+        }
+    });
+};
+
+// Attach pickaday to the first existing due date
+attachPickAdayPicker('task[0].dueDate');
+`} />
+        </div>
+        <Tip>You should look at the <a href="/guide/examples/integrating-with-3rd-party-libraries" class="blue dim link">principles</a> when integrating FormValidation with other plugins</Tip>
+        <Demo prefix="/guide/examples/adding-dynamic-field/using-other-library" frameworks={['tachyons']} />
+    </section>
 </GuideLayout>
 
 <script>
@@ -51,4 +100,5 @@ import Demo from '../../../../components/Demo.svelte';
 import GuideLayout from '../../../../components/GuideLayout.svelte';
 import Heading from '../../../../components/Heading.svelte';
 import SampleCode from '../../../../components/SampleCode.svelte';
+import Tip from '../../../../components/Tip.svelte';
 </script>
