@@ -77,6 +77,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
     <Examples examples={[
         'Multiple steps wizard',
         'Using Ajax to submit the form',
+        'Validating form manually',
     ]} />
 </GuideLayout>
 

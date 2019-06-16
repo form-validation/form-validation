@@ -13,17 +13,30 @@
         </div>
         <Tip>If you want the form to be validated automatically when pressing its Submit button, use the <a href="/guide/plugins/submit-button" class="blue dim link">SubmitButton</a> plugin</Tip>
 <SampleCode lang="javascript" code={`
+// Create a FormValidation instance
+const fv = FormValidation.formValidation(demoForm, {
+    fields: { ... },
+    plugins: { ... },
+});
+
+// Validate the form when click on a link or normal button
 fv
     .validate()
     .then(function(status) {
         // status can be one of the following value
-        // 'NotValidated' (FormValidation.Status.NotValidated): The form is not yet validated
-        // 'Valid' (FormValidation.Status.Valid): The form is valid
-        // 'Invalid' (FormValidation.Status.Invalid): The form is invalid
+        // 'NotValidated': The form is not yet validated
+        // 'Valid': The form is valid
+        // 'Invalid': The form is invalid
         ...
     });
 `} />    
     </section>
+
+    <Examples examples={[
+        'Multiple steps wizard',
+        'Using Ajax to submit the form',
+        'Validating form manually',
+    ]} />
 
     <section class="mv5">
         <div class="flex">
@@ -34,6 +47,7 @@ fv
 </GuideLayout>
 
 <script>
+import Examples from '../../../../components/Examples.svelte';
 import GuideLayout from '../../../../components/GuideLayout.svelte';
 import NextButton from '../../../../components/NextButton.svelte';
 import PrevButton from '../../../../components/PrevButton.svelte';

@@ -8,6 +8,7 @@
     <Examples heading="Basic examples" examples={[
         'Can not submit form after validation',
         'Using Ajax to submit the form',
+        'Validating form manually',
     ]} />
 
     <Examples heading="Advanced examples" examples={[

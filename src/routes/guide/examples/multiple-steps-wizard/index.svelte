@@ -152,6 +152,7 @@ prevButton.addEventListener('click', function() {
     <Examples examples={[
         'Multiple steps wizard',
         'Using Ajax to submit the form',
+        'Validating form manually',
     ]} />
 </GuideLayout>
 
