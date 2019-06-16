@@ -6,7 +6,7 @@
     <h1 class="tc lh-copy">Bundling with Webpack</h1>
 
     <section class="mv5">
-        <p class="lh-copy">FormValidation was rewritten in ES6 from v1.0.0. It comes with the <code>dist/es6</code> directory that consists of ES6 compatible classes. This guide shows how you can bundle FormValidation with <a href="https://webpack.js.org" class="blue dim link">Webpack</a>.</p>
+        <p class="lh-copy">FormValidation was rewritten in ES6 from v1.0.0. It comes with the <code>dist/es6</code> directory that consists of ES6 compatible classes. This guide shows how you can bundle FormValidation with <a href="https://webpack.js.org" target="_blank" rel="noopener" class="blue dim link">Webpack</a>.</p>
         <p class="lh-copy">Assume that your folder has the following structure:</p>
 <SampleCode lang="html" code={`
 the-root-directory
@@ -21,13 +21,14 @@ the-root-directory
         
         <p class="lh-copy">Now, you can set the alias to FormValidation by adding the <code>resolve.alias</code> setting to <code>webpack.config.js</code>:</p>
 <SampleCode lang="javascript" code={`
+// webpack.config.js
 const path = require('path');
 
 module.exports = {
     resolve: {
         extensions: ['.js'],
         alias: {
-            formvalidation: path.resolve(__dirname, '../vendors/formvalidation'),
+            formvalidation: path.resolve(__dirname, 'vendors/formvalidation'),
         },
     },
     ...
