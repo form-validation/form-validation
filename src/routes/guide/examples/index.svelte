@@ -34,6 +34,7 @@
         'Disabling date',
         'Is a@b valid email address',
         'Preventing user to have same value as the placeholder',
+        'Requiring all options to be selected',
         'Showing credit card icon',
         'Supporting custom date format',
         'Trimming a value',
