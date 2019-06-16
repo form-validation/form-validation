@@ -68,6 +68,11 @@
         'Performing validation if field value exceed given number of characters',
     ]} />
 
+    <Examples heading="Integrate with JavaScript frameworks" examples={[
+        'Bundling with Rollup',
+        'Bundling with Webpack',
+    ]} />
+
     <Examples heading="Integrate with 3rd party libraries" examples={[
         'Integrating with 3rd party libraries',
         'Integrating with Bootbox',
