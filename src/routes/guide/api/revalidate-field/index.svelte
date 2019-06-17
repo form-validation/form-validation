@@ -31,6 +31,7 @@ fv
     </section>
 
     <Examples examples={[
+        'Terms and conditions agreement validation',
         'Validating multiple inputs as one',
     ]} />
 

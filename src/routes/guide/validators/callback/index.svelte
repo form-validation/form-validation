@@ -187,6 +187,7 @@ const res4 = callback().validate({
         'Regenerating captcha when the form is invalid',
         'Showing all messages',
         'Showing dynamic message',
+        'Terms and conditions agreement validation',
         'Validating credit card expiration date',
     ]} />
 

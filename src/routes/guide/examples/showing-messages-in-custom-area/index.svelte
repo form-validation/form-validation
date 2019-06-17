@@ -18,7 +18,7 @@
     <section class="mv5">
         <Heading>Using a CSS selector for the container</Heading>
 
-        <p class="lh-copy">The contact form below shows messages in an element located at the bottom of form.</p>
+        <p class="lh-copy">The form below shows messages in an element located at the bottom of form.</p>
 <SampleCode lang="html" code={`
 <form id="demoForm">
     ...

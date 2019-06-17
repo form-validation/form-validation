@@ -37,6 +37,7 @@
         'Requiring all options to be selected',
         'Showing credit card icon',
         'Supporting custom date format',
+        'Terms and conditions agreement validation',
         'Trimming a value',
         'Validating an avatar URL',
         'Validating credit card expiration date',
