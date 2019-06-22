@@ -102,7 +102,7 @@ onMount(() => {
                 validating: 'fa fa-refresh',
             }),
             demoFrame: new DemoFrame({
-                sender: '/guide/examples/creating-a-custom-validator/validators-namespace',
+                sender: '/guide/examples/creating-a-custom-validator/validators-namespace/tachyons',
                 sampleCode: sampleCode,
             }),
         },
