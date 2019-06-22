@@ -80,6 +80,7 @@
         'Integrating with Bootbox',
         'Integrating with Bootstrap Datepicker',
         'Integrating with flatpickr',
+        'Integrating with Select2',
         'Integrating with Summernote',
         'Integrating with TinyMCE',
         'Using flatpickr for start and end dates',

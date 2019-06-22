@@ -8,6 +8,7 @@
     <section class="mv5">
         <p class="lh-copy">It's possible to use a date picker that allows user to choose a date easily. You have to <a href="/guide/api/revalidate-field" class="blue dim link">revalidate the field</a> when the date is changed.</p>
         <p class="lh-copy">The example below uses the <a href="https://flatpickr.js.org" class="blue dim link">flatpickr</a>, a lightweight and powerful datetime picker.</p>
+        <Tip>You should look at the <a href="/guide/examples/integrating-with-3rd-party-libraries" class="blue dim link">basic principle</a> when integrating FormValidation with 3rd party libraries</Tip>
         <div class="mb4">
 <SampleCode lang="javascript" code={`
 const fv = FormValidation.formValidation(form, {
@@ -52,4 +53,5 @@ import Examples from '../../../../components/Examples.svelte';
 import GuideLayout from '../../../../components/GuideLayout.svelte';
 import RelatedValidators from '../../../../components/RelatedValidators.svelte';
 import SampleCode from '../../../../components/SampleCode.svelte';
+import Tip from '../../../../components/Tip.svelte';
 </script>

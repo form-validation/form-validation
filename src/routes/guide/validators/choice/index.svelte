@@ -87,6 +87,7 @@
     </section>
 
     <Examples examples={[
+        'Integrating with Select2',
         'Requiring all options to be selected',
     ]} />
 

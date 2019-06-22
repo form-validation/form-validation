@@ -7,6 +7,7 @@
 
     <section class="mv5">
         <p class="lh-copy">This example shows how to use FormValidation with <a href="http://summernote.org" class="blue dim link">Summernote</a> plugin.</p>
+        <Tip>You should look at the <a href="/guide/examples/integrating-with-3rd-party-libraries" class="blue dim link">basic principle</a> when integrating FormValidation with 3rd party libraries</Tip>
         <p class="lh-copy">You have to revalidate the editor field when it's changed by Summernote:</p>
         <div class="mb4">
 <SampleCode lang="javascript" code={`
@@ -34,4 +35,5 @@ import Demo from '../../../../components/Demo.svelte';
 import Examples from '../../../../components/Examples.svelte';
 import GuideLayout from '../../../../components/GuideLayout.svelte';
 import SampleCode from '../../../../components/SampleCode.svelte';
+import Tip from '../../../../components/Tip.svelte';
 </script>

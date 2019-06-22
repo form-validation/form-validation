@@ -6,6 +6,7 @@
     <h1 class="tc lh-copy">Integrating with Bootstrap Datepicker</h1>
 
     <p class="lh-copy">The following example illustrates an usage of FormValidation with the <a href="https://github.com/eternicode/bootstrap-datepicker" class="blue dim link">Bootstrap Datepicker</a> plugin.</p>
+    <Tip>You should look at the <a href="/guide/examples/integrating-with-3rd-party-libraries" class="blue dim link">basic principle</a> when integrating FormValidation with 3rd party libraries</Tip>
 
     <section class="mv5">
         <Heading>Basic example</Heading>
@@ -91,8 +92,7 @@ $('#embeddingDatePicker')
 
     <section class="mv5">
         <Heading>Closing the date picker automatically</Heading>
-        <p class="lh-copy">If you want to close the date picker immediately right after choosing a date, you need to set the
-                <a href="https://bootstrap-datepicker.readthedocs.io/en/stable/options.html#autoclose" class="blue dim link">autoclose</a> option to <code>true</code>:</p>
+        <p class="lh-copy">If you want to close the date picker immediately right after choosing a date, you need to set the <a href="https://bootstrap-datepicker.readthedocs.io/en/stable/options.html#autoclose" class="blue dim link">autoclose</a> option to <code>true</code>:</p>
         <div class="mb4">
 <SampleCode lang="javascript" code={`
 $('[name="date"]')
@@ -128,4 +128,5 @@ import GuideLayout from '../../../../components/GuideLayout.svelte';
 import Heading from '../../../../components/Heading.svelte';
 import RelatedValidators from '../../../../components/RelatedValidators.svelte';
 import SampleCode from '../../../../components/SampleCode.svelte';
+import Tip from '../../../../components/Tip.svelte';
 </script>
