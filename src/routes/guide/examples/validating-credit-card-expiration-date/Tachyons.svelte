@@ -115,7 +115,7 @@ onMount(() => {
                 validating: 'fa fa-refresh',
             }),
             demoFrame: new DemoFrame({
-                sender: '/guide/examples/validating-credit-card-expiration-date',
+                sender: '/guide/examples/validating-credit-card-expiration-date/tachyons',
                 sampleCode: sampleCode,
             }),
         },
