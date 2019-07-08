@@ -1,6 +1,6 @@
 <div class="center mw8 w-100 flex">
     <div class="flex items-center">
-        <span class="nowrap f6 fw2 bg-blue white br2 pa1 mr2">v1.4.0</span>
+        <span class="nowrap f6 fw2 bg-blue white br2 pa1 mr2">v1.5.0</span>
         <a href="/updates" class="blue dim link">what's new?</a>
     </div>
     <nav class="flex items-center ml-auto">

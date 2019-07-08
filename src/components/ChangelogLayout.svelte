@@ -1,6 +1,6 @@
 <Layout>
     <div class="flex">
-        <div class="w-25 pv3 br b--light-gray">
+        <div class="w-25 pv3 br b--black-30">
             <p class="mv2 pl3 f3 fw6">Versions</p>
             <ul class="list pa0 ma0 f5 lh-copy">
                 {#each Object.entries(Versions) as [ver, date]}
@@ -24,6 +24,7 @@ let path = '';
 let content;
 
 const Versions = {
+    '1.5.0': '08 Jul 2019',
     '1.4.0': '20 Apr 2019',
     '1.3.0': '10 Aug 2018',
     '1.2.0': '15 Jul 2018',

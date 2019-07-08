@@ -23,7 +23,7 @@
     <section class="mv5">
         <Heading>Bug fixes</Heading>
         <ul class="pa0 ma0 ml3 lh-copy">
-            <li>Fix an issue that the <a href="/guide/api/reset-form/">resetForm</a>, <a href="/guide/api/reset-field" class="blue dim link">resetField</a> methods don't reset value for textarea element</li>
+            <li>Fix an issue that the <a href="/guide/api/reset-form" class="blue dim link">resetForm</a>, <a href="/guide/api/reset-field" class="blue dim link">resetField</a> methods don't reset value for textarea element</li>
         </ul>
     </section>
 
@@ -36,7 +36,7 @@
     </section>
 
     <section class="tc mv5">
-        <a href="/download/" class="f6 f5-ns fw6 dib ba b--black-20 bg-blue white ph3 ph4-ns pv2 pv3-ns br2 grow no-underline" title="Download">Download v1.3.0</a>
+        <a href="/download" class="f6 f5-ns fw6 dib ba b--black-20 bg-blue white ph3 ph4-ns pv2 pv3-ns br2 grow no-underline" title="Download">Download v1.3.0</a>
     </section>
 </ChangelogLayout>
 

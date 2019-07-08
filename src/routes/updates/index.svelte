@@ -3,159 +3,156 @@
 </svelte:head>
 
 <ChangelogLayout>
-    <h1 class="f3 f2-m f1-l tc">The latest version v1.4.0</h1>
-    <h2 class="f4 fw4 tc">Released 20 April 2019</h2>
+    <h1 class="f3 f2-m f1-l tc">The latest version v1.5.0</h1>
+    <h2 class="f4 fw4 tc">Released 08th July 2019</h2>
 
     <section class="mv5">
         <Heading>New features</Heading>
 
-        <ul class="pa0 ma0 ml3 lh-copy">
-            <li>Add verhoeff() helper method that implements the Verhoeff algorithm.</li>
-            <li>The <a href="/guide/validators/vat" class="blue dim link">vat</a> validator supports <a href="/guide/validators/vat/argentinian-vat-number" class="blue dim link">Argentinian VAT number</a>.</li>
+        <h3>New FieldStatus plugin</h3>
+        <p class="lh-copy">It tracks the field status, and allows us to perform an action when a field status is changed.</p>
+        <p class="lh-copy">In the following code snippet, we can enable or disable the Submit button based on the validity of all fields:</p>
+
+<SampleCode lang="javascript" code={`
+const demoForm = document.getElementById('demoForm');
+
+// Submit button
+const submitButton = demoForm.querySelector('[name="signup"]');
+
+const fv = FormValidation.formValidation(demoForm, {
+    fields: {
+        ...
+    },
+    plugins: {
+        fieldStatus: new FormValidation.plugins.FieldStatus({
+            onStatusChanged: function(areFieldsValid) {
+                // areFieldsValid is true if all fields are valid
+                areFieldsValid
+                    // Enable the submit button
+                    // so user has a chance to submit the form again
+                    ? submitButton.removeAttribute('disabled')
+                    // Disable the submit button
+                    : submitButton.setAttribute('disabled', 'disabled');
+            }
+        }),
+        ...
+    }
+});
+`} />
+
+        <h3>New PasswordStrength plugin</h3>
+        <p class="lh-copy">Powered by the zxcvbn library, the PasswordStrength plugin can be used to check the strength of a password.</p>
+
+        <h3>New Recaptcha3 plugin</h3>
+        <p class="lh-copy">There are some users asking for supporting Google reCAPTCHA v3, and here it is.</p>
+
+        <ul class="pa0 ma0 mt4 ml3 lh-copy">
+            <li>The <a href="/guide/validators/id" class="blue dim link">id validator</a> supports Israeli identity number (Mispar Zehut)</li>
         </ul>
+    </section>
 
-        <p class="lh-copy">The <a href="/guide/validators/id" class="blue dim link">id</a> validator supports validating more national identification numbers, including:</p>
+    <section class="mv5">
+        <Heading>Improvements</Heading>
+        <ul class="pa0 ma0 ml3 lh-copy">
+            <li>The <a href="/guide/validators/ean" class="blue dim link">ean validator</a> now supports GTIN-14 format.</li>
+        </ul>
+    </section>
 
-        <Cards>
-            <Card target="/guide/validators/id/argentinian-identification-number" title="Argentinian identification number">(DNI)</Card>
-            <Card target="/guide/validators/id/colombian-identification-number" title="Colombian identification number">(NIT)</Card>
-            <Card target="/guide/validators/id/french-identification-number" title="French identification number">(NIR)</Card>
-            <Card target="/guide/validators/id/hong-kong-identification-number" title="Hong Kong identification number">(HKID)</Card>
-            <Card target="/guide/validators/id/indian-identification-number" title="Indian identification number">(Aadhaar)</Card>
-            <Card target="/guide/validators/id/korean-identification-number" title="Korean identification number">(RRN)</Card>
-            <Card target="/guide/validators/id/malaysian-identification-number" title="Malaysian identification number">(NRIC)</Card>
-            <Card target="/guide/validators/id/mexican-identification-number" title="Mexican identification number">(CURP)</Card>
-            <Card target="/guide/validators/id/norwegian-identification-number" title="Norwegian identification number">(Fødselsnummer)</Card>
-            <Card target="/guide/validators/id/peruvian-identification-number" title="Peruvian identification number"></Card>
-            <Card target="/guide/validators/id/taiwanese-identification-number" title="Taiwanese identification number"></Card>
-            <Card target="/guide/validators/id/uruguayan-identification-number" title="Uruguayan identification number"></Card>
-        </Cards>
+    <section class="mv5">
+        <Heading>Bug fixes</Heading>
 
-        <h3>The <a href="/guide/plugins/declarative" class="blue dim link">Declarative</a> plugin now supports plugin declarations</h3>
+        <h3>Fix ASP.Net integration issue</h3>
+        <p class="lh-copy">Fix an issue that the click handler of submit button of ASP.Net form isn't executed. Now you can fix it easily with new <code>aspNetButton</code> option provided by the <a href="/guide/plugins/submit-button" class="blue dim link">SubmitButton plugin</a>:</p>
+
 <SampleCode lang="html" code={`
-<form id="demoForm" method="POST"
-    data-fvp-trigger="true"
-    data-fvp-trigger___class="FormValidation.plugins.Trigger"
-    
-    data-fvp-tachyons="true"
-    data-fvp-tachyons___class="FormValidation.plugins.Tachyons"
-
-    data-fvp-submit-button="true"
-    data-fvp-submit-button___class="FormValidation.plugins.SubmitButton"
-
-    data-fvp-icon="true"
-    data-fvp-icon___class="FormValidation.plugins.Icon"
-    data-fvp-icon___valid="fa fa-check"
-    data-fvp-icon___invalid="fa fa-times"
-    data-fvp-icon___validating="fa fa-refresh">
-...
+<form id="demoForm" runat="server">
+    <asp:Button ID="btnSubmit" runat="server" Text="Submit" OnClick="btnSubmit_OnClick" />
 </form>
 
 <script-tag>
 document.addEventListener('DOMContentLoaded', function(e) {
-    const form = document.getElementById('demoForm');
-    FormValidation.formValidation(form, {
+    const demoForm = document.getElementById('demoForm');
+
+    const fv = FormValidation.formValidation(demoForm, {
+        fields: {
+            ...
+        },
         plugins: {
-            // You have to register the Declarative plugin only
-            declarative: new FormValidation.plugins.Declarative()
+            submitButton: new FormValidation.plugins.SubmitButton({
+                aspNetButton: true,
+            }),
         }
     });
 });
 </script-tag>
 `} />
 
-        <p class="lh-copy">It serves the same functionalities such as declaring plugins as</p>
-
-<SampleCode lang="html" code={`
-<form id="demoForm">
-...
-</form>
-    
-<script-tag>
-document.addEventListener('DOMContentLoaded', function(e) {
-    const form = document.getElementById('demoForm');
-    FormValidation.formValidation(form, {
-        plugins: {
-            declarative: new FormValidation.plugins.Declarative(),
-            // Other plugins
-            trigger: new FormValidation.plugins.Trigger(),
-            tachyons: new FormValidation.plugins.Tachyons(),
-            submitButton: new FormValidation.plugins.SubmitButton(),
-            icon: new FormValidation.plugins.Icon({
-                valid: 'fa fa-check',
-                invalid: 'fa fa-times',
-                validating: 'fa fa-refresh',
-            }),
-        }
-    });  
-});
-</script-tag>
-`} />        
+        <ul class="pa0 ma0 mt4 ml3 lh-copy">
+            <li>Fix an issue that the <a href="/guide/plugins/auto-focus" class="blue dim link">AutoFocus plugin</a> doesn't work.</li>
+            <li>Fix a bug that <a href="/guide/validators/email-address" class="blue dim link">emailAddress validator</a> doesn't support multiple email addresses on IE11.</li>
+            <li>Fix a bug that the <a href="/guide/plugins/wizard" class="blue dim link">Wizard plugin</a> doesn't work on IE11.</li>
+            <li>Fix the duplicated icons when using the <a href="/guide/plugins/icon" class="blue dim link">Icon plugin</a> with <a href="/guide/plugins/bootstrap" class="blue dim link">Bootstrap 4</a>.</li>
+            <li>Thanks Michal Heban for fixing the Czech translation for the <a href="/guide/validators/string-length" class="blue dim link">stringLength validator</a>.</li>
+        </ul>
     </section>
 
     <section class="mv5">
-        <Heading>Improvements</Heading>
+        <Heading>Breaking changes</Heading>
         <ul class="pa0 ma0 ml3 lh-copy">
-            <li>Separate id validators to <code>id</code> package to save imports when using with ES6 module.</li>
-        </ul>
-        <p class="lh-copy">In the previous versions, you need to import the whole <code>id</code> package if you only want to validate the identification number of particular country:</p>
-<SampleCode lang="javascript" code={`
-// You might need to change the importing path
-import id from 'formvalidation/dist/es6/validators/id';
-
-const result = id().validate({
-    value: ...,
-    options: {
-        country: 'BR',
-        message: 'The input is not a valid Brazilian identification number',
-    },
-});
-`} /> 
-        <p class="lh-copy">This version provides the specfic module for each country. As the result, it saves a lot of size when your application is bundled with popular bundlers as Webpack, Rollup, etc.</p>
-<SampleCode lang="javascript" code={`
-// You might need to change the importing path
-import brId from 'formvalidation/dist/es6/validators/id/brId';
-
-const result = brId().validate('An ID here');
-`} />
-
-        <ul class="pa0 ma0 ml3 lh-copy mt4">       
-            <li>Separate vat validators to <code>vat</code> package to save imports when using with ES6 module.</li>
-            <li>In the last version, the <a href="/guide/plugins/recaptcha" class="blue dim link">Recaptcha plugin</a> doesn't hide the error message and error icon when user click the captcha checkbox.
-            The error icon disappears when the captcha is expired. This version fixes that.</li>
-            <li>Support the latest version of <a href="/guide/plugins/turret" class="blue dim link">TurretCSS</a> (v5.1.3).</li>
-            <li>The <a href="/guide/validators/vat" class="blue dim link">vat validator</a> supports <a href="/guide/validators/vat/swiss-vat-number" class="blue dim link">Swiss VAT numbers</a> that end with TVA, IVA, TPV.</li>
+            <li>It is not possible to use <code>Status</code> from this version, so please replace <code>Status</code> with the corresponding value. For example:
+<code>FormValidation.Status.Validating</code> must be replaced with string of <code>'Validating'</code>.</li>
+            <li>The <a href="/guide/plugins/auto-focus" class="blue dim link">AutoFocus plugin</a> now is an external plugin</li>
         </ul>
     </section>
 
     <section class="mv5">
-        <Heading>Bug fixes</Heading>
-        <ul class="pa0 ma0 ml3 lh-copy">
-            <li>Upgrade source code to be compatible with the latest Tyescript version (3.4.4).</li>
-            <li>Fix an issue that the <a href="/guide/validators/ismn" class="blue dim link">ismn validator</a> passes an invalid ISMN which ends with 0.</li>
-            <li>Fix an issue that the <a href="/guide/validators/meid" class="blue dim link">meid validator</a> passes an invalid MEID which ends with 0.</li>
-            <li>The <a href="/guide/validators/iban" class="blue dim link">iban validator</a> supports the new format of Costa Rica IBAN number (22 digits currently).</li>
-            <li>Fix an issue that <a href="/guide/plugins/icon" class="blue dim link">icon</a> is displayed at wrong position for <a href="/guide/plugins/spectre" class="blue dim link">Spectre</a> form.</li>
-            <li>Fix an issue that the <a href="/guide/plugins/message" class="blue dim link">Message</a> plugin doesn't ignore field on IE11</li>
-        </ul>
-    </section>
-
-    <section class="mv5">
-        <Heading>Upgrading to v1.4.0</Heading>
+        <Heading>Upgrading to v1.5.0</Heading>
         <ul class="pa0 ma0 ml3 lh-copy">
             <li>From v0.8.1 and older versions: Follow the <a href="/updates/v1.0.0/#upgrading-to-v1-0-0" class="blue dim link">Upgrading to v1.0.0</a> guide.</li>
-            <li>From v1.0.0: Just download the new version and replace the old files in v1.0.0 with new files in v1.4.0.</li>
+            <li>From v1.0.0: Download the new version and replace the old files with new files in v1.5.0.</li>
         </ul>
+
+        <p class="lh-copy">Replacing <code>Status</code> with corresponding value:</p>
+        <table class="collapse ba br2 b--black-10 pv2 ph3 w-100 mb4">
+            <tr class="striped--light-gray">
+                <th class="pv2 ph3 tl f6 fw6 ttu">Replace</th>
+                <th class="pv2 ph3 tl f6 fw6 ttu">With</th>
+            </tr>
+            <tr class="striped--light-gray">
+                <td class="pv2 ph3"><code>FormValidation.Status.Ignored</code></td> 
+                <td class="pv2 ph3"><code>'Ignored'</code></td>
+            </tr>
+            <tr class="striped--light-gray">
+                <td class="pv2 ph3"><code>FormValidation.Status.Invalid</code></td> 
+                <td class="pv2 ph3"><code>'Invalid'</code></td>
+            </tr>
+            <tr class="striped--light-gray">
+                <td class="pv2 ph3"><code>FormValidation.Status.NotValidated</code></td> 
+                <td class="pv2 ph3"><code>'NotValidated'</code></td>
+            </tr>
+            <tr class="striped--light-gray">
+                <td class="pv2 ph3"><code>FormValidation.Status.Valid</code></td> 
+                <td class="pv2 ph3"><code>'Valid'</code></td>
+            </tr>
+            <tr class="striped--light-gray">
+                <td class="pv2 ph3"><code>FormValidation.Status.Validating</code></td> 
+                <td class="pv2 ph3"><code>'Validating'</code></td>
+            </tr>
+        </table>
+
+        <p class="lh-copy">If you are using the <a href="/guide/plugins/auto-focus" class="blue dim link">AutoFocus plugin</a>, then you need to insert its script:</p>
+<SampleCode lang="html" code={`  
+<script-tag src="/vendors/formvalidation/dist/js/FormValidation.min.js"></script-tag>
+<script-tag src="/vendors/formvalidation/dist/js/plugins/AutoFocus.min.js"></script-tag>     
+`} />       
     </section>
 
     <section class="tc mv5">
-        <a href="/download/" class="f6 f5-ns fw6 dib ba b--black-20 bg-blue white ph3 ph4-ns pv2 pv3-ns br2 grow no-underline" title="Download">Download v1.4.0</a>
+        <a href="/download" class="f6 f5-ns fw6 dib ba b--black-20 bg-blue white ph3 ph4-ns pv2 pv3-ns br2 grow no-underline" title="Download">Download v1.5.0</a>
     </section>
 </ChangelogLayout>
 
 <script>
-import Card from '../../components/Card.svelte';
-import Cards from '../../components/Cards.svelte';
 import ChangelogLayout from '../../components/ChangelogLayout.svelte';
 import Heading from '../../components/Heading.svelte';
 import SampleCode from '../../components/SampleCode.svelte';

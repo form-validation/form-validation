@@ -606,7 +606,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
     </section>
 
     <section class="tc mv5">
-        <a href="/download/" class="f6 f5-ns fw6 dib ba b--black-20 bg-blue white ph3 ph4-ns pv2 pv3-ns br2 grow no-underline" title="Download">Download v1.0.0</a>
+        <a href="/download" class="f6 f5-ns fw6 dib ba b--black-20 bg-blue white ph3 ph4-ns pv2 pv3-ns br2 grow no-underline" title="Download">Download v1.0.0</a>
     </section>
 </ChangelogLayout>
 
