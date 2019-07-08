@@ -33,7 +33,12 @@ document.addEventListener('DOMContentLoaded', function(e) {
                 ...
             },
             plugins: {
-                submitButton: new FormValidation.plugins.SubmitButton(),
+                submitButton: new FormValidation.plugins.SubmitButton({
+                    // Optional setting:
+                    // Set it to true if you are using a traditional ASP.Net form 
+                    // and there is a custom handler for the submit button 
+                    // aspNetButton: false,
+                }),
                 ...
             },
         }
@@ -56,6 +61,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
     <section class="mv5">
         <Heading>Changelog</Heading>
         <ul class="pa0 ma0 ml3 lh-copy">
+            <li>v1.5.0: Fixed an issue that the click handler of submit button of ASP.Net form isn't executed. Now you can fix it by setting the <code>aspNetButton</code> option to <code>true</code>.</li>
             <li>v1.0.0: First release</li>
         </ul>
     </section>
