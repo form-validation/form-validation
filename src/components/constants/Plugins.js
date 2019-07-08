@@ -11,7 +11,7 @@ export default [
     },
     {
         name: 'AutoFocus',
-        isCorePlugin: true,
+        isCorePlugin: false,
         desc: 'Focus on the first invalid element when submit form',
     },
     {

@@ -21,6 +21,7 @@
 
 <script-tag src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.35.3/es6-shim.min.js"></script-tag>
 <script-tag src="/vendors/formvalidation/dist/js/FormValidation.min.js"></script-tag>
+<script-tag src="/vendors/formvalidation/dist/js/plugins/AutoFocus.min.js"></script-tag>
 
 <script-tag>
 document.addEventListener('DOMContentLoaded', function(e) {
@@ -55,6 +56,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
     <section class="mv5">
         <Heading>Changelog</Heading>
         <ul class="pa0 ma0 ml3 lh-copy">
+            <li>v1.5.0: Fixed an issue that the AutoFocus plugin doesn't work. From v1.5.0, it becomes an external plugin</li>
             <li>v1.3.0: Added <code>onPrefocus</code> option that is useful when you want to activate the tab containing the first invalid field</li>
             <li>v1.0.0: First release</li>
         </ul>

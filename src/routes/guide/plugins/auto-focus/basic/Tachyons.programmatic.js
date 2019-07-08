@@ -81,6 +81,7 @@ export default `<!doctype html>
 
 <script-tag src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.35.3/es6-shim.min.js"></script-tag>    
 <script-tag src="/vendors/formvalidation/dist/js/FormValidation.min.js"></script-tag>
+<script-tag src="/vendors/formvalidation/dist/js/plugins/AutoFocus.min.js"></script-tag>
 <script-tag src="/vendors/formvalidation/dist/js/plugins/Tachyons.min.js"></script-tag>
 
 <script-tag>
