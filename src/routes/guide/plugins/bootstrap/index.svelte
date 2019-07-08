@@ -109,6 +109,7 @@ bootstrap: new FormValidation.plugins.Bootstrap({
     <section class="mv5">
         <Heading>Changelog</Heading>
         <ul class="pa0 ma0 ml3 lh-copy">
+            <li>v1.5.0: Fixed the duplicated icons when using the <a href="/guide/plugins/icon" class="blue dim link">Icon plugin</a> with Bootstrap 4.3</li>
             <li>v1.0.0: First release</li>
         </ul>
     </section>

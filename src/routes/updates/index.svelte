@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
             <li>Fix an issue that the <a href="/guide/plugins/auto-focus" class="blue dim link">AutoFocus plugin</a> doesn't work.</li>
             <li>Fix a bug that <a href="/guide/validators/email-address" class="blue dim link">emailAddress validator</a> doesn't support multiple email addresses on IE 11.</li>
             <li>Fix a bug that the <a href="/guide/plugins/wizard" class="blue dim link">Wizard plugin</a> doesn't work on IE 11.</li>
-            <li>Fix the duplicated icons when using the <a href="/guide/plugins/icon" class="blue dim link">Icon plugin</a> with <a href="/guide/plugins/bootstrap" class="blue dim link">Bootstrap 4</a>.</li>
+            <li>Fix the duplicated icons when using the <a href="/guide/plugins/icon" class="blue dim link">Icon plugin</a> with <a href="/guide/plugins/bootstrap" class="blue dim link">Bootstrap 4.3</a>.</li>
             <li>Thanks Michal Heban for fixing the Czech translation for the <a href="/guide/validators/string-length" class="blue dim link">stringLength validator</a>.</li>
         </ul>
     </section>
