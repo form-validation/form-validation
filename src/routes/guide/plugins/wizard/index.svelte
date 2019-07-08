@@ -191,6 +191,7 @@ FormValidation.formValidation(form, {
     <section class="mv5">
         <Heading>Changelog</Heading>
         <ul class="pa0 ma0 ml3 lh-copy">
+            <li>v1.5.0: Fixed a bug that the Wizard plugin doesn't work on IE 11.</li>
             <li>v1.3.0: First release. It means that the Wizard plugin requires FormValidation v1.3.0 or newer.</li>
         </ul>
     </section>
