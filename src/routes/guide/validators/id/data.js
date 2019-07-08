@@ -135,6 +135,14 @@ export default [
         validExamples: ['6433435F', '6433435FT', '6433435FW', '6433435OA', '6433435IH', '1234567TW', '1234567FA'],
         invalidExamples: ['6433435E', '6433435VH']
     },
+    { 
+        country: 'Israel', 
+        adjective: 'Israeli',
+        abbr: 'Mispar Zehut', 
+        code: 'IL', 
+        validExamples: ['039337423', '231740705', '339677395'],
+        invalidExamples: ['001200343', '39337422', '490154203237518']
+    },
     {
         country: 'Korea',
         adjective: 'Korean',

@@ -47,7 +47,7 @@ const fv = FormValidation.formValidation(demoForm, {
         <p class="lh-copy">There are some users asking for supporting Google reCAPTCHA v3, and here it is.</p>
 
         <ul class="pa0 ma0 mt4 ml3 lh-copy">
-            <li>The <a href="/guide/validators/id" class="blue dim link">id validator</a> supports Israeli identity number (Mispar Zehut)</li>
+            <li>The <a href="/guide/validators/id" class="blue dim link">id validator</a> supports <a href="/guide/validators/id/israeli-identification-number" class="blue dim link">Israeli identity number</a> (Mispar Zehut)</li>
         </ul>
     </section>
 
