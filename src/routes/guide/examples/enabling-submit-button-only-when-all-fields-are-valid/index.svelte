@@ -6,7 +6,7 @@
     <h1 class="tc lh-copy">Enabling submit button only when all fields are valid</h1>
     
     <section class="mv5">
-        <p class="lh-copy">The following example will disable the Submit button as long as there is at least one invalid field. In case all of fields are valid, the button will be enabled.</p>
+        <p class="lh-copy">The following example will disable the <a href="/guide/plugins/submit-button" class="blue dim link">Submit button</a> as long as there is at least one invalid field. In case all of fields are valid, the button will be enabled.</p>
         <p class="lh-copy">We can archive it by using the <code>onStatusChanged</code> option provided by the <a href="/guide/plugins/field-status" class="blue dim link">FieldStatus plugin</a>.</p>
         <div class="mb4">
 <SampleCode lang="javascript" code={`

@@ -49,7 +49,8 @@ document.addEventListener('DOMContentLoaded', function(e) {
 </html>
 `} />
         <p class="lh-copy">The sample code above assumes that the FormValidation files are placed inside the <code>vendors</code> directory. You might need to change the path depending on where you place them on the server.</p>
-        <Tip>If you want the form to be submited to the server after pressing its Submit button and all fields are valid, use the <a href="/guide/plugins/default-submit" class="blue dim link">DefaultSubmit</a> plugin</Tip>
+        <Tip>If you want the form to be submited to the server after pressing its Submit button and all fields are valid, use the <a href="/guide/plugins/default-submit" class="blue dim link">DefaultSubmit plugin</a></Tip>
+        <Tip>Look at the <a href="/guide/plugins/field-status" class="blue dim link">FieldStatus plugin</a> to see how you can disable the Submit button when there is at least one invalid field</Tip>
     </section>
 
     <section class="mv5">
@@ -67,6 +68,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
     </section>
 
     <Examples examples={[
+        'Enabling submit button only when all fields are valid',
         'Multiple steps wizard',
         'Using Ajax to submit the form',
         'Validating form manually',
