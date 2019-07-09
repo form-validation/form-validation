@@ -112,7 +112,7 @@ foundation: new FormValidation.plugins.Foundation({
 
     <section class="mv5">
         <div class="flex">
-            <PrevButton target="/guide/plugins/excluded">Excluded plugin</PrevButton>
+            <PrevButton target="/guide/plugins/field-status">FieldStatus plugin</PrevButton>
             <NextButton target="/guide/plugins/icon">Icon plugin</NextButton>
         </div>
     </section>

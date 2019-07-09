@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
     <section class="mv5">
         <div class="flex">
             <PrevButton target="/guide/plugins/default-submit">DefaultSubmit plugin</PrevButton>
-            <NextButton target="/guide/plugins/foundation">Foundation plugin</NextButton>
+            <NextButton target="/guide/plugins/field-status">FieldStatus plugin</NextButton>
         </div>
     </section>
 </GuideLayout>

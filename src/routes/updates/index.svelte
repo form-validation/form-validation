@@ -10,8 +10,8 @@
         <Heading>New features</Heading>
 
         <h3>New FieldStatus plugin</h3>
-        <p class="lh-copy">It tracks the field status, and allows us to perform an action when a field status is changed.</p>
-        <p class="lh-copy">In the following code snippet, we can enable or disable the Submit button based on the validity of all fields:</p>
+        <p class="lh-copy">The <a href="/guide/plugins/field-status" class="blue dim link">FieldStatus plugin</a> tracks the field status, and allows us to perform an action when a field status is changed.</p>
+        <p class="lh-copy">In the following code snippet, we can disable or <a href="/guide/examples/enabling-submit-button-only-when-all-fields-are-valid" class="blue dim link">enable the Submit button</a> based on the validity of all fields:</p>
 
 <SampleCode lang="javascript" code={`
 const demoForm = document.getElementById('demoForm');

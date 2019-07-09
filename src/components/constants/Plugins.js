@@ -45,6 +45,11 @@ export default [
         desc: 'Ignore validations on particular field',
     },
     {
+        name: 'FieldStatus',
+        isCorePlugin: true,
+        desc: 'Track the field status, and allow to perform an action when a field status is changed',
+    },
+    {
         name: 'Foundation',
         isCorePlugin: false,
         desc: 'Integrate with Foundation framework',
