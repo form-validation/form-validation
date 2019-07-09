@@ -51,9 +51,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
                 passwordStrength: new FormValidation.plugins.PasswordStrength({
                     field: 'pwd',
                     message: 'The password is weak',
-                    minimalScore: 3,
-                    onValidated: function(valid, message, score) {
-                    }
+                    minimalScore: 3
                 }),
             },
         }

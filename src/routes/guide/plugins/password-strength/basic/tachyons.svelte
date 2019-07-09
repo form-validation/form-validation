@@ -70,9 +70,7 @@ const onLoaded = () => {
             passwordStrength: new PasswordStrength({
                 field: 'pwd',
                 message: 'The password is weak',
-                minimalScore: 3,
-                onValidated: (valid, message, score) => {
-                }
+                minimalScore: 3
             }),
             icon: new Icon({
                 valid: 'fa fa-check',

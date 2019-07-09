@@ -17,7 +17,7 @@
 </head>
 <body>
     <form id="demoForm" method="POST">
-        ...
+        <input type="password" name="pwd" />
     </form>
 
 <script-tag src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.35.3/es6-shim.min.js"></script-tag>
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
                     message: 'The password is weak',
                     minimalScore: 3,
                     onValidated: function(valid, message, score) {
-                        
+                        ...
                     }
                 }),
                 ...
@@ -55,6 +55,49 @@ document.addEventListener('DOMContentLoaded', function(e) {
 </html>
 `} />
         <p class="lh-copy">The sample code above assumes that the FormValidation files are placed inside the <code>vendors</code> directory. You might need to change the path depending on where you place them on the server.</p>
+    </section>
+
+    <section class="mv5">
+        <Heading>Options</Heading>
+        <p class="lh-copy i"><sup>*</sup> presents a required parameter</p>
+        <table class="collapse ba br2 b--black-10 pv2 ph3 w-100">
+            <tr class="striped--light-gray">
+                <th class="pv2 ph3 tl f6 fw6 ttu">Option</th>
+                <th class="pv2 ph3 tl f6 fw6 ttu">Type</th>
+                <th class="pv2 ph3 tl f6 fw6 ttu">Description</th>
+            </tr>
+            <tr class="striped--light-gray">
+                <td class="pv2 ph3"><code>field</code> <sup>*</sup></td>
+                <td class="pv2 ph3">String</td>
+                <td class="pv2 ph3 lh-copy">The field name</td>
+            </tr>
+            <tr class="striped--light-gray">
+                <td class="pv2 ph3"><code>message</code></td>
+                <td class="pv2 ph3">String</td>
+                <td class="pv2 ph3 lh-copy">The default error message which will be shown to let user know that the password is weak. It then will be replaced with the warning message of zxcvbn library to indicate the specific reason why the password is weak</td>
+            </tr>
+            <tr class="striped--light-gray">
+                <td class="pv2 ph3"><code>minimalScore</code></td>
+                <td class="pv2 ph3">Number</td>
+                <td class="pv2 ph3">
+                    <p class="lh-copy">For a given password, the zxcvbn library will calculate its strength and the score can be one of 0, 1, 2, 3, 4. The password will be treated as invalid if the scroce if less than <code>minimalScore</code>.</p>
+                    <p class="lh-copy">The default value is 3</p>
+                </td>
+            </tr>
+            <tr class="striped--light-gray">
+                <td class="pv2 ph3"><code>onValidated</code></td>
+                <td class="pv2 ph3">Function</td>
+                <td class="pv2 ph3 lh-copy">
+                    <p class="lh-copy">The callback function that will be triggered after validating the password. The function takes three parameters:</p>
+                    <ul class="ma0 pl3 lh-copy">
+                        <li><code>valid</code> (Boolean): Can be <code>true</code> or <code>false</code> depending on the field is valid or not</li>
+                        <li><code>message</code> (String): The error message returned by the zxcvbn library</li>
+                        <li><code>score</code> (Number): The score returned by the zxcvbn library. Can be one of 0, 1, 2, 3, 4</li>
+                    </ul>
+                    <p class="lh-copy">By using this callback, we can display a progress bar based on the score to let user know how strong the password is.</p>
+                </td>
+            </tr>
+        </table>
     </section>
     
     <section class="mv5">
