@@ -35,7 +35,7 @@
     <div class="mw9 center tc pt6 pb5 relative near-white">
         <h1 class="f1 fw9 lh-copy ma0 lh-title f-headline-l">all new FormValidation</h1>
         <h2 class="f2 mv5">best validation library for JavaScript. zero dependencies.</h2>
-        <div class="f3 mv5"><span class="bg-gold br-pill pa2 near-black">v1.5.0</span></div>
+        <div class="f3 mv5"><span class="bg-gold br-pill pa2 near-black">v{siteData.version}</span></div>
     </div>
 
     <div class="w-100 center mw7">
@@ -554,6 +554,7 @@ formValidation(formElement, {
 
 <script>
 import Typed from '../_demo/typed/Tachyons.svelte';
+import siteData from '../components/constants/SiteData';
 import Card from '../components/Card.svelte';
 import Cards from '../components/Cards.svelte';
 import DotDotDot from '../components/DotDotDot.svelte';
