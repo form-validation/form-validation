@@ -279,6 +279,7 @@
     <url><loc>https://formvalidation.io/guide/examples/using-spectre-framework-icons</loc></url>
     <url><loc>https://formvalidation.io/guide/examples/using-svg-icons</loc></url>
 
+    <url><loc>https://formvalidation.io/guide/examples/enabling-submit-button-only-when-all-fields-are-valid</loc></url>
     <url><loc>https://formvalidation.io/guide/examples/getting-notified-while-field-is-being-validated</loc></url>
     <url><loc>https://formvalidation.io/guide/examples/pending-validation-for-a-given-number-of-seconds</loc></url>
     <url><loc>https://formvalidation.io/guide/examples/performing-validation-if-field-value-exceed-given-number-of-characters</loc></url>
