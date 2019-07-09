@@ -120,6 +120,11 @@ export default [
         desc: 'Shows and validates a Google reCAPTCHA v2',
     },
     {
+        name: 'Recaptcha3',
+        isCorePlugin: false,
+        desc: 'Shows and validates a Google reCAPTCHA v3',
+    },
+    {
         name: 'Semantic',
         isCorePlugin: false,
         desc: 'Integrate with Semantic UI framework',

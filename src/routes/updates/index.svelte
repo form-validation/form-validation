@@ -44,7 +44,8 @@ const fv = FormValidation.formValidation(demoForm, {
         <p class="lh-copy">Powered by the <a href="https://github.com/dropbox/zxcvbn" class="blue dim link" target="_blank">zxcvbn library</a>, the <a href="/guide/plugins/password-strength" class="blue dim link">PasswordStrength plugin</a> can be used to check the strength of a password.</p>
 
         <h3>New Recaptcha3 plugin</h3>
-        <p class="lh-copy">There are some users asking for supporting Google reCAPTCHA v3, and here it is.</p>
+        <p class="lh-copy">There are some users asking for supporting Google reCAPTCHA v3, and the answer is the new <a href="/guide/plugins/recaptcha3" class="blue dim link">Recaptcha3 plugin</a>.</p>
+        <Tip heading="Note">The previous version, Google reCAPTCHA v2, is still supported by the <a href="/guide/plugins/recaptcha" class="blue dim link">Recaptcha plugin</a></Tip>
 
         <ul class="pa0 ma0 mt4 ml3 lh-copy">
             <li>The <a href="/guide/validators/id" class="blue dim link">id validator</a> supports <a href="/guide/validators/id/israeli-identification-number" class="blue dim link">Israeli identity number</a> (Mispar Zehut)</li>
@@ -156,4 +157,5 @@ document.addEventListener('DOMContentLoaded', function(e) {
 import ChangelogLayout from '../../components/ChangelogLayout.svelte';
 import Heading from '../../components/Heading.svelte';
 import SampleCode from '../../components/SampleCode.svelte';
+import Tip from '../../components/Tip.svelte';
 </script>
