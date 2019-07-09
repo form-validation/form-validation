@@ -212,6 +212,7 @@ echo $result;
     <section class="mv5">
         <Heading>Changelog</Heading>
         <ul class="pa0 ma0 ml3 lh-copy">
+            <li>v1.5.0: Hide the icon for the invisible reCAPTCHA.</li>
             <li>v1.4.0: In the previous version, the Recaptcha plugin doesn't hide the error message and error icon when user click the captcha checkbox.
                 The error icon disappears when the captcha is expired. This version fixes that.</li>
             <li>v1.1.0:

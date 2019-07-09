@@ -56,6 +56,7 @@ const fv = FormValidation.formValidation(demoForm, {
         <Heading>Improvements</Heading>
         <ul class="pa0 ma0 ml3 lh-copy">
             <li>The <a href="/guide/validators/ean" class="blue dim link">ean validator</a> now supports GTIN-14 format.</li>
+            <li>Hide the icon if the <a href="/guide/plugins/recaptcha" class="blue dim link">Recaptcha plugin</a> uses the invisible widget.</li>
         </ul>
     </section>
 
