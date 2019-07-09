@@ -41,7 +41,7 @@ const fv = FormValidation.formValidation(demoForm, {
 `} />
 
         <h3>New PasswordStrength plugin</h3>
-        <p class="lh-copy">Powered by the zxcvbn library, the PasswordStrength plugin can be used to check the strength of a password.</p>
+        <p class="lh-copy">Powered by the <a href="https://github.com/dropbox/zxcvbn" class="blue dim link" target="_blank">zxcvbn library</a>, the <a href="/guide/plugins/password-strength" class="blue dim link">PasswordStrength plugin</a> can be used to check the strength of a password.</p>
 
         <h3>New Recaptcha3 plugin</h3>
         <p class="lh-copy">There are some users asking for supporting Google reCAPTCHA v3, and here it is.</p>

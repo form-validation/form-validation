@@ -14,7 +14,7 @@
         <div class="w-50">
             <div class="f4 fw6 mv3">Products</div>
             <ul class="list ma0 pa0 lh-copy">
-                <li><a href="https://blur.page" class="link" target="_blank" title="BlurPage ~ A browser extension to blur any element or paragraph on page">BlurPage</a> ~ A browser extension to blur any element or paragraph on page</li>
+                <li>👉<a href="https://blur.page" class="link" target="_blank" title="BlurPage ~ A browser extension to blur any element or paragraph on page">BlurPage</a> ~ A browser extension to blur any element or paragraph on page</li>
             </ul>
         </div>
     </div>

@@ -1,18 +1,18 @@
 <svelte:head>
-	<title>FormValidation • Pure plugin</title>
+	<title>FormValidation • PasswordStrength plugin</title>
 </svelte:head>
 
 <GuideLayout>
-    <h1 class="f3 f2-m f1-l tc">Pure plugin</h1>
-    <h2 class="f4 fw4 tc lh-copy">Integrate with <a href="https://purecss.io" class="blue dim link">Pure</a> library. Support Pure v1.0.0</h2>
+    <h1 class="f3 f2-m f1-l tc">PasswordStrength plugin</h1>
+    <h2 class="f4 fw4 tc">Check the strength of a password</h2>
 
     <section class="mv5">
         <Heading>Usage</Heading>
-        <p class="lh-copy">The following piece of code is the starting point to validate the form made in Pure:</p>
+        <p class="lh-copy">The PasswordStrength plugin uses the popular <a href="https://github.com/dropbox/zxcvbn" class="blue dim link" target="_blank">zxcvbn library</a> to estimate the strength of a password.</p>
+        <p class="lh-copy">The following piece of code is the starting point to use it:</p>
 <SampleCode lang="html" code={`
 <html>
 <head>
-    <link-tag rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
     <link-tag rel="stylesheet" href="/vendors/formvalidation/dist/css/formValidation.min.css">
 </head>
 <body>
@@ -20,9 +20,13 @@
         ...
     </form>
 
-<script-tag src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.35.3/es6-shim.min.js"></script-tag>    
+<script-tag src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.35.3/es6-shim.min.js"></script-tag>
+
+<!-- Include zxcvbn library -->
+<script-tag src="https://cdnjs.cloudflare.com/ajax/libs/zxcvbn/4.4.2/zxcvbn.js"></script-tag>
+
 <script-tag src="/vendors/formvalidation/dist/js/FormValidation.min.js"></script-tag>
-<script-tag src="/vendors/formvalidation/dist/js/plugins/Pure.min.js"></script-tag>
+<script-tag src="/vendors/formvalidation/dist/js/plugins/PasswordStrength.min.js"></script-tag>
 
 <script-tag>
 document.addEventListener('DOMContentLoaded', function(e) {
@@ -33,7 +37,14 @@ document.addEventListener('DOMContentLoaded', function(e) {
                 ...
             },
             plugins: {
-                pure: new FormValidation.plugins.Pure(),
+                passwordStrength: new FormValidation.plugins.PasswordStrength({
+                    field: 'pwd',
+                    message: 'The password is weak',
+                    minimalScore: 3,
+                    onValidated: function(valid, message, score) {
+                        
+                    }
+                }),
                 ...
             },
         }
@@ -44,30 +55,24 @@ document.addEventListener('DOMContentLoaded', function(e) {
 </html>
 `} />
         <p class="lh-copy">The sample code above assumes that the FormValidation files are placed inside the <code>vendors</code> directory. You might need to change the path depending on where you place them on the server.</p>
-        <p class="lh-copy">The next sections list out some examples of various forms made with Pure.</p>
     </section>
-
+    
     <section class="mv5">
-        <Heading>Horizontal form</Heading>
-        <Demo prefix="/guide/plugins/pure/horizontal-form" frameworks={['pure']} />
-    </section>
-
-    <section class="mv5">
-        <Heading>Stacked form</Heading>
-        <Demo prefix="/guide/plugins/pure/stacked-form" frameworks={['pure']} />
+        <Heading>Basic example</Heading>
+        <Demo prefix="/guide/plugins/password-strength/basic" frameworks={['tachyons']} />
     </section>
 
     <section class="mv5">
         <Heading>Changelog</Heading>
         <ul class="pa0 ma0 ml3 lh-copy">
-            <li>v1.0.0: First release</li>
+            <li>v1.5.0: First release. It means that the PasswordStrength plugin requires FormValidation v1.5.0 or newer.</li>
         </ul>
     </section>
 
     <section class="mv5">
         <div class="flex">
-            <PrevButton target="/guide/plugins/password-strength">PasswordStrength plugin</PrevButton>
-            <NextButton target="/guide/plugins/recaptcha">Recaptcha plugin</NextButton>
+            <PrevButton target="/guide/plugins/mui">Mui plugin</PrevButton>
+            <NextButton target="/guide/plugins/pure">Pure plugin</NextButton>
         </div>
     </section>
 </GuideLayout>

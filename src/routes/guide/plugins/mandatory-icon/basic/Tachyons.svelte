@@ -77,7 +77,6 @@
 import { onMount } from 'svelte';
 
 import formValidation from 'formvalidation/dist/es6/core/Core';
-import Alias from 'formvalidation/dist/es6/plugins/Alias';
 import DemoFrame from 'formvalidation/dist/es6/plugins/DemoFrame';
 import Icon from 'formvalidation/dist/es6/plugins/Icon';
 import MandatoryIcon from 'formvalidation/dist/es6/plugins/MandatoryIcon';

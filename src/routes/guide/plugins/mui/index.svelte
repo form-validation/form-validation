@@ -100,7 +100,7 @@ mui: new FormValidation.plugins.Mui({
     <section class="mv5">
         <div class="flex">
             <PrevButton target="/guide/plugins/mini">Mini plugin</PrevButton>
-            <NextButton target="/guide/plugins/pure">Pure plugin</NextButton>
+            <NextButton target="/guide/plugins/password-strength">PasswordStrength plugin</NextButton>
         </div>
     </section>
 </GuideLayout>

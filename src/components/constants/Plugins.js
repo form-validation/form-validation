@@ -105,6 +105,11 @@ export default [
         desc: 'Integrate with MUI framework',
     },
     {
+        name: 'PasswordStrength',
+        isCorePlugin: false,
+        desc: 'Check the strength of a password',
+    },
+    {
         name: 'Pure',
         isCorePlugin: false,
         desc: 'Integrate with Pure library',

@@ -1,0 +1,71 @@
+<TachyonsLayout>
+    <ResourceLoader urls={[
+        'https://cdnjs.cloudflare.com/ajax/libs/zxcvbn/4.4.2/zxcvbn.js',
+    ]} onLoaded={onLoaded}>
+        <form id="demoForm" method="POST">
+            <div class="cf mb2">
+                <div class="fl w-100">
+                    <div class="fl w-25 pa2">Password</div>
+                    <div class="fl w-50">
+                        <input type="password" class="input-reset ba b--black-20 pa2 mb2 db w-100" name="pwd" />
+                    </div>
+                </div>
+            </div>
+        </form>
+    </ResourceLoader>
+</TachyonsLayout>
+
+<script>
+import { onDestroy } from 'svelte';
+
+import formValidation from 'formvalidation/dist/es6/core/Core';
+import DemoFrame from 'formvalidation/dist/es6/plugins/DemoFrame';
+import Icon from 'formvalidation/dist/es6/plugins/Icon';
+import PasswordStrength from 'formvalidation/dist/es6/plugins/PasswordStrength';
+import Trigger from 'formvalidation/dist/es6/plugins/Trigger';
+import Tachyons from 'formvalidation/dist/es6/plugins/Tachyons';
+
+import sampleCode from './tachyons.programmatic';
+import ResourceLoader from '../../../../../components/ResourceLoader.svelte';
+import TachyonsLayout from '../../../../../components/demo/TachyonsLayout.svelte';
+
+let fv;
+
+const onLoaded = () => {
+    fv = formValidation(document.getElementById('demoForm'), {
+        fields: {
+            pwd: {
+                validators: {
+                    notEmpty: {
+                        message: 'The password is required'
+                    },
+                }
+            },
+        },
+        plugins: {
+            trigger: new Trigger(),
+            tachyons: new Tachyons(),
+            passwordStrength: new PasswordStrength({
+                field: 'pwd',
+                message: 'The password is weak',
+                minimalScore: 3,
+                onValidated: (valid, message, score) => {
+                }
+            }),
+            icon: new Icon({
+                valid: 'fa fa-check',
+                invalid: 'fa fa-times',
+                validating: 'fa fa-refresh',
+            }),
+            demoFrame: new DemoFrame({
+                sender: '/guide/plugins/password-strength/basic/tachyons',
+                sampleCode: sampleCode,
+            }),
+        },
+    });
+};
+
+onDestroy(() => {
+    fv && fv.destroy();
+});
+</script>
