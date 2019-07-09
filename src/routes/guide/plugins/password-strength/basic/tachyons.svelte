@@ -2,16 +2,18 @@
     <ResourceLoader urls={[
         'https://cdnjs.cloudflare.com/ajax/libs/zxcvbn/4.4.2/zxcvbn.js',
     ]} onLoaded={onLoaded}>
-        <form id="demoForm" method="POST">
-            <div class="cf mb2">
-                <div class="fl w-100">
-                    <div class="fl w-25 pa2">Password</div>
-                    <div class="fl w-50">
-                        <input type="password" class="input-reset ba b--black-20 pa2 mb2 db w-100" name="pwd" />
+        <ReceiveMessage channel="SAMPLE_FIELD_VALUE" sender="/guide/plugins/password-strength/basic" on:received={receive}>
+            <form id="demoForm" method="POST">
+                <div class="cf mb2">
+                    <div class="fl w-100">
+                        <div class="fl w-25 pa2">Password</div>
+                        <div class="fl w-50">
+                            <input type="password" bind:this={inputEle} class="input-reset ba b--black-20 pa2 mb2 db w-100" name="pwd" />
+                        </div>
                     </div>
                 </div>
-            </div>
-        </form>
+            </form>
+        </ReceiveMessage>
     </ResourceLoader>
 </TachyonsLayout>
 
@@ -26,10 +28,30 @@ import Trigger from 'formvalidation/dist/es6/plugins/Trigger';
 import Tachyons from 'formvalidation/dist/es6/plugins/Tachyons';
 
 import sampleCode from './tachyons.programmatic';
+import ReceiveMessage from '../../../../../components/ReceiveMessage.svelte';
 import ResourceLoader from '../../../../../components/ResourceLoader.svelte';
 import TachyonsLayout from '../../../../../components/demo/TachyonsLayout.svelte';
 
 let fv;
+let inputEle;
+
+const receive = (e) => {
+    const v = e.detail.data;
+    inputEle.value = v;
+
+    if (fv) {
+        fv.revalidateField('pwd').then((result) => {
+            window.parent.postMessage({
+                channel: 'DEMO_VALIDATE_RESULT',
+                sender: '/guide/plugins/password-strength/basic',
+                data: {
+                    input: v,
+                    output: result
+                },
+            }, '*');
+        });
+    }
+};
 
 const onLoaded = () => {
     fv = formValidation(document.getElementById('demoForm'), {

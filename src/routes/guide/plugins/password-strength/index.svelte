@@ -59,6 +59,22 @@ document.addEventListener('DOMContentLoaded', function(e) {
     
     <section class="mv5">
         <Heading>Basic example</Heading>
+
+        <p class="lh-copy">You can click on the sample password below to see the result.</p>
+        <table class="collapse ba br2 b--black-10 pv2 ph3 w-100 mb4">
+            {#each _groups as group}
+            <tr class="striped--light-gray">
+                <th class="pv2 ph3 tl f6 fw6 ttu">{group.name}</th>
+                <th class="pv2 ph3 tl f6 fw6 ttu">Is valid?</th>
+            </tr>
+            {#each group.samples as sample}
+            <tr class="striped--light-gray">
+                <SampleData sample={sample} sender="/guide/plugins/password-strength/basic" />
+            </tr>
+            {/each}
+            {/each}
+        </table>
+
         <Demo prefix="/guide/plugins/password-strength/basic" frameworks={['tachyons']} />
     </section>
 
@@ -84,4 +100,28 @@ import GuideLayout from '../../../../components/GuideLayout.svelte';
 import NextButton from '../../../../components/NextButton.svelte';
 import PrevButton from '../../../../components/PrevButton.svelte';
 import SampleCode from '../../../../components/SampleCode.svelte';
+import SampleData from '../../../../components/SampleData.svelte';
+
+const _groups = [
+    {
+        name: 'Common password',
+        samples: ['12345678', 'admin', 'abcdef', 'password', 'qwerty']
+    },
+    {
+        name: 'Female names',
+        samples: ['mary', 'patricia', 'linda', 'barbara', 'elizabeth']
+    },
+    {
+        name: 'Male names',
+        samples: ['james', 'john', 'robert', 'michael', 'william']
+    },
+    {
+        name: 'Surnames',
+        samples: ['smith', 'johnson', 'williams', 'jones', 'brown']
+    },
+    {
+        name: 'English words on Wikipedia',
+        samples: ['national', 'university', 'people', 'history', 'county']
+    },
+];
 </script>
