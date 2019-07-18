@@ -1,13 +1,3 @@
 .DS_Store
-<<<<<<< HEAD
 node_modules
 /__sapper__/
-=======
-.sapper
-app/manifest
-build
-dist
-export
-node_modules
-templates/.main.rendered.js
->>>>>>> 6b2fe37... Move from github
