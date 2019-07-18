@@ -1,0 +1,12 @@
+{
+  "version": 3,
+  "file": "chunk.77ca656e.css",
+  "sources": [
+    "../../../../../../src/components/Card.svelte"
+  ],
+  "sourcesContent": [
+    "<style>\n:global(.card:nth-child(4n)) {\n    background-color: #357edd;\n}\n:global(.card:nth-child(4n+1)) {\n    background-color: #ff4136;\n}\n:global(.card:nth-child(4n+2)) {\n    background-color: #ffb700;\n}\n:global(.card:nth-child(4n+3)) {\n    background-color: #19a974;\n}\n</style>\n\n<div class=\"card br2\">\n    <div class=\"pa3 shadow-4 h-100 white\">\n        {#if target === ''}\n        <div class=\"f4 fw6 mb3\">{title}</div>\n        <div class=\"lh-copy\"><slot></slot></div>\n        {:else}\n        <a href=\"{target}\" class=\"link pointer white db h-100\">\n            <div class=\"f4 fw6 mb3\">{title}</div>\n            <div class=\"lh-copy\"><slot></slot></div>\n        </a>\n        {/if}\n    </div>\n</div>\n\n<script>\n// Props\nlet target = '';\nlet title = '';\n\nexport {\n    target,\n    title,\n};\n</script>\n"
+  ],
+  "names": [],
+  "mappings": "AACQ,mBAAmB,AAAE,CAAC,AAC1B,gBAAgB,CAAE,OAAO,AAC7B,CAAC,AACO,qBAAqB,AAAE,CAAC,AAC5B,gBAAgB,CAAE,OAAO,AAC7B,CAAC,AACO,qBAAqB,AAAE,CAAC,AAC5B,gBAAgB,CAAE,OAAO,AAC7B,CAAC,AACO,qBAAqB,AAAE,CAAC,AAC5B,gBAAgB,CAAE,OAAO,AAC7B,CAAC"
+}

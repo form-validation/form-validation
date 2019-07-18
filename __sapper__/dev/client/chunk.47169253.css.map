@@ -1,0 +1,14 @@
+{
+  "version": 3,
+  "file": "chunk.47169253.css",
+  "sources": [
+    "../../../../../../src/components/BrowserFrame.svelte",
+    "../../../../../../src/components/SampleCode.svelte"
+  ],
+  "sourcesContent": [
+    "<style>\n.browser-frame {\n    background: #2b2b2b;\n}\n.btn {\n    height: 0.8rem;\n    width: 0.8rem;\n}\n.close {\n    background: #FF5F57;\n}\n.min {\n    background: #FFBE2D;\n}\n.full {\n    background: #29C93F;\n}\n</style>\n\n<div class=\"br2 browser-frame\">\n    <div class=\"flex pa2\">\n        <div class=\"br-100 mr1 btn close\"></div>\n        <div class=\"br-100 mr1 btn min\"></div>\n        <div class=\"br-100 mr1 btn full\"></div>\n    </div>\n    <div class=\"pb2\"><slot></slot></div>\n</div>",
+    "<style>\npre {\n    min-height: 34px;\n}\n:global(.hljs) {\n    padding: .5rem;\n}\n</style>\n\n{#if highlighted}\n<div class=\"relative\">\n    <BrowserFrame><pre class=\"pa0 ma0 lh-copy\" style=\"max-height: {maxHeight}; overflow-y: scroll;\" bind:this={codeEle}></pre></BrowserFrame>\n</div>\n{:else}\n<div class=\"ba b--black-10 bg-washed-blue pa0 ma0\">\n    <Loader><pre><code>{@html code}</code></pre></Loader>\n</div>\n{/if}\n\n<script>\nimport { afterUpdate, onMount } from 'svelte';\n\nimport highlight from './helpers/highlight';\nimport BrowserFrame from './BrowserFrame.svelte';\nimport Loader from './Loader.svelte';\n\nlet highlighted = '';\nlet copied = false;\nlet codeEle;\n\n// Public props\nlet code = '';\nlet lang = 'html';\nlet maxHeight = '';\n\n$: {\n    highlighted = highlight(\n        // Replace the fake tags with the real one\n        // If I use <link> or <script> tag inside sample code, Sapper tries to load them\n        code.replace(/link-tag/g, 'link')\n            .replace(/script-tag/g, 'script')\n            .replace(/fix-html-id/g, 'id'),\n        lang\n    );\n    if (codeEle) {\n        codeEle.innerHTML = highlighted;\n    }\n}\n\nconst copy = () => {\n    const selection = window.getSelection();\n    const range = document.createRange();\n    range.selectNodeContents(codeEle);\n    selection.removeAllRanges();\n    selection.addRange(range);\n    document.execCommand('copy');\n\n    copied = true;\n\n    selection.removeAllRanges();\n};\n\nexport {\n    code,\n    lang,\n    maxHeight,\n};\n</script>\n"
+  ],
+  "names": [],
+  "mappings": "AACA,cAAc,eAAC,CAAC,AACZ,UAAU,CAAE,OAAO,AACvB,CAAC,AACD,IAAI,eAAC,CAAC,AACF,MAAM,CAAE,MAAM,CACd,KAAK,CAAE,MAAM,AACjB,CAAC,AACD,MAAM,eAAC,CAAC,AACJ,UAAU,CAAE,OAAO,AACvB,CAAC,AACD,IAAI,eAAC,CAAC,AACF,UAAU,CAAE,OAAO,AACvB,CAAC,AACD,KAAK,eAAC,CAAC,AACH,UAAU,CAAE,OAAO,AACvB,CAAC;ACfD,GAAG,eAAC,CAAC,AACD,UAAU,CAAE,IAAI,AACpB,CAAC,AACO,KAAK,AAAE,CAAC,AACZ,OAAO,CAAE,KAAK,AAClB,CAAC"
+}

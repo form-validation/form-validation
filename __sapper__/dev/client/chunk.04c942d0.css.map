@@ -1,0 +1,12 @@
+{
+  "version": 3,
+  "file": "chunk.04c942d0.css",
+  "sources": [
+    "../../../../../../src/components/Loader.svelte"
+  ],
+  "sourcesContent": [
+    "<style>\n/* We have to declare all styles for Loader because it can be used without any frameworks when loading a demo layout */\n.loader-container { \n    position: relative;\n}\n.loader {\n    height: 40px;\n    margin: 20px auto;\n    position: relative;\n    width: 40px;\n}\n.loading {\n    display: none;\n    opacity: 0;\n}\n\n.bounce1,\n.bounce2 {\n    animation: bounce 2.0s infinite ease-in-out;\n    background-color: #777;\n    border-radius: 100%;\n    height: 100%;\n    left: 0;\n    opacity: 0.6;\n    position: absolute;\n    top: 0;\n    width: 100%;\n}\n\n.bounce2 {\n    animation-delay: -1.0s;\n}\n\n@keyframes bounce {\n    0%, 100% { \n        transform: scale(0.0);\n    }\n    50% { \n        transform: scale(1.0);\n    }\n}\n</style>\n\n<div class=\"loader-container\">\n    <div class:loading={!isDone}><slot></slot></div>\n    {#if !isDone}\n    <div class=\"loader\">\n        <div class=\"bounce1\"></div>\n        <div class=\"bounce2\"></div>\n    </div>\n    {/if}\n</div>\n\n<script>\nlet isDone = false;\n\nexport {\n    isDone,\n};\n</script>\n"
+  ],
+  "names": [],
+  "mappings": "AAEA,iBAAiB,eAAC,CAAC,AACf,QAAQ,CAAE,QAAQ,AACtB,CAAC,AACD,OAAO,eAAC,CAAC,AACL,MAAM,CAAE,IAAI,CACZ,MAAM,CAAE,IAAI,CAAC,IAAI,CACjB,QAAQ,CAAE,QAAQ,CAClB,KAAK,CAAE,IAAI,AACf,CAAC,AACD,QAAQ,eAAC,CAAC,AACN,OAAO,CAAE,IAAI,CACb,OAAO,CAAE,CAAC,AACd,CAAC,AAED,uBAAQ,CACR,QAAQ,eAAC,CAAC,AACN,SAAS,CAAE,qBAAM,CAAC,IAAI,CAAC,QAAQ,CAAC,WAAW,CAC3C,gBAAgB,CAAE,IAAI,CACtB,aAAa,CAAE,IAAI,CACnB,MAAM,CAAE,IAAI,CACZ,IAAI,CAAE,CAAC,CACP,OAAO,CAAE,GAAG,CACZ,QAAQ,CAAE,QAAQ,CAClB,GAAG,CAAE,CAAC,CACN,KAAK,CAAE,IAAI,AACf,CAAC,AAED,QAAQ,eAAC,CAAC,AACN,eAAe,CAAE,KAAK,AAC1B,CAAC,AAED,WAAW,qBAAO,CAAC,AACf,EAAE,CAAE,IAAI,AAAC,CAAC,AACN,SAAS,CAAE,MAAM,GAAG,CAAC,AACzB,CAAC,AACD,GAAG,AAAC,CAAC,AACD,SAAS,CAAE,MAAM,GAAG,CAAC,AACzB,CAAC,AACL,CAAC"
+}

@@ -1,0 +1,12 @@
+{
+  "version": 3,
+  "file": "chunk.371c6257.css",
+  "sources": [
+    "../../../../../../src/components/demo/SpectreLayout.svelte"
+  ],
+  "sourcesContent": [
+    "<script>\nimport ResourceLoader from '../ResourceLoader.svelte';\n\nlet onLoaded = () => {};\n\nexport {\n    onLoaded,\n};\n</script>\n\n<style>\n:global(form) {\n    padding: 0;\n}\n</style>\n\n<ResourceLoader\n    useExternalFramework=\"true\"\n    urls={[\n        'https://cdnjs.cloudflare.com/ajax/libs/spectre.css/0.5.8/spectre.min.css',\n        // To use with Icon plugin\n        'https://cdnjs.cloudflare.com/ajax/libs/spectre.css/0.5.8/spectre-icons.min.css',\n    ]}\n    onLoaded={onLoaded}><slot></slot></ResourceLoader>"
+  ],
+  "names": [],
+  "mappings": "AAWQ,IAAI,AAAE,CAAC,AACX,OAAO,CAAE,CAAC,AACd,CAAC"
+}

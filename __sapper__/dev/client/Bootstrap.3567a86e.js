@@ -1,0 +1,532 @@
+import { a as SvelteComponentDev, b as init, c as safe_not_equal, t as mount_component, N as onDestroy, h as element, i as text, g as space, k as claim_element, l as children, j as claim_text, m as detach, n as add_location, A as attr, o as insert, p as append } from './chunk.989912da.js';
+import { b as formValidation } from './chunk.b786f426.js';
+import { c as Trigger } from './chunk.fb19edaf.js';
+import { b as Icon } from './chunk.79c24606.js';
+import './chunk.04c942d0.js';
+import { a as DemoFrame } from './chunk.b05da373.js';
+import { a as SubmitButton } from './chunk.a3297732.js';
+import './chunk.17752e4f.js';
+import './chunk.d6ef6b92.js';
+import { a as BootstrapLayout, b as Bootstrap } from './chunk.c31a6f6d.js';
+import { a as Excluded } from './chunk.01929f61.js';
+
+var sampleCode = `<!doctype html>
+<html>
+<head>
+    <link-tag rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link-tag rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link-tag rel="stylesheet" href="/vendors/formvalidation/dist/css/formValidation.min.css">
+</head>
+<body>
+    <form id="demoForm" method="POST">
+        <div class="form-group">
+            <label>Which Javascript framework you like most?</label>
+            <div class="form-check">
+                <input type="radio" class="form-check-input" name="framework" value="angular" /> <label>Angular</label>
+            </div>
+            <div class="form-check">
+                <input type="radio" class="form-check-input" name="framework" value="ember" /> <label>Ember</label>
+            </div>
+            <div class="form-check">
+                <input type="radio" class="form-check-input" name="framework" value="react" /> <label>React</label>
+            </div>
+            <div class="form-check">
+                <input type="radio" class="form-check-input" name="framework" value="vue" /> <label>Vue</label>
+            </div>
+            <div class="form-check">
+                <input type="radio" class="form-check-input" name="framework" value="other" /> <label>Other</label>
+            </div>
+        </div>
+
+        <div class="form-group" id="otherOptionContainer">
+            <label>Please specify the framework:</label>
+            <input type="text" class="form-control" name="otherFramework" />
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </form>
+
+<script-tag src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.35.3/es6-shim.min.js"></script-tag>    
+<script-tag src="/vendors/formvalidation/dist/js/FormValidation.min.js"></script-tag>
+<script-tag src="/vendors/formvalidation/dist/js/plugins/Bootstrap.min.js"></script-tag>
+
+<script-tag>
+document.addEventListener('DOMContentLoaded', function(e) {
+    const form = document.getElementById('demoForm'); 
+    FormValidation.formValidation(
+        form,
+        {
+            fields: {
+                framework: {
+                    validators: {
+                        notEmpty: {
+                            message: 'Please select a framework'
+                        }
+                    }
+                },
+                otherFramework: {
+                    validators: {
+                        notEmpty: {
+                            message: 'Please specific the framework',
+                        }
+                    }
+                },
+            },
+            plugins: {
+                trigger: new FormValidation.plugins.Trigger(),
+                bootstrap: new FormValidation.plugins.Bootstrap(),
+                submitButton: new FormValidation.plugins.SubmitButton(),
+                excluded: new FormValidation.plugins.Excluded({
+                    excluded: function(field, ele, eles) {
+                        const selectedCheckbox = form.querySelector('[name="framework"]:checked');
+                        const framework = selectedCheckbox ? selectedCheckbox.value : '';
+                        return (field === 'otherFramework' && framework !== 'other') || (field === 'framework' && framework === 'other');
+                    },
+                }),
+                icon: new FormValidation.plugins.Icon({
+                    valid: 'fa fa-check',
+                    invalid: 'fa fa-times',
+                    validating: 'fa fa-refresh'
+                }),
+            },
+        }
+    );
+
+    Array.from(form.querySelectorAll('[name="framework"]')).forEach(function(ele) {
+        // Revalidate the otherFramework field when user picks any available framework
+        ele.addEventListener('change', function(e) {
+            fv.revalidateField('otherFramework');
+        });
+    });
+});
+</script-tag>
+</body>
+</html>
+`;
+
+/* src/routes/guide/examples/excluding-field-by-given-condition/Bootstrap.svelte generated by Svelte v3.4.2 */
+
+const file = "src/routes/guide/examples/excluding-field-by-given-condition/Bootstrap.svelte";
+
+// (1:0) <BootstrapLayout onLoaded={onLoaded}>
+function create_default_slot(ctx) {
+	var form, div5, label0, t0, t1, div0, input0, t2, label1, t3, t4, div1, input1, t5, label2, t6, t7, div2, input2, t8, label3, t9, t10, div3, input3, t11, label4, t12, t13, div4, input4, t14, label5, t15, t16, div6, label6, t17, t18, input5, t19, div7, button, t20;
+
+	return {
+		c: function create() {
+			form = element("form");
+			div5 = element("div");
+			label0 = element("label");
+			t0 = text("Which Javascript framework you like most?");
+			t1 = space();
+			div0 = element("div");
+			input0 = element("input");
+			t2 = space();
+			label1 = element("label");
+			t3 = text("Angular");
+			t4 = space();
+			div1 = element("div");
+			input1 = element("input");
+			t5 = space();
+			label2 = element("label");
+			t6 = text("Ember");
+			t7 = space();
+			div2 = element("div");
+			input2 = element("input");
+			t8 = space();
+			label3 = element("label");
+			t9 = text("React");
+			t10 = space();
+			div3 = element("div");
+			input3 = element("input");
+			t11 = space();
+			label4 = element("label");
+			t12 = text("Vue");
+			t13 = space();
+			div4 = element("div");
+			input4 = element("input");
+			t14 = space();
+			label5 = element("label");
+			t15 = text("Other");
+			t16 = space();
+			div6 = element("div");
+			label6 = element("label");
+			t17 = text("Please specify the framework:");
+			t18 = space();
+			input5 = element("input");
+			t19 = space();
+			div7 = element("div");
+			button = element("button");
+			t20 = text("Submit");
+			this.h();
+		},
+
+		l: function claim(nodes) {
+			form = claim_element(nodes, "FORM", { id: true, method: true }, false);
+			var form_nodes = children(form);
+
+			div5 = claim_element(form_nodes, "DIV", { class: true }, false);
+			var div5_nodes = children(div5);
+
+			label0 = claim_element(div5_nodes, "LABEL", {}, false);
+			var label0_nodes = children(label0);
+
+			t0 = claim_text(label0_nodes, "Which Javascript framework you like most?");
+			label0_nodes.forEach(detach);
+			t1 = claim_text(div5_nodes, "\n            ");
+
+			div0 = claim_element(div5_nodes, "DIV", { class: true }, false);
+			var div0_nodes = children(div0);
+
+			input0 = claim_element(div0_nodes, "INPUT", { type: true, class: true, name: true, value: true }, false);
+			var input0_nodes = children(input0);
+
+			input0_nodes.forEach(detach);
+			t2 = claim_text(div0_nodes, " ");
+
+			label1 = claim_element(div0_nodes, "LABEL", {}, false);
+			var label1_nodes = children(label1);
+
+			t3 = claim_text(label1_nodes, "Angular");
+			label1_nodes.forEach(detach);
+			div0_nodes.forEach(detach);
+			t4 = claim_text(div5_nodes, "\n            ");
+
+			div1 = claim_element(div5_nodes, "DIV", { class: true }, false);
+			var div1_nodes = children(div1);
+
+			input1 = claim_element(div1_nodes, "INPUT", { type: true, class: true, name: true, value: true }, false);
+			var input1_nodes = children(input1);
+
+			input1_nodes.forEach(detach);
+			t5 = claim_text(div1_nodes, " ");
+
+			label2 = claim_element(div1_nodes, "LABEL", {}, false);
+			var label2_nodes = children(label2);
+
+			t6 = claim_text(label2_nodes, "Ember");
+			label2_nodes.forEach(detach);
+			div1_nodes.forEach(detach);
+			t7 = claim_text(div5_nodes, "\n            ");
+
+			div2 = claim_element(div5_nodes, "DIV", { class: true }, false);
+			var div2_nodes = children(div2);
+
+			input2 = claim_element(div2_nodes, "INPUT", { type: true, class: true, name: true, value: true }, false);
+			var input2_nodes = children(input2);
+
+			input2_nodes.forEach(detach);
+			t8 = claim_text(div2_nodes, " ");
+
+			label3 = claim_element(div2_nodes, "LABEL", {}, false);
+			var label3_nodes = children(label3);
+
+			t9 = claim_text(label3_nodes, "React");
+			label3_nodes.forEach(detach);
+			div2_nodes.forEach(detach);
+			t10 = claim_text(div5_nodes, "\n            ");
+
+			div3 = claim_element(div5_nodes, "DIV", { class: true }, false);
+			var div3_nodes = children(div3);
+
+			input3 = claim_element(div3_nodes, "INPUT", { type: true, class: true, name: true, value: true }, false);
+			var input3_nodes = children(input3);
+
+			input3_nodes.forEach(detach);
+			t11 = claim_text(div3_nodes, " ");
+
+			label4 = claim_element(div3_nodes, "LABEL", {}, false);
+			var label4_nodes = children(label4);
+
+			t12 = claim_text(label4_nodes, "Vue");
+			label4_nodes.forEach(detach);
+			div3_nodes.forEach(detach);
+			t13 = claim_text(div5_nodes, "\n            ");
+
+			div4 = claim_element(div5_nodes, "DIV", { class: true }, false);
+			var div4_nodes = children(div4);
+
+			input4 = claim_element(div4_nodes, "INPUT", { type: true, class: true, name: true, value: true }, false);
+			var input4_nodes = children(input4);
+
+			input4_nodes.forEach(detach);
+			t14 = claim_text(div4_nodes, " ");
+
+			label5 = claim_element(div4_nodes, "LABEL", {}, false);
+			var label5_nodes = children(label5);
+
+			t15 = claim_text(label5_nodes, "Other");
+			label5_nodes.forEach(detach);
+			div4_nodes.forEach(detach);
+			div5_nodes.forEach(detach);
+			t16 = claim_text(form_nodes, "\n    \n        ");
+
+			div6 = claim_element(form_nodes, "DIV", { class: true, id: true }, false);
+			var div6_nodes = children(div6);
+
+			label6 = claim_element(div6_nodes, "LABEL", {}, false);
+			var label6_nodes = children(label6);
+
+			t17 = claim_text(label6_nodes, "Please specify the framework:");
+			label6_nodes.forEach(detach);
+			t18 = claim_text(div6_nodes, "\n            ");
+
+			input5 = claim_element(div6_nodes, "INPUT", { type: true, class: true, name: true }, false);
+			var input5_nodes = children(input5);
+
+			input5_nodes.forEach(detach);
+			div6_nodes.forEach(detach);
+			t19 = claim_text(form_nodes, "\n    \n        ");
+
+			div7 = claim_element(form_nodes, "DIV", { class: true }, false);
+			var div7_nodes = children(div7);
+
+			button = claim_element(div7_nodes, "BUTTON", { type: true, class: true }, false);
+			var button_nodes = children(button);
+
+			t20 = claim_text(button_nodes, "Submit");
+			button_nodes.forEach(detach);
+			div7_nodes.forEach(detach);
+			form_nodes.forEach(detach);
+			this.h();
+		},
+
+		h: function hydrate() {
+			add_location(label0, file, 3, 12, 122);
+			attr(input0, "type", "radio");
+			input0.className = "form-check-input";
+			input0.name = "framework";
+			input0.value = "angular";
+			add_location(input0, file, 5, 16, 232);
+			add_location(label1, file, 5, 97, 313);
+			div0.className = "form-check";
+			add_location(div0, file, 4, 12, 191);
+			attr(input1, "type", "radio");
+			input1.className = "form-check-input";
+			input1.name = "framework";
+			input1.value = "ember";
+			add_location(input1, file, 8, 16, 408);
+			add_location(label2, file, 8, 95, 487);
+			div1.className = "form-check";
+			add_location(div1, file, 7, 12, 367);
+			attr(input2, "type", "radio");
+			input2.className = "form-check-input";
+			input2.name = "framework";
+			input2.value = "react";
+			add_location(input2, file, 11, 16, 580);
+			add_location(label3, file, 11, 95, 659);
+			div2.className = "form-check";
+			add_location(div2, file, 10, 12, 539);
+			attr(input3, "type", "radio");
+			input3.className = "form-check-input";
+			input3.name = "framework";
+			input3.value = "vue";
+			add_location(input3, file, 14, 16, 752);
+			add_location(label4, file, 14, 93, 829);
+			div3.className = "form-check";
+			add_location(div3, file, 13, 12, 711);
+			attr(input4, "type", "radio");
+			input4.className = "form-check-input";
+			input4.name = "framework";
+			input4.value = "other";
+			add_location(input4, file, 17, 16, 920);
+			add_location(label5, file, 17, 95, 999);
+			div4.className = "form-check";
+			add_location(div4, file, 16, 12, 879);
+			div5.className = "form-group";
+			add_location(div5, file, 2, 8, 85);
+			add_location(label6, file, 22, 12, 1130);
+			attr(input5, "type", "text");
+			input5.className = "form-control";
+			input5.name = "otherFramework";
+			add_location(input5, file, 23, 12, 1187);
+			div6.className = "form-group";
+			div6.id = "otherOptionContainer";
+			add_location(div6, file, 21, 8, 1067);
+			button.type = "submit";
+			button.className = "btn btn-primary";
+			add_location(button, file, 27, 12, 1317);
+			div7.className = "form-group";
+			add_location(div7, file, 26, 8, 1280);
+			form.id = "demoForm";
+			form.method = "POST";
+			add_location(form, file, 1, 4, 42);
+		},
+
+		m: function mount(target, anchor) {
+			insert(target, form, anchor);
+			append(form, div5);
+			append(div5, label0);
+			append(label0, t0);
+			append(div5, t1);
+			append(div5, div0);
+			append(div0, input0);
+			append(div0, t2);
+			append(div0, label1);
+			append(label1, t3);
+			append(div5, t4);
+			append(div5, div1);
+			append(div1, input1);
+			append(div1, t5);
+			append(div1, label2);
+			append(label2, t6);
+			append(div5, t7);
+			append(div5, div2);
+			append(div2, input2);
+			append(div2, t8);
+			append(div2, label3);
+			append(label3, t9);
+			append(div5, t10);
+			append(div5, div3);
+			append(div3, input3);
+			append(div3, t11);
+			append(div3, label4);
+			append(label4, t12);
+			append(div5, t13);
+			append(div5, div4);
+			append(div4, input4);
+			append(div4, t14);
+			append(div4, label5);
+			append(label5, t15);
+			append(form, t16);
+			append(form, div6);
+			append(div6, label6);
+			append(label6, t17);
+			append(div6, t18);
+			append(div6, input5);
+			append(form, t19);
+			append(form, div7);
+			append(div7, button);
+			append(button, t20);
+		},
+
+		d: function destroy(detaching) {
+			if (detaching) {
+				detach(form);
+			}
+		}
+	};
+}
+
+function create_fragment(ctx) {
+	var current;
+
+	var bootstraplayout = new BootstrapLayout({
+		props: {
+		onLoaded: ctx.onLoaded,
+		$$slots: { default: [create_default_slot] },
+		$$scope: { ctx }
+	},
+		$$inline: true
+	});
+
+	return {
+		c: function create() {
+			bootstraplayout.$$.fragment.c();
+		},
+
+		l: function claim(nodes) {
+			bootstraplayout.$$.fragment.l(nodes);
+		},
+
+		m: function mount(target, anchor) {
+			mount_component(bootstraplayout, target, anchor);
+			current = true;
+		},
+
+		p: function update(changed, ctx) {
+			var bootstraplayout_changes = {};
+			if (changed.onLoaded) bootstraplayout_changes.onLoaded = ctx.onLoaded;
+			if (changed.$$scope) bootstraplayout_changes.$$scope = { changed, ctx };
+			bootstraplayout.$set(bootstraplayout_changes);
+		},
+
+		i: function intro(local) {
+			if (current) return;
+			bootstraplayout.$$.fragment.i(local);
+
+			current = true;
+		},
+
+		o: function outro(local) {
+			bootstraplayout.$$.fragment.o(local);
+			current = false;
+		},
+
+		d: function destroy(detaching) {
+			bootstraplayout.$destroy(detaching);
+		}
+	};
+}
+
+function instance($$self, $$props, $$invalidate) {
+	
+
+let fv;
+
+const onLoaded = () => {
+    const form = document.getElementById('demoForm');
+    $$invalidate('fv', fv = formValidation(form, {
+        fields: {
+            framework: {
+                validators: {
+                    notEmpty: {
+                        message: 'Please select a framework'
+                    }
+                }
+            },
+            otherFramework: {
+                validators: {
+                    notEmpty: {
+                        message: 'Please specific the framework',
+                    }
+                }
+            },
+        },
+        plugins: {
+            trigger: new Trigger(),
+            bootstrap: new Bootstrap(),
+            submitButton: new SubmitButton(),
+            excluded: new Excluded({
+                excluded: (field, ele, eles) => {
+                    const selectedCheckbox = form.querySelector('[name="framework"]:checked');
+                    const framework = selectedCheckbox ? selectedCheckbox.value : '';
+                    return (field === 'otherFramework' && framework !== 'other') || (field === 'framework' && framework === 'other');
+                },
+            }),
+            icon: new Icon({
+                valid: 'fa fa-check',
+                invalid: 'fa fa-times',
+                validating: 'fa fa-refresh',
+            }),
+            demoFrame: new DemoFrame({
+                sender: '/guide/examples/excluding-field-by-given-condition/bootstrap',
+                sampleCode: sampleCode,
+            }),
+        },
+    }));
+
+    Array.from(form.querySelectorAll('[name="framework"]')).forEach((ele) => {
+        ele.addEventListener('change', (e) => {
+            fv.revalidateField('otherFramework');
+        });
+    });
+};
+
+onDestroy(() => {
+    fv && fv.destroy();
+});
+
+	return { onLoaded };
+}
+
+class Bootstrap_1 extends SvelteComponentDev {
+	constructor(options) {
+		super(options);
+		init(this, options, instance, create_fragment, safe_not_equal, []);
+	}
+}
+
+export default Bootstrap_1;

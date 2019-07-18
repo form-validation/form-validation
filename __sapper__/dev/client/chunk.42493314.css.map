@@ -1,0 +1,12 @@
+{
+  "version": 3,
+  "file": "chunk.42493314.css",
+  "sources": [
+    "../../../../../../src/components/Tab.svelte"
+  ],
+  "sourcesContent": [
+    "<style>\n.tab-button:focus {\n    outline: none;\n}\n</style>\n\n<li class=\"dib bt bw2 {isSelected ? 'b--blue ' : 'b--transparent'}\">\n    <button class=\"tab-button pointer dark-gray ph3 pv2 dib bn bg-transparent\" class:b={isSelected} on:click={select}>{@html title}</button>\n</li>\n\n<script>\nimport { createEventDispatcher } from 'svelte';\n\n// Public props\nlet isSelected = false;\nlet title = '';\n\nconst dispatch = createEventDispatcher();\n\nconst select = () => {\n    dispatch('active', {\n        title: title,\n    });\n};\n\nexport {\n    isSelected,\n    title,\n};\n</script>\n"
+  ],
+  "names": [],
+  "mappings": "AACA,yBAAW,MAAM,AAAC,CAAC,AACf,OAAO,CAAE,IAAI,AACjB,CAAC"
+}
