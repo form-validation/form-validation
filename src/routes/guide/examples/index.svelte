@@ -74,6 +74,7 @@
     <Examples heading="Integrate with JavaScript frameworks" examples={[
         'Bundling with Rollup',
         'Bundling with Webpack',
+        'Integrating with Svelte',
     ]} />
 
     <Examples heading="Integrate with 3rd party libraries" examples={[
