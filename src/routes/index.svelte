@@ -553,7 +553,7 @@ formValidation(formElement, {
 </section>
 
 <script>
-import Typed from '../_demo/typed/Tachyons.svelte';
+import Typed from '../_demo/typed/tachyons.svelte';
 import siteData from '../components/constants/SiteData';
 import Card from '../components/Card.svelte';
 import Cards from '../components/Cards.svelte';
@@ -565,5 +565,5 @@ import Tab from '../components/Tab.svelte';
 import Tabs from '../components/Tabs.svelte';
 import Testimonial from '../components/Testimonial.svelte';
 
-import sampleDemoCode from '../_demo/typed/Tachyons.programmatic';
+import sampleDemoCode from '../_demo/typed/tachyons.programmatic';
 </script>
