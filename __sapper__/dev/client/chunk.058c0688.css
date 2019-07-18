@@ -1,3 +1,0 @@
-@keyframes svelte-rgly7b-blinker{from{opacity:1}to{opacity:0}}.blink.svelte-rgly7b{animation:svelte-rgly7b-blinker 1s cubic-bezier(.5, 0, 1, 1) infinite alternate}
-.layout-container.svelte-1wki0by{display:grid;grid-template-areas:'header' 'main' 'footer';grid-template-rows:auto 1fr auto;min-height:100vh}.header.svelte-1wki0by{grid-area:header;position:-webkit-sticky;position:sticky}.main.svelte-1wki0by{grid-area:main}.footer.svelte-1wki0by{grid-area:footer}
-/* sourceMappingURL=./chunk.058c0688.css.map */
