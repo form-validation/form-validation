@@ -80,6 +80,7 @@
     <Examples heading="Integrate with 3rd party libraries" examples={[
         'Integrating with 3rd party libraries',
         'Integrating with Bootbox',
+        'Integrating with Bootstrap button group',
         'Integrating with Bootstrap Datepicker',
         'Integrating with flatpickr',
         'Integrating with Select2',

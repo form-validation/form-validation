@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
             },
             plugins: {
                 trigger: new FormValidation.plugins.Trigger(),
-                bootstra3p: new FormValidation.plugins.Bootstrap3(),
+                bootstrap3: new FormValidation.plugins.Bootstrap3(),
                 submitButton: new FormValidation.plugins.SubmitButton(),
                 icon: new FormValidation.plugins.Icon({
                     valid: 'fa fa-check',
