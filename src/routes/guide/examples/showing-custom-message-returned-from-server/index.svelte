@@ -6,7 +6,7 @@
     <h1 class="tc lh-copy">Showing custom message returned from server</h1>
     
     <section class="mv5">
-        <p class="lh-copy">As you know, each <a href="/validators" class="blue dim link">validator</a> provides the <code>message</code> option to define the error message in case the field
+        <p class="lh-copy">As you know, each <a href="/guide/validators" class="blue dim link">validator</a> provides the <code>message</code> option to define the error message in case the field
             doesn't pass the associated validator.</p>
         <p class="lh-copy">It's recommended to perform the validation on server side after the form passes the client side validation. 
             The usual question is that how to show the messages from the server if the field doesn't pass the validation on server side.</p>
@@ -14,7 +14,7 @@
             the example uses a simple registration form that consists of three fields for filling the username, email address and password.</p>
 
         <h3>Defining the validation rules</h3>
-        <p class="lh-copy">In addition to <a href="/validators" class="blue dim link">usual validators</a>, we also attach a special validator called <code>blank</code> to each field which
+        <p class="lh-copy">In addition to <a href="/guide/validators" class="blue dim link">usual validators</a>, we also attach a special validator called <code>blank</code> to each field which
             need to show the custom message returned from the server.</p>
         <p class="lh-copy">The blank validator doesn't have any option:</p>
 <SampleCode lang="javascript" code={`
