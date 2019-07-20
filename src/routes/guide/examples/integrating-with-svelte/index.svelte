@@ -233,6 +233,7 @@ onMount(() => {
         'Integrating with React',
         'Integrating with Riot',
         'Integrating with Svelte',
+        'Integrating with Vue',
     ]} />
 </GuideLayout>
 

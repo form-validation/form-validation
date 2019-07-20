@@ -1,12 +1,12 @@
 <svelte:head>
-	<title>FormValidation • Integrating with Riot</title>
+	<title>FormValidation • Integrating with Vue</title>
 </svelte:head>
 
 <GuideLayout>
-    <h1 class="tc lh-copy">Integrating with Riot</h1>
+    <h1 class="tc lh-copy">Integrating with Vue</h1>
 
     <section class="mv5">
-        <p class="lh-copy">This page will help you integrate FormValidation with the <a href="https://riot.js.org" rel="noopener" target="_blank" class="blue dim link">Riot library</a>.</p>
+        <p class="lh-copy">This page will help you integrate FormValidation with the <a href="https://vuejs.org" rel="noopener" target="_blank" class="blue dim link">Vue framework</a>.</p>
         <p class="lh-copy">For the sake of simplicity, we are about to validate a simple login form with just two fields to input the username and password:</p>
 <SampleCode lang="html" code={`
 <form id="loginForm" method="POST">
@@ -44,64 +44,65 @@
 
     <section class="mv5">
         <Heading>Creating a FormValidation instance</Heading>
-        <p class="lh-copy">The best place to initialize a FormValidation instance is inside the component's <a href="https://riot.js.org/documentation/#lifecycle-callbacks" rel="noopener" target="_blank" class="blue dim link">onMounted event</a>:</p>
+        <p class="lh-copy">The best place to initialize a FormValidation instance is inside the component's <a href="https://vuejs.org/v2/guide/instance.html#Lifecycle-Diagram" rel="noopener" target="_blank" class="blue dim link">mounted event</a>:</p>
 <SampleCode lang="html" code={`
-// LoginForm.riot
-<LoginForm>
-    <!-- Render the form ... -->
+// LoginForm.vue
 
-    <script-tag>
-    import formValidation from 'formvalidation/dist/es6/core/Core';
+<template>
+    <!-- Render the form -->
+</template>
 
-    export default {
-        onMounted(props, state) {
-            // Create a FormValidation instance
-            this.fv = formValidation(document.getElementById('loginForm'), {
-                fields: {
-                    username: {
-                        validators: {
-                            notEmpty: {
-                                message: 'The username is required'
-                            },
-                            stringLength: {
-                                min: 6,
-                                max: 30,
-                                message: 'The username must be more than 6 and less than 30 characters long',
-                            },
-                            regexp: {
-                                regexp: /^[a-zA-Z0-9_]+$/,
-                                message: 'The username can only consist of alphabetical, number and underscore',
-                            },
-                        }
-                    },
-                    password: {
-                        validators: {
-                            notEmpty: {
-                                message: 'The password is required'
-                            },
-                            stringLength: {
-                                min: 8,
-                                message: 'The password must have at least 8 characters',
-                            },
-                        }
-                    },
+<script-tag>
+import formValidation from 'formvalidation/dist/es6/core/Core';
+
+module.exports = {
+    mounted: function() {
+        // Create a FormValidation instance
+        this.fv = formValidation(document.getElementById('loginForm'), {
+            fields: {
+                username: {
+                    validators: {
+                        notEmpty: {
+                            message: 'The username is required'
+                        },
+                        stringLength: {
+                            min: 6,
+                            max: 30,
+                            message: 'The username must be more than 6 and less than 30 characters long',
+                        },
+                        regexp: {
+                            regexp: /^[a-zA-Z0-9_]+$/,
+                            message: 'The username can only consist of alphabetical, number and underscore',
+                        },
+                    }
                 },
-                plugins: {
-                    ...
+                password: {
+                    validators: {
+                        notEmpty: {
+                            message: 'The password is required'
+                        },
+                        stringLength: {
+                            min: 8,
+                            message: 'The password must have at least 8 characters',
+                        },
+                    }
                 },
-            });
-        },     
-    };
-    </script-tag>
-</LoginForm>
-`} />
+            },
+            plugins: {
+                ...
+            },
+        });
+    },
+};
+</script-tag>
+`} />      
     </section>
 
     <section class="mv5">
         <Heading>Using the plugins</Heading>
         <p class="lh-copy">In order to use the <a href="/guide/plugins" class="blue dim link">plugins</a>, we need to import them:</p>
 <SampleCode lang="javascript" code={`
-// LoginForm.riot
+// LoginForm.vue
 
 import formValidation from 'formvalidation/dist/es6/core/Core';
 
@@ -111,8 +112,8 @@ import Trigger from 'formvalidation/dist/es6/plugins/Trigger';
 import Bootstrap from 'formvalidation/dist/es6/plugins/Bootstrap';
 import SubmitButton from 'formvalidation/dist/es6/plugins/SubmitButton';
 
-export default {
-    onMounted(props, state) {
+module.exports = {
+    mounted: function() {
         this.fv = formValidation(document.getElementById('loginForm'), {
             fields: {
                 ...
@@ -134,8 +135,6 @@ export default {
         <p class="lh-copy">Now the FormValidation instance is ready, you can listen on the <a href="/guide/events" class="blue dim link">events</a> or call <a href="/guide/api" class="blue dim link">API</a>:</p>
 
 <SampleCode lang="javascript" code={`
-// LoginForm.riot
-
 // Listen on event
 this.fv.on('core.field.invalid', (e) => {
     ...
@@ -157,7 +156,7 @@ import formValidation from 'formvalidation/dist/es6/core/Core';
         <p class="lh-copy">In the other cases, you have to use the <a href="/guide/api/register-validator" class="blue dim link">registerValidator() method</a> to let the library knows where it can find a <a href="/guide/validators#special-validators" class="blue dim link">special</a> or <a href="/guide/examples/creating-a-custom-validator" class="blue dim link">custom validator</a>:</p>
 
 <SampleCode lang="javascript" code={`
-// LoginForm.riot
+// LoginForm.vue
 
 // Import an external validator
 import phone from 'formvalidation/dist/es6/validators/phone';
@@ -165,8 +164,8 @@ import phone from 'formvalidation/dist/es6/validators/phone';
 // Or import your own validator
 import strongPassword from '/path/to/your/strongPassword';
 
-export default {
-    onMounted(props, state) {
+module.exports = {
+    mounted: function() {
         this.fv = formValidation(document.getElementById('loginForm'), {
             fields: {
                 phoneNumber: {
@@ -192,18 +191,18 @@ export default {
 
     <section class="mv5">
         <Heading>Destroying FormValidation instance</Heading>
-        <p class="lh-copy">Riot component triggers the <a href="https://riot.js.org/documentation/#lifecycle-callbacks" rel="noopener" target="_blank" class="blue dim link">onBeforeUnmount event</a> when it's removed from page or not used anymore. It's the time to destroy our FormValidation instance by using the <a href="/guide/api/destroy" class="blue dim link">destroy() method</a>:</p>
+        <p class="lh-copy">Vue component triggers the <a href="https://vuejs.org/v2/guide/instance.html#Lifecycle-Diagram" rel="noopener" target="_blank" class="blue dim link">beforeDestroy event</a> when it's removed from page or not used anymore. It's the time to destroy our FormValidation instance by using the <a href="/guide/api/destroy" class="blue dim link">destroy() method</a>:</p>
 <SampleCode lang="javascript" code={`
-// LoginForm.riot
+// LoginForm.vue
 
-export default {
-    onBeforeUnmount(props, state) {
+module.exports = {
+    beforeDestroy: function() {
         if (this.fv) {
             this.fv.destroy();
         }
     },
 };
-`} />    
+`} />     
     </section>
 
     <Examples examples={[

@@ -212,6 +212,7 @@ class LoginForm extends Component {
         'Integrating with React',
         'Integrating with Riot',
         'Integrating with Svelte',
+        'Integrating with Vue',
     ]} />
 </GuideLayout>
 

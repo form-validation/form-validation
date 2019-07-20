@@ -78,6 +78,7 @@
         'Integrating with React',
         'Integrating with Riot',
         'Integrating with Svelte',
+        'Integrating with Vue',
     ]} />
 
     <Examples heading="Integrate with 3rd party libraries" examples={[

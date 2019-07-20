@@ -434,33 +434,39 @@ formValidation(formElement, {
     <div class="mw8 center">
         <DotDotDot />
         <h2 class="f1">Compatible with JavaScript frameworks</h2>
-        <p class="lh-copy">FormValidation can be used with popular frameworks such as React, Preact, Vue, Svelte, etc.</p>            
+        <p class="lh-copy">FormValidation can be <span class="bg-gold pa1 br2 b">used with popular JavaScript frameworks</span> such as React, Preact, Vue, Svelte, etc.</p>            
     </div>
 
     <div class="mw7 center">
         <ul class="list pa0 flex flex-wrap">
             <li class="w-20 pa3 tc">
-                <a href="/guide/examples/integrating-with-preact" class="link">
-                    <img alt="UIKit" class="w3 h3 mb1" src="/branches/preact.svg" />
+                <a href="/guide/examples/integrating-with-preact" title="Integrate FormValidation with Preact" class="link">
+                    <img alt="Preact" class="w3 h3 mb1" src="/branches/preact.svg" />
                     <div>Preact</div>
                 </a>
             </li>
             <li class="w-20 pa3 tc">
-                <a href="/guide/examples/integrating-with-react" class="link">
-                    <img alt="UIKit" class="w3 h3 mb1" src="/branches/react.svg" />
+                <a href="/guide/examples/integrating-with-react" title="Integrate FormValidation with React" class="link">
+                    <img alt="React" class="w3 h3 mb1" src="/branches/react.svg" />
                     <div>React</div>
                 </a>
             </li>
             <li class="w-20 pa3 tc">
-                <a href="/guide/examples/integrating-with-riot" class="link">
-                    <img alt="UIKit" class="w3 h3 mb1" src="/branches/riot.svg" />
+                <a href="/guide/examples/integrating-with-riot" title="Integrate FormValidation with Riot" class="link">
+                    <img alt="Riot" class="w3 h3 mb1" src="/branches/riot.svg" />
                     <div>Riot</div>
                 </a>
             </li>
             <li class="w-20 pa3 tc">
-                <a href="/guide/examples/integrating-with-svelte" class="link">
-                    <img alt="UIKit" class="w3 h3 mb1" src="/branches/svelte.svg" />
+                <a href="/guide/examples/integrating-with-svelte" title="Integrate FormValidation with Svelte" class="link">
+                    <img alt="Svelte" class="w3 h3 mb1" src="/branches/svelte.svg" />
                     <div>Svelte</div>
+                </a>
+            </li>
+            <li class="w-20 pa3 tc">
+                <a href="/guide/examples/integrating-with-vue" title="Integrate FormValidation with Vue" class="link">
+                    <img alt="Vue" class="w3 h3 mb1" src="/branches/vue.svg" />
+                    <div>Vue</div>
                 </a>
             </li>
         </ul>
