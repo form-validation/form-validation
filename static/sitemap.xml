@@ -290,6 +290,7 @@
     <url><loc>https://formvalidation.io/guide/examples/bundling-with-webpack</loc></url>
     <url><loc>https://formvalidation.io/guide/examples/integrating-with-preact</loc></url>
     <url><loc>https://formvalidation.io/guide/examples/integrating-with-react</loc></url>
+    <url><loc>https://formvalidation.io/guide/examples/integrating-with-riot</loc></url>
     <url><loc>https://formvalidation.io/guide/examples/integrating-with-svelte</loc></url>
 
     <url><loc>https://formvalidation.io/guide/examples/integrating-with-3rd-party-libraries</loc></url>

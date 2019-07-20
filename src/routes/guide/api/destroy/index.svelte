@@ -23,6 +23,7 @@
     <Examples examples={[
         'Integrating with Preact',
         'Integrating with React',
+        'Integrating with Riot',
         'Integrating with Svelte',
     ]} />
 </GuideLayout>

@@ -231,6 +231,7 @@ onMount(() => {
         'Bundling with Webpack',
         'Integrating with Preact',
         'Integrating with React',
+        'Integrating with Riot',
         'Integrating with Svelte',
     ]} />
 </GuideLayout>

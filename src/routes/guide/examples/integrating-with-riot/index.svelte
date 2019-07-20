@@ -1,12 +1,12 @@
 <svelte:head>
-	<title>FormValidation • Integrating with React</title>
+	<title>FormValidation • Integrating with Riot</title>
 </svelte:head>
 
 <GuideLayout>
-    <h1 class="tc lh-copy">Integrating with React</h1>
+    <h1 class="tc lh-copy">Integrating with Riot</h1>
 
     <section class="mv5">
-        <p class="lh-copy">This page will help you integrate FormValidation with the <a href="https://reactjs.org" rel="noopener" target="_blank" class="blue dim link">React library</a>.</p>
+        <p class="lh-copy">This page will help you integrate FormValidation with the <a href="https://riot.js.org" rel="noopener" target="_blank" class="blue dim link">Riot library</a>.</p>
         <p class="lh-copy">For the sake of simplicity, we are about to validate a simple login form with just two fields to input the username and password:</p>
 <SampleCode lang="html" code={`
 <form id="loginForm" method="POST">
@@ -44,62 +44,65 @@
 
     <section class="mv5">
         <Heading>Creating a FormValidation instance</Heading>
-        <p class="lh-copy">The best place to initialize a FormValidation instance is inside the component's <a href="https://reactjs.org/docs/react-component.html#componentdidmount" rel="noopener" target="_blank" class="blue dim link">componentDidMount event</a>:</p>
-<SampleCode lang="javascript" code={`
-import formValidation from 'formvalidation/dist/es6/core/Core';
+        <p class="lh-copy">The best place to initialize a FormValidation instance is inside the component's <a href="https://riot.js.org/documentation/#lifecycle-callbacks" rel="noopener" target="_blank" class="blue dim link">onMounted event</a>:</p>
+<SampleCode lang="html" code={`
+// LoginForm.riot
+<LoginForm>
+    <!-- Render the form ... -->
 
-class LoginForm extends React.Component {
-    render() {
-        return (
-            // Render the form ...
-        );
-    }
+    <script-tag>
+    import formValidation from 'formvalidation/dist/es6/core/Core';
 
-    componentDidMount() {
-        // Create a FormValidation instance
-        this.fv = formValidation(document.getElementById('loginForm'), {
-            fields: {
-                username: {
-                    validators: {
-                        notEmpty: {
-                            message: 'The username is required'
-                        },
-                        stringLength: {
-                            min: 6,
-                            max: 30,
-                            message: 'The username must be more than 6 and less than 30 characters long',
-                        },
-                        regexp: {
-                            regexp: /^[a-zA-Z0-9_]+$/,
-                            message: 'The username can only consist of alphabetical, number and underscore',
-                        },
-                    }
+    export default {
+        onMounted(props, state) {
+            // Create a FormValidation instance
+            this.fv = formValidation(document.getElementById('loginForm'), {
+                fields: {
+                    username: {
+                        validators: {
+                            notEmpty: {
+                                message: 'The username is required'
+                            },
+                            stringLength: {
+                                min: 6,
+                                max: 30,
+                                message: 'The username must be more than 6 and less than 30 characters long',
+                            },
+                            regexp: {
+                                regexp: /^[a-zA-Z0-9_]+$/,
+                                message: 'The username can only consist of alphabetical, number and underscore',
+                            },
+                        }
+                    },
+                    password: {
+                        validators: {
+                            notEmpty: {
+                                message: 'The password is required'
+                            },
+                            stringLength: {
+                                min: 8,
+                                message: 'The password must have at least 8 characters',
+                            },
+                        }
+                    },
                 },
-                password: {
-                    validators: {
-                        notEmpty: {
-                            message: 'The password is required'
-                        },
-                        stringLength: {
-                            min: 8,
-                            message: 'The password must have at least 8 characters',
-                        },
-                    }
+                plugins: {
+                    ...
                 },
-            },
-            plugins: {
-                ...
-            },
-        });
-    }
-}
-`} />      
+            });
+        },     
+    };
+    </script-tag>
+</LoginForm>
+`} />
     </section>
 
     <section class="mv5">
         <Heading>Using the plugins</Heading>
         <p class="lh-copy">In order to use the <a href="/guide/plugins" class="blue dim link">plugins</a>, we need to import them:</p>
 <SampleCode lang="javascript" code={`
+// LoginForm.riot
+
 import formValidation from 'formvalidation/dist/es6/core/Core';
 
 // FormValidation plugins
@@ -108,8 +111,8 @@ import Trigger from 'formvalidation/dist/es6/plugins/Trigger';
 import Bootstrap from 'formvalidation/dist/es6/plugins/Bootstrap';
 import SubmitButton from 'formvalidation/dist/es6/plugins/SubmitButton';
 
-class LoginForm extends React.Component {
-    componentDidMount() {
+export default {
+    onMounted(props, state) {
         this.fv = formValidation(document.getElementById('loginForm'), {
             fields: {
                 ...
@@ -125,12 +128,14 @@ class LoginForm extends React.Component {
                 submitButton: new SubmitButton(),
             },
         });
-    }
-}
+    },
+};
 `} />  
         <p class="lh-copy">Now the FormValidation instance is ready, you can listen on the <a href="/guide/events" class="blue dim link">events</a> or call <a href="/guide/api" class="blue dim link">API</a>:</p>
 
 <SampleCode lang="javascript" code={`
+// LoginForm.riot
+
 // Listen on event
 this.fv.on('core.field.invalid', (e) => {
     ...
@@ -152,14 +157,16 @@ import formValidation from 'formvalidation/dist/es6/core/Core';
         <p class="lh-copy">In the other cases, you have to use the <a href="/guide/api/register-validator" class="blue dim link">registerValidator() method</a> to let the library knows where it can find a <a href="/guide/validators#special-validators" class="blue dim link">special</a> or <a href="/guide/examples/creating-a-custom-validator" class="blue dim link">custom validator</a>:</p>
 
 <SampleCode lang="javascript" code={`
+// LoginForm.riot
+
 // Import an external validator
 import phone from 'formvalidation/dist/es6/validators/phone';
 
 // Or import your own validator
 import strongPassword from '/path/to/your/strongPassword';
 
-class LoginForm extends React.Component {
-    componentDidMount() {
+export default {
+    onMounted(props, state) {
         this.fv = formValidation(document.getElementById('loginForm'), {
             fields: {
                 phoneNumber: {
@@ -178,23 +185,25 @@ class LoginForm extends React.Component {
         // Register validators
         this.fv.registerValidator('phone', phone)
                .registerValidator('checkPassword', strongPassword);
-    }
-}
+    },
+};
 `} />
     </section>
 
     <section class="mv5">
         <Heading>Destroying FormValidation instance</Heading>
-        <p class="lh-copy">React component triggers the <a href="https://reactjs.org/docs/react-component.html#componentwillunmount" rel="noopener" target="_blank" class="blue dim link">componentWillUnmount event</a> when it's removed from page or not used anymore. It's the time to destroy our FormValidation instance by using the <a href="/guide/api/destroy" class="blue dim link">destroy() method</a>:</p>
+        <p class="lh-copy">Riot component triggers the <a href="https://riot.js.org/documentation/#lifecycle-callbacks" rel="noopener" target="_blank" class="blue dim link">onBeforeUnmount event</a> when it's removed from page or not used anymore. It's the time to destroy our FormValidation instance by using the <a href="/guide/api/destroy" class="blue dim link">destroy() method</a>:</p>
 <SampleCode lang="javascript" code={`
-class LoginForm extends React.Component {
-    componentWillUnmount() {
+// LoginForm.riot
+
+export default {
+    onBeforeUnmount(props, state) {
         if (this.fv) {
             this.fv.destroy();
         }
-    }
-}
-`} />     
+    },
+};
+`} />    
     </section>
 
     <Examples examples={[

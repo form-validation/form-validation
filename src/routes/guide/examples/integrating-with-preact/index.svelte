@@ -191,7 +191,7 @@ class LoginForm extends Component {
 
     <section class="mv5">
         <Heading>Destroying FormValidation instance</Heading>
-        <p class="lh-copy">React component triggers the <a href="https://preactjs.com/guide/api-reference#lifecycle-methods" rel="noopener" target="_blank" class="blue dim link">componentWillUnmount event</a> when it's removed from page or not used anymore. It's the time to destroy our FormValidation instance by using the <a href="/guide/api/destroy" class="blue dim link">destroy() method</a>:</p>
+        <p class="lh-copy">Preact component triggers the <a href="https://preactjs.com/guide/api-reference#lifecycle-methods" rel="noopener" target="_blank" class="blue dim link">componentWillUnmount event</a> when it's removed from page or not used anymore. It's the time to destroy our FormValidation instance by using the <a href="/guide/api/destroy" class="blue dim link">destroy() method</a>:</p>
 <SampleCode lang="javascript" code={`
 import { Component } from 'preact';
 
@@ -210,6 +210,7 @@ class LoginForm extends Component {
         'Bundling with Webpack',
         'Integrating with Preact',
         'Integrating with React',
+        'Integrating with Riot',
         'Integrating with Svelte',
     ]} />
 </GuideLayout>

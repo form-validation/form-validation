@@ -452,6 +452,12 @@ formValidation(formElement, {
                 </a>
             </li>
             <li class="w-20 pa3 tc">
+                <a href="/guide/examples/integrating-with-riot" class="link">
+                    <img alt="UIKit" class="w3 h3 mb1" src="/branches/riot.svg" />
+                    <div>Riot</div>
+                </a>
+            </li>
+            <li class="w-20 pa3 tc">
                 <a href="/guide/examples/integrating-with-svelte" class="link">
                     <img alt="UIKit" class="w3 h3 mb1" src="/branches/svelte.svg" />
                     <div>Svelte</div>
