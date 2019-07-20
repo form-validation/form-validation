@@ -21,6 +21,7 @@
     </section>
 
     <Examples examples={[
+        'Integrating with React',
         'Integrating with Svelte',
     ]} />
 </GuideLayout>

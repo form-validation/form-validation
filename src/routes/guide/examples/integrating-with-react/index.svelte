@@ -1,12 +1,12 @@
 <svelte:head>
-	<title>FormValidation • Integrating with Svelte</title>
+	<title>FormValidation • Integrating with React</title>
 </svelte:head>
 
 <GuideLayout>
-    <h1 class="tc lh-copy">Integrating with Svelte</h1>
+    <h1 class="tc lh-copy">Integrating with React</h1>
 
     <section class="mv5">
-        <p class="lh-copy">This page will help you integrate FormValidation with the <a href="https://svelte.dev" rel="noopener" target="_blank" class="blue dim link">Svelte framework</a>.</p>
+        <p class="lh-copy">This page will help you integrate FormValidation with the <a href="https://reactjs.org" rel="noopener" target="_blank" class="blue dim link">React library</a>.</p>
         <p class="lh-copy">For the sake of simplicity, we are about to validate a simple login form with just two fields to input the username and password:</p>
 <SampleCode lang="html" code={`
 <form id="loginForm" method="POST">
@@ -44,58 +44,55 @@
 
     <section class="mv5">
         <Heading>Creating a FormValidation instance</Heading>
-        <p class="lh-copy">The best place to initialize a FormValidation instance is inside the component's <a href="https://svelte.dev/docs#onMount" rel="noopener" target="_blank" class="blue dim link">onMount event</a>:</p>
-<SampleCode lang="html" code={`
-<form id="loginForm" method="POST">
-    ...
-</form>
-
-<script-tag>
-import { onMount } from 'svelte';
-
+        <p class="lh-copy">The best place to initialize a FormValidation instance is inside the component's <a href="https://reactjs.org/docs/react-component.html#componentdidmount" rel="noopener" target="_blank" class="blue dim link">componentDidMount event</a>:</p>
+<SampleCode lang="javascript" code={`
 import formValidation from 'formvalidation/dist/es6/core/Core';
 
-// The FormValidation instance
-let fv;
+class LoginForm extends React.Component {
+    render() {
+        return (
+            // Render the form ...
+        );
+    }
 
-onMount(() => {
-    // Create a FormValidation instance
-    fv = formValidation(document.getElementById('loginForm'), {
-        fields: {
-            username: {
-                validators: {
-                    notEmpty: {
-                        message: 'The username is required'
-                    },
-                    stringLength: {
-                        min: 6,
-                        max: 30,
-                        message: 'The username must be more than 6 and less than 30 characters long',
-                    },
-                    regexp: {
-                        regexp: /^[a-zA-Z0-9_]+$/,
-                        message: 'The username can only consist of alphabetical, number and underscore',
-                    },
-                }
+    componentDidMount() {
+        // Create a FormValidation instance
+        this.fv = formValidation(document.getElementById('loginForm'), {
+            fields: {
+                username: {
+                    validators: {
+                        notEmpty: {
+                            message: 'The username is required'
+                        },
+                        stringLength: {
+                            min: 6,
+                            max: 30,
+                            message: 'The username must be more than 6 and less than 30 characters long',
+                        },
+                        regexp: {
+                            regexp: /^[a-zA-Z0-9_]+$/,
+                            message: 'The username can only consist of alphabetical, number and underscore',
+                        },
+                    }
+                },
+                password: {
+                    validators: {
+                        notEmpty: {
+                            message: 'The password is required'
+                        },
+                        stringLength: {
+                            min: 8,
+                            message: 'The password must have at least 8 characters',
+                        },
+                    }
+                },
             },
-            password: {
-                validators: {
-                    notEmpty: {
-                        message: 'The password is required'
-                    },
-                    stringLength: {
-                        min: 8,
-                        message: 'The password must have at least 8 characters',
-                    },
-                }
+            plugins: {
+                ...
             },
-        },
-        plugins: {
-            ...
-        },
-    });
-});
-</script-tag>
+        });
+    }
+}
 `} />      
     </section>
 
@@ -103,8 +100,6 @@ onMount(() => {
         <Heading>Using the plugins</Heading>
         <p class="lh-copy">In order to use the <a href="/guide/plugins" class="blue dim link">plugins</a>, we need to import them:</p>
 <SampleCode lang="javascript" code={`
-import { onMount } from 'svelte';
-
 import formValidation from 'formvalidation/dist/es6/core/Core';
 
 // FormValidation plugins
@@ -113,43 +108,37 @@ import Trigger from 'formvalidation/dist/es6/plugins/Trigger';
 import Bootstrap from 'formvalidation/dist/es6/plugins/Bootstrap';
 import SubmitButton from 'formvalidation/dist/es6/plugins/SubmitButton';
 
-let fv;
-
-onMount(() => {
-    fv = formValidation(document.getElementById('loginForm'), {
-        fields: {
-            ...
-        },
-        plugins: {
-            trigger: new Trigger(),
-            bootstrap: new Bootstrap(),
-            icon: new Icon({
-                valid: 'fa fa-check',
-                invalid: 'fa fa-times',
-                validating: 'fa fa-refresh'
-            }),
-            submitButton: new SubmitButton(),
-        },
-    });
-});
+class LoginForm extends React.Component {
+    componentDidMount() {
+        this.fv = formValidation(document.getElementById('loginForm'), {
+            fields: {
+                ...
+            },
+            plugins: {
+                trigger: new Trigger(),
+                bootstrap: new Bootstrap(),
+                icon: new Icon({
+                    valid: 'fa fa-check',
+                    invalid: 'fa fa-times',
+                    validating: 'fa fa-refresh'
+                }),
+                submitButton: new SubmitButton(),
+            },
+        });
+    }
+}
 `} />  
         <p class="lh-copy">Now the FormValidation instance is ready, you can listen on the <a href="/guide/events" class="blue dim link">events</a> or call <a href="/guide/api" class="blue dim link">API</a>:</p>
 
 <SampleCode lang="javascript" code={`
-onMount(() => {
-    fv = formValidation(document.getElementById('loginForm'), {
-        ...
-    });
-
-    // Listen on event
-    fv.on('core.field.invalid', (e) => {
-        ...
-    });
-
-    // Call API
-    fv.revalidateField('...');
+// Listen on event
+this.fv.on('core.field.invalid', (e) => {
+    ...
 });
-`} />      
+
+// Call API
+this.fv.revalidateField('...');
+`} />
     </section>
 
     <section class="mv5">
@@ -169,61 +158,43 @@ import phone from 'formvalidation/dist/es6/validators/phone';
 // Or import your own validator
 import strongPassword from '/path/to/your/strongPassword';
 
-onMount(() => {
-    fv = formValidation(document.getElementById('loginForm'), {
-        fields: {
-            phoneNumber: {
-                validators: {
-                    phone: { ... }
-                }
+class LoginForm extends React.Component {
+    componentDidMount() {
+        this.fv = formValidation(document.getElementById('loginForm'), {
+            fields: {
+                phoneNumber: {
+                    validators: {
+                        phone: { ... }
+                    }
+                },
+                password: {
+                    validators: {
+                        checkPassword: { ... }
+                    }
+                },
             },
-            password: {
-                validators: {
-                    checkPassword: { ... }
-                }
-            },
-        }
-    });
+        });
 
-    // Register validators
-    fv.registerValidator('phone', phone)
-      .registerValidator('checkPassword', strongPassword);
-});
+        // Register validators
+        this.fv.registerValidator('phone', phone)
+               .registerValidator('checkPassword', strongPassword);
+    }
+}
 `} />
     </section>
 
     <section class="mv5">
         <Heading>Destroying FormValidation instance</Heading>
-        <p class="lh-copy">Svelte component triggers the <a href="https://svelte.dev/docs#onDestroy" rel="noopener" target="_blank" class="blue dim link">onDestroy event</a> when it's removed from page or not used anymore. It's the time to destroy our FormValidation instance by using the <a href="/guide/api/destroy" class="blue dim link">destroy() method</a>:</p>
+        <p class="lh-copy">React component triggers the <a href="https://reactjs.org/docs/react-component.html#componentwillunmount" rel="noopener" target="_blank" class="blue dim link">componentWillUnmount event</a> when it's removed from page or not used anymore. It's the time to destroy our FormValidation instance by using the <a href="/guide/api/destroy" class="blue dim link">destroy() method</a>:</p>
 <SampleCode lang="javascript" code={`
-import { onDestroy } from 'svelte';
-
-let fv;
-
-onDestroy(() => {
-    if (fv) {
-        fv.destroy();
+class LoginForm extends React.Component {
+    componentWillUnmount() {
+        if (this.fv) {
+            this.fv.destroy();
+        }
     }
-});
-`} />
-        <p class="lh-copy">The Svelte component also performs the cleaning tasks if the <code>onMount</code> event returns a function. It's possible for us to write a more beautiful code without hooking the <code>onDestroy</code> event:</p>
-
-<SampleCode lang="javascript" code={`
-import { onMount } from 'svelte';
-
-onMount(() => {
-    // Create FormValidation instance
-    const fv = formValidation(document.getElementById('loginForm'), {
-        ...
-    });
-
-    // Return a method that will be executed when
-    // the component is destroyed
-    return () => {
-        fv.destroy();
-    };
-});
-`} />      
+}
+`} />     
     </section>
 
     <Examples examples={[
