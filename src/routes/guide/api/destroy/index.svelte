@@ -21,6 +21,7 @@
     </section>
 
     <Examples examples={[
+        'Integrating with Preact',
         'Integrating with React',
         'Integrating with Svelte',
     ]} />

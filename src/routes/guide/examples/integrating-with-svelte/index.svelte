@@ -229,6 +229,7 @@ onMount(() => {
     <Examples examples={[
         'Bundling with Rollup',
         'Bundling with Webpack',
+        'Integrating with Preact',
         'Integrating with React',
         'Integrating with Svelte',
     ]} />

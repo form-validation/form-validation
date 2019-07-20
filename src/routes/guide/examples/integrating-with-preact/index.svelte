@@ -1,12 +1,12 @@
 <svelte:head>
-	<title>FormValidation • Integrating with React</title>
+	<title>FormValidation • Integrating with Preact</title>
 </svelte:head>
 
 <GuideLayout>
-    <h1 class="tc lh-copy">Integrating with React</h1>
+    <h1 class="tc lh-copy">Integrating with Preact</h1>
 
     <section class="mv5">
-        <p class="lh-copy">This page will help you integrate FormValidation with the <a href="https://reactjs.org" rel="noopener" target="_blank" class="blue dim link">React library</a>.</p>
+        <p class="lh-copy">This page will help you integrate FormValidation with the <a href="https://preactjs.com" rel="noopener" target="_blank" class="blue dim link">Preact library</a>.</p>
         <p class="lh-copy">For the sake of simplicity, we are about to validate a simple login form with just two fields to input the username and password:</p>
 <SampleCode lang="html" code={`
 <form id="loginForm" method="POST">
@@ -44,11 +44,13 @@
 
     <section class="mv5">
         <Heading>Creating a FormValidation instance</Heading>
-        <p class="lh-copy">The best place to initialize a FormValidation instance is inside the component's <a href="https://reactjs.org/docs/react-component.html#componentdidmount" rel="noopener" target="_blank" class="blue dim link">componentDidMount event</a>:</p>
+        <p class="lh-copy">The best place to initialize a FormValidation instance is inside the component's <a href="https://preactjs.com/guide/api-reference#lifecycle-methods" rel="noopener" target="_blank" class="blue dim link">componentDidMount event</a>:</p>
 <SampleCode lang="javascript" code={`
+import { Component } from 'preact';
+
 import formValidation from 'formvalidation/dist/es6/core/Core';
 
-class LoginForm extends React.Component {
+class LoginForm extends Component {
     render() {
         return (
             // Render the form ...
@@ -100,6 +102,8 @@ class LoginForm extends React.Component {
         <Heading>Using the plugins</Heading>
         <p class="lh-copy">In order to use the <a href="/guide/plugins" class="blue dim link">plugins</a>, we need to import them:</p>
 <SampleCode lang="javascript" code={`
+import { Component } from 'preact';
+
 import formValidation from 'formvalidation/dist/es6/core/Core';
 
 // FormValidation plugins
@@ -108,7 +112,7 @@ import Trigger from 'formvalidation/dist/es6/plugins/Trigger';
 import Bootstrap from 'formvalidation/dist/es6/plugins/Bootstrap';
 import SubmitButton from 'formvalidation/dist/es6/plugins/SubmitButton';
 
-class LoginForm extends React.Component {
+class LoginForm extends Component {
     componentDidMount() {
         this.fv = formValidation(document.getElementById('loginForm'), {
             fields: {
@@ -152,13 +156,15 @@ import formValidation from 'formvalidation/dist/es6/core/Core';
         <p class="lh-copy">In the other cases, you have to use the <a href="/guide/api/register-validator" class="blue dim link">registerValidator() method</a> to let the library knows where it can find a <a href="/guide/validators#special-validators" class="blue dim link">special</a> or <a href="/guide/examples/creating-a-custom-validator" class="blue dim link">custom validator</a>:</p>
 
 <SampleCode lang="javascript" code={`
+import { Component } from 'preact';
+
 // Import an external validator
 import phone from 'formvalidation/dist/es6/validators/phone';
 
 // Or import your own validator
 import strongPassword from '/path/to/your/strongPassword';
 
-class LoginForm extends React.Component {
+class LoginForm extends Component {
     componentDidMount() {
         this.fv = formValidation(document.getElementById('loginForm'), {
             fields: {
@@ -185,9 +191,11 @@ class LoginForm extends React.Component {
 
     <section class="mv5">
         <Heading>Destroying FormValidation instance</Heading>
-        <p class="lh-copy">React component triggers the <a href="https://reactjs.org/docs/react-component.html#componentwillunmount" rel="noopener" target="_blank" class="blue dim link">componentWillUnmount event</a> when it's removed from page or not used anymore. It's the time to destroy our FormValidation instance by using the <a href="/guide/api/destroy" class="blue dim link">destroy() method</a>:</p>
+        <p class="lh-copy">React component triggers the <a href="https://preactjs.com/guide/api-reference#lifecycle-methods" rel="noopener" target="_blank" class="blue dim link">componentWillUnmount event</a> when it's removed from page or not used anymore. It's the time to destroy our FormValidation instance by using the <a href="/guide/api/destroy" class="blue dim link">destroy() method</a>:</p>
 <SampleCode lang="javascript" code={`
-class LoginForm extends React.Component {
+import { Component } from 'preact';
+
+class LoginForm extends Component {
     componentWillUnmount() {
         if (this.fv) {
             this.fv.destroy();

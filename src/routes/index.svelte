@@ -433,6 +433,37 @@ formValidation(formElement, {
 <section class="pv5">
     <div class="mw8 center">
         <DotDotDot />
+        <h2 class="f1">Compatible with JavaScript frameworks</h2>
+        <p class="lh-copy">FormValidation can be used with popular frameworks such as React, Preact, Vue, Svelte, etc.</p>            
+    </div>
+
+    <div class="mw7 center">
+        <ul class="list pa0 flex flex-wrap">
+            <li class="w-20 pa3 tc">
+                <a href="/guide/examples/integrating-with-preact" class="link">
+                    <img alt="UIKit" class="w3 h3 mb1" src="/branches/preact.svg" />
+                    <div>Preact</div>
+                </a>
+            </li>
+            <li class="w-20 pa3 tc">
+                <a href="/guide/examples/integrating-with-react" class="link">
+                    <img alt="UIKit" class="w3 h3 mb1" src="/branches/react.svg" />
+                    <div>React</div>
+                </a>
+            </li>
+            <li class="w-20 pa3 tc">
+                <a href="/guide/examples/integrating-with-svelte" class="link">
+                    <img alt="UIKit" class="w3 h3 mb1" src="/branches/svelte.svg" />
+                    <div>Svelte</div>
+                </a>
+            </li>
+        </ul>
+    </div>
+</section>    
+
+<section class="pv5">
+    <div class="mw8 center">
+        <DotDotDot />
         <h2 class="f1">Integrate with UI libraries</h2>
         <p class="lh-copy">FormValidation plays nicely with other libraries. It has useful APIs to integrate with another libraries.</p>
         <p class="lh-copy">By using the same principle, you can easily <span class="bg-gold pa1 br2 b">integrate it with any UI library</span> out there. To name a few:</p>
