@@ -236,6 +236,7 @@
     
     <url><loc>https://formvalidation.io/guide/examples/adding-dynamic-field</loc></url>
     <url><loc>https://formvalidation.io/guide/examples/asking-fields-to-be-unique</loc></url>
+    <url><loc>https://formvalidation.io/guide/examples/building-a-password-strength-meter</loc></url>
     <url><loc>https://formvalidation.io/guide/examples/clearing-field-when-clicking-the-icon</loc></url>
     <url><loc>https://formvalidation.io/guide/examples/enabling-validators-on-the-fly</loc></url>
     <url><loc>https://formvalidation.io/guide/examples/excluding-field-by-given-condition</loc></url>

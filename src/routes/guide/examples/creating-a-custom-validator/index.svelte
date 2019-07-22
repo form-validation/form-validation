@@ -377,10 +377,16 @@ FormValidation
         <Tip>Try to enter simple passwords such as 123456, abcdef, abc123 to see how they are treated</Tip>
         <Demo prefix="/guide/examples/creating-a-custom-validator/meta-data" frameworks={['bootstrap']} />
     </section>
+
+    <Examples examples={[
+        'Creating a custom validator',
+        'Building a password strength meter',
+    ]} />
 </GuideLayout>
 
 <script>
 import Demo from '../../../../components/Demo.svelte';
+import Examples from '../../../../components/Examples.svelte';
 import GuideLayout from '../../../../components/GuideLayout.svelte';
 import Heading from '../../../../components/Heading.svelte';
 import SampleCode from '../../../../components/SampleCode.svelte';

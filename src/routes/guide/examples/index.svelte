@@ -14,6 +14,7 @@
     <Examples heading="Advanced examples" examples={[
         'Adding dynamic field',
         'Asking fields to be unique',
+        'Building a password strength meter',
         'Clearing field when clicking the icon',
         'Enabling validators on the fly',
         'Excluding field by given condition',

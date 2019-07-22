@@ -128,6 +128,10 @@ document.addEventListener('DOMContentLoaded', function(e) {
         </ul>
     </section>
 
+     <Examples examples={[
+        'Building a password strength meter',
+    ]} />
+
     <section class="mv5">
         <div class="flex">
             <PrevButton target="/guide/plugins/mui">Mui plugin</PrevButton>
@@ -138,6 +142,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
 
 <script>
 import Demo from '../../../../components/Demo.svelte';
+import Examples from '../../../../components/Examples.svelte';
 import Heading from '../../../../components/Heading.svelte';
 import GuideLayout from '../../../../components/GuideLayout.svelte';
 import NextButton from '../../../../components/NextButton.svelte';
