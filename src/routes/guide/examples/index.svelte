@@ -88,6 +88,7 @@
         'Integrating with Bootstrap button group',
         'Integrating with Bootstrap Datepicker',
         'Integrating with flatpickr',
+        'Integrating with MagicSuggest',
         'Integrating with Select2',
         'Integrating with Summernote',
         'Integrating with TinyMCE',

@@ -12,11 +12,17 @@
         <Demo prefix="/guide/examples/integrating-with-select2" frameworks={['tachyons']} />
     </section>
 
+    <Examples examples={[
+        'Integrating with MagicSuggest',
+        'Integrating with Select2',
+    ]} />
+
     <RelatedValidators validators={['choice']} />
 </GuideLayout>
 
 <script>
 import Demo from '../../../../components/Demo.svelte';
+import Examples from '../../../../components/Examples.svelte';
 import GuideLayout from '../../../../components/GuideLayout.svelte';
 import RelatedValidators from '../../../../components/RelatedValidators.svelte';
 import Tip from '../../../../components/Tip.svelte';
