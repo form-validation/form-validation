@@ -1,30 +1,15 @@
 <style>
 /* We have to declare all styles for Loader because it can be used without any frameworks when loading a demo layout */
-.loader-container { 
-    position: relative;
-}
 .loader {
     height: 40px;
-    margin: 20px auto;
-    position: relative;
     width: 40px;
-}
-.loading {
-    display: none;
-    opacity: 0;
 }
 
 .bounce1,
 .bounce2 {
     animation: bounce 2.0s infinite ease-in-out;
     background-color: #777;
-    border-radius: 100%;
-    height: 100%;
-    left: 0;
     opacity: 0.6;
-    position: absolute;
-    top: 0;
-    width: 100%;
 }
 
 .bounce2 {
@@ -41,12 +26,14 @@
 }
 </style>
 
-<div class="loader-container">
-    <div class:loading={!isDone}><slot></slot></div>
+<div class="relative">
+    <div class:o-0={!isDone}><slot></slot></div>
     {#if !isDone}
-    <div class="loader">
-        <div class="bounce1"></div>
-        <div class="bounce2"></div>
+    <div class="absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center">
+        <div class="relative loader">
+            <div class="bounce1 absolute top-0 left-0 w-100 h-100 br-pill"></div>
+            <div class="bounce2 absolute top-0 left-0 w-100 h-100 br-pill"></div>
+        </div>
     </div>
     {/if}
 </div>

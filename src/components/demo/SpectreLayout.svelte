@@ -21,4 +21,4 @@ export {
         // To use with Icon plugin
         'https://cdnjs.cloudflare.com/ajax/libs/spectre.css/0.5.8/spectre-icons.min.css',
     ]}
-    onLoaded={onLoaded}><slot></slot></ResourceLoader>
+    onLoaded={onLoaded}><div style="padding: 16px;"><slot></slot></div></ResourceLoader>
