@@ -20,9 +20,9 @@ fv
     .validateElement('userName', userNameEle)
     .then(function(status) {
         // status can be one of the following value
-        // 'NotValidated' (FormValidation.Status.NotValidated): The element is not yet validated
-        // 'Valid' (FormValidation.Status.Valid): The element is valid
-        // 'Invalid' (FormValidation.Status.Invalid): The element is invalid
+        // 'NotValidated': The element is not yet validated
+        // 'Valid': The element is valid
+        // 'Invalid': The element is invalid
         ...
     });
 `} />

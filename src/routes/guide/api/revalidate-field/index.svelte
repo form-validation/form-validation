@@ -21,9 +21,9 @@ fv
     .revalidateField('userName')
     .then(function(status) {
         // status can be one of the following value
-        // 'NotValidated' or FormValidation.Status.NotValidated: The field is not yet validated
-        // 'Valid' or FormValidation.Status.Valid: The field is valid
-        // 'Invalid' or FormValidation.Status.Invalid: The field is invalid
+        // 'NotValidated': The field is not yet validated
+        // 'Valid': The field is valid
+        // 'Invalid': The field is invalid
         ...
     });
 `} />
