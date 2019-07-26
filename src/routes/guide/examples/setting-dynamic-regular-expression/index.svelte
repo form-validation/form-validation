@@ -165,13 +165,17 @@ callback: function(input) {
                 : 'The input is not a valid ISBN 13';
 
     // Use the regexp validator
-    return FormValidation.validators.regexp().validate({
+    const result = FormValidation.validators.regexp().validate({
         value: value,
         options: {
             regexp: pattern,
             message: message,
         },
     });
+    return {
+        valid: result.valid,
+        message: message,
+    };
 }
 `} />
         <p class="lh-copy">Since the ISBN field depends on the ISBN type, we still need to revalidate it when the type is changed:</p>
@@ -185,7 +189,83 @@ demoForm.querySelector('[name="isbnType"]').addEventListener('change', function(
         <Demo prefix="/guide/examples/setting-dynamic-regular-expression/callback" frameworks={['tachyons']} />
     </section>
 
+    <section class="mv5">
+        <Heading>Enabling the validator</Heading>
+        <p class="lh-copy">This approach comes up by registering new two validators which are alias of the regexp validator:</p>
+
+<SampleCode lang="javascript" code={`
+const ISBN10_REGEXP = "^[0-9]{9}[0-9X]$";
+const ISBN13_REGEXP = "^(978|979)[0-9]{9}[0-9X]$";
+
+const demoForm = document.getElementById('demoForm');
+
+// Create a FormValidation instance which will be used later
+const fv = FormValidation.formValidation(demoForm, {
+    fields: {
+        isbnType: {
+            ...
+        },
+        isbn: {
+            validators: {
+                notEmpty: {
+                    message: 'The ISBN is required'
+                },
+                isbn10: {
+                    enabled: true,
+                    regexp: ISBN10_REGEXP,
+                    message: 'The input is not a valid ISBN 10',
+                },
+                isbn13: {
+                    enabled: false,
+                    regexp: ISBN13_REGEXP,
+                    message: 'The input is not a valid ISBN 13',
+                },
+            },
+        },
+    },
+    plugins: {
+        alias: new FormValidation.plugins.Alias({
+            // The following validators are treated as regexp validator
+            isbn10: 'regexp',
+            isbn13: 'regexp',
+        }),
+    },
+});
+`} />
+        <p class="lh-copy">By using the <a href="/guide/plugins/alias" class="blue dim link">Alias plugin</a>, we create two aliases for the regexp validator which are <code>isbn10</code> and <code>isbn13</code>. Looking at the sample code above,
+        you will see that the isbn10 validator is enabled (<code>enabled: true</code>). While the other one is disabled.</p>
+        <p class="lh-copy">Next, based on the selected ISBN type, we can use the <a href="/guide/api/enable-validator" class="blue dim link">enableValidator()</a> and <a href="/guide/api/disable-validator" class="blue dim link">disableValidator()</a> methods to turn on or turn off one of 
+        isbn10 or isbn13 validator.</p>
+        <div class="mb4">
+<SampleCode lang="javascript" code={`        
+demoForm.querySelector('[name="isbnType"]').addEventListener('change', function(e) {
+    const isbnType = e.target.value;
+    if (isbnType === '') {
+        return;
+    }
+
+    // Toggle the validator based on selected type
+    switch (isbnType) {
+        case 'isbn13':
+            fv.enableValidator('isbn', 'isbn13').disableValidator('isbn', 'isbn10');
+            break;
+
+        case 'isbn10':
+        default:
+            fv.enableValidator('isbn', 'isbn10').disableValidator('isbn', 'isbn13');
+            break;
+    }
+
+    // Revalidate the field
+    fv.revalidateField('isbn');
+});
+`} />
+        </div>        
+        <Demo prefix="/guide/examples/setting-dynamic-regular-expression/toggle-validator" frameworks={['tachyons']} />
+    </section>
+
     <Examples examples={[
+        'Enabling validators on the fly',
         'Setting dynamic regular expression',
         'Switching validators on the same field',
         'Updating validator options',

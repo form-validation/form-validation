@@ -19,6 +19,7 @@
 
     <Examples examples={[
         'Enabling validators on the fly',
+        'Setting dynamic regular expression',
         'Switching validators on the same field',
     ]} />
 
