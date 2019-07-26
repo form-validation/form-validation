@@ -143,6 +143,10 @@ FormValidation.formValidation(
         </ul>
     </section>
 
+    <Examples examples={[
+        'Setting dynamic regular expression',
+    ]} />
+
     <RelatedValidators validators={['callback']} />
 
     <section class="mv5">
@@ -155,6 +159,7 @@ FormValidation.formValidation(
 
 <script>
 import Demo from '../../../../components/Demo.svelte';
+import Examples from '../../../../components/Examples.svelte';
 import Heading from '../../../../components/Heading.svelte';
 import GuideLayout from '../../../../components/GuideLayout.svelte';
 import NextButton from '../../../../components/NextButton.svelte';
