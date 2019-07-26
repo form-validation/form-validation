@@ -141,6 +141,50 @@ demoForm.querySelector('[name="isbnType"]').addEventListener('change', function(
         <Demo prefix="/guide/examples/setting-dynamic-regular-expression/update-option" frameworks={['tachyons']} />
     </section>
 
+    <section class="mv5">
+        <Heading>Using the callback validator</Heading>
+        <p class="lh-copy">We can use both the <a href="/guide/validators/callback" class="blue dim link">callback validator</a> and <a href="/guide/validators/regexp" class="blue dim link">regexp validator</a>:</p>
+
+<SampleCode lang="javascript" code={`
+callback: function(input) {
+    // Get the input value
+    const value = input.value;
+    
+    // Ignore if the input is empty
+    if (value === '') {
+        return {
+            valid: true,
+        };
+    }
+
+    // Get the selected ISBN type
+    const isbnType = demoForm.querySelector('[name="isbnType"]').value;
+    const pattern = isbnType === 'isbn10' ? ISBN10_REGEXP : ISBN13_REGEXP;
+    const mesage = isbnType === 'isbn10'
+                ? 'The input is not a valid ISBN 10'
+                : 'The input is not a valid ISBN 13';
+
+    // Use the regexp validator
+    return FormValidation.validators.regexp().validate({
+        value: value,
+        options: {
+            regexp: pattern,
+            message: message,
+        },
+    });
+}
+`} />
+        <p class="lh-copy">Since the ISBN field depends on the ISBN type, we still need to revalidate it when the type is changed:</p>
+        <div class="mb4">
+<SampleCode lang="javascript" code={`
+demoForm.querySelector('[name="isbnType"]').addEventListener('change', function(e) {
+    fv.revalidateField('isbn');
+});
+`} />        
+        </div>
+        <Demo prefix="/guide/examples/setting-dynamic-regular-expression/callback" frameworks={['tachyons']} />
+    </section>
+
     <Examples examples={[
         'Setting dynamic regular expression',
         'Switching validators on the same field',
