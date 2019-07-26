@@ -36,7 +36,7 @@ export default `<!doctype html>
 
 <script-tag src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.35.3/es6-shim.min.js"></script-tag> 
 <script-tag src="/vendors/formvalidation/dist/js/FormValidation.min.js"></script-tag>
-<script-tag src="/vendors/formvalidation/dist/js/plugins/Bootstrap.min.js"></script-tag>
+<script-tag src="/vendors/formvalidation/dist/js/plugins/Bootstrap3.min.js"></script-tag>
 
 <script-tag>
 document.addEventListener('DOMContentLoaded', function(e) {
