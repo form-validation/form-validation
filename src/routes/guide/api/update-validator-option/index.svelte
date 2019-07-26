@@ -27,6 +27,7 @@ updateValidatorOption(
     </section>  
 
     <Examples examples={[
+        'Setting dynamic regular expression',
         'Showing custom message returned from server',
         'Updating validator options',
     ]} />

@@ -31,7 +31,10 @@ fv
     </section>
 
     <Examples examples={[
+        'Integrating with 3rd party libraries',
+        'Setting dynamic regular expression',
         'Terms and conditions agreement validation',
+        'Updating validator options',
         'Validating multiple inputs as one',
     ]} />
 

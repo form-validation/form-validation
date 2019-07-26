@@ -21,6 +21,7 @@
         'Multiple steps wizard',
         'Regenerating captcha when the form is invalid',
         'Requiring at least one field',
+        'Setting dynamic regular expression',
         'Switching validators on the same field',
         'Updating validator options',
         'Using HTML 5 inputs and attributes',

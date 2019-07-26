@@ -243,6 +243,7 @@
     <url><loc>https://formvalidation.io/guide/examples/multiple-steps-wizard</loc></url>
     <url><loc>https://formvalidation.io/guide/examples/regenerating-captcha-when-the-form-is-invalid</loc></url>
     <url><loc>https://formvalidation.io/guide/examples/requiring-at-least-one-field</loc></url>
+    <url><loc>https://formvalidation.io/guide/examples/setting-dynamic-regular-expression</loc></url>
     <url><loc>https://formvalidation.io/guide/examples/switching-validators-on-the-same-field</loc></url>
     <url><loc>https://formvalidation.io/guide/examples/updating-validator-options</loc></url>
     <url><loc>https://formvalidation.io/guide/examples/using-html-5-inputs-and-attributes</loc></url>

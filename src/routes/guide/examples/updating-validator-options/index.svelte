@@ -31,10 +31,16 @@ FormValidation.formValidation(yourForm, {
 
         <Demo prefix="/guide/examples/updating-validator-options" frameworks={['tachyons']} />
     </section>
+
+    <Examples examples={[
+        'Setting dynamic regular expression',
+        'Updating validator options',
+    ]} />
 </GuideLayout>
 
 <script>
 import Demo from '../../../../components/Demo.svelte';
+import Examples from '../../../../components/Examples.svelte';
 import GuideLayout from '../../../../components/GuideLayout.svelte';
 import SampleCode from '../../../../components/SampleCode.svelte';
 </script>

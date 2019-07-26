@@ -185,6 +185,7 @@ const res4 = callback().validate({
         'Integrating with TinyMCE',
         'Preventing user to have same value as the placeholder',
         'Regenerating captcha when the form is invalid',
+        'Setting dynamic regular expression',
         'Showing all messages',
         'Showing dynamic message',
         'Terms and conditions agreement validation',
