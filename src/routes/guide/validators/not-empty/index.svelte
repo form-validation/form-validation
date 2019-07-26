@@ -101,7 +101,7 @@ const res3 = notEmpty().validate({
         message: 'The name is required',
     },
 });
-// res3.valid === false
+// res3.valid === true
 `} />
     </section>
 
