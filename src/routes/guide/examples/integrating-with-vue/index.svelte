@@ -208,6 +208,7 @@ module.exports = {
     <Examples examples={[
         'Bundling with Rollup',
         'Bundling with Webpack',
+        'Integrating with Inferno',
         'Integrating with Preact',
         'Integrating with React',
         'Integrating with Riot',

@@ -440,6 +440,12 @@ formValidation(formElement, {
     <div class="mw7 center">
         <ul class="list pa0 flex flex-wrap">
             <li class="w-20 pa3 tc">
+                <a href="/guide/examples/integrating-with-inferno" title="Integrate FormValidation with Inferno" class="link">
+                    <img alt="Vue" class="w3 h3 mb1" src="/branches/inferno.svg" />
+                    <div>Inferno</div>
+                </a>
+            </li>
+            <li class="w-20 pa3 tc">
                 <a href="/guide/examples/integrating-with-preact" title="Integrate FormValidation with Preact" class="link">
                     <img alt="Preact" class="w3 h3 mb1" src="/branches/preact.svg" />
                     <div>Preact</div>
