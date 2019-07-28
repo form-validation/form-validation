@@ -440,8 +440,14 @@ formValidation(formElement, {
     <div class="mw7 center">
         <ul class="list pa0 flex flex-wrap">
             <li class="w-20 pa3 tc">
+                <a href="/guide/examples/integrating-with-mithril" title="Integrate FormValidation with Mithril" class="link">
+                    <img alt="Mithril" class="w3 h3 mb1" src="/branches/mithril.svg" />
+                    <div>Mithril</div>
+                </a>
+            </li>
+            <li class="w-20 pa3 tc">
                 <a href="/guide/examples/integrating-with-inferno" title="Integrate FormValidation with Inferno" class="link">
-                    <img alt="Vue" class="w3 h3 mb1" src="/branches/inferno.svg" />
+                    <img alt="Inferno" class="w3 h3 mb1" src="/branches/inferno.svg" />
                     <div>Inferno</div>
                 </a>
             </li>
