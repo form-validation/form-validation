@@ -35,9 +35,12 @@
     <footer class="footer bt b--black-30 pv5">
         <Footer />
     </footer>
+
+    <DriftChatbox />   
 </div>
 
 <script>
 import Footer from './Footer.svelte';
 import Nav from './Nav.svelte';
+import DriftChatbox from './DriftChatbox.svelte';
 </script>
