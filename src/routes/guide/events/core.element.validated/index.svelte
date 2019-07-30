@@ -18,6 +18,7 @@
 
     <Examples examples={[
         'Hiding success class',
+        'Hiding success class and icon for optional field',
     ]} />
 
     <section class="mv5">

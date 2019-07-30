@@ -52,6 +52,7 @@
         'Changing success and error colors',
         'Hiding messages',
         'Hiding success class',
+        'Hiding success class and icon for optional field',
         'Showing all messages',
         'Showing custom message returned from server',
         'Showing dynamic message',

@@ -172,6 +172,7 @@ FormValidation.formValidation(
     <Examples examples={[
         'Changing success and error colors',
         'Hiding success class',
+        'Hiding success class and icon for optional field',
     ]} />
 </GuideLayout>
 
