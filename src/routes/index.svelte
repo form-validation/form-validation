@@ -458,6 +458,12 @@ formValidation(formElement, {
                 </a>
             </li>
             <li class="w-20 pa3 tc">
+                <a href="/guide/examples/integrating-with-redom" title="Integrate FormValidation with RE:DOM" class="link">
+                    <img alt="RE:DOM" class="w3 h3 mb1" src="/branches/redom.svg" />
+                    <div>RE:DOM</div>
+                </a>
+            </li>
+            <li class="w-20 pa3 tc">
                 <a href="/guide/examples/integrating-with-react" title="Integrate FormValidation with React" class="link">
                     <img alt="React" class="w3 h3 mb1" src="/branches/react.svg" />
                     <div>React</div>

@@ -157,6 +157,7 @@ var LoginForm = {
         'Integrating with Inferno',
         'Integrating with Mithril',
         'Integrating with Preact',
+        'Integrating with RE:DOM',
         'Integrating with React',
         'Integrating with Riot',
         'Integrating with Svelte',

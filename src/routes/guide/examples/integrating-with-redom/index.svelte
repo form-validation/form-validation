@@ -1,12 +1,12 @@
 <svelte:head>
-	<title>FormValidation • Integrating with Preact</title>
+	<title>FormValidation • Integrating with RE:DOM</title>
 </svelte:head>
 
 <GuideLayout>
-    <h1 class="tc lh-copy">Integrating with Preact</h1>
+    <h1 class="tc lh-copy">Integrating with RE:DOM</h1>
 
     <section class="mv5">
-        <p class="lh-copy">This page will help you integrate FormValidation with the <a href="https://preactjs.com" rel="noopener" target="_blank" class="blue dim link">Preact library</a>.</p>
+        <p class="lh-copy">This page will help you integrate FormValidation with the <a href="https://redom.js.org" rel="noopener" target="_blank" class="blue dim link">RE:DOM library</a>.</p>
         <p class="lh-copy">For the sake of simplicity, we are about to validate a simple login form with just two fields to input the username and password:</p>
 <SampleCode lang="html" code={`
 <form id="loginForm" method="POST">
@@ -31,6 +31,60 @@
     </div>
 </form>
 `} />
+
+        <p class="lh-copy">We can move the login form to a separate component:</p>
+<SampleCode lang="javascript" code={`
+// LoginForm.js
+impor { el } from redom;
+
+class LoginForm {
+    constructor() {
+        this.username = '';
+        this.password = '';
+
+        this.el = el(
+            'form',
+            { id: 'loginForm', method: 'POST' },
+            el(
+                'div', { className: 'form-group row'},
+                el('label', { className: 'col-sm-3 col-form-label' }, 'Username'),
+                el(
+                    'div',
+                    { className: 'col-sm-4' }, 
+                    el(
+                        'input',
+                        { className: 'form-control', type: 'text', name: 'username', oninput: (e) => this.username = e.target.value }
+                    )
+                )
+            ),
+            el(
+                'div', { className: 'form-group row'},
+                el('label', { className: 'col-sm-3 col-form-label' }, 'Password'),
+                el(
+                    'div',
+                    { className: 'col-sm-4' }, 
+                    el(
+                        'input',
+                        { className: 'form-control', type: 'password', name: 'password', oninput: (e) => this.password = e.target.value }
+                    )
+                )
+            ),
+            el(
+                'div', { className: 'form-group row'},
+                el(
+                    'div',
+                    { className: 'col-sm-9 offset-sm-3' },
+                    el(
+                        'button',
+                        { className: 'btn btn-primary', type: 'submit' },
+                        'Login'
+                    )
+                )
+            )
+        );
+    }
+}
+`} />
     </section>
 
     <section class="mv5">
@@ -44,20 +98,16 @@
 
     <section class="mv5">
         <Heading>Creating a FormValidation instance</Heading>
-        <p class="lh-copy">The best place to initialize a FormValidation instance is inside the component's <a href="https://preactjs.com/guide/api-reference#lifecycle-methods" rel="noopener" target="_blank" class="blue dim link">componentDidMount event</a>:</p>
+        <p class="lh-copy">The best place to initialize a FormValidation instance is inside the component's <a href="https://redom.js.org/documentation/#component-lifecycle" rel="noopener" target="_blank" class="blue dim link">onmount event</a>:</p>
 <SampleCode lang="javascript" code={`
-import { Component } from 'preact';
-
 import formValidation from 'formvalidation/dist/es6/core/Core';
 
-class LoginForm extends Component {
-    render() {
-        return (
-            // Render the form ...
-        );
+class LoginForm {
+    constructor() {
+        // Render the form ...
     }
 
-    componentDidMount() {
+    onmount() {
         // Create a FormValidation instance
         this.fv = formValidation(document.getElementById('loginForm'), {
             fields: {
@@ -102,8 +152,6 @@ class LoginForm extends Component {
         <Heading>Using the plugins</Heading>
         <p class="lh-copy">In order to use the <a href="/guide/plugins" class="blue dim link">plugins</a>, we need to import them:</p>
 <SampleCode lang="javascript" code={`
-import { Component } from 'preact';
-
 import formValidation from 'formvalidation/dist/es6/core/Core';
 
 // FormValidation plugins
@@ -112,8 +160,8 @@ import Trigger from 'formvalidation/dist/es6/plugins/Trigger';
 import Bootstrap from 'formvalidation/dist/es6/plugins/Bootstrap';
 import SubmitButton from 'formvalidation/dist/es6/plugins/SubmitButton';
 
-class LoginForm extends Component {
-    componentDidMount() {
+class LoginForm {
+    onmount() {
         this.fv = formValidation(document.getElementById('loginForm'), {
             fields: {
                 ...
@@ -156,16 +204,14 @@ import formValidation from 'formvalidation/dist/es6/core/Core';
         <p class="lh-copy">In the other cases, you have to use the <a href="/guide/api/register-validator" class="blue dim link">registerValidator() method</a> to let the library knows where it can find a <a href="/guide/validators#special-validators" class="blue dim link">special</a> or <a href="/guide/examples/creating-a-custom-validator" class="blue dim link">custom validator</a>:</p>
 
 <SampleCode lang="javascript" code={`
-import { Component } from 'preact';
-
 // Import an external validator
 import phone from 'formvalidation/dist/es6/validators/phone';
 
 // Or import your own validator
 import strongPassword from '/path/to/your/strongPassword';
 
-class LoginForm extends Component {
-    componentDidMount() {
+class LoginForm {
+    onmount() {
         this.fv = formValidation(document.getElementById('loginForm'), {
             fields: {
                 phoneNumber: {
@@ -191,12 +237,10 @@ class LoginForm extends Component {
 
     <section class="mv5">
         <Heading>Destroying FormValidation instance</Heading>
-        <p class="lh-copy">Preact component triggers the <a href="https://preactjs.com/guide/api-reference#lifecycle-methods" rel="noopener" target="_blank" class="blue dim link">componentWillUnmount event</a> when it's removed from page or not used anymore. It's the time to destroy our FormValidation instance by using the <a href="/guide/api/destroy" class="blue dim link">destroy() method</a>:</p>
+        <p class="lh-copy">RE:DOM component triggers the <a href="https://redom.js.org/documentation/#component-lifecycle" rel="noopener" target="_blank" class="blue dim link">onunmount event</a> when it's removed from page or not used anymore. It's the time to destroy our FormValidation instance by using the <a href="/guide/api/destroy" class="blue dim link">destroy() method</a>:</p>
 <SampleCode lang="javascript" code={`
-import { Component } from 'preact';
-
-class LoginForm extends Component {
-    componentWillUnmount() {
+class LoginForm {
+    onunmount() {
         if (this.fv) {
             this.fv.destroy();
         }
