@@ -26,6 +26,7 @@
         'Updating validator options',
         'Using HTML 5 inputs and attributes',
         'Validating checkbox list placed in multiple columns',
+        'Validating fields placed in table cells',
         'Validating multiple inputs as one',
     ]} />
 
