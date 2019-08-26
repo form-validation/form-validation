@@ -9,6 +9,7 @@
                 <li><a href="/guide/api" class="link">API</a></li>
                 <li><a href="/guide/events" class="link">Events</a></li>
                 <li><a href="/guide/examples" class="link">Examples</a></li>
+                <li><a href="/license" class="link dn">License</a></li>
             </ul>
         </div>
         <div class="w-40 pr3">
