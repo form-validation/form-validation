@@ -1,7 +1,7 @@
 <div class="mw8 center">
     <div class="flex">
         <div class="w-33 pr3">
-            <div class="f4 fw6 mv3">FormValidation</div>
+            <div class="f4 fw6 mv3 ttu">FormValidation</div>
             <ul class="list ma0 pa0 lh-copy">
                 <li><a href="/guide/getting-started" class="link">Getting Started</a></li>
                 <li><a href="/guide/validators" class="link">Validators</a></li>
@@ -13,7 +13,7 @@
             </ul>
         </div>
         <div class="w-33 pr3">
-            <div class="f4 fw6 mv3">Products</div>
+            <div class="f4 fw6 mv3 ttu">Other products</div>
             <ul class="list ma0 pa0 lh-copy">
                 <li><a href="https://blur.page" class="link" target="_blank" title="BlurPage ~ A browser extension to blur any element or paragraph on page">BlurPage</a></li>
                 <li><a href="https://csslayout.io" class="link" target="_blank" title="CSS Layout ~ A collection of popular layouts and patterns made with CSS">CSS Layout</a></li>
@@ -21,7 +21,7 @@
             </ul>
         </div>
         <div class="w-33">
-            <div class="f4 fw6 mv3">About</div>
+            <div class="f4 fw6 mv3 ttu">About</div>
             <div class="pb2 lh-copy">&copy; 2013 &mdash; 2019 Nguyen Huu Phuoc. All rights reserved.</div>
             <div class="pb2 lh-copy">This site is powered by <a href="https://svelte.dev" class="link" target="_blank">Svelte 3</a>.</div>
             <div class="flex items-center">
@@ -34,4 +34,7 @@
             </div>
         </div>
     </div>
+</div>
+<div class="fixed bottom-0 left-0 right-0 bg-light-blue f4 pa3 tc">
+    New open source product: <a href="https://csslayout.io" class="link" target="_blank">CSS Layout - A collection of popular layouts and patterns made with CSS</a>. Check it out! 🎉
 </div>

@@ -32,7 +32,7 @@
         </div>
     </main>
 
-    <footer class="footer bt b--black-30 pv5">
+    <footer class="footer bt b--black-30 pt5 pb6">
         <Footer />
     </footer>
 </div>

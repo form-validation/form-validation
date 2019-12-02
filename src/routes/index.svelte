@@ -1,17 +1,4 @@
 <style>
-.hero-bg {
-    transform: skewY(-10deg);
-    transform-origin: top left;
-}
-.headline:before {
-    background: #001B44;
-    border-radius: 9999px;
-    content: '';
-    display: block;
-    margin-bottom: 8px;
-    height: 8px;
-    width: 72px;
-}
 .logo-mini {
     background-color: #f22f21;
 }
@@ -27,20 +14,18 @@
 	<title>FormValidation • The best validation library for JavaScript</title>
 </svelte:head>
 
-<div class="absolute top-0 left-0 h-75 w-100 hero-bg bg-dark-blue"></div>
-
 <section class="w-100 vh-100">
     <Header />
 
-    <div class="mw9 center tc pt6 pb5 relative near-white">
+    <div class="mw9 center tc pt6 pb5 relative">
         <h1 class="f1 fw9 lh-copy ma0 lh-title f-headline-l">all new FormValidation</h1>
-        <h2 class="f2 mv5">best validation library for JavaScript. zero dependencies.</h2>
-        <div class="f3 mv5"><span class="bg-gold br-pill pa2 near-black">v{siteData.version}</span></div>
+        <h2 class="f2">best validation library for JavaScript. zero dependencies.</h2>
+        <div class="f3"><span class="bg-gold br-pill pa2 near-black">v{siteData.version}</span></div>
     </div>
 
     <div class="w-100 center mw7">
         <div class="relative">
-            <Tabs titles={["<span class='white'>Demo</span>", "<span class='white'>Code</span>"]}>
+            <Tabs titles={["Demo", "Code"]}>
                 <div class="relative bg-white"><Typed /></div>
                 <div class="dn">
 <SampleCode lang="html" code={sampleDemoCode} maxHeight="300px" />
@@ -609,7 +594,7 @@ formValidation(formElement, {
     </div>
 </section>
 
-<section class="bt b--black-30 pv5">
+<section class="bt b--black-30 pt5 pb6">
     <Footer />
 </section>
 
