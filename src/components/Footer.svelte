@@ -1,6 +1,6 @@
 <div class="mw8 center">
     <div class="flex">
-        <div class="w-30 pr3">
+        <div class="w-33 pr3">
             <div class="f4 fw6 mv3">FormValidation</div>
             <ul class="list ma0 pa0 lh-copy">
                 <li><a href="/guide/getting-started" class="link">Getting Started</a></li>
@@ -12,13 +12,15 @@
                 <li><a href="/license" class="link dn">License</a></li>
             </ul>
         </div>
-        <div class="w-40 pr3">
+        <div class="w-33 pr3">
             <div class="f4 fw6 mv3">Products</div>
             <ul class="list ma0 pa0 lh-copy">
-                <li>👉<a href="https://blur.page" class="link" target="_blank" title="BlurPage ~ A browser extension to blur any element or paragraph on page">BlurPage</a> ~ A browser extension to blur any element or paragraph on page</li>
+                <li><a href="https://blur.page" class="link" target="_blank" title="BlurPage ~ A browser extension to blur any element or paragraph on page">BlurPage</a></li>
+                <li><a href="https://csslayout.io" class="link" target="_blank" title="CSS Layout ~ A collection of popular layouts and patterns made with CSS">CSS Layout</a></li>
+                <li><a href="https://react-pdf-viewer.dev" class="link" target="_blank" title="React PDF Viewer ~ A React component to view PDF documents">React PDF Viewer</a></li>
             </ul>
         </div>
-        <div class="w-30">
+        <div class="w-33">
             <div class="f4 fw6 mv3">About</div>
             <div class="pb2 lh-copy">&copy; 2013 &mdash; 2019 Nguyen Huu Phuoc. All rights reserved.</div>
             <div class="pb2 lh-copy">This site is powered by <a href="https://svelte.dev" class="link" target="_blank">Svelte 3</a>.</div>
