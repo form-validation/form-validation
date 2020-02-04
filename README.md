@@ -2,9 +2,11 @@
 
 Source code of formvalidation.io
 
-## Deployment
+## Commands
+
+1. Running locally
 
 ```
-$ npm run predeploy
-$ npm run deploy
+$ npm install
+$ npm run dev
 ```

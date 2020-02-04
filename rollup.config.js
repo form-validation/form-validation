@@ -1,7 +1,7 @@
-import alias from 'rollup-plugin-alias';
-import resolve from 'rollup-plugin-node-resolve';
-import replace from 'rollup-plugin-replace';
-import commonjs from 'rollup-plugin-commonjs';
+import alias from '@rollup/plugin-alias';
+import resolve from '@rollup/plugin-node-resolve';
+import replace from '@rollup/plugin-replace';
+import commonjs from '@rollup/plugin-commonjs';
 import svelte from 'rollup-plugin-svelte';
 import { terser } from 'rollup-plugin-terser';
 import config from 'sapper/config/rollup.js';
@@ -18,8 +18,10 @@ export default {
 		output: config.client.output(),
 		plugins: [
 			alias({
-				formvalidation: path.resolve(__dirname, 'vendors/formvalidation'),
-				highlightjs: path.resolve(__dirname, 'vendors/highlightjs'),
+                entries: {
+                    formvalidation: path.resolve(__dirname, 'vendors/formvalidation'),
+				    highlightjs: path.resolve(__dirname, 'vendors/highlightjs'),
+                },
 			}),
 			replace({
 				'process.browser': true,
@@ -30,7 +32,10 @@ export default {
 				hydratable: true,
 				emitCss: true
 			}),
-			resolve(),
+			resolve({
+                browser: true,
+				dedupe: ['svelte']
+            }),
 			commonjs(),
 
 			!dev && terser({
@@ -44,8 +49,10 @@ export default {
 		output: config.server.output(),
 		plugins: [
 			alias({
-				formvalidation: path.resolve(__dirname, 'vendors/formvalidation'),
-				highlightjs: path.resolve(__dirname, 'vendors/highlightjs'),
+                entries: {
+                    formvalidation: path.resolve(__dirname, 'vendors/formvalidation'),
+                    highlightjs: path.resolve(__dirname, 'vendors/highlightjs'),
+                }
 			}),
 			replace({
 				'process.browser': false,
@@ -55,7 +62,9 @@ export default {
 				generate: 'ssr',
 				dev
 			}),
-			resolve(),
+			resolve({
+                dedupe: ['svelte']
+            }),
 			commonjs()
 		],
 		external: Object.keys(pkg.dependencies).concat(
