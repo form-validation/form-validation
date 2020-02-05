@@ -16,6 +16,8 @@ $ npm install
 $ npm run dev
 ```
 
+Then visit http://localhost:3000.
+
 2. Exporting to static files
 
 ```console
