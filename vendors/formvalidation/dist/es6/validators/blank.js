@@ -1,7 +1,1 @@
-export default function blank() {
-    return {
-        validate(input) {
-            return { valid: true };
-        },
-    };
-}
+export default function t(){return{validate(t){return{valid:true}}}}

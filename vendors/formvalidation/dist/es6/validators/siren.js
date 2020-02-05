@@ -1,10 +1,1 @@
-import luhn from '../algorithms/luhn';
-export default function siren() {
-    return {
-        validate(input) {
-            return {
-                valid: (input.value === '') || (/^\d{9}$/.test(input.value) && luhn(input.value)),
-            };
-        },
-    };
-}
+import t from"../algorithms/luhn";export default function e(){return{validate(e){return{valid:e.value===""||/^\d{9}$/.test(e.value)&&t(e.value)}}}}

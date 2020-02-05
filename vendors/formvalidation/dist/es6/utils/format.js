@@ -1,8 +1,1 @@
-export default function format(message, parameters) {
-    const params = Array.isArray(parameters) ? parameters : [parameters];
-    let output = message;
-    params.forEach((p) => {
-        output = output.replace('%s', p);
-    });
-    return output;
-}
+export default function r(r,e){const t=Array.isArray(e)?e:[e];let a=r;t.forEach(r=>{a=a.replace("%s",r)});return a}

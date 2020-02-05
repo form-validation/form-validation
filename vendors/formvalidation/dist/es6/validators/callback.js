@@ -1,11 +1,1 @@
-import call from '../utils/call';
-export default function callback() {
-    return {
-        validate(input) {
-            const response = call(input.options.callback, [input]);
-            return ('boolean' === typeof response)
-                ? { valid: response }
-                : response;
-        },
-    };
-}
+import t from"../utils/call";export default function o(){return{validate(o){const l=t(o.options.callback,[o]);return"boolean"===typeof l?{valid:l}:l}}}

@@ -1,12 +1,1 @@
-export default function identical() {
-    return {
-        validate(input) {
-            const compareWith = ('function' === typeof input.options.compare)
-                ? input.options.compare.call(this)
-                : input.options.compare;
-            return {
-                valid: (compareWith === '' || input.value === compareWith),
-            };
-        },
-    };
-}
+export default function o(){return{validate(o){const t="function"===typeof o.options.compare?o.options.compare.call(this):o.options.compare;return{valid:t===""||o.value===t}}}}

@@ -1,14 +1,1 @@
-import verhoeff from '../../algorithms/verhoeff';
-export default function idId(value) {
-    if (!/^[2-9]\d{11}$/.test(value)) {
-        return {
-            meta: {},
-            valid: false,
-        };
-    }
-    const converted = value.split("").map((item) => parseInt(item, 10));
-    return {
-        meta: {},
-        valid: verhoeff(converted),
-    };
-}
+import t from"../../algorithms/verhoeff";export default function e(e){if(!/^[2-9]\d{11}$/.test(e)){return{meta:{},valid:false}}const r=e.split("").map(t=>parseInt(t,10));return{meta:{},valid:t(r)}}

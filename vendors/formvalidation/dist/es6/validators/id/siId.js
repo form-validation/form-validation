@@ -1,7 +1,1 @@
-import jmbg from './jmbg';
-export default function siId(value) {
-    return {
-        meta: {},
-        valid: jmbg(value, 'SI'),
-    };
-}
+import t from"./jmbg";export default function r(r){return{meta:{},valid:t(r,"SI")}}

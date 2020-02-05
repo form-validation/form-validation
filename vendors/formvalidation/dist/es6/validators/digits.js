@@ -1,7 +1,1 @@
-export default function digits() {
-    return {
-        validate(input) {
-            return { valid: (input.value === '') || /^\d+$/.test(input.value) };
-        },
-    };
-}
+export default function e(){return{validate(e){return{valid:e.value===""||/^\d+$/.test(e.value)}}}}

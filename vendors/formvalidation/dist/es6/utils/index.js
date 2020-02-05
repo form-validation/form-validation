@@ -1,16 +1,1 @@
-import call from './call';
-import classSet from './classSet';
-import closest from './closest';
-import fetch from './fetch';
-import format from './format';
-import hasClass from './hasClass';
-import isValidDate from './isValidDate';
-export default {
-    call,
-    classSet,
-    closest,
-    fetch,
-    format,
-    hasClass,
-    isValidDate,
-};
+import o from"./call";import t from"./classSet";import r from"./closest";import m from"./fetch";import s from"./format";import a from"./hasClass";import l from"./isValidDate";export default{call:o,classSet:t,closest:r,fetch:m,format:s,hasClass:a,isValidDate:l};
