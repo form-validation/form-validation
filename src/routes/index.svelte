@@ -14,7 +14,7 @@
 	<title>FormValidation • The best validation library for JavaScript</title>
 </svelte:head>
 
-<section class="w-100 vh-100">
+<section class="w-100">
     <Header />
 
     <div class="mw9 center tc pt6 pb5 relative">

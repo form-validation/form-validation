@@ -1,6 +1,1 @@
-export default function smId(value) {
-    return {
-        meta: {},
-        valid: /^\d{5}$/.test(value),
-    };
-}
+export default function t(t){return{meta:{},valid:/^\d{5}$/.test(t)}}

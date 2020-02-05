@@ -1,10 +1,1 @@
-import luhn from './luhn';
-import mod11And10 from './mod11And10';
-import mod37And36 from './mod37And36';
-import verhoeff from './verhoeff';
-export default {
-    luhn,
-    mod11And10,
-    mod37And36,
-    verhoeff,
-};
+import o from"./luhn";import m from"./mod11And10";import r from"./mod37And36";import d from"./verhoeff";export default{luhn:o,mod11And10:m,mod37And36:r,verhoeff:d};

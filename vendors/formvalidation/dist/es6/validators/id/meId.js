@@ -1,7 +1,1 @@
-import jmbg from './jmbg';
-export default function meId(value) {
-    return {
-        meta: {},
-        valid: jmbg(value, 'ME'),
-    };
-}
+import t from"./jmbg";export default function r(r){return{meta:{},valid:t(r,"ME")}}

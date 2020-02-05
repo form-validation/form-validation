@@ -1,4 +1,1 @@
-import getFieldValue from './getFieldValue';
-export default {
-    getFieldValue,
-};
+import e from"./getFieldValue";export default{getFieldValue:e};

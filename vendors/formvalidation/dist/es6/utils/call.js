@@ -1,18 +1,1 @@
-export default function call(functionName, args) {
-    if ('function' === typeof functionName) {
-        return functionName.apply(this, args);
-    }
-    else if ('string' === typeof functionName) {
-        let name = functionName;
-        if ('()' === name.substring(name.length - 2)) {
-            name = name.substring(0, name.length - 2);
-        }
-        const ns = name.split('.');
-        const func = ns.pop();
-        let context = window;
-        for (const t of ns) {
-            context = context[t];
-        }
-        return (typeof context[func] === 'undefined') ? null : context[func].apply(this, args);
-    }
-}
+export default function t(t,n){if("function"===typeof t){return t.apply(this,n)}else if("string"===typeof t){let e=t;if("()"===e.substring(e.length-2)){e=e.substring(0,e.length-2)}const i=e.split(".");const o=i.pop();let f=window;for(const t of i){f=f[t]}return typeof f[o]==="undefined"?null:f[o].apply(this,n)}}

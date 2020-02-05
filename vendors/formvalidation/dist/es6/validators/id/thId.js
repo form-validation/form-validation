@@ -1,16 +1,1 @@
-export default function thId(value) {
-    if (value.length !== 13) {
-        return {
-            meta: {},
-            valid: false,
-        };
-    }
-    let sum = 0;
-    for (let i = 0; i < 12; i++) {
-        sum += parseInt(value.charAt(i), 10) * (13 - i);
-    }
-    return {
-        meta: {},
-        valid: (11 - sum % 11) % 10 === parseInt(value.charAt(12), 10),
-    };
-}
+export default function t(t){if(t.length!==13){return{meta:{},valid:false}}let e=0;for(let a=0;a<12;a++){e+=parseInt(t.charAt(a),10)*(13-a)}return{meta:{},valid:(11-e%11)%10===parseInt(t.charAt(12),10)}}

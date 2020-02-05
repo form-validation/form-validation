@@ -1,5 +1,1 @@
-export default function hasClass(element, clazz) {
-    return element.classList
-        ? element.classList.contains(clazz)
-        : new RegExp(`(^| )${clazz}( |$)`, 'gi').test(element.className);
-}
+export default function s(s,t){return s.classList?s.classList.contains(t):new RegExp(`(^| )${t}( |$)`,"gi").test(s.className)}

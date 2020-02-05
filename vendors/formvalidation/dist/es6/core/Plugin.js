@@ -1,11 +1,1 @@
-export default class Plugin {
-    constructor(opts) {
-        this.opts = opts;
-    }
-    setCore(core) {
-        this.core = core;
-        return this;
-    }
-    install() { }
-    uninstall() { }
-}
+export default class t{constructor(t){this.opts=t}setCore(t){this.core=t;return this}install(){}uninstall(){}}

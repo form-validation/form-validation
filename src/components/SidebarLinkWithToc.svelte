@@ -15,7 +15,6 @@ let enabled = false;
 // Props
 let content;
 let url = '';
-let label = '';
 let title = '';
 let selector = 'section h2';
 let isActive = (p, url) => (p === url);
@@ -28,7 +27,6 @@ onMount(() => {
 export {
     content,
     url,
-    label,
     title,
     selector,
     isActive,

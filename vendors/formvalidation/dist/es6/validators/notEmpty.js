@@ -1,7 +1,1 @@
-export default function notEmpty() {
-    return {
-        validate(input) {
-            return { valid: input.value !== '' };
-        },
-    };
-}
+export default function e(){return{validate(e){return{valid:e.value!==""}}}}

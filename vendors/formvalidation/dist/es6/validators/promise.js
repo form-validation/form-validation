@@ -1,8 +1,1 @@
-import call from '../utils/call';
-export default function promise() {
-    return {
-        validate(input) {
-            return call(input.options.promise, [input]);
-        },
-    };
-}
+import t from"../utils/call";export default function r(){return{validate(r){return t(r.options.promise,[r])}}}
