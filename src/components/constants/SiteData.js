@@ -1,5 +1,5 @@
 export default {
-    version: '1.5.0',
-    releasedDate: '10th July 2019',
+    version: '1.6.0',
+    releasedDate: '06th February 2020',
     email: 'me@phuoc.ng',
 }
