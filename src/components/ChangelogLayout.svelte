@@ -24,6 +24,7 @@ let path = '';
 let content;
 
 const Versions = {
+    '1.6.0': '06 Fab 2020',
     '1.5.0': '10 Jul 2019',
     '1.4.0': '20 Apr 2019',
     '1.3.0': '10 Aug 2018',
