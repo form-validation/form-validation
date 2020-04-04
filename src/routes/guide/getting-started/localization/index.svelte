@@ -176,7 +176,7 @@ const _locales = [
     { name: 'Swedish', file: 'sv_SE.js', author: 'ulsa' },
     { name: 'Taiwanese', file: 'zh_TW.js', author: 'tureki' },
     { name: 'Thai', file: 'th_TH.js', author: 'figgaro' },
-    { name: 'Turkish', file: 'sr_RS.js', author: 'CeRBeR666' },
+    { name: 'Turkish', file: 'tr_TR.js', author: 'CeRBeR666' },
     { name: 'Ukrainian', file: 'ua_UA.js', author: 'oleg-voloshyn' },
     { name: 'Vietnamese', file: 'vi_VN.js', author: 'nghuuphuoc' },
 ];
