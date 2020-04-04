@@ -61,9 +61,9 @@
         </div>
         <div class="w-33 ph2 mb3">
             <div class="pr3">
-                <a class="link" href="https://htmldom.dev" target="_blank" title="HTML DOM - common tasks of managing HTML DOM with native API">
+                <a class="link" href="https://htmldom.dev" target="_blank" title="HTML DOM - common tasks of managing HTML DOM with vanilla JavaScript">
                     <div class="f5 fw6 mv2 black ttu">HTML DOM</div>
-                    <div>common tasks of managing HTML DOM with native API</div>
+                    <div>common tasks of managing HTML DOM with vanilla JavaScript</div>
                 </a>
             </div>
         </div>
