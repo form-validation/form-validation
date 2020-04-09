@@ -49,8 +49,8 @@
     <div class="mw8 center flex">
         <div class="w-70">
             <ul class="list pa0 lh-copy">
-                <li>👍 Completely rewrite in ES6.</li>
-                <li>👍 Type safety. Entire code are made in TypeScript.</li>
+                <li>👍 Completely rewritten in ES6.</li>
+                <li>👍 Type safety. Entire codebase is written in TypeScript.</li>
                 <li>👍 High code quality via popular analysis tools such as TSLint.</li>
                 <li>👍 <span class="bg-gold pa1 br2 b">Zero dependencies</span>. No jQuery.</li>
             </ul>
