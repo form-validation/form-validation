@@ -92,7 +92,7 @@ onMount(() => {
                 validating: 'fa fa-refresh'
             }),
             demoFrame: new DemoFrame({
-                sender: '/guide/validators/callback/basic/tachyons',
+                sender: '/guide/validators/choice/basic/tachyons',
                 sampleCode: sampleCode,
             }),
         },
