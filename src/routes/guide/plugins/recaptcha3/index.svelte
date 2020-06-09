@@ -193,6 +193,39 @@ header('Content-Type: application/json');
 echo json_encode($return);
 `} />
     </section>
+
+    <section class="mv5">
+        <Heading>Using with the Excluded plugin</Heading>
+        <p class="lh-copy">
+            If you use the Recaptcha3 plugin with the <a href="/guide/plugins/excluded" class="blue dim link">Excluded plugin</a>, you have to
+            include the hidden Recaptcha3 field that has name of <code>___g-recaptcha-token___</code>.
+        </p>
+        <p class="lh-copy">
+            You can access the name via <code>FormValidation.plugins.Recaptcha3.CAPTCHA_FIELD</code> as well.
+        </p>
+        <p class="lh-copy">
+            In the sample code below, we use the <code>excluded</code> option provided by the Excluded plugin to check if the field
+            is the Recaptcha3 token field or not.
+        </p>
+<SampleCode lang="javascript" code={`
+plugins: {
+    excluded: new FormValidation.plugins.Excluded({
+        excluded: function(field, ele, eles) {
+            // Don't excluded the reCaptcha3 field
+            if (field === FormValidation.plugins.Recaptcha3.CAPTCHA_FIELD) {
+                return false;
+            }
+            // You can add more logics here to exclude or include other fields
+            return false;
+        }
+    }),
+    recaptcha3: new FormValidation.plugins.Recaptcha3({
+        ...
+    }),
+    ...
+}
+`} />
+    </section>
     
     <section class="mv5">
         <Heading>Changelog</Heading>
