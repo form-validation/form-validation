@@ -93,6 +93,18 @@ document.addEventListener('DOMContentLoaded', function(e) {
                 <td class="pv2 ph3 lh-copy">The invalid message that will be shown in case the captcha is not valid</td>
             </tr>
             <tr class="striped--light-gray">
+                <td class="pv2 ph3"><code>minimumScore</code></td>
+                <td class="pv2 ph3">Number</td>
+                <td class="pv2 ph3 lh-copy">
+                    <p class="lh-copy">
+                        A minimum score, between 0 and 1. By default, it's set as 0. The backend verification will be treated as invalid if the returned score doesn't exceed this option.
+                    </p>
+                    <p class="lh-copy">
+                        For more information, see this <a href="https://developers.google.com/recaptcha/docs/v3#interpreting_the_score" class="blue dim link">page</a>.
+                    </p>
+                </td>
+            </tr>
+            <tr class="striped--light-gray">
                 <td class="pv2 ph3"><code>siteKey</code> <sup>*</sup></td>
                 <td class="pv2 ph3">String</td>
                 <td class="pv2 ph3">The site key provided by Google</td>
@@ -130,18 +142,21 @@ FormValidation.formValidation(
         <p class="lh-copy">In order to inform user in case the captcha is valid or invalid, the back-end has to return a JSON encoded version of</p>
 <SampleCode lang="javascript" code={`
 {
+    "score": ...,
     "success": "true"
 }
 // or
 {
+    "score": ...,
     "success": "false"
 }
 `} />
+        <p class="lh-copy">The <code>score</code> and <code>success</code> can be taken from the response of Google reCAPTCHA v3 API.</p>
         <p class="lh-copy">The following code demonstrates how to do it in PHP, but you can do it with your favorite language.</p>
 <SampleCode lang="php" code={`
 &lt;?php
 // Replace it with your reCAPTCHA secret key
-$secretKey = '...';
+$secretKey = 'YOUR_SECRET_KEY_HERE';
 
 // See https://developers.google.com/recaptcha/docs/verify#api-request
 $fields = array(
@@ -165,16 +180,24 @@ curl_setopt($ch,CURLOPT_RETURNTRANSFER, true);
 
 $result = curl_exec($ch);
 
+// IMPORTANT: $return has to include the "score" property
+// In this case, the "score" is included from Google reCaptcha service
+
+$return = json_decode($result, true);
+// You can customize the error message based on the score ($return["score"]) such as
+// $return["message"] = "The captcha is NOT valid";
+
 curl_close($ch);
 
 header('Content-Type: application/json');
-echo $result;
+echo json_encode($return);
 `} />
     </section>
     
     <section class="mv5">
         <Heading>Changelog</Heading>
         <ul class="pa0 ma0 ml3 lh-copy">
+            <li>v1.6.0: Add new <code>minimumScore</code> option</li>
             <li>v1.5.0: First release. It means that the Recaptcha3 plugin requires FormValidation v1.5.0 or newer.</li>
         </ul>
     </section>
