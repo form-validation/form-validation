@@ -64,6 +64,24 @@ icon: new FormValidation.plugins.Icon({
 }),
 `} />
     </section>
+
+    <section class="mv5">
+        <Heading>Important note</Heading>
+        <p class="lh-copy">You have to register the MandatoryIcon plugin before the <a href="/guide/plugins/icon" class="blue dim link">Icon plugin</a>.</p>
+<SampleCode lang="javascript" code={`
+// Does NOT work
+plugins: {
+    icon: new FormValidation.plugins.Icon(...),
+    mandatoryIcon: new FormValidation.plugins.MandatoryIcon(...),
+},
+
+// Work
+plugins: {
+    mandatoryIcon: new FormValidation.plugins.MandatoryIcon(...),
+    icon: new FormValidation.plugins.Icon(...),
+},
+`} />
+    </section>
     
     <section class="mv5">
         <Heading>Basic example</Heading>
