@@ -121,6 +121,13 @@ const res2 = phone().validate({
 `} />
     </section>
 
+    <section class="mv5">
+        <Heading>Changelog</Heading>
+        <ul class="pa0 ma0 ml3 lh-copy">
+            <li>v1.6.0: Fixed an issue that the <code>country</code> option isn't passed to the placeholder message</li>
+        </ul>
+    </section>
+
     <RelatedValidators validators={['regexp', 'zipCode']} />
 
     <section class="mv5">

@@ -114,6 +114,13 @@ const res2 = stringLength().validate({
 `} />
     </section>
 
+    <section class="mv5">
+        <Heading>Changelog</Heading>
+        <ul class="pa0 ma0 ml3 lh-copy">
+            <li>v1.6.0: Fixed an issue that the <code>max</code> and <code>min</code> options aren't passed to the placeholder message</li>
+        </ul>
+    </section>
+
     <RelatedValidators validators={['notEmpty']} />
 
     <section class="mv5">
