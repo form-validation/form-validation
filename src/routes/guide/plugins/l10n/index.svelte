@@ -184,6 +184,35 @@ document.addEventListener('DOMContentLoaded', function(e) {
     <section class="mv5">
         <Heading>Changelog</Heading>
         <ul class="pa0 ma0 ml3 lh-copy">
+            <li>
+                <p class="lh-copy">v1.6.0: Supported localized error message in custom validator</p>
+<SampleCode lang="javascript" code={`
+const strongPassword = function() {
+    return {
+        validate: function(input) {
+            const value = input.value;
+            if (value === '') {
+                return {
+                    valid: true,
+                };
+            }
+
+            if (value.length < 8) {
+                return {
+                    valid: false,
+                    message: {
+                        en_US: 'The password must have at least 8 characters',
+                        vi_VN: 'Mật khẩu phải có ít nhất 8 ký tự',
+                    },
+                };
+            }
+
+            ...
+        }
+    };
+};
+`} />
+            </li>
             <li>v1.0.0: First release</li>
         </ul>
     </section>
