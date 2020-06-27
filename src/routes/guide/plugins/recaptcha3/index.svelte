@@ -230,7 +230,7 @@ plugins: {
     <section class="mv5">
         <Heading>Changelog</Heading>
         <ul class="pa0 ma0 ml3 lh-copy">
-            <li>v1.6.0: Add new <code>minimumScore</code> option</li>
+            <li>v1.6.0: Add new <code>minimumScore</code> option. The plugin can return an error message from the backend verification.</li>
             <li>v1.5.0: First release. It means that the Recaptcha3 plugin requires FormValidation v1.5.0 or newer.</li>
         </ul>
     </section>
