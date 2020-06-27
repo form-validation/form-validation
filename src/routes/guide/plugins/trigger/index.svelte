@@ -138,6 +138,7 @@ delay: {
     <section class="mv5">
         <Heading>Changelog</Heading>
         <ul class="pa0 ma0 ml3 lh-copy">
+            <li>v1.6.0: Added a new filter named <code>plugins-trigger-should-validate</code>. We can use it to determine the field is validated automatically when the value is changed or not.</li>
             <li>v1.1.0: Added new <code>delay</code> option</li>
             <li>v1.0.0: First release</li>
         </ul>

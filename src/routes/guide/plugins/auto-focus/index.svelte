@@ -45,6 +45,30 @@ document.addEventListener('DOMContentLoaded', function(e) {
 `} />
         <p class="lh-copy">The sample code above assumes that the FormValidation files are placed inside the <code>vendors</code> directory. You might need to change the path depending on where you place them on the server.</p>
     </section>
+
+    <section class="mv5">
+        <Heading>Options</Heading>
+        <table class="collapse ba br2 b--black-10 pv2 ph3 w-100">
+            <tr class="striped--light-gray">
+                <th class="pv2 ph3 tl f6 fw6 ttu">Option</th>
+                <th class="pv2 ph3 tl f6 fw6 ttu">Type</th>
+                <th class="pv2 ph3 tl f6 fw6 ttu">Description</th>
+            </tr>
+            <tr class="striped--light-gray">
+                <td class="pv2 ph3"><code>onPrefocus</code></td>
+                <td class="pv2 ph3">Function</td>
+                <td class="pv2 ph3">
+                    <p class="lh-copy">Invoked before the first invalid element get focused. It's a function that accepts one parameter:</p>
+<SampleCode lang="javascript" code={`
+onPrefocus: function(e) {
+    // e.field: The field element name
+    // e.firstElement: The first invalid element
+}
+`} />
+                </td>
+            </tr>
+        </table>
+    </section>
     
     <section class="mv5">
         <Heading>Basic example</Heading>
@@ -56,6 +80,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
     <section class="mv5">
         <Heading>Changelog</Heading>
         <ul class="pa0 ma0 ml3 lh-copy">
+            <li>v1.6.0: The <code>onPrefocus</code> option allows to access the file name via the <code>field</code> property</li>
             <li>v1.5.0: Fixed an issue that the AutoFocus plugin doesn't work. From v1.5.0, it becomes an external plugin</li>
             <li>v1.3.0: Added <code>onPrefocus</code> option that is useful when you want to activate the tab containing the first invalid field</li>
             <li>v1.0.0: First release</li>

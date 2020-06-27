@@ -91,6 +91,7 @@ plugins: {
     <section class="mv5">
         <Heading>Changelog</Heading>
         <ul class="pa0 ma0 ml3 lh-copy">
+            <li>v1.6.0: Fixed an issue that the plugin doesn't work with textarea element</li>
             <li>v1.0.0: First release</li>
         </ul>
     </section>

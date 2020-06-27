@@ -51,6 +51,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
     <section class="mv5">
         <Heading>Changelog</Heading>
         <ul class="pa0 ma0 ml3 lh-copy">
+            <li>v1.6.0: Fixed an issue that the plugin doesn't work with ignored fields. The <code>getStatues()</code> method is renamed to <code>getStatuses()</code>.</li>
             <li>v1.5.0: First release. It means that the FieldStatus plugin requires FormValidation v1.5.0 or newer.</li>
         </ul>
     </section>

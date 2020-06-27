@@ -62,7 +62,20 @@ const strongPassword = function() {
             <li>The <a href="/guide/plugins/field-status" class="blue dim link">FieldStatus plugin</a> doesn't work with ignored fields</li>
             <li>Fix an issue in the <a href="/guide/plugins/tooltip" class="blue dim link">Tooltip plugin</a> that causes the tooltip position isn't calculated correcly</li>
             <li>The <a href="/guide/plugins/submit-button" class="blue dim link">SubmitButton plugin</a> doesn't send the clicked button to server</li>
-            <li>Fix the placeholder message in validators: between, greaterThan, iban, id, lessThan, phone, step, stringLength, uuid, vat, zipCode</li>
+            <li>
+                Fix the placeholder message in validators: 
+                <a href="/guide/validators/between" class="blue dim link">between</a>, 
+                <a href="/guide/validators/greater-than" class="blue dim link">greaterThan</a>, 
+                <a href="/guide/validators/iban" class="blue dim link">iban</a>,
+                <a href="/guide/validators/id" class="blue dim link">id</a>,
+                <a href="/guide/validators/less-than" class="blue dim link">lessThan</a>,
+                <a href="/guide/validators/phone" class="blue dim link">phone</a>,
+                <a href="/guide/validators/step" class="blue dim link">step</a>,
+                <a href="/guide/validators/string-length" class="blue dim link">stringLength</a>,
+                <a href="/guide/validators/uuid" class="blue dim link">uuid</a>,
+                <a href="/guide/validators/vat" class="blue dim link">vat</a>,
+                <a href="/guide/validators/zip-code" class="blue dim link">zipCode</a>
+            </li>
         </ul>
     </section>
 

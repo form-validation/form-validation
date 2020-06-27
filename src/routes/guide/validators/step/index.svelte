@@ -62,6 +62,13 @@ result is an object of
     </section>
 
     <section class="mv5">
+        <Heading>Changelog</Heading>
+        <ul class="pa0 ma0 ml3 lh-copy">
+            <li>v1.6.0: Fixed an issue that the <code>step</code> option isn't passed to the placeholder message</li>
+        </ul>
+    </section>
+
+    <section class="mv5">
         <div class="flex">
             <PrevButton target="/guide/validators/siret">siret validator</PrevButton>
             <NextButton target="/guide/validators/string-case">stringCase validator</NextButton>
