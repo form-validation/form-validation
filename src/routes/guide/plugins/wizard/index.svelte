@@ -164,6 +164,44 @@ FormValidation
     </section>
 
     <section class="mv5">
+        <Heading>APIs</Heading>
+        <p class="lh-copy">The plugin provides the following methods:</p>
+        <table class="collapse ba br2 b--black-10 pv2 ph3 w-100 mb4">
+            <tr class="striped--light-gray">
+                <th class="pv2 ph3 tl f6 fw6 ttu">Method</th>
+                <th class="pv2 ph3 tl f6 fw6 ttu">Description</th>
+            </tr>
+            <tr class="striped--light-gray">
+                <td class="pv2 ph3"><code>goToNextStep()</code></td>
+                <td class="pv2 ph3 lh-copy">
+                    Jump to the next step. It's useful when users want to go to the next step automatically when a checkbox/radio button is chosen
+                </td>
+            </tr>
+            <tr class="striped--light-gray">
+                <td class="pv2 ph3"><code>goToPrevStep()</code></td>
+                <td class="pv2 ph3 lh-copy">Jump to the previous step</td>
+            </tr>
+        </table>
+<SampleCode lang="javascript" code={`
+// Create a FormValidation instance
+const fv = FormValidation.formValidation(form, {
+    fields: {
+        ...
+    },
+    plugins: {
+        wizard: new FormValidation.plugins.Wizard(),
+    },
+});
+
+// Get the Wizard plugin instance
+const wizardPlugin = fv.getPlugin('wizard');
+
+// Call the API
+wizardPlugin.goToNextStep();
+`} /> 
+    </section>
+
+    <section class="mv5">
         <Heading>Submitting form</Heading>
         <p class="lh-copy">You cannot use the <a href="/guide/plugins/default-submit" class="blue dim link">DefaultSubmit</a> plugin to submit the form when all steps are valid. Instead, you can use the <code>onValid</code> option (or listen the <code>plugins.wizard.valid</code> event):</p>
 <SampleCode lang="javascript" code={`
@@ -191,7 +229,8 @@ FormValidation.formValidation(form, {
     <section class="mv5">
         <Heading>Changelog</Heading>
         <ul class="pa0 ma0 ml3 lh-copy">
-            <li>v1.5.0: Fixed a bug that the Wizard plugin doesn't work on IE 11.</li>
+            <li>v1.6.0: Added new APIs to go to the previous or next steps</li>
+            <li>v1.5.0: Fixed a bug that the Wizard plugin doesn't work on IE 11</li>
             <li>v1.3.0: First release. It means that the Wizard plugin requires FormValidation v1.3.0 or newer.</li>
         </ul>
     </section>
