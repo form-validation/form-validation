@@ -54,7 +54,7 @@
         </div>
 
         <p class="tc">
-            All transactions are processed on <a href="https://sellfy.com/nghuuphuoc/" class="blue dim link">Sellfy</a>, <a href="https://gumroad.com/formvalidation/" class="blue dim link">GumRoad</a> through an <strong>encrypted HTTP Secure</strong> connection
+            All transactions are processed on <a href="https://sellfy.com/phuocng/" class="blue dim link">Sellfy</a>, <a href="https://gumroad.com/phuocng/" class="blue dim link">GumRoad</a> through an <strong>encrypted HTTP Secure</strong> connection
         </p>
     </section>
 
