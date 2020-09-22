@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
         <p class="lh-copy">We need to use the <code>rowSelector</code> option to help the plugin determine the field containers as following:</p>
         <div class="mb4">
             <SampleCode lang="javascript" code={`
-semantic: new FormValidation.plugins.Semantic({
+tachyons: new FormValidation.plugins.Tachyons({
     rowSelector: function(field, ele) {
         // field is the field name
         // ele is the field element
