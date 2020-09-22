@@ -29,9 +29,25 @@
     <div class="flex flex-wrap nl2 nr2">
         <div class="w-33 ph2 mb3">
             <div class="pr3">
+                <a class="link" href="https://1loc.dev" target="_blank" title="1 LOC - favorite JavaScript utilities in single line of code">
+                    <div class="f5 fw6 mv2 black ttu">1 LOC</div>
+                    <div>favorite JavaScript utilities in single line of code</div>
+                </a>
+            </div>
+        </div>
+        <div class="w-33 ph2 mb3">
+            <div class="pr3">
                 <a class="link" href="https://blur.page" target="_blank" title="BlurPage - a browser extension to hide sensitive element on page">
                     <div class="f5 fw6 mv2 black ttu">Blur Page</div>
                     <div>a browser extension to hide sensitive element on page</div>
+                </a>
+            </div>
+        </div>
+        <div class="w-33 ph2 mb3">
+            <div class="pr3">
+                <a class="link" href="https://checkbrowsers.support" target="_blank" title="Check Browsers Support - a browser extension to check browser compatibility without leaving your tab">
+                    <div class="f5 fw6 mv2 black ttu">Check Browsers Support</div>
+                    <div>a browser extension to check browser compatibility without leaving your tab</div>
                 </a>
             </div>
         </div>
@@ -72,6 +88,14 @@
                 <a class="link" href="https://react-pdf-viewer.dev" target="_blank" title="React PDF Viewer - a PDF viewer made for React">
                     <div class="f5 fw6 mv2 black ttu">React PDF Viewer</div>
                     <div>a PDF viewer made for React</div>
+                </a>
+            </div>
+        </div>
+        <div class="w-33 ph2 mb3">
+            <div class="pr3">
+                <a class="link" href="https://thisthat.dev" target="_blank" title="this VS that - the differences between ___ and ___ in the front-end development">
+                    <div class="f5 fw6 mv2 black ttu">this VS that</div>
+                    <div>the differences between ___ and ___ in the front-end development</div>
                 </a>
             </div>
         </div>
