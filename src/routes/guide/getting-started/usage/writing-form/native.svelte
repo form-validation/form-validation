@@ -17,8 +17,8 @@
 <script>
 import { onMount } from 'svelte';
 
-import formValidation from 'formvalidation/dist/es6/core/Core';
-import DemoFrame from 'formvalidation/dist/es6/plugins/DemoFrame';
+import formValidation from 'formvalidation/core/Core';
+import DemoFrame from 'formvalidation/plugins/DemoFrame';
 
 import sampleCode from './native.programmatic';
 import TachyonsLayout from '../../../../../components/demo/TachyonsLayout.svelte';

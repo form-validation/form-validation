@@ -19,7 +19,7 @@ export default {
 		plugins: [
 			alias({
                 entries: {
-                    formvalidation: path.resolve(__dirname, 'vendors/formvalidation'),
+                    formvalidation: path.resolve(__dirname, 'vendors/formvalidation/dist/es6'),
 				    highlightjs: path.resolve(__dirname, 'vendors/highlightjs'),
                 },
 			}),
@@ -50,7 +50,7 @@ export default {
 		plugins: [
 			alias({
                 entries: {
-                    formvalidation: path.resolve(__dirname, 'vendors/formvalidation'),
+                    formvalidation: path.resolve(__dirname, 'vendors/formvalidation/dist/es6'),
                     highlightjs: path.resolve(__dirname, 'vendors/highlightjs'),
                 }
 			}),

@@ -28,7 +28,7 @@ module.exports = {
     resolve: {
         extensions: ['.js'],
         alias: {
-            formvalidation: path.resolve(__dirname, 'vendors/formvalidation'),
+            formvalidation: path.resolve(__dirname, 'vendors/formvalidation/dist/es6'),
         },
     },
     ...
@@ -37,10 +37,10 @@ module.exports = {
         <p class="lh-copy">From now on, you can import any file from FormValidation ES6 package as following:</p>
 <SampleCode lang="javascript" code={`
 // Use the algorithms
-import luhn from 'formvalidation/dist/es6/algorithms/luhn';
+import luhn from 'formvalidation/algorithms/luhn';
 
 // Use the validators
-import creditCard from 'formvalidation/dist/es6/validators/creditCard';
+import creditCard from 'formvalidation/validators/creditCard';
 
 const result = creditCard().validate({
     value: ...,
@@ -50,12 +50,12 @@ const result = creditCard().validate({
 });
 
 // Use the core library
-import formValidation from 'formvalidation/dist/es6/core/Core';
+import formValidation from 'formvalidation/core/Core';
 
 // Use the plugins
-import Icon from 'formvalidation/dist/es6/plugins/Icon';
-import Trigger from 'formvalidation/dist/es6/plugins/Trigger';
-import Bootstrap from 'formvalidation/dist/es6/plugins/Bootstrap';
+import Icon from 'formvalidation/plugins/Icon';
+import Trigger from 'formvalidation/plugins/Trigger';
+import Bootstrap from 'formvalidation/plugins/Bootstrap';
 ...
 `} />
     </section>

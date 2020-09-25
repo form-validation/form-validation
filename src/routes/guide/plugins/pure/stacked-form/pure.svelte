@@ -46,12 +46,12 @@
 <script>
 import { onDestroy } from 'svelte';
 
-import formValidation from 'formvalidation/dist/es6/core/Core';
-import DemoFrame from 'formvalidation/dist/es6/plugins/DemoFrame';
-import Icon from 'formvalidation/dist/es6/plugins/Icon';
-import Trigger from 'formvalidation/dist/es6/plugins/Trigger';
-import Pure from 'formvalidation/dist/es6/plugins/Pure';
-import SubmitButton from 'formvalidation/dist/es6/plugins/SubmitButton';
+import formValidation from 'formvalidation/core/Core';
+import DemoFrame from 'formvalidation/plugins/DemoFrame';
+import Icon from 'formvalidation/plugins/Icon';
+import Trigger from 'formvalidation/plugins/Trigger';
+import Pure from 'formvalidation/plugins/Pure';
+import SubmitButton from 'formvalidation/plugins/SubmitButton';
 
 import sampleCode from './pure.programmatic';
 import PureLayout from '../../../../../components/demo/PureLayout.svelte';
