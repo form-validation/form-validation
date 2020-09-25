@@ -47,7 +47,7 @@ module.exports = {
 
 <SampleCode lang="javascript" code={`
 // Use the algorithms
-import luhn from 'formvalidation/dist/es6/luhn';
+import luhn from 'formvalidation/dist/es6/algorithms/luhn';
 
 // Use the validators
 import creditCard from 'formvalidation/dist/es6/validators/creditCard';

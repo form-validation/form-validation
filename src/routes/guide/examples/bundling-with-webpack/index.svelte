@@ -37,7 +37,7 @@ module.exports = {
         <p class="lh-copy">From now on, you can import any file from FormValidation ES6 package as following:</p>
 <SampleCode lang="javascript" code={`
 // Use the algorithms
-import luhn from 'formvalidation/dist/es6/luhn';
+import luhn from 'formvalidation/dist/es6/algorithms/luhn';
 
 // Use the validators
 import creditCard from 'formvalidation/dist/es6/validators/creditCard';
