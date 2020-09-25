@@ -68,12 +68,12 @@
 <script>
 import { onDestroy } from 'svelte';
 
-import formValidation from 'formvalidation/dist/es6/core/Core';
-import DemoFrame from 'formvalidation/dist/es6/plugins/DemoFrame';
-import Icon from 'formvalidation/dist/es6/plugins/Icon';
-import SubmitButton from 'formvalidation/dist/es6/plugins/SubmitButton';
-import Trigger from 'formvalidation/dist/es6/plugins/Trigger';
-import Turret from 'formvalidation/dist/es6/plugins/Turret';
+import formValidation from 'formvalidation/core/Core';
+import DemoFrame from 'formvalidation/plugins/DemoFrame';
+import Icon from 'formvalidation/plugins/Icon';
+import SubmitButton from 'formvalidation/plugins/SubmitButton';
+import Trigger from 'formvalidation/plugins/Trigger';
+import Turret from 'formvalidation/plugins/Turret';
 
 import sampleCode from './turret.programmatic';
 import TurretLayout from '../../../components/demo/TurretLayout.svelte';

@@ -70,14 +70,14 @@
 <script>
 import { onMount } from 'svelte';
 
-import formValidation from 'formvalidation/dist/es6/core/Core';
-import DemoFrame from 'formvalidation/dist/es6/plugins/DemoFrame';
-import Icon from 'formvalidation/dist/es6/plugins/Icon';
-import Message from 'formvalidation/dist/es6/plugins/Message';
-import SubmitButton from 'formvalidation/dist/es6/plugins/SubmitButton';
-import Trigger from 'formvalidation/dist/es6/plugins/Trigger';
-import Tachyons from 'formvalidation/dist/es6/plugins/Tachyons';
-import closest from 'formvalidation/dist/es6/utils/closest';
+import formValidation from 'formvalidation/core/Core';
+import DemoFrame from 'formvalidation/plugins/DemoFrame';
+import Icon from 'formvalidation/plugins/Icon';
+import Message from 'formvalidation/plugins/Message';
+import SubmitButton from 'formvalidation/plugins/SubmitButton';
+import Trigger from 'formvalidation/plugins/Trigger';
+import Tachyons from 'formvalidation/plugins/Tachyons';
+import closest from 'formvalidation/utils/closest';
 
 import sampleCode from './tachyons.programmatic';
 

@@ -45,16 +45,16 @@
 <script>
 import { onDestroy } from 'svelte';
 
-import formValidation from 'formvalidation/dist/es6/core/Core';
-import DemoFrame from 'formvalidation/dist/es6/plugins/DemoFrame';
-import Icon from 'formvalidation/dist/es6/plugins/Icon';
-import Trigger from 'formvalidation/dist/es6/plugins/Trigger';
-import Bootstrap from 'formvalidation/dist/es6/plugins/Bootstrap';
-import SubmitButton from 'formvalidation/dist/es6/plugins/SubmitButton';
-import phone from 'formvalidation/dist/es6/validators/phone';
+import formValidation from 'formvalidation/core/Core';
+import DemoFrame from 'formvalidation/plugins/DemoFrame';
+import Icon from 'formvalidation/plugins/Icon';
+import Trigger from 'formvalidation/plugins/Trigger';
+import Bootstrap from 'formvalidation/plugins/Bootstrap';
+import SubmitButton from 'formvalidation/plugins/SubmitButton';
+import phone from 'formvalidation/validators/phone';
 
-import classSet from 'formvalidation/dist/es6/utils/classSet';
-import closest from 'formvalidation/dist/es6/utils/closest';
+import classSet from 'formvalidation/utils/classSet';
+import closest from 'formvalidation/utils/closest';
 
 import sampleCode from './bootstrap.programmatic';
 import BootstrapLayout from '../../../../components/demo/BootstrapLayout.svelte';

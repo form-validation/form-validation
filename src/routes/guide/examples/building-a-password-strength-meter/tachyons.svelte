@@ -26,12 +26,12 @@
 <script>
 import { onDestroy } from 'svelte';
 
-import formValidation from 'formvalidation/dist/es6/core/Core';
-import DemoFrame from 'formvalidation/dist/es6/plugins/DemoFrame';
-import Icon from 'formvalidation/dist/es6/plugins/Icon';
-import PasswordStrength from 'formvalidation/dist/es6/plugins/PasswordStrength';
-import Trigger from 'formvalidation/dist/es6/plugins/Trigger';
-import Tachyons from 'formvalidation/dist/es6/plugins/Tachyons';
+import formValidation from 'formvalidation/core/Core';
+import DemoFrame from 'formvalidation/plugins/DemoFrame';
+import Icon from 'formvalidation/plugins/Icon';
+import PasswordStrength from 'formvalidation/plugins/PasswordStrength';
+import Trigger from 'formvalidation/plugins/Trigger';
+import Tachyons from 'formvalidation/plugins/Tachyons';
 
 import sampleCode from './tachyons.programmatic';
 import ResourceLoader from '../../../../components/ResourceLoader.svelte';

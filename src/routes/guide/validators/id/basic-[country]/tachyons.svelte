@@ -30,12 +30,12 @@ export async function preload({ params }) {
 <script>
 import { onMount } from 'svelte';
 
-import formValidation from 'formvalidation/dist/es6/core/Core';
-import DemoFrame from 'formvalidation/dist/es6/plugins/DemoFrame';
-import Icon from 'formvalidation/dist/es6/plugins/Icon';
-import Trigger from 'formvalidation/dist/es6/plugins/Trigger';
-import Tachyons from 'formvalidation/dist/es6/plugins/Tachyons';
-import id from 'formvalidation/dist/es6/validators/id/index';
+import formValidation from 'formvalidation/core/Core';
+import DemoFrame from 'formvalidation/plugins/DemoFrame';
+import Icon from 'formvalidation/plugins/Icon';
+import Trigger from 'formvalidation/plugins/Trigger';
+import Tachyons from 'formvalidation/plugins/Tachyons';
+import id from 'formvalidation/validators/id/index';
 
 import sampleCode from './tachyons.programmatic';
 import data from '../data';
