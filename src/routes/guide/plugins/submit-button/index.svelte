@@ -54,6 +54,56 @@ document.addEventListener('DOMContentLoaded', function(e) {
     </section>
 
     <section class="mv5">
+        <Heading>Options</Heading>
+
+        <table class="collapse ba br2 b--black-10 pv2 ph3 w-100">
+            <tr class="striped--light-gray">
+                <th class="pv2 ph3 tl f6 fw6 ttu">Option</th>
+                <th class="pv2 ph3 tl f6 fw6 ttu">Type</th>
+                <th class="pv2 ph3 tl f6 fw6 ttu">Description</th>
+            </tr>
+            <tr class="striped--light-gray">
+                <td class="pv2 ph3"><code>aspNetButton</code></td>
+                <td class="pv2 ph3">Boolean</td>
+                <td class="pv2 ph3 lh-copy">Set it to <code>true</code> to support classical ASP.Net form. It is <code>false</code> by default</td>
+            </tr>
+            <tr class="striped--light-gray">
+                <td class="pv2 ph3"><code>buttons</code></td>
+                <td class="pv2 ph3">Function</td>
+                <td class="pv2 ph3 lh-copy">
+                    <p class="lh-copy">It is a function that accepts the current form element and returns the list of submit buttons.</p>
+                    <p class="lh-copy">By default, the plugin ignores all the submit button/input which have the <code>formnovalidate</code> attribute.</p>
+                </td>
+            </tr>
+        </table>
+
+        <p class="lh-copy">The <code>buttons</code> option is useful in case we have an external button which is outside of the form:</p>
+
+        <SampleCode lang="html" code={`
+<form id="demoForm">...</form>
+
+<!-- External button -->
+<button type="button" id="externalButton" />
+`} />
+
+        <p class="lh-copy">The <code>buttons</code> option should look like as following:</p>
+
+        <SampleCode lang="javascript" code={`
+FormValidation.formValidation(
+    document.getElementById('demoForm'),
+    {
+        fields: ...,
+        plugins: new FormValidation.plugins.SubmitButton({
+            buttons: function(form) {
+                return [].slice.call(document.getElementById('externalButton'));
+            },
+        }),
+    }
+);
+`} />
+    </section>
+
+    <section class="mv5">
         <Heading>Example</Heading>
         <p class="lh-copy">Try to press the <span class="i">Add product</span> button to see the form will be validated.</p>
         <Demo prefix="/guide/plugins/tachyons/horizontal-form" frameworks={['tachyons']} />
@@ -62,6 +112,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
     <section class="mv5">
         <Heading>Changelog</Heading>
         <ul class="pa0 ma0 ml3 lh-copy">
+            <li>v1.7.0: Allow to define the submit buttons via the <code>buttons</code> option</li>
             <li>v1.6.0: Fixed an issue that the plugin doesn't send the clicked button to server</li>
             <li>v1.5.0: Fixed an issue that the click handler of submit button of ASP.Net form isn't executed. Now you can fix it by setting the <code>aspNetButton</code> option to <code>true</code>.</li>
             <li>v1.0.0: First release</li>
