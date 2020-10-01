@@ -1,5 +1,5 @@
 <svelte:head>
-	<title>FormValidation • Updates</title>
+	<title>FormValidation • v1.5.0</title>
 </svelte:head>
 
 <ChangelogLayout>
