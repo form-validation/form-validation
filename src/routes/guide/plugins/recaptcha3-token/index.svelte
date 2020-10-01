@@ -4,7 +4,7 @@
 
 <GuideLayout>
     <h1 class="f3 f2-m f1-l tc">Recaptcha3Token plugin</h1>
-    <h2 class="f4 fw4 tc">Sends the Google reCAPTCHA v3 token to the back-end when the form is valid</h2>
+    <h2 class="f4 fw4 tc">Send the Google reCAPTCHA v3 token to the back-end when the form is valid</h2>
 
     <Tip>Use the <a href="/guide/plugins/recaptcha3" class="blue dim link">Recaptcha3</a> plugin if you want to verify the Google reCAPTCHA v3 token</Tip>
 
