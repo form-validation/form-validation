@@ -294,6 +294,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
     <section class="mv5">
         <Heading>Changelog</Heading>
         <ul class="pa0 ma0 ml3 lh-copy">
+            <li>v1.7.0: Parse validator options of element attributes when a field is added via the <a href="/guide/api/add-field" class="blue dim link">addField()</a> method</li>
             <li>v1.4.0: Support the plugin declarations</li>
             <li>v1.0.0: First release</li>
         </ul>
