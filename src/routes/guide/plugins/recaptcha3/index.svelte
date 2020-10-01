@@ -4,7 +4,7 @@
 
 <GuideLayout>
     <h1 class="f3 f2-m f1-l tc">Recaptcha3 plugin</h1>
-    <h2 class="f4 fw4 tc">Shows and validates a Google reCAPTCHA v3</h2>
+    <h2 class="f4 fw4 tc">Show and validate a Google reCAPTCHA v3</h2>
 
     <Tip>Use the <a href="/guide/plugins/recaptcha" class="blue dim link">Recaptcha</a> plugin if you are still using Google reCAPTCHA v2</Tip>
 
@@ -238,7 +238,7 @@ plugins: {
     <section class="mv5">
         <div class="flex">
             <PrevButton target="/guide/plugins/recaptcha">Recaptcha plugin</PrevButton>
-            <NextButton target="/guide/plugins/semantic">Semantic plugin</NextButton>
+            <NextButton target="/guide/plugins/recaptcha3-token">Recaptcha3Token plugin</NextButton>
         </div>
     </section>
 </GuideLayout>

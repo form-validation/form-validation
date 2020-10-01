@@ -4,7 +4,7 @@
 
 <GuideLayout>
     <h1 class="f3 f2-m f1-l tc">Recaptcha plugin</h1>
-    <h2 class="f4 fw4 tc">Shows and validates a Google reCAPTCHA v2</h2>
+    <h2 class="f4 fw4 tc">Show and validate a Google reCAPTCHA v2</h2>
 
     <Tip>Use the <a href="/guide/plugins/recaptcha3" class="blue dim link">Recaptcha3</a> plugin if you are using Google reCAPTCHA v3</Tip>
 
