@@ -92,6 +92,13 @@ const res2 = cusip().validate({
 `} />
     </section>
 
+    <section class="mv5">
+        <Heading>Changelog</Heading>
+        <ul class="pa0 ma0 ml3 lh-copy">
+            <li>v1.7.0: Fixed an issue that the cusip validator doesn't work properly</li>
+        </ul>
+    </section>
+
     <RelatedValidators validators={['isin', 'sedol']} />
 
     <section class="mv5">

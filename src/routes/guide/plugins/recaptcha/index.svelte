@@ -4,7 +4,7 @@
 
 <GuideLayout>
     <h1 class="f3 f2-m f1-l tc">Recaptcha plugin</h1>
-    <h2 class="f4 fw4 tc">Shows and validates a Google reCAPTCHA v2</h2>
+    <h2 class="f4 fw4 tc">Show and validate a Google reCAPTCHA v2</h2>
 
     <Tip>Use the <a href="/guide/plugins/recaptcha3" class="blue dim link">Recaptcha3</a> plugin if you are using Google reCAPTCHA v3</Tip>
 
@@ -212,6 +212,7 @@ echo $result;
     <section class="mv5">
         <Heading>Changelog</Heading>
         <ul class="pa0 ma0 ml3 lh-copy">
+            <li>v1.7.0: Fix an issue that the plugin sends the back-end verification request twice</li>
             <li>v1.5.0: Hide the icon for the invisible reCAPTCHA.</li>
             <li>v1.4.0: In the previous version, the Recaptcha plugin doesn't hide the error message and error icon when user click the captcha checkbox.
                 The error icon disappears when the captcha is expired. This version fixes that.</li>

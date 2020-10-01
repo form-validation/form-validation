@@ -1,9 +1,9 @@
 <svelte:head>
-	<title>FormValidation • Updates</title>
+	<title>FormValidation • v1.5.0</title>
 </svelte:head>
 
 <ChangelogLayout>
-    <h1 class="f3 f2-m f1-l tc">The latest version v1.5.0</h1>
+    <h1 class="f3 f2-m f1-l tc">Version v1.5.0</h1>
     <h2 class="f4 fw4 tc">Released 10th July 2019</h2>
 
     <section class="mv5">

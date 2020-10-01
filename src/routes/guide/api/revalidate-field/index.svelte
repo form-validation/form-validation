@@ -41,7 +41,7 @@ fv
     <section class="mv5">
         <div class="flex">
             <PrevButton target="/guide/api/reset-form">resetForm() method</PrevButton>
-            <NextButton target="/guide/api/set-locale">setLocale() method</NextButton>
+            <NextButton target="/guide/api/set-field-options">setFieldOptions() method</NextButton>
         </div>
     </section>
 </GuideLayout>

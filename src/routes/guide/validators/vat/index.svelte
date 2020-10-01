@@ -120,6 +120,7 @@ const res2 = vat().validate({
     <section class="mv5">
         <Heading>Changelog</Heading>
         <ul class="pa0 ma0 ml3 lh-copy">
+            <li>v1.7.0: Support new format of <a href="/guide/validators/vat/dutch-vat-number" class="blue dim link">Dutch VAT number</a></li>
             <li>v1.6.0: Fixed an issue that the <code>country</code> option isn't passed to the placeholder message</li>
         </ul>
     </section>

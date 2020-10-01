@@ -24,6 +24,15 @@
                 <td class="pv2 ph3">String</td>
                 <td class="pv2 ph3">The error message</td>
             </tr>
+            <tr class="striped--light-gray">
+                <td class="pv2 ph3"><code>trim</code></td>
+                <td class="pv2 ph3"><code>data-fv-not-empty___trim</code></td>
+                <td class="pv2 ph3">Boolean</td>
+                <td class="pv2 ph3">
+                    If <code>true</code>, all spaces at the beginning and the end of field value will be removed before being validated.
+                    It is <code>false</code> by default
+                </td>
+            </tr>
         </table>
 
         <h3>Use with select element</h3>
@@ -111,6 +120,13 @@ const res3 = notEmpty().validate({
         'Terms and conditions agreement validation',
         'Trimming a value',
     ]} />
+
+    <section class="mv5">
+        <Heading>Changelog</Heading>
+        <ul class="pa0 ma0 ml3 lh-copy">
+            <li>v1.7.0: Provide new <code>trim</code> option</li>
+        </ul>
+    </section>
 
     <RelatedValidators validators={['stringLength']} />
 

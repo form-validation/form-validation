@@ -168,6 +168,7 @@
     <url><loc>https://formvalidation.io/guide/plugins/pure</loc></url>
     <url><loc>https://formvalidation.io/guide/plugins/recaptcha</loc></url>
     <url><loc>https://formvalidation.io/guide/plugins/recaptcha3</loc></url>
+    <url><loc>https://formvalidation.io/guide/plugins/recaptcha3-token</loc></url>
     <url><loc>https://formvalidation.io/guide/plugins/semantic</loc></url>
     <url><loc>https://formvalidation.io/guide/plugins/sequence</loc></url>
     <url><loc>https://formvalidation.io/guide/plugins/shoelace</loc></url>
@@ -203,6 +204,7 @@
     <url><loc>https://formvalidation.io/guide/api/reset-field</loc></url>
     <url><loc>https://formvalidation.io/guide/api/reset-form</loc></url>
     <url><loc>https://formvalidation.io/guide/api/revalidate-field</loc></url>
+    <url><loc>https://formvalidation.io/guide/api/set-field-options</loc></url>
     <url><loc>https://formvalidation.io/guide/api/set-locale</loc></url>
     <url><loc>https://formvalidation.io/guide/api/update-element-status</loc></url>
     <url><loc>https://formvalidation.io/guide/api/update-field-status</loc></url>
@@ -347,4 +349,5 @@
     <url><loc>https://formvalidation.io/updates/v1.3.0</loc><lastmod>2018-08-10T00:00:00+07:00</lastmod></url>
     <url><loc>https://formvalidation.io/updates/v1.4.0</loc><lastmod>2019-04-20T00:00:00+07:00</lastmod></url>
     <url><loc>https://formvalidation.io/updates/v1.5.0</loc><lastmod>2019-07-08T00:00:00+07:00</lastmod></url>
+    <url><loc>https://formvalidation.io/updates/v1.6.0</loc><lastmod>2020-02-06T00:00:00+07:00</lastmod></url>
 </urlset>

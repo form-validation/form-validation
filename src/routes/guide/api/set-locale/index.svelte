@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
 
     <section class="mv5">
         <div class="flex">
-            <PrevButton target="/guide/api/revalidate-field">revalidateField() method</PrevButton>
+            <PrevButton target="/guide/api/set-field-options">setFieldOptions() method</PrevButton>
             <NextButton target="/guide/api/update-element-status">updateElementStatus() method</NextButton>
         </div>
     </section>

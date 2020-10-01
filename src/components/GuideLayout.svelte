@@ -103,6 +103,7 @@ let APIs = [
     'resetField',
     'resetForm',
     'revalidateField',
+    'setFieldOptions',
     'setLocale',
     'updateElementStatus',
     'updateFieldStatus',
