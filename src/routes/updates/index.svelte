@@ -67,7 +67,7 @@ FormValidation.formValidation(
         <Heading>Bug fixes</Heading>
         <ul class="pa0 ma0 mt4 ml3 lh-copy">
             <li>The <a href="/guide/plugins/recaptcha" class="blue dim link">Recaptcha plugin</a> sends the back-end verification request twice</li>
-            <li>The <a href="/guide/validators/id/south-african-identification-number" class="blue dim link">South African identification validator</a> doesn't work with the minified version</li>
+            <li>The <a href="/guide/validators/id/south-african-identification-number" class="blue dim link">South African</a> <a href="/guide/validators/id" class="blue dim link">identification validator</a> doesn't work with the minified version</li>
             <li>The <a href="/guide/validators/cusip" class="blue dim link">cusip validator</a> doesn't work properly anymore</li>
             <li>
                 <p class="lh-copy">The <a href="/guide/plugins/declarative" class="blue dim link">Declarative plugin</a> doesn't set the correct values for boolean options.</p>
