@@ -117,12 +117,17 @@ export default [
     {
         name: 'Recaptcha',
         isCorePlugin: false,
-        desc: 'Shows and validates a Google reCAPTCHA v2',
+        desc: 'Show and validate a Google reCAPTCHA v2',
     },
     {
         name: 'Recaptcha3',
         isCorePlugin: false,
-        desc: 'Shows and validates a Google reCAPTCHA v3',
+        desc: 'Show and validates a Google reCAPTCHA v3',
+    },
+    {
+        name: 'Recaptcha3Token',
+        isCorePlugin: false,
+        desc: 'Send the Google reCAPTCHA v3 token to the back-end when the form is valid',
     },
     {
         name: 'Semantic',
