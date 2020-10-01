@@ -118,7 +118,7 @@ semantic: new FormValidation.plugins.Semantic({
 
     <section class="mv5">
         <div class="flex">
-            <PrevButton target="/guide/plugins/recaptcha3">Recaptcha3 plugin</PrevButton>
+            <PrevButton target="/guide/plugins/recaptcha3-token">Recaptcha3Token plugin</PrevButton>
             <NextButton target="/guide/plugins/sequence">Sequence plugin</NextButton>
         </div>
     </section>
