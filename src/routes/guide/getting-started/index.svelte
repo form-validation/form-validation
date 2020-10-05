@@ -11,7 +11,15 @@
 <SampleCode lang="html" code={`
 formvalidation/
 |
+├── @types          // Consists of TypeScript definition types
+|   |
+|   └── formvalidation
+|       └── global.d.ts // Uses with the global UMD package (dist/js)
+|       └── index.d.ts  // Uses with the ES6 package (dist/es6)
+|
 ├── dist            // Consists of generated files from src
+|   |
+|   ├── amd         // AMD package
 |   |
 │   ├── css         // Can be used in browser
 │   │   └── formValidation(.min).css
