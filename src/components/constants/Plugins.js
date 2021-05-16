@@ -25,6 +25,11 @@ export default [
         desc: 'Integrate with Bootstrap framework',
     },
     {
+        name: 'Bootstrap 5',
+        isCorePlugin: false,
+        desc: 'Integrate with Bootstrap v5 framework',
+    },
+    {
         name: 'Bulma',
         isCorePlugin: false,
         desc: 'Integrate with Bulma framework',
