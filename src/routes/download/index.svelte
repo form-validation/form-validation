@@ -8,7 +8,7 @@
     <section class="mv5">
         <Heading>Give it a try</Heading>
         <p class="lh-copy">Below is basic working examples of FormValidation using with popular CSS frameworks and a native form.</p>
-        <Demo prefix="/download/register" frameworks={['bootstrap', 'bootstrap3', 'bulma', 'foundation', 'materialize', 'milligram', 'mini', 'mui', 'pure', 'semantic', 'shoelace', 'spectre', 'tachyons', 'turret', 'uikit', 'native']} />
+        <Demo prefix="/download/register" frameworks={['bootstrap', 'bootstrap3', 'bootstrap5', 'bulma', 'foundation', 'materialize', 'milligram', 'mini', 'mui', 'pure', 'semantic', 'shoelace', 'spectre', 'tachyons', 'turret', 'uikit', 'native']} />
     </section>
 
     <section class="mv5">
