@@ -103,7 +103,7 @@
 </div>
 <div class="mw8 center w-100">
     <h2 class="f3 fw6 mv2 ttu">About</h2>
-    <div class="lh-copy">&copy; 2013 &mdash; 2020 Nguyen Huu Phuoc. All rights reserved.</div>
+    <div class="lh-copy">&copy; 2013 &mdash; 2021 Nguyen Huu Phuoc. All rights reserved.</div>
     <div class="lh-copy">This site is <a href="https://github.com/phuoc-ng/formvalidation.io" class="link" target="_blank">open source</a>.</div>
     <div class="flex items-center">
         <a href="https://twitter.com/nghuuphuoc" class="dib dim link black-70 ba b-black-70 br-pill w2 h2 flex items-center justify-center mr2">
