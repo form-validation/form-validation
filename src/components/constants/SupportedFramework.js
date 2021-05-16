@@ -4,6 +4,11 @@ export default {
         version: '4.10.0',
         urls: ['https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css'],
     },
+    bootstrap5: {
+        name: 'Bootstrap 5',
+        version: '5.0.1',
+        urls: ['https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css'],
+    },
     bootstrap3: {
         name: 'Bootstrap 3',
         version: '3.4.1',
