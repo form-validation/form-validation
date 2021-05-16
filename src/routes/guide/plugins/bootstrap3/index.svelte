@@ -6,7 +6,7 @@
     <h1 class="f3 f2-m f1-l tc">Bootstrap 3 plugin</h1>
     <h2 class="f4 fw4 tc lh-copy">Integrate with <a href="https://getbootstrap.com/docs/3.4" class="blue dim link">Bootstrap 3</a> framework. Support the latest version of Bootstrap 3 (v3.4.1)</h2>
 
-    <Tip>Use the <a href="/guide/plugins/bootstrap" class="blue dim link">Bootstrap</a> plugin if your form is made in Bootstrap 4</Tip>
+    <Tip>Use the <a href="/guide/plugins/bootstrap5" class="blue dim link">Bootstrap5</a> plugin if your form is made in Bootstrap v5</Tip>
     
     <section class="mv5">
         <Heading>Usage</Heading>
@@ -116,7 +116,7 @@ bootstrap3: new FormValidation.plugins.Bootstrap3({
     <section class="mv5">
         <div class="flex">
             <PrevButton target="/guide/plugins/bootstrap">Bootstrap plugin</PrevButton>
-            <NextButton target="/guide/plugins/bulma">Bulma plugin</NextButton>
+            <NextButton target="/guide/plugins/bootstrap5">Bootstrap 5 plugin</NextButton>
         </div>
     </section>
 </GuideLayout>

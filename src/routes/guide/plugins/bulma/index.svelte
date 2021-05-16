@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
 
     <section class="mv5">
         <div class="flex">
-            <PrevButton target="/guide/plugins/bootstrap3">Bootstrap 3 plugin</PrevButton>
+            <PrevButton target="/guide/plugins/bootstrap5">Bootstrap 5 plugin</PrevButton>
             <NextButton target="/guide/plugins/declarative">Declarative plugin</NextButton>
         </div>
     </section>

@@ -6,7 +6,7 @@
     <h1 class="f3 f2-m f1-l tc">Bootstrap plugin</h1>
     <h2 class="f4 fw4 tc">Integrate with <a href="https://getbootstrap.com" class="blue dim link">Bootstrap</a> framework. Support Bootstrap v4.3.1</h2>
 
-    <Tip>Use the <a href="/guide/plugins/bootstrap3" class="blue dim link">Bootstrap3</a> plugin if you are still using Bootstrap 3</Tip>
+    <Tip>Use the <a href="/guide/plugins/bootstrap5" class="blue dim link">Bootstrap5</a> plugin if your form is made in Bootstrap v5</Tip>
 
     <section class="mv5">
         <Heading>Usage</Heading>
