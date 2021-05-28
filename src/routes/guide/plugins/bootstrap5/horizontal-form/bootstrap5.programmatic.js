@@ -18,9 +18,7 @@ export default `<!doctype html>
             <label class="col-sm-3 col-form-label">Price</label>
             <div class="col-sm-5">
                 <div class="input-group">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text">$</span>
-                    </div>
+                    <span class="input-group-text">$</span>
                     <input type="text" class="form-control" name="price" />
                 </div>
             </div>
