@@ -109,6 +109,12 @@ bootstrap5: new FormValidation.plugins.Bootstrap5({
     <section class="mv5">
         <Heading>Changelog</Heading>
         <ul class="pa0 ma0 ml3 lh-copy">
+            <li>v1.8.1:
+                <ul class="pa0 ma0 ml3 lh-copy">
+                    <li>Fix an issue that the border radius of input groups is lost</li>
+                    <li>Fix an issue that it shows error message at a wrong place when using with add-on input</li>
+                </ul>
+            </li>
             <li>v1.8.0: First release</li>
         </ul>
     </section>
