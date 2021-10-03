@@ -1,36 +1,111 @@
-# FormValidation website
+# FormValidation
 
-Source code of FormValidation [official website](https://formvalidation.io) which is built on top of
-* [Svelte](https://svelte.dev): Make reusable UI components
-* [Sapper](https://sapper.svelte.dev): The web framework for Svelte that supports routes 
-* [Rollup](https://rollupjs.org): Bundler
+The best validation library for JavaScript.
 
-![FormValidation](/static/images/screenshot.png)
+![FormValidation](/assets/screenshot.png)
 
-## Commands
+## Biggest collection of validators
 
-1. Running locally
+40+ validators, 50+ plugins
 
-```console
-$ npm install
-$ npm run dev
+- [x] Cover most various types of form field
+- [x] Develop, reuse custom validator
+- [x] Support sync and async validators
+- [x] Plugin based architectue
+
+## Flexible
+
+- [x] Customize icon
+- [x] Customize error message
+- [x] Customize error message location
+- [x] Customize valid and invalid colors
+- [x] Dynamic field
+- [x] Enable, disable validators on the fly
+
+## Localization
+
+- [x] Language packages for error message
+- [x] Support custom message
+- [x] Support custom validators
+- [x] Switch between locales
+- [x] Validate ID and VAT numbers in many countries
+
+## Declaring validation rules
+
+- [x] Declarative mode
+
+```html
+<form id="registrationForm">
+    <input
+        name="userName"
+        data-fv-not-empty="true"
+        data-fv-not-empty___message="The username is required"
+        data-fv-string-length="true"
+        data-fv-string-length___min="6"
+        data-fv-string-length___message="The name must be more than 6 characters long"
+    />
+</form>
 ```
 
-Then visit http://localhost:3000.
+- [x] Programmatic mode
 
-2. Exporting to static files
-
-```console
-$ npm run export
+```js
+FormValidation.formValidation(
+    document.getElementById('registrationForm'),
+    {
+        fields: {
+            userName: {
+                validators: {
+                    notEmpty: {
+                        message: 'The username is required',
+                    },
+                    stringLength: {
+                        message: 'The name must be more than 6 characters long',
+                        min: 6,                        
+                    },
+                },
+            },
+        },
+    },
+);
 ```
 
-Then, the entire site is exported to `__sapper__/export` directory.
+## Integration with your stack
 
-3. Deploying to Netlify
+- [x] Support native form
+- [x] Support popular CSS frameworks via plugins
+- [x] Support popular JavaScript frameworks
+- [x] Easy to integrate with a framework
 
-```console
-$ npm run deploy
-```
+## Play nice with form libraries
+
+- [x] Autocomplete
+- [x] Color picker
+- [x] Custom checkbox
+- [x] Custom radio
+- [x] Date picker
+- [x] International telephone input
+- [x] Mask input
+- [x] Rich editor
+- [x] Select
+- [x] Star rating
+- [x] Tag input
+- [x] Time picker
+- [x] Toggle
+- [x] Wizard
+
+and more!
+
+## Supported browsers
+
+Support the latest version of
+
+- [x] Chrome
+- [x] Firefox
+- [x] Safari
+- [x] Opera
+- [x] Edge
+- [x] Internet Explorer 11
 
 ## About
 
@@ -40,23 +115,3 @@ Be my friend on
 * [Twitter](https://twitter.com/nghuuphuoc)
 * [dev.to](https://dev.to/phuocng)
 * [Github](https://github.com/phuoc-ng)
-
-## Products
-
-You might be interested in my products:
-
-_Products_
-* [Blur Page - A browser extension to hide sensitive information on a web page](https://blur.page)
-* [Check Browsers Support - A browser extension to check browser compatibility without leaving your tab](https://checkbrowsers.support)
-* [Fake Numbers - Generate fake and valid numbers](https://fakenumbers.io)
-* [Form Validation - The best validation library for JavaScript](https://formvalidation.io)
-* [IntersectionObserver Examples - Practical, real world examples of IntersectionObserver](https://intersectionobserver.io)
-* [React PDF Viewer - A React component to view a PDF document](https://react-pdf-viewer.dev)
-
-_Resources_
-* [1LOC - Favorite JavaScript utilities in single line of code](https://1loc.dev)
-* [CSS Layout - A collection of popular layouts and patterns made with CSS](https://csslayout.io)
-* [HTML DOM - How to manage HTML DOM with vanilla JavaScript](https://htmldom.dev)
-* [Responsive Design Patterns - A collection of patterns to create a responsive web page](https://responsive.page)
-* [Super tiny, quick tips, tricks and best practices of front-end development](https://getfrontend.tips)
-* [this VS that - The differences between ___ and ___ in the front-end development](https://thisthat.dev)
